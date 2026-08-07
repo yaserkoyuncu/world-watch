@@ -1,0 +1,65 @@
+{
+  "last_curated": "2026-08-08",
+  "updates": [
+    {
+      "id": "u20260708-imf-weo",
+      "date": "2026-07-08",
+      "category": "Economy & Political Economy",
+      "source": "IMF",
+      "title": "World Economic Outlook Update — July 2026",
+      "summary": "The IMF updated its April outlook, projecting 3.0% global growth in 2026 and 3.4% in 2027 while emphasizing the opposing effects of war-related energy shocks and technology investment.",
+      "url": "https://www.imf.org/en/publications/weo/issues/2026/07/08/world-economic-outlook-update-july-2026",
+      "type": "Major update"
+    },
+    {
+      "id": "u20260616-wb-gep",
+      "date": "2026-06-16",
+      "category": "Economy & Political Economy",
+      "source": "World Bank",
+      "title": "Global Economic Prospects — June 2026",
+      "summary": "The latest semiannual World Bank flagship outlook, with updated global and regional growth projections and downloadable data.",
+      "url": "https://thedocs.worldbank.org/en/doc/2b672b3b0415d6b66c45b66579db4ef5-0050012026/global-economic-prospects-june-2026",
+      "type": "New edition"
+    },
+    {
+      "id": "u20260513-who-whs",
+      "date": "2026-05-13",
+      "category": "Health, Food & Education",
+      "source": "WHO",
+      "title": "World Health Statistics 2026",
+      "summary": "WHO's annual global overview of health indicators, mortality, disease burden and health-system progress.",
+      "url": "https://www.who.int/publications/i/item/9789240122482",
+      "type": "New edition"
+    },
+    {
+      "id": "u202603-vdem",
+      "date": "2026-03-01",
+      "category": "Democracy & Rights",
+      "source": "V-Dem Institute",
+      "title": "Democracy Report 2026",
+      "summary": "The 2026 V-Dem report and Dataset v16 provide updated cross-national evidence on democratization and autocratization.",
+      "url": "https://www.v-dem.net/",
+      "type": "New edition"
+    },
+    {
+      "id": "u20260209-mck",
+      "date": "2026-02-09",
+      "category": "Technology & AI",
+      "source": "McKinsey",
+      "title": "McKinsey Global Tech Agenda 2026",
+      "summary": "A survey of more than 600 technology and business leaders on agentic AI, data monetization and technology operating models.",
+      "url": "https://www.mckinsey.com/capabilities/mckinsey-technology/our-insights/mckinsey-global-tech-agenda-2026",
+      "type": "New report"
+    },
+    {
+      "id": "u20260114-wef",
+      "date": "2026-01-14",
+      "category": "Geopolitics & Security",
+      "source": "World Economic Forum",
+      "title": "Global Risks Report 2026",
+      "summary": "The 21st edition assesses immediate 2026 risks, the short-to-medium term through 2028, and structural risks through 2036.",
+      "url": "https://www.weforum.org/publications/global-risks-report-2026/",
+      "type": "New edition"
+    }
+  ]
+}
