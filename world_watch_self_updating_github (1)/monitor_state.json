@@ -48,5 +48,206 @@
   "flagship:V-Dem Democracy Report": "446d3aafe83b12e5bd3a603ef4ffbfef613741f7",
   "flagship:Munich Security Report": "8747f6d51abdea238573309204d7f571e103f143",
   "flagship:WMO State of the Global Climate": "c898fbd2daf6d112679677001dacfd37eb6e7a73",
-  "flagship:UNDP Human Development Report": "02c4d00cdfcaa0e1f167aa3422a8268f736ea4bc"
+  "flagship:UNDP Human Development Report": "02c4d00cdfcaa0e1f167aa3422a8268f736ea4bc",
+  "series:worldbank_wdr": {
+    "version": {
+      "year": 2015,
+      "month": 0
+    },
+    "edition": "2015",
+    "title": "World Development Report 2015: Mind, Society, and Behavior",
+    "url": "https://www.worldbank.org/en/publication/wdr",
+    "checked": "2026-08-07T23:46:43.501336+00:00"
+  },
+  "series:msc_msr": {
+    "version": {
+      "year": 2026,
+      "month": 0
+    },
+    "edition": "2026",
+    "title": "Munich Security Report 2026 Munich Security Report 2026 The world has entered a period of wrecking-ball politics. Sweeping destruction – rather than careful reforms and policy corrections – is the order of the day. The most prominent of those who promise to free their country from the existing order",
+    "url": "https://securityconference.org/en/publications/munich-security-report/2026/",
+    "checked": "2026-08-07T23:46:43.501336+00:00"
+  },
+  "series:sipri_yearbook": {
+    "version": {
+      "year": 2026,
+      "month": 0
+    },
+    "edition": "2026",
+    "title": "SIPRI Yearbook SIPRI Yearbook Yearbook 2026 Yearbook 2025 Yearbook archive Yearbook translations Yearbook summaries",
+    "url": "https://www.sipri.org/yearbook",
+    "checked": "2026-08-07T23:46:43.501336+00:00"
+  },
+  "series:stanford_ai": {
+    "version": {
+      "year": 2026,
+      "month": 0
+    },
+    "edition": "2026",
+    "title": "Explore the 2026 AI Index Report",
+    "url": "https://hai.stanford.edu/ai-index",
+    "checked": "2026-08-07T23:46:43.501336+00:00"
+  },
+  "series:deloitte_tech": {
+    "version": {
+      "year": 2026,
+      "month": 0
+    },
+    "edition": "2026",
+    "title": "Tech Trends 2026 | Deloitte Insights",
+    "url": "https://www.deloitte.com/us/en/insights/topics/technology-management/tech-trends.html",
+    "checked": "2026-08-07T23:46:43.501336+00:00"
+  },
+  "series:kpmg_tech": {
+    "version": {
+      "year": 2026,
+      "month": 0
+    },
+    "edition": "2026",
+    "title": "KPMG Global tech report 2026 | KPMG UK",
+    "url": "https://kpmg.com/uk/en/insights/technology/kpmg-global-tech-report.html",
+    "checked": "2026-08-07T23:46:43.501336+00:00"
+  },
+  "series:wipo_gii": {
+    "version": {
+      "year": 2026,
+      "month": 0
+    },
+    "edition": "2026",
+    "title": "Save the Date: September 29, 2026 – Release of the Global Innovation Index 2026 Save the Date: September 29, 2026 – Release of the Global Innovation Index 2026 June 15, 2026",
+    "url": "https://www.wipo.int/en/web/global-innovation-index/w/news/2026/save-the-date-gii-2026",
+    "checked": "2026-08-07T23:46:43.501336+00:00"
+  },
+  "series:itu_ff": {
+    "version": {
+      "year": 2021,
+      "month": 0
+    },
+    "edition": "2021",
+    "title": "Facts and figures 2021",
+    "url": "https://www.itu.int/itu-d/reports/statistics/facts-figures/",
+    "checked": "2026-08-07T23:46:43.501336+00:00"
+  },
+  "series:wmo_climate": {
+    "version": {
+      "year": 2026,
+      "month": 0
+    },
+    "edition": "2026",
+    "title": "Publication 23 March 2026 State of the Global Climate 2025 Publication 23 March 2026 State of the Global Climate 2025",
+    "url": "https://wmo.int/publication-series/state-of-global-climate/state-of-global-climate-2025",
+    "checked": "2026-08-07T23:46:43.501336+00:00"
+  },
+  "series:unep_egr": {
+    "version": {
+      "year": 2025,
+      "month": 0
+    },
+    "edition": "2025",
+    "title": "Emissions Gap Report 2025 Emissions Gap Report 2025",
+    "url": "https://www.unep.org/resources/emissions-gap-report-2025",
+    "checked": "2026-08-07T23:46:43.501336+00:00"
+  },
+  "series:unep_agr": {
+    "version": {
+      "year": 2025,
+      "month": 0
+    },
+    "edition": "2025",
+    "title": "Adaptation Gap Report 2025 Adaptation Gap Report 2025",
+    "url": "https://www.unep.org/resources/adaptation-gap-report-2025",
+    "checked": "2026-08-07T23:46:43.501336+00:00"
+  },
+  "series:gcb": {
+    "version": {
+      "year": 2026,
+      "month": 0
+    },
+    "edition": "2026",
+    "title": "Visit the University of Exeter website here Privacy, Cookies and Terms Global Carbon Budget © 2026 Visit the University of Exeter website here University of Exeter (Design Studio 2022GSI002)",
+    "url": "https://www.exeter.ac.uk/",
+    "checked": "2026-08-07T23:46:43.501336+00:00"
+  },
+  "series:undp_hdr": {
+    "version": {
+      "year": 2026,
+      "month": 0
+    },
+    "edition": "2026",
+    "title": "Towards 2026 Human Development Report Towards 2026 Human Development Report",
+    "url": "https://hdr.undp.org/reports-and-publications/towards-2026-human-development-report",
+    "checked": "2026-08-07T23:46:43.501336+00:00"
+  },
+  "series:un_social": {
+    "version": {
+      "year": 2025,
+      "month": 0
+    },
+    "edition": "2025",
+    "title": "Download EPUB Version here World Social Report 2025: A New Policy Consensus to Accelerate Social Progress Image Economic insecurity, staggering levels of inequality, declining social trust and social fragmentation are destabilizing societies worldwide. The World Social Report 2025 , reveals trends t",
+    "url": "https://social.desa.un.org/sites/default/files/World%20Social%20Report%202025.epub",
+    "checked": "2026-08-07T23:46:43.501336+00:00"
+  },
+  "series:who_whs": {
+    "version": {
+      "year": 2026,
+      "month": 0
+    },
+    "edition": "2026",
+    "title": "World Health Statistics 2026 - A visual summary World Health Statistics 2026 - A visual summary",
+    "url": "https://www.who.int/data/stories/world-health-statistics-2026--a-visual-summary",
+    "checked": "2026-08-07T23:46:43.501336+00:00"
+  },
+  "series:unesco_gem": {
+    "version": {
+      "year": 2027,
+      "month": 0
+    },
+    "edition": "2027",
+    "title": "2027 GEM Report 2027 GEM Report",
+    "url": "https://www.unesco.org/gem-report/en/publication/quality-and-learning",
+    "checked": "2026-08-07T23:46:43.501336+00:00"
+  },
+  "series:vdem": {
+    "version": {
+      "year": 2026,
+      "month": 0
+    },
+    "edition": "2026",
+    "title": "How to cite the Democracy Report 2026:",
+    "url": "https://www.v-dem.net/publications/democracy-reports/",
+    "checked": "2026-08-07T23:46:43.501336+00:00"
+  },
+  "series:idea": {
+    "version": {
+      "year": 2023,
+      "month": 0
+    },
+    "edition": "2023",
+    "title": "The Global State of Democracy Methodology All of our Democracy Tracker event reports and related analyses are based upon our Global State of Democracy conceptual framework. In this framework, democracy is divided into four main categories and several related factors. Read more in our The Global Stat",
+    "url": "https://www.idea.int/sites/default/files/GSOD/global-state-of-democracy-indices-methodology-v7-2023.pdf",
+    "checked": "2026-08-07T23:46:43.501336+00:00"
+  },
+  "series:freedom": {
+    "version": {
+      "year": 2026,
+      "month": 0
+    },
+    "edition": "2026",
+    "title": "Freedom in the World 2026 Freedom in the World 2026",
+    "url": "https://freedomhouse.org/report/freedom-world/2026/growing-shadow-autocracy",
+    "checked": "2026-08-07T23:46:43.501336+00:00"
+  },
+  "discovery:wb": [],
+  "discovery:who": [
+    "https://www.who.int/mega-menu/data/dashboards/health-inequality-monitor",
+    "https://www.who.int/mega-menu/data/data-collection/civil-registration-and-vital-statistics",
+    "https://www.who.int/mega-menu/data/data-collection/harmonized-health-facility-assessment",
+    "https://www.who.int/mega-menu/data/reports/uhc-global-monitoring-report",
+    "https://www.who.int/publications/i/item/B09861"
+  ],
+  "discovery:cset": [],
+  "discovery:cb": [],
+  "discovery:quanta": []
 }
