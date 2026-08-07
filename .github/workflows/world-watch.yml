@@ -1,12 +1,66 @@
-name: World Watch Test
+name: Update and deploy World Watch
 
 on:
   workflow_dispatch:
+  schedule:
+    - cron: "20 3,9,15,21 * * *"
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: world-watch-pages
+  cancel-in-progress: false
 
 jobs:
-  test:
+  update-and-deploy:
     runs-on: ubuntu-latest
 
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
     steps:
-      - name: Test World Watch
-        run: echo "World Watch workflow is working"
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run World Watch monitor
+        run: python updater.py
+
+      - name: Save monitoring results
+        run: |
+          git config user.name "world-watch-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add auto_updates.json monitor_state.json monitor_health.json
+          git diff --cached --quiet || git commit -m "Automatic World Watch update"
+          git push || true
+
+      - name: Prepare website
+        run: |
+          mkdir -p _site
+          cp index.html _site/
+          cp updates.json _site/
+          cp auto_updates.json _site/
+          touch _site/.nojekyll
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload website
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: "_site"
+
+      - name: Deploy website
+        id: deployment
+        uses: actions/deploy-pages@v4
