@@ -1,0 +1,12 @@
+name: World Watch Test
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Test World Watch
+        run: echo "World Watch workflow is working"
