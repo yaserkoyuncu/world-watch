@@ -7,171 +7,195 @@ from urllib.parse import urljoin, urlparse
 import requests
 from bs4 import BeautifulSoup
 
-ROOT = Path(__file__).resolve().parent
-STATE_FILE = ROOT / "monitor_state.json"
-OUTPUT_FILE = ROOT / "auto_updates.json"
-HEALTH_FILE = ROOT / "monitor_health.json"
+ROOT=Path(__file__).resolve().parent
+STATE=ROOT/"monitor_state.json"; OUT=ROOT/"auto_updates.json"; HEALTH=ROOT/"monitor_health.json"
+NOW=datetime.now(timezone.utc); TODAY=NOW.date().isoformat(); YEAR=NOW.year
+HEAD={"User-Agent":"Mozilla/5.0 (compatible; WorldWatch/2.0)","Accept-Language":"en-US,en;q=0.8"}
+MONTHS={"january":1,"february":2,"march":3,"april":4,"may":5,"june":6,"july":7,"august":8,"september":9,"october":10,"november":11,"december":12,
+        "jan":1,"feb":2,"mar":3,"apr":4,"jun":6,"jul":7,"aug":8,"sep":9,"sept":9,"oct":10,"nov":11,"dec":12}
 
-NOW = datetime.now(timezone.utc)
-TODAY = NOW.date().isoformat()
-CURRENT_YEAR = NOW.year
-HEADERS = {
-    "User-Agent": "WorldWatchPersonalDashboard/1.0",
-    "Accept-Language": "en-US,en;q=0.8",
-}
-TIMEOUT = 25
+# id|name|org|category|mode|url|regex
+RAW=r"""
+imf_weo|World Economic Outlook|IMF|Economy & Political Economy|intra|https://www.imf.org/en/Publications/WEO|\bWorld Economic Outlook\b
+imf_gfsr|Global Financial Stability Report|IMF|Economy & Political Economy|intra|https://www.imf.org/en/Publications/GFSR|\bGlobal Financial Stability Report\b
+imf_fiscal|Fiscal Monitor|IMF|Economy & Political Economy|intra|https://www.imf.org/en/Publications/FM|\bFiscal Monitor\b
+worldbank_gep|Global Economic Prospects|World Bank|Economy & Political Economy|intra|https://www.worldbank.org/en/publication/global-economic-prospects|\bGlobal Economic Prospects\b
+worldbank_wdr|World Development Report|World Bank|Economy & Political Economy|annual|https://www.worldbank.org/en/publication/wdr|\bWorld Development Report\b
+oecd_eo|OECD Economic Outlook|OECD|Economy & Political Economy|intra|https://www.oecd.org/en/topics/economic-outlook.html|\b(?:OECD )?Economic Outlook\b
+bis_aer|Annual Economic Report|BIS|Economy & Political Economy|annual|https://www.bis.org/list/annualreport/index.htm|\bAnnual Economic Report\b
+unctad_tdr|Trade and Development Report|UNCTAD|Economy & Political Economy|annual|https://unctad.org/topic/macroeconomics/trade-development-report|\bTrade and Development Report\b
+wto_gto|Global Trade Outlook and Statistics|WTO|Economy & Political Economy|intra|https://www.wto.org/english/res_e/statis_e/trade_outlook_e.htm|\bGlobal Trade Outlook and Statistics\b
+ilo_est|Employment and Social Trends|ILO|Economy & Political Economy|annual|https://www.ilo.org/publications/flagship-reports|\bEmployment and Social Trends\b
+wef_grr|Global Risks Report|World Economic Forum|Geopolitics & Security|annual|https://www.weforum.org/publications/series/global-risks-report/|\bGlobal Risks Report\b
+msc_msr|Munich Security Report|Munich Security Conference|Geopolitics & Security|annual|https://securityconference.org/en/publications/munich-security-report/|\bMunich Security Report\b
+sipri_yearbook|SIPRI Yearbook|SIPRI|Geopolitics & Security|annual|https://www.sipri.org/yearbook|\bSIPRI Yearbook\b
+odni_ata|Annual Threat Assessment|ODNI|Geopolitics & Security|annual|https://www.odni.gov/index.php/newsroom/reports-publications|\bAnnual Threat Assessment\b
+stanford_ai|AI Index|Stanford HAI|Technology & AI|annual|https://hai.stanford.edu/ai-index|\bAI Index\b
+mck_tech|Technology Trends Outlook|McKinsey|Technology & AI|annual|https://www.mckinsey.com/capabilities/tech-and-ai/our-insights/the-top-trends-in-tech/|\bTechnology Trends Outlook\b|\btechnology trends.*20\d{2}\b
+mck_ai|State of AI|McKinsey|Technology & AI|annual|https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai/|\b(?:The )?State of AI\b
+deloitte_tech|Tech Trends|Deloitte|Technology & AI|annual|https://www.deloitte.com/us/en/insights/topics/technology-management/tech-trends.html|\bTech Trends\b
+kpmg_tech|Global Tech Report|KPMG|Technology & AI|annual|https://kpmg.com/uk/en/insights/technology/kpmg-global-tech-report.html|\bGlobal Tech Report\b
+wipo_gii|Global Innovation Index|WIPO|Technology & AI|annual|https://www.wipo.int/en/web/global-innovation-index/|\bGlobal Innovation Index\b
+itu_ff|Facts and Figures|ITU|Technology & AI|annual|https://www.itu.int/itu-d/reports/statistics/facts-figures/|\bFacts and Figures\b
+wmo_climate|State of the Global Climate|WMO|Climate & Energy|annual|https://wmo.int/publication-series/state-of-global-climate|\bState of (?:the )?Global Climate\b
+unep_egr|Emissions Gap Report|UNEP|Climate & Energy|annual|https://www.unep.org/resources/emissions-gap-report|\bEmissions Gap Report\b
+unep_agr|Adaptation Gap Report|UNEP|Climate & Energy|annual|https://www.unep.org/resources/adaptation-gap-report|\bAdaptation Gap Report\b
+iea_weo|World Energy Outlook|IEA|Climate & Energy|annual|https://www.iea.org/reports|\bWorld Energy Outlook\b
+irena_weto|World Energy Transitions Outlook|IRENA|Climate & Energy|annual|https://www.irena.org/Energy-Transition/Outlook|\bWorld Energy Transitions Outlook\b
+gcb|Global Carbon Budget|Global Carbon Project|Climate & Energy|annual|https://globalcarbonbudget.org/|\bGlobal Carbon Budget\b
+un_wpp|World Population Prospects|UN DESA|Demography & Society|periodic|https://www.un.org/development/desa/pd/world-population-prospects|\bWorld Population Prospects\b
+un_wup|World Urbanization Prospects|UN DESA|Demography & Society|periodic|https://www.un.org/development/desa/pd/world-urbanization-prospects|\bWorld Urbanization Prospects\b
+iom_wmr|World Migration Report|IOM|Demography & Society|periodic|https://worldmigrationreport.iom.int/|\bWorld Migration Report\b
+unhcr_gt|Global Trends|UNHCR|Demography & Society|annual|https://www.unhcr.org/global-trends|\bGlobal Trends\b
+undp_hdr|Human Development Report|UNDP|Demography & Society|periodic|https://hdr.undp.org/|\bHuman Development Report\b
+un_social|World Social Report|UN DESA|Demography & Society|periodic|https://social.desa.un.org/issues/world-social-report|\bWorld Social Report\b
+happiness|World Happiness Report|Wellbeing Research Centre|Demography & Society|annual|https://www.worldhappiness.report/|\bWorld Happiness Report\b
+who_whs|World Health Statistics|WHO|Health, Food & Education|annual|https://www.who.int/data/gho/publications/world-health-statistics|\bWorld Health Statistics\b
+fao_sofi|State of Food Security and Nutrition in the World|FAO et al.|Health, Food & Education|annual|https://www.fao.org/publications/fao-flagship-publications/the-state-of-food-security-and-nutrition-in-the-world/en|\b(?:The )?State of Food Security and Nutrition in the World\b
+unesco_gem|Global Education Monitoring Report|UNESCO|Health, Food & Education|annual|https://www.unesco.org/gem-report/en|\bGlobal Education Monitoring Report\b|\bGEM Report\b
+undp_mpi|Global Multidimensional Poverty Index|UNDP / OPHI|Health, Food & Education|annual|https://hdr.undp.org/mpi|\b(?:Global )?Multidimensional Poverty Index\b|\bGlobal MPI\b
+vdem|Democracy Report|V-Dem Institute|Democracy & Rights|annual|https://www.v-dem.net/publications/democracy-reports/|\bDemocracy Report\b
+idea|Global State of Democracy|International IDEA|Democracy & Rights|annual|https://www.idea.int/gsod/|\bGlobal State of Democracy\b
+freedom|Freedom in the World|Freedom House|Democracy & Rights|annual|https://freedomhouse.org/report/freedom-world|\bFreedom in the World\b
+wjp|Rule of Law Index|World Justice Project|Democracy & Rights|annual|https://worldjusticeproject.org/rule-of-law-index/|\bRule of Law Index\b
+cpi|Corruption Perceptions Index|Transparency International|Democracy & Rights|annual|https://www.transparency.org/en/cpi|\bCorruption Perceptions Index\b
+rsf|World Press Freedom Index|Reporters Without Borders|Democracy & Rights|annual|https://rsf.org/en/index|\bWorld Press Freedom Index\b
+"""
+SERIES=[]
+for line in RAW.strip().splitlines():
+    i,n,o,c,m,u,r=line.split("|",6)
+    SERIES.append(dict(id=i,name=n,org=o,category=c,mode=m,url=u,match=r))
 
-MONITORS = [
-    {"name":"IMF Publications","org":"IMF","category":"Economy & Political Economy","url":"https://www.imf.org/en/publications","include":r"\b(outlook|report|monitor|update|global|regional|AI|technology|finance|fiscal|economic)\b"},
-    {"name":"World Bank News","org":"World Bank","category":"Economy & Political Economy","url":"https://www.worldbank.org/en/news/all","include":r"\b(report|prospects|outlook|global|poverty|development|economy|economic|climate|digital|AI|trade)\b"},
-    {"name":"WHO News Releases","org":"WHO","category":"Health, Food & Education","url":"https://www.who.int/news-room/releases","include":r"\b(global|report|guideline|statistics|health|disease|outbreak|pandemic|mortality|cancer|dementia|vaccine)\b"},
-    {"name":"CSET Publications","org":"Georgetown CSET","category":"Technology & AI","url":"https://cset.georgetown.edu/publications/","include":r"\b(AI|artificial intelligence|semiconductor|compute|technology|biotech|China|model|cyber|robot|quantum)\b"},
-    {"name":"World Economic Forum Publications","org":"World Economic Forum","category":"Geopolitics & Security","url":"https://www.weforum.org/publications/","include":r"\b(report|risks|outlook|future|global|technology|AI|economy|climate|energy|jobs)\b"},
-    {"name":"International Crisis Group","org":"International Crisis Group","category":"Geopolitics & Security","url":"https://www.crisisgroup.org/latest-updates","include":r"\b(conflict|war|crisis|security|peace|ceasefire|election|Iran|Ukraine|Gaza|Sudan|Syria|Taiwan|China|Russia)\b"},
-    {"name":"Carbon Brief","org":"Carbon Brief","category":"Climate & Energy","url":"https://www.carbonbrief.org/","include":r"\b(climate|carbon|emissions|energy|warming|temperature|electricity|renewable|oil|gas|coal)\b"},
-    {"name":"Quanta Magazine","org":"Quanta Magazine","category":"Science","url":"https://www.quantamagazine.org/","include":r"\b(AI|physics|biology|mathematics|computer|quantum|algorithm|genome|neural|cosmology|science)\b"},
-    {"name":"IEA News","org":"International Energy Agency","category":"Climate & Energy","url":"https://www.iea.org/news","include":r"\b(report|outlook|energy|electricity|oil|gas|renewable|transition|emissions|AI|investment)\b"},
-    {"name":"WMO News","org":"World Meteorological Organization","category":"Climate & Energy","url":"https://wmo.int/media/news","include":r"\b(climate|temperature|weather|report|record|ocean|ice|heat|El Niño|La Niña|greenhouse)\b"},
-    {"name":"UNHCR News","org":"UNHCR","category":"Demography & Society","url":"https://www.unhcr.org/news","include":r"\b(refugee|displacement|displaced|asylum|global trends|stateless|migration|crisis)\b"},
-    {"name":"V-Dem","org":"V-Dem Institute","category":"Democracy & Rights","url":"https://www.v-dem.net/","include":r"\b(democracy|autocra|report|dataset|election|freedom|rights)\b"},
+DISCOVERY=[
+("imf","IMF","Economy & Political Economy","https://www.imf.org/en/publications",r"\b(report|outlook|monitor|update|AI|global|financial|fiscal)\b"),
+("wb","World Bank","Economy & Political Economy","https://www.worldbank.org/en/news/all",r"\b(report|prospects|outlook|poverty|development|economic|climate|digital|AI|trade)\b"),
+("who","WHO","Health, Food & Education","https://www.who.int/news-room/releases",r"\b(global|report|statistics|health|disease|outbreak|mortality|vaccine)\b"),
+("cset","Georgetown CSET","Technology & AI","https://cset.georgetown.edu/publications/",r"\b(AI|semiconductor|compute|technology|biotech|China|cyber|robot|quantum)\b"),
+("icg","International Crisis Group","Geopolitics & Security","https://www.crisisgroup.org/latest-updates",r"\b(conflict|war|crisis|security|peace|ceasefire|election)\b"),
+("cb","Carbon Brief","Climate & Energy","https://www.carbonbrief.org/",r"\b(climate|carbon|emissions|energy|warming|temperature|renewable|oil|gas|coal)\b"),
+("quanta","Quanta Magazine","Science","https://www.quantamagazine.org/",r"\b(AI|physics|biology|mathematics|computer|quantum|algorithm|genome|cosmology)\b"),
 ]
 
-FLAGSHIPS = [
-    ("IMF World Economic Outlook","IMF","Economy & Political Economy","https://www.imf.org/en/Publications/WEO",r"World Economic Outlook"),
-    ("World Bank Global Economic Prospects","World Bank","Economy & Political Economy","https://www.worldbank.org/en/publication/global-economic-prospects",r"Global Economic Prospects"),
-    ("Stanford AI Index","Stanford HAI","Technology & AI","https://hai.stanford.edu/ai-index",r"AI Index"),
-    ("V-Dem Democracy Report","V-Dem Institute","Democracy & Rights","https://www.v-dem.net/publications/democracy-reports/",r"Democracy Report"),
-    ("WEF Global Risks Report","World Economic Forum","Geopolitics & Security","https://www.weforum.org/publications/series/global-risks-report/",r"Global Risks Report"),
-    ("Munich Security Report","Munich Security Conference","Geopolitics & Security","https://securityconference.org/en/publications/munich-security-report/",r"Munich Security Report"),
-    ("WMO State of the Global Climate","WMO","Climate & Energy","https://wmo.int/publication-series/state-of-global-climate",r"State of (the )?Global Climate"),
-    ("IEA World Energy Outlook","IEA","Climate & Energy","https://www.iea.org/reports/world-energy-outlook-2025",r"World Energy Outlook"),
-    ("UNDP Human Development Report","UNDP","Demography & Society","https://hdr.undp.org/",r"Human Development Report"),
-    ("IOM World Migration Report","IOM","Demography & Society","https://worldmigrationreport.iom.int/",r"World Migration Report"),
-]
-
-BLOCK_TEXT = {"home","about","read more","learn more","view all","see all","news","publications","research","topics","events","subscribe","contact","previous","next","menu","search"}
-
-def load_json(path, default):
-    try: return json.loads(path.read_text(encoding="utf-8"))
-    except Exception: return default
-
-def save_json(path, obj):
-    path.write_text(json.dumps(obj, ensure_ascii=False, indent=2), encoding="utf-8")
-
-def clean_text(s):
-    return re.sub(r"\s+"," ",s or "").strip()
-
-def canonical_url(base, href):
-    u=urljoin(base,href)
-    p=urlparse(u)
-    q=p.query
-    if q and any(x in q.lower() for x in ("utm_","fbclid","gclid")): q=""
+def load(p,d):
+    try:return json.loads(p.read_text(encoding="utf-8"))
+    except:return d
+def save(p,x):p.write_text(json.dumps(x,ensure_ascii=False,indent=2),encoding="utf-8")
+def clean(x):return re.sub(r"\s+"," ",x or "").strip()
+def canon(base,href):
+    u=urljoin(base,href); p=urlparse(u); q=p.query
+    if q and any(x in q.lower() for x in ("utm_","fbclid","gclid")):q=""
     return p._replace(fragment="",query=q).geturl()
-
-def get_soup(url):
-    r=requests.get(url,headers=HEADERS,timeout=TIMEOUT,allow_redirects=True)
-    r.raise_for_status()
+def soup(url):
+    r=requests.get(url,headers=HEAD,timeout=30,allow_redirects=True);r.raise_for_status()
     return BeautifulSoup(r.text,"html.parser")
+def version(text,url,mode):
+    blob=clean(text+" "+url)
+    ys=[int(x) for x in re.findall(r"\b(20\d{2})\b",blob) if 2000<=int(x)<=YEAR+2]
+    if not ys:return None
+    y=max(ys); low=blob.lower(); ms=[n for k,n in MONTHS.items() if re.search(rf"\b{re.escape(k)}\.?\b",low)]
+    return {"year":y,"month":max(ms) if (ms and mode=="intra") else 0}
+def vt(v,mode):return (v["year"],v.get("month",0) if mode=="intra" else 0)
+def label(v,mode):
+    if mode=="intra" and v.get("month"):
+        names=["","January","February","March","April","May","June","July","August","September","October","November","December"]
+        return f"{names[v['month']]} {v['year']}"
+    return str(v["year"])
+def nodes(s,base):
+    if s.title:
+        t=clean(s.title.get_text(" ",strip=True))
+        if t:yield t,base,8
+    for h in s.find_all(["h1","h2","h3","h4"]):
+        t=clean(h.get_text(" ",strip=True))
+        if 8<=len(t)<=280:yield t,base,7
+    for a in s.find_all("a",href=True):
+        t=clean(a.get_text(" ",strip=True))
+        if not 8<=len(t)<=260:continue
+        u=canon(base,a["href"])
+        par=a.find_parent(["article","li","div"]); ctx=clean(par.get_text(" ",strip=True))[:450] if par else ""
+        yield clean(t+" "+ctx),u,5
 
-def extract_candidates(soup, base_url, include_re, limit=60):
-    inc=re.compile(include_re,re.I)
-    out=[]; seen=set()
-    base_domain=urlparse(base_url).netloc.replace("www.","")
-    for a in soup.find_all("a",href=True):
-        text=clean_text(a.get_text(" ",strip=True))
-        if not (22 <= len(text) <= 230) or text.lower() in BLOCK_TEXT: continue
-        href=canonical_url(base_url,a["href"])
-        if href.startswith(("mailto:","javascript:","tel:")): continue
-        dom=urlparse(href).netloc.replace("www.","")
-        if base_domain and dom and not (dom==base_domain or dom.endswith("."+base_domain) or base_domain.endswith("."+dom)): continue
-        if href in seen or not inc.search(text): continue
-        score=0
-        if re.search(r"\b(report|outlook|index|assessment|monitor|statistics|dataset|update|global|launch|release)\b",text,re.I): score+=3
-        if str(CURRENT_YEAR) in text or str(CURRENT_YEAR+1) in text: score+=3
-        if len(text)>=45: score+=1
-        seen.add(href); out.append({"title":text,"url":href,"score":score})
-    out.sort(key=lambda x:(-x["score"],x["title"]))
-    return out[:limit]
+def latest(spec):
+    s=soup(spec["url"]); rx=re.compile(spec["match"],re.I); cand=[]
+    for text,url,w in nodes(s,spec["url"]):
+        if not rx.search(text):continue
+        # Avoid UNCTAD "Foresights" being mistaken for TDR.
+        if spec["id"]=="unctad_tdr" and re.search(r"\bForesights?\b",text,re.I):continue
+        v=version(text,url,spec["mode"])
+        if not v:continue
+        score=w+(2 if str(v["year"]) in url else 0)
+        cand.append((vt(v,spec["mode"]),score,len(text),v,clean(text)[:300],url))
+    if not cand:return None
+    cand.sort(reverse=True)
+    _,_,_,v,title,url=cand[0]
+    return {"version":v,"title":title,"url":url}
 
-def detect_page_updates(state):
+def scan_series(state):
     new=[]; health=[]
-    for mon in MONITORS:
-        key="page:"+mon["name"]
+    for sp in SERIES:
+        key="series:"+sp["id"]
         try:
-            soup=get_soup(mon["url"])
-            candidates=extract_candidates(soup,mon["url"],mon["include"])
-            current={x["url"] for x in candidates}
-            old=set(state.get(key,[]))
-            if old:
-                for c in candidates:
-                    if c["url"] not in old:
-                        new.append({
-                            "id":hashlib.sha1(c["url"].encode()).hexdigest()[:14],
-                            "date":TODAY,"category":mon["category"],"source":mon["org"],
-                            "title":c["title"],
-                            "summary":f"Automatically detected as a new high-signal item on {mon['name']}.",
-                            "url":c["url"],"type":"Auto-detected","automatic":True
-                        })
-            state[key]=list(dict.fromkeys(list(old)+list(current)))[-500:]
-            health.append({"monitor":mon["name"],"ok":True,"candidates":len(candidates)})
+            cur=latest(sp)
+            if not cur:
+                health.append({"monitor":sp["name"],"kind":"series","ok":False,"error":"No edition-bearing match"})
+                continue
+            old=state.get(key)
+            if isinstance(old,dict) and old.get("version") and vt(cur["version"],sp["mode"])>vt(old["version"],sp["mode"]):
+                typ="Major flagship update" if sp["mode"]=="intra" and cur["version"]["year"]==old["version"]["year"] else "New flagship edition"
+                nl=label(cur["version"],sp["mode"]); ol=label(old["version"],sp["mode"])
+                new.append({"id":hashlib.sha1((sp["id"]+nl+cur["url"]).encode()).hexdigest()[:14],
+                    "date":TODAY,"category":sp["category"],"source":sp["org"],
+                    "title":f"{sp['name']} — {nl}",
+                    "summary":f"Edition-aware monitor detected a newer {sp['name']}: {nl}, replacing {ol}.",
+                    "url":cur["url"],"type":typ,"automatic":True,"series_id":sp["id"],
+                    "edition":nl,"previous_edition":ol,"confidence":"high"})
+            state[key]={"version":cur["version"],"edition":label(cur["version"],sp["mode"]),"title":cur["title"],"url":cur["url"],"checked":NOW.isoformat()}
+            health.append({"monitor":sp["name"],"kind":"series","ok":True,"latest":state[key]["edition"],"url":cur["url"]})
         except Exception as e:
-            health.append({"monitor":mon["name"],"ok":False,"error":str(e)[:180]})
+            health.append({"monitor":sp["name"],"kind":"series","ok":False,"error":str(e)[:240]})
     return new,health
 
-def detect_flagships(state):
+def scan_discovery(state):
     new=[]; health=[]
-    for name,org,category,url,pattern in FLAGSHIPS:
-        key="flagship:"+name
+    for mid,org,cat,url,pat in DISCOVERY:
+        key="discovery:"+mid
         try:
-            soup=get_soup(url); rx=re.compile(pattern,re.I); matches=[]
-            for a in soup.find_all("a",href=True):
-                text=clean_text(a.get_text(" ",strip=True))
-                if not text or not rx.search(text): continue
-                href=canonical_url(url,a["href"])
-                if href.startswith(("mailto:","javascript:")): continue
-                matches.append((text,href))
-            title=clean_text(soup.title.get_text(" ",strip=True) if soup.title else "")
-            if rx.search(title): matches.append((title,url))
-            uniq=[]; seen=set()
-            for text,href in matches:
-                sig=text+"|"+href
-                if sig not in seen: seen.add(sig); uniq.append((text,href))
-            uniq.sort(key=lambda p:(0 if (str(CURRENT_YEAR) in p[0] or str(CURRENT_YEAR+1) in p[0]) else 1,-len(p[0])))
-            if uniq:
-                text,href=uniq[0]
-                signature=hashlib.sha1((text+"|"+href).encode()).hexdigest()
-                old=state.get(key)
-                if old and signature!=old:
-                    new.append({
-                        "id":hashlib.sha1(("flagship|"+href+"|"+text).encode()).hexdigest()[:14],
-                        "date":TODAY,"category":category,"source":org,"title":text,
-                        "summary":f"World Watch detected a change in the {name} series. Check whether this is a new edition or substantive update.",
-                        "url":href,"type":"Flagship monitor","automatic":True
-                    })
-                state[key]=signature
-                health.append({"monitor":name,"ok":True,"match":text[:120]})
-            else:
-                health.append({"monitor":name,"ok":False,"error":"No matching series title found"})
+            s=soup(url); rx=re.compile(pat,re.I); cur=[]
+            domain=urlparse(url).netloc.replace("www.","")
+            for a in s.find_all("a",href=True):
+                t=clean(a.get_text(" ",strip=True))
+                if not 24<=len(t)<=220 or not rx.search(t):continue
+                u=canon(url,a["href"]); d=urlparse(u).netloc.replace("www.","")
+                if d and domain and not (d==domain or d.endswith("."+domain) or domain.endswith("."+d)):continue
+                if re.search(r"\b(report|outlook|index|assessment|monitor|statistics|update|launch)\b",t,re.I):cur.append((t,u))
+            seen_now={u for _,u in cur[:60]}; old=set(state.get(key,[]))
+            if old:
+                for t,u in cur[:60]:
+                    if u not in old:
+                        new.append({"id":hashlib.sha1(u.encode()).hexdigest()[:14],"date":TODAY,"category":cat,"source":org,
+                            "title":t,"summary":"New high-signal institutional publication detected. This is discovery monitoring, not a confirmed new flagship edition.",
+                            "url":u,"type":"New publication","automatic":True,"confidence":"medium"})
+            state[key]=list(dict.fromkeys(list(old)+sorted(seen_now)))[-800:]
+            health.append({"monitor":org+" discovery","kind":"discovery","ok":True,"candidates":len(seen_now)})
         except Exception as e:
-            health.append({"monitor":name,"ok":False,"error":str(e)[:180]})
+            health.append({"monitor":org+" discovery","kind":"discovery","ok":False,"error":str(e)[:240]})
     return new,health
 
 def main():
-    state=load_json(STATE_FILE,{})
-    old_output=load_json(OUTPUT_FILE,{"updates":[]})
-    existing=old_output.get("updates",[])
-    page_new,h1=detect_page_updates(state)
-    flagship_new,h2=detect_flagships(state)
-    by_url={}
-    for item in page_new+flagship_new+existing:
-        by_url.setdefault(item["url"],item)
-    items=list(by_url.values())
-    items.sort(key=lambda x:(x.get("date",""),x.get("id","")),reverse=True)
-    items=items[:120]
-    payload={"last_checked":NOW.isoformat().replace("+00:00","Z"),"monitor_count":len(MONITORS)+len(FLAGSHIPS),"new_items_this_run":len(page_new)+len(flagship_new),"updates":items}
-    health={"last_checked":payload["last_checked"],"ok":sum(1 for x in h1+h2 if x.get("ok")),"failed":sum(1 for x in h1+h2 if not x.get("ok")),"monitors":h1+h2}
-    save_json(STATE_FILE,state); save_json(OUTPUT_FILE,payload); save_json(HEALTH_FILE,health)
-    print(f"Checked {payload['monitor_count']} monitors; {payload['new_items_this_run']} new item(s); {health['failed']} failures.")
+    state=load(STATE,{})
+    old=load(OUT,{"updates":[]}).get("updates",[])
+    fn,h1=scan_series(state); dn,h2=scan_discovery(state)
+    by={}
+    for x in fn+dn+old:
+        k=x.get("series_id") or x.get("url") or x.get("id")
+        if k not in by:by[k]=x
+    items=list(by.values());items.sort(key=lambda x:(x.get("date",""),1 if "flagship" in x.get("type","").lower() else 0),reverse=True)
+    ok1=sum(x.get("ok",False) for x in h1);ok2=sum(x.get("ok",False) for x in h2)
+    payload={"last_checked":NOW.isoformat().replace("+00:00","Z"),"monitor_count":len(SERIES)+len(DISCOVERY),
+             "flagship_series_count":len(SERIES),"new_items_this_run":len(fn)+len(dn),
+             "new_flagship_editions_this_run":len(fn),"updates":items[:160]}
+    health={"last_checked":payload["last_checked"],"series":{"ok":ok1,"failed":len(h1)-ok1,"total":len(SERIES)},
+            "discovery":{"ok":ok2,"failed":len(h2)-ok2,"total":len(DISCOVERY)},"monitors":h1+h2}
+    save(STATE,state);save(OUT,payload);save(HEALTH,health)
+    print(f"Edition-aware World Watch: {ok1}/{len(SERIES)} flagship series resolved; {ok2}/{len(DISCOVERY)} discovery monitors resolved; {len(fn)} newer flagship edition(s); {len(dn)} discovery item(s).")
 
-if __name__=="__main__":
-    main()
+if __name__=="__main__":main()
