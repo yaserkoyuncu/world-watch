@@ -1,6 +1,117 @@
 {
-  "last_checked": null,
-  "ok": 0,
-  "failed": 0,
-  "monitors": []
+  "last_checked": "2026-08-07T23:27:34.123194Z",
+  "ok": 12,
+  "failed": 10,
+  "monitors": [
+    {
+      "monitor": "IMF Publications",
+      "ok": false,
+      "error": "403 Client Error: Forbidden for url: https://www.imf.org/en/publications"
+    },
+    {
+      "monitor": "World Bank News",
+      "ok": true,
+      "candidates": 0
+    },
+    {
+      "monitor": "WHO News Releases",
+      "ok": true,
+      "candidates": 13
+    },
+    {
+      "monitor": "CSET Publications",
+      "ok": true,
+      "candidates": 10
+    },
+    {
+      "monitor": "World Economic Forum Publications",
+      "ok": false,
+      "error": "403 Client Error: Forbidden for url: https://www.weforum.org/publications/"
+    },
+    {
+      "monitor": "International Crisis Group",
+      "ok": false,
+      "error": "403 Client Error: Forbidden for url: https://www.crisisgroup.org/latest-updates"
+    },
+    {
+      "monitor": "Carbon Brief",
+      "ok": true,
+      "candidates": 1
+    },
+    {
+      "monitor": "Quanta Magazine",
+      "ok": true,
+      "candidates": 4
+    },
+    {
+      "monitor": "IEA News",
+      "ok": false,
+      "error": "403 Client Error: Forbidden for url: https://www.iea.org/news"
+    },
+    {
+      "monitor": "WMO News",
+      "ok": false,
+      "error": "404 Client Error: Not Found for url: https://wmo.int/media/news"
+    },
+    {
+      "monitor": "UNHCR News",
+      "ok": false,
+      "error": "403 Client Error: Forbidden for url: https://www.unhcr.org/news"
+    },
+    {
+      "monitor": "V-Dem",
+      "ok": true,
+      "candidates": 5
+    },
+    {
+      "monitor": "IMF World Economic Outlook",
+      "ok": false,
+      "error": "403 Client Error: Forbidden for url: https://www.imf.org/en/Publications/WEO"
+    },
+    {
+      "monitor": "World Bank Global Economic Prospects",
+      "ok": true,
+      "match": "Global Economic Prospects"
+    },
+    {
+      "monitor": "Stanford AI Index",
+      "ok": true,
+      "match": "Sha Sajadieh AI Index Lead"
+    },
+    {
+      "monitor": "V-Dem Democracy Report",
+      "ok": true,
+      "match": "Democracy Reports – V-Dem"
+    },
+    {
+      "monitor": "WEF Global Risks Report",
+      "ok": false,
+      "error": "403 Client Error: Forbidden for url: https://www.weforum.org/publications/series/global-risks-report/"
+    },
+    {
+      "monitor": "Munich Security Report",
+      "ok": true,
+      "match": "Munich Security Report 2026"
+    },
+    {
+      "monitor": "WMO State of the Global Climate",
+      "ok": true,
+      "match": "Publication 23 March 2026 State of the Global Climate 2025"
+    },
+    {
+      "monitor": "IEA World Energy Outlook",
+      "ok": false,
+      "error": "403 Client Error: Forbidden for url: https://www.iea.org/reports/world-energy-outlook-2025"
+    },
+    {
+      "monitor": "UNDP Human Development Report",
+      "ok": true,
+      "match": "News Upcoming: Reimagining Progress — The Human Development Report Trilogy and What Comes Next June 22, 2026 Read more"
+    },
+    {
+      "monitor": "IOM World Migration Report",
+      "ok": false,
+      "error": "403 Client Error: Forbidden for url: https://worldmigrationreport.iom.int/"
+    }
+  ]
 }

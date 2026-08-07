@@ -1,1 +1,52 @@
-{}
+{
+  "page:World Bank News": [],
+  "page:WHO News Releases": [
+    "https://www.who.int/mega-menu/data/reports/world-health-statistics",
+    "https://www.who.int/mega-menu/emergencies/who-in-emergencies/international-health-regulations",
+    "https://www.who.int/mega-menu/data/data-collection/routine-health-information-systems",
+    "https://www.who.int/publications/i/item/B09861",
+    "https://www.who.int/mega-menu/data/dashboards/health-inequality-monitor",
+    "https://www.who.int/mega-menu/data/data-who/global-health-obsevatory",
+    "https://www.who.int/publications/i/item/B09865",
+    "https://www.who.int/mega-menu/data/data-collection/harmonized-health-facility-assessment",
+    "https://www.who.int/mega-menu/data/data-collection/civil-registration-and-vital-statistics",
+    "https://www.who.int/mega-menu/data/reports/uhc-global-monitoring-report",
+    "https://www.who.int/mega-menu/emergencies/who-in-emergencies/health-emergency-appeal",
+    "https://www.who.int/publications/i/item/WHO-DGO-EVL-2025.72",
+    "https://www.who.int/mega-menu/data/data-who/global-health-estimates"
+  ],
+  "page:CSET Publications": [
+    "https://cset.georgetown.edu/publications/?ep_filter_topic=hardware-and-compute",
+    "https://cset.georgetown.edu/publication/china-primary-secondary-ai-education-notice/",
+    "https://cset.georgetown.edu",
+    "https://cset.georgetown.edu/publication/china-mofcom-statement-model-distillation/",
+    "https://cset.georgetown.edu/publication/identifying-the-ai-development-workforce/",
+    "https://cset.georgetown.edu/publication/china-miit-high-tech-pilot-projects-2025/",
+    "https://cset.georgetown.edu/publication/china-ai-plus-education-action-plan/",
+    "https://cset.georgetown.edu/publication/china-gen-ai-safety-standard-final/",
+    "https://cset.georgetown.edu/publication/china-government-ai-model-use-guidelines/",
+    "https://cset.georgetown.edu/emerging-technology-observatory/"
+  ],
+  "page:Carbon Brief": [
+    "https://www.carbonbrief.org/topics/carbon-dioxide-removal"
+  ],
+  "page:Quanta Magazine": [
+    "https://www.quantamagazine.org/is-ai-reasoning-right-for-the-wrong-reasons-20260731/",
+    "https://www.quantamagazine.org/why-the-legendary-erdos-problems-are-falling-to-ai-20260803/",
+    "https://www.quantamagazine.org/physicists-solve-a-muon-mystery-now-old-results-dont-add-up-20260729/",
+    "https://www.quantamagazine.org/undergraduate-upends-a-40-year-old-data-science-conjecture-20250210/"
+  ],
+  "page:V-Dem": [
+    "https://www.v-dem.net/documents/75/V-Dem_Institute_Democracy_Report_2026_lowres.pdf",
+    "https://www.v-dem.net/news/spanish-translation-of-democracy-report-2025-available/",
+    "https://www.v-dem.net/news/out-now-democracy-report-2026-in-spanish/",
+    "https://www.v-dem.net/news/out-now-portuguese-version-of-democracy-report-2025/",
+    "https://www.v-dem.net/data/the-v-dem-dataset/"
+  ],
+  "flagship:World Bank Global Economic Prospects": "8ccb6887df1eed8156243f615c0aac7a250afff2",
+  "flagship:Stanford AI Index": "f08c3b64d3d7cc36c8607548c9b495c9d894e1f0",
+  "flagship:V-Dem Democracy Report": "446d3aafe83b12e5bd3a603ef4ffbfef613741f7",
+  "flagship:Munich Security Report": "8747f6d51abdea238573309204d7f571e103f143",
+  "flagship:WMO State of the Global Climate": "c898fbd2daf6d112679677001dacfd37eb6e7a73",
+  "flagship:UNDP Human Development Report": "02c4d00cdfcaa0e1f167aa3422a8268f736ea4bc"
+}
