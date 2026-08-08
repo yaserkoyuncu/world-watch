@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-World Watch v6 — flagship + expanded institutional discovery monitor
+World Watch v6.1 — reliability patch
 
 V6 architecture:
 - Direct official-page fetch first.
@@ -16,7 +16,7 @@ V6 architecture:
 """
 
 from __future__ import annotations
-import hashlib, json, re, time
+import hashlib, json, re, time, threading
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timezone
 from pathlib import Path
@@ -30,13 +30,13 @@ STATE_FILE = ROOT / "monitor_state.json"
 OUTPUT_FILE = ROOT / "auto_updates.json"
 HEALTH_FILE = ROOT / "monitor_health.json"
 
-ENGINE_VERSION = "6.0"
+ENGINE_VERSION = "6.1"
 NOW = datetime.now(timezone.utc)
 TODAY = NOW.date().isoformat()
 CURRENT_YEAR = NOW.year
 
 HEADERS = {
-    "User-Agent": "Mozilla/5.0 (compatible; WorldWatchPersonalDashboard/6.0)",
+    "User-Agent": "Mozilla/5.0 (compatible; WorldWatchPersonalDashboard/6.1)",
     "Accept-Language": "en-US,en;q=0.8",
 }
 TIMEOUT = 22
@@ -50,9 +50,9 @@ MONTHS = {
 
 # id|name|org|category|mode|official landing URL|matching expression
 RAW = r"""
-imf_weo|World Economic Outlook|IMF|Economy & Political Economy|intra|https://www.elibrary.imf.org/subject/081|\bWorld Economic Outlook\b
-imf_gfsr|Global Financial Stability Report|IMF|Economy & Political Economy|intra|https://www.elibrary.imf.org/subject/082|\bGlobal Financial Stability Report\b
-imf_fiscal|Fiscal Monitor|IMF|Economy & Political Economy|intra|https://www.elibrary.imf.org/subject/089|\bFiscal Monitor\b
+imf_weo|World Economic Outlook|IMF|Economy & Political Economy|intra|https://www.imf.org/en/publications|\bWorld Economic Outlook\b
+imf_gfsr|Global Financial Stability Report|IMF|Economy & Political Economy|intra|https://www.imf.org/en/publications|\bGlobal Financial Stability Report\b
+imf_fiscal|Fiscal Monitor|IMF|Economy & Political Economy|intra|https://www.imf.org/en/publications|\bFiscal Monitor\b
 worldbank_gep|Global Economic Prospects|World Bank|Economy & Political Economy|intra|https://www.worldbank.org/en/publication/global-economic-prospects|\bGlobal Economic Prospects\b
 worldbank_wdr|World Development Report|World Bank|Economy & Political Economy|annual|https://www.worldbank.org/en/publication/wdr/wdr-archive|\bWorld Development Report\b
 oecd_eo|OECD Economic Outlook|OECD|Economy & Political Economy|intra|https://www.oecd.org/en/topics/economic-outlook.html|\b(?:OECD )?Economic Outlook\b
@@ -124,15 +124,15 @@ FLOORS = {
 # institutional domains (plus IMF's official eLibrary).
 ALT_URLS = {
     "imf_weo": [
-        "https://www.elibrary.imf.org/display/serial/world_economic_outlook",
-        "https://www.imf.org/en/publications/weo",
+        "https://www.imf.org/en/research",
+        "https://www.imf.org/en/publications/weo/issues/2026/07/08/world-economic-outlook-update-july-2026",
+        "https://www.imf.org/en/publications/weo/issues/2026/04/14/world-economic-outlook-april-2026",
     ],
     "imf_gfsr": [
-        "https://www.elibrary.imf.org/display/serial/global_financial_stability_report",
-        "https://www.imf.org/en/publications/gfsr",
+        "https://www.imf.org/en/publications/gfsr/issues/2026/04/14/global-financial-stability-report-april-2026",
     ],
     "imf_fiscal": [
-        "https://www.imf.org/en/publications/fm",
+        "https://www.imf.org/en/publications/fm/issues/2026/04/15/fiscal-monitor-april-2026",
     ],
     "worldbank_gep": [
         "https://www.worldbank.org/en/research",
@@ -176,17 +176,36 @@ ALT_URLS = {
 
 # Reader-first avoids wasting ~20 seconds on hosts that consistently time out or
 # block GitHub runners but are readable through the public text renderer.
-READER_FIRST = {"mck_tech", "mck_ai", "unhcr_gt", "cpi", "wef_grr", "happiness"}
+READER_FIRST = {"imf_weo","imf_gfsr","imf_fiscal","mck_tech","mck_ai","unhcr_gt","cpi","wef_grr","happiness"}
 
 # A report-specific official URL can establish a baseline even if HTML is blocked.
 SELF_URL_SAFE = {
-    "bis_aer","unctad_tdr","wto_gto","ilo_est","wef_grr","msc_msr","sipri_yearbook",
+    "imf_weo","imf_gfsr","imf_fiscal","bis_aer","unctad_tdr","wto_gto","ilo_est","wef_grr","msc_msr","sipri_yearbook",
     "odni_ata","stanford_ai","itu_ff","wmo_climate","unep_egr","unep_agr",
     "iea_weo","irena_weto","gcb","un_wpp","un_wup","iom_wmr","undp_hdr",
     "happiness","who_whs","undp_mpi","idea","freedom","cpi","rsf","wjp"
 }
 
 _RELEASE_CACHE = {}
+
+# These series are frequently published in the following calendar year. Their
+# edition year must be explicitly tied to the report name or to a report-specific URL.
+STRICT_EDITION_YEAR = {"wmo_climate", "unhcr_gt", "un_social", "idea", "cpi"}
+
+# IMF issue URL paths are stable enough to identify series even when link text is
+# merely "Latest Issue".
+IMF_ISSUE_HINTS = {
+    "imf_weo": "/publications/weo/issues/",
+    "imf_gfsr": "/publications/gfsr/issues/",
+    "imf_fiscal": "/publications/fm/issues/",
+}
+
+# Shared Jina Reader cache/rate limiter. The public reader was returning HTTP 429
+# when Layer 2 launched many requests at once.
+_JINA_CACHE = {}
+_JINA_LOCK = threading.Lock()
+_JINA_LAST_CALL = 0.0
+_JINA_MIN_INTERVAL = 1.8
 
 BAD_PHRASES = re.compile(
     r"\b(towards?|upcoming|coming soon|save the date|concept note|background paper|"
@@ -203,11 +222,11 @@ DOMAIN_ALIASES = {
 
 DISCOVERY = [
     # Economy / political economy
-    {"id":"imf","org":"IMF","category":"Economy & Political Economy","url":"https://www.elibrary.imf.org/","include":r"\b(econom|fiscal|financial|trade|debt|inflation|growth|AI|climate|development)\b","mode":"institutional"},
-    {"id":"wb","org":"World Bank","category":"Economy & Political Economy","url":"https://www.worldbank.org/en/research/all","include":r"\b(development|poverty|econom|trade|debt|climate|digital|AI|labor|migration|education|health|governance)\b","mode":"institutional"},
+    {"id":"imf","org":"IMF","category":"Economy & Political Economy","url":"https://www.imf.org/en/publications","reader_first":True,"include":r"\b(econom|fiscal|financial|trade|debt|inflation|growth|AI|climate|development)\b","mode":"institutional"},
+    {"id":"wb","org":"World Bank","category":"Economy & Political Economy","url":"https://www.worldbank.org/en/research","include":r"\b(development|poverty|econom|trade|debt|climate|digital|AI|labor|migration|education|health|governance)\b","mode":"institutional"},
     {"id":"oecd","org":"OECD","category":"Economy & Political Economy","url":"https://www.oecd.org/en/publications.html","include":r"\b(econom|employment|tax|trade|AI|digital|climate|education|health|migration|governance|finance|productivity)\b","mode":"institutional"},
-    {"id":"bis","org":"BIS","category":"Economy & Political Economy","url":"https://www.bis.org/publ/index.htm","include":r"\b(financial|monetary|bank|credit|markets|payments|crypto|CBDC|AI|econom)\b","mode":"institutional"},
-    {"id":"unctad","org":"UNCTAD","category":"Economy & Political Economy","url":"https://unctad.org/unctad-publications","include":r"\b(trade|investment|finance|debt|development|technology|AI|digital|shipping|commodit)\b","mode":"institutional"},
+    {"id":"bis","org":"BIS","category":"Economy & Political Economy","url":"https://www.bis.org/","include":r"\b(financial|monetary|bank|credit|markets|payments|crypto|CBDC|AI|econom)\b","mode":"institutional"},
+    {"id":"unctad","org":"UNCTAD","category":"Economy & Political Economy","url":"https://unctad.org/publications","include":r"\b(trade|investment|finance|debt|development|technology|AI|digital|shipping|commodit)\b","mode":"institutional"},
     {"id":"wto","org":"WTO","category":"Economy & Political Economy","url":"https://www.wto.org/english/res_e/publications_e/publications_e.htm","include":r"\b(trade|tariff|services|goods|supply chain|digital|AI|development)\b","mode":"institutional"},
     {"id":"ilo","org":"ILO","category":"Economy & Political Economy","url":"https://www.ilo.org/research-and-publications","include":r"\b(employment|labou?r|work|wage|skills|AI|migration|social protection|productivity)\b","mode":"institutional"},
     {"id":"wef","org":"World Economic Forum","category":"Economy & Political Economy","url":"https://www.weforum.org/publications/","include":r"\b(global|econom|risk|technology|AI|jobs|energy|climate|trade|cyber|future)\b","mode":"institutional"},
@@ -222,20 +241,20 @@ DISCOVERY = [
     {"id":"stanford_hai","org":"Stanford HAI","category":"Technology & AI","url":"https://hai.stanford.edu/research","include":r"\b(AI|artificial intelligence|model|compute|governance|robot|automation|foundation model)\b","mode":"institutional"},
     {"id":"cset","org":"Georgetown CSET","category":"Technology & AI","url":"https://cset.georgetown.edu/publications/","include":r"\b(AI|artificial intelligence|semiconductor|compute|technology|biotech|China|cyber|robot|quantum)\b","mode":"institutional"},
     {"id":"mck","org":"McKinsey","category":"Technology & AI","url":"https://www.mckinsey.com/capabilities/tech-and-ai/our-insights","include":r"\b(AI|artificial intelligence|technology|digital|automation|quantum|cyber|semiconductor|robot)\b","mode":"institutional","reader_first":True},
-    {"id":"deloitte","org":"Deloitte","category":"Technology & AI","url":"https://www.deloitte.com/us/en/insights/topics/technology.html","include":r"\b(AI|technology|digital|cyber|cloud|quantum|automation|data|semiconductor)\b","mode":"institutional"},
-    {"id":"kpmg","org":"KPMG","category":"Technology & AI","url":"https://kpmg.com/xx/en/our-insights/technology.html","include":r"\b(AI|technology|digital|cyber|cloud|data|automation|quantum)\b","mode":"institutional"},
+    {"id":"deloitte","org":"Deloitte","category":"Technology & AI","url":"https://www.deloitte.com/us/en/services/consulting/collections/technology-insights.html","include":r"\b(AI|technology|digital|cyber|cloud|quantum|automation|data|semiconductor)\b","mode":"institutional"},
+    {"id":"kpmg","org":"KPMG","category":"Technology & AI","url":"https://kpmg.com/xx/en/our-insights/ai-and-technology.html","include":r"\b(AI|technology|digital|cyber|cloud|data|automation|quantum)\b","mode":"institutional"},
     {"id":"wipo","org":"WIPO","category":"Technology & AI","url":"https://www.wipo.int/publications/en/","include":r"\b(innovation|patent|technology|AI|intellectual property|creative|digital)\b","mode":"institutional"},
     {"id":"itu","org":"ITU","category":"Technology & AI","url":"https://www.itu.int/itu-d/reports/statistics/","include":r"\b(digital|internet|connectivity|ICT|AI|broadband|mobile|statistics)\b","mode":"institutional"},
 
     # Climate / energy
-    {"id":"wmo","org":"WMO","category":"Climate & Energy","url":"https://wmo.int/publications","include":r"\b(climate|weather|temperature|greenhouse|ocean|cryosphere|water|extreme)\b","mode":"institutional"},
+    {"id":"wmo","org":"WMO","category":"Climate & Energy","url":"https://wmo.int/resources/publications","include":r"\b(climate|weather|temperature|greenhouse|ocean|cryosphere|water|extreme)\b","mode":"institutional"},
     {"id":"unep","org":"UNEP","category":"Climate & Energy","url":"https://www.unep.org/resources","include":r"\b(climate|emission|adaptation|environment|pollution|nature|biodiversity|energy|methane)\b","mode":"institutional"},
     {"id":"iea","org":"IEA","category":"Climate & Energy","url":"https://www.iea.org/reports","include":r"\b(energy|oil|gas|coal|electricity|renewable|nuclear|hydrogen|emission|critical mineral)\b","mode":"institutional"},
     {"id":"irena","org":"IRENA","category":"Climate & Energy","url":"https://www.irena.org/Publications","include":r"\b(renewable|energy transition|solar|wind|hydrogen|power|climate|electrification)\b","mode":"institutional"},
     {"id":"carbonbrief","org":"Carbon Brief","category":"Climate & Energy","url":"https://www.carbonbrief.org/","include":r"\b(climate|carbon|emission|energy|warming|temperature|renewable|oil|gas|coal)\b","mode":"analysis"},
 
     # Demography / migration / society / development
-    {"id":"undesa_pop","org":"UN DESA Population Division","category":"Demography & Society","url":"https://www.un.org/development/desa/pd/publications","include":r"\b(population|fertility|mortality|migration|urbanization|ageing|household|demographic)\b","mode":"institutional"},
+    {"id":"undesa_pop","org":"UN DESA Population Division","category":"Demography & Society","url":"https://www.un.org/development/desa/pd/content/new-publications","include":r"\b(population|fertility|mortality|migration|urbanization|ageing|household|demographic)\b","mode":"institutional"},
     {"id":"iom","org":"IOM","category":"Demography & Society","url":"https://publications.iom.int/","include":r"\b(migration|migrant|displacement|mobility|diaspora|remittance|border)\b","mode":"institutional"},
     {"id":"unhcr","org":"UNHCR","category":"Demography & Society","url":"https://www.unhcr.org/publications","include":r"\b(refugee|displacement|asylum|stateless|forced displacement|migration)\b","mode":"institutional","reader_first":True},
     {"id":"undp","org":"UNDP","category":"Demography & Society","url":"https://www.undp.org/publications","include":r"\b(human development|poverty|inequality|governance|climate|digital|AI|gender|development)\b","mode":"institutional"},
@@ -279,16 +298,118 @@ def direct_html(url):
     return BeautifulSoup(r.text,"html.parser"), r.url
 
 def jina_reader(url):
+    global _JINA_LAST_CALL
+    if url in _JINA_CACHE:
+        cached = _JINA_CACHE[url]
+        if isinstance(cached, Exception):
+            raise cached
+        return cached
+
     ju = "https://r.jina.ai/" + url
-    r = requests.get(ju, headers={"Accept":"text/plain","User-Agent":HEADERS["User-Agent"]}, timeout=TIMEOUT)
-    r.raise_for_status()
-    return r.text
+    last_error = None
+
+    # Serialize public Reader calls. Direct institutional requests can still run
+    # concurrently, but Jina is intentionally gentle to avoid 429 rate limits.
+    with _JINA_LOCK:
+        if url in _JINA_CACHE:
+            cached = _JINA_CACHE[url]
+            if isinstance(cached, Exception):
+                raise cached
+            return cached
+
+        for attempt in range(3):
+            wait = _JINA_MIN_INTERVAL - (time.monotonic() - _JINA_LAST_CALL)
+            if wait > 0:
+                time.sleep(wait)
+
+            try:
+                r = requests.get(
+                    ju,
+                    headers={"Accept":"text/plain","User-Agent":HEADERS["User-Agent"]},
+                    timeout=max(TIMEOUT, 30),
+                )
+                _JINA_LAST_CALL = time.monotonic()
+
+                if r.status_code == 429:
+                    last_error = requests.HTTPError(
+                        f"429 Too Many Requests for url: {ju}", response=r
+                    )
+                    time.sleep(4 * (attempt + 1))
+                    continue
+
+                r.raise_for_status()
+                _JINA_CACHE[url] = r.text
+                return r.text
+            except Exception as e:
+                last_error = e
+                _JINA_LAST_CALL = time.monotonic()
+                if attempt < 2:
+                    time.sleep(2 * (attempt + 1))
+
+        _JINA_CACHE[url] = last_error or RuntimeError("Jina Reader failed")
+        raise _JINA_CACHE[url]
 
 
 def _url_year(url):
     ys=[int(x) for x in re.findall(r"(?<!\d)(20\d{2})(?!\d)", url or "")]
     ys=[y for y in ys if 2000 <= y <= CURRENT_YEAR]
     return max(ys) if ys else None
+
+def _url_year_month(url):
+    """Parse common /YYYY/MM/ report URL structure."""
+    m = re.search(r"/(20\d{2})/(0?[1-9]|1[0-2])(?:/|$)", (url or "").lower())
+    if not m:
+        return None
+    y, mon = int(m.group(1)), int(m.group(2))
+    if 2000 <= y <= CURRENT_YEAR:
+        return (y, mon)
+    return None
+
+def _strict_edition_year(spec, text, url):
+    """Require the edition year to be attached to the series name, not a nearby
+    publication date. Prefer a report-specific URL year, then a year immediately
+    following the report name."""
+    if spec["id"] not in STRICT_EDITION_YEAR:
+        return None
+
+    blob = clean(text or "")
+    low = (url or "").lower()
+    uy = _url_year(url)
+
+    # A report-specific URL is strong evidence and beats page publication dates.
+    slugs = {
+        "wmo_climate": ("state-of-global-climate",),
+        "unhcr_gt": ("global-trends-",),
+        "un_social": ("world-social-report-", "wsr"),
+        "idea": ("global-state-of-democracy-",),
+        "cpi": ("cpi/", "corruption-perceptions-index-"),
+    }
+    if uy is not None and any(s in low for s in slugs.get(spec["id"], ())):
+        return uy
+
+    rx = re.compile(spec["match"], re.I)
+    best = None
+    for hit in rx.finditer(blob):
+        # Edition naming normally follows the series: "Global Trends 2025".
+        after = blob[hit.end():min(len(blob), hit.end()+70)]
+        for ym in re.finditer(r"\b(20\d{2})\b", after):
+            y = int(ym.group(1))
+            if 2000 <= y <= CURRENT_YEAR:
+                key = (ym.start(), -y)
+                if best is None or key < best[0]:
+                    best = (key, y)
+
+        # Fallback for formats such as "2025 Global State of Democracy".
+        before = blob[max(0, hit.start()-45):hit.start()]
+        for ym in re.finditer(r"\b(20\d{2})\b", before):
+            y = int(ym.group(1))
+            if 2000 <= y <= CURRENT_YEAR:
+                distance = len(before) - ym.end()
+                key = (100 + distance, -y)  # following year always preferred
+                if best is None or key < best[0]:
+                    best = (key, y)
+
+    return best[1] if best else None
 
 def _nearest_year_to_series(spec, text):
     rx=re.compile(spec["match"], re.I)
@@ -328,7 +449,11 @@ def version_from(spec, text, url):
     if not blob and not url:
         return None
 
-    y,pos=_nearest_year_to_series(spec, blob)
+    strict_y = _strict_edition_year(spec, blob, url)
+    if spec["id"] in STRICT_EDITION_YEAR:
+        y, pos = strict_y, None
+    else:
+        y,pos=_nearest_year_to_series(spec, blob)
 
     # If the candidate itself is a report-specific URL, its year is useful when
     # the title contains no year. We do NOT let a URL year override an explicit
@@ -351,6 +476,11 @@ def version_from(spec, text, url):
             window=low
         ms=[n for k,n in MONTHS.items() if re.search(rf"\b{re.escape(k)}\.?\b",window)]
         month=max(ms) if ms else 0
+        # IMF and similar issue URLs often encode the month numerically.
+        if not month:
+            ym = _url_year_month(url)
+            if ym and ym[0] == y:
+                month = ym[1]
 
     return (y,month)
 
@@ -381,9 +511,12 @@ def candidates_from_html(spec, soup, page_url):
         t=clean(a.get_text(" ",strip=True))
         if not t: continue
         u=canonical(page_url,a["href"])
-        # Strict: use link text itself, not parent-card dates.
-        if rx.search(t) or rx.search(u):
-            out.append((t,u,7,"direct-link"))
+        # Strict: use link text itself, not parent-card dates. IMF issue pages
+        # also expose a stable "Latest Issue" link whose URL identifies the series.
+        hint = IMF_ISSUE_HINTS.get(spec["id"])
+        if rx.search(t) or rx.search(u) or (hint and hint in u.lower()):
+            label_text = t if rx.search(t) else f"{spec['name']} {t}"
+            out.append((label_text,u,7,"direct-link"))
     return out
 
 def candidates_from_markdown(spec, text, source_kind, source_url=None):
@@ -396,8 +529,10 @@ def candidates_from_markdown(spec, text, source_kind, source_url=None):
     # Markdown links.
     for label_text, url in re.findall(r"\[([^\]]{2,300})\]\((https?://[^)\s]+)", text):
         t = clean(label_text)
-        if rx.search(t) or rx.search(url):
-            out.append((t, url, 8, source_kind + "-link"))
+        hint = IMF_ISSUE_HINTS.get(spec["id"])
+        if rx.search(t) or rx.search(url) or (hint and hint in url.lower()):
+            label_out = t if rx.search(t) else f"{spec['name']} {t}"
+            out.append((label_out, url, 8, source_kind + "-link"))
 
     # Line windows: report name and date are often rendered on separate lines.
     lines = [clean(re.sub(r"^#+\s*", "", x)) for x in text.splitlines()]
@@ -562,6 +697,22 @@ def scan_series(state, migration):
         time.sleep(0.15)
     return new,health
 
+
+DISCOVERY_ALT_URLS = {
+    "wb": ["https://www.worldbank.org/en/about/unit/unit-dec/research/publications"],
+    "bis": ["https://www.bis.org/index.htm"],
+    "unctad": ["https://unctad.org/unctad-publications"],
+    "deloitte": [
+        "https://www.deloitte.com/us/en/insights/research-centers/center-for-technology-media-telecommunications.html"
+    ],
+    "kpmg": ["https://kpmg.com/xx/en/our-insights.html"],
+    "wmo": ["https://wmo.int/resources/publications?page=0"],
+    "undesa_pop": [
+        "https://www.un.org/development/desa/pd/content/publications",
+        "https://www.un.org/development/desa/pd/"
+    ],
+}
+
 DISCOVERY_EXCLUDE=re.compile(
     r"\b(webinar|podcast|video|event|job|vacanc|speech|press release|statement|newsletter|"
     r"call for|invitation|registration|course|conference|working paper|technical note|"
@@ -631,21 +782,32 @@ def is_flagship_duplicate(org,title):
 def resolve_discovery(spec):
     errors=[]; candidates=[]
     reader_first=bool(spec.get("reader_first"))
+    urls=list(dict.fromkeys([spec["url"]] + DISCOVERY_ALT_URLS.get(spec["id"], [])))
 
-    if reader_first:
-        try:
-            txt=jina_reader(spec["url"]); candidates=discovery_from_reader(spec,txt,spec["url"])
-        except Exception as e: errors.append("reader: "+str(e)[:140])
+    for page_url in urls:
+        if reader_first and not candidates:
+            try:
+                txt=jina_reader(page_url)
+                candidates=discovery_from_reader(spec,txt,page_url)
+            except Exception as e:
+                errors.append("reader "+page_url+": "+str(e)[:140])
 
-    if not candidates:
-        try:
-            s,final=direct_html(spec["url"]); candidates=discovery_from_html(spec,s,final)
-        except Exception as e: errors.append("direct: "+str(e)[:140])
+        if not candidates:
+            try:
+                s,final=direct_html(page_url)
+                candidates=discovery_from_html(spec,s,final)
+            except Exception as e:
+                errors.append("direct "+page_url+": "+str(e)[:140])
 
-    if not candidates and not reader_first:
-        try:
-            txt=jina_reader(spec["url"]); candidates=discovery_from_reader(spec,txt,spec["url"])
-        except Exception as e: errors.append("reader: "+str(e)[:140])
+        if not candidates and not reader_first:
+            try:
+                txt=jina_reader(page_url)
+                candidates=discovery_from_reader(spec,txt,page_url)
+            except Exception as e:
+                errors.append("reader "+page_url+": "+str(e)[:140])
+
+        if candidates:
+            break
 
     return candidates,errors
 
@@ -653,7 +815,7 @@ def scan_discovery(state,migration):
     new=[]; health=[]; resolved={}
     # Parallelize Layer 2 only. This keeps 38 sources practical without hammering
     # any one institution; each source itself is fetched at most twice.
-    with ThreadPoolExecutor(max_workers=6) as ex:
+    with ThreadPoolExecutor(max_workers=3) as ex:
         futs={ex.submit(resolve_discovery,sp):sp for sp in DISCOVERY}
         for fut in as_completed(futs):
             sp=futs[fut]
@@ -696,7 +858,7 @@ def main():
     migration = state.get("_engine_version") != ENGINE_VERSION
     if migration:
         # Re-baseline silently because earlier engines contained known false positives
-        # and expands Layer 2; first V6 run silently re-baselines changed rules.
+        # and expands Layer 2; first V6.1 run silently re-baselines corrected edition rules and discovery URLs.
         state["_engine_version"]=ENGINE_VERSION
 
     old_updates=load_json(OUTPUT_FILE,{"updates":[]}).get("updates",[])
@@ -730,7 +892,7 @@ def main():
         "monitors":h1+h2,
     }
     save_json(STATE_FILE,state); save_json(OUTPUT_FILE,payload); save_json(HEALTH_FILE,health)
-    print(f"World Watch v6: {ok1}/{len(SERIES)} flagship series resolved; "
+    print(f"World Watch v6.1: {ok1}/{len(SERIES)} flagship series resolved; "
           f"{ok2}/{len(DISCOVERY)} discovery monitors resolved; "
           f"{len(flagship_new)} newer flagship edition(s); {len(discovery_new)} discovery item(s); "
           f"migration_baseline={migration}")
