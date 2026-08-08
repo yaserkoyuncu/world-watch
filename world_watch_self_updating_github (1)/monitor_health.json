@@ -1,7 +1,7 @@
 {
-  "last_checked": "2026-08-07T23:57:23.054015Z",
+  "last_checked": "2026-08-08T00:10:44.388207Z",
   "engine_version": "4.0",
-  "migration_baseline": true,
+  "migration_baseline": false,
   "series": {
     "ok": 31,
     "failed": 13,
@@ -367,8 +367,8 @@
       "kind": "series",
       "ok": true,
       "latest": "2025",
-      "url": "https://www.transparency.org/en/cpi/2025",
-      "method": "reader-line",
+      "url": "https://www.transparency.org/en/press/corruption-perceptions-index-2025-decline-leadership-undermining-global-fight",
+      "method": "reader-link",
       "warnings": [
         "direct: 403 Client Error: Forbidden for url: https://www.transparency.org/en/cpi/2025"
       ]

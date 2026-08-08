@@ -1,10 +1,10 @@
 {
-  "last_checked": "2026-08-07T23:57:23.054015Z",
+  "last_checked": "2026-08-08T00:10:44.388207Z",
   "engine_version": "4.0",
   "monitor_count": 51,
   "flagship_series_count": 44,
   "new_items_this_run": 0,
   "new_flagship_editions_this_run": 0,
-  "migration_baseline": true,
+  "migration_baseline": false,
   "updates": []
 }

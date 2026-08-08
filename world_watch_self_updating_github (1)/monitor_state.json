@@ -58,7 +58,7 @@
     "title": "World Development Report 2026",
     "url": "https://www.worldbank.org/en/publication/wdr2026",
     "method": "direct-link",
-    "checked": "2026-08-07T23:57:23.054015Z"
+    "checked": "2026-08-08T00:10:44.388207Z"
   },
   "series:msc_msr": {
     "version": [
@@ -69,7 +69,7 @@
     "title": "Munich Security Report 2026 - Munich Security Conference",
     "url": "https://securityconference.org/en/publications/munich-security-report/2026/",
     "method": "direct-title",
-    "checked": "2026-08-07T23:57:23.054015Z"
+    "checked": "2026-08-08T00:10:44.388207Z"
   },
   "series:sipri_yearbook": {
     "version": [
@@ -80,7 +80,7 @@
     "title": "SIPRI Yearbook 2026 | SIPRI",
     "url": "https://www.sipri.org/yearbook/2026",
     "method": "direct-title",
-    "checked": "2026-08-07T23:57:23.054015Z"
+    "checked": "2026-08-08T00:10:44.388207Z"
   },
   "series:stanford_ai": {
     "version": [
@@ -91,7 +91,7 @@
     "title": "The 2026 AI Index Report | Stanford HAI",
     "url": "https://hai.stanford.edu/ai-index/2026-ai-index-report",
     "method": "direct-title",
-    "checked": "2026-08-07T23:57:23.054015Z"
+    "checked": "2026-08-08T00:10:44.388207Z"
   },
   "series:deloitte_tech": {
     "version": [
@@ -102,7 +102,7 @@
     "title": "Tech Trends 2026 | Deloitte Insights",
     "url": "https://www.deloitte.com/us/en/insights/topics/technology-management/tech-trends.html",
     "method": "direct-title",
-    "checked": "2026-08-07T23:57:23.054015Z"
+    "checked": "2026-08-08T00:10:44.388207Z"
   },
   "series:kpmg_tech": {
     "version": [
@@ -113,7 +113,7 @@
     "title": "Download the KPMG Global Tech Report 2026",
     "url": "https://kpmg.com/content/dam/kpmgsites/uk/pdf/2026/01/global-tech-report-2026.pdf",
     "method": "direct-link",
-    "checked": "2026-08-07T23:57:23.054015Z"
+    "checked": "2026-08-08T00:10:44.388207Z"
   },
   "series:wipo_gii": {
     "version": [
@@ -124,7 +124,7 @@
     "title": "Global Innovation Index 2026: Powering Entrepreneurs at the Frontier of Science",
     "url": "https://www.wipo.int/en/web/global-innovation-index/index",
     "method": "direct-heading",
-    "checked": "2026-08-07T23:57:23.054015Z"
+    "checked": "2026-08-08T00:10:44.388207Z"
   },
   "series:itu_ff": {
     "version": [
@@ -135,7 +135,7 @@
     "title": "Facts and Figures 2025",
     "url": "https://www.itu.int/itu-d/reports/statistics/facts-figures-2025/",
     "method": "direct-title",
-    "checked": "2026-08-07T23:57:23.054015Z"
+    "checked": "2026-08-08T00:10:44.388207Z"
   },
   "series:wmo_climate": {
     "version": [
@@ -146,7 +146,7 @@
     "title": "State of the Global Climate 2025",
     "url": "https://wmo.int/publication-series/state-of-global-climate/state-of-global-climate-2025",
     "method": "direct-title",
-    "checked": "2026-08-07T23:57:23.054015Z"
+    "checked": "2026-08-08T00:10:44.388207Z"
   },
   "series:unep_egr": {
     "version": [
@@ -157,7 +157,7 @@
     "title": "Emissions Gap Report 2025 | UNEP - UN Environment Programme",
     "url": "https://www.unep.org/resources/emissions-gap-report-2025",
     "method": "direct-title",
-    "checked": "2026-08-07T23:57:23.054015Z"
+    "checked": "2026-08-08T00:10:44.388207Z"
   },
   "series:unep_agr": {
     "version": [
@@ -168,7 +168,7 @@
     "title": "Adaptation Gap Report 2025 | UNEP - UN Environment Programme",
     "url": "https://www.unep.org/resources/adaptation-gap-report-2025",
     "method": "direct-title",
-    "checked": "2026-08-07T23:57:23.054015Z"
+    "checked": "2026-08-08T00:10:44.388207Z"
   },
   "series:gcb": {
     "version": [
@@ -179,7 +179,7 @@
     "title": "[Privacy, Cookies and Terms](https://globalcarbonbudget.org/privacy-policy) Global Carbon Budget © 2026",
     "url": "https://globalcarbonbudget.org/",
     "method": "reader-line",
-    "checked": "2026-08-07T23:57:23.054015Z"
+    "checked": "2026-08-08T00:10:44.388207Z"
   },
   "series:undp_hdr": {
     "version": [
@@ -190,7 +190,7 @@
     "title": "Human Development Report 2025 | Human Development Reports",
     "url": "https://hdr.undp.org/content/human-development-report-2025",
     "method": "direct-title",
-    "checked": "2026-08-07T23:57:23.054015Z"
+    "checked": "2026-08-08T00:10:44.388207Z"
   },
   "series:un_social": {
     "version": [
@@ -201,7 +201,7 @@
     "title": "World Social Report 2025: A New Policy Consensus to Accelerate Social Progress",
     "url": "https://social.desa.un.org/issues/world-social-report",
     "method": "direct-heading",
-    "checked": "2026-08-07T23:57:23.054015Z"
+    "checked": "2026-08-08T00:10:44.388207Z"
   },
   "series:who_whs": {
     "version": [
@@ -212,7 +212,7 @@
     "title": "World health statistics 2026: monitoring health for the SDGs, sustainable development goals",
     "url": "https://www.who.int/publications/i/item/9789240122482",
     "method": "direct-title",
-    "checked": "2026-08-07T23:57:23.054015Z"
+    "checked": "2026-08-08T00:10:44.388207Z"
   },
   "series:unesco_gem": {
     "version": [
@@ -223,7 +223,7 @@
     "title": "Thumbnail play_arrow Video Name 2026 GEM Report: Access and equity animation",
     "url": "https://www.unesco.org/gem-report/en/paragraph-resource/4717/7",
     "method": "direct-link",
-    "checked": "2026-08-07T23:57:23.054015Z"
+    "checked": "2026-08-08T00:10:44.388207Z"
   },
   "series:vdem": {
     "version": [
@@ -234,7 +234,7 @@
     "title": "How to cite the Democracy Report 2026:",
     "url": "https://www.v-dem.net/publications/democracy-reports/",
     "method": "direct-heading",
-    "checked": "2026-08-07T23:57:23.054015Z"
+    "checked": "2026-08-08T00:10:44.388207Z"
   },
   "series:idea": {
     "version": [
@@ -245,7 +245,7 @@
     "title": "The Global State of Democracy 2025: Democracy on the Move | International IDEA",
     "url": "https://www.idea.int/publications/catalogue/global-state-of-democracy-2025-democracy-on-the-move",
     "method": "direct-title",
-    "checked": "2026-08-07T23:57:23.054015Z"
+    "checked": "2026-08-08T00:10:44.388207Z"
   },
   "series:freedom": {
     "version": [
@@ -256,15 +256,15 @@
     "title": "Freedom in the World 2026",
     "url": "https://freedomhouse.org/report/freedom-world/2026/growing-shadow-autocracy",
     "method": "direct-link",
-    "checked": "2026-08-07T23:57:23.054015Z"
+    "checked": "2026-08-08T00:10:44.388207Z"
   },
   "discovery:wb": [],
   "discovery:who": [
-    "https://www.who.int/mega-menu/data/data-collection/civil-registration-and-vital-statistics",
-    "https://www.who.int/publications/i/item/B09861",
+    "https://www.who.int/mega-menu/data/dashboards/health-inequality-monitor",
     "https://www.who.int/mega-menu/data/reports/uhc-global-monitoring-report",
+    "https://www.who.int/mega-menu/data/data-collection/civil-registration-and-vital-statistics",
     "https://www.who.int/mega-menu/data/data-collection/harmonized-health-facility-assessment",
-    "https://www.who.int/mega-menu/data/dashboards/health-inequality-monitor"
+    "https://www.who.int/publications/i/item/B09861"
   ],
   "discovery:cset": [],
   "discovery:cb": [],
@@ -279,7 +279,7 @@
     "title": "Extracts in German from the June 2026 OECD Economic Outlook, Under Pressure / Unter Druck including the OECD Chief Economist's editorial and country notes for Germany, Austria and Switzerland.",
     "url": "https://www.oecd.org/en/topics/economic-outlook.html",
     "method": "reader-line",
-    "checked": "2026-08-07T23:57:23.054015Z"
+    "checked": "2026-08-08T00:10:44.388207Z"
   },
   "series:bis_aer": {
     "version": [
@@ -290,7 +290,7 @@
     "title": "Annual Economic Report 2026",
     "url": "https://www.bis.org/publ/arpdf/ar2026e.htm",
     "method": "direct-title",
-    "checked": "2026-08-07T23:57:23.054015Z"
+    "checked": "2026-08-08T00:10:44.388207Z"
   },
   "series:wto_gto": {
     "version": [
@@ -301,7 +301,7 @@
     "title": "WTO | Global Trade Outlook and Statistics March 2026",
     "url": "https://www.wto.org/english/res_e/publications_e/gtos0326_e.htm",
     "method": "direct-title",
-    "checked": "2026-08-07T23:57:23.054015Z"
+    "checked": "2026-08-08T00:10:44.388207Z"
   },
   "series:wef_grr": {
     "version": [
@@ -312,7 +312,7 @@
     "title": "Title: The Global Risks Report 2026",
     "url": "https://www.weforum.org/publications/global-risks-report-2026/",
     "method": "reader-line",
-    "checked": "2026-08-07T23:57:23.054015Z"
+    "checked": "2026-08-08T00:10:44.388207Z"
   },
   "series:un_wpp": {
     "version": [
@@ -323,7 +323,7 @@
     "title": "World Population Prospects 2024 | Population Division",
     "url": "https://www.un.org/development/desa/pd/world-population-prospects-2024",
     "method": "direct-title",
-    "checked": "2026-08-07T23:57:23.054015Z"
+    "checked": "2026-08-08T00:10:44.388207Z"
   },
   "series:un_wup": {
     "version": [
@@ -334,7 +334,7 @@
     "title": "World Urbanization Prospects 2025 | Population Division",
     "url": "https://www.un.org/development/desa/pd/world-urbanization-prospects-2025",
     "method": "direct-title",
-    "checked": "2026-08-07T23:57:23.054015Z"
+    "checked": "2026-08-08T00:10:44.388207Z"
   },
   "series:iom_wmr": {
     "version": [
@@ -345,7 +345,7 @@
     "title": "![Image 1: Cover of the World Migration Report 2020",
     "url": "https://worldmigrationreport.iom.int/msite/wmr-2026-interactive/img/report-en.jpg",
     "method": "reader-link",
-    "checked": "2026-08-07T23:57:23.054015Z"
+    "checked": "2026-08-08T00:10:44.388207Z"
   },
   "series:happiness": {
     "version": [
@@ -356,7 +356,7 @@
     "title": "The World Happiness Report is published by the Wellbeing Research Centre at the University of Oxford, in partnership with Gallup, the UN Sustainable Development Solutions Network and an independent editorial board.",
     "url": "https://www.worldhappiness.report/ed/2026/",
     "method": "reader-line",
-    "checked": "2026-08-07T23:57:23.054015Z"
+    "checked": "2026-08-08T00:10:44.388207Z"
   },
   "series:fao_sofi": {
     "version": [
@@ -367,7 +367,7 @@
     "title": "**The State of Food Security and Nutrition in the World 2026**",
     "url": "https://www.fao.org/publications/fao-flagship-publications/the-state-of-food-security-and-nutrition-in-the-world/2025/en",
     "method": "reader-line",
-    "checked": "2026-08-07T23:57:23.054015Z"
+    "checked": "2026-08-08T00:10:44.388207Z"
   },
   "series:undp_mpi": {
     "version": [
@@ -378,7 +378,7 @@
     "title": "Title: 2025 Global Multidimensional Poverty Index (MPI)",
     "url": "https://www.undp.org/turkiye/publications/2025-global-multidimensional-poverty-index-mpi",
     "method": "reader-line",
-    "checked": "2026-08-07T23:57:23.054015Z"
+    "checked": "2026-08-08T00:10:44.388207Z"
   },
   "series:cpi": {
     "version": [
@@ -386,10 +386,10 @@
       0
     ],
     "edition": "2025",
-    "title": "Western European nations make up nine of the top ten countries globally in the Corruption Perceptions Index. However, anti-corruption efforts have largely stalled in recent years, with the region’s average CPI score dropping quicker than any other.",
-    "url": "https://www.transparency.org/en/cpi/2025",
-    "method": "reader-line",
-    "checked": "2026-08-07T23:57:23.054015Z"
+    "title": "Corruption Perceptions Index 2025: Decline in leadership undermining global fight against corruption",
+    "url": "https://www.transparency.org/en/press/corruption-perceptions-index-2025-decline-leadership-undermining-global-fight",
+    "method": "reader-link",
+    "checked": "2026-08-08T00:10:44.388207Z"
   },
   "series:rsf": {
     "version": [
@@ -400,7 +400,7 @@
     "title": "2026 RSF Index: press freedom at a 25-year low | RSF",
     "url": "https://rsf.org/en/2026-rsf-index-press-freedom-25-year-low",
     "method": "direct-title",
-    "checked": "2026-08-07T23:57:23.054015Z"
+    "checked": "2026-08-08T00:10:44.388207Z"
   },
   "discovery:imf": [],
   "discovery:icg": []
