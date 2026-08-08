@@ -1,35 +1,35 @@
 {
-  "last_checked": "2026-08-08T00:15:40.365343Z",
-  "engine_version": "5.0",
+  "last_checked": "2026-08-08T00:34:12.149927Z",
+  "engine_version": "6.0",
   "migration_baseline": true,
   "series": {
-    "ok": 38,
-    "failed": 6,
+    "ok": 39,
+    "failed": 5,
     "total": 44
   },
   "discovery": {
-    "ok": 4,
-    "failed": 3,
-    "total": 7
+    "ok": 18,
+    "failed": 20,
+    "total": 38
   },
   "monitors": [
     {
       "monitor": "World Economic Outlook",
       "kind": "series",
       "ok": false,
-      "error": "direct https://www.imf.org/en/Publications/WEO: 403 Client Error: Forbidden for url: https://www.imf.org/en/Publications/WEO | direct https://www.imf.org/en/publications/world-economic-and-financial-surveys: 403 Client Error: Forbidden for url: https://www.imf.org/en/publications/world-economic-and-financial-surveys | direct https://www.imf.org/en/publications: 403 Client Error: Forbidden for url: https://www.imf.org/en/publications | direct https://www.imf.org/en/home: 403 Client Error: Forbidd"
+      "error": "direct https://www.elibrary.imf.org/subject/081: 405 Client Error: Not Allowed for url: https://www.elibrary.imf.org/subject/081 | direct https://www.elibrary.imf.org/display/serial/world_economic_outlook: 405 Client Error: Not Allowed for url: https://www.elibrary.imf.org/display/serial/world_economic_outlook | direct https://www.imf.org/en/publications/weo: 403 Client Error: Forbidden for url: https://www.imf.org/en/publications/weo"
     },
     {
       "monitor": "Global Financial Stability Report",
       "kind": "series",
       "ok": false,
-      "error": "direct https://www.imf.org/en/Publications/GFSR: 403 Client Error: Forbidden for url: https://www.imf.org/en/Publications/GFSR | direct https://www.imf.org/en/publications/world-economic-and-financial-surveys: 403 Client Error: Forbidden for url: https://www.imf.org/en/publications/world-economic-and-financial-surveys | direct https://www.imf.org/en/publications: 403 Client Error: Forbidden for url: https://www.imf.org/en/publications"
+      "error": "direct https://www.elibrary.imf.org/subject/082: 405 Client Error: Not Allowed for url: https://www.elibrary.imf.org/subject/082 | direct https://www.elibrary.imf.org/display/serial/global_financial_stability_report: 405 Client Error: Not Allowed for url: https://www.elibrary.imf.org/display/serial/global_financial_stability_report | direct https://www.imf.org/en/publications/gfsr: 403 Client Error: Forbidden for url: https://www.imf.org/en/publications/gfsr"
     },
     {
       "monitor": "Fiscal Monitor",
       "kind": "series",
       "ok": false,
-      "error": "direct https://www.imf.org/en/Publications/FM: 403 Client Error: Forbidden for url: https://www.imf.org/en/Publications/FM | direct https://www.imf.org/en/publications/world-economic-and-financial-surveys: 403 Client Error: Forbidden for url: https://www.imf.org/en/publications/world-economic-and-financial-surveys | direct https://www.imf.org/en/publications: 403 Client Error: Forbidden for url: https://www.imf.org/en/publications"
+      "error": "direct https://www.elibrary.imf.org/subject/089: 405 Client Error: Not Allowed for url: https://www.elibrary.imf.org/subject/089 | direct https://www.imf.org/en/publications/fm: 403 Client Error: Forbidden for url: https://www.imf.org/en/publications/fm"
     },
     {
       "monitor": "Global Economic Prospects",
@@ -72,8 +72,14 @@
     {
       "monitor": "Trade and Development Report",
       "kind": "series",
-      "ok": false,
-      "error": "direct https://unctad.org/en/Pages/Publications/TradeandDevelopmentReport.aspx: 403 Client Error: Forbidden for url: https://unctad.org/en/Pages/Publications/TradeandDevelopmentReport.aspx | direct https://unctad.org/publication/trade-and-development-report-2025: 403 Client Error: Forbidden for url: https://unctad.org/publication/trade-and-development-report-2025"
+      "ok": true,
+      "latest": "2025",
+      "url": "https://unctad.org/publication/trade-and-development-report-2025",
+      "method": "official-url",
+      "warnings": [
+        "direct https://unctad.org/topic/macroeconomics/trade-development-report: 403 Client Error: Forbidden for url: https://unctad.org/topic/macroeconomics/trade-development-report",
+        "direct https://unctad.org/publication/trade-and-development-report-2025: 403 Client Error: Forbidden for url: https://unctad.org/publication/trade-and-development-report-2025"
+      ]
     },
     {
       "monitor": "Global Trade Outlook and Statistics",
@@ -100,9 +106,7 @@
       "latest": "2026",
       "url": "https://www.weforum.org/publications/global-risks-report-2026/",
       "method": "reader-block",
-      "warnings": [
-        "direct https://www.weforum.org/publications/global-risks-report-2026/: 403 Client Error: Forbidden for url: https://www.weforum.org/publications/global-risks-report-2026/"
-      ]
+      "warnings": []
     },
     {
       "monitor": "Munich Security Report",
@@ -146,13 +150,13 @@
       "monitor": "Technology Trends Outlook",
       "kind": "series",
       "ok": false,
-      "error": "direct https://www.mckinsey.com/capabilities/tech-and-ai/our-insights/the-top-trends-in-tech/: HTTPSConnectionPool(host='www.mckinsey.com', port=443): Read timed out. (read timeout=35) | direct https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/the-top-trends-in-tech: HTTPSConnectionPool(host='www.mckinsey.com', port=443): Read timed out. (read timeout=35)"
+      "error": "direct https://www.mckinsey.com/capabilities/tech-and-ai/our-insights/the-top-trends-in-tech/: HTTPSConnectionPool(host='www.mckinsey.com', port=443): Read timed out. (read timeout=22) | direct https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/the-top-trends-in-tech: HTTPSConnectionPool(host='www.mckinsey.com', port=443): Read timed out. (read timeout=22)"
     },
     {
       "monitor": "State of AI",
       "kind": "series",
       "ok": false,
-      "error": "direct https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai/: HTTPSConnectionPool(host='www.mckinsey.com', port=443): Read timed out. (read timeout=35) | direct https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai: HTTPSConnectionPool(host='www.mckinsey.com', port=443): Read timed out. (read timeout=35)"
+      "error": "direct https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai/: HTTPSConnectionPool(host='www.mckinsey.com', port=443): Read timed out. (read timeout=22) | direct https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai: HTTPSConnectionPool(host='www.mckinsey.com', port=443): Read timed out. (read timeout=22)"
     },
     {
       "monitor": "Tech Trends",
@@ -194,9 +198,9 @@
       "monitor": "State of the Global Climate",
       "kind": "series",
       "ok": true,
-      "latest": "2026",
+      "latest": "2025",
       "url": "https://wmo.int/publication-series/state-of-global-climate/state-of-global-climate-2025",
-      "method": "reader-block",
+      "method": "direct-title",
       "warnings": []
     },
     {
@@ -272,7 +276,7 @@
       "ok": true,
       "latest": "2026",
       "url": "https://worldmigrationreport.iom.int/msite/wmr-2026-interactive/",
-      "method": "official-url",
+      "method": "reader-block",
       "warnings": [
         "direct https://worldmigrationreport.iom.int/msite/wmr-2026-interactive/: 403 Client Error: Forbidden for url: https://worldmigrationreport.iom.int/msite/wmr-2026-interactive/"
       ]
@@ -286,8 +290,7 @@
       "method": "reader-block",
       "warnings": [
         "direct https://www.unhcr.org/au/global-trends: 403 Client Error: Forbidden for url: https://www.unhcr.org/au/global-trends",
-        "direct https://www.unhcr.org/media/global-trends-2025-report: 403 Client Error: Forbidden for url: https://www.unhcr.org/media/global-trends-2025-report",
-        "direct https://www.unhcr.org/global-trends: 403 Client Error: Forbidden for url: https://www.unhcr.org/global-trends"
+        "direct https://www.unhcr.org/media/global-trends-2025-report: 403 Client Error: Forbidden for url: https://www.unhcr.org/media/global-trends-2025-report"
       ]
     },
     {
@@ -303,9 +306,9 @@
       "monitor": "World Social Report",
       "kind": "series",
       "ok": true,
-      "latest": "2025",
-      "url": "https://social.desa.un.org/sites/default/files/styles/max_width_400px_ri/public/2025-04/WSR2025-Cover-sm.jpg.jpg?itok=XeEJM61H",
-      "method": "reader-link",
+      "latest": "2026",
+      "url": "https://social.desa.un.org/issues/world-social-report",
+      "method": "reader-block",
       "warnings": []
     },
     {
@@ -315,9 +318,7 @@
       "latest": "2026",
       "url": "https://www.worldhappiness.report/ed/2026/",
       "method": "reader-block",
-      "warnings": [
-        "direct https://www.worldhappiness.report/ed/2026/: 403 Client Error: Forbidden for url: https://www.worldhappiness.report/ed/2026/"
-      ]
+      "warnings": []
     },
     {
       "monitor": "World Health Statistics",
@@ -370,9 +371,9 @@
       "monitor": "Global State of Democracy",
       "kind": "series",
       "ok": true,
-      "latest": "2025",
+      "latest": "2026",
       "url": "https://www.idea.int/publications/catalogue/global-state-of-democracy-2025-democracy-on-the-move",
-      "method": "direct-title",
+      "method": "reader-block",
       "warnings": []
     },
     {
@@ -397,12 +398,10 @@
       "monitor": "Corruption Perceptions Index",
       "kind": "series",
       "ok": true,
-      "latest": "2026",
-      "url": "https://www.transparency.org/en/cpi/2025",
-      "method": "reader-block",
-      "warnings": [
-        "direct https://www.transparency.org/en/cpi/2025: 403 Client Error: Forbidden for url: https://www.transparency.org/en/cpi/2025"
-      ]
+      "latest": "2025",
+      "url": "https://www.transparency.org/en/press/corruption-perceptions-index-2025-decline-leadership-undermining-global-fight",
+      "method": "reader-link",
+      "warnings": []
     },
     {
       "monitor": "World Press Freedom Index",
@@ -418,8 +417,10 @@
       "kind": "discovery",
       "ok": false,
       "candidates": 0,
+      "new_candidates": 0,
+      "suppressed": 0,
       "warnings": [
-        "direct: 403 Client Error: Forbidden for url: https://www.imf.org/en/publications"
+        "direct: 405 Client Error: Not Allowed for url: https://www.elibrary.imf.org/"
       ]
     },
     {
@@ -427,44 +428,384 @@
       "kind": "discovery",
       "ok": false,
       "candidates": 0,
+      "new_candidates": 0,
+      "suppressed": 0,
       "warnings": []
     },
     {
-      "monitor": "WHO discovery",
+      "monitor": "OECD discovery",
+      "kind": "discovery",
+      "ok": false,
+      "candidates": 0,
+      "new_candidates": 0,
+      "suppressed": 0,
+      "warnings": [
+        "direct: 403 Client Error: Forbidden for url: https://www.oecd.org/en/publications.html"
+      ]
+    },
+    {
+      "monitor": "BIS discovery",
+      "kind": "discovery",
+      "ok": false,
+      "candidates": 0,
+      "new_candidates": 0,
+      "suppressed": 0,
+      "warnings": [
+        "direct: 404 Client Error: Not Found for url: https://www.bis.org/publ/index.htm",
+        "reader: 429 Client Error: Too Many Requests for url: https://r.jina.ai/https://www.bis.org/publ/index.htm"
+      ]
+    },
+    {
+      "monitor": "UNCTAD discovery",
+      "kind": "discovery",
+      "ok": false,
+      "candidates": 0,
+      "new_candidates": 0,
+      "suppressed": 0,
+      "warnings": [
+        "direct: 403 Client Error: Forbidden for url: https://unctad.org/unctad-publications"
+      ]
+    },
+    {
+      "monitor": "WTO discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 16,
+      "candidates": 2,
+      "new_candidates": 1,
+      "suppressed": 0,
       "warnings": []
     },
     {
-      "monitor": "Georgetown CSET discovery",
+      "monitor": "ILO discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 7,
+      "candidates": 14,
+      "new_candidates": 13,
+      "suppressed": 0,
       "warnings": []
+    },
+    {
+      "monitor": "World Economic Forum discovery",
+      "kind": "discovery",
+      "ok": false,
+      "candidates": 0,
+      "new_candidates": 0,
+      "suppressed": 0,
+      "warnings": [
+        "direct: 403 Client Error: Forbidden for url: https://www.weforum.org/publications/",
+        "reader: 429 Client Error: Too Many Requests for url: https://r.jina.ai/https://www.weforum.org/publications/"
+      ]
+    },
+    {
+      "monitor": "Munich Security Conference discovery",
+      "kind": "discovery",
+      "ok": true,
+      "candidates": 4,
+      "new_candidates": 3,
+      "suppressed": 0,
+      "warnings": []
+    },
+    {
+      "monitor": "SIPRI discovery",
+      "kind": "discovery",
+      "ok": true,
+      "candidates": 11,
+      "new_candidates": 11,
+      "suppressed": 0,
+      "warnings": []
+    },
+    {
+      "monitor": "ODNI discovery",
+      "kind": "discovery",
+      "ok": false,
+      "candidates": 0,
+      "new_candidates": 0,
+      "suppressed": 0,
+      "warnings": [
+        "direct: 403 Client Error: Forbidden for url: https://www.dni.gov/index.php/newsroom/reports-publications",
+        "reader: 429 Client Error: Too Many Requests for url: https://r.jina.ai/https://www.dni.gov/index.php/newsroom/reports-publications"
+      ]
     },
     {
       "monitor": "International Crisis Group discovery",
       "kind": "discovery",
       "ok": false,
       "candidates": 0,
+      "new_candidates": 0,
+      "suppressed": 0,
       "warnings": [
-        "direct: 403 Client Error: Forbidden for url: https://www.crisisgroup.org/latest-updates"
+        "direct: 403 Client Error: Forbidden for url: https://www.crisisgroup.org/latest-updates",
+        "reader: 429 Client Error: Too Many Requests for url: https://r.jina.ai/https://www.crisisgroup.org/latest-updates"
+      ]
+    },
+    {
+      "monitor": "Stanford HAI discovery",
+      "kind": "discovery",
+      "ok": true,
+      "candidates": 6,
+      "new_candidates": 6,
+      "suppressed": 0,
+      "warnings": []
+    },
+    {
+      "monitor": "Georgetown CSET discovery",
+      "kind": "discovery",
+      "ok": true,
+      "candidates": 10,
+      "new_candidates": 5,
+      "suppressed": 0,
+      "warnings": []
+    },
+    {
+      "monitor": "McKinsey discovery",
+      "kind": "discovery",
+      "ok": false,
+      "candidates": 0,
+      "new_candidates": 0,
+      "suppressed": 0,
+      "warnings": [
+        "reader: 429 Client Error: Too Many Requests for url: https://r.jina.ai/https://www.mckinsey.com/capabilities/tech-and-ai/our-insights",
+        "direct: HTTPSConnectionPool(host='www.mckinsey.com', port=443): Read timed out. (read timeout=22)"
+      ]
+    },
+    {
+      "monitor": "Deloitte discovery",
+      "kind": "discovery",
+      "ok": false,
+      "candidates": 0,
+      "new_candidates": 0,
+      "suppressed": 0,
+      "warnings": [
+        "direct: 404 Client Error: Not Found for url: https://www.deloitte.com/us/en/insights/topics/technology.html",
+        "reader: 429 Client Error: Too Many Requests for url: https://r.jina.ai/https://www.deloitte.com/us/en/insights/topics/technology.html"
+      ]
+    },
+    {
+      "monitor": "KPMG discovery",
+      "kind": "discovery",
+      "ok": false,
+      "candidates": 0,
+      "new_candidates": 0,
+      "suppressed": 0,
+      "warnings": [
+        "direct: 404 Client Error: Not Found for url: https://kpmg.com/xx/en/our-insights/technology.html"
+      ]
+    },
+    {
+      "monitor": "WIPO discovery",
+      "kind": "discovery",
+      "ok": true,
+      "candidates": 12,
+      "new_candidates": 10,
+      "suppressed": 0,
+      "warnings": []
+    },
+    {
+      "monitor": "ITU discovery",
+      "kind": "discovery",
+      "ok": true,
+      "candidates": 2,
+      "new_candidates": 1,
+      "suppressed": 0,
+      "warnings": []
+    },
+    {
+      "monitor": "WMO discovery",
+      "kind": "discovery",
+      "ok": false,
+      "candidates": 0,
+      "new_candidates": 0,
+      "suppressed": 0,
+      "warnings": [
+        "direct: 404 Client Error: Not Found for url: https://wmo.int/publications",
+        "reader: 429 Client Error: Too Many Requests for url: https://r.jina.ai/https://wmo.int/publications"
+      ]
+    },
+    {
+      "monitor": "UNEP discovery",
+      "kind": "discovery",
+      "ok": true,
+      "candidates": 2,
+      "new_candidates": 2,
+      "suppressed": 0,
+      "warnings": []
+    },
+    {
+      "monitor": "IEA discovery",
+      "kind": "discovery",
+      "ok": false,
+      "candidates": 0,
+      "new_candidates": 0,
+      "suppressed": 0,
+      "warnings": [
+        "direct: 403 Client Error: Forbidden for url: https://www.iea.org/reports",
+        "reader: 429 Client Error: Too Many Requests for url: https://r.jina.ai/https://www.iea.org/reports"
+      ]
+    },
+    {
+      "monitor": "IRENA discovery",
+      "kind": "discovery",
+      "ok": false,
+      "candidates": 0,
+      "new_candidates": 0,
+      "suppressed": 0,
+      "warnings": [
+        "direct: 403 Client Error: Forbidden for url: https://www.irena.org/Publications",
+        "reader: 429 Client Error: Too Many Requests for url: https://r.jina.ai/https://www.irena.org/Publications"
       ]
     },
     {
       "monitor": "Carbon Brief discovery",
       "kind": "discovery",
+      "ok": false,
+      "candidates": 0,
+      "new_candidates": 0,
+      "suppressed": 0,
+      "warnings": [
+        "reader: 429 Client Error: Too Many Requests for url: https://r.jina.ai/https://www.carbonbrief.org/"
+      ]
+    },
+    {
+      "monitor": "UN DESA Population Division discovery",
+      "kind": "discovery",
+      "ok": false,
+      "candidates": 0,
+      "new_candidates": 0,
+      "suppressed": 0,
+      "warnings": [
+        "direct: 404 Client Error: Not Found for url: https://www.un.org/development/desa/pd/publications",
+        "reader: 429 Client Error: Too Many Requests for url: https://r.jina.ai/https://www.un.org/development/desa/pd/publications"
+      ]
+    },
+    {
+      "monitor": "IOM discovery",
+      "kind": "discovery",
+      "ok": false,
+      "candidates": 0,
+      "new_candidates": 0,
+      "suppressed": 0,
+      "warnings": [
+        "direct: 403 Client Error: Forbidden for url: https://publications.iom.int/",
+        "reader: 429 Client Error: Too Many Requests for url: https://r.jina.ai/https://publications.iom.int/"
+      ]
+    },
+    {
+      "monitor": "UNHCR discovery",
+      "kind": "discovery",
+      "ok": false,
+      "candidates": 0,
+      "new_candidates": 0,
+      "suppressed": 0,
+      "warnings": [
+        "reader: 429 Client Error: Too Many Requests for url: https://r.jina.ai/https://www.unhcr.org/publications",
+        "direct: 403 Client Error: Forbidden for url: https://www.unhcr.org/publications"
+      ]
+    },
+    {
+      "monitor": "UNDP discovery",
+      "kind": "discovery",
+      "ok": false,
+      "candidates": 0,
+      "new_candidates": 0,
+      "suppressed": 0,
+      "warnings": [
+        "direct: 403 Client Error: Forbidden for url: https://www.undp.org/publications",
+        "reader: 429 Client Error: Too Many Requests for url: https://r.jina.ai/https://www.undp.org/publications"
+      ]
+    },
+    {
+      "monitor": "WHO discovery",
+      "kind": "discovery",
+      "ok": true,
+      "candidates": 8,
+      "new_candidates": 0,
+      "suppressed": 0,
+      "warnings": []
+    },
+    {
+      "monitor": "FAO discovery",
+      "kind": "discovery",
       "ok": true,
       "candidates": 1,
+      "new_candidates": 1,
+      "suppressed": 0,
+      "warnings": []
+    },
+    {
+      "monitor": "UNESCO discovery",
+      "kind": "discovery",
+      "ok": true,
+      "candidates": 2,
+      "new_candidates": 1,
+      "suppressed": 0,
+      "warnings": []
+    },
+    {
+      "monitor": "V-Dem Institute discovery",
+      "kind": "discovery",
+      "ok": true,
+      "candidates": 3,
+      "new_candidates": 3,
+      "suppressed": 0,
+      "warnings": []
+    },
+    {
+      "monitor": "International IDEA discovery",
+      "kind": "discovery",
+      "ok": true,
+      "candidates": 1,
+      "new_candidates": 1,
+      "suppressed": 0,
+      "warnings": []
+    },
+    {
+      "monitor": "Freedom House discovery",
+      "kind": "discovery",
+      "ok": true,
+      "candidates": 9,
+      "new_candidates": 8,
+      "suppressed": 0,
+      "warnings": []
+    },
+    {
+      "monitor": "World Justice Project discovery",
+      "kind": "discovery",
+      "ok": true,
+      "candidates": 12,
+      "new_candidates": 10,
+      "suppressed": 0,
+      "warnings": []
+    },
+    {
+      "monitor": "Transparency International discovery",
+      "kind": "discovery",
+      "ok": true,
+      "candidates": 19,
+      "new_candidates": 16,
+      "suppressed": 0,
+      "warnings": [
+        "reader: 429 Client Error: Too Many Requests for url: https://r.jina.ai/https://www.transparency.org/en/publications"
+      ]
+    },
+    {
+      "monitor": "Reporters Without Borders discovery",
+      "kind": "discovery",
+      "ok": true,
+      "candidates": 6,
+      "new_candidates": 6,
+      "suppressed": 0,
       "warnings": []
     },
     {
       "monitor": "Quanta Magazine discovery",
       "kind": "discovery",
-      "ok": true,
-      "candidates": 3,
-      "warnings": []
+      "ok": false,
+      "candidates": 0,
+      "new_candidates": 0,
+      "suppressed": 0,
+      "warnings": [
+        "reader: 429 Client Error: Too Many Requests for url: https://r.jina.ai/https://www.quantamagazine.org/"
+      ]
     }
   ]
 }

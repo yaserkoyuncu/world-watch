@@ -1,8 +1,9 @@
 {
-  "last_checked": "2026-08-08T00:15:40.365343Z",
-  "engine_version": "5.0",
-  "monitor_count": 51,
+  "last_checked": "2026-08-08T00:34:12.149927Z",
+  "engine_version": "6.0",
+  "monitor_count": 82,
   "flagship_series_count": 44,
+  "discovery_source_count": 38,
   "new_items_this_run": 0,
   "new_flagship_editions_this_run": 0,
   "migration_baseline": true,
