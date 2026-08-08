@@ -1,15 +1,15 @@
 {
-  "last_checked": "2026-08-08T00:53:25.188831Z",
+  "last_checked": "2026-08-08T00:59:56.854336Z",
   "engine_version": "6.1",
-  "migration_baseline": true,
+  "migration_baseline": false,
   "series": {
     "ok": 42,
     "failed": 2,
     "total": 44
   },
   "discovery": {
-    "ok": 30,
-    "failed": 8,
+    "ok": 31,
+    "failed": 7,
     "total": 38
   },
   "monitors": [
@@ -443,7 +443,7 @@
       "kind": "discovery",
       "ok": true,
       "candidates": 5,
-      "new_candidates": 5,
+      "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
     },
@@ -463,7 +463,7 @@
       "kind": "discovery",
       "ok": true,
       "candidates": 11,
-      "new_candidates": 11,
+      "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
     },
@@ -502,7 +502,7 @@
       "kind": "discovery",
       "ok": true,
       "candidates": 21,
-      "new_candidates": 21,
+      "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
         "direct https://www.weforum.org/publications/: 403 Client Error: Forbidden for url: https://www.weforum.org/publications/"
@@ -531,7 +531,7 @@
       "kind": "discovery",
       "ok": true,
       "candidates": 6,
-      "new_candidates": 6,
+      "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
         "direct https://www.dni.gov/index.php/newsroom/reports-publications: 403 Client Error: Forbidden for url: https://www.dni.gov/index.php/newsroom/reports-publications"
@@ -540,9 +540,9 @@
     {
       "monitor": "International Crisis Group discovery",
       "kind": "discovery",
-      "ok": false,
-      "candidates": 0,
-      "new_candidates": 0,
+      "ok": true,
+      "candidates": 8,
+      "new_candidates": 8,
       "suppressed": 0,
       "warnings": [
         "direct https://www.crisisgroup.org/latest-updates: 403 Client Error: Forbidden for url: https://www.crisisgroup.org/latest-updates"
@@ -582,7 +582,7 @@
       "kind": "discovery",
       "ok": true,
       "candidates": 7,
-      "new_candidates": 6,
+      "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
     },
@@ -591,7 +591,7 @@
       "kind": "discovery",
       "ok": true,
       "candidates": 3,
-      "new_candidates": 3,
+      "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
     },
@@ -618,7 +618,7 @@
       "kind": "discovery",
       "ok": true,
       "candidates": 29,
-      "new_candidates": 27,
+      "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
     },
@@ -667,7 +667,7 @@
       "kind": "discovery",
       "ok": true,
       "candidates": 57,
-      "new_candidates": 45,
+      "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
     },
@@ -676,7 +676,7 @@
       "kind": "discovery",
       "ok": true,
       "candidates": 19,
-      "new_candidates": 14,
+      "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
         "direct https://publications.iom.int/: 403 Client Error: Forbidden for url: https://publications.iom.int/"
@@ -687,7 +687,7 @@
       "kind": "discovery",
       "ok": true,
       "candidates": 6,
-      "new_candidates": 5,
+      "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
     },
@@ -770,7 +770,7 @@
       "kind": "discovery",
       "ok": true,
       "candidates": 41,
-      "new_candidates": 25,
+      "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
     },
@@ -788,7 +788,7 @@
       "kind": "discovery",
       "ok": true,
       "candidates": 2,
-      "new_candidates": 2,
+      "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
     }
