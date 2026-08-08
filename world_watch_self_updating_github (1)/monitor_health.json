@@ -1,13 +1,15 @@
 {
-  "last_checked": "2026-08-07T23:46:43.501336Z",
+  "last_checked": "2026-08-07T23:57:23.054015Z",
+  "engine_version": "4.0",
+  "migration_baseline": true,
   "series": {
-    "ok": 19,
-    "failed": 25,
+    "ok": 31,
+    "failed": 13,
     "total": 44
   },
   "discovery": {
-    "ok": 5,
-    "failed": 2,
+    "ok": 1,
+    "failed": 6,
     "total": 7
   },
   "monitors": [
@@ -15,326 +17,423 @@
       "monitor": "World Economic Outlook",
       "kind": "series",
       "ok": false,
-      "error": "403 Client Error: Forbidden for url: https://www.imf.org/en/Publications/WEO"
+      "error": "direct: 403 Client Error: Forbidden for url: https://www.imf.org/en/Publications/WEO | search: 401 Client Error: Unauthorized for url: https://s.jina.ai/site%3Aimf.org%20%22World%20Economic%20Outlook%22%202026%20OR%202025"
     },
     {
       "monitor": "Global Financial Stability Report",
       "kind": "series",
       "ok": false,
-      "error": "403 Client Error: Forbidden for url: https://www.imf.org/en/Publications/GFSR"
+      "error": "direct: 403 Client Error: Forbidden for url: https://www.imf.org/en/Publications/GFSR | search: 401 Client Error: Unauthorized for url: https://s.jina.ai/site%3Aimf.org%20%22Global%20Financial%20Stability%20Report%22%202026%20OR%202025"
     },
     {
       "monitor": "Fiscal Monitor",
       "kind": "series",
       "ok": false,
-      "error": "403 Client Error: Forbidden for url: https://www.imf.org/en/Publications/FM"
+      "error": "direct: 403 Client Error: Forbidden for url: https://www.imf.org/en/Publications/FM | search: 401 Client Error: Unauthorized for url: https://s.jina.ai/site%3Aimf.org%20%22Fiscal%20Monitor%22%202026%20OR%202025"
     },
     {
       "monitor": "Global Economic Prospects",
       "kind": "series",
       "ok": false,
-      "error": "No edition-bearing match"
+      "error": "search: 401 Client Error: Unauthorized for url: https://s.jina.ai/site%3Aworldbank.org%20%22Global%20Economic%20Prospects%22%202026%20OR%202025"
     },
     {
       "monitor": "World Development Report",
       "kind": "series",
       "ok": true,
-      "latest": "2015",
-      "url": "https://www.worldbank.org/en/publication/wdr"
+      "latest": "2026",
+      "url": "https://www.worldbank.org/en/publication/wdr2026",
+      "method": "direct-link",
+      "warnings": []
     },
     {
       "monitor": "OECD Economic Outlook",
       "kind": "series",
-      "ok": false,
-      "error": "403 Client Error: Forbidden for url: https://www.oecd.org/en/topics/economic-outlook.html"
+      "ok": true,
+      "latest": "June 2026",
+      "url": "https://www.oecd.org/en/topics/economic-outlook.html",
+      "method": "reader-line",
+      "warnings": [
+        "direct: 403 Client Error: Forbidden for url: https://www.oecd.org/en/topics/economic-outlook.html"
+      ]
     },
     {
       "monitor": "Annual Economic Report",
       "kind": "series",
-      "ok": false,
-      "error": "404 Client Error: Not Found for url: https://www.bis.org/list/annualreport/index.htm"
+      "ok": true,
+      "latest": "2026",
+      "url": "https://www.bis.org/publ/arpdf/ar2026e.htm",
+      "method": "direct-title",
+      "warnings": []
     },
     {
       "monitor": "Trade and Development Report",
       "kind": "series",
       "ok": false,
-      "error": "403 Client Error: Forbidden for url: https://unctad.org/topic/macroeconomics/trade-development-report"
+      "error": "direct: 403 Client Error: Forbidden for url: https://unctad.org/en/Pages/Publications/TradeandDevelopmentReport.aspx | search: 401 Client Error: Unauthorized for url: https://s.jina.ai/site%3Aunctad.org%20%22Trade%20and%20Development%20Report%22%202026%20OR%202025"
     },
     {
       "monitor": "Global Trade Outlook and Statistics",
       "kind": "series",
-      "ok": false,
-      "error": "No edition-bearing match"
+      "ok": true,
+      "latest": "March 2026",
+      "url": "https://www.wto.org/english/res_e/publications_e/gtos0326_e.htm",
+      "method": "direct-title",
+      "warnings": []
     },
     {
       "monitor": "Employment and Social Trends",
       "kind": "series",
       "ok": false,
-      "error": "404 Client Error: Not Found for url: https://www.ilo.org/publications/flagship-reports"
+      "error": "search: 401 Client Error: Unauthorized for url: https://s.jina.ai/site%3Ailo.org%20%22Employment%20and%20Social%20Trends%22%202026%20OR%202025"
     },
     {
       "monitor": "Global Risks Report",
       "kind": "series",
-      "ok": false,
-      "error": "403 Client Error: Forbidden for url: https://www.weforum.org/publications/series/global-risks-report/"
+      "ok": true,
+      "latest": "2026",
+      "url": "https://www.weforum.org/publications/global-risks-report-2026/",
+      "method": "reader-line",
+      "warnings": [
+        "direct: 403 Client Error: Forbidden for url: https://www.weforum.org/publications/global-risks-report-2026/"
+      ]
     },
     {
       "monitor": "Munich Security Report",
       "kind": "series",
       "ok": true,
       "latest": "2026",
-      "url": "https://securityconference.org/en/publications/munich-security-report/2026/"
+      "url": "https://securityconference.org/en/publications/munich-security-report/2026/",
+      "method": "direct-title",
+      "warnings": []
     },
     {
       "monitor": "SIPRI Yearbook",
       "kind": "series",
       "ok": true,
       "latest": "2026",
-      "url": "https://www.sipri.org/yearbook"
+      "url": "https://www.sipri.org/yearbook/2026",
+      "method": "direct-title",
+      "warnings": []
     },
     {
       "monitor": "Annual Threat Assessment",
       "kind": "series",
       "ok": false,
-      "error": "403 Client Error: Forbidden for url: https://www.odni.gov/index.php/newsroom/reports-publications"
+      "error": "direct: 403 Client Error: Forbidden for url: https://www.odni.gov/index.php/newsroom/reports-publications/reports-publications-2026/4141-2026-annual-threat-as | search: 401 Client Error: Unauthorized for url: https://s.jina.ai/site%3Aodni.gov%20%22Annual%20Threat%20Assessment%22%202026%20OR%202025"
     },
     {
       "monitor": "AI Index",
       "kind": "series",
       "ok": true,
       "latest": "2026",
-      "url": "https://hai.stanford.edu/ai-index"
+      "url": "https://hai.stanford.edu/ai-index/2026-ai-index-report",
+      "method": "direct-title",
+      "warnings": []
     },
     {
       "monitor": "Technology Trends Outlook",
       "kind": "series",
       "ok": false,
-      "error": "HTTPSConnectionPool(host='www.mckinsey.com', port=443): Read timed out. (read timeout=30)"
+      "error": "direct: HTTPSConnectionPool(host='www.mckinsey.com', port=443): Read timed out. (read timeout=35) | search: 401 Client Error: Unauthorized for url: https://s.jina.ai/site%3Amckinsey.com%20%22Technology%20Trends%20Outlook%22%202026%20OR%202025"
     },
     {
       "monitor": "State of AI",
       "kind": "series",
       "ok": false,
-      "error": "HTTPSConnectionPool(host='www.mckinsey.com', port=443): Read timed out. (read timeout=30)"
+      "error": "direct: HTTPSConnectionPool(host='www.mckinsey.com', port=443): Read timed out. (read timeout=35) | search: 401 Client Error: Unauthorized for url: https://s.jina.ai/site%3Amckinsey.com%20%22State%20of%20AI%22%202026%20OR%202025"
     },
     {
       "monitor": "Tech Trends",
       "kind": "series",
       "ok": true,
       "latest": "2026",
-      "url": "https://www.deloitte.com/us/en/insights/topics/technology-management/tech-trends.html"
+      "url": "https://www.deloitte.com/us/en/insights/topics/technology-management/tech-trends.html",
+      "method": "direct-title",
+      "warnings": []
     },
     {
       "monitor": "Global Tech Report",
       "kind": "series",
       "ok": true,
       "latest": "2026",
-      "url": "https://kpmg.com/uk/en/insights/technology/kpmg-global-tech-report.html"
+      "url": "https://kpmg.com/content/dam/kpmgsites/uk/pdf/2026/01/global-tech-report-2026.pdf",
+      "method": "direct-link",
+      "warnings": []
     },
     {
       "monitor": "Global Innovation Index",
       "kind": "series",
       "ok": true,
       "latest": "2026",
-      "url": "https://www.wipo.int/en/web/global-innovation-index/w/news/2026/save-the-date-gii-2026"
+      "url": "https://www.wipo.int/en/web/global-innovation-index/index",
+      "method": "direct-heading",
+      "warnings": []
     },
     {
       "monitor": "Facts and Figures",
       "kind": "series",
       "ok": true,
-      "latest": "2021",
-      "url": "https://www.itu.int/itu-d/reports/statistics/facts-figures/"
+      "latest": "2025",
+      "url": "https://www.itu.int/itu-d/reports/statistics/facts-figures-2025/",
+      "method": "direct-title",
+      "warnings": []
     },
     {
       "monitor": "State of the Global Climate",
       "kind": "series",
       "ok": true,
-      "latest": "2026",
-      "url": "https://wmo.int/publication-series/state-of-global-climate/state-of-global-climate-2025"
+      "latest": "2025",
+      "url": "https://wmo.int/publication-series/state-of-global-climate/state-of-global-climate-2025",
+      "method": "direct-title",
+      "warnings": []
     },
     {
       "monitor": "Emissions Gap Report",
       "kind": "series",
       "ok": true,
       "latest": "2025",
-      "url": "https://www.unep.org/resources/emissions-gap-report-2025"
+      "url": "https://www.unep.org/resources/emissions-gap-report-2025",
+      "method": "direct-title",
+      "warnings": []
     },
     {
       "monitor": "Adaptation Gap Report",
       "kind": "series",
       "ok": true,
       "latest": "2025",
-      "url": "https://www.unep.org/resources/adaptation-gap-report-2025"
+      "url": "https://www.unep.org/resources/adaptation-gap-report-2025",
+      "method": "direct-title",
+      "warnings": []
     },
     {
       "monitor": "World Energy Outlook",
       "kind": "series",
       "ok": false,
-      "error": "403 Client Error: Forbidden for url: https://www.iea.org/reports"
+      "error": "direct: 403 Client Error: Forbidden for url: https://www.iea.org/reports/world-energy-outlook-2025 | search: 401 Client Error: Unauthorized for url: https://s.jina.ai/site%3Aiea.org%20%22World%20Energy%20Outlook%22%202026%20OR%202025"
     },
     {
       "monitor": "World Energy Transitions Outlook",
       "kind": "series",
       "ok": false,
-      "error": "403 Client Error: Forbidden for url: https://www.irena.org/Energy-Transition/Outlook"
+      "error": "direct: 403 Client Error: Forbidden for url: https://www.irena.org/publications/2024/Nov/World-Energy-Transitions-Outlook-2024 | search: 401 Client Error: Unauthorized for url: https://s.jina.ai/site%3Airena.org%20%22World%20Energy%20Transitions%20Outlook%22%202026%20OR%202025"
     },
     {
       "monitor": "Global Carbon Budget",
       "kind": "series",
       "ok": true,
       "latest": "2026",
-      "url": "https://www.exeter.ac.uk/"
+      "url": "https://globalcarbonbudget.org/",
+      "method": "reader-line",
+      "warnings": []
     },
     {
       "monitor": "World Population Prospects",
       "kind": "series",
-      "ok": false,
-      "error": "404 Client Error: Not Found for url: https://www.un.org/development/desa/pd/world-population-prospects"
+      "ok": true,
+      "latest": "2024",
+      "url": "https://www.un.org/development/desa/pd/world-population-prospects-2024",
+      "method": "direct-title",
+      "warnings": []
     },
     {
       "monitor": "World Urbanization Prospects",
       "kind": "series",
-      "ok": false,
-      "error": "404 Client Error: Not Found for url: https://www.un.org/development/desa/pd/world-urbanization-prospects"
+      "ok": true,
+      "latest": "2025",
+      "url": "https://www.un.org/development/desa/pd/world-urbanization-prospects-2025",
+      "method": "direct-title",
+      "warnings": []
     },
     {
       "monitor": "World Migration Report",
       "kind": "series",
-      "ok": false,
-      "error": "403 Client Error: Forbidden for url: https://worldmigrationreport.iom.int/"
+      "ok": true,
+      "latest": "2026",
+      "url": "https://worldmigrationreport.iom.int/msite/wmr-2026-interactive/img/report-en.jpg",
+      "method": "reader-link",
+      "warnings": [
+        "direct: 403 Client Error: Forbidden for url: https://worldmigrationreport.iom.int/msite/wmr-2026-interactive/"
+      ]
     },
     {
       "monitor": "Global Trends",
       "kind": "series",
       "ok": false,
-      "error": "403 Client Error: Forbidden for url: https://www.unhcr.org/global-trends"
+      "error": "direct: 403 Client Error: Forbidden for url: https://www.unhcr.org/au/global-trends | search: 401 Client Error: Unauthorized for url: https://s.jina.ai/site%3Aunhcr.org%20%22Global%20Trends%22%202026%20OR%202025"
     },
     {
       "monitor": "Human Development Report",
       "kind": "series",
       "ok": true,
-      "latest": "2026",
-      "url": "https://hdr.undp.org/reports-and-publications/towards-2026-human-development-report"
+      "latest": "2025",
+      "url": "https://hdr.undp.org/content/human-development-report-2025",
+      "method": "direct-title",
+      "warnings": []
     },
     {
       "monitor": "World Social Report",
       "kind": "series",
       "ok": true,
       "latest": "2025",
-      "url": "https://social.desa.un.org/sites/default/files/World%20Social%20Report%202025.epub"
+      "url": "https://social.desa.un.org/issues/world-social-report",
+      "method": "direct-heading",
+      "warnings": []
     },
     {
       "monitor": "World Happiness Report",
       "kind": "series",
-      "ok": false,
-      "error": "403 Client Error: Forbidden for url: https://www.worldhappiness.report/"
+      "ok": true,
+      "latest": "2026",
+      "url": "https://www.worldhappiness.report/ed/2026/",
+      "method": "reader-line",
+      "warnings": [
+        "direct: 403 Client Error: Forbidden for url: https://www.worldhappiness.report/ed/2026/"
+      ]
     },
     {
       "monitor": "World Health Statistics",
       "kind": "series",
       "ok": true,
       "latest": "2026",
-      "url": "https://www.who.int/data/stories/world-health-statistics-2026--a-visual-summary"
+      "url": "https://www.who.int/publications/i/item/9789240122482",
+      "method": "direct-title",
+      "warnings": []
     },
     {
       "monitor": "State of Food Security and Nutrition in the World",
       "kind": "series",
-      "ok": false,
-      "error": "No edition-bearing match"
+      "ok": true,
+      "latest": "2026",
+      "url": "https://www.fao.org/publications/fao-flagship-publications/the-state-of-food-security-and-nutrition-in-the-world/2025/en",
+      "method": "reader-line",
+      "warnings": []
     },
     {
       "monitor": "Global Education Monitoring Report",
       "kind": "series",
       "ok": true,
-      "latest": "2027",
-      "url": "https://www.unesco.org/gem-report/en/publication/quality-and-learning"
+      "latest": "2026",
+      "url": "https://www.unesco.org/gem-report/en/paragraph-resource/4717/7",
+      "method": "direct-link",
+      "warnings": []
     },
     {
       "monitor": "Global Multidimensional Poverty Index",
       "kind": "series",
-      "ok": false,
-      "error": "404 Client Error: Not Found for url: https://hdr.undp.org/mpi"
+      "ok": true,
+      "latest": "2025",
+      "url": "https://www.undp.org/turkiye/publications/2025-global-multidimensional-poverty-index-mpi",
+      "method": "reader-line",
+      "warnings": [
+        "direct: 403 Client Error: Forbidden for url: https://www.undp.org/turkiye/publications/2025-global-multidimensional-poverty-index-mpi"
+      ]
     },
     {
       "monitor": "Democracy Report",
       "kind": "series",
       "ok": true,
       "latest": "2026",
-      "url": "https://www.v-dem.net/publications/democracy-reports/"
+      "url": "https://www.v-dem.net/publications/democracy-reports/",
+      "method": "direct-heading",
+      "warnings": []
     },
     {
       "monitor": "Global State of Democracy",
       "kind": "series",
       "ok": true,
-      "latest": "2023",
-      "url": "https://www.idea.int/sites/default/files/GSOD/global-state-of-democracy-indices-methodology-v7-2023.pdf"
+      "latest": "2025",
+      "url": "https://www.idea.int/publications/catalogue/global-state-of-democracy-2025-democracy-on-the-move",
+      "method": "direct-title",
+      "warnings": []
     },
     {
       "monitor": "Freedom in the World",
       "kind": "series",
       "ok": true,
       "latest": "2026",
-      "url": "https://freedomhouse.org/report/freedom-world/2026/growing-shadow-autocracy"
+      "url": "https://freedomhouse.org/report/freedom-world/2026/growing-shadow-autocracy",
+      "method": "direct-link",
+      "warnings": []
     },
     {
       "monitor": "Rule of Law Index",
       "kind": "series",
       "ok": false,
-      "error": "No edition-bearing match"
+      "error": "search: 401 Client Error: Unauthorized for url: https://s.jina.ai/site%3Aworldjusticeproject.org%20%22Rule%20of%20Law%20Index%22%202026%20OR%202025"
     },
     {
       "monitor": "Corruption Perceptions Index",
       "kind": "series",
-      "ok": false,
-      "error": "403 Client Error: Forbidden for url: https://www.transparency.org/en/cpi"
+      "ok": true,
+      "latest": "2025",
+      "url": "https://www.transparency.org/en/cpi/2025",
+      "method": "reader-line",
+      "warnings": [
+        "direct: 403 Client Error: Forbidden for url: https://www.transparency.org/en/cpi/2025"
+      ]
     },
     {
       "monitor": "World Press Freedom Index",
       "kind": "series",
-      "ok": false,
-      "error": "No edition-bearing match"
+      "ok": true,
+      "latest": "2026",
+      "url": "https://rsf.org/en/2026-rsf-index-press-freedom-25-year-low",
+      "method": "direct-title",
+      "warnings": []
     },
     {
       "monitor": "IMF discovery",
       "kind": "discovery",
       "ok": false,
-      "error": "403 Client Error: Forbidden for url: https://www.imf.org/en/publications"
+      "candidates": 0,
+      "warnings": [
+        "direct: 403 Client Error: Forbidden for url: https://www.imf.org/en/publications"
+      ]
     },
     {
       "monitor": "World Bank discovery",
       "kind": "discovery",
-      "ok": true,
-      "candidates": 0
+      "ok": false,
+      "candidates": 0,
+      "warnings": []
     },
     {
       "monitor": "WHO discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 5
+      "candidates": 5,
+      "warnings": []
     },
     {
       "monitor": "Georgetown CSET discovery",
       "kind": "discovery",
-      "ok": true,
-      "candidates": 0
+      "ok": false,
+      "candidates": 0,
+      "warnings": []
     },
     {
       "monitor": "International Crisis Group discovery",
       "kind": "discovery",
       "ok": false,
-      "error": "403 Client Error: Forbidden for url: https://www.crisisgroup.org/latest-updates"
+      "candidates": 0,
+      "warnings": [
+        "direct: 403 Client Error: Forbidden for url: https://www.crisisgroup.org/latest-updates"
+      ]
     },
     {
       "monitor": "Carbon Brief discovery",
       "kind": "discovery",
-      "ok": true,
-      "candidates": 0
+      "ok": false,
+      "candidates": 0,
+      "warnings": []
     },
     {
       "monitor": "Quanta Magazine discovery",
       "kind": "discovery",
-      "ok": true,
-      "candidates": 0
+      "ok": false,
+      "candidates": 0,
+      "warnings": []
     }
   ]
 }
