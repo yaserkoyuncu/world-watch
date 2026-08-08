@@ -1,14 +1,15 @@
 #!/usr/bin/env python3
 """
-World Watch v4 — reliability-focused flagship monitor
+World Watch v5 — targeted reliability monitor
 
 Changes from v3:
 - Direct official-page fetch first.
 - Free Jina Reader fallback for blocked / JS-heavy pages.
-- Free Jina Search fallback for broken generic URLs or pages without edition text.
+- Curated alternate official pages instead of Jina Search (which now requires authentication).
 - Strict title/link-based edition extraction (avoids using unrelated page dates).
 - Rejects announcements, concept notes, "towards..." pages, future editions and methodology pages.
-- Known-current floors stop obvious regressions such as ITU 2021 or WDR 2015.
+- Nearby-line parsing captures dates separated from report titles.
+- Release validation blocks WDR concept notes, WIPO save-the-date pages and GCB footer-year false positives.
 - One-time migration baseline prevents false "NEW" alerts when correcting old state.
 """
 
@@ -26,13 +27,13 @@ STATE_FILE = ROOT / "monitor_state.json"
 OUTPUT_FILE = ROOT / "auto_updates.json"
 HEALTH_FILE = ROOT / "monitor_health.json"
 
-ENGINE_VERSION = "4.0"
+ENGINE_VERSION = "5.0"
 NOW = datetime.now(timezone.utc)
 TODAY = NOW.date().isoformat()
 CURRENT_YEAR = NOW.year
 
 HEADERS = {
-    "User-Agent": "Mozilla/5.0 (compatible; WorldWatchPersonalDashboard/4.0)",
+    "User-Agent": "Mozilla/5.0 (compatible; WorldWatchPersonalDashboard/5.0)",
     "Accept-Language": "en-US,en;q=0.8",
 }
 TIMEOUT = 35
@@ -65,14 +66,14 @@ mck_tech|Technology Trends Outlook|McKinsey|Technology & AI|annual|https://www.m
 mck_ai|State of AI|McKinsey|Technology & AI|annual|https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai/|\b(?:The )?State of AI\b
 deloitte_tech|Tech Trends|Deloitte|Technology & AI|annual|https://www.deloitte.com/us/en/insights/topics/technology-management/tech-trends.html|\bTech Trends\b
 kpmg_tech|Global Tech Report|KPMG|Technology & AI|annual|https://kpmg.com/uk/en/insights/technology/kpmg-global-tech-report.html|\bGlobal Tech Report\b
-wipo_gii|Global Innovation Index|WIPO|Technology & AI|annual|https://www.wipo.int/en/web/global-innovation-index/index|\bGlobal Innovation Index\b
+wipo_gii|Global Innovation Index|WIPO|Technology & AI|annual|https://www.wipo.int/publications/en/series/index.jsp?id=129&lang=en|\bGlobal Innovation Index\b
 itu_ff|Facts and Figures|ITU|Technology & AI|annual|https://www.itu.int/itu-d/reports/statistics/facts-figures-2025/|\bFacts and Figures\b
 wmo_climate|State of the Global Climate|WMO|Climate & Energy|annual|https://wmo.int/publication-series/state-of-global-climate/state-of-global-climate-2025|\bState of (?:the )?Global Climate\b
 unep_egr|Emissions Gap Report|UNEP|Climate & Energy|annual|https://www.unep.org/resources/emissions-gap-report-2025|\bEmissions Gap Report\b
 unep_agr|Adaptation Gap Report|UNEP|Climate & Energy|annual|https://www.unep.org/resources/adaptation-gap-report-2025|\bAdaptation Gap Report\b
 iea_weo|World Energy Outlook|IEA|Climate & Energy|annual|https://www.iea.org/reports/world-energy-outlook-2025|\bWorld Energy Outlook\b
 irena_weto|World Energy Transitions Outlook|IRENA|Climate & Energy|annual|https://www.irena.org/publications/2024/Nov/World-Energy-Transitions-Outlook-2024|\bWorld Energy Transitions Outlook\b
-gcb|Global Carbon Budget|Global Carbon Project|Climate & Energy|annual|https://globalcarbonbudget.org/|\bGlobal Carbon Budget\b
+gcb|Global Carbon Budget|Global Carbon Project|Climate & Energy|annual|https://globalcarbonbudget.org/gcb-2025/|\bGlobal Carbon Budget\b
 un_wpp|World Population Prospects|UN DESA|Demography & Society|periodic|https://www.un.org/development/desa/pd/world-population-prospects-2024|\bWorld Population Prospects\b
 un_wup|World Urbanization Prospects|UN DESA|Demography & Society|periodic|https://www.un.org/development/desa/pd/world-urbanization-prospects-2025|\bWorld Urbanization Prospects\b
 iom_wmr|World Migration Report|IOM|Demography & Society|periodic|https://worldmigrationreport.iom.int/msite/wmr-2026-interactive/|\bWorld Migration Report\b
@@ -114,6 +115,80 @@ FLOORS = {
     "vdem":(2026,0),"idea":(2025,0),"freedom":(2026,0),"wjp":(2025,0),
     "cpi":(2025,0),"rsf":(2026,0),
 }
+
+
+# Alternate OFFICIAL pages used when a landing page blocks GitHub or does not place
+# the edition date next to the report name. These are deliberately curated rather
+# than using a generic web-search API.
+ALT_URLS = {
+    "imf_weo": [
+        "https://www.imf.org/en/publications/world-economic-and-financial-surveys",
+        "https://www.imf.org/en/publications",
+        "https://www.imf.org/en/home",
+    ],
+    "imf_gfsr": [
+        "https://www.imf.org/en/publications/world-economic-and-financial-surveys",
+        "https://www.imf.org/en/publications",
+    ],
+    "imf_fiscal": [
+        "https://www.imf.org/en/publications/world-economic-and-financial-surveys",
+        "https://www.imf.org/en/publications",
+    ],
+    "worldbank_gep": [
+        "https://www.worldbank.org/en/research",
+        "https://www.worldbank.org/en/news/press-release/2026/06/11/global-economic-prospects-june-2026-press-release",
+    ],
+    "worldbank_wdr": [
+        "https://www.worldbank.org/en/publication/wdr2025",
+    ],
+    "unctad_tdr": [
+        "https://unctad.org/publication/trade-and-development-report-2025",
+    ],
+    "ilo_est": [
+        "https://www.ilo.org/research-and-publications",
+    ],
+    "odni_ata": [
+        "https://www.dni.gov/index.php/newsroom/reports-publications",
+        "https://www.dni.gov/index.php/newsroom/press-releases/press-releases-2026/4142-pr-03-26",
+    ],
+    "mck_tech": [
+        "https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/the-top-trends-in-tech",
+    ],
+    "mck_ai": [
+        "https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai",
+    ],
+    "iea_weo": [
+        "https://www.iea.org/reports",
+        "https://www.iea.org/reports/world-energy-outlook-2025/overview-and-key-findings",
+    ],
+    "irena_weto": [
+        "https://www.irena.org/Energy-Transition/Outlook",
+    ],
+    "gcb": [
+        "https://globalcarbonbudget.org/",
+        "https://globalcarbonbudget.org/datahub/the-latest-gcb-data-2025/",
+    ],
+    "unhcr_gt": [
+        "https://www.unhcr.org/media/global-trends-2025-report",
+        "https://www.unhcr.org/global-trends",
+    ],
+    "wjp": [
+        "https://worldjusticeproject.org/rule-of-law-index/global/2025/wjp-index",
+        "https://worldjusticeproject.org/news/wjp-rule-law-index-2025-global-press-release",
+    ],
+}
+
+# For these report pages, the official URL itself contains enough edition
+# information to establish the current edition even if the host blocks HTML.
+# Generic listing pages still run as well, so a genuinely newer edition can win.
+SELF_URL_SAFE = {
+    "bis_aer","wto_gto","ilo_est","wef_grr","msc_msr","sipri_yearbook",
+    "odni_ata","stanford_ai","itu_ff","wmo_climate","unep_egr","unep_agr",
+    "iea_weo","irena_weto","gcb","un_wpp","un_wup","iom_wmr","undp_hdr",
+    "happiness","who_whs","undp_mpi","idea","freedom","cpi","rsf","wjp"
+}
+
+_RELEASE_CACHE = {}
 
 BAD_PHRASES = re.compile(
     r"\b(towards?|upcoming|coming soon|save the date|concept note|background paper|"
@@ -219,19 +294,73 @@ def candidates_from_html(spec, soup, page_url):
             out.append((t,u,7,"direct-link"))
     return out
 
-def candidates_from_markdown(spec, text, source_kind):
-    rx=re.compile(spec["match"],re.I); out=[]
-    # Markdown links
-    for label_text,url in re.findall(r"\[([^\]]{2,300})\]\((https?://[^)\s]+)",text):
-        t=clean(label_text)
+def candidates_from_markdown(spec, text, source_kind, source_url=None):
+    """Parse markdown while keeping nearby lines together so report date/edition
+    can be on the line before or after the series name."""
+    rx = re.compile(spec["match"], re.I)
+    out = []
+    base_url = source_url or spec["url"]
+
+    # Markdown links.
+    for label_text, url in re.findall(r"\[([^\]]{2,300})\]\((https?://[^)\s]+)", text):
+        t = clean(label_text)
         if rx.search(t) or rx.search(url):
-            out.append((t,url,7,source_kind+"-link"))
-    # Heading / title-like lines. URL is the official landing page.
-    for line in text.splitlines():
-        t=clean(re.sub(r"^#+\s*","",line))
-        if 4 <= len(t) <= 300 and rx.search(t):
-            out.append((t,spec["url"],6,source_kind+"-line"))
+            out.append((t, url, 8, source_kind + "-link"))
+
+    # Line windows: report name and date are often rendered on separate lines.
+    lines = [clean(re.sub(r"^#+\s*", "", x)) for x in text.splitlines()]
+    for i, line in enumerate(lines):
+        if not line or not rx.search(line):
+            continue
+        start = max(0, i - 2)
+        end = min(len(lines), i + 4)
+        block = clean(" ".join(x for x in lines[start:end] if x))
+        if 4 <= len(block) <= 900:
+            out.append((block, base_url, 7, source_kind + "-block"))
+        if 4 <= len(line) <= 300:
+            out.append((line, base_url, 6, source_kind + "-line"))
     return out
+
+def release_validation(spec, text, url, v):
+    """Reject known project/announcement pages masquerading as released editions."""
+    sid = spec["id"]
+
+    # The GCB homepage footer carries the current calendar year; only accept an
+    # edition when GCB + the year is explicit or the URL itself is /gcb-YYYY/.
+    if sid == "gcb":
+        if not (re.search(rf"\b(?:Global Carbon Budget|GCB)\s*{v[0]}\b", text, re.I)
+                or re.search(rf"/gcb-{v[0]}/?", url, re.I)
+                or re.search(rf"\bGlobal Carbon Budget v?{v[0]}\b", text, re.I)):
+            return False
+
+    # WDR pages for the next report can exist for months as concept-note/project
+    # pages. Verify a candidate newer than the known released 2025 edition.
+    if sid == "worldbank_wdr" and v[0] > 2025:
+        key = ("wdr", url)
+        page = _RELEASE_CACHE.get(key)
+        if page is None:
+            page = ""
+            try:
+                page = jina_reader(url)
+            except Exception:
+                try:
+                    s, _ = direct_html(url)
+                    page = clean(s.get_text(" ", strip=True))
+                except Exception:
+                    pass
+            _RELEASE_CACHE[key] = page
+        low = page.lower()
+        if any(x in low for x in ("concept note", "will investigate", "background papers", "meet the team")):
+            return False
+        if not any(x in low for x in ("download report", "complete report", "download full report", "final report")):
+            return False
+
+    # WIPO can advertise the next GII months before release. The publications
+    # series page is authoritative for released editions; reject save-the-date text.
+    if sid == "wipo_gii" and BAD_PHRASES.search(text):
+        return False
+
+    return True
 
 def choose_candidate(spec, candidates):
     floor=FLOORS.get(spec["id"],(2000,0))
@@ -244,6 +373,7 @@ def choose_candidate(spec, candidates):
         cmpv=(v[0],v[1] if spec["mode"]=="intra" else 0)
         floorv=(floor[0],floor[1] if spec["mode"]=="intra" else 0)
         if cmpv < floorv: continue
+        if not release_validation(spec, text, url, v): continue
 
         # Strong preference for a URL carrying the edition year and report-like pages.
         bonus=0
@@ -258,42 +388,35 @@ def choose_candidate(spec, candidates):
     return {"title":text,"url":url,"method":method,"version":v,"score":score}
 
 def resolve_series(spec):
-    errors=[]
-    candidates=[]
+    errors = []
+    candidates = []
+    urls = [spec["url"]] + ALT_URLS.get(spec["id"], [])
+    urls = list(dict.fromkeys(urls))
 
-    # 1) Direct official page.
-    try:
-        soup,final_url=direct_html(spec["url"])
-        candidates.extend(candidates_from_html(spec,soup,final_url))
-    except Exception as e:
-        errors.append("direct: "+str(e)[:150])
+    for page_url in urls:
+        # If the URL itself is a verified report-like path, use it as one candidate.
+        if spec["id"] in SELF_URL_SAFE:
+            candidates.append((spec["name"] + " " + page_url, page_url, 5, "official-url"))
 
-    best=choose_candidate(spec,candidates)
-    if best: return best,errors
+        try:
+            s, final_url = direct_html(page_url)
+            candidates.extend(candidates_from_html(spec, s, final_url))
+        except Exception as e:
+            errors.append("direct " + page_url + ": " + str(e)[:120])
 
-    # 2) Jina Reader fallback (free basic use): especially useful for 403/JS pages.
-    try:
-        text=jina_reader(spec["url"])
-        candidates.extend(candidates_from_markdown(spec,text,"reader"))
-    except Exception as e:
-        errors.append("reader: "+str(e)[:150])
+        # Reader fallback is especially useful for 403 / JS-heavy official sites.
+        try:
+            text = jina_reader(page_url)
+            candidates.extend(candidates_from_markdown(spec, text, "reader", page_url))
+        except Exception as e:
+            errors.append("reader " + page_url + ": " + str(e)[:120])
 
-    best=choose_candidate(spec,candidates)
-    if best: return best,errors
+        # Stop early if this page already gives a strong valid candidate.
+        best = choose_candidate(spec, candidates)
+        if best and best.get("score", 0) >= 10:
+            return best, errors
 
-    # 3) Search fallback restricted to the official domain and exact series.
-    # We search current and previous year because some series are labelled by data year
-    # but published the following year (e.g. UNHCR Global Trends, WMO climate report).
-    domain=urlparse(spec["url"]).netloc.replace("www.","")
-    query=f'site:{domain} "{spec["name"]}" {CURRENT_YEAR} OR {CURRENT_YEAR-1}'
-    try:
-        text=jina_search(query)
-        candidates.extend(candidates_from_markdown(spec,text,"search"))
-    except Exception as e:
-        errors.append("search: "+str(e)[:150])
-
-    best=choose_candidate(spec,candidates)
-    return best,errors
+    return choose_candidate(spec, candidates), errors
 
 def scan_series(state, migration):
     new=[]; health=[]
@@ -332,17 +455,23 @@ def scan_series(state, migration):
         time.sleep(0.15)
     return new,health
 
-def discovery_links_from_html(soup,base,rx):
-    out=[]
-    domain=urlparse(base).netloc.replace("www.","")
-    for a in soup.find_all("a",href=True):
-        t=clean(a.get_text(" ",strip=True))
-        if not (24<=len(t)<=230) or not rx.search(t): continue
-        u=canonical(base,a["href"]); d=urlparse(u).netloc.replace("www.","")
-        if d and domain and not (d==domain or d.endswith("."+domain) or domain.endswith("."+d)): continue
-        if re.search(r"\b(report|outlook|index|assessment|monitor|statistics|update|launch)\b",t,re.I):
-            out.append((t,u))
-    return out[:60]
+def discovery_links_from_html(soup, base, rx):
+    out = []
+    domain = urlparse(base).netloc.replace("www.", "")
+    seen = set()
+    for a in soup.find_all("a", href=True):
+        t = clean(a.get_text(" ", strip=True))
+        if not (20 <= len(t) <= 240) or not rx.search(t):
+            continue
+        u = canonical(base, a["href"])
+        d = urlparse(u).netloc.replace("www.", "")
+        if d and domain and not (d == domain or d.endswith("." + domain) or domain.endswith("." + d)):
+            continue
+        if u in seen:
+            continue
+        seen.add(u)
+        out.append((t, u))
+    return out[:80]
 
 def scan_discovery(state,migration):
     new=[]; health=[]
@@ -355,8 +484,10 @@ def scan_discovery(state,migration):
         if not links:
             try:
                 txt=jina_reader(url)
+                seen_reader = set()
                 for t,u in re.findall(r"\[([^\]]{20,240})\]\((https?://[^)\s]+)",txt):
-                    if rx.search(t) and re.search(r"\b(report|outlook|index|assessment|monitor|statistics|update|launch)\b",t,re.I):
+                    if rx.search(t) and u not in seen_reader:
+                        seen_reader.add(u)
                         links.append((clean(t),u))
             except Exception as e:
                 errors.append("reader: "+str(e)[:140])
@@ -377,7 +508,7 @@ def main():
     state=load_json(STATE_FILE,{})
     migration = state.get("_engine_version") != ENGINE_VERSION
     if migration:
-        # Re-baseline silently because v3 contained known false positives
+        # Re-baseline silently because earlier engines contained known false positives
         # (e.g. ITU 2021, WDR 2015, WMO publication-year confusion).
         state["_engine_version"]=ENGINE_VERSION
 
@@ -411,7 +542,7 @@ def main():
         "monitors":h1+h2,
     }
     save_json(STATE_FILE,state); save_json(OUTPUT_FILE,payload); save_json(HEALTH_FILE,health)
-    print(f"World Watch v4: {ok1}/{len(SERIES)} flagship series resolved; "
+    print(f"World Watch v5: {ok1}/{len(SERIES)} flagship series resolved; "
           f"{ok2}/{len(DISCOVERY)} discovery monitors resolved; "
           f"{len(flagship_new)} newer flagship edition(s); {len(discovery_new)} discovery item(s); "
           f"migration_baseline={migration}")
