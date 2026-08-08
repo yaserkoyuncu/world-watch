@@ -1,7 +1,7 @@
 {
-  "last_checked": "2026-08-08T00:34:12.149927Z",
+  "last_checked": "2026-08-08T00:39:15.928814Z",
   "engine_version": "6.0",
-  "migration_baseline": true,
+  "migration_baseline": false,
   "series": {
     "ok": 39,
     "failed": 5,
@@ -471,7 +471,7 @@
       "kind": "discovery",
       "ok": true,
       "candidates": 2,
-      "new_candidates": 1,
+      "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
     },
@@ -480,7 +480,7 @@
       "kind": "discovery",
       "ok": true,
       "candidates": 14,
-      "new_candidates": 13,
+      "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
     },
@@ -501,7 +501,7 @@
       "kind": "discovery",
       "ok": true,
       "candidates": 4,
-      "new_candidates": 3,
+      "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
     },
@@ -510,7 +510,7 @@
       "kind": "discovery",
       "ok": true,
       "candidates": 11,
-      "new_candidates": 11,
+      "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
     },
@@ -543,7 +543,7 @@
       "kind": "discovery",
       "ok": true,
       "candidates": 6,
-      "new_candidates": 6,
+      "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
     },
@@ -552,7 +552,7 @@
       "kind": "discovery",
       "ok": true,
       "candidates": 10,
-      "new_candidates": 5,
+      "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
     },
@@ -588,7 +588,8 @@
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
-        "direct: 404 Client Error: Not Found for url: https://kpmg.com/xx/en/our-insights/technology.html"
+        "direct: 404 Client Error: Not Found for url: https://kpmg.com/xx/en/our-insights/technology.html",
+        "reader: 429 Client Error: Too Many Requests for url: https://r.jina.ai/https://kpmg.com/xx/en/our-insights/technology.html"
       ]
     },
     {
@@ -596,7 +597,7 @@
       "kind": "discovery",
       "ok": true,
       "candidates": 12,
-      "new_candidates": 10,
+      "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
     },
@@ -605,7 +606,7 @@
       "kind": "discovery",
       "ok": true,
       "candidates": 2,
-      "new_candidates": 1,
+      "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
     },
@@ -626,7 +627,7 @@
       "kind": "discovery",
       "ok": true,
       "candidates": 2,
-      "new_candidates": 2,
+      "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
     },
@@ -704,13 +705,12 @@
     {
       "monitor": "UNDP discovery",
       "kind": "discovery",
-      "ok": false,
-      "candidates": 0,
-      "new_candidates": 0,
+      "ok": true,
+      "candidates": 10,
+      "new_candidates": 9,
       "suppressed": 0,
       "warnings": [
-        "direct: 403 Client Error: Forbidden for url: https://www.undp.org/publications",
-        "reader: 429 Client Error: Too Many Requests for url: https://r.jina.ai/https://www.undp.org/publications"
+        "direct: 403 Client Error: Forbidden for url: https://www.undp.org/publications"
       ]
     },
     {
@@ -727,7 +727,7 @@
       "kind": "discovery",
       "ok": true,
       "candidates": 1,
-      "new_candidates": 1,
+      "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
     },
@@ -736,25 +736,27 @@
       "kind": "discovery",
       "ok": true,
       "candidates": 2,
-      "new_candidates": 1,
+      "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
     },
     {
       "monitor": "V-Dem Institute discovery",
       "kind": "discovery",
-      "ok": true,
-      "candidates": 3,
-      "new_candidates": 3,
+      "ok": false,
+      "candidates": 0,
+      "new_candidates": 0,
       "suppressed": 0,
-      "warnings": []
+      "warnings": [
+        "reader: 429 Client Error: Too Many Requests for url: https://r.jina.ai/https://www.v-dem.net/publications/"
+      ]
     },
     {
       "monitor": "International IDEA discovery",
       "kind": "discovery",
       "ok": true,
       "candidates": 1,
-      "new_candidates": 1,
+      "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
     },
@@ -763,7 +765,7 @@
       "kind": "discovery",
       "ok": true,
       "candidates": 9,
-      "new_candidates": 8,
+      "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
     },
@@ -772,7 +774,7 @@
       "kind": "discovery",
       "ok": true,
       "candidates": 12,
-      "new_candidates": 10,
+      "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
     },
@@ -781,7 +783,7 @@
       "kind": "discovery",
       "ok": true,
       "candidates": 19,
-      "new_candidates": 16,
+      "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
         "reader: 429 Client Error: Too Many Requests for url: https://r.jina.ai/https://www.transparency.org/en/publications"
@@ -792,7 +794,7 @@
       "kind": "discovery",
       "ok": true,
       "candidates": 6,
-      "new_candidates": 6,
+      "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
     },
