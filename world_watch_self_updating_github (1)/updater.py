@@ -1,11 +1,13 @@
 #!/usr/bin/env python3
 """
-World Watch v5 — targeted reliability monitor
+World Watch v6 — flagship + expanded institutional discovery monitor
 
-Changes from v3:
+V6 architecture:
 - Direct official-page fetch first.
+- Layer 1: 44 edition-aware flagship report series.
+- Layer 2: expanded high-signal discovery across 38 research/institutional sources.
 - Free Jina Reader fallback for blocked / JS-heavy pages.
-- Curated alternate official pages instead of Jina Search (which now requires authentication).
+- IMF flagship series use the official IMF eLibrary to avoid IMF.org 403 blocks.
 - Strict title/link-based edition extraction (avoids using unrelated page dates).
 - Rejects announcements, concept notes, "towards..." pages, future editions and methodology pages.
 - Nearby-line parsing captures dates separated from report titles.
@@ -15,6 +17,7 @@ Changes from v3:
 
 from __future__ import annotations
 import hashlib, json, re, time
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timezone
 from pathlib import Path
 from urllib.parse import urljoin, urlparse, quote
@@ -27,16 +30,16 @@ STATE_FILE = ROOT / "monitor_state.json"
 OUTPUT_FILE = ROOT / "auto_updates.json"
 HEALTH_FILE = ROOT / "monitor_health.json"
 
-ENGINE_VERSION = "5.0"
+ENGINE_VERSION = "6.0"
 NOW = datetime.now(timezone.utc)
 TODAY = NOW.date().isoformat()
 CURRENT_YEAR = NOW.year
 
 HEADERS = {
-    "User-Agent": "Mozilla/5.0 (compatible; WorldWatchPersonalDashboard/5.0)",
+    "User-Agent": "Mozilla/5.0 (compatible; WorldWatchPersonalDashboard/6.0)",
     "Accept-Language": "en-US,en;q=0.8",
 }
-TIMEOUT = 35
+TIMEOUT = 22
 
 MONTHS = {
     "january":1,"jan":1,"february":2,"feb":2,"march":3,"mar":3,"april":4,"apr":4,
@@ -47,14 +50,14 @@ MONTHS = {
 
 # id|name|org|category|mode|official landing URL|matching expression
 RAW = r"""
-imf_weo|World Economic Outlook|IMF|Economy & Political Economy|intra|https://www.imf.org/en/Publications/WEO|\bWorld Economic Outlook\b
-imf_gfsr|Global Financial Stability Report|IMF|Economy & Political Economy|intra|https://www.imf.org/en/Publications/GFSR|\bGlobal Financial Stability Report\b
-imf_fiscal|Fiscal Monitor|IMF|Economy & Political Economy|intra|https://www.imf.org/en/Publications/FM|\bFiscal Monitor\b
+imf_weo|World Economic Outlook|IMF|Economy & Political Economy|intra|https://www.elibrary.imf.org/subject/081|\bWorld Economic Outlook\b
+imf_gfsr|Global Financial Stability Report|IMF|Economy & Political Economy|intra|https://www.elibrary.imf.org/subject/082|\bGlobal Financial Stability Report\b
+imf_fiscal|Fiscal Monitor|IMF|Economy & Political Economy|intra|https://www.elibrary.imf.org/subject/089|\bFiscal Monitor\b
 worldbank_gep|Global Economic Prospects|World Bank|Economy & Political Economy|intra|https://www.worldbank.org/en/publication/global-economic-prospects|\bGlobal Economic Prospects\b
 worldbank_wdr|World Development Report|World Bank|Economy & Political Economy|annual|https://www.worldbank.org/en/publication/wdr/wdr-archive|\bWorld Development Report\b
 oecd_eo|OECD Economic Outlook|OECD|Economy & Political Economy|intra|https://www.oecd.org/en/topics/economic-outlook.html|\b(?:OECD )?Economic Outlook\b
 bis_aer|Annual Economic Report|BIS|Economy & Political Economy|annual|https://www.bis.org/publ/arpdf/ar2026e.htm|\bAnnual Economic Report\b
-unctad_tdr|Trade and Development Report|UNCTAD|Economy & Political Economy|annual|https://unctad.org/en/Pages/Publications/TradeandDevelopmentReport.aspx|\bTrade and Development Report\b
+unctad_tdr|Trade and Development Report|UNCTAD|Economy & Political Economy|annual|https://unctad.org/topic/macroeconomics/trade-development-report|\bTrade and Development Report\b
 wto_gto|Global Trade Outlook and Statistics|WTO|Economy & Political Economy|intra|https://www.wto.org/english/res_e/publications_e/gtos0326_e.htm|\bGlobal Trade Outlook and Statistics\b
 ilo_est|Employment and Social Trends|ILO|Economy & Political Economy|intra|https://www.ilo.org/publications/flagship-reports/employment-and-social-trends-2026|\bEmployment and Social Trends\b
 wef_grr|Global Risks Report|World Economic Forum|Geopolitics & Security|annual|https://www.weforum.org/publications/global-risks-report-2026/|\bGlobal Risks Report\b
@@ -117,36 +120,31 @@ FLOORS = {
 }
 
 
-# Alternate OFFICIAL pages used when a landing page blocks GitHub or does not place
-# the edition date next to the report name. These are deliberately curated rather
-# than using a generic web-search API.
+# Alternate OFFICIAL pages. V6 avoids generic search APIs and stays on official
+# institutional domains (plus IMF's official eLibrary).
 ALT_URLS = {
     "imf_weo": [
-        "https://www.imf.org/en/publications/world-economic-and-financial-surveys",
-        "https://www.imf.org/en/publications",
-        "https://www.imf.org/en/home",
+        "https://www.elibrary.imf.org/display/serial/world_economic_outlook",
+        "https://www.imf.org/en/publications/weo",
     ],
     "imf_gfsr": [
-        "https://www.imf.org/en/publications/world-economic-and-financial-surveys",
-        "https://www.imf.org/en/publications",
+        "https://www.elibrary.imf.org/display/serial/global_financial_stability_report",
+        "https://www.imf.org/en/publications/gfsr",
     ],
     "imf_fiscal": [
-        "https://www.imf.org/en/publications/world-economic-and-financial-surveys",
-        "https://www.imf.org/en/publications",
+        "https://www.imf.org/en/publications/fm",
     ],
     "worldbank_gep": [
         "https://www.worldbank.org/en/research",
-        "https://www.worldbank.org/en/news/press-release/2026/06/11/global-economic-prospects-june-2026-press-release",
+        "https://www.worldbank.org/en/publication/global-economic-prospects",
     ],
-    "worldbank_wdr": [
-        "https://www.worldbank.org/en/publication/wdr2025",
-    ],
+    "worldbank_wdr": ["https://www.worldbank.org/en/publication/wdr2025"],
     "unctad_tdr": [
         "https://unctad.org/publication/trade-and-development-report-2025",
+        "https://unctad.org/publications",
+        "https://unctad.org/unctad-publications",
     ],
-    "ilo_est": [
-        "https://www.ilo.org/research-and-publications",
-    ],
+    "ilo_est": ["https://www.ilo.org/research-and-publications"],
     "odni_ata": [
         "https://www.dni.gov/index.php/newsroom/reports-publications",
         "https://www.dni.gov/index.php/newsroom/press-releases/press-releases-2026/4142-pr-03-26",
@@ -161,9 +159,7 @@ ALT_URLS = {
         "https://www.iea.org/reports",
         "https://www.iea.org/reports/world-energy-outlook-2025/overview-and-key-findings",
     ],
-    "irena_weto": [
-        "https://www.irena.org/Energy-Transition/Outlook",
-    ],
+    "irena_weto": ["https://www.irena.org/Energy-Transition/Outlook"],
     "gcb": [
         "https://globalcarbonbudget.org/",
         "https://globalcarbonbudget.org/datahub/the-latest-gcb-data-2025/",
@@ -178,11 +174,13 @@ ALT_URLS = {
     ],
 }
 
-# For these report pages, the official URL itself contains enough edition
-# information to establish the current edition even if the host blocks HTML.
-# Generic listing pages still run as well, so a genuinely newer edition can win.
+# Reader-first avoids wasting ~20 seconds on hosts that consistently time out or
+# block GitHub runners but are readable through the public text renderer.
+READER_FIRST = {"mck_tech", "mck_ai", "unhcr_gt", "cpi", "wef_grr", "happiness"}
+
+# A report-specific official URL can establish a baseline even if HTML is blocked.
 SELF_URL_SAFE = {
-    "bis_aer","wto_gto","ilo_est","wef_grr","msc_msr","sipri_yearbook",
+    "bis_aer","unctad_tdr","wto_gto","ilo_est","wef_grr","msc_msr","sipri_yearbook",
     "odni_ata","stanford_ai","itu_ff","wmo_climate","unep_egr","unep_agr",
     "iea_weo","irena_weto","gcb","un_wpp","un_wup","iom_wmr","undp_hdr",
     "happiness","who_whs","undp_mpi","idea","freedom","cpi","rsf","wjp"
@@ -204,15 +202,60 @@ DOMAIN_ALIASES = {
 }
 
 DISCOVERY = [
-    ("imf","IMF","Economy & Political Economy","https://www.imf.org/en/publications",r"\b(report|outlook|monitor|update|AI|global|financial|fiscal)\b"),
-    ("wb","World Bank","Economy & Political Economy","https://www.worldbank.org/en/news/all",r"\b(report|prospects|outlook|poverty|development|economic|climate|digital|AI|trade)\b"),
-    ("who","WHO","Health, Food & Education","https://www.who.int/news-room/releases",r"\b(global|report|statistics|health|disease|outbreak|mortality|vaccine)\b"),
-    ("cset","Georgetown CSET","Technology & AI","https://cset.georgetown.edu/publications/",r"\b(AI|semiconductor|compute|technology|biotech|China|cyber|robot|quantum)\b"),
-    ("icg","International Crisis Group","Geopolitics & Security","https://www.crisisgroup.org/latest-updates",r"\b(conflict|war|crisis|security|peace|ceasefire|election)\b"),
-    ("cb","Carbon Brief","Climate & Energy","https://www.carbonbrief.org/",r"\b(climate|carbon|emissions|energy|warming|temperature|renewable|oil|gas|coal)\b"),
-    ("quanta","Quanta Magazine","Science","https://www.quantamagazine.org/",r"\b(AI|physics|biology|mathematics|computer|quantum|algorithm|genome|cosmology)\b"),
-]
+    # Economy / political economy
+    {"id":"imf","org":"IMF","category":"Economy & Political Economy","url":"https://www.elibrary.imf.org/","include":r"\b(econom|fiscal|financial|trade|debt|inflation|growth|AI|climate|development)\b","mode":"institutional"},
+    {"id":"wb","org":"World Bank","category":"Economy & Political Economy","url":"https://www.worldbank.org/en/research/all","include":r"\b(development|poverty|econom|trade|debt|climate|digital|AI|labor|migration|education|health|governance)\b","mode":"institutional"},
+    {"id":"oecd","org":"OECD","category":"Economy & Political Economy","url":"https://www.oecd.org/en/publications.html","include":r"\b(econom|employment|tax|trade|AI|digital|climate|education|health|migration|governance|finance|productivity)\b","mode":"institutional"},
+    {"id":"bis","org":"BIS","category":"Economy & Political Economy","url":"https://www.bis.org/publ/index.htm","include":r"\b(financial|monetary|bank|credit|markets|payments|crypto|CBDC|AI|econom)\b","mode":"institutional"},
+    {"id":"unctad","org":"UNCTAD","category":"Economy & Political Economy","url":"https://unctad.org/unctad-publications","include":r"\b(trade|investment|finance|debt|development|technology|AI|digital|shipping|commodit)\b","mode":"institutional"},
+    {"id":"wto","org":"WTO","category":"Economy & Political Economy","url":"https://www.wto.org/english/res_e/publications_e/publications_e.htm","include":r"\b(trade|tariff|services|goods|supply chain|digital|AI|development)\b","mode":"institutional"},
+    {"id":"ilo","org":"ILO","category":"Economy & Political Economy","url":"https://www.ilo.org/research-and-publications","include":r"\b(employment|labou?r|work|wage|skills|AI|migration|social protection|productivity)\b","mode":"institutional"},
+    {"id":"wef","org":"World Economic Forum","category":"Economy & Political Economy","url":"https://www.weforum.org/publications/","include":r"\b(global|econom|risk|technology|AI|jobs|energy|climate|trade|cyber|future)\b","mode":"institutional"},
 
+    # Geopolitics / security
+    {"id":"msc","org":"Munich Security Conference","category":"Geopolitics & Security","url":"https://securityconference.org/en/publications/","include":r"\b(security|conflict|war|geopolit|defen[cs]e|Europe|China|Russia|Middle East)\b","mode":"institutional"},
+    {"id":"sipri","org":"SIPRI","category":"Geopolitics & Security","url":"https://www.sipri.org/publications","include":r"\b(arms|military|peace|conflict|nuclear|security|defen[cs]e|weapons|sanctions)\b","mode":"institutional"},
+    {"id":"odni","org":"ODNI","category":"Geopolitics & Security","url":"https://www.dni.gov/index.php/newsroom/reports-publications","include":r"\b(threat|intelligence|security|cyber|China|Russia|Iran|terror|technology)\b","mode":"institutional"},
+    {"id":"icg","org":"International Crisis Group","category":"Geopolitics & Security","url":"https://www.crisisgroup.org/latest-updates","include":r"\b(conflict|war|crisis|security|peace|ceasefire|election|Gaza|Ukraine|Sudan|Syria|Iran)\b","mode":"analysis"},
+
+    # Technology / AI
+    {"id":"stanford_hai","org":"Stanford HAI","category":"Technology & AI","url":"https://hai.stanford.edu/research","include":r"\b(AI|artificial intelligence|model|compute|governance|robot|automation|foundation model)\b","mode":"institutional"},
+    {"id":"cset","org":"Georgetown CSET","category":"Technology & AI","url":"https://cset.georgetown.edu/publications/","include":r"\b(AI|artificial intelligence|semiconductor|compute|technology|biotech|China|cyber|robot|quantum)\b","mode":"institutional"},
+    {"id":"mck","org":"McKinsey","category":"Technology & AI","url":"https://www.mckinsey.com/capabilities/tech-and-ai/our-insights","include":r"\b(AI|artificial intelligence|technology|digital|automation|quantum|cyber|semiconductor|robot)\b","mode":"institutional","reader_first":True},
+    {"id":"deloitte","org":"Deloitte","category":"Technology & AI","url":"https://www.deloitte.com/us/en/insights/topics/technology.html","include":r"\b(AI|technology|digital|cyber|cloud|quantum|automation|data|semiconductor)\b","mode":"institutional"},
+    {"id":"kpmg","org":"KPMG","category":"Technology & AI","url":"https://kpmg.com/xx/en/our-insights/technology.html","include":r"\b(AI|technology|digital|cyber|cloud|data|automation|quantum)\b","mode":"institutional"},
+    {"id":"wipo","org":"WIPO","category":"Technology & AI","url":"https://www.wipo.int/publications/en/","include":r"\b(innovation|patent|technology|AI|intellectual property|creative|digital)\b","mode":"institutional"},
+    {"id":"itu","org":"ITU","category":"Technology & AI","url":"https://www.itu.int/itu-d/reports/statistics/","include":r"\b(digital|internet|connectivity|ICT|AI|broadband|mobile|statistics)\b","mode":"institutional"},
+
+    # Climate / energy
+    {"id":"wmo","org":"WMO","category":"Climate & Energy","url":"https://wmo.int/publications","include":r"\b(climate|weather|temperature|greenhouse|ocean|cryosphere|water|extreme)\b","mode":"institutional"},
+    {"id":"unep","org":"UNEP","category":"Climate & Energy","url":"https://www.unep.org/resources","include":r"\b(climate|emission|adaptation|environment|pollution|nature|biodiversity|energy|methane)\b","mode":"institutional"},
+    {"id":"iea","org":"IEA","category":"Climate & Energy","url":"https://www.iea.org/reports","include":r"\b(energy|oil|gas|coal|electricity|renewable|nuclear|hydrogen|emission|critical mineral)\b","mode":"institutional"},
+    {"id":"irena","org":"IRENA","category":"Climate & Energy","url":"https://www.irena.org/Publications","include":r"\b(renewable|energy transition|solar|wind|hydrogen|power|climate|electrification)\b","mode":"institutional"},
+    {"id":"carbonbrief","org":"Carbon Brief","category":"Climate & Energy","url":"https://www.carbonbrief.org/","include":r"\b(climate|carbon|emission|energy|warming|temperature|renewable|oil|gas|coal)\b","mode":"analysis"},
+
+    # Demography / migration / society / development
+    {"id":"undesa_pop","org":"UN DESA Population Division","category":"Demography & Society","url":"https://www.un.org/development/desa/pd/publications","include":r"\b(population|fertility|mortality|migration|urbanization|ageing|household|demographic)\b","mode":"institutional"},
+    {"id":"iom","org":"IOM","category":"Demography & Society","url":"https://publications.iom.int/","include":r"\b(migration|migrant|displacement|mobility|diaspora|remittance|border)\b","mode":"institutional"},
+    {"id":"unhcr","org":"UNHCR","category":"Demography & Society","url":"https://www.unhcr.org/publications","include":r"\b(refugee|displacement|asylum|stateless|forced displacement|migration)\b","mode":"institutional","reader_first":True},
+    {"id":"undp","org":"UNDP","category":"Demography & Society","url":"https://www.undp.org/publications","include":r"\b(human development|poverty|inequality|governance|climate|digital|AI|gender|development)\b","mode":"institutional"},
+
+    # Health / food / education
+    {"id":"who","org":"WHO","category":"Health, Food & Education","url":"https://www.who.int/publications/i","include":r"\b(health|disease|mortality|vaccine|pandemic|nutrition|mental health|antimicrobial|tuberculosis|malaria)\b","mode":"institutional"},
+    {"id":"fao","org":"FAO","category":"Health, Food & Education","url":"https://www.fao.org/publications/home/en","include":r"\b(food|agriculture|nutrition|hunger|fisher|forest|commodity|climate|rural)\b","mode":"institutional"},
+    {"id":"unesco","org":"UNESCO","category":"Health, Food & Education","url":"https://www.unesco.org/en/publications","include":r"\b(education|science|culture|AI|digital|literacy|teacher|learning|media)\b","mode":"institutional"},
+
+    # Democracy / rights / governance
+    {"id":"vdem","org":"V-Dem Institute","category":"Democracy & Rights","url":"https://www.v-dem.net/publications/","include":r"\b(democracy|autocra|election|polarization|rights|freedom|governance)\b","mode":"institutional"},
+    {"id":"idea","org":"International IDEA","category":"Democracy & Rights","url":"https://www.idea.int/publications","include":r"\b(democracy|election|constitution|political participation|representation|governance)\b","mode":"institutional"},
+    {"id":"freedom","org":"Freedom House","category":"Democracy & Rights","url":"https://freedomhouse.org/reports","include":r"\b(freedom|democracy|internet|rights|authoritarian|transnational repression)\b","mode":"institutional"},
+    {"id":"wjp","org":"World Justice Project","category":"Democracy & Rights","url":"https://worldjusticeproject.org/our-work/research-and-data","include":r"\b(rule of law|justice|governance|rights|corruption|security)\b","mode":"institutional"},
+    {"id":"ti","org":"Transparency International","category":"Democracy & Rights","url":"https://www.transparency.org/en/publications","include":r"\b(corruption|integrity|transparency|bribery|governance|accountability)\b","mode":"institutional","reader_first":True},
+    {"id":"rsf","org":"Reporters Without Borders","category":"Democracy & Rights","url":"https://rsf.org/en/reports","include":r"\b(press|journalist|media|freedom|censorship|information)\b","mode":"institutional"},
+
+    # Science / high-quality analytical source
+    {"id":"quanta","org":"Quanta Magazine","category":"Science","url":"https://www.quantamagazine.org/","include":r"\b(AI|physics|biology|mathematics|computer|quantum|algorithm|genome|cosmology|neuroscience)\b","mode":"analysis"},
+]
 def load_json(p, default):
     try: return json.loads(p.read_text(encoding="utf-8"))
     except Exception: return default
@@ -241,25 +284,74 @@ def jina_reader(url):
     r.raise_for_status()
     return r.text
 
-def jina_search(query):
-    su = "https://s.jina.ai/" + quote(query, safe="")
-    r = requests.get(su, headers={"Accept":"text/plain","User-Agent":HEADERS["User-Agent"]}, timeout=TIMEOUT)
-    r.raise_for_status()
-    return r.text
 
-def version_from(text, url, mode):
-    blob = clean(f"{text} {url}")
-    if BAD_PHRASES.search(blob):
+def _url_year(url):
+    ys=[int(x) for x in re.findall(r"(?<!\d)(20\d{2})(?!\d)", url or "")]
+    ys=[y for y in ys if 2000 <= y <= CURRENT_YEAR]
+    return max(ys) if ys else None
+
+def _nearest_year_to_series(spec, text):
+    rx=re.compile(spec["match"], re.I)
+    years=list(re.finditer(r"\b(20\d{2})\b", text or ""))
+    years=[m for m in years if 2000 <= int(m.group(1)) <= CURRENT_YEAR]
+    if not years:
+        return None, None
+    hits=list(rx.finditer(text or ""))
+    if not hits:
+        return None, None
+    best=None
+    for h in hits:
+        hc=(h.start()+h.end())/2
+        for y in years:
+            yc=(y.start()+y.end())/2
+            dist=abs(yc-hc)
+            if dist > 170:
+                continue
+            # Prefer a year following the series name when distances are similar.
+            after_bonus=0 if y.start() >= h.end() else 18
+            key=(dist+after_bonus, -int(y.group(1)))
+            if best is None or key < best[0]:
+                best=(key,int(y.group(1)),y.start())
+    if best:
+        return best[1], best[2]
+    return None, None
+
+def version_from(spec, text, url):
+    """Extract REPORT EDITION, not page publication year.
+
+    The main rule is proximity: a year closest to the series name beats unrelated
+    dates in navigation, news cards or publication metadata. This fixes cases such
+    as WMO 'State of the Global Climate 2025' published in 2026, UNHCR Global
+    Trends 2025 published in 2026, and CPI 2025 released in 2026.
+    """
+    blob=clean(text or "")
+    if not blob and not url:
         return None
-    years = [int(y) for y in re.findall(r"\b(20\d{2})\b", blob)]
-    years = [y for y in years if 2000 <= y <= CURRENT_YEAR]  # never accept future-edition announcements
-    if not years: return None
-    y = max(years)
-    month = 0
-    if mode == "intra":
-        low = blob.lower()
-        ms = [n for k,n in MONTHS.items() if re.search(rf"\b{re.escape(k)}\.?\b", low)]
-        month = max(ms) if ms else 0
+
+    y,pos=_nearest_year_to_series(spec, blob)
+
+    # If the candidate itself is a report-specific URL, its year is useful when
+    # the title contains no year. We do NOT let a URL year override an explicit
+    # year next to the series name (important for FAO SOFI pages).
+    uy=_url_year(url)
+    if y is None and uy is not None:
+        y=uy
+        pos=None
+
+    if y is None:
+        return None
+
+    month=0
+    if spec["mode"]=="intra":
+        # Find month near the chosen edition year / report-series phrase.
+        low=blob.lower()
+        if pos is not None:
+            window=low[max(0,pos-90):min(len(low),pos+90)]
+        else:
+            window=low
+        ms=[n for k,n in MONTHS.items() if re.search(rf"\b{re.escape(k)}\.?\b",window)]
+        month=max(ms) if ms else 0
+
     return (y,month)
 
 def label(v, mode):
@@ -321,44 +413,53 @@ def candidates_from_markdown(spec, text, source_kind, source_url=None):
             out.append((line, base_url, 6, source_kind + "-line"))
     return out
 
-def release_validation(spec, text, url, v):
-    """Reject known project/announcement pages masquerading as released editions."""
-    sid = spec["id"]
+def bad_near_series(spec, text, url):
+    if BAD_PHRASES.search(url or ""):
+        return True
+    rx=re.compile(spec["match"], re.I)
+    m=rx.search(text or "")
+    if not m:
+        return False
+    near=(text or "")[max(0,m.start()-120):min(len(text or ""),m.end()+180)]
+    return bool(BAD_PHRASES.search(near))
 
-    # The GCB homepage footer carries the current calendar year; only accept an
-    # edition when GCB + the year is explicit or the URL itself is /gcb-YYYY/.
-    if sid == "gcb":
+def release_validation(spec, text, url, v):
+    sid=spec["id"]
+
+    if sid=="gcb":
         if not (re.search(rf"\b(?:Global Carbon Budget|GCB)\s*{v[0]}\b", text, re.I)
-                or re.search(rf"/gcb-{v[0]}/?", url, re.I)
-                or re.search(rf"\bGlobal Carbon Budget v?{v[0]}\b", text, re.I)):
+                or re.search(rf"/gcb-{v[0]}/?", url, re.I)):
             return False
 
-    # WDR pages for the next report can exist for months as concept-note/project
-    # pages. Verify a candidate newer than the known released 2025 edition.
-    if sid == "worldbank_wdr" and v[0] > 2025:
-        key = ("wdr", url)
-        page = _RELEASE_CACHE.get(key)
+    if sid=="worldbank_wdr" and v[0] > 2025:
+        key=("wdr",url)
+        page=_RELEASE_CACHE.get(key)
         if page is None:
-            page = ""
-            try:
-                page = jina_reader(url)
+            page=""
+            try: page=jina_reader(url)
             except Exception:
                 try:
-                    s, _ = direct_html(url)
-                    page = clean(s.get_text(" ", strip=True))
-                except Exception:
-                    pass
-            _RELEASE_CACHE[key] = page
-        low = page.lower()
-        if any(x in low for x in ("concept note", "will investigate", "background papers", "meet the team")):
+                    s,_=direct_html(url); page=clean(s.get_text(" ",strip=True))
+                except Exception: pass
+            _RELEASE_CACHE[key]=page
+        low=page.lower()
+        if any(x in low for x in ("concept note","will investigate","background papers","meet the team")):
             return False
-        if not any(x in low for x in ("download report", "complete report", "download full report", "final report")):
+        if not any(x in low for x in ("download report","complete report","download full report","final report")):
             return False
 
-    # WIPO can advertise the next GII months before release. The publications
-    # series page is authoritative for released editions; reject save-the-date text.
-    if sid == "wipo_gii" and BAD_PHRASES.search(text):
-        return False
+    if sid=="wipo_gii":
+        near=text.lower()
+        if any(x in near for x in ("save the date","will be released","forthcoming","launch on")):
+            return False
+
+    # These series are labelled by the data/report year, even when released the
+    # next calendar year. Require an explicit series+edition relationship.
+    if sid in {"wmo_climate","unhcr_gt","cpi"}:
+        y,_=_nearest_year_to_series(spec,text)
+        uy=_url_year(url)
+        if y != v[0] and uy != v[0]:
+            return False
 
     return True
 
@@ -366,9 +467,9 @@ def choose_candidate(spec, candidates):
     floor=FLOORS.get(spec["id"],(2000,0))
     good=[]
     for text,url,score,method in candidates:
-        if BAD_PHRASES.search(text): continue
+        if bad_near_series(spec,text,url): continue
         if not allowed_domain(spec,url): continue
-        v=version_from(text,url,spec["mode"])
+        v=version_from(spec,text,url)
         if not v: continue
         cmpv=(v[0],v[1] if spec["mode"]=="intra" else 0)
         floorv=(floor[0],floor[1] if spec["mode"]=="intra" else 0)
@@ -388,35 +489,41 @@ def choose_candidate(spec, candidates):
     return {"title":text,"url":url,"method":method,"version":v,"score":score}
 
 def resolve_series(spec):
-    errors = []
-    candidates = []
-    urls = [spec["url"]] + ALT_URLS.get(spec["id"], [])
-    urls = list(dict.fromkeys(urls))
+    errors=[]; candidates=[]
+    urls=list(dict.fromkeys([spec["url"]]+ALT_URLS.get(spec["id"],[])))
 
     for page_url in urls:
-        # If the URL itself is a verified report-like path, use it as one candidate.
         if spec["id"] in SELF_URL_SAFE:
-            candidates.append((spec["name"] + " " + page_url, page_url, 5, "official-url"))
+            candidates.append((spec["name"]+" "+page_url,page_url,5,"official-url"))
+
+        if spec["id"] in READER_FIRST:
+            try:
+                txt=jina_reader(page_url)
+                candidates.extend(candidates_from_markdown(spec,txt,"reader",page_url))
+            except Exception as e:
+                errors.append("reader "+page_url+": "+str(e)[:120])
+            best=choose_candidate(spec,candidates)
+            if best and best.get("score",0)>=10:
+                return best,errors
 
         try:
-            s, final_url = direct_html(page_url)
-            candidates.extend(candidates_from_html(spec, s, final_url))
+            s,final=direct_html(page_url)
+            candidates.extend(candidates_from_html(spec,s,final))
         except Exception as e:
-            errors.append("direct " + page_url + ": " + str(e)[:120])
+            errors.append("direct "+page_url+": "+str(e)[:120])
 
-        # Reader fallback is especially useful for 403 / JS-heavy official sites.
-        try:
-            text = jina_reader(page_url)
-            candidates.extend(candidates_from_markdown(spec, text, "reader", page_url))
-        except Exception as e:
-            errors.append("reader " + page_url + ": " + str(e)[:120])
+        if spec["id"] not in READER_FIRST:
+            try:
+                txt=jina_reader(page_url)
+                candidates.extend(candidates_from_markdown(spec,txt,"reader",page_url))
+            except Exception as e:
+                errors.append("reader "+page_url+": "+str(e)[:120])
 
-        # Stop early if this page already gives a strong valid candidate.
-        best = choose_candidate(spec, candidates)
-        if best and best.get("score", 0) >= 10:
-            return best, errors
+        best=choose_candidate(spec,candidates)
+        if best and best.get("score",0)>=10:
+            return best,errors
 
-    return choose_candidate(spec, candidates), errors
+    return choose_candidate(spec,candidates),errors
 
 def scan_series(state, migration):
     new=[]; health=[]
@@ -455,53 +562,133 @@ def scan_series(state, migration):
         time.sleep(0.15)
     return new,health
 
-def discovery_links_from_html(soup, base, rx):
-    out = []
-    domain = urlparse(base).netloc.replace("www.", "")
-    seen = set()
-    for a in soup.find_all("a", href=True):
-        t = clean(a.get_text(" ", strip=True))
-        if not (20 <= len(t) <= 240) or not rx.search(t):
+DISCOVERY_EXCLUDE=re.compile(
+    r"\b(webinar|podcast|video|event|job|vacanc|speech|press release|statement|newsletter|"
+    r"call for|invitation|registration|course|conference|working paper|technical note|"
+    r"methodology|data appendix|chapter|executive summary)\b",re.I)
+DISCOVERY_SIGNAL=re.compile(
+    r"\b(report|outlook|index|assessment|review|survey|yearbook|statistics|prospects|"
+    r"trends|estimates|monitor|state of|flagship|study|analysis|policy brief|research report|"
+    r"global|world|annual|strategy|forecast|update)\b",re.I)
+
+def discovery_score(spec,title,context,url):
+    blob=clean(title+" "+context)
+    if DISCOVERY_EXCLUDE.search(title):
+        return -99
+    rx=re.compile(spec["include"],re.I)
+    topic=bool(rx.search(blob))
+    if not topic:
+        return -99
+    score=3
+    if DISCOVERY_SIGNAL.search(blob): score+=3
+    if re.search(rf"\b(?:{CURRENT_YEAR}|{CURRENT_YEAR-1})\b",blob): score+=2
+    if len(title)>=40: score+=1
+    if re.search(r"/(publication|publications|report|reports|research|analysis|brief|insight)",url,re.I): score+=1
+    if spec.get("mode")=="analysis":
+        # Analytical sources are intentionally stricter to avoid becoming a news feed.
+        if not re.search(r"\b(analysis|explainer|report|study|mapped|interactive|investigation|research|index)\b",blob,re.I):
+            score-=2
+    return score
+
+def discovery_from_html(spec,soup,base):
+    out=[]; seen=set(); base_domain=urlparse(base).netloc.replace("www.","")
+    for a in soup.find_all("a",href=True):
+        title=clean(a.get_text(" ",strip=True))
+        if not (20<=len(title)<=260): continue
+        url=canonical(base,a["href"])
+        dom=urlparse(url).netloc.replace("www.","")
+        # IOM publications use publications.iom.int; otherwise stay on host family.
+        if spec["id"]!="iom" and dom and base_domain and not (dom==base_domain or dom.endswith("."+base_domain) or base_domain.endswith("."+dom)):
             continue
-        u = canonical(base, a["href"])
-        d = urlparse(u).netloc.replace("www.", "")
-        if d and domain and not (d == domain or d.endswith("." + domain) or domain.endswith("." + d)):
-            continue
-        if u in seen:
-            continue
-        seen.add(u)
-        out.append((t, u))
+        parent=a.find_parent(["article","li","div"])
+        context=clean(parent.get_text(" ",strip=True))[:700] if parent else ""
+        score=discovery_score(spec,title,context,url)
+        if score<6 or url in seen: continue
+        seen.add(url); out.append((score,title,url))
+    out.sort(reverse=True)
     return out[:80]
 
-def scan_discovery(state,migration):
-    new=[]; health=[]
-    for mid,org,cat,url,pattern in DISCOVERY:
-        key="discovery:"+mid; links=[]; errors=[]; rx=re.compile(pattern,re.I)
+def discovery_from_reader(spec,text,base):
+    out=[]; seen=set(); lines=text.splitlines()
+    link_re=re.compile(r"\[([^\]]{20,260})\]\((https?://[^)\s]+)")
+    for i,line in enumerate(lines):
+        for m in link_re.finditer(line):
+            title=clean(m.group(1)); url=m.group(2)
+            context=clean(" ".join(lines[max(0,i-2):min(len(lines),i+3)]))[:700]
+            score=discovery_score(spec,title,context,url)
+            if score<6 or url in seen: continue
+            seen.add(url); out.append((score,title,url))
+    out.sort(reverse=True)
+    return out[:80]
+
+def is_flagship_duplicate(org,title):
+    for sp in SERIES:
+        if sp["org"]==org or org.lower() in sp["org"].lower() or sp["org"].lower() in org.lower():
+            if re.search(sp["match"],title,re.I):
+                return True
+    return False
+
+def resolve_discovery(spec):
+    errors=[]; candidates=[]
+    reader_first=bool(spec.get("reader_first"))
+
+    if reader_first:
         try:
-            s,final=direct_html(url); links=discovery_links_from_html(s,final,rx)
-        except Exception as e:
-            errors.append("direct: "+str(e)[:140])
-        if not links:
-            try:
-                txt=jina_reader(url)
-                seen_reader = set()
-                for t,u in re.findall(r"\[([^\]]{20,240})\]\((https?://[^)\s]+)",txt):
-                    if rx.search(t) and u not in seen_reader:
-                        seen_reader.add(u)
-                        links.append((clean(t),u))
-            except Exception as e:
-                errors.append("reader: "+str(e)[:140])
-        current={u for _,u in links[:60]}; old=set(state.get(key,[]))
-        if old and not migration:
-            for t,u in links[:60]:
-                if u not in old:
-                    new.append({"id":hashlib.sha1(u.encode()).hexdigest()[:14],"date":TODAY,
-                                "category":cat,"source":org,"title":t,
-                                "summary":"New high-signal institutional publication detected. This is discovery monitoring, not a confirmed new flagship edition.",
-                                "url":u,"type":"New publication","automatic":True,"confidence":"medium"})
-        state[key]=list(dict.fromkeys(list(old)+sorted(current)))[-800:]
-        health.append({"monitor":org+" discovery","kind":"discovery","ok":bool(links),
-                       "candidates":len(links),"warnings":errors})
+            txt=jina_reader(spec["url"]); candidates=discovery_from_reader(spec,txt,spec["url"])
+        except Exception as e: errors.append("reader: "+str(e)[:140])
+
+    if not candidates:
+        try:
+            s,final=direct_html(spec["url"]); candidates=discovery_from_html(spec,s,final)
+        except Exception as e: errors.append("direct: "+str(e)[:140])
+
+    if not candidates and not reader_first:
+        try:
+            txt=jina_reader(spec["url"]); candidates=discovery_from_reader(spec,txt,spec["url"])
+        except Exception as e: errors.append("reader: "+str(e)[:140])
+
+    return candidates,errors
+
+def scan_discovery(state,migration):
+    new=[]; health=[]; resolved={}
+    # Parallelize Layer 2 only. This keeps 38 sources practical without hammering
+    # any one institution; each source itself is fetched at most twice.
+    with ThreadPoolExecutor(max_workers=6) as ex:
+        futs={ex.submit(resolve_discovery,sp):sp for sp in DISCOVERY}
+        for fut in as_completed(futs):
+            sp=futs[fut]
+            try: resolved[sp["id"]]=fut.result()
+            except Exception as e: resolved[sp["id"]]=([], [str(e)[:180]])
+
+    for sp in DISCOVERY:
+        key="discovery:"+sp["id"]
+        candidates,errors=resolved.get(sp["id"],([],[]))
+        current=[(t,u) for _,t,u in candidates[:60]]
+        current_urls={u for _,u in current}
+        old=set(state.get(key,[]))
+        fresh=[(t,u) for t,u in current if u not in old and not is_flagship_duplicate(sp["org"],t)]
+
+        suppressed=0
+        # A page redesign can suddenly expose dozens of old links. Do not flood.
+        if old and not migration and len(fresh)<=8:
+            for t,u in fresh[:4]:
+                new.append({
+                    "id":hashlib.sha1(u.encode()).hexdigest()[:14],"date":TODAY,
+                    "category":sp["category"],"source":sp["org"],"title":t,
+                    "summary":"New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+                    "url":u,"type":"Important new report" if sp.get("mode")!="analysis" else "Significant analysis",
+                    "automatic":True,"confidence":"medium","discovery_source":sp["id"]
+                })
+        elif old and not migration and len(fresh)>8:
+            suppressed=len(fresh)
+
+        # Accumulate, do not replace, so page rotation cannot make an old link new later.
+        state[key]=list(dict.fromkeys(list(old)+sorted(current_urls)))[-1200:]
+        health.append({
+            "monitor":sp["org"]+" discovery","kind":"discovery","ok":bool(candidates),
+            "candidates":len(candidates),"new_candidates":len(fresh),"suppressed":suppressed,
+            "warnings":errors
+        })
     return new,health
 
 def main():
@@ -509,7 +696,7 @@ def main():
     migration = state.get("_engine_version") != ENGINE_VERSION
     if migration:
         # Re-baseline silently because earlier engines contained known false positives
-        # (e.g. ITU 2021, WDR 2015, WMO publication-year confusion).
+        # and expands Layer 2; first V6 run silently re-baselines changed rules.
         state["_engine_version"]=ENGINE_VERSION
 
     old_updates=load_json(OUTPUT_FILE,{"updates":[]}).get("updates",[])
@@ -529,6 +716,7 @@ def main():
         "engine_version":ENGINE_VERSION,
         "monitor_count":len(SERIES)+len(DISCOVERY),
         "flagship_series_count":len(SERIES),
+        "discovery_source_count":len(DISCOVERY),
         "new_items_this_run":len(flagship_new)+len(discovery_new),
         "new_flagship_editions_this_run":len(flagship_new),
         "migration_baseline":migration,
@@ -542,7 +730,7 @@ def main():
         "monitors":h1+h2,
     }
     save_json(STATE_FILE,state); save_json(OUTPUT_FILE,payload); save_json(HEALTH_FILE,health)
-    print(f"World Watch v5: {ok1}/{len(SERIES)} flagship series resolved; "
+    print(f"World Watch v6: {ok1}/{len(SERIES)} flagship series resolved; "
           f"{ok2}/{len(DISCOVERY)} discovery monitors resolved; "
           f"{len(flagship_new)} newer flagship edition(s); {len(discovery_new)} discovery item(s); "
           f"migration_baseline={migration}")
