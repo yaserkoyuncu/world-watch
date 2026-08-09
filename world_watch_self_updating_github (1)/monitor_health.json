@@ -1,5 +1,5 @@
 {
-  "last_checked": "2026-08-09T09:56:57.262297Z",
+  "last_checked": "2026-08-09T15:47:00.483671Z",
   "engine_version": "6.1",
   "migration_baseline": false,
   "series": {
@@ -495,7 +495,7 @@
       "monitor": "World Economic Forum discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 21,
+      "candidates": 12,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
@@ -535,7 +535,7 @@
       "monitor": "International Crisis Group discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 8,
+      "candidates": 7,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
