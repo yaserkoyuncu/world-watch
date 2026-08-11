@@ -1,11 +1,11 @@
 {
-  "last_checked": "2026-08-11T10:10:50.787936Z",
+  "last_checked": "2026-08-11T16:10:51.734055Z",
   "engine_version": "6.1",
   "monitor_count": 82,
   "flagship_series_count": 44,
   "discovery_source_count": 38,
   "new_items_this_run": 2,
-  "new_flagship_editions_this_run": 0,
+  "new_flagship_editions_this_run": 1,
   "migration_baseline": false,
   "updates": [
     {
@@ -22,6 +22,19 @@
       "edition": "2026",
       "previous_edition": "2025",
       "confidence": "high"
+    },
+    {
+      "id": "ddad6e2c3ffde6",
+      "date": "2026-08-11",
+      "category": "Technology & AI",
+      "source": "KPMG",
+      "title": "KPMG Managed Services Outlook Survey 2026",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://kpmg.com/xx/en/our-insights/transformation/managed-services-outlook.html",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "kpmg"
     },
     {
       "id": "901b2e383a646e",
