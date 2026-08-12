@@ -1,11 +1,11 @@
 {
-  "last_checked": "2026-08-12T10:20:04.712028Z",
+  "last_checked": "2026-08-12T16:09:23.986814Z",
   "engine_version": "6.1",
   "monitor_count": 82,
   "flagship_series_count": 44,
   "discovery_source_count": 38,
-  "new_items_this_run": 6,
-  "new_flagship_editions_this_run": 1,
+  "new_items_this_run": 1,
+  "new_flagship_editions_this_run": 0,
   "migration_baseline": false,
   "updates": [
     {
@@ -22,6 +22,19 @@
       "edition": "2026",
       "previous_edition": "2025",
       "confidence": "high"
+    },
+    {
+      "id": "951532f6032cd6",
+      "date": "2026-08-12",
+      "category": "Technology & AI",
+      "source": "Georgetown CSET",
+      "title": "Outpaced: AI and Policy’s Role in Transforming Cybersecurity Compliance",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://cset.georgetown.edu/publication/outpaced-ai-and-policys-role-in-transforming-cybersecurity-compliance/",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "cset"
     },
     {
       "id": "51ad85dd651ba6",
