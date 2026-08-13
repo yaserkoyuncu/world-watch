@@ -1,13 +1,26 @@
 {
-  "last_checked": "2026-08-13T05:05:14.681460Z",
+  "last_checked": "2026-08-13T10:28:23.716238Z",
   "engine_version": "6.1",
   "monitor_count": 82,
   "flagship_series_count": 44,
   "discovery_source_count": 38,
-  "new_items_this_run": 0,
+  "new_items_this_run": 1,
   "new_flagship_editions_this_run": 0,
   "migration_baseline": false,
   "updates": [
+    {
+      "id": "788780e5309637",
+      "date": "2026-08-13",
+      "category": "Health, Food & Education",
+      "source": "WHO",
+      "title": "World Health Organization",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.who.int/",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "who"
+    },
     {
       "id": "ea2f4c322c9ad7",
       "date": "2026-08-12",
