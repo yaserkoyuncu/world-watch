@@ -1,11 +1,11 @@
 {
-  "last_checked": "2026-08-13T16:09:27.181264Z",
+  "last_checked": "2026-08-13T22:03:28.663165Z",
   "engine_version": "6.1",
   "monitor_count": 82,
   "flagship_series_count": 44,
   "discovery_source_count": 38,
   "new_items_this_run": 3,
-  "new_flagship_editions_this_run": 1,
+  "new_flagship_editions_this_run": 0,
   "migration_baseline": false,
   "updates": [
     {
@@ -22,6 +22,45 @@
       "edition": "2026",
       "previous_edition": "2025",
       "confidence": "high"
+    },
+    {
+      "id": "b0eba260edfe5d",
+      "date": "2026-08-13",
+      "category": "Democracy & Rights",
+      "source": "Freedom House",
+      "title": "From Awareness to Action: Combating Transnational Repression in the United Kingdom",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://freedomhouse.org/index%2Ephp/report/transnational-repression/united-kingdom/2025",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "freedom"
+    },
+    {
+      "id": "e663a4e1510cb8",
+      "date": "2026-08-13",
+      "category": "Democracy & Rights",
+      "source": "Freedom House",
+      "title": "Engaging the Community: Combating Transnational Repression in Canada",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://freedomhouse.org/index%2Ephp/report/transnational-repression/canada/2025",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "freedom"
+    },
+    {
+      "id": "dd15b1eb4b9517",
+      "date": "2026-08-13",
+      "category": "Democracy & Rights",
+      "source": "Freedom House",
+      "title": "Collaboration and Resistance: Tracking Transnational Repression in 2025",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://freedomhouse.org/index%2Ephp/report/special-report/2026/collaboration-and-resistance-tracking-transnational-repression-2025",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "freedom"
     },
     {
       "id": "a09954c7ecd2dd",
