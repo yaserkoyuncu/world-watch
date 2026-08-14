@@ -1,13 +1,26 @@
 {
-  "last_checked": "2026-08-14T16:06:19.120441Z",
+  "last_checked": "2026-08-14T21:41:37.841349Z",
   "engine_version": "6.1",
   "monitor_count": 82,
   "flagship_series_count": 44,
   "discovery_source_count": 38,
-  "new_items_this_run": 0,
+  "new_items_this_run": 1,
   "new_flagship_editions_this_run": 0,
   "migration_baseline": false,
   "updates": [
+    {
+      "id": "08c372297a15dc",
+      "date": "2026-08-14",
+      "category": "Economy & Political Economy",
+      "source": "ILO",
+      "title": "The future of social insurance in Viet Nam: Policy options and recommendations",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.ilo.org/publications/major-publications/future-social-insurance-viet-nam-policy-options-and-recommendations",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "ilo"
+    },
     {
       "id": "ea2f4c322c9ad7",
       "date": "2026-08-13",
