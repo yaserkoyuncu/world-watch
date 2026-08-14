@@ -1,5 +1,5 @@
 {
-  "last_checked": "2026-08-14T05:02:40.399467Z",
+  "last_checked": "2026-08-14T10:16:49.573027Z",
   "engine_version": "6.1",
   "migration_baseline": false,
   "series": {
@@ -399,8 +399,8 @@
       "kind": "series",
       "ok": true,
       "latest": "2025",
-      "url": "https://worldjusticeproject.org/rule-of-law-index/",
-      "method": "reader-block",
+      "url": "https://worldjusticeproject.org/rule-of-law-index/global/2025/wjp-index",
+      "method": "direct-title",
       "warnings": []
     },
     {
@@ -535,7 +535,7 @@
       "monitor": "International Crisis Group discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 7,
+      "candidates": 8,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
@@ -668,8 +668,8 @@
     {
       "monitor": "IOM discovery",
       "kind": "discovery",
-      "ok": true,
-      "candidates": 18,
+      "ok": false,
+      "candidates": 0,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
@@ -719,8 +719,8 @@
     {
       "monitor": "UNESCO discovery",
       "kind": "discovery",
-      "ok": false,
-      "candidates": 0,
+      "ok": true,
+      "candidates": 2,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": []

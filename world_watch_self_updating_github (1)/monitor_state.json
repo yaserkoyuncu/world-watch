@@ -58,7 +58,7 @@
     "title": "World Development Report 2025: Standards for Development",
     "url": "https://www.worldbank.org/en/publication/wdr2025",
     "method": "direct-title",
-    "checked": "2026-08-14T05:02:40.399467Z"
+    "checked": "2026-08-14T10:16:49.573027Z"
   },
   "series:msc_msr": {
     "version": [
@@ -69,7 +69,7 @@
     "title": "Munich Security Report 2026 - Munich Security Conference",
     "url": "https://securityconference.org/en/publications/munich-security-report/2026/",
     "method": "direct-title",
-    "checked": "2026-08-14T05:02:40.399467Z"
+    "checked": "2026-08-14T10:16:49.573027Z"
   },
   "series:sipri_yearbook": {
     "version": [
@@ -80,7 +80,7 @@
     "title": "SIPRI Yearbook 2026 | SIPRI",
     "url": "https://www.sipri.org/yearbook/2026",
     "method": "direct-title",
-    "checked": "2026-08-14T05:02:40.399467Z"
+    "checked": "2026-08-14T10:16:49.573027Z"
   },
   "series:stanford_ai": {
     "version": [
@@ -91,7 +91,7 @@
     "title": "The 2026 AI Index Report | Stanford HAI",
     "url": "https://hai.stanford.edu/ai-index/2026-ai-index-report",
     "method": "direct-title",
-    "checked": "2026-08-14T05:02:40.399467Z"
+    "checked": "2026-08-14T10:16:49.573027Z"
   },
   "series:deloitte_tech": {
     "version": [
@@ -102,7 +102,7 @@
     "title": "Tech Trends 2026 | Deloitte Insights",
     "url": "https://www.deloitte.com/us/en/insights/topics/technology-management/tech-trends.html",
     "method": "direct-title",
-    "checked": "2026-08-14T05:02:40.399467Z"
+    "checked": "2026-08-14T10:16:49.573027Z"
   },
   "series:kpmg_tech": {
     "version": [
@@ -113,7 +113,7 @@
     "title": "Download the KPMG Global Tech Report 2026",
     "url": "https://kpmg.com/content/dam/kpmgsites/uk/pdf/2026/01/global-tech-report-2026.pdf",
     "method": "reader-link",
-    "checked": "2026-08-14T05:02:40.399467Z"
+    "checked": "2026-08-14T10:16:49.573027Z"
   },
   "series:wipo_gii": {
     "version": [
@@ -124,7 +124,7 @@
     "title": "Author(s): World Intellectual Property Organization; Publication year: 2025 The Global Innovation Index 2025 reveals innovation systems at a crossroads, where breakthrough technologies in AI and quantum computing advance rapidly while investment growth slows and collaborative models evolve to address global challenges. Tracking the most recent global innovation trends, the GII captures a moment of recalibration where R&D growth has slowed, venture capital activity has moderated with cautious early-stage funding, and patenting gains remain modest, even as collaboration grows through networked ecosystems and multi-stakeholder platforms. [![Image 3: WIPO/PUB/2000/2024/EXEC/EN](https://www.wipo.int/edocs/pubdocs/en/cover/wipo-pub-2000-2024-exec.png)](https://www.wipo.int/publications/en/details.jsp?id=4758&plang=EN)",
     "url": "https://www.wipo.int/publications/en/series/index.jsp?id=129&lang=en",
     "method": "reader-block",
-    "checked": "2026-08-14T05:02:40.399467Z"
+    "checked": "2026-08-14T10:16:49.573027Z"
   },
   "series:itu_ff": {
     "version": [
@@ -135,7 +135,7 @@
     "title": "Facts and Figures 2025",
     "url": "https://www.itu.int/itu-d/reports/statistics/facts-figures-2025/",
     "method": "direct-title",
-    "checked": "2026-08-14T05:02:40.399467Z"
+    "checked": "2026-08-14T10:16:49.573027Z"
   },
   "series:wmo_climate": {
     "version": [
@@ -146,7 +146,7 @@
     "title": "State of the Global Climate 2025",
     "url": "https://wmo.int/publication-series/state-of-global-climate/state-of-global-climate-2025",
     "method": "direct-title",
-    "checked": "2026-08-14T05:02:40.399467Z"
+    "checked": "2026-08-14T10:16:49.573027Z"
   },
   "series:unep_egr": {
     "version": [
@@ -157,7 +157,7 @@
     "title": "Emissions Gap Report 2025 | UNEP - UN Environment Programme",
     "url": "https://www.unep.org/resources/emissions-gap-report-2025",
     "method": "direct-title",
-    "checked": "2026-08-14T05:02:40.399467Z"
+    "checked": "2026-08-14T10:16:49.573027Z"
   },
   "series:unep_agr": {
     "version": [
@@ -168,7 +168,7 @@
     "title": "Adaptation Gap Report 2025 | UNEP - UN Environment Programme",
     "url": "https://www.unep.org/resources/adaptation-gap-report-2025",
     "method": "direct-title",
-    "checked": "2026-08-14T05:02:40.399467Z"
+    "checked": "2026-08-14T10:16:49.573027Z"
   },
   "series:gcb": {
     "version": [
@@ -179,7 +179,7 @@
     "title": "Global Carbon Budget | GCB 2025",
     "url": "https://globalcarbonbudget.org/gcb-2025/",
     "method": "direct-title",
-    "checked": "2026-08-14T05:02:40.399467Z"
+    "checked": "2026-08-14T10:16:49.573027Z"
   },
   "series:undp_hdr": {
     "version": [
@@ -190,7 +190,7 @@
     "title": "Human Development Report 2025 | Human Development Reports",
     "url": "https://hdr.undp.org/content/human-development-report-2025",
     "method": "direct-title",
-    "checked": "2026-08-14T05:02:40.399467Z"
+    "checked": "2026-08-14T10:16:49.573027Z"
   },
   "series:un_social": {
     "version": [
@@ -201,7 +201,7 @@
     "title": "Image 4: World Social Report 2025 Cover",
     "url": "https://social.desa.un.org/sites/default/files/styles/max_width_400px_ri/public/2025-04/WSR2025-Cover-sm.jpg.jpg?itok=XeEJM61H",
     "method": "reader-link",
-    "checked": "2026-08-14T05:02:40.399467Z"
+    "checked": "2026-08-14T10:16:49.573027Z"
   },
   "series:who_whs": {
     "version": [
@@ -212,7 +212,7 @@
     "title": "World health statistics 2026: monitoring health for the SDGs, sustainable development goals",
     "url": "https://www.who.int/publications/i/item/9789240122482",
     "method": "direct-title",
-    "checked": "2026-08-14T05:02:40.399467Z"
+    "checked": "2026-08-14T10:16:49.573027Z"
   },
   "series:unesco_gem": {
     "version": [
@@ -223,7 +223,7 @@
     "title": "Image 8: 2026 GEM Report cover image",
     "url": "https://www.unesco.org/gem-report/sites/default/files/styles/banner_mobile/public/2026-03/cover%20image%20web.jpg.webp?itok=O_g9oZz8",
     "method": "reader-link",
-    "checked": "2026-08-14T05:02:40.399467Z"
+    "checked": "2026-08-14T10:16:49.573027Z"
   },
   "series:vdem": {
     "version": [
@@ -234,7 +234,7 @@
     "title": "How to cite the V-Dem Institute Democracy Report 2026:",
     "url": "https://www.v-dem.net/publications/democracy-reports/",
     "method": "direct-heading",
-    "checked": "2026-08-14T05:02:40.399467Z"
+    "checked": "2026-08-14T10:16:49.573027Z"
   },
   "series:idea": {
     "version": [
@@ -245,7 +245,7 @@
     "title": "The Global State of Democracy 2025: Democracy on the Move | International IDEA",
     "url": "https://www.idea.int/publications/catalogue/global-state-of-democracy-2025-democracy-on-the-move",
     "method": "direct-title",
-    "checked": "2026-08-14T05:02:40.399467Z"
+    "checked": "2026-08-14T10:16:49.573027Z"
   },
   "series:freedom": {
     "version": [
@@ -256,64 +256,64 @@
     "title": "Freedom in the World 2026",
     "url": "https://freedomhouse.org/report/freedom-world/2026/growing-shadow-autocracy",
     "method": "direct-link",
-    "checked": "2026-08-14T05:02:40.399467Z"
+    "checked": "2026-08-14T10:16:49.573027Z"
   },
   "discovery:wb": [
-    "https://www.worldbank.org/en/research/dime",
-    "https://openknowledge.worldbank.org/entities/publication/c35564b6-20e5-4606-a9df-d5735f8481d3",
+    "https://openknowledge.worldbank.org/entities/publication/c9723b60-b532-438f-9e1c-ea016ca5912a",
     "https://www.worldbank.org/en/about/unit/unit-dec",
     "https://openknowledge.worldbank.org/entities/publication/98b8f3d6-6544-4f9f-b6ac-df9299c7ff92",
-    "https://openknowledge.worldbank.org/entities/publication/c9723b60-b532-438f-9e1c-ea016ca5912a"
+    "https://www.worldbank.org/en/research/dime",
+    "https://openknowledge.worldbank.org/entities/publication/c35564b6-20e5-4606-a9df-d5735f8481d3"
   ],
   "discovery:who": [
-    "https://www.who.int/mega-menu/data/dashboards/health-inequality-monitor",
-    "https://www.who.int/mega-menu/emergencies/news/disease-outbreak-news",
-    "https://www.who.int/mega-menu/data/reports/uhc-global-monitoring-report",
-    "https://www.who.int/mega-menu/data/data-collection/routine-health-information-systems",
-    "https://www.who.int/publications/i/item/9789290222569",
-    "https://www.who.int/publications/i/item/9789290222552",
-    "https://www.who.int/mega-menu/data/data-who/global-health-estimates",
-    "https://www.who.int/mega-menu/data/data-collection/gis-centre-for-health",
-    "https://www.who.int/mega-menu/data/data-collection/civil-registration-and-vital-statistics",
-    "https://www.who.int/mega-menu/data/reports/world-health-statistics",
-    "https://www.who.int/mega-menu/emergencies/who-in-emergencies/health-emergency-appeal",
     "https://www.who.int/publications/i/item/WHO-DGO-EVL-2025.72",
-    "https://www.who.int/",
-    "https://www.who.int/mega-menu/data/data-collection/harmonized-health-facility-assessment",
-    "https://www.who.int/publications/i/item/B09861",
+    "https://www.who.int/mega-menu/data/data-collection/routine-health-information-systems",
     "https://www.who.int/mega-menu/about-us/governance/wha",
+    "https://www.who.int/mega-menu/emergencies/who-in-emergencies/health-emergency-appeal",
     "https://www.who.int/mega-menu/emergencies/who-in-emergencies/international-health-regulations",
+    "https://www.who.int/mega-menu/data/dashboards/health-inequality-monitor",
     "https://www.who.int/publications/i/item/B09865",
+    "https://www.who.int/mega-menu/data/data-who/global-health-estimates",
+    "https://www.who.int/publications/i/item/B09861",
+    "https://www.who.int/mega-menu/data/data-who/global-health-obsevatory",
+    "https://www.who.int/mega-menu/data/reports/world-health-statistics",
+    "https://www.who.int/mega-menu/data/data-collection/harmonized-health-facility-assessment",
     "https://www.who.int/publications/i/item/9789290222590",
-    "https://www.who.int/mega-menu/data/data-who/global-health-obsevatory"
+    "https://www.who.int/publications/i/item/9789290222552",
+    "https://www.who.int/mega-menu/data/data-collection/civil-registration-and-vital-statistics",
+    "https://www.who.int/",
+    "https://www.who.int/mega-menu/data/reports/uhc-global-monitoring-report",
+    "https://www.who.int/publications/i/item/9789290222569",
+    "https://www.who.int/mega-menu/emergencies/news/disease-outbreak-news",
+    "https://www.who.int/mega-menu/data/data-collection/gis-centre-for-health"
   ],
   "discovery:cset": [
-    "https://cset.georgetown.edu/publication/china-mofcom-statement-model-distillation/",
-    "https://cset.georgetown.edu/publication/china-government-ai-model-use-guidelines/",
-    "https://cset.georgetown.edu/2025-annual-report",
-    "https://cset.georgetown.edu/article/how-americas-dizzying-ai-strategy-plays-into-chinas-hands/",
     "https://cset.georgetown.edu/emerging-technology-observatory/",
-    "https://cset.georgetown.edu/publication/outpaced-ai-and-policys-role-in-transforming-cybersecurity-compliance/",
-    "https://cset.georgetown.edu/publication/china-ai-plus-education-action-plan/",
-    "https://cset.georgetown.edu/publication/china-gen-ai-safety-standard-final/",
+    "https://cset.georgetown.edu/publication/identifying-the-ai-development-workforce/",
     "https://cset.georgetown.edu",
     "https://cset.georgetown.edu/publication/china-primary-secondary-ai-education-notice/",
+    "https://cset.georgetown.edu/publication/china-government-ai-model-use-guidelines/",
+    "https://cset.georgetown.edu/publication/china-gen-ai-safety-standard-final/",
+    "https://cset.georgetown.edu/publication/outpaced-ai-and-policys-role-in-transforming-cybersecurity-compliance/",
+    "https://cset.georgetown.edu/publication/2025-annual-report/",
+    "https://cset.georgetown.edu/publication/china-mofcom-statement-model-distillation/",
+    "https://cset.georgetown.edu/publication/china-ai-plus-education-action-plan/",
     "https://cset.georgetown.edu/publication/china-miit-high-tech-pilot-projects-2025/",
-    "https://cset.georgetown.edu/publications/?ep_filter_topic=hardware-and-compute",
-    "https://cset.georgetown.edu/publication/identifying-the-ai-development-workforce/",
-    "https://cset.georgetown.edu/publication/2025-annual-report/"
+    "https://cset.georgetown.edu/article/how-americas-dizzying-ai-strategy-plays-into-chinas-hands/",
+    "https://cset.georgetown.edu/2025-annual-report",
+    "https://cset.georgetown.edu/publications/?ep_filter_topic=hardware-and-compute"
   ],
   "discovery:cb": [
     "https://www.carbonbrief.org/topics/carbon-dioxide-removal"
   ],
   "discovery:quanta": [
-    "https://www.quantamagazine.org/new-proofs-probe-soap-film-singularities-20251112/",
-    "https://www.quantamagazine.org/why-the-legendary-erdos-problems-are-falling-to-ai-20260803/",
     "https://www.quantamagazine.org/wp-content/uploads/2026/07/Hydrogenobody-cr-Ada-Zejun-Shen-Default-1.webp",
-    "https://www.quantamagazine.org/wp-content/uploads/2026/07/Hong_Wang-cr-M.Y.O.P.-Julien-Pebrel-Default.webp",
     "https://www.quantamagazine.org/wp-content/uploads/2026/08/Erdos-cr.DVDP-Default.webp",
+    "https://www.quantamagazine.org/why-the-legendary-erdos-problems-are-falling-to-ai-20260803/",
     "https://www.quantamagazine.org/is-ai-reasoning-right-for-the-wrong-reasons-20260731/",
-    "https://www.quantamagazine.org/physicists-solve-a-muon-mystery-now-old-results-dont-add-up-20260729/"
+    "https://www.quantamagazine.org/physicists-solve-a-muon-mystery-now-old-results-dont-add-up-20260729/",
+    "https://www.quantamagazine.org/new-proofs-probe-soap-film-singularities-20251112/",
+    "https://www.quantamagazine.org/wp-content/uploads/2026/07/Hong_Wang-cr-M.Y.O.P.-Julien-Pebrel-Default.webp"
   ],
   "_engine_version": "6.1",
   "series:oecd_eo": {
@@ -325,7 +325,7 @@
     "title": "Learn more Editorial: Under Pressure Editorial from the June 2026 OECD Economic Outlook written by Stefano Scarpetta, OECD Chief Economist, Head of the OECD Economics Department and G20/G7 Finance Deputy Learn more Higher defence spending: fiscal pressures and uncertain economic payoffs This chapter examines trends in defence spending across OECD countries, the fiscal context to, and the effects of, increases in defence spending, and evidence on the short- and longer-term economic impacts. While security is essential for economic stability, increased military spending is likely to have broader implications, including for growth and public finances.",
     "url": "https://www.oecd.org/en/topics/economic-outlook.html",
     "method": "reader-block",
-    "checked": "2026-08-14T05:02:40.399467Z"
+    "checked": "2026-08-14T10:16:49.573027Z"
   },
   "series:bis_aer": {
     "version": [
@@ -336,7 +336,7 @@
     "title": "Annual Economic Report 2026",
     "url": "https://www.bis.org/publ/arpdf/ar2026e.htm",
     "method": "direct-title",
-    "checked": "2026-08-14T05:02:40.399467Z"
+    "checked": "2026-08-14T10:16:49.573027Z"
   },
   "series:wto_gto": {
     "version": [
@@ -347,7 +347,7 @@
     "title": "WTO | Global Trade Outlook and Statistics March 2026",
     "url": "https://www.wto.org/english/res_e/publications_e/gtos0326_e.htm",
     "method": "direct-title",
-    "checked": "2026-08-14T05:02:40.399467Z"
+    "checked": "2026-08-14T10:16:49.573027Z"
   },
   "series:wef_grr": {
     "version": [
@@ -355,10 +355,10 @@
       0
     ],
     "edition": "2026",
-    "title": "**Published**: 14 January 2026 Global Risks Report 2026 ![Image 70](https://assets.weforum.org/report/cover_image/9u1ADrx7t7AVytN_uXZQRClAIxx_5i26cHqnj6h8wcc.jpg)",
+    "title": "**Published**: 14 January 2026 Global Risks Report 2026 ![Image 3](https://assets.weforum.org/report/cover_image/9u1ADrx7t7AVytN_uXZQRClAIxx_5i26cHqnj6h8wcc.jpg)",
     "url": "https://www.weforum.org/publications/global-risks-report-2026/",
     "method": "reader-block",
-    "checked": "2026-08-14T05:02:40.399467Z"
+    "checked": "2026-08-14T10:16:49.573027Z"
   },
   "series:un_wpp": {
     "version": [
@@ -369,7 +369,7 @@
     "title": "World Population Prospects 2024 | Population Division",
     "url": "https://www.un.org/development/desa/pd/world-population-prospects-2024",
     "method": "direct-title",
-    "checked": "2026-08-14T05:02:40.399467Z"
+    "checked": "2026-08-14T10:16:49.573027Z"
   },
   "series:un_wup": {
     "version": [
@@ -380,7 +380,7 @@
     "title": "World Urbanization Prospects 2025 | Population Division",
     "url": "https://www.un.org/development/desa/pd/world-urbanization-prospects-2025",
     "method": "direct-title",
-    "checked": "2026-08-14T05:02:40.399467Z"
+    "checked": "2026-08-14T10:16:49.573027Z"
   },
   "series:iom_wmr": {
     "version": [
@@ -391,7 +391,7 @@
     "title": "Migration corridors represent an accumulation of migratory movements over time and provide a snapshot of how migration patterns have evolved into significant foreign-born populations in specific destination countries By their very nature, the complex dynamics of global migration can never be fully measured, understood, and regulated. However, as the World Migration Report 2026 shows, we do have a continuously growing and improving body of data and information that can help us make better sense of the key features of migration in increasingly uncertain times. To explore more on migration: download the **full report**",
     "url": "https://worldmigrationreport.iom.int/msite/wmr-2026-interactive/",
     "method": "reader-block",
-    "checked": "2026-08-14T05:02:40.399467Z"
+    "checked": "2026-08-14T10:16:49.573027Z"
   },
   "series:happiness": {
     "version": [
@@ -402,7 +402,7 @@
     "title": "[Subscribe](https://www.worldhappiness.report/subscribe/) The World Happiness Report is published by the Wellbeing Research Centre at the University of Oxford, in partnership with Gallup, the UN Sustainable Development Solutions Network and an independent editorial board. The views expressed in this report do not necessarily reflect the views of our partners, the University of Oxford, or any organisation, agency, or program of the United Nations.",
     "url": "https://www.worldhappiness.report/ed/2026/",
     "method": "reader-block",
-    "checked": "2026-08-14T05:02:40.399467Z"
+    "checked": "2026-08-14T10:16:49.573027Z"
   },
   "series:fao_sofi": {
     "version": [
@@ -413,7 +413,7 @@
     "title": "JUST RELEASED **The State of Food Security and Nutrition in the World 2026** **Understanding and addressing the high cost of a healthy diet**",
     "url": "https://www.fao.org/publications/fao-flagship-publications/the-state-of-food-security-and-nutrition-in-the-world/2025/en",
     "method": "reader-block",
-    "checked": "2026-08-14T05:02:40.399467Z"
+    "checked": "2026-08-14T10:16:49.573027Z"
   },
   "series:undp_mpi": {
     "version": [
@@ -424,7 +424,7 @@
     "title": "* [Türkiye](https://www.undp.org/turkiye) * [Publications](https://www.undp.org/turkiye/publications) * 2025 Global Multidimensional Poverty Index (MPI) ![Image 17](https://www.undp.org/sites/g/files/zskgke326/files/styles/publication_cover_image_mobile/public/2025-10/undp-tr-mpi-2025-cover-sml.png?itok=ZnBDTHh4)",
     "url": "https://www.undp.org/turkiye/publications/2025-global-multidimensional-poverty-index-mpi",
     "method": "reader-block",
-    "checked": "2026-08-14T05:02:40.399467Z"
+    "checked": "2026-08-14T10:16:49.573027Z"
   },
   "series:cpi": {
     "version": [
@@ -435,7 +435,7 @@
     "title": "Corruption Perceptions Index 2025: Decline in leadership undermining global fight against corruption",
     "url": "https://www.transparency.org/en/press/corruption-perceptions-index-2025-decline-leadership-undermining-global-fight",
     "method": "reader-link",
-    "checked": "2026-08-14T05:02:40.399467Z"
+    "checked": "2026-08-14T10:16:49.573027Z"
   },
   "series:rsf": {
     "version": [
@@ -446,18 +446,18 @@
     "title": "2026 RSF Index: press freedom at a 25-year low | RSF",
     "url": "https://rsf.org/en/2026-rsf-index-press-freedom-25-year-low",
     "method": "direct-title",
-    "checked": "2026-08-14T05:02:40.399467Z"
+    "checked": "2026-08-14T10:16:49.573027Z"
   },
   "discovery:imf": [],
   "discovery:icg": [
-    "https://www.crisisgroup.org/sites/default/files/styles/16x9_medium/public/CrisisWatch.png.webp?itok=mZINXdEo",
-    "https://www.crisisgroup.org/vid/africa/chad/sudans-war-risks-fracturing-eastern-chad",
-    "https://www.crisisgroup.org/multilateral-diplomacy",
     "https://www.crisisgroup.org/cmt/global/10-conflicts-watch-2026",
-    "https://www.crisisgroup.org/sites/default/files/styles/16x9_medium/public/2026-07/GlobalTrends_hero-1.jpg.webp?itok=tt_QTRx9",
+    "https://www.crisisgroup.org/sites/default/files/styles/16x9_medium/public/CrisisWatch.png.webp?itok=mZINXdEo",
+    "https://www.crisisgroup.org/multilateral-diplomacy",
     "https://www.crisisgroup.org/sites/default/files/styles/16x9_medium/public/2025-11/horn-graphics-fes-17xi25%20%281%29.jpg.webp?itok=70IC84Jv",
-    "https://www.crisisgroup.org/global-order-and-peacemaking",
-    "https://www.crisisgroup.org/brf/europe/european-union-turkiye/b99-eu-and-turkiye-uniting-defence"
+    "https://www.crisisgroup.org/brf/europe/european-union-turkiye/b99-eu-and-turkiye-uniting-defence",
+    "https://www.crisisgroup.org/sites/default/files/styles/16x9_medium/public/2026-07/GlobalTrends_hero-1.jpg.webp?itok=tt_QTRx9",
+    "https://www.crisisgroup.org/vid/africa/chad/sudans-war-risks-fracturing-eastern-chad",
+    "https://www.crisisgroup.org/global-order-and-peacemaking"
   ],
   "series:worldbank_gep": {
     "version": [
@@ -468,7 +468,7 @@
     "title": "Global Economic Prospects, June 2026",
     "url": "https://www.worldbank.org/en/research",
     "method": "direct-heading",
-    "checked": "2026-08-14T05:02:40.399467Z"
+    "checked": "2026-08-14T10:16:49.573027Z"
   },
   "series:ilo_est": {
     "version": [
@@ -479,7 +479,7 @@
     "title": "5 May 2026 [Employment and Social Trends 2026](https://www.ilo.org/publications/flagship-reports/employment-and-social-trends-2026 \"Employment and Social Trends 2026\") ![Image 10](https://www.ilo.org/sites/default/files/styles/cards_1_desktop/public/2026-01/World%20of%20Work%20-%20Employment%20and%20Social%20Outlook%202026_publication-teaser-web.png.webp?itok=LpWYsGJC)",
     "url": "https://www.ilo.org/research-and-publications",
     "method": "reader-block",
-    "checked": "2026-08-14T05:02:40.399467Z"
+    "checked": "2026-08-14T10:16:49.573027Z"
   },
   "series:odni_ata": {
     "version": [
@@ -490,7 +490,7 @@
     "title": "Annual Threat Assessment https://www.odni.gov/index.php/newsroom/reports-publications/reports-publications-2026/4141-2026-annual-threat-assessment",
     "url": "https://www.odni.gov/index.php/newsroom/reports-publications/reports-publications-2026/4141-2026-annual-threat-assessment",
     "method": "official-url",
-    "checked": "2026-08-14T05:02:40.399467Z"
+    "checked": "2026-08-14T10:16:49.573027Z"
   },
   "series:iea_weo": {
     "version": [
@@ -501,7 +501,7 @@
     "title": "World Energy Outlook https://www.iea.org/reports/world-energy-outlook-2025",
     "url": "https://www.iea.org/reports/world-energy-outlook-2025",
     "method": "official-url",
-    "checked": "2026-08-14T05:02:40.399467Z"
+    "checked": "2026-08-14T10:16:49.573027Z"
   },
   "series:irena_weto": {
     "version": [
@@ -512,7 +512,7 @@
     "title": "World Energy Transitions Outlook https://www.irena.org/publications/2024/Nov/World-Energy-Transitions-Outlook-2024",
     "url": "https://www.irena.org/publications/2024/Nov/World-Energy-Transitions-Outlook-2024",
     "method": "official-url",
-    "checked": "2026-08-14T05:02:40.399467Z"
+    "checked": "2026-08-14T10:16:49.573027Z"
   },
   "series:unhcr_gt": {
     "version": [
@@ -531,10 +531,10 @@
       0
     ],
     "edition": "2025",
-    "title": "Markdown Content: [WJP Rule of Law Index ®](https://worldjusticeproject.org/rule-of-law-index/) [Rankings](https://worldjusticeproject.org/rule-of-law-index/global/2025)[Countries](https://worldjusticeproject.org/rule-of-law-index/country/2025)[Factors](https://worldjusticeproject.org/rule-of-law-index/factors/2025)[Insights](https://worldjusticeproject.org/rule-of-law-index/insights)[About](https://worldjusticeproject.org/rule-of-law-index/about)",
-    "url": "https://worldjusticeproject.org/rule-of-law-index/",
-    "method": "reader-block",
-    "checked": "2026-08-14T05:02:40.399467Z"
+    "title": "WJP Rule of Law Index",
+    "url": "https://worldjusticeproject.org/rule-of-law-index/global/2025/wjp-index",
+    "method": "direct-title",
+    "checked": "2026-08-14T10:16:49.573027Z"
   },
   "series:unctad_tdr": {
     "version": [
@@ -545,415 +545,415 @@
     "title": "Trade and Development Report https://unctad.org/publication/trade-and-development-report-2025",
     "url": "https://unctad.org/publication/trade-and-development-report-2025",
     "method": "official-url",
-    "checked": "2026-08-14T05:02:40.399467Z"
+    "checked": "2026-08-14T10:16:49.573027Z"
   },
   "discovery:oecd": [],
   "discovery:bis": [
-    "https://www.bis.org/publ/bisbull129.htm",
-    "https://www.bis.org/publ/othp109.htm",
-    "https://www.bis.org/publ/othp110.htm",
-    "https://www.bis.org/publ/bisbull131.htm",
-    "https://www.bis.org/img/homepage/bisihub.jpg",
+    "https://www.bis.org/publ/bisbull130.htm",
     "https://www.bis.org/cpmi/speeches/sp260505.htm",
     "https://www.bis.org/stability.htm?m=70",
-    "https://www.bis.org/cpmi/publ/brief11.htm",
-    "https://www.bis.org/publ/bisbull130.htm",
-    "https://www.bis.org/speeches/sp260624.htm",
     "https://www.bis.org/cpmi/publ/brief13.htm",
-    "https://www.bis.org/publ/work1370.htm"
+    "https://www.bis.org/publ/work1370.htm",
+    "https://www.bis.org/img/homepage/bisihub.jpg",
+    "https://www.bis.org/publ/othp110.htm",
+    "https://www.bis.org/publ/othp109.htm",
+    "https://www.bis.org/speeches/sp260624.htm",
+    "https://www.bis.org/publ/bisbull131.htm",
+    "https://www.bis.org/publ/bisbull129.htm",
+    "https://www.bis.org/cpmi/publ/brief11.htm"
   ],
   "discovery:unctad": [
-    "https://unctad.org/publication/world-of-debt/dashboard",
-    "https://unctad.org/wif2026",
-    "https://unctad.org/publication/trade-services-prevent-and-mitigate-plastic-pollution",
-    "https://unctad.org/publications-search?f%5B0%5D=product%3A394",
-    "https://unctad.org/publication/economic-development-africa-report-2024",
-    "https://unctad.org/publication/digital-economy-report-2024",
-    "https://unctad.org/publication/world-investment-report-2026-international-investment-turbulent-era",
-    "https://unctad.org/publications-search?f%5B0%5D=product%3A609",
-    "https://unctad.org/project-search",
-    "https://unctad.org/publication/trade-and-development-foresights-2026-global-economy-faces-geopolitical-challenge",
-    "https://unctad.org/publication/revisiting-trade-poverty-nexus-developing-countries",
-    "https://unctad.org/publication/harnessing-regional-integration-and-green-industrial-policy-enhancing-sustainable",
-    "https://unctad.org/publications-search?f%5B0%5D=product%3A397",
-    "https://unctad.org/topic/debt-and-finance/dmfas",
-    "https://unctad.org/publications-search?f%5B0%5D=product%3A598",
-    "https://unctad.org/publication/global-trade-update-julyaugust-2026-global-trade-continues-expand-amid-rising-price",
     "https://unctad.org/publications-search?f%5B0%5D=product%3A644",
-    "https://unctad.org/meetings-search",
+    "https://unctad.org/publication/global-trade-update-julyaugust-2026-global-trade-continues-expand-amid-rising-price",
+    "https://unctad.org/topic/debt-and-finance/dmfas",
+    "https://unctad.org/publication/division-investment-and-enterprise-results-and-impact-report-2026",
+    "https://unctad.org/publication/world-investment-report-2026-international-investment-turbulent-era",
+    "https://unctad.org/projects",
+    "https://unctad.org/publications-search?f%5B0%5D=product%3A397",
+    "https://unctad.org/publication/world-of-debt/dashboard",
     "https://unctad.org/publication/technology-and-innovation-report-2025",
     "https://unctad.org/publications-search",
-    "https://unctad.org/projects",
+    "https://unctad.org/publication/debt-management-and-financial-analysis-system-programme-annual-report-2025",
     "https://unctad.org/publications-search?f%5B0%5D=product%3A390",
+    "https://unctad.org/publication/trade-services-prevent-and-mitigate-plastic-pollution",
+    "https://unctad.org/publication/harnessing-regional-integration-and-green-industrial-policy-enhancing-sustainable",
+    "https://unctad.org/publication/economic-development-africa-report-2024",
+    "https://unctad.org/meetings-search",
+    "https://unctad.org/project-search",
+    "https://unctad.org/publication/trade-and-development-foresights-2026-global-economy-faces-geopolitical-challenge",
+    "https://unctad.org/wif2026",
+    "https://unctad.org/publication/digital-economy-report-2024",
+    "https://unctad.org/publications-search?f%5B0%5D=product%3A598",
     "https://unctad.org/publications-search?f%5B0%5D=product%3A588",
-    "https://unctad.org/publication/division-investment-and-enterprise-results-and-impact-report-2026",
-    "https://unctad.org/publication/debt-management-and-financial-analysis-system-programme-annual-report-2025"
+    "https://unctad.org/publications-search?f%5B0%5D=product%3A394",
+    "https://unctad.org/publications-search?f%5B0%5D=product%3A609",
+    "https://unctad.org/publication/revisiting-trade-poverty-nexus-developing-countries"
   ],
   "discovery:wto": [
-    "https://www.wto.org/english/res_e/reser_e/gots_e.htm",
-    "http://www.wto.org/english/res_e/res_e.htm"
+    "http://www.wto.org/english/res_e/res_e.htm",
+    "https://www.wto.org/english/res_e/reser_e/gots_e.htm"
   ],
   "discovery:ilo": [
-    "https://www.ilo.org/publications/impact-genai-jobs-productivity-and-work-organization-review-empirical",
-    "https://www.ilo.org/publications/major-publications/ilo-global-estimates-international-migrants-labour-force",
-    "https://www.ilo.org/research-and-publications",
-    "https://lab.ilo.org/world-work-series/lifelong-learning-and-skills-future",
-    "https://www.ilo.org/international-labour-review",
     "https://www.ilo.org/publications/el-ni%C3%B1o-2026%E2%80%932027-and-world-work-latin-america-and-caribbean-causal-chain",
     "https://www.ilo.org/publications/major-publications/child-labour-global-estimates-2024-trends-and-road-forward",
-    "https://www.ilo.org/publications/major-publications/global-employment-trends-youth-2026",
-    "https://www.ilo.org/publications/major-publications/global-employment-trends-youth-2026-back-future",
-    "https://labordoc.ilo.org/",
-    "https://www.ilo.org/publications/major-publications/global-employment-policy-review-2025-do-employment-responsive-policies-work",
-    "https://www.ilo.org/publications/major-publications/global-employment-trends-youth-2024",
-    "https://www.ilo.org/publications/productivity-and-decent-work-achieving-synergies-between-social-and",
-    "https://ilostat.ilo.org/",
     "https://www.ilo.org/rights-and-permissions",
-    "https://www.ilo.org/publications/flagship-reports/employment-and-social-trends-2026"
+    "https://www.ilo.org/international-labour-review",
+    "https://www.ilo.org/publications/major-publications/ilo-global-estimates-international-migrants-labour-force",
+    "https://ilostat.ilo.org/",
+    "https://www.ilo.org/publications/major-publications/global-employment-trends-youth-2026-back-future",
+    "https://www.ilo.org/publications/major-publications/global-employment-policy-review-2025-do-employment-responsive-policies-work",
+    "https://www.ilo.org/publications/flagship-reports/employment-and-social-trends-2026",
+    "https://www.ilo.org/research-and-publications",
+    "https://www.ilo.org/publications/major-publications/global-employment-trends-youth-2024",
+    "https://labordoc.ilo.org/",
+    "https://www.ilo.org/publications/productivity-and-decent-work-achieving-synergies-between-social-and",
+    "https://www.ilo.org/publications/impact-genai-jobs-productivity-and-work-organization-review-empirical",
+    "https://www.ilo.org/publications/major-publications/global-employment-trends-youth-2026",
+    "https://lab.ilo.org/world-work-series/lifelong-learning-and-skills-future"
   ],
   "discovery:wef": [
-    "https://www.weforum.org/publications/inside-chinas-industrial-transformation-policy-practice-and-the-path-to-scale/",
-    "https://www.weforum.org/publications/meaningful-outcomes-determine-the-winners-of-the-health-ai-race/",
-    "https://www.weforum.org/publications/plastic-pollution-and-biodiversity-a-global-overview/",
-    "https://www.weforum.org/publications/deepening-divides-the-cost-of-a-more-fragmented-financial-system/",
-    "https://www.weforum.org/publications/series/global-cooperation-barometer/",
-    "https://www.weforum.org/publications/asia-s-human-led-ai-opportunity-a-framework-for-transformation/",
-    "https://www.weforum.org/publications/the-ai-first-operating-system-a-blueprint-for-operating-and-business-model-innovation/",
-    "https://www.weforum.org/stories/jobs-and-the-future-of-work/",
-    "https://www.weforum.org/publications/series/global-cybersecurity-outlook/",
-    "https://www.weforum.org/publications/closing-the-gender-gap-in-senior-leadership/",
-    "https://www.weforum.org/publications/energy-transition-index-2026/",
-    "https://www.weforum.org/publications/beyond-coal-building-a-flexible-resilient-and-clean-power-system-for-malaysia/",
-    "https://www.weforum.org/publications/series/top-10-emerging-technologies/",
-    "https://www.weforum.org/stories/nature-and-biodiversity/",
-    "https://www.weforum.org/stories/artificial-intelligence/",
-    "https://www.weforum.org/stories/financial-and-monetary-systems/",
-    "https://www.weforum.org/publications/series/energy-transition-index/",
-    "https://www.weforum.org/publications/chief-economists-outlook-may-2026/",
     "https://www.weforum.org/publications/the-ai-playbook-for-financial-services/",
+    "https://www.weforum.org/publications/series/top-10-emerging-technologies/",
     "https://www.weforum.org/publications/series/global-gender-gap-report/",
-    "https://www.weforum.org/publications/artificial-intelligence-and-the-future-of-entry-level-work-a-framework-for-safeguarding-and-reinventing-early-career-pathways/"
+    "https://www.weforum.org/stories/artificial-intelligence/",
+    "https://www.weforum.org/stories/nature-and-biodiversity/",
+    "https://www.weforum.org/stories/jobs-and-the-future-of-work/",
+    "https://www.weforum.org/publications/chief-economists-outlook-may-2026/",
+    "https://www.weforum.org/stories/financial-and-monetary-systems/",
+    "https://www.weforum.org/publications/inside-chinas-industrial-transformation-policy-practice-and-the-path-to-scale/",
+    "https://www.weforum.org/publications/plastic-pollution-and-biodiversity-a-global-overview/",
+    "https://www.weforum.org/publications/the-ai-first-operating-system-a-blueprint-for-operating-and-business-model-innovation/",
+    "https://www.weforum.org/publications/meaningful-outcomes-determine-the-winners-of-the-health-ai-race/",
+    "https://www.weforum.org/publications/energy-transition-index-2026/",
+    "https://www.weforum.org/publications/closing-the-gender-gap-in-senior-leadership/",
+    "https://www.weforum.org/publications/asia-s-human-led-ai-opportunity-a-framework-for-transformation/",
+    "https://www.weforum.org/publications/series/energy-transition-index/",
+    "https://www.weforum.org/publications/artificial-intelligence-and-the-future-of-entry-level-work-a-framework-for-safeguarding-and-reinventing-early-career-pathways/",
+    "https://www.weforum.org/publications/beyond-coal-building-a-flexible-resilient-and-clean-power-system-for-malaysia/",
+    "https://www.weforum.org/publications/deepening-divides-the-cost-of-a-more-fragmented-financial-system/",
+    "https://www.weforum.org/publications/series/global-cybersecurity-outlook/",
+    "https://www.weforum.org/publications/series/global-cooperation-barometer/"
   ],
   "discovery:msc": [
-    "https://securityconference.org/en/publications/munich-security-index/",
     "https://securityconference.org/en/publications/munich-security-brief/",
-    "https://securityconference.org/en/publications/analyses/",
-    "https://securityconference.org/en/publications/munich-security-report/"
+    "https://securityconference.org/en/publications/munich-security-index/",
+    "https://securityconference.org/en/publications/munich-security-report/",
+    "https://securityconference.org/en/publications/analyses/"
   ],
   "discovery:sipri": [
+    "https://www.sipri.org/publications/2026/other-publications/climate-peace-and-security-fact-sheet-afghanistan-2026",
     "https://www.sipri.org/publications/2026/other-publications/security-sector-reform-and-united-nations-transitions-factors-success",
     "https://www.sipri.org/publications/2026/eu-non-proliferation-and-disarmament-papers/cyber-disarmament-practice-eus-role-governing-software-vulnerabilities-fragmented-international",
-    "https://www.sipri.org/publications/2026/partner-publications/military-assistance-provided-eu-and-other-external-actors-eus-eastern-neighbourhood-2010-25",
-    "https://www.sipri.org/publications/2026/partner-publications/military-assistance-provided-eu-and-other-external-actors-eus-southern-neighbourhood-2010-25",
-    "https://www.sipri.org/sites/default/files/styles/medium/public/2026-06/mercator_west_cover.png?itok=1colFOeD",
-    "https://www.sipri.org/sites/default/files/styles/medium/public/2026-06/p1.png?itok=G3mvaYxX",
-    "https://www.sipri.org/publications/2026/sipri-fact-sheets/developments-and-trends-multilateral-peace-operations-2025",
+    "https://www.sipri.org/publications/search?keys=&author_editor=&field_associated_research_area_target_id=All&field_publication_type_target_id=All&order=field_year_of_publication&sort=asc",
     "https://www.sipri.org/publications/2026/research-reports/aid-cuts-and-security-risks-health-system-disruption-human-insecurity",
     "https://www.sipri.org/sites/default/files/styles/medium/public/2026-06/0526_transitions_just_future_cover_0.png?itok=OdXu98C4",
-    "https://www.sipri.org/publications/2026/partner-publications/climate-peace-and-security-fact-sheet-lake-chad-2026",
     "https://www.sipri.org/sites/default/files/styles/medium/public/2026-03/cover.png?itok=ZzIDvNHK",
-    "https://www.sipri.org/sites/default/files/styles/medium/public/2026-05/fs_2605_mpo_2026_cover_page_01.png?itok=2CV7uq1s",
-    "https://www.sipri.org/sites/default/files/styles/medium/public/2026-06/0626_building_an_effective_infrastructure_for_peace_in_syria_and_lebanon_page_01_0.png?itok=j1Tmgmje",
-    "https://www.sipri.org/sites/default/files/styles/medium/public/2026-06/mercator_east_cover.png?itok=6z6npi8e",
-    "https://www.sipri.org/publications/search?keys=&author_editor=&field_associated_research_area_target_id=All&field_publication_type_target_id=All&order=field_year_of_publication&sort=asc",
-    "https://www.sipri.org/publications?keys=&author_editor=&field_associated_research_area_target_id=All&field_publication_type_target_id=All&order=field_year_of_publication&sort=asc",
-    "https://www.sipri.org/publications/2026/other-publications/climate-peace-and-security-fact-sheet-afghanistan-2026",
     "https://www.sipri.org/publications/2026/other-publications/building-effective-infrastructure-peace-syria-and-lebanon",
+    "https://www.sipri.org/publications?keys=&author_editor=&field_associated_research_area_target_id=All&field_publication_type_target_id=All&order=field_year_of_publication&sort=asc",
+    "https://www.sipri.org/sites/default/files/styles/medium/public/2026-06/p1.png?itok=G3mvaYxX",
+    "https://www.sipri.org/sites/default/files/styles/medium/public/2026-05/fs_2605_mpo_2026_cover_page_01.png?itok=2CV7uq1s",
+    "https://www.sipri.org/sites/default/files/styles/medium/public/2026-06/mercator_south_cover.png?itok=2dqKaE1X",
+    "https://www.sipri.org/publications/2026/partner-publications/climate-peace-and-security-fact-sheet-lake-chad-2026",
+    "https://www.sipri.org/publications/2026/sipri-fact-sheets/developments-and-trends-multilateral-peace-operations-2025",
+    "https://www.sipri.org/sites/default/files/styles/medium/public/2026-06/mercator_west_cover.png?itok=1colFOeD",
     "https://www.sipri.org/publications/2026/partner-publications/military-assistance-provided-eu-and-other-external-actors-west-africa-2010-25",
-    "https://www.sipri.org/sites/default/files/styles/medium/public/2026-06/mercator_south_cover.png?itok=2dqKaE1X"
+    "https://www.sipri.org/publications/2026/partner-publications/military-assistance-provided-eu-and-other-external-actors-eus-eastern-neighbourhood-2010-25",
+    "https://www.sipri.org/publications/2026/partner-publications/military-assistance-provided-eu-and-other-external-actors-eus-southern-neighbourhood-2010-25",
+    "https://www.sipri.org/sites/default/files/styles/medium/public/2026-06/0626_building_an_effective_infrastructure_for_peace_in_syria_and_lebanon_page_01_0.png?itok=j1Tmgmje",
+    "https://www.sipri.org/sites/default/files/styles/medium/public/2026-06/mercator_east_cover.png?itok=6z6npi8e"
   ],
   "discovery:odni": [
     "https://www.odni.gov/14064/pr-12-26/",
-    "https://www.odni.gov/13668/fauci-funded-wuhan-lab-research-that-sparked-covid/",
-    "https://www.odni.gov/wp-content/uploads/press_release.svg",
-    "https://www.odni.gov/13524/personnel-vetting-trust-determinations/",
     "https://www.odni.gov/13629/pr-10-26/",
-    "https://www.odni.gov/about/mission-centers-directorates/nctc/counterterrorism-guide/"
+    "https://www.odni.gov/wp-content/uploads/press_release.svg",
+    "https://www.odni.gov/13668/fauci-funded-wuhan-lab-research-that-sparked-covid/",
+    "https://www.odni.gov/about/mission-centers-directorates/nctc/counterterrorism-guide/",
+    "https://www.odni.gov/13524/personnel-vetting-trust-determinations/"
   ],
   "discovery:stanford_hai": [
-    "https://hai.stanford.edu/research/utahs-experiment-with-ai-driven-prescription-renewals",
-    "https://hai.stanford.edu/news/stanford-study-exposes-major-flaw-in-ai-mental-health-safety-testing",
-    "https://hai.stanford.edu/research/the-global-ai-vibrancy-tool-2024",
-    "https://hai.stanford.edu/research/the-ai-arms-race-in-health-insurance-utilization-review-promises-of-efficiency-and-risks-of-supercharged-flaws",
     "https://hai.stanford.edu/research/ai-health-and-health-care-today-and-tomorrow-the-jama-summit-report-on-artificial-intelligence",
     "https://hai.stanford.edu/news/ai-companions-may-worsen-loneliness-for-vulnerable-users-stanford-study-finds",
-    "https://hai.stanford.edu/news/new-stanford-grants-tackle-ais-impact-on-global-security-and-geopolitics"
+    "https://hai.stanford.edu/research/utahs-experiment-with-ai-driven-prescription-renewals",
+    "https://hai.stanford.edu/news/new-stanford-grants-tackle-ais-impact-on-global-security-and-geopolitics",
+    "https://hai.stanford.edu/news/stanford-study-exposes-major-flaw-in-ai-mental-health-safety-testing",
+    "https://hai.stanford.edu/research/the-global-ai-vibrancy-tool-2024",
+    "https://hai.stanford.edu/research/the-ai-arms-race-in-health-insurance-utilization-review-promises-of-efficiency-and-risks-of-supercharged-flaws"
   ],
   "discovery:mck": [],
   "discovery:deloitte": [
-    "https://www.deloitte.com/us/en/services/consulting/collections/technology-insights.html",
-    "https://www.deloitte.com/us/en/services/consulting/articles/cybersecurity-report-2025.html?icid=mosaic-grid_deloitte-cyber-threat-trends-report-2025",
-    "https://www.deloitte.com/us/en/insights/topics/emerging-technologies/growing-demand-ai-computing.html?icid=mosaic-grid_ai-workloads-are-surging--what-does-that-mean-for-computing-",
     "https://www.deloitte.com/us/en/services/consulting/articles/software-engineering-in-digital-business.html?icid=mosaic-grid_software-engineering-for-your-digital-business-future",
-    "https://www.deloitte.com/us/en/services/consulting/services/cyber-strategy-transformation.html?icid=top_cyber-strategy-transformation",
+    "https://www.deloitte.com/us/en/services/consulting/articles/cybersecurity-report-2025.html?icid=mosaic-grid_deloitte-cyber-threat-trends-report-2025",
     "https://www.deloitte.com/us/en/services/consulting/services/hr-strategy-technology.html?icid=top_hr-strategy-technology",
-    "https://www.deloitte.com/us/en/insights/topics/technology-management/tech-trends.html?icid=mosaic-grid_tech-trends-2026"
+    "https://www.deloitte.com/us/en/services/consulting/collections/technology-insights.html",
+    "https://www.deloitte.com/us/en/insights/topics/technology-management/tech-trends.html?icid=mosaic-grid_tech-trends-2026",
+    "https://www.deloitte.com/us/en/insights/topics/emerging-technologies/growing-demand-ai-computing.html?icid=mosaic-grid_ai-workloads-are-surging--what-does-that-mean-for-computing-",
+    "https://www.deloitte.com/us/en/services/consulting/services/cyber-strategy-transformation.html?icid=top_cyber-strategy-transformation"
   ],
   "discovery:kpmg": [
-    "https://kpmg.com/xx/en/our-insights/ai-and-technology/ai-pulse.html",
     "https://kpmg.com/xx/en/our-insights/ai-and-technology/trust-attitudes-and-use-of-ai.html",
+    "https://kpmg.com/xx/en/our-insights/ai-and-technology/ai-pulse.html",
     "https://kpmg.com/xx/en/our-insights/ai-and-technology/kpmg-global-ai-in-finance-report.html",
     "https://kpmg.com/xx/en/our-insights/transformation/managed-services-outlook.html"
   ],
   "discovery:wipo": [
-    "https://www.wipo.int/tech_trends/en/",
-    "https://www.wipo.int/en/web/wipolex/",
-    "https://tind.wipo.int/?ln=en",
-    "https://www.wipo.int/publications/en/details.jsp?id=4822",
-    "https://www.wipo.int/global_innovation_index/en/",
-    "https://www.wipo.int/reference/en/branddb/",
-    "http://www.wipo.int/publications/en/details.jsp?id=4774",
     "https://www.wipo.int/web-publications/global-innovation-index-2025/en/index.html",
-    "https://www.wipo.int/wipr/en/",
-    "https://www.wipo.int/publications/en/details.jsp?id=4833",
     "https://www.wipo.int/reference/en/designdb/",
-    "https://branddb.wipo.int/en/IPO-LISBON/quicksearch?by=brandName&v=&start=0&_=1676544734688"
+    "https://www.wipo.int/global_innovation_index/en/",
+    "https://tind.wipo.int/?ln=en",
+    "http://www.wipo.int/publications/en/details.jsp?id=4774",
+    "https://www.wipo.int/tech_trends/en/",
+    "https://www.wipo.int/wipr/en/",
+    "https://www.wipo.int/reference/en/branddb/",
+    "https://branddb.wipo.int/en/IPO-LISBON/quicksearch?by=brandName&v=&start=0&_=1676544734688",
+    "https://www.wipo.int/publications/en/details.jsp?id=4833",
+    "https://www.wipo.int/en/web/wipolex/",
+    "https://www.wipo.int/publications/en/details.jsp?id=4822"
   ],
   "discovery:itu": [
     "https://www.itu.int/en/myitu/Publications/2021/09/17/11/46/Connectivity-in-the-Least-Developed-Countries-Status-report-2021",
     "https://www.itu.int/itu-d/reports/statistics/facts-figures-for-ldc/"
   ],
   "discovery:wmo": [
-    "https://wmo.int/publication-series/global-status-of-multi-hazard-early-warning-systems",
-    "https://wmo.int/publication-series/wmo-irena-renewable-energy-reports",
+    "https://wmo.int/publication-series/global-seasonal-climate-updates",
     "https://wmo.int/publication-series/state-of-global-water-resources",
-    "https://wmo.int/resources/publication-series/state-of-climate-asia/state-of-climate-asia-2025",
-    "https://wmo.int/resources/publication-series/wmo-global-annual-decadal-climate-update/global-annual-decadal-climate-update-2026-2035",
-    "https://wmo.int/chubanwuxilie/global-seasonal-climate-updates",
-    "https://wmo.int/publication-series/integrating-low-cost-sensor-systems-and-networks-enhance-air-quality-applications",
-    "https://wmo.int/publication-series/state-of-global-climate-decadal-reports",
-    "https://wmo.int/publication-series/state-of-climate-south-west-pacific",
-    "https://wmo.int/chubanwuxilie/wmo-irena-renewable-energy-reports",
-    "https://wmo.int/publication-series/state-of-global-climate",
-    "https://wmo.int/publication-series/state-of-climate-asia",
-    "https://wmo.int/resources/publication-series/global-seasonal-climate-update/gscu-mjj2026",
-    "https://wmo.int/publication-series/climate-change-and-workplace-heat-stress",
-    "https://wmo.int/publication-series/atlas-of-mortality-and-economic-losses-from-weather-climate-and-water-related-hazards",
-    "https://wmo.int/resources/publication-series/state-of-climate-south-west-pacific/state-of-climate-south-west-pacific-2025",
+    "https://wmo.int/resources/publication-series/global-seasonal-climate-update/gscu-jja2026",
+    "https://wmo.int/publication-series/el-ninola-nina-updates",
     "https://wmo.int/publication-series/state-of-climate-update-cop",
+    "https://wmo.int/chubanwuxilie/state-of-global-water-resources",
+    "https://wmo.int/chubanwuxilie/state-of-climate-services",
+    "https://wmo.int/publication-series/atlas-of-mortality-and-economic-losses-from-weather-climate-and-water-related-hazards",
+    "https://wmo.int/publication-series/state-of-climate-africa",
+    "https://wmo.int/publication-series/wmo-irena-renewable-energy-reports",
+    "https://wmo.int/publication-series/integrating-low-cost-sensor-systems-and-networks-enhance-air-quality-applications",
+    "https://wmo.int/publication-series/state-of-climate-services",
+    "https://wmo.int/publication-series/climate-change-and-workplace-heat-stress",
+    "https://wmo.int/resources/publication-series/state-of-climate-latin-america-and-caribbean/state-of-climate-latin-america-and-caribbean-2025",
+    "https://wmo.int/resources/publication-series/global-seasonal-climate-update/gscu-jas2026",
+    "https://wmo.int/resources/publication-series/wmo-global-annual-decadal-climate-update/global-annual-decadal-climate-update-2026-2035",
+    "https://wmo.int/resources/publication-series/global-seasonal-climate-update/gscu-mjj2026",
+    "https://wmo.int/publication-series/state-of-climate-latin-america-and-caribbean",
+    "https://wmo.int/chubanwuxilie/el-ninola-nina-updates",
+    "https://wmo.int/publication-series/state-of-global-climate-decadal-reports",
+    "https://wmo.int/publication-series/state-of-global-climate",
+    "https://wmo.int/resources/publication-series/state-of-climate-south-west-pacific/state-of-climate-south-west-pacific-2025",
+    "https://wmo.int/publication-series/global-status-of-multi-hazard-early-warning-systems",
+    "https://wmo.int/resources/publication-series/global-seasonal-climate-update/gscu-aso2026",
+    "https://wmo.int/publication-series/catalysing-business-engagement-early-warning-systems",
+    "https://wmo.int/publication-series/wmo-global-annual-decadal-climate-update",
+    "https://wmo.int/chubanwuxilie/wmo-irena-renewable-energy-reports",
+    "https://wmo.int/resources/publication-series/state-of-climate-europe/european-state-of-climate-2025",
+    "https://wmo.int/chubanwuxilie/global-seasonal-climate-updates",
+    "https://wmo.int/resources/publication-series/state-of-climate-asia/state-of-climate-asia-2025",
+    "https://wmo.int/publication-series/state-of-climate-south-west-pacific",
     "https://wmo.int/resources/publication-series/state-of-climate-africa/state-of-climate-africa-2025",
     "https://wmo.int/publication-series/state-of-climate-europe",
-    "https://wmo.int/publication-series/el-ninola-nina-updates",
-    "https://wmo.int/publication-series/catalysing-business-engagement-early-warning-systems",
-    "https://wmo.int/resources/publication-series/state-of-climate-europe/european-state-of-climate-2025",
-    "https://wmo.int/resources/publication-series/global-seasonal-climate-update/gscu-jas2026",
-    "https://wmo.int/publication-series/state-of-climate-africa",
-    "https://wmo.int/chubanwuxilie/state-of-global-water-resources",
-    "https://wmo.int/resources/publication-series/state-of-climate-latin-america-and-caribbean/state-of-climate-latin-america-and-caribbean-2025",
-    "https://wmo.int/publication-series/state-of-climate-services",
-    "https://wmo.int/publication-series/state-of-climate-latin-america-and-caribbean",
-    "https://wmo.int/publication-series/global-seasonal-climate-updates",
-    "https://wmo.int/resources/publication-series/global-seasonal-climate-update/gscu-aso2026",
-    "https://wmo.int/resources/publication-series/global-seasonal-climate-update/gscu-jja2026",
-    "https://wmo.int/publication-series/wmo-global-annual-decadal-climate-update",
-    "https://wmo.int/chubanwuxilie/state-of-climate-services",
-    "https://wmo.int/chubanwuxilie/el-ninola-nina-updates"
+    "https://wmo.int/publication-series/state-of-climate-asia"
   ],
   "discovery:unep": [
-    "https://wesr.unep.org/",
-    "https://unep.org/gef/"
+    "https://unep.org/gef/",
+    "https://wesr.unep.org/"
   ],
   "discovery:iea": [],
   "discovery:irena": [],
   "discovery:carbonbrief": [],
   "discovery:undesa_pop": [
-    "https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/files/documents/2025/Jan/ntta_manual_web_final.pdf",
-    "https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/undesa_pd_2025_pb_fertility-and-family-planning.pdf",
+    "https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/undes_pd_2020_popfacts_urbanization_policies.pdf",
+    "https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/files/documents/2021/Nov/technical_paper_healthy_life_expectancy_29nov.2021_0.pdf",
+    "https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/undesa_pd_2024_tp-older-persons-in-clq.pdf",
+    "https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/files/documents/2026/Feb/undesa_pd_2025_technical-paper_tp_cohortfert.pdf",
+    "https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/undesa_pd_2021_policy_brief.pdf",
+    "https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/desa_pd_2024_tp_estimating_age_sex_specific_adult_mortality.pdf",
+    "https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/files/documents/2023/Feb/undesa_pd_2022_world-family-planning.pdf",
+    "https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/undesa_pd_2023_wsr-fullreport.pdf",
+    "https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/key_messages_wpp_2024_20240709.pdf",
+    "https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/files/documents/2024/Apr/undesa_pd_2024_special_situations_key_messages.pdf.pdf",
+    "https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/files/documents/2026/Mar/undesa_pd_2026_pb187.pdf",
+    "https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/undesa_pd_2025_wfr_2024_final.pdf",
+    "https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/undesa_pd_2025_data-booklet_world_cities_in_2025.pdf",
+    "https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/undesa_pd_2025_pb183.pdf",
+    "https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/files/documents/2022/May/undesa_pd_2022_key_messages_wpp_2021.pdf",
+    "https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/undesa_pd_2025_intlmigstock_2024_key_facts_and_figures_advance-unedited.pdf",
+    "https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/undesa_pd_2025_wup2025_summary_of_results.pdf",
+    "https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/undesa_pd_2022_key_messages_global_population_growth.pdf",
     "https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/undesa_pd_2023_cpd56_keymessages.pdf",
     "https://www.un.org/development/desa/pd/data/world-population-policies",
-    "https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/undesa_pd_2023_tp_net_migration.pdf",
-    "https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/undesa_pd_2024_wpa_2023_key_messages.pdf",
-    "https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/files/documents/2024/Apr/undesa_pd_2024_special_situations_key_messages.pdf.pdf",
-    "https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/key_messages_wpp_2024_20240709.pdf",
-    "https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/undesa_pd_2024_wpa2023-report.pdf",
-    "https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/undesa_pd_2025_data-booklet_world_cities_in_2025.pdf",
-    "https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/undesa_pd_2024_cpd58_egm-report.pdf",
-    "https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/undesa_pd_2021_policy_brief.pdf",
-    "https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/undesa_pd_2024_policy-brief-159.pdf",
-    "https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/undesa_pd_2024_megatrends3-ten-keymessages.pdf",
-    "https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/undesa_pd_2024_pb_wpp24.pdf",
-    "https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/files/documents/2021/Sep/undesa_pd_2021_technical_paper_no.2_healthy_life_expectancy.pdf",
-    "https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/files/documents/2026/Feb/undesa_pd_2025_technical-paper_tp_cohortfert.pdf",
-    "https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/undesa_pd_2024_megatrends3-international_migration.pdf",
-    "https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/undesa_pd_2025_wfr_2024_final.pdf",
-    "https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/undesa_pd_2025_pb183.pdf",
-    "https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/wpp2022_summary_of_results.pdf",
-    "http://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/files/documents/2021/May/technical_paper_sensitivity_analysis.pdf",
-    "https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/undesa_pd_2025_cpd58_keymessages.pdf",
-    "https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/undesa_pd_2026_cpd59_key_messages.pdf",
-    "https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/undesa_pd_2021_cpd54_key_findings.pdf",
-    "https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/egmcpd55_27oct2021a.pdf",
-    "https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/files/documents/2023/Jan/undesa_pd_egm_cpd56_expert_group.pdf",
-    "https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/undesa_pd_2023_technical-paper_asfr.pdf",
-    "https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/undes_pd_2020_popfacts_urbanization_policies.pdf",
-    "https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/undesa_pd_2020_international_migration_highlights.pdf",
-    "https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/undesa_pd_2022_tp-methodprotocol.pdf",
-    "https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/files/documents/2023/Feb/undesa_pd_2022_world-family-planning.pdf",
-    "https://population.un.org/wpp/",
-    "https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/undesa_pd_2025_wup2025_summary_of_results.pdf",
-    "https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/undesa_pd_2026_pb186_gender_matters_in_an_ageing_world.pdf",
-    "https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/desa_pd_2024_tp_estimating_age_sex_specific_adult_mortality.pdf",
-    "https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/undesa_pd_2022_pb_146.pdf",
-    "https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/undesa_pd_2022_key_messages_global_population_growth.pdf",
-    "https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/files/documents/2021/Nov/technical_paper_healthy_life_expectancy_29nov.2021_0.pdf",
-    "https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/files/documents/2020/Oct/undesa_pd_2020_pf_government_policies_population_ageing.pdf",
-    "https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/undesa_pd_2022_global_population_growth.pdf",
-    "https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/undesa_pd_2023_wsr-fullreport.pdf",
-    "https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/undesa_pd_2025_cpd59_egm_report.pdf",
-    "https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/undesa_pd_2023_policy-brief-153.pdf",
-    "https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/undesa_pd_2026_world_population_highlights-youth.pdf",
-    "https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/undesa_pd_2025_technical-paper_dhs-impact.pdf",
     "https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/undesa_pd_2021_wpp-fertility_policies.pdf",
     "https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/undesa_pd_2022_tp_selecting-abr-data-for-sdg-reporting.pdf",
-    "https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/undesa_pd_2023_cpd56_policy-brief-152.pdf",
-    "https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/files/documents/2026/Mar/undesa_pd_2026_pb187.pdf",
-    "https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/undesa_pd_2025_intlmigstock_2024_key_facts_and_figures_advance-unedited.pdf",
-    "https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/files/documents/2024/Jul/wpp2024_summary_of_results_final_web.pdf",
-    "https://population.un.org/wup/",
-    "https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/undesa_pd_2024_tp-older-persons-in-clq.pdf",
+    "https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/undesa_pd_2023_policy-brief-153.pdf",
+    "https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/undesa_pd_2024_policy-brief-159.pdf",
+    "https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/undesa_pd_2021_cpd54_key_findings.pdf",
     "https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/undesa_pd_2026_pb180_anticipating_the_extent_and_pace_of_population_ageing_in_sids.pdf",
-    "https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/files/documents/2022/May/undesa_pd_2022_key_messages_wpp_2021.pdf",
-    "https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/files/documents/2024/Jan/report-countries-special-situations_web_draft.pdf"
+    "https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/undesa_pd_2023_tp_net_migration.pdf",
+    "https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/undesa_pd_2024_wpa_2023_key_messages.pdf",
+    "https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/files/documents/2024/Jul/wpp2024_summary_of_results_final_web.pdf",
+    "https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/undesa_pd_2022_tp-methodprotocol.pdf",
+    "https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/files/documents/2020/Oct/undesa_pd_2020_pf_government_policies_population_ageing.pdf",
+    "https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/files/documents/2023/Jan/undesa_pd_egm_cpd56_expert_group.pdf",
+    "https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/undesa_pd_2026_cpd59_key_messages.pdf",
+    "https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/undesa_pd_2025_technical-paper_dhs-impact.pdf",
+    "https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/undesa_pd_2025_pb_fertility-and-family-planning.pdf",
+    "https://population.un.org/wup/",
+    "https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/files/documents/2024/Jan/report-countries-special-situations_web_draft.pdf",
+    "https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/undesa_pd_2024_wpa2023-report.pdf",
+    "https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/undesa_pd_2026_pb186_gender_matters_in_an_ageing_world.pdf",
+    "http://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/files/documents/2021/May/technical_paper_sensitivity_analysis.pdf",
+    "https://population.un.org/wpp/",
+    "https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/undesa_pd_2022_pb_146.pdf",
+    "https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/undesa_pd_2024_megatrends3-international_migration.pdf",
+    "https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/undesa_pd_2022_global_population_growth.pdf",
+    "https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/undesa_pd_2024_pb_wpp24.pdf",
+    "https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/undesa_pd_2023_cpd56_policy-brief-152.pdf",
+    "https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/undesa_pd_2024_megatrends3-ten-keymessages.pdf",
+    "https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/egmcpd55_27oct2021a.pdf",
+    "https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/undesa_pd_2020_international_migration_highlights.pdf",
+    "https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/wpp2022_summary_of_results.pdf",
+    "https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/undesa_pd_2023_technical-paper_asfr.pdf",
+    "https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/undesa_pd_2024_cpd58_egm-report.pdf",
+    "https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/undesa_pd_2025_cpd59_egm_report.pdf",
+    "https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/undesa_pd_2026_world_population_highlights-youth.pdf",
+    "https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/undesa_pd_2025_cpd58_keymessages.pdf",
+    "https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/files/documents/2021/Sep/undesa_pd_2021_technical_paper_no.2_healthy_life_expectancy.pdf",
+    "https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/files/documents/2025/Jan/ntta_manual_web_final.pdf"
   ],
   "discovery:iom": [
-    "https://publications.iom.int/books/return-migration-international-approaches-and-regional-features-central-asia-russian1",
-    "https://publications.iom.int/books/etat-de-la-migration-dans-le-monde-2026-chapitre-3",
-    "https://publications.iom.int/books/etat-de-la-migration-dans-le-monde-2026-chapitre-2",
-    "https://publications.iom.int/books/etat-de-la-migration-dans-le-monde-2026-chapitre-4",
-    "https://publications.iom.int/books/etat-de-la-migration-dans-le-monde-2026-chapitre-7",
-    "https://publications.iom.int/books/etat-de-la-migration-dans-le-monde-2026-chapitre-1",
-    "https://publications.iom.int/books/migration-governance-profile-2025-lao-peoples-democratic-republic",
-    "https://publications.iom.int/books/missing-migrants-eastern-southern-africa-route-characteristics-risks-and-recommendations",
-    "https://publications.iom.int/books/migration-policy-practice-volume-xv-number-1",
     "https://publications.iom.int/books/informe-anual-de-2025",
+    "https://publications.iom.int/books/world-migration-report-2026",
+    "https://publications.iom.int/books/migration-governance-profile-2025-lao-peoples-democratic-republic",
+    "https://publications.iom.int/books/etat-de-la-migration-dans-le-monde-2026-chapitre-3",
     "https://publications.iom.int/books/world-migration-report-2024",
+    "https://publications.iom.int/books/world-migration-report-2020-arabic",
+    "https://publications.iom.int/books/etat-de-la-migration-dans-le-monde-2026",
+    "https://publications.iom.int/books/etat-de-la-migration-dans-le-monde-2026-chapitre-1",
     "https://publications.iom.int/search",
     "https://publications.iom.int/books/migration-profiles-iom-guide",
-    "https://publications.iom.int/books/etat-de-la-migration-dans-le-monde-2026-chapitre-5",
-    "https://publications.iom.int/books/world-migration-report-2020-russian",
+    "https://publications.iom.int/books/return-migration-international-approaches-and-regional-features-central-asia-russian1",
     "https://publications.iom.int/books/etat-de-la-migration-dans-le-monde-2026-chapitre-6",
-    "https://publications.iom.int/books/world-migration-report-2026",
+    "https://publications.iom.int/books/etat-de-la-migration-dans-le-monde-2026-chapitre-4",
+    "https://publications.iom.int/books/world-migration-report-2020-russian",
+    "https://publications.iom.int/books/etat-de-la-migration-dans-le-monde-2026-chapitre-7",
     "https://publications.iom.int/books/world-migration-report-2022",
-    "https://publications.iom.int/books/etat-de-la-migration-dans-le-monde-2026",
-    "https://publications.iom.int/books/world-migration-report-2020-arabic"
+    "https://publications.iom.int/books/etat-de-la-migration-dans-le-monde-2026-chapitre-2",
+    "https://publications.iom.int/books/migration-policy-practice-volume-xv-number-1",
+    "https://publications.iom.int/books/etat-de-la-migration-dans-le-monde-2026-chapitre-5",
+    "https://publications.iom.int/books/missing-migrants-eastern-southern-africa-route-characteristics-risks-and-recommendations"
   ],
   "discovery:unhcr": [
-    "https://www.unhcr.org/global-trends",
-    "https://www.unhcr.org/about-unhcr/overview/nansen-refugee-award",
-    "https://www.unhcr.org/about-unhcr/sustainable-development-goals",
-    "https://www.unhcr.org/get-involved/take-action/how-do-you-flee-climate-change",
     "https://www.unhcr.org/media/labor-mobility-and-skills-profiles-refugees-and-asylum-seekers-algeria-mauritania-morocco-and",
+    "https://www.unhcr.org/about-unhcr/overview/nansen-refugee-award",
+    "https://www.unhcr.org/get-involved/take-action/how-do-you-flee-climate-change",
+    "https://www.unhcr.org/about-unhcr/sustainable-development-goals",
+    "https://www.unhcr.org/global-trends",
     "https://www.unhcr.org/about-unhcr/overview/global-compact-refugees"
   ],
   "discovery:undp": [
-    "https://www.undp.org/un-agency-service-offering/",
-    "https://www.undp.org/sites/g/files/zskgke326/files/styles/content_card_453_x_256_/public/2026-07/undp_tax_inspectors_without_borders_annual_report_2026.png?h=396a366a&itok=dkjh2Vt3",
-    "https://www.undp.org/sites/g/files/zskgke326/files/styles/content_card_453_x_256_/public/2026-07/undp-reading-ai-readiness-backwards-image.png?h=097d8c61&itok=9rz-2UQD",
-    "https://www.undp.org/sites/g/files/zskgke326/files/styles/content_card_453_x_256_/public/2026-07/undp-small-states-big-signals-image.png?h=c3d90926&itok=8Zgobssr",
     "https://www.undp.org/sites/g/files/zskgke326/files/styles/content_card_453_x_256_/public/2026-06/undp-pathways_to_gender-responsive_and_inclusive_ndcs_image_0.png?h=c4b3c88d&itok=O1PIAkxv",
-    "https://www.undp.org/sites/g/files/zskgke326/files/styles/content_card_453_x_256_/public/2026-06/undp-dppa-from-promise-to-practice-ai-in-electoral-administration-image_0.png?h=097d8c61&itok=uJxgw-8h",
+    "https://www.undp.org/un-agency-service-offering/",
+    "https://www.undp.org/sites/g/files/zskgke326/files/styles/content_card_453_x_256_/public/2026-07/gpedc-annual-status-report-2025-cover.jpg?h=9235d64b&itok=kYA05sSm",
     "https://www.undp.org/sites/g/files/zskgke326/files/styles/content_card_453_x_256_/public/2026-06/undp-military-escalation-in-the-middle-east-cushioning-the-global-shock-image.png?h=f77a8d10&itok=N4eAN8G-",
     "https://www.undp.org/sustainable-development-goals",
+    "https://www.undp.org/sites/g/files/zskgke326/files/styles/content_card_453_x_256_/public/2026-07/undp-reading-ai-readiness-backwards-image.png?h=097d8c61&itok=9rz-2UQD",
     "http://hdr.undp.org/",
-    "https://www.undp.org/sites/g/files/zskgke326/files/styles/content_card_453_x_256_/public/2026-07/gpedc-annual-status-report-2025-cover.jpg?h=9235d64b&itok=kYA05sSm"
+    "https://www.undp.org/sites/g/files/zskgke326/files/styles/content_card_453_x_256_/public/2026-06/undp-dppa-from-promise-to-practice-ai-in-electoral-administration-image_0.png?h=097d8c61&itok=uJxgw-8h",
+    "https://www.undp.org/sites/g/files/zskgke326/files/styles/content_card_453_x_256_/public/2026-07/undp-small-states-big-signals-image.png?h=c3d90926&itok=8Zgobssr",
+    "https://www.undp.org/sites/g/files/zskgke326/files/styles/content_card_453_x_256_/public/2026-07/undp_tax_inspectors_without_borders_annual_report_2026.png?h=396a366a&itok=dkjh2Vt3"
   ],
   "discovery:fao": [
     "https://doi.org/10.4060/ce0204en",
     "https://www.fao.org/publications/news-archive/detail/fao-at-80-the-pursuit-of-better-food-for-all/en"
   ],
   "discovery:unesco": [
-    "https://www.unesco.org/en",
-    "https://www.unesco.org/en/articles/2026-global-education-monitoring-report-access-and-equity-countdown-2030"
+    "https://www.unesco.org/en/articles/2026-global-education-monitoring-report-access-and-equity-countdown-2030",
+    "https://www.unesco.org/en"
   ],
   "discovery:vdem": [
     "https://www.v-dem.net/publications/#main",
-    "https://www.v-dem.net/static/website/img/logo-with-tagline.0c37ff790ad0.svg",
-    "https://www.v-dem.net/static/website/img/logo.3a331ab52b88.svg"
+    "https://www.v-dem.net/static/website/img/logo.3a331ab52b88.svg",
+    "https://www.v-dem.net/static/website/img/logo-with-tagline.0c37ff790ad0.svg"
   ],
   "discovery:idea": [
     "https://www.idea.int/theme/democracy-assessment"
   ],
   "discovery:freedom": [
-    "https://freedomhouse.org/report/freedom-world",
-    "https://freedomhouse.org/country/scores?type=fotn",
-    "https://freedomhouse.org/report/freedom-net/2025/uncertain-future-global-internet",
-    "https://freedomhouse.org/country/scores",
     "https://freedomhouse.org/report/transnational-repression/canada/2025",
-    "https://freedomhouse.org/report/transnational-repression/united-kingdom/2025",
-    "https://freedomhouse.org/index%2Ephp/report/transnational-repression/canada/2025",
-    "https://freedomhouse.org/report/special-report/2026/collaboration-and-resistance-tracking-transnational-repression-2025",
+    "https://freedomhouse.org/index%2Ephp/report/special-report/2026/collaboration-and-resistance-tracking-transnational-repression-2025",
     "https://freedomhouse.org/index%2Ephp/report/transnational-repression/united-kingdom/2025",
     "https://freedomhouse.org/report/special-report/2025/tunnel-vision-anti-censorship-tools-end-end-encryption-and-fight-free",
-    "https://freedomhouse.org/index%2Ephp/report/special-report/2026/collaboration-and-resistance-tracking-transnational-repression-2025",
-    "https://freedomhouse.org/report/special-report/2025/more-action-needed-ensure-safety-combating-transnational-repression"
+    "https://freedomhouse.org/country/scores",
+    "https://freedomhouse.org/report/freedom-world",
+    "https://freedomhouse.org/report/special-report/2026/collaboration-and-resistance-tracking-transnational-repression-2025",
+    "https://freedomhouse.org/report/freedom-net/2025/uncertain-future-global-internet",
+    "https://freedomhouse.org/report/transnational-repression/united-kingdom/2025",
+    "https://freedomhouse.org/report/special-report/2025/more-action-needed-ensure-safety-combating-transnational-repression",
+    "https://freedomhouse.org/index%2Ephp/report/transnational-repression/canada/2025",
+    "https://freedomhouse.org/country/scores?type=fotn"
   ],
   "discovery:wjp": [
-    "https://worldjusticeproject.org/our-work/engagement/world-justice-challenge/world-justice-challenge-2021-live-awards-presentation",
-    "https://worldjusticeproject.org/rule-of-law-index/",
     "https://worldjusticeproject.org/our-work/engagement/world-justice-challenge/world-justice-challenge-2021-finalists-regional",
+    "https://worldjusticeproject.org/our-work/engagement/world-justice-challenge/world-justice-challenge-2021-live-awards-presentation",
+    "https://worldjusticeproject.org/our-work/engagement/world-justice-challenge/world-justice-challenge-2021-finalists-regional-1",
+    "https://worldjusticeproject.org/our-work/research-and-data/previous-editions-wjp-rule-law-index",
+    "https://worldjusticeproject.org/our-work/engagement/world-justice-challenge/world-justice-challenge-2021-finalists-regional-0",
+    "https://worldjusticeproject.org/world-justice-challenge",
+    "https://worldjusticeproject.org/our-work/research-and-data/country-reports",
+    "https://worldjusticeproject.org/our-work/engagement/world-justice-challenge/world-justice-challenge-2021-finalists-regional-2",
+    "https://worldjusticeproject.org/rule-of-law-index/",
     "https://worldjusticeproject.org/privacy-policy",
     "http://eurovoices.worldjusticeproject.org",
-    "https://worldjusticeproject.org/our-work/engagement/world-justice-challenge/world-justice-challenge-2021-finalists-regional-3",
-    "https://worldjusticeproject.org/our-work/engagement/world-justice-challenge/world-justice-challenge-2021-finalists-regional-1",
-    "https://worldjusticeproject.org/world-justice-challenge",
-    "https://worldjusticeproject.org/our-work/engagement/world-justice-challenge/world-justice-challenge-2021-finalists-regional-2",
-    "https://worldjusticeproject.org/our-work/research-and-data/previous-editions-wjp-rule-law-index",
-    "https://worldjusticeproject.org/our-work/research-and-data/country-reports",
-    "https://worldjusticeproject.org/our-work/engagement/world-justice-challenge/world-justice-challenge-2021-finalists-regional-0"
+    "https://worldjusticeproject.org/our-work/engagement/world-justice-challenge/world-justice-challenge-2021-finalists-regional-3"
   ],
   "discovery:ti": [
+    "https://www.transparency.org/en/publications/fuelling-delay-how-fossil-fuel-interests-shape-global-climate-negotiations",
     "https://www.transparency.org/en/publications/connecting-the-dots",
-    "https://images.transparencycdn.org/images/2026-Recommendations-Illicit-Finance-Summit-English-Cover.png?auto=compress&fit=crop&fm=webp&w=16",
-    "https://www.transparency.org/en/publications/chasing-grand-corruption",
-    "https://www.transparency.org/en/publications/barriers-to-basics-corruption-discrimination-in-education-health-services",
-    "https://images.transparencycdn.org/images/Closing-the-Gaps-cover-page_EN.jpg?auto=compress&fit=crop&fm=webp&w=16",
-    "https://www.transparency.org/en/publications/opacity-in-real-estate-ownership-index-2025",
-    "https://www.transparency.org/en/publications/recommendations-london-illicit-finance-summit",
-    "https://www.transparency.org/en/cpi/2025",
-    "https://images.transparencycdn.org/images/TI_AnnualReport_2025_Cover.jpg?auto=compress&fit=crop&fm=webp&w=16",
     "https://www.transparency.org/en/publications/public-loans-private-gains-addressing-corruption-across-the-debt-cycle",
-    "https://www.transparency.org/en/publications/sustainable-development-public-procurement-and-corruption",
-    "https://www.transparency.org/en/publications/missing-in-action-where-is-civic-space-in-uncac-reviews",
-    "https://www.transparency.org/en/publications/public-debt-confidentiality-separating-fact-from-fiction",
-    "https://www.transparency.org/en/publications/whistleblower-protection-eu-trends-gaps-practices-member-states",
-    "https://www.transparency.org/en/publications/breaking-the-silos-a-practical-guide-to-fighting-corruption-with-a-human-rights-based-approach",
-    "https://www.transparency.org/en/publications/digital-disclosure-political-finance-africa-asia-pacific-latin-america-caribbean",
+    "https://www.transparency.org/en/publications/addressing-corrupt-uses-of-artificial-intelligence",
+    "https://images.transparencycdn.org/images/20260615_FIDH_Guide-Corruption_EN_WEB_Page_001.jpg?auto=compress&fit=crop&fm=webp&w=16",
     "https://www.transparency.org/en/publications/strengthening-public-oversight-good-practices-for-partnerships-between-civil-society-and-supreme-audit-institutions",
     "https://images.transparencycdn.org/images/13112025-Into-the-Light-IMG.png?auto=compress&fit=crop&fm=webp&w=16",
-    "https://images.transparencycdn.org/images/2503_TI_AnnualReport_Cover-1.jpg?auto=compress&fit=crop&fm=webp&w=16",
-    "https://browser-update.org/update.html",
-    "https://images.transparencycdn.org/images/2510_Report_ProtectingEnvironmentalDefenders_FIN.jpg?auto=compress&fit=crop&fm=webp&w=16",
-    "https://www.transparency.org/en/publications/into-the-light-benchmarking-beneficial-ownership-transparency-frameworks-mena",
+    "https://images.transparencycdn.org/images/Public-debt-confidentiality-paper.png?auto=compress&fit=crop&fm=webp&w=16",
+    "https://www.transparency.org/en/publications/getting-political-finance-right",
+    "https://www.transparency.org/en/publications/breaking-the-silos-a-practical-guide-to-fighting-corruption-with-a-human-rights-based-approach",
+    "https://www.transparency.org/en/publications/recommendations-london-illicit-finance-summit",
+    "https://www.transparency.org/en/publications/high-integrity-talks",
     "https://www.transparency.org/en/publications/whistleblower-protection-in-eu-enlargement-countries",
-    "https://images.transparencycdn.org/images/2605-Strengthening-Public-Oversight-CADRE-report.png?auto=compress&fit=crop&fm=webp&w=16",
-    "https://www.transparency.org/en/publications/the-role-of-business-in-fighting-impunity-and-corruption-to-protect-environmental-defenders",
-    "https://images.transparencycdn.org/images/2604_Report_ICE-Whistleblowing_Cover.jpg?auto=compress&fit=crop&fm=webp&w=16",
-    "https://www.transparency.org/en/publications/corruption-perceptions-index-2024",
-    "https://www.transparency.org/en/publications/fuelling-delay-how-fossil-fuel-interests-shape-global-climate-negotiations",
-    "https://www.transparency.org/en/publications/monitoring-internal-whistleblowing-systems",
-    "https://www.transparency.org/en/gcb",
-    "https://www.transparency.org/en/publications/closing-the-gaps-middle-east-and-north-africa",
+    "https://www.transparency.org/en/publications/chasing-grand-corruption",
     "https://www.transparency.org/en/publications#",
     "https://www.transparency.org/en/publications/corruption-perceptions-index-2025",
-    "https://www.transparency.org/en/publications#content",
-    "https://www.transparency.org/en/publications/high-integrity-talks",
-    "https://images.transparencycdn.org/images/Cover-reporting-the-dots_2026-06-24-150031_mljl.png?auto=compress&fit=crop&fm=webp&w=16",
-    "https://www.transparency.org/en/publications/legitimate-interest-measures-for-public-interest-stakeholders",
     "https://www.transparency.org/en/publications/enabler-accountability-illicit-financial-flows-africa",
-    "https://www.transparency.org/en/publications/getting-political-finance-right",
-    "https://images.transparencycdn.org/images/Public-debt-confidentiality-paper.png?auto=compress&fit=crop&fm=webp&w=16",
-    "https://www.transparency.org/en/publications/addressing-corrupt-uses-of-artificial-intelligence",
+    "https://www.transparency.org/en/publications/monitoring-internal-whistleblowing-systems",
+    "https://www.transparency.org/en/publications/public-debt-confidentiality-separating-fact-from-fiction",
+    "https://www.transparency.org/en/publications/sustainable-development-public-procurement-and-corruption",
+    "https://www.transparency.org/en/publications/closing-the-gaps-middle-east-and-north-africa",
+    "https://www.transparency.org/en/gcb",
+    "https://www.transparency.org/en/publications/legitimate-interest-measures-for-public-interest-stakeholders",
+    "https://browser-update.org/update.html",
+    "https://www.transparency.org/en/cpi/2025",
+    "https://www.transparency.org/en/publications/the-role-of-business-in-fighting-impunity-and-corruption-to-protect-environmental-defenders",
+    "https://images.transparencycdn.org/images/Closing-the-Gaps-cover-page_EN.jpg?auto=compress&fit=crop&fm=webp&w=16",
+    "https://www.transparency.org/en/publications/digital-disclosure-political-finance-africa-asia-pacific-latin-america-caribbean",
+    "https://images.transparencycdn.org/images/2605-Strengthening-Public-Oversight-CADRE-report.png?auto=compress&fit=crop&fm=webp&w=16",
+    "https://www.transparency.org/en/publications/barriers-to-basics-corruption-discrimination-in-education-health-services",
+    "https://www.transparency.org/en/publications/opacity-in-real-estate-ownership-index-2025",
+    "https://www.transparency.org/en/publications/into-the-light-benchmarking-beneficial-ownership-transparency-frameworks-mena",
+    "https://images.transparencycdn.org/images/TI_AnnualReport_2025_Cover.jpg?auto=compress&fit=crop&fm=webp&w=16",
+    "https://www.transparency.org/en/publications/corruption-perceptions-index-2024",
     "https://www.transparency.org/en/publications/behind-the-badge-understanding-roles-reach-risks-of-fossil-fuel-industry-participation-un-climate-talks",
-    "https://www.transparency.org/en/publications/whistleblowing-authorities-in-europe-roles-challenges-and-lessons-learned",
-    "https://images.transparencycdn.org/images/20260615_FIDH_Guide-Corruption_EN_WEB_Page_001.jpg?auto=compress&fit=crop&fm=webp&w=16"
+    "https://images.transparencycdn.org/images/Cover-reporting-the-dots_2026-06-24-150031_mljl.png?auto=compress&fit=crop&fm=webp&w=16",
+    "https://images.transparencycdn.org/images/2026-Recommendations-Illicit-Finance-Summit-English-Cover.png?auto=compress&fit=crop&fm=webp&w=16",
+    "https://images.transparencycdn.org/images/2503_TI_AnnualReport_Cover-1.jpg?auto=compress&fit=crop&fm=webp&w=16",
+    "https://images.transparencycdn.org/images/2510_Report_ProtectingEnvironmentalDefenders_FIN.jpg?auto=compress&fit=crop&fm=webp&w=16",
+    "https://www.transparency.org/en/publications/whistleblower-protection-eu-trends-gaps-practices-member-states",
+    "https://images.transparencycdn.org/images/2604_Report_ICE-Whistleblowing_Cover.jpg?auto=compress&fit=crop&fm=webp&w=16",
+    "https://www.transparency.org/en/publications/missing-in-action-where-is-civic-space-in-uncac-reviews",
+    "https://www.transparency.org/en/publications#content",
+    "https://www.transparency.org/en/publications/whistleblowing-authorities-in-europe-roles-challenges-and-lessons-learned"
   ],
   "discovery:rsf": [
     "https://rsf.org/en/subject/technological-censorship-and-surveillance",
-    "https://rsf.org/en/new-jx-fund-report-europe-must-urgently-support-exiled-russian-media-fragile-bastion-against",
-    "https://rsf.org/en/ahead-elections-new-rsf-report-spotlights-challenges-facing-local-media-france",
     "https://rsf.org/en/press-freedom-under-pressure-germany-due-disinformation-political-polarisation-and-attacks",
+    "https://rsf.org/en/what-its-be-journalist-africa-s-great-lakes-region-new-rsf-report-throws-spotlight-journalists",
     "https://rsf.org/en/subject/media-sustainability",
-    "https://rsf.org/en/what-its-be-journalist-africa-s-great-lakes-region-new-rsf-report-throws-spotlight-journalists"
+    "https://rsf.org/en/new-jx-fund-report-europe-must-urgently-support-exiled-russian-media-fragile-bastion-against",
+    "https://rsf.org/en/ahead-elections-new-rsf-report-spotlights-challenges-facing-local-media-france"
   ],
   "series:imf_weo": {
     "version": [
@@ -961,10 +961,10 @@
       7
     ],
     "edition": "July 2026",
-    "title": "![Image 8: World Economic Outlook Update, July 2026: Growth Projections by Region",
+    "title": "![Image 4: World Economic Outlook Update, July 2026: Growth Projections by Region",
     "url": "https://www.imf.org/-/media/images/imf/publications/weo/2026/july/english/world-economic-outlook-july-2026-growth-projections-region.jpg?h=1080&iar=0&w=1920",
     "method": "reader-link",
-    "checked": "2026-08-14T05:02:40.399467Z"
+    "checked": "2026-08-14T10:16:49.573027Z"
   },
   "series:imf_gfsr": {
     "version": [
@@ -975,7 +975,7 @@
     "title": "Global Financial Stability Report https://www.imf.org/en/publications/gfsr/issues/2026/04/14/global-financial-stability-report-april-2026",
     "url": "https://www.imf.org/en/publications/gfsr/issues/2026/04/14/global-financial-stability-report-april-2026",
     "method": "official-url",
-    "checked": "2026-08-14T05:02:40.399467Z"
+    "checked": "2026-08-14T10:16:49.573027Z"
   },
   "series:imf_fiscal": {
     "version": [
@@ -986,7 +986,7 @@
     "title": "Fiscal Monitor https://www.imf.org/en/publications/fm/issues/2026/04/15/fiscal-monitor-april-2026",
     "url": "https://www.imf.org/en/publications/fm/issues/2026/04/15/fiscal-monitor-april-2026",
     "method": "official-url",
-    "checked": "2026-08-14T05:02:40.399467Z"
+    "checked": "2026-08-14T10:16:49.573027Z"
   },
   "series:mck_ai": {
     "version": [
