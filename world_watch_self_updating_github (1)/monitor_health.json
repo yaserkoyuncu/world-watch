@@ -1,5 +1,5 @@
 {
-  "last_checked": "2026-08-15T03:54:21.908345Z",
+  "last_checked": "2026-08-15T09:41:11.294843Z",
   "engine_version": "6.1",
   "migration_baseline": false,
   "series": {
@@ -535,7 +535,7 @@
       "monitor": "International Crisis Group discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 7,
+      "candidates": 8,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
