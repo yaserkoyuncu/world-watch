@@ -1,5 +1,5 @@
 {
-  "last_checked": "2026-08-14T21:41:37.841349Z",
+  "last_checked": "2026-08-15T03:54:21.908345Z",
   "engine_version": "6.1",
   "migration_baseline": false,
   "series": {
@@ -138,10 +138,8 @@
       "ok": true,
       "latest": "2026",
       "url": "https://www.sipri.org/yearbook/2026",
-      "method": "reader-block",
-      "warnings": [
-        "direct https://www.sipri.org/yearbook/2026: HTTPSConnectionPool(host='www.sipri.org', port=443): Max retries exceeded with url: /yearbook/2026 (Caused by ConnectTim"
-      ]
+      "method": "direct-title",
+      "warnings": []
     },
     {
       "monitor": "Annual Threat Assessment",
@@ -401,8 +399,8 @@
       "kind": "series",
       "ok": true,
       "latest": "2025",
-      "url": "https://worldjusticeproject.org/rule-of-law-index/",
-      "method": "reader-block",
+      "url": "https://worldjusticeproject.org/rule-of-law-index/global/2025/wjp-index",
+      "method": "direct-title",
       "warnings": []
     },
     {
@@ -489,15 +487,15 @@
       "kind": "discovery",
       "ok": true,
       "candidates": 14,
-      "new_candidates": 1,
+      "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
     },
     {
       "monitor": "World Economic Forum discovery",
       "kind": "discovery",
-      "ok": false,
-      "candidates": 0,
+      "ok": true,
+      "candidates": 21,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
@@ -517,12 +515,10 @@
       "monitor": "SIPRI discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 19,
+      "candidates": 11,
       "new_candidates": 0,
       "suppressed": 0,
-      "warnings": [
-        "direct https://www.sipri.org/publications: HTTPSConnectionPool(host='www.sipri.org', port=443): Max retries exceeded with url: /publications (Caused by ConnectTimeoutError(<HTTPSConne"
-      ]
+      "warnings": []
     },
     {
       "monitor": "ODNI discovery",
@@ -539,7 +535,7 @@
       "monitor": "International Crisis Group discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 8,
+      "candidates": 7,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
@@ -683,11 +679,13 @@
     {
       "monitor": "UNHCR discovery",
       "kind": "discovery",
-      "ok": true,
-      "candidates": 6,
+      "ok": false,
+      "candidates": 0,
       "new_candidates": 0,
       "suppressed": 0,
-      "warnings": []
+      "warnings": [
+        "direct https://www.unhcr.org/publications: 403 Client Error: Forbidden for url: https://www.unhcr.org/publications"
+      ]
     },
     {
       "monitor": "UNDP discovery",
@@ -704,7 +702,7 @@
       "monitor": "WHO discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 9,
+      "candidates": 10,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
