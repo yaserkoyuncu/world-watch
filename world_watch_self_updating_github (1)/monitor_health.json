@@ -1,10 +1,10 @@
 {
-  "last_checked": "2026-08-15T09:41:11.294843Z",
+  "last_checked": "2026-08-15T15:35:18.695852Z",
   "engine_version": "6.1",
   "migration_baseline": false,
   "series": {
-    "ok": 41,
-    "failed": 3,
+    "ok": 42,
+    "failed": 2,
     "total": 44
   },
   "discovery": {
@@ -264,7 +264,7 @@
       "ok": true,
       "latest": "2025",
       "url": "https://globalcarbonbudget.org/gcb-2025/",
-      "method": "direct-title",
+      "method": "reader-block",
       "warnings": []
     },
     {
@@ -291,7 +291,7 @@
       "ok": true,
       "latest": "2026",
       "url": "https://worldmigrationreport.iom.int/msite/wmr-2026-interactive/",
-      "method": "reader-block",
+      "method": "official-url",
       "warnings": [
         "direct https://worldmigrationreport.iom.int/msite/wmr-2026-interactive/: 403 Client Error: Forbidden for url: https://worldmigrationreport.iom.int/msite/wmr-2026-interactive/"
       ]
@@ -299,8 +299,13 @@
     {
       "monitor": "Global Trends",
       "kind": "series",
-      "ok": false,
-      "error": "direct https://www.unhcr.org/au/global-trends: 403 Client Error: Forbidden for url: https://www.unhcr.org/au/global-trends | direct https://www.unhcr.org/media/global-trends-2025-report: 403 Client Error: Forbidden for url: https://www.unhcr.org/media/global-trends-2025-report | direct https://www.unhcr.org/global-trends: 403 Client Error: Forbidden for url: https://www.unhcr.org/global-trends"
+      "ok": true,
+      "latest": "2025",
+      "url": "https://www.unhcr.org/media/global-trends-2025-report",
+      "method": "reader-block",
+      "warnings": [
+        "direct https://www.unhcr.org/au/global-trends: 403 Client Error: Forbidden for url: https://www.unhcr.org/au/global-trends"
+      ]
     },
     {
       "monitor": "Human Development Report",
@@ -399,8 +404,8 @@
       "kind": "series",
       "ok": true,
       "latest": "2025",
-      "url": "https://worldjusticeproject.org/rule-of-law-index/global/2025/wjp-index",
-      "method": "direct-title",
+      "url": "https://worldjusticeproject.org/rule-of-law-index/",
+      "method": "reader-block",
       "warnings": []
     },
     {
@@ -535,7 +540,7 @@
       "monitor": "International Crisis Group discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 8,
+      "candidates": 7,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
@@ -593,10 +598,12 @@
       "monitor": "WIPO discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 12,
-      "new_candidates": 0,
-      "suppressed": 0,
-      "warnings": []
+      "candidates": 71,
+      "new_candidates": 49,
+      "suppressed": 49,
+      "warnings": [
+        "direct https://www.wipo.int/publications/en/: 504 Server Error: Gateway Time-out for url: https://www.wipo.int/publications/en/"
+      ]
     },
     {
       "monitor": "ITU discovery",
