@@ -1,5 +1,5 @@
 {
-  "last_checked": "2026-08-15T21:35:00.422526Z",
+  "last_checked": "2026-08-16T03:59:38.185267Z",
   "engine_version": "6.1",
   "migration_baseline": false,
   "series": {
@@ -8,8 +8,8 @@
     "total": 44
   },
   "discovery": {
-    "ok": 29,
-    "failed": 9,
+    "ok": 30,
+    "failed": 8,
     "total": 38
   },
   "monitors": [
@@ -352,8 +352,8 @@
       "kind": "series",
       "ok": true,
       "latest": "2026",
-      "url": "https://www.unesco.org/gem-report/sites/default/files/styles/banner_mobile/public/2026-03/cover%20image%20web.jpg.webp?itok=O_g9oZz8",
-      "method": "reader-link",
+      "url": "https://www.unesco.org/gem-report/en/paragraph-resource/4717/7",
+      "method": "direct-link",
       "warnings": []
     },
     {
@@ -494,8 +494,8 @@
     {
       "monitor": "World Economic Forum discovery",
       "kind": "discovery",
-      "ok": false,
-      "candidates": 0,
+      "ok": true,
+      "candidates": 12,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
@@ -535,7 +535,7 @@
       "monitor": "International Crisis Group discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 8,
+      "candidates": 7,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
@@ -702,7 +702,7 @@
       "monitor": "WHO discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 10,
+      "candidates": 9,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
