@@ -1,10 +1,10 @@
 {
-  "last_checked": "2026-08-16T09:42:20.334756Z",
+  "last_checked": "2026-08-16T15:35:54.062908Z",
   "engine_version": "6.1",
   "migration_baseline": false,
   "series": {
-    "ok": 42,
-    "failed": 2,
+    "ok": 41,
+    "failed": 3,
     "total": 44
   },
   "discovery": {
@@ -299,13 +299,8 @@
     {
       "monitor": "Global Trends",
       "kind": "series",
-      "ok": true,
-      "latest": "2025",
-      "url": "https://www.unhcr.org/media/global-trends-2025-report",
-      "method": "reader-block",
-      "warnings": [
-        "direct https://www.unhcr.org/au/global-trends: 403 Client Error: Forbidden for url: https://www.unhcr.org/au/global-trends"
-      ]
+      "ok": false,
+      "error": "direct https://www.unhcr.org/au/global-trends: 403 Client Error: Forbidden for url: https://www.unhcr.org/au/global-trends | direct https://www.unhcr.org/media/global-trends-2025-report: 403 Client Error: Forbidden for url: https://www.unhcr.org/media/global-trends-2025-report | direct https://www.unhcr.org/global-trends: 403 Client Error: Forbidden for url: https://www.unhcr.org/global-trends"
     },
     {
       "monitor": "Human Development Report",
@@ -499,8 +494,8 @@
     {
       "monitor": "World Economic Forum discovery",
       "kind": "discovery",
-      "ok": false,
-      "candidates": 0,
+      "ok": true,
+      "candidates": 21,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
@@ -540,7 +535,7 @@
       "monitor": "International Crisis Group discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 8,
+      "candidates": 7,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
@@ -684,11 +679,13 @@
     {
       "monitor": "UNHCR discovery",
       "kind": "discovery",
-      "ok": true,
-      "candidates": 6,
+      "ok": false,
+      "candidates": 0,
       "new_candidates": 0,
       "suppressed": 0,
-      "warnings": []
+      "warnings": [
+        "direct https://www.unhcr.org/publications: 403 Client Error: Forbidden for url: https://www.unhcr.org/publications"
+      ]
     },
     {
       "monitor": "UNDP discovery",
