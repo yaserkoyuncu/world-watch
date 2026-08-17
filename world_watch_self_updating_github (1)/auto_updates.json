@@ -1,13 +1,41 @@
 {
-  "last_checked": "2026-08-17T09:57:51.787483Z",
+  "last_checked": "2026-08-17T15:41:25.831785Z",
   "engine_version": "6.1",
   "monitor_count": 82,
   "flagship_series_count": 44,
   "discovery_source_count": 38,
-  "new_items_this_run": 1,
-  "new_flagship_editions_this_run": 0,
+  "new_items_this_run": 2,
+  "new_flagship_editions_this_run": 1,
   "migration_baseline": false,
   "updates": [
+    {
+      "id": "ea2f4c322c9ad7",
+      "date": "2026-08-17",
+      "category": "Demography & Society",
+      "source": "UNHCR",
+      "title": "Global Trends — 2026",
+      "summary": "Edition-aware monitor detected a newer Global Trends: 2026, replacing 2025.",
+      "url": "https://www.unhcr.org/global-trends",
+      "type": "New flagship edition",
+      "automatic": true,
+      "series_id": "unhcr_gt",
+      "edition": "2026",
+      "previous_edition": "2025",
+      "confidence": "high"
+    },
+    {
+      "id": "fd7804fd359272",
+      "date": "2026-08-17",
+      "category": "Economy & Political Economy",
+      "source": "UNCTAD",
+      "title": "Strait of Hormuz disruptions: Implications for global trade and development",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://unctad.org/publication/strait-hormuz-disruptions-implications-global-trade-and-development",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "unctad"
+    },
     {
       "id": "76797f0a785bd0",
       "date": "2026-08-17",
@@ -33,21 +61,6 @@
       "automatic": true,
       "confidence": "medium",
       "discovery_source": "ilo"
-    },
-    {
-      "id": "ea2f4c322c9ad7",
-      "date": "2026-08-13",
-      "category": "Demography & Society",
-      "source": "UNHCR",
-      "title": "Global Trends — 2026",
-      "summary": "Edition-aware monitor detected a newer Global Trends: 2026, replacing 2025.",
-      "url": "https://www.unhcr.org/global-trends",
-      "type": "New flagship edition",
-      "automatic": true,
-      "series_id": "unhcr_gt",
-      "edition": "2026",
-      "previous_edition": "2025",
-      "confidence": "high"
     },
     {
       "id": "b0eba260edfe5d",
