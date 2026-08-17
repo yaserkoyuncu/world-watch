@@ -1,15 +1,15 @@
 {
-  "last_checked": "2026-08-17T15:41:25.831785Z",
+  "last_checked": "2026-08-17T21:41:16.035331Z",
   "engine_version": "6.1",
   "migration_baseline": false,
   "series": {
-    "ok": 43,
-    "failed": 1,
+    "ok": 41,
+    "failed": 3,
     "total": 44
   },
   "discovery": {
-    "ok": 31,
-    "failed": 7,
+    "ok": 30,
+    "failed": 8,
     "total": 38
   },
   "monitors": [
@@ -167,14 +167,8 @@
     {
       "monitor": "State of AI",
       "kind": "series",
-      "ok": true,
-      "latest": "2025",
-      "url": "https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai",
-      "method": "reader-block",
-      "warnings": [
-        "direct https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai/: HTTPSConnectionPool(host='www.mckinsey.com', port=443): Read timed out. (read timeout=22)",
-        "direct https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai: HTTPSConnectionPool(host='www.mckinsey.com', port=443): Read timed out. (read timeout=22)"
-      ]
+      "ok": false,
+      "error": "direct https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai/: HTTPSConnectionPool(host='www.mckinsey.com', port=443): Read timed out. (read timeout=22) | direct https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai: HTTPSConnectionPool(host='www.mckinsey.com', port=443): Read timed out. (read timeout=22)"
     },
     {
       "monitor": "Tech Trends",
@@ -302,14 +296,8 @@
     {
       "monitor": "Global Trends",
       "kind": "series",
-      "ok": true,
-      "latest": "2026",
-      "url": "https://www.unhcr.org/global-trends",
-      "method": "reader-block",
-      "warnings": [
-        "direct https://www.unhcr.org/au/global-trends: 403 Client Error: Forbidden for url: https://www.unhcr.org/au/global-trends",
-        "direct https://www.unhcr.org/media/global-trends-2025-report: 403 Client Error: Forbidden for url: https://www.unhcr.org/media/global-trends-2025-report"
-      ]
+      "ok": false,
+      "error": "direct https://www.unhcr.org/au/global-trends: 403 Client Error: Forbidden for url: https://www.unhcr.org/au/global-trends | direct https://www.unhcr.org/media/global-trends-2025-report: 403 Client Error: Forbidden for url: https://www.unhcr.org/media/global-trends-2025-report | direct https://www.unhcr.org/global-trends: 403 Client Error: Forbidden for url: https://www.unhcr.org/global-trends"
     },
     {
       "monitor": "Human Development Report",
@@ -475,7 +463,7 @@
       "kind": "discovery",
       "ok": true,
       "candidates": 25,
-      "new_candidates": 1,
+      "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
     },
@@ -541,7 +529,7 @@
       "monitor": "International Crisis Group discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 7,
+      "candidates": 8,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
@@ -674,8 +662,8 @@
     {
       "monitor": "IOM discovery",
       "kind": "discovery",
-      "ok": true,
-      "candidates": 18,
+      "ok": false,
+      "candidates": 0,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
@@ -708,7 +696,7 @@
       "monitor": "WHO discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 9,
+      "candidates": 7,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
