@@ -1,5 +1,5 @@
 {
-  "last_checked": "2026-08-17T04:02:47.787269Z",
+  "last_checked": "2026-08-17T09:57:51.787483Z",
   "engine_version": "6.1",
   "migration_baseline": false,
   "series": {
@@ -8,8 +8,8 @@
     "total": 44
   },
   "discovery": {
-    "ok": 28,
-    "failed": 10,
+    "ok": 31,
+    "failed": 7,
     "total": 38
   },
   "monitors": [
@@ -89,12 +89,9 @@
       "kind": "series",
       "ok": true,
       "latest": "2025",
-      "url": "https://unctad.org/publication/trade-and-development-report-2025",
-      "method": "official-url",
-      "warnings": [
-        "direct https://unctad.org/topic/macroeconomics/trade-development-report: 403 Client Error: Forbidden for url: https://unctad.org/topic/macroeconomics/trade-development-report",
-        "direct https://unctad.org/publication/trade-and-development-report-2025: 403 Client Error: Forbidden for url: https://unctad.org/publication/trade-and-development-report-2025"
-      ]
+      "url": "https://unctad.org/sites/default/files/styles/cover_image/public/2025-11/tdr2025_1000x1414.jpg?itok=BmZlJ0M2",
+      "method": "reader-link",
+      "warnings": []
     },
     {
       "monitor": "Global Trade Outlook and Statistics",
@@ -464,14 +461,11 @@
     {
       "monitor": "UNCTAD discovery",
       "kind": "discovery",
-      "ok": false,
-      "candidates": 0,
+      "ok": true,
+      "candidates": 24,
       "new_candidates": 0,
       "suppressed": 0,
-      "warnings": [
-        "direct https://unctad.org/publications: 403 Client Error: Forbidden for url: https://unctad.org/publications",
-        "direct https://unctad.org/unctad-publications: 403 Client Error: Forbidden for url: https://unctad.org/unctad-publications"
-      ]
+      "warnings": []
     },
     {
       "monitor": "WTO discovery",
@@ -535,7 +529,7 @@
       "monitor": "International Crisis Group discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 7,
+      "candidates": 8,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
@@ -668,8 +662,8 @@
     {
       "monitor": "IOM discovery",
       "kind": "discovery",
-      "ok": false,
-      "candidates": 0,
+      "ok": true,
+      "candidates": 18,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
@@ -679,13 +673,11 @@
     {
       "monitor": "UNHCR discovery",
       "kind": "discovery",
-      "ok": false,
-      "candidates": 0,
+      "ok": true,
+      "candidates": 5,
       "new_candidates": 0,
       "suppressed": 0,
-      "warnings": [
-        "direct https://www.unhcr.org/publications: 403 Client Error: Forbidden for url: https://www.unhcr.org/publications"
-      ]
+      "warnings": []
     },
     {
       "monitor": "UNDP discovery",
@@ -703,7 +695,7 @@
       "kind": "discovery",
       "ok": true,
       "candidates": 9,
-      "new_candidates": 0,
+      "new_candidates": 1,
       "suppressed": 0,
       "warnings": []
     },
@@ -774,7 +766,7 @@
       "monitor": "Reporters Without Borders discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 3,
+      "candidates": 5,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": []

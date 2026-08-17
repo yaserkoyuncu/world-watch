@@ -1,13 +1,26 @@
 {
-  "last_checked": "2026-08-17T04:02:47.787269Z",
+  "last_checked": "2026-08-17T09:57:51.787483Z",
   "engine_version": "6.1",
   "monitor_count": 82,
   "flagship_series_count": 44,
   "discovery_source_count": 38,
-  "new_items_this_run": 0,
+  "new_items_this_run": 1,
   "new_flagship_editions_this_run": 0,
   "migration_baseline": false,
   "updates": [
+    {
+      "id": "76797f0a785bd0",
+      "date": "2026-08-17",
+      "category": "Health, Food & Education",
+      "source": "WHO",
+      "title": "16th edition, Epidemiological Bulletin WHO Health Emergencies Programme WHO Regional Office for South-East...",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.who.int/publications/i/item/9789292800178",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "who"
+    },
     {
       "id": "08c372297a15dc",
       "date": "2026-08-14",
