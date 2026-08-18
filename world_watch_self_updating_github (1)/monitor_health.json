@@ -1,10 +1,10 @@
 {
-  "last_checked": "2026-08-17T21:41:16.035331Z",
+  "last_checked": "2026-08-18T03:58:20.214798Z",
   "engine_version": "6.1",
   "migration_baseline": false,
   "series": {
-    "ok": 41,
-    "failed": 3,
+    "ok": 42,
+    "failed": 2,
     "total": 44
   },
   "discovery": {
@@ -296,8 +296,13 @@
     {
       "monitor": "Global Trends",
       "kind": "series",
-      "ok": false,
-      "error": "direct https://www.unhcr.org/au/global-trends: 403 Client Error: Forbidden for url: https://www.unhcr.org/au/global-trends | direct https://www.unhcr.org/media/global-trends-2025-report: 403 Client Error: Forbidden for url: https://www.unhcr.org/media/global-trends-2025-report | direct https://www.unhcr.org/global-trends: 403 Client Error: Forbidden for url: https://www.unhcr.org/global-trends"
+      "ok": true,
+      "latest": "2025",
+      "url": "https://www.unhcr.org/media/global-trends-2025-report",
+      "method": "reader-block",
+      "warnings": [
+        "direct https://www.unhcr.org/au/global-trends: 403 Client Error: Forbidden for url: https://www.unhcr.org/au/global-trends"
+      ]
     },
     {
       "monitor": "Human Development Report",
@@ -488,8 +493,8 @@
     {
       "monitor": "World Economic Forum discovery",
       "kind": "discovery",
-      "ok": true,
-      "candidates": 21,
+      "ok": false,
+      "candidates": 0,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
@@ -529,7 +534,7 @@
       "monitor": "International Crisis Group discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 8,
+      "candidates": 7,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
@@ -662,8 +667,8 @@
     {
       "monitor": "IOM discovery",
       "kind": "discovery",
-      "ok": false,
-      "candidates": 0,
+      "ok": true,
+      "candidates": 18,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
@@ -696,7 +701,7 @@
       "monitor": "WHO discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 7,
+      "candidates": 6,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
