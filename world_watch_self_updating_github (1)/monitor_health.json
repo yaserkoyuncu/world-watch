@@ -1,5 +1,5 @@
 {
-  "last_checked": "2026-08-19T15:46:56.564505Z",
+  "last_checked": "2026-08-19T21:41:24.455883Z",
   "engine_version": "6.1",
   "migration_baseline": false,
   "series": {
@@ -8,8 +8,8 @@
     "total": 44
   },
   "discovery": {
-    "ok": 29,
-    "failed": 9,
+    "ok": 30,
+    "failed": 8,
     "total": 38
   },
   "monitors": [
@@ -334,11 +334,9 @@
       "kind": "series",
       "ok": true,
       "latest": "2026",
-      "url": "https://iris.who.int/server/api/core/bitstreams/80079ae0-75e1-4e5e-9284-3f25bfd069c9/content",
-      "method": "reader-link",
-      "warnings": [
-        "direct https://www.who.int/publications/i/item/9789240122482: HTTPSConnectionPool(host='www.who.int', port=443): Read timed out. (read timeout=22)"
-      ]
+      "url": "https://www.who.int/publications/i/item/9789240122482",
+      "method": "direct-title",
+      "warnings": []
     },
     {
       "monitor": "State of Food Security and Nutrition in the World",
@@ -410,8 +408,8 @@
       "kind": "series",
       "ok": true,
       "latest": "2025",
-      "url": "https://www.transparency.org/en/cpi/2025",
-      "method": "reader-block",
+      "url": "https://www.transparency.org/en/press/corruption-perceptions-index-2025-decline-leadership-undermining-global-fight",
+      "method": "reader-link",
       "warnings": []
     },
     {
@@ -496,8 +494,8 @@
     {
       "monitor": "World Economic Forum discovery",
       "kind": "discovery",
-      "ok": false,
-      "candidates": 0,
+      "ok": true,
+      "candidates": 22,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
@@ -537,7 +535,7 @@
       "monitor": "International Crisis Group discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 7,
+      "candidates": 8,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
@@ -768,7 +766,7 @@
       "kind": "discovery",
       "ok": true,
       "candidates": 44,
-      "new_candidates": 4,
+      "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
     },
