@@ -1,10 +1,10 @@
 {
-  "last_checked": "2026-08-19T09:49:24.609029Z",
+  "last_checked": "2026-08-19T15:46:56.564505Z",
   "engine_version": "6.1",
   "monitor_count": 82,
   "flagship_series_count": 44,
   "discovery_source_count": 38,
-  "new_items_this_run": 1,
+  "new_items_this_run": 4,
   "new_flagship_editions_this_run": 0,
   "migration_baseline": false,
   "updates": [
@@ -22,6 +22,58 @@
       "edition": "September 2026",
       "previous_edition": "June 2026",
       "confidence": "high"
+    },
+    {
+      "id": "40215f8105a1f2",
+      "date": "2026-08-19",
+      "category": "Democracy & Rights",
+      "source": "Transparency International",
+      "title": "Monitoring political finance: Compendium of citizen initiatives and good practices",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.transparency.org/en/publications/monitoring-political-finance-compendium-of-citizen-initiatives-and-good-practices",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "ti"
+    },
+    {
+      "id": "4b0f067061fa37",
+      "date": "2026-08-19",
+      "category": "Democracy & Rights",
+      "source": "Transparency International",
+      "title": "![Image 33: 2026 Monitoring political finance Report Cover - Transparency International",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://images.transparencycdn.org/images/2026_Monitoring-political-finance_Report_Cover.jpg?auto=compress&fit=crop&fm=webp&w=16",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "ti"
+    },
+    {
+      "id": "0d778ddc9c05e7",
+      "date": "2026-08-19",
+      "category": "Democracy & Rights",
+      "source": "Transparency International",
+      "title": "![Image 31: A whistle dangling over a crumpled map of the EU",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://images.transparencycdn.org/images/2026_Whistleblower_protection_in_EU_enlargement_countries_Page_01.jpg?auto=compress&fit=crop&fm=webp&w=16",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "ti"
+    },
+    {
+      "id": "5a0726237dab17",
+      "date": "2026-08-19",
+      "category": "Democracy & Rights",
+      "source": "Transparency International",
+      "title": "![Image 30: Getting political finance right",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://images.transparencycdn.org/images/Cover-getting-political-finance-right.png?auto=compress&fit=crop&fm=webp&w=16",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "ti"
     },
     {
       "id": "0eed95c967df3d",
