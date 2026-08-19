@@ -1,15 +1,15 @@
 {
-  "last_checked": "2026-08-19T03:58:51.737790Z",
+  "last_checked": "2026-08-19T09:49:24.609029Z",
   "engine_version": "6.1",
   "migration_baseline": false,
   "series": {
-    "ok": 43,
-    "failed": 1,
+    "ok": 38,
+    "failed": 6,
     "total": 44
   },
   "discovery": {
-    "ok": 30,
-    "failed": 8,
+    "ok": 22,
+    "failed": 16,
     "total": 38
   },
   "monitors": [
@@ -18,10 +18,14 @@
       "kind": "series",
       "ok": true,
       "latest": "July 2026",
-      "url": "https://www.imf.org/-/media/images/imf/publications/weo/2026/july/english/world-economic-outlook-july-2026-growth-projections-region.jpg?h=1080&iar=0&w=1920",
-      "method": "reader-link",
+      "url": "https://www.imf.org/en/publications/weo/issues/2026/07/08/world-economic-outlook-update-july-2026",
+      "method": "official-url",
       "warnings": [
-        "direct https://www.imf.org/en/publications: 403 Client Error: Forbidden for url: https://www.imf.org/en/publications"
+        "reader https://www.imf.org/en/publications: 401 Client Error: Unauthorized for url: https://r.jina.ai/https://www.imf.org/en/publications",
+        "direct https://www.imf.org/en/publications: 403 Client Error: Forbidden for url: https://www.imf.org/en/publications",
+        "reader https://www.imf.org/en/research: 401 Client Error: Unauthorized for url: https://r.jina.ai/https://www.imf.org/en/research",
+        "direct https://www.imf.org/en/research: 403 Client Error: Forbidden for url: https://www.imf.org/en/research",
+        "reader https://www.imf.org/en/publications/weo/issues/2026/07/08/world-economic-outlook-update-july-2026: 401 Client Error: Unauthorized for url: https://r.jina.ai/https://www.imf.org/en/publications/weo/issues/2026/07/08/worl"
       ]
     },
     {
@@ -32,7 +36,9 @@
       "url": "https://www.imf.org/en/publications/gfsr/issues/2026/04/14/global-financial-stability-report-april-2026",
       "method": "official-url",
       "warnings": [
-        "direct https://www.imf.org/en/publications: 403 Client Error: Forbidden for url: https://www.imf.org/en/publications"
+        "reader https://www.imf.org/en/publications: 401 Client Error: Unauthorized for url: https://r.jina.ai/https://www.imf.org/en/publications",
+        "direct https://www.imf.org/en/publications: 403 Client Error: Forbidden for url: https://www.imf.org/en/publications",
+        "reader https://www.imf.org/en/publications/gfsr/issues/2026/04/14/global-financial-stability-report-april-2026: 401 Client Error: Unauthorized for url: https://r.jina.ai/https://www.imf.org/en/publications/gfsr/issues/2026/04/14/glo"
       ]
     },
     {
@@ -43,7 +49,9 @@
       "url": "https://www.imf.org/en/publications/fm/issues/2026/04/15/fiscal-monitor-april-2026",
       "method": "official-url",
       "warnings": [
-        "direct https://www.imf.org/en/publications: 403 Client Error: Forbidden for url: https://www.imf.org/en/publications"
+        "reader https://www.imf.org/en/publications: 401 Client Error: Unauthorized for url: https://r.jina.ai/https://www.imf.org/en/publications",
+        "direct https://www.imf.org/en/publications: 403 Client Error: Forbidden for url: https://www.imf.org/en/publications",
+        "reader https://www.imf.org/en/publications/fm/issues/2026/04/15/fiscal-monitor-april-2026: 401 Client Error: Unauthorized for url: https://r.jina.ai/https://www.imf.org/en/publications/fm/issues/2026/04/15/fisca"
       ]
     },
     {
@@ -53,7 +61,10 @@
       "latest": "June 2026",
       "url": "https://www.worldbank.org/en/research",
       "method": "direct-heading",
-      "warnings": []
+      "warnings": [
+        "reader https://www.worldbank.org/en/publication/global-economic-prospects: 401 Client Error: Unauthorized for url: https://r.jina.ai/https://www.worldbank.org/en/publication/global-economic-prosp",
+        "reader https://www.worldbank.org/en/research: 401 Client Error: Unauthorized for url: https://r.jina.ai/https://www.worldbank.org/en/research"
+      ]
     },
     {
       "monitor": "World Development Report",
@@ -62,18 +73,16 @@
       "latest": "2025",
       "url": "https://www.worldbank.org/en/publication/wdr2025",
       "method": "direct-title",
-      "warnings": []
+      "warnings": [
+        "reader https://www.worldbank.org/en/publication/wdr/wdr-archive: 401 Client Error: Unauthorized for url: https://r.jina.ai/https://www.worldbank.org/en/publication/wdr/wdr-archive",
+        "reader https://www.worldbank.org/en/publication/wdr2025: 401 Client Error: Unauthorized for url: https://r.jina.ai/https://www.worldbank.org/en/publication/wdr2025"
+      ]
     },
     {
       "monitor": "OECD Economic Outlook",
       "kind": "series",
-      "ok": true,
-      "latest": "September 2026",
-      "url": "https://www.oecd.org/en/events/2026/09/launch-oecd-interim-economic-outlook.html",
-      "method": "reader-link",
-      "warnings": [
-        "direct https://www.oecd.org/en/topics/economic-outlook.html: 403 Client Error: Forbidden for url: https://www.oecd.org/en/topics/economic-outlook.html"
-      ]
+      "ok": false,
+      "error": "direct https://www.oecd.org/en/topics/economic-outlook.html: 403 Client Error: Forbidden for url: https://www.oecd.org/en/topics/economic-outlook.html | reader https://www.oecd.org/en/topics/economic-outlook.html: 401 Client Error: Unauthorized for url: https://r.jina.ai/https://www.oecd.org/en/topics/economic-outlook.html"
     },
     {
       "monitor": "Annual Economic Report",
@@ -82,16 +91,23 @@
       "latest": "2026",
       "url": "https://www.bis.org/publ/arpdf/ar2026e.htm",
       "method": "direct-title",
-      "warnings": []
+      "warnings": [
+        "reader https://www.bis.org/publ/arpdf/ar2026e.htm: 401 Client Error: Unauthorized for url: https://r.jina.ai/https://www.bis.org/publ/arpdf/ar2026e.htm"
+      ]
     },
     {
       "monitor": "Trade and Development Report",
       "kind": "series",
       "ok": true,
       "latest": "2025",
-      "url": "https://unctad.org/sites/default/files/styles/cover_image/public/2025-11/tdr2025_1000x1414.jpg?itok=BmZlJ0M2",
-      "method": "reader-link",
-      "warnings": []
+      "url": "https://unctad.org/publication/trade-and-development-report-2025",
+      "method": "official-url",
+      "warnings": [
+        "direct https://unctad.org/topic/macroeconomics/trade-development-report: 403 Client Error: Forbidden for url: https://unctad.org/topic/macroeconomics/trade-development-report",
+        "reader https://unctad.org/topic/macroeconomics/trade-development-report: 401 Client Error: Unauthorized for url: https://r.jina.ai/https://unctad.org/topic/macroeconomics/trade-development-repo",
+        "direct https://unctad.org/publication/trade-and-development-report-2025: 403 Client Error: Forbidden for url: https://unctad.org/publication/trade-and-development-report-2025",
+        "reader https://unctad.org/publication/trade-and-development-report-2025: 401 Client Error: Unauthorized for url: https://r.jina.ai/https://unctad.org/publication/trade-and-development-report-20"
+      ]
     },
     {
       "monitor": "Global Trade Outlook and Statistics",
@@ -100,16 +116,15 @@
       "latest": "March 2026",
       "url": "https://www.wto.org/english/res_e/publications_e/gtos0326_e.htm",
       "method": "direct-title",
-      "warnings": []
+      "warnings": [
+        "reader https://www.wto.org/english/res_e/publications_e/gtos0326_e.htm: 401 Client Error: Unauthorized for url: https://r.jina.ai/https://www.wto.org/english/res_e/publications_e/gtos0326_e.ht"
+      ]
     },
     {
       "monitor": "Employment and Social Trends",
       "kind": "series",
-      "ok": true,
-      "latest": "May 2026",
-      "url": "https://www.ilo.org/research-and-publications",
-      "method": "reader-block",
-      "warnings": []
+      "ok": false,
+      "error": "reader https://www.ilo.org/publications/flagship-reports/employment-and-social-trends-2026: 401 Client Error: Unauthorized for url: https://r.jina.ai/https://www.ilo.org/publications/flagship-reports/employment-a | reader https://www.ilo.org/research-and-publications: 401 Client Error: Unauthorized for url: https://r.jina.ai/https://www.ilo.org/research-and-publications"
     },
     {
       "monitor": "Global Risks Report",
@@ -117,8 +132,10 @@
       "ok": true,
       "latest": "2026",
       "url": "https://www.weforum.org/publications/global-risks-report-2026/",
-      "method": "reader-block",
-      "warnings": []
+      "method": "official-url",
+      "warnings": [
+        "reader https://www.weforum.org/publications/global-risks-report-2026/: 401 Client Error: Unauthorized for url: https://r.jina.ai/https://www.weforum.org/publications/global-risks-report-2026/"
+      ]
     },
     {
       "monitor": "Munich Security Report",
@@ -127,7 +144,9 @@
       "latest": "2026",
       "url": "https://securityconference.org/en/publications/munich-security-report/2026/",
       "method": "direct-title",
-      "warnings": []
+      "warnings": [
+        "reader https://securityconference.org/en/publications/munich-security-report/2026/: 401 Client Error: Unauthorized for url: https://r.jina.ai/https://securityconference.org/en/publications/munich-security"
+      ]
     },
     {
       "monitor": "SIPRI Yearbook",
@@ -136,7 +155,9 @@
       "latest": "2026",
       "url": "https://www.sipri.org/yearbook/2026",
       "method": "direct-title",
-      "warnings": []
+      "warnings": [
+        "reader https://www.sipri.org/yearbook/2026: 401 Client Error: Unauthorized for url: https://r.jina.ai/https://www.sipri.org/yearbook/2026"
+      ]
     },
     {
       "monitor": "Annual Threat Assessment",
@@ -146,7 +167,8 @@
       "url": "https://www.odni.gov/index.php/newsroom/reports-publications/reports-publications-2026/4141-2026-annual-threat-assessment",
       "method": "official-url",
       "warnings": [
-        "direct https://www.odni.gov/index.php/newsroom/reports-publications/reports-publications-2026/4141-2026-annual-threat-assessment: 403 Client Error: Forbidden for url: https://www.odni.gov/index.php/newsroom/reports-publications/reports-publications-2"
+        "direct https://www.odni.gov/index.php/newsroom/reports-publications/reports-publications-2026/4141-2026-annual-threat-assessment: 403 Client Error: Forbidden for url: https://www.odni.gov/index.php/newsroom/reports-publications/reports-publications-2",
+        "reader https://www.odni.gov/index.php/newsroom/reports-publications/reports-publications-2026/4141-2026-annual-threat-assessment: 401 Client Error: Unauthorized for url: https://r.jina.ai/https://www.odni.gov/index.php/newsroom/reports-publications/r"
       ]
     },
     {
@@ -156,25 +178,21 @@
       "latest": "2026",
       "url": "https://hai.stanford.edu/ai-index/2026-ai-index-report",
       "method": "direct-title",
-      "warnings": []
+      "warnings": [
+        "reader https://hai.stanford.edu/ai-index/2026-ai-index-report: 401 Client Error: Unauthorized for url: https://r.jina.ai/https://hai.stanford.edu/ai-index/2026-ai-index-report"
+      ]
     },
     {
       "monitor": "Technology Trends Outlook",
       "kind": "series",
       "ok": false,
-      "error": "direct https://www.mckinsey.com/capabilities/tech-and-ai/our-insights/the-top-trends-in-tech/: HTTPSConnectionPool(host='www.mckinsey.com', port=443): Read timed out. (read timeout=22) | direct https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/the-top-trends-in-tech: HTTPSConnectionPool(host='www.mckinsey.com', port=443): Read timed out. (read timeout=22)"
+      "error": "reader https://www.mckinsey.com/capabilities/tech-and-ai/our-insights/the-top-trends-in-tech/: 401 Client Error: Unauthorized for url: https://r.jina.ai/https://www.mckinsey.com/capabilities/tech-and-ai/our-insights | direct https://www.mckinsey.com/capabilities/tech-and-ai/our-insights/the-top-trends-in-tech/: HTTPSConnectionPool(host='www.mckinsey.com', port=443): Read timed out. (read timeout=22) | reader https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/the-top-trends-in-te"
     },
     {
       "monitor": "State of AI",
       "kind": "series",
-      "ok": true,
-      "latest": "2025",
-      "url": "https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai",
-      "method": "reader-block",
-      "warnings": [
-        "direct https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai/: HTTPSConnectionPool(host='www.mckinsey.com', port=443): Read timed out. (read timeout=22)",
-        "direct https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai: HTTPSConnectionPool(host='www.mckinsey.com', port=443): Read timed out. (read timeout=22)"
-      ]
+      "ok": false,
+      "error": "reader https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai/: 401 Client Error: Unauthorized for url: https://r.jina.ai/https://www.mckinsey.com/capabilities/quantumblack/our-insight | direct https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai/: HTTPSConnectionPool(host='www.mckinsey.com', port=443): Read timed out. (read timeout=22) | reader https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai: 401 Client Error: U"
     },
     {
       "monitor": "Tech Trends",
@@ -183,7 +201,9 @@
       "latest": "2026",
       "url": "https://www.deloitte.com/us/en/insights/topics/technology-management/tech-trends.html",
       "method": "direct-title",
-      "warnings": []
+      "warnings": [
+        "reader https://www.deloitte.com/us/en/insights/topics/technology-management/tech-trends.html: 401 Client Error: Unauthorized for url: https://r.jina.ai/https://www.deloitte.com/us/en/insights/topics/technology-mana"
+      ]
     },
     {
       "monitor": "Global Tech Report",
@@ -191,17 +211,21 @@
       "ok": true,
       "latest": "2026",
       "url": "https://kpmg.com/content/dam/kpmgsites/uk/pdf/2026/01/global-tech-report-2026.pdf",
-      "method": "reader-link",
-      "warnings": []
+      "method": "direct-link",
+      "warnings": [
+        "reader https://kpmg.com/uk/en/insights/technology/kpmg-global-tech-report.html: 401 Client Error: Unauthorized for url: https://r.jina.ai/https://kpmg.com/uk/en/insights/technology/kpmg-global-tech-re"
+      ]
     },
     {
       "monitor": "Global Innovation Index",
       "kind": "series",
       "ok": true,
       "latest": "2025",
-      "url": "https://www.wipo.int/publications/en/series/index.jsp?id=129&lang=en",
-      "method": "reader-block",
-      "warnings": []
+      "url": "https://www.wipo.int/publications/en/details.jsp?id=4807&plang=EN",
+      "method": "direct-link",
+      "warnings": [
+        "reader https://www.wipo.int/publications/en/series/index.jsp?id=129&lang=en: 401 Client Error: Unauthorized for url: https://r.jina.ai/https://www.wipo.int/publications/en/series/index.jsp?id=129&l"
+      ]
     },
     {
       "monitor": "Facts and Figures",
@@ -210,7 +234,9 @@
       "latest": "2025",
       "url": "https://www.itu.int/itu-d/reports/statistics/facts-figures-2025/",
       "method": "direct-title",
-      "warnings": []
+      "warnings": [
+        "reader https://www.itu.int/itu-d/reports/statistics/facts-figures-2025/: 401 Client Error: Unauthorized for url: https://r.jina.ai/https://www.itu.int/itu-d/reports/statistics/facts-figures-202"
+      ]
     },
     {
       "monitor": "State of the Global Climate",
@@ -219,7 +245,9 @@
       "latest": "2025",
       "url": "https://wmo.int/publication-series/state-of-global-climate/state-of-global-climate-2025",
       "method": "direct-title",
-      "warnings": []
+      "warnings": [
+        "reader https://wmo.int/publication-series/state-of-global-climate/state-of-global-climate-2025: 401 Client Error: Unauthorized for url: https://r.jina.ai/https://wmo.int/publication-series/state-of-global-climate/sta"
+      ]
     },
     {
       "monitor": "Emissions Gap Report",
@@ -228,7 +256,9 @@
       "latest": "2025",
       "url": "https://www.unep.org/resources/emissions-gap-report-2025",
       "method": "direct-title",
-      "warnings": []
+      "warnings": [
+        "reader https://www.unep.org/resources/emissions-gap-report-2025: 401 Client Error: Unauthorized for url: https://r.jina.ai/https://www.unep.org/resources/emissions-gap-report-2025"
+      ]
     },
     {
       "monitor": "Adaptation Gap Report",
@@ -237,7 +267,9 @@
       "latest": "2025",
       "url": "https://www.unep.org/resources/adaptation-gap-report-2025",
       "method": "direct-title",
-      "warnings": []
+      "warnings": [
+        "reader https://www.unep.org/resources/adaptation-gap-report-2025: 401 Client Error: Unauthorized for url: https://r.jina.ai/https://www.unep.org/resources/adaptation-gap-report-2025"
+      ]
     },
     {
       "monitor": "World Energy Outlook",
@@ -247,7 +279,8 @@
       "url": "https://www.iea.org/reports/world-energy-outlook-2025",
       "method": "official-url",
       "warnings": [
-        "direct https://www.iea.org/reports/world-energy-outlook-2025: 403 Client Error: Forbidden for url: https://www.iea.org/reports/world-energy-outlook-2025"
+        "direct https://www.iea.org/reports/world-energy-outlook-2025: 403 Client Error: Forbidden for url: https://www.iea.org/reports/world-energy-outlook-2025",
+        "reader https://www.iea.org/reports/world-energy-outlook-2025: 401 Client Error: Unauthorized for url: https://r.jina.ai/https://www.iea.org/reports/world-energy-outlook-2025"
       ]
     },
     {
@@ -258,7 +291,8 @@
       "url": "https://www.irena.org/publications/2024/Nov/World-Energy-Transitions-Outlook-2024",
       "method": "official-url",
       "warnings": [
-        "direct https://www.irena.org/publications/2024/Nov/World-Energy-Transitions-Outlook-2024: 403 Client Error: Forbidden for url: https://www.irena.org/publications/2024/Nov/World-Energy-Transitions-Outlook-2024"
+        "direct https://www.irena.org/publications/2024/Nov/World-Energy-Transitions-Outlook-2024: 403 Client Error: Forbidden for url: https://www.irena.org/publications/2024/Nov/World-Energy-Transitions-Outlook-2024",
+        "reader https://www.irena.org/publications/2024/Nov/World-Energy-Transitions-Outlook-2024: 401 Client Error: Unauthorized for url: https://r.jina.ai/https://www.irena.org/publications/2024/Nov/World-Energy-Trans"
       ]
     },
     {
@@ -267,8 +301,10 @@
       "ok": true,
       "latest": "2025",
       "url": "https://globalcarbonbudget.org/gcb-2025/",
-      "method": "direct-title",
-      "warnings": []
+      "method": "official-url",
+      "warnings": [
+        "reader https://globalcarbonbudget.org/gcb-2025/: 401 Client Error: Unauthorized for url: https://r.jina.ai/https://globalcarbonbudget.org/gcb-2025/"
+      ]
     },
     {
       "monitor": "World Population Prospects",
@@ -277,7 +313,9 @@
       "latest": "2024",
       "url": "https://www.un.org/development/desa/pd/world-population-prospects-2024",
       "method": "direct-title",
-      "warnings": []
+      "warnings": [
+        "reader https://www.un.org/development/desa/pd/world-population-prospects-2024: 401 Client Error: Unauthorized for url: https://r.jina.ai/https://www.un.org/development/desa/pd/world-population-prospe"
+      ]
     },
     {
       "monitor": "World Urbanization Prospects",
@@ -286,7 +324,9 @@
       "latest": "2025",
       "url": "https://www.un.org/development/desa/pd/world-urbanization-prospects-2025",
       "method": "direct-title",
-      "warnings": []
+      "warnings": [
+        "reader https://www.un.org/development/desa/pd/world-urbanization-prospects-2025: 401 Client Error: Unauthorized for url: https://r.jina.ai/https://www.un.org/development/desa/pd/world-urbanization-pros"
+      ]
     },
     {
       "monitor": "World Migration Report",
@@ -294,21 +334,17 @@
       "ok": true,
       "latest": "2026",
       "url": "https://worldmigrationreport.iom.int/msite/wmr-2026-interactive/",
-      "method": "reader-block",
+      "method": "official-url",
       "warnings": [
-        "direct https://worldmigrationreport.iom.int/msite/wmr-2026-interactive/: 403 Client Error: Forbidden for url: https://worldmigrationreport.iom.int/msite/wmr-2026-interactive/"
+        "direct https://worldmigrationreport.iom.int/msite/wmr-2026-interactive/: 403 Client Error: Forbidden for url: https://worldmigrationreport.iom.int/msite/wmr-2026-interactive/",
+        "reader https://worldmigrationreport.iom.int/msite/wmr-2026-interactive/: 401 Client Error: Unauthorized for url: https://r.jina.ai/https://worldmigrationreport.iom.int/msite/wmr-2026-interactiv"
       ]
     },
     {
       "monitor": "Global Trends",
       "kind": "series",
-      "ok": true,
-      "latest": "2025",
-      "url": "https://www.unhcr.org/media/global-trends-2025-report",
-      "method": "reader-block",
-      "warnings": [
-        "direct https://www.unhcr.org/au/global-trends: 403 Client Error: Forbidden for url: https://www.unhcr.org/au/global-trends"
-      ]
+      "ok": false,
+      "error": "reader https://www.unhcr.org/au/global-trends: 401 Client Error: Unauthorized for url: https://r.jina.ai/https://www.unhcr.org/au/global-trends | direct https://www.unhcr.org/au/global-trends: 403 Client Error: Forbidden for url: https://www.unhcr.org/au/global-trends | reader https://www.unhcr.org/media/global-trends-2025-report: 401 Client Error: Unauthorized for url: https://r.jina.ai/https://www.unhcr.org/media/global-trends-2025-report | direct https://www.unhcr.org/media/global-trends-2025"
     },
     {
       "monitor": "Human Development Report",
@@ -317,16 +353,20 @@
       "latest": "2025",
       "url": "https://hdr.undp.org/content/human-development-report-2025",
       "method": "direct-title",
-      "warnings": []
+      "warnings": [
+        "reader https://hdr.undp.org/content/human-development-report-2025: 401 Client Error: Unauthorized for url: https://r.jina.ai/https://hdr.undp.org/content/human-development-report-2025"
+      ]
     },
     {
       "monitor": "World Social Report",
       "kind": "series",
       "ok": true,
       "latest": "2025",
-      "url": "https://social.desa.un.org/sites/default/files/styles/max_width_400px_ri/public/2025-04/WSR2025-Cover-sm.jpg.jpg?itok=XeEJM61H",
-      "method": "reader-link",
-      "warnings": []
+      "url": "https://social.desa.un.org/issues/world-social-report",
+      "method": "direct-heading",
+      "warnings": [
+        "reader https://social.desa.un.org/issues/world-social-report: 401 Client Error: Unauthorized for url: https://r.jina.ai/https://social.desa.un.org/issues/world-social-report"
+      ]
     },
     {
       "monitor": "World Happiness Report",
@@ -334,8 +374,10 @@
       "ok": true,
       "latest": "2026",
       "url": "https://www.worldhappiness.report/ed/2026/",
-      "method": "reader-block",
-      "warnings": []
+      "method": "official-url",
+      "warnings": [
+        "reader https://www.worldhappiness.report/ed/2026/: 401 Client Error: Unauthorized for url: https://r.jina.ai/https://www.worldhappiness.report/ed/2026/"
+      ]
     },
     {
       "monitor": "World Health Statistics",
@@ -344,25 +386,26 @@
       "latest": "2026",
       "url": "https://www.who.int/publications/i/item/9789240122482",
       "method": "direct-title",
-      "warnings": []
+      "warnings": [
+        "reader https://www.who.int/publications/i/item/9789240122482: 401 Client Error: Unauthorized for url: https://r.jina.ai/https://www.who.int/publications/i/item/9789240122482"
+      ]
     },
     {
       "monitor": "State of Food Security and Nutrition in the World",
       "kind": "series",
-      "ok": true,
-      "latest": "2026",
-      "url": "https://www.fao.org/publications/fao-flagship-publications/the-state-of-food-security-and-nutrition-in-the-world/2025/en",
-      "method": "reader-block",
-      "warnings": []
+      "ok": false,
+      "error": "reader https://www.fao.org/publications/fao-flagship-publications/the-state-of-food-security-and-nutrition-in-the-world/2025/en: 401 Client Error: Unauthorized for url: https://r.jina.ai/https://www.fao.org/publications/fao-flagship-publications/the"
     },
     {
       "monitor": "Global Education Monitoring Report",
       "kind": "series",
       "ok": true,
       "latest": "2026",
-      "url": "https://www.unesco.org/gem-report/sites/default/files/styles/banner_mobile/public/2026-03/cover%20image%20web.jpg.webp?itok=O_g9oZz8",
-      "method": "reader-link",
-      "warnings": []
+      "url": "https://www.unesco.org/gem-report/en/paragraph-resource/4717/7",
+      "method": "direct-link",
+      "warnings": [
+        "reader https://www.unesco.org/gem-report/en/publication/equity-and-access: 401 Client Error: Unauthorized for url: https://r.jina.ai/https://www.unesco.org/gem-report/en/publication/equity-and-ac"
+      ]
     },
     {
       "monitor": "Global Multidimensional Poverty Index",
@@ -370,9 +413,10 @@
       "ok": true,
       "latest": "2025",
       "url": "https://www.undp.org/turkiye/publications/2025-global-multidimensional-poverty-index-mpi",
-      "method": "reader-block",
+      "method": "official-url",
       "warnings": [
-        "direct https://www.undp.org/turkiye/publications/2025-global-multidimensional-poverty-index-mpi: 403 Client Error: Forbidden for url: https://www.undp.org/turkiye/publications/2025-global-multidimensional-poverty-inde"
+        "direct https://www.undp.org/turkiye/publications/2025-global-multidimensional-poverty-index-mpi: 403 Client Error: Forbidden for url: https://www.undp.org/turkiye/publications/2025-global-multidimensional-poverty-inde",
+        "reader https://www.undp.org/turkiye/publications/2025-global-multidimensional-poverty-index-mpi: 401 Client Error: Unauthorized for url: https://r.jina.ai/https://www.undp.org/turkiye/publications/2025-global-multidim"
       ]
     },
     {
@@ -382,7 +426,9 @@
       "latest": "2026",
       "url": "https://www.v-dem.net/publications/democracy-reports/",
       "method": "direct-heading",
-      "warnings": []
+      "warnings": [
+        "reader https://www.v-dem.net/publications/democracy-reports/: 401 Client Error: Unauthorized for url: https://r.jina.ai/https://www.v-dem.net/publications/democracy-reports/"
+      ]
     },
     {
       "monitor": "Global State of Democracy",
@@ -391,7 +437,9 @@
       "latest": "2025",
       "url": "https://www.idea.int/publications/catalogue/global-state-of-democracy-2025-democracy-on-the-move",
       "method": "direct-title",
-      "warnings": []
+      "warnings": [
+        "reader https://www.idea.int/publications/catalogue/global-state-of-democracy-2025-democracy-on-the-move: 401 Client Error: Unauthorized for url: https://r.jina.ai/https://www.idea.int/publications/catalogue/global-state-of-de"
+      ]
     },
     {
       "monitor": "Freedom in the World",
@@ -400,7 +448,9 @@
       "latest": "2026",
       "url": "https://freedomhouse.org/report/freedom-world/2026/growing-shadow-autocracy",
       "method": "direct-link",
-      "warnings": []
+      "warnings": [
+        "reader https://freedomhouse.org/report/freedom-world/2026/growing-shadow-autocracy: 401 Client Error: Unauthorized for url: https://r.jina.ai/https://freedomhouse.org/report/freedom-world/2026/growing-sha"
+      ]
     },
     {
       "monitor": "Rule of Law Index",
@@ -409,16 +459,21 @@
       "latest": "2025",
       "url": "https://worldjusticeproject.org/rule-of-law-index/global/2025/wjp-index",
       "method": "direct-title",
-      "warnings": []
+      "warnings": [
+        "reader https://worldjusticeproject.org/rule-of-law-index/: 401 Client Error: Unauthorized for url: https://r.jina.ai/https://worldjusticeproject.org/rule-of-law-index/",
+        "reader https://worldjusticeproject.org/rule-of-law-index/global/2025/wjp-index: 401 Client Error: Unauthorized for url: https://r.jina.ai/https://worldjusticeproject.org/rule-of-law-index/global/2025/"
+      ]
     },
     {
       "monitor": "Corruption Perceptions Index",
       "kind": "series",
       "ok": true,
       "latest": "2025",
-      "url": "https://www.transparency.org/en/press/corruption-perceptions-index-2025-decline-leadership-undermining-global-fight",
-      "method": "reader-link",
-      "warnings": []
+      "url": "https://www.transparency.org/en/cpi/2025",
+      "method": "official-url",
+      "warnings": [
+        "reader https://www.transparency.org/en/cpi/2025: 401 Client Error: Unauthorized for url: https://r.jina.ai/https://www.transparency.org/en/cpi/2025"
+      ]
     },
     {
       "monitor": "World Press Freedom Index",
@@ -427,7 +482,9 @@
       "latest": "2026",
       "url": "https://rsf.org/en/2026-rsf-index-press-freedom-25-year-low",
       "method": "direct-title",
-      "warnings": []
+      "warnings": [
+        "reader https://rsf.org/en/2026-rsf-index-press-freedom-25-year-low: 401 Client Error: Unauthorized for url: https://r.jina.ai/https://rsf.org/en/2026-rsf-index-press-freedom-25-year-low"
+      ]
     },
     {
       "monitor": "IMF discovery",
@@ -437,6 +494,7 @@
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
+        "reader https://www.imf.org/en/publications: 401 Client Error: Unauthorized for url: https://r.jina.ai/https://www.imf.org/en/publications",
         "direct https://www.imf.org/en/publications: 403 Client Error: Forbidden for url: https://www.imf.org/en/publications"
       ]
     },
@@ -457,26 +515,35 @@
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
-        "direct https://www.oecd.org/en/publications.html: 403 Client Error: Forbidden for url: https://www.oecd.org/en/publications.html"
+        "direct https://www.oecd.org/en/publications.html: 403 Client Error: Forbidden for url: https://www.oecd.org/en/publications.html",
+        "reader https://www.oecd.org/en/publications.html: 401 Client Error: Unauthorized for url: https://r.jina.ai/https://www.oecd.org/en/publications.html"
       ]
     },
     {
       "monitor": "BIS discovery",
       "kind": "discovery",
-      "ok": true,
-      "candidates": 10,
+      "ok": false,
+      "candidates": 0,
       "new_candidates": 0,
       "suppressed": 0,
-      "warnings": []
+      "warnings": [
+        "reader https://www.bis.org/: 401 Client Error: Unauthorized for url: https://r.jina.ai/https://www.bis.org/",
+        "reader https://www.bis.org/index.htm: 401 Client Error: Unauthorized for url: https://r.jina.ai/https://www.bis.org/index.htm"
+      ]
     },
     {
       "monitor": "UNCTAD discovery",
       "kind": "discovery",
-      "ok": true,
-      "candidates": 25,
+      "ok": false,
+      "candidates": 0,
       "new_candidates": 0,
       "suppressed": 0,
-      "warnings": []
+      "warnings": [
+        "direct https://unctad.org/publications: 403 Client Error: Forbidden for url: https://unctad.org/publications",
+        "reader https://unctad.org/publications: 401 Client Error: Unauthorized for url: https://r.jina.ai/https://unctad.org/publications",
+        "direct https://unctad.org/unctad-publications: 403 Client Error: Forbidden for url: https://unctad.org/unctad-publications",
+        "reader https://unctad.org/unctad-publications: 401 Client Error: Unauthorized for url: https://r.jina.ai/https://unctad.org/unctad-publications"
+      ]
     },
     {
       "monitor": "WTO discovery",
@@ -504,15 +571,16 @@
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
-        "direct https://www.weforum.org/publications/: 403 Client Error: Forbidden for url: https://www.weforum.org/publications/"
+        "direct https://www.weforum.org/publications/: 403 Client Error: Forbidden for url: https://www.weforum.org/publications/",
+        "reader https://www.weforum.org/publications/: 401 Client Error: Unauthorized for url: https://r.jina.ai/https://www.weforum.org/publications/"
       ]
     },
     {
       "monitor": "Munich Security Conference discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 4,
-      "new_candidates": 0,
+      "candidates": 5,
+      "new_candidates": 1,
       "suppressed": 0,
       "warnings": []
     },
@@ -528,23 +596,25 @@
     {
       "monitor": "ODNI discovery",
       "kind": "discovery",
-      "ok": true,
-      "candidates": 5,
+      "ok": false,
+      "candidates": 0,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
-        "direct https://www.dni.gov/index.php/newsroom/reports-publications: 403 Client Error: Forbidden for url: https://www.dni.gov/index.php/newsroom/reports-publications"
+        "direct https://www.dni.gov/index.php/newsroom/reports-publications: 403 Client Error: Forbidden for url: https://www.dni.gov/index.php/newsroom/reports-publications",
+        "reader https://www.dni.gov/index.php/newsroom/reports-publications: 401 Client Error: Unauthorized for url: https://r.jina.ai/https://www.dni.gov/index.php/newsroom/reports-publications"
       ]
     },
     {
       "monitor": "International Crisis Group discovery",
       "kind": "discovery",
-      "ok": true,
-      "candidates": 7,
+      "ok": false,
+      "candidates": 0,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
-        "direct https://www.crisisgroup.org/latest-updates: 403 Client Error: Forbidden for url: https://www.crisisgroup.org/latest-updates"
+        "direct https://www.crisisgroup.org/latest-updates: 403 Client Error: Forbidden for url: https://www.crisisgroup.org/latest-updates",
+        "reader https://www.crisisgroup.org/latest-updates: 401 Client Error: Unauthorized for url: https://r.jina.ai/https://www.crisisgroup.org/latest-updates"
       ]
     },
     {
@@ -573,6 +643,7 @@
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
+        "reader https://www.mckinsey.com/capabilities/tech-and-ai/our-insights: 401 Client Error: Unauthorized for url: https://r.jina.ai/https://www.mckinsey.com/capabilities/tech-and-ai/our-insights",
         "direct https://www.mckinsey.com/capabilities/tech-and-ai/our-insights: HTTPSConnectionPool(host='www.mckinsey.com', port=443): Read timed out. (read timeout=22)"
       ]
     },
@@ -638,7 +709,8 @@
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
-        "direct https://www.iea.org/reports: 403 Client Error: Forbidden for url: https://www.iea.org/reports"
+        "direct https://www.iea.org/reports: 403 Client Error: Forbidden for url: https://www.iea.org/reports",
+        "reader https://www.iea.org/reports: 401 Client Error: Unauthorized for url: https://r.jina.ai/https://www.iea.org/reports"
       ]
     },
     {
@@ -649,17 +721,20 @@
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
-        "direct https://www.irena.org/Publications: 403 Client Error: Forbidden for url: https://www.irena.org/Publications"
+        "direct https://www.irena.org/Publications: 403 Client Error: Forbidden for url: https://www.irena.org/Publications",
+        "reader https://www.irena.org/Publications: 401 Client Error: Unauthorized for url: https://r.jina.ai/https://www.irena.org/Publications"
       ]
     },
     {
       "monitor": "Carbon Brief discovery",
       "kind": "discovery",
-      "ok": true,
-      "candidates": 1,
+      "ok": false,
+      "candidates": 0,
       "new_candidates": 0,
       "suppressed": 0,
-      "warnings": []
+      "warnings": [
+        "reader https://www.carbonbrief.org/: 401 Client Error: Unauthorized for url: https://r.jina.ai/https://www.carbonbrief.org/"
+      ]
     },
     {
       "monitor": "UN DESA Population Division discovery",
@@ -673,12 +748,13 @@
     {
       "monitor": "IOM discovery",
       "kind": "discovery",
-      "ok": true,
-      "candidates": 18,
+      "ok": false,
+      "candidates": 0,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
-        "direct https://publications.iom.int/: 403 Client Error: Forbidden for url: https://publications.iom.int/"
+        "direct https://publications.iom.int/: 403 Client Error: Forbidden for url: https://publications.iom.int/",
+        "reader https://publications.iom.int/: 401 Client Error: Unauthorized for url: https://r.jina.ai/https://publications.iom.int/"
       ]
     },
     {
@@ -689,18 +765,20 @@
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
+        "reader https://www.unhcr.org/publications: 401 Client Error: Unauthorized for url: https://r.jina.ai/https://www.unhcr.org/publications",
         "direct https://www.unhcr.org/publications: 403 Client Error: Forbidden for url: https://www.unhcr.org/publications"
       ]
     },
     {
       "monitor": "UNDP discovery",
       "kind": "discovery",
-      "ok": true,
-      "candidates": 10,
+      "ok": false,
+      "candidates": 0,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
-        "direct https://www.undp.org/publications: 403 Client Error: Forbidden for url: https://www.undp.org/publications"
+        "direct https://www.undp.org/publications: 403 Client Error: Forbidden for url: https://www.undp.org/publications",
+        "reader https://www.undp.org/publications: 401 Client Error: Unauthorized for url: https://r.jina.ai/https://www.undp.org/publications"
       ]
     },
     {
@@ -733,11 +811,13 @@
     {
       "monitor": "V-Dem Institute discovery",
       "kind": "discovery",
-      "ok": true,
-      "candidates": 3,
+      "ok": false,
+      "candidates": 0,
       "new_candidates": 0,
       "suppressed": 0,
-      "warnings": []
+      "warnings": [
+        "reader https://www.v-dem.net/publications/: 401 Client Error: Unauthorized for url: https://r.jina.ai/https://www.v-dem.net/publications/"
+      ]
     },
     {
       "monitor": "International IDEA discovery",
@@ -770,16 +850,18 @@
       "monitor": "Transparency International discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 41,
+      "candidates": 18,
       "new_candidates": 0,
       "suppressed": 0,
-      "warnings": []
+      "warnings": [
+        "reader https://www.transparency.org/en/publications: 401 Client Error: Unauthorized for url: https://r.jina.ai/https://www.transparency.org/en/publications"
+      ]
     },
     {
       "monitor": "Reporters Without Borders discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 6,
+      "candidates": 5,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
@@ -791,7 +873,9 @@
       "candidates": 0,
       "new_candidates": 0,
       "suppressed": 0,
-      "warnings": []
+      "warnings": [
+        "reader https://www.quantamagazine.org/: 401 Client Error: Unauthorized for url: https://r.jina.ai/https://www.quantamagazine.org/"
+      ]
     }
   ]
 }

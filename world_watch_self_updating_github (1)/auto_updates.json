@@ -1,11 +1,11 @@
 {
-  "last_checked": "2026-08-19T03:58:51.737790Z",
+  "last_checked": "2026-08-19T09:49:24.609029Z",
   "engine_version": "6.1",
   "monitor_count": 82,
   "flagship_series_count": 44,
   "discovery_source_count": 38,
   "new_items_this_run": 1,
-  "new_flagship_editions_this_run": 1,
+  "new_flagship_editions_this_run": 0,
   "migration_baseline": false,
   "updates": [
     {
@@ -22,6 +22,19 @@
       "edition": "September 2026",
       "previous_edition": "June 2026",
       "confidence": "high"
+    },
+    {
+      "id": "0eed95c967df3d",
+      "date": "2026-08-19",
+      "category": "Geopolitics & Security",
+      "source": "Munich Security Conference",
+      "title": "New Munich Security Analysis: Batteries Not Included",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://securityconference.org/en/publications/analyses/batteries-not-included-eu-strategic-raw-material-projects-global-south/",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "msc"
     },
     {
       "id": "ea2f4c322c9ad7",
