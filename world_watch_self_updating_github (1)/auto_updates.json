@@ -1,13 +1,28 @@
 {
-  "last_checked": "2026-08-18T21:38:02.821193Z",
+  "last_checked": "2026-08-19T03:58:51.737790Z",
   "engine_version": "6.1",
   "monitor_count": 82,
   "flagship_series_count": 44,
   "discovery_source_count": 38,
-  "new_items_this_run": 0,
-  "new_flagship_editions_this_run": 0,
+  "new_items_this_run": 1,
+  "new_flagship_editions_this_run": 1,
   "migration_baseline": false,
   "updates": [
+    {
+      "id": "42764591f2fb2e",
+      "date": "2026-08-19",
+      "category": "Economy & Political Economy",
+      "source": "OECD",
+      "title": "OECD Economic Outlook — September 2026",
+      "summary": "Edition-aware monitor detected a newer OECD Economic Outlook: September 2026, replacing June 2026.",
+      "url": "https://www.oecd.org/en/events/2026/09/launch-oecd-interim-economic-outlook.html",
+      "type": "Major flagship update",
+      "automatic": true,
+      "series_id": "oecd_eo",
+      "edition": "September 2026",
+      "previous_edition": "June 2026",
+      "confidence": "high"
+    },
     {
       "id": "ea2f4c322c9ad7",
       "date": "2026-08-18",
