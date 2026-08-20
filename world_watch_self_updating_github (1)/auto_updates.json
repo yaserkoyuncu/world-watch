@@ -1,13 +1,39 @@
 {
-  "last_checked": "2026-08-20T09:50:20.243708Z",
+  "last_checked": "2026-08-20T15:49:20.950721Z",
   "engine_version": "6.1",
   "monitor_count": 82,
   "flagship_series_count": 44,
   "discovery_source_count": 38,
-  "new_items_this_run": 0,
+  "new_items_this_run": 2,
   "new_flagship_editions_this_run": 0,
   "migration_baseline": false,
   "updates": [
+    {
+      "id": "303baad3ebaa2d",
+      "date": "2026-08-20",
+      "category": "Economy & Political Economy",
+      "source": "ILO",
+      "title": "Regional seminar: Trade, investment and decent work- fostering development in Asia-Pacific",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.ilo.org/meetings-and-events/regional-seminar-trade-investment-and-decent-work-fostering-development",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "ilo"
+    },
+    {
+      "id": "5fed13accff28d",
+      "date": "2026-08-20",
+      "category": "Economy & Political Economy",
+      "source": "World Economic Forum",
+      "title": "Climate Action and Waste Reduction",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.weforum.org/stories/climate-action/",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "wef"
+    },
     {
       "id": "42764591f2fb2e",
       "date": "2026-08-19",

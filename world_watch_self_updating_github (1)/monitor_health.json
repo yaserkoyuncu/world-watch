@@ -1,15 +1,15 @@
 {
-  "last_checked": "2026-08-20T09:50:20.243708Z",
+  "last_checked": "2026-08-20T15:49:20.950721Z",
   "engine_version": "6.1",
   "migration_baseline": false,
   "series": {
-    "ok": 41,
-    "failed": 3,
+    "ok": 42,
+    "failed": 2,
     "total": 44
   },
   "discovery": {
-    "ok": 29,
-    "failed": 9,
+    "ok": 30,
+    "failed": 8,
     "total": 38
   },
   "monitors": [
@@ -170,8 +170,14 @@
     {
       "monitor": "State of AI",
       "kind": "series",
-      "ok": false,
-      "error": "direct https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai/: HTTPSConnectionPool(host='www.mckinsey.com', port=443): Read timed out. (read timeout=22) | direct https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai: HTTPSConnectionPool(host='www.mckinsey.com', port=443): Read timed out. (read timeout=22)"
+      "ok": true,
+      "latest": "2025",
+      "url": "https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai",
+      "method": "reader-block",
+      "warnings": [
+        "direct https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai/: HTTPSConnectionPool(host='www.mckinsey.com', port=443): Read timed out. (read timeout=22)",
+        "direct https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai: HTTPSConnectionPool(host='www.mckinsey.com', port=443): Read timed out. (read timeout=22)"
+      ]
     },
     {
       "monitor": "Tech Trends",
@@ -264,7 +270,7 @@
       "ok": true,
       "latest": "2025",
       "url": "https://globalcarbonbudget.org/gcb-2025/",
-      "method": "direct-title",
+      "method": "reader-block",
       "warnings": []
     },
     {
@@ -399,8 +405,8 @@
       "kind": "series",
       "ok": true,
       "latest": "2025",
-      "url": "https://worldjusticeproject.org/rule-of-law-index/global/2025/wjp-index",
-      "method": "direct-title",
+      "url": "https://worldjusticeproject.org/rule-of-law-index/",
+      "method": "reader-block",
       "warnings": []
     },
     {
@@ -486,17 +492,17 @@
       "monitor": "ILO discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 14,
-      "new_candidates": 0,
+      "candidates": 15,
+      "new_candidates": 1,
       "suppressed": 0,
       "warnings": []
     },
     {
       "monitor": "World Economic Forum discovery",
       "kind": "discovery",
-      "ok": false,
-      "candidates": 0,
-      "new_candidates": 0,
+      "ok": true,
+      "candidates": 22,
+      "new_candidates": 1,
       "suppressed": 0,
       "warnings": [
         "direct https://www.weforum.org/publications/: 403 Client Error: Forbidden for url: https://www.weforum.org/publications/"
@@ -535,7 +541,7 @@
       "monitor": "International Crisis Group discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 8,
+      "candidates": 7,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
@@ -702,7 +708,7 @@
       "monitor": "WHO discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 8,
+      "candidates": 7,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
@@ -711,12 +717,10 @@
       "monitor": "FAO discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 2,
+      "candidates": 1,
       "new_candidates": 0,
       "suppressed": 0,
-      "warnings": [
-        "direct https://www.fao.org/publications/home/en: HTTPSConnectionPool(host='www.fao.org', port=443): Read timed out. (read timeout=22)"
-      ]
+      "warnings": []
     },
     {
       "monitor": "UNESCO discovery",
