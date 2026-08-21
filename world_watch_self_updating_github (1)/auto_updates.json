@@ -1,10 +1,10 @@
 {
-  "last_checked": "2026-08-21T09:52:48.581749Z",
+  "last_checked": "2026-08-21T15:48:39.611312Z",
   "engine_version": "6.1",
   "monitor_count": 82,
   "flagship_series_count": 44,
   "discovery_source_count": 38,
-  "new_items_this_run": 0,
+  "new_items_this_run": 3,
   "new_flagship_editions_this_run": 0,
   "migration_baseline": false,
   "updates": [
@@ -22,6 +22,45 @@
       "edition": "2026",
       "previous_edition": "2025",
       "confidence": "high"
+    },
+    {
+      "id": "8538fcb7cfbb92",
+      "date": "2026-08-21",
+      "category": "Economy & Political Economy",
+      "source": "OECD",
+      "title": "Density scenarios and urban expansion in Africa towards 2050",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.oecd.org/en/publications/density-scenarios-and-urban-expansion-in-africa-towards-2050_1dddc920-en.html",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "oecd"
+    },
+    {
+      "id": "8cd1eff302375c",
+      "date": "2026-08-21",
+      "category": "Economy & Political Economy",
+      "source": "ILO",
+      "title": "Employment impact assessment of Hurricane Melissa in Jamaica",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.ilo.org/publications/employment-impact-assessment-hurricane-melissa-jamaica",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "ilo"
+    },
+    {
+      "id": "485318883ef3c7",
+      "date": "2026-08-21",
+      "category": "Economy & Political Economy",
+      "source": "World Economic Forum",
+      "title": "The Catalysts: Unlocking Markets for a Sustainable Economy",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.weforum.org/publications/the-catalysts-unlocking-markets-for-a-sustainable-economy/",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "wef"
     },
     {
       "id": "303baad3ebaa2d",
