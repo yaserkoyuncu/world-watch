@@ -1,10 +1,10 @@
 {
-  "last_checked": "2026-08-22T03:56:44.227245Z",
+  "last_checked": "2026-08-22T09:42:28.721771Z",
   "engine_version": "6.1",
   "migration_baseline": false,
   "series": {
-    "ok": 42,
-    "failed": 2,
+    "ok": 41,
+    "failed": 3,
     "total": 44
   },
   "discovery": {
@@ -299,14 +299,8 @@
     {
       "monitor": "Global Trends",
       "kind": "series",
-      "ok": true,
-      "latest": "2026",
-      "url": "https://www.unhcr.org/global-trends",
-      "method": "reader-block",
-      "warnings": [
-        "direct https://www.unhcr.org/au/global-trends: 403 Client Error: Forbidden for url: https://www.unhcr.org/au/global-trends",
-        "direct https://www.unhcr.org/media/global-trends-2025-report: 403 Client Error: Forbidden for url: https://www.unhcr.org/media/global-trends-2025-report"
-      ]
+      "ok": false,
+      "error": "direct https://www.unhcr.org/au/global-trends: 403 Client Error: Forbidden for url: https://www.unhcr.org/au/global-trends | direct https://www.unhcr.org/media/global-trends-2025-report: 403 Client Error: Forbidden for url: https://www.unhcr.org/media/global-trends-2025-report | direct https://www.unhcr.org/global-trends: 403 Client Error: Forbidden for url: https://www.unhcr.org/global-trends"
     },
     {
       "monitor": "Human Development Report",
@@ -492,7 +486,7 @@
       "monitor": "ILO discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 15,
+      "candidates": 14,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
@@ -541,7 +535,7 @@
       "monitor": "International Crisis Group discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 7,
+      "candidates": 8,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
@@ -717,8 +711,8 @@
       "monitor": "FAO discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 1,
-      "new_candidates": 0,
+      "candidates": 5,
+      "new_candidates": 4,
       "suppressed": 0,
       "warnings": []
     },
