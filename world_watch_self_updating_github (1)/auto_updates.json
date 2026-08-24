@@ -1,13 +1,26 @@
 {
-  "last_checked": "2026-08-24T04:05:52.070584Z",
+  "last_checked": "2026-08-24T10:04:15.093847Z",
   "engine_version": "6.1",
   "monitor_count": 82,
   "flagship_series_count": 44,
   "discovery_source_count": 38,
-  "new_items_this_run": 0,
+  "new_items_this_run": 1,
   "new_flagship_editions_this_run": 0,
   "migration_baseline": false,
   "updates": [
+    {
+      "id": "c51108a32c921b",
+      "date": "2026-08-24",
+      "category": "Economy & Political Economy",
+      "source": "UNCTAD",
+      "title": "Commodities at a Glance: Palm oil trade at a crossroads 21 Aug 2026",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://unctad.org/publication/commodities-glance-palm-oil-trade-crossroads",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "unctad"
+    },
     {
       "id": "c50c4d30e0e4f8",
       "date": "2026-08-22",

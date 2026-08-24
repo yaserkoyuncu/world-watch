@@ -1,10 +1,10 @@
 {
-  "last_checked": "2026-08-24T04:05:52.070584Z",
+  "last_checked": "2026-08-24T10:04:15.093847Z",
   "engine_version": "6.1",
   "migration_baseline": false,
   "series": {
-    "ok": 41,
-    "failed": 3,
+    "ok": 42,
+    "failed": 2,
     "total": 44
   },
   "discovery": {
@@ -89,12 +89,9 @@
       "kind": "series",
       "ok": true,
       "latest": "2025",
-      "url": "https://unctad.org/publication/trade-and-development-report-2025",
-      "method": "official-url",
-      "warnings": [
-        "direct https://unctad.org/topic/macroeconomics/trade-development-report: 403 Client Error: Forbidden for url: https://unctad.org/topic/macroeconomics/trade-development-report",
-        "direct https://unctad.org/publication/trade-and-development-report-2025: 403 Client Error: Forbidden for url: https://unctad.org/publication/trade-and-development-report-2025"
-      ]
+      "url": "https://unctad.org/sites/default/files/styles/cover_image/public/2025-11/tdr2025_1000x1414.jpg?itok=BmZlJ0M2",
+      "method": "reader-link",
+      "warnings": []
     },
     {
       "monitor": "Global Trade Outlook and Statistics",
@@ -291,7 +288,7 @@
       "ok": true,
       "latest": "2026",
       "url": "https://worldmigrationreport.iom.int/msite/wmr-2026-interactive/",
-      "method": "reader-block",
+      "method": "official-url",
       "warnings": [
         "direct https://worldmigrationreport.iom.int/msite/wmr-2026-interactive/: 403 Client Error: Forbidden for url: https://worldmigrationreport.iom.int/msite/wmr-2026-interactive/"
       ]
@@ -299,8 +296,13 @@
     {
       "monitor": "Global Trends",
       "kind": "series",
-      "ok": false,
-      "error": "direct https://www.unhcr.org/au/global-trends: 403 Client Error: Forbidden for url: https://www.unhcr.org/au/global-trends | direct https://www.unhcr.org/media/global-trends-2025-report: 403 Client Error: Forbidden for url: https://www.unhcr.org/media/global-trends-2025-report | direct https://www.unhcr.org/global-trends: 403 Client Error: Forbidden for url: https://www.unhcr.org/global-trends"
+      "ok": true,
+      "latest": "2025",
+      "url": "https://www.unhcr.org/media/global-trends-2025-report",
+      "method": "reader-block",
+      "warnings": [
+        "direct https://www.unhcr.org/au/global-trends: 403 Client Error: Forbidden for url: https://www.unhcr.org/au/global-trends"
+      ]
     },
     {
       "monitor": "Human Development Report",
@@ -399,8 +401,8 @@
       "kind": "series",
       "ok": true,
       "latest": "2025",
-      "url": "https://worldjusticeproject.org/rule-of-law-index/",
-      "method": "reader-block",
+      "url": "https://worldjusticeproject.org/rule-of-law-index/global/2025/wjp-index",
+      "method": "direct-title",
       "warnings": []
     },
     {
@@ -464,14 +466,11 @@
     {
       "monitor": "UNCTAD discovery",
       "kind": "discovery",
-      "ok": false,
-      "candidates": 0,
-      "new_candidates": 0,
+      "ok": true,
+      "candidates": 27,
+      "new_candidates": 1,
       "suppressed": 0,
-      "warnings": [
-        "direct https://unctad.org/publications: 403 Client Error: Forbidden for url: https://unctad.org/publications",
-        "direct https://unctad.org/unctad-publications: 403 Client Error: Forbidden for url: https://unctad.org/unctad-publications"
-      ]
+      "warnings": []
     },
     {
       "monitor": "WTO discovery",
@@ -494,8 +493,8 @@
     {
       "monitor": "World Economic Forum discovery",
       "kind": "discovery",
-      "ok": true,
-      "candidates": 23,
+      "ok": false,
+      "candidates": 0,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
@@ -702,7 +701,7 @@
       "monitor": "WHO discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 7,
+      "candidates": 8,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
