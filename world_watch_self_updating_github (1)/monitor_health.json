@@ -1,5 +1,5 @@
 {
-  "last_checked": "2026-08-24T15:56:21.780251Z",
+  "last_checked": "2026-08-24T21:44:15.039843Z",
   "engine_version": "6.1",
   "migration_baseline": false,
   "series": {
@@ -8,8 +8,8 @@
     "total": 44
   },
   "discovery": {
-    "ok": 29,
-    "failed": 9,
+    "ok": 30,
+    "failed": 8,
     "total": 38
   },
   "monitors": [
@@ -91,7 +91,9 @@
       "latest": "2025",
       "url": "https://unctad.org/sites/default/files/styles/cover_image/public/2025-11/tdr2025_1000x1414.jpg?itok=BmZlJ0M2",
       "method": "reader-link",
-      "warnings": []
+      "warnings": [
+        "direct https://unctad.org/topic/macroeconomics/trade-development-report: HTTPSConnectionPool(host='unctad.org', port=443): Read timed out. (read timeout=22)"
+      ]
     },
     {
       "monitor": "Global Trade Outlook and Statistics",
@@ -288,7 +290,7 @@
       "ok": true,
       "latest": "2026",
       "url": "https://worldmigrationreport.iom.int/msite/wmr-2026-interactive/",
-      "method": "reader-block",
+      "method": "official-url",
       "warnings": [
         "direct https://worldmigrationreport.iom.int/msite/wmr-2026-interactive/: 403 Client Error: Forbidden for url: https://worldmigrationreport.iom.int/msite/wmr-2026-interactive/"
       ]
@@ -297,12 +299,11 @@
       "monitor": "Global Trends",
       "kind": "series",
       "ok": true,
-      "latest": "2026",
-      "url": "https://www.unhcr.org/global-trends",
+      "latest": "2025",
+      "url": "https://www.unhcr.org/media/global-trends-2025-report",
       "method": "reader-block",
       "warnings": [
-        "direct https://www.unhcr.org/au/global-trends: 403 Client Error: Forbidden for url: https://www.unhcr.org/au/global-trends",
-        "direct https://www.unhcr.org/media/global-trends-2025-report: 403 Client Error: Forbidden for url: https://www.unhcr.org/media/global-trends-2025-report"
+        "direct https://www.unhcr.org/au/global-trends: 403 Client Error: Forbidden for url: https://www.unhcr.org/au/global-trends"
       ]
     },
     {
@@ -411,8 +412,8 @@
       "kind": "series",
       "ok": true,
       "latest": "2025",
-      "url": "https://www.transparency.org/en/press/corruption-perceptions-index-2025-decline-leadership-undermining-global-fight",
-      "method": "reader-link",
+      "url": "https://www.transparency.org/en/cpi/2025",
+      "method": "reader-block",
       "warnings": []
     },
     {
@@ -460,7 +461,7 @@
       "kind": "discovery",
       "ok": true,
       "candidates": 10,
-      "new_candidates": 1,
+      "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
     },
@@ -516,7 +517,7 @@
       "kind": "discovery",
       "ok": true,
       "candidates": 12,
-      "new_candidates": 1,
+      "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
     },
@@ -563,11 +564,13 @@
     {
       "monitor": "McKinsey discovery",
       "kind": "discovery",
-      "ok": true,
-      "candidates": 30,
-      "new_candidates": 30,
+      "ok": false,
+      "candidates": 0,
+      "new_candidates": 0,
       "suppressed": 0,
-      "warnings": []
+      "warnings": [
+        "direct https://www.mckinsey.com/capabilities/tech-and-ai/our-insights: HTTPSConnectionPool(host='www.mckinsey.com', port=443): Read timed out. (read timeout=22)"
+      ]
     },
     {
       "monitor": "Deloitte discovery",
@@ -666,8 +669,8 @@
     {
       "monitor": "IOM discovery",
       "kind": "discovery",
-      "ok": false,
-      "candidates": 0,
+      "ok": true,
+      "candidates": 16,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
@@ -700,7 +703,7 @@
       "monitor": "WHO discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 7,
+      "candidates": 8,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
@@ -708,8 +711,8 @@
     {
       "monitor": "FAO discovery",
       "kind": "discovery",
-      "ok": false,
-      "candidates": 0,
+      "ok": true,
+      "candidates": 4,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
