@@ -1,10 +1,10 @@
 {
-  "last_checked": "2026-08-25T09:51:48.679615Z",
+  "last_checked": "2026-08-25T16:00:26.339122Z",
   "engine_version": "6.1",
   "monitor_count": 82,
   "flagship_series_count": 44,
   "discovery_source_count": 38,
-  "new_items_this_run": 0,
+  "new_items_this_run": 2,
   "new_flagship_editions_this_run": 0,
   "migration_baseline": false,
   "updates": [
@@ -22,6 +22,32 @@
       "edition": "2026",
       "previous_edition": "2025",
       "confidence": "high"
+    },
+    {
+      "id": "7c2eb3c63a9252",
+      "date": "2026-08-25",
+      "category": "Economy & Political Economy",
+      "source": "ILO",
+      "title": "Worker power and wage bargaining in the context of algorithmic control",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.ilo.org/meetings-and-events/worker-power-and-wage-bargaining-context-algorithmic-control",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "ilo"
+    },
+    {
+      "id": "2d3cc5a4ca110c",
+      "date": "2026-08-25",
+      "category": "Health, Food & Education",
+      "source": "WHO",
+      "title": "The health and social effects of nonmedical cannabis use: technical brief",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.who.int/publications/i/item/9789240123274",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "who"
     },
     {
       "id": "fbbe4063a3e969",

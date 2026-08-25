@@ -1,5 +1,5 @@
 {
-  "last_checked": "2026-08-25T09:51:48.679615Z",
+  "last_checked": "2026-08-25T16:00:26.339122Z",
   "engine_version": "6.1",
   "migration_baseline": false,
   "series": {
@@ -8,8 +8,8 @@
     "total": 44
   },
   "discovery": {
-    "ok": 29,
-    "failed": 9,
+    "ok": 28,
+    "failed": 10,
     "total": 38
   },
   "monitors": [
@@ -167,14 +167,8 @@
     {
       "monitor": "State of AI",
       "kind": "series",
-      "ok": true,
-      "latest": "2025",
-      "url": "https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai",
-      "method": "reader-block",
-      "warnings": [
-        "direct https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai/: HTTPSConnectionPool(host='www.mckinsey.com', port=443): Read timed out. (read timeout=22)",
-        "direct https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai: HTTPSConnectionPool(host='www.mckinsey.com', port=443): Read timed out. (read timeout=22)"
-      ]
+      "ok": false,
+      "error": "direct https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai/: HTTPSConnectionPool(host='www.mckinsey.com', port=443): Read timed out. (read timeout=22) | direct https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai: HTTPSConnectionPool(host='www.mckinsey.com', port=443): Read timed out. (read timeout=22)"
     },
     {
       "monitor": "Tech Trends",
@@ -359,8 +353,11 @@
     {
       "monitor": "Global Education Monitoring Report",
       "kind": "series",
-      "ok": false,
-      "error": "No valid edition match"
+      "ok": true,
+      "latest": "2026",
+      "url": "https://www.unesco.org/gem-report/sites/default/files/styles/banner_mobile/public/2026-03/cover%20image%20web.jpg.webp?itok=O_g9oZz8",
+      "method": "reader-link",
+      "warnings": []
     },
     {
       "monitor": "Global Multidimensional Poverty Index",
@@ -462,7 +459,7 @@
       "monitor": "BIS discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 10,
+      "candidates": 9,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
@@ -489,16 +486,16 @@
       "monitor": "ILO discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 14,
-      "new_candidates": 0,
+      "candidates": 15,
+      "new_candidates": 1,
       "suppressed": 0,
       "warnings": []
     },
     {
       "monitor": "World Economic Forum discovery",
       "kind": "discovery",
-      "ok": true,
-      "candidates": 23,
+      "ok": false,
+      "candidates": 0,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
@@ -538,7 +535,7 @@
       "monitor": "International Crisis Group discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 8,
+      "candidates": 7,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
@@ -671,8 +668,8 @@
     {
       "monitor": "IOM discovery",
       "kind": "discovery",
-      "ok": true,
-      "candidates": 16,
+      "ok": false,
+      "candidates": 0,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
@@ -705,8 +702,8 @@
       "monitor": "WHO discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 8,
-      "new_candidates": 0,
+      "candidates": 7,
+      "new_candidates": 1,
       "suppressed": 0,
       "warnings": []
     },
@@ -714,7 +711,7 @@
       "monitor": "FAO discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 4,
+      "candidates": 1,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
@@ -722,8 +719,8 @@
     {
       "monitor": "UNESCO discovery",
       "kind": "discovery",
-      "ok": false,
-      "candidates": 0,
+      "ok": true,
+      "candidates": 2,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
