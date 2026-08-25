@@ -1,13 +1,28 @@
 {
-  "last_checked": "2026-08-25T16:00:26.339122Z",
+  "last_checked": "2026-08-25T21:44:15.965744Z",
   "engine_version": "6.1",
   "monitor_count": 82,
   "flagship_series_count": 44,
   "discovery_source_count": 38,
-  "new_items_this_run": 2,
-  "new_flagship_editions_this_run": 0,
+  "new_items_this_run": 1,
+  "new_flagship_editions_this_run": 1,
   "migration_baseline": false,
   "updates": [
+    {
+      "id": "63f21844a93c12",
+      "date": "2026-08-25",
+      "category": "Technology & AI",
+      "source": "McKinsey",
+      "title": "State of AI — 2026",
+      "summary": "Edition-aware monitor detected a newer State of AI: 2026, replacing 2025.",
+      "url": "https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai",
+      "type": "New flagship edition",
+      "automatic": true,
+      "series_id": "mck_ai",
+      "edition": "2026",
+      "previous_edition": "2025",
+      "confidence": "high"
+    },
     {
       "id": "ea2f4c322c9ad7",
       "date": "2026-08-25",
