@@ -1,10 +1,10 @@
 {
-  "last_checked": "2026-08-25T03:59:56.913323Z",
+  "last_checked": "2026-08-25T09:51:48.679615Z",
   "engine_version": "6.1",
   "migration_baseline": false,
   "series": {
-    "ok": 43,
-    "failed": 1,
+    "ok": 42,
+    "failed": 2,
     "total": 44
   },
   "discovery": {
@@ -183,9 +183,7 @@
       "latest": "2026",
       "url": "https://www.deloitte.com/us/en/insights/topics/technology-management/tech-trends.html",
       "method": "direct-title",
-      "warnings": [
-        "reader https://www.deloitte.com/us/en/insights/topics/technology-management/tech-trends.html: 403 Client Error: Forbidden for url: https://r.jina.ai/https://www.deloitte.com/us/en/insights/topics/technology-managem"
-      ]
+      "warnings": []
     },
     {
       "monitor": "Global Tech Report",
@@ -269,7 +267,7 @@
       "ok": true,
       "latest": "2025",
       "url": "https://globalcarbonbudget.org/gcb-2025/",
-      "method": "official-url",
+      "method": "direct-title",
       "warnings": []
     },
     {
@@ -361,11 +359,8 @@
     {
       "monitor": "Global Education Monitoring Report",
       "kind": "series",
-      "ok": true,
-      "latest": "2026",
-      "url": "https://www.unesco.org/gem-report/sites/default/files/styles/banner_mobile/public/2026-03/cover%20image%20web.jpg.webp?itok=O_g9oZz8",
-      "method": "reader-link",
-      "warnings": []
+      "ok": false,
+      "error": "No valid edition match"
     },
     {
       "monitor": "Global Multidimensional Poverty Index",
@@ -410,8 +405,8 @@
       "kind": "series",
       "ok": true,
       "latest": "2025",
-      "url": "https://worldjusticeproject.org/rule-of-law-index/",
-      "method": "reader-block",
+      "url": "https://worldjusticeproject.org/rule-of-law-index/global/2025/wjp-index",
+      "method": "direct-title",
       "warnings": []
     },
     {
@@ -419,8 +414,8 @@
       "kind": "series",
       "ok": true,
       "latest": "2025",
-      "url": "https://www.transparency.org/en/press/corruption-perceptions-index-2025-decline-leadership-undermining-global-fight",
-      "method": "reader-link",
+      "url": "https://www.transparency.org/en/cpi/2025",
+      "method": "reader-block",
       "warnings": []
     },
     {
@@ -543,7 +538,7 @@
       "monitor": "International Crisis Group discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 7,
+      "candidates": 8,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
@@ -718,8 +713,8 @@
     {
       "monitor": "FAO discovery",
       "kind": "discovery",
-      "ok": false,
-      "candidates": 0,
+      "ok": true,
+      "candidates": 4,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
@@ -727,8 +722,8 @@
     {
       "monitor": "UNESCO discovery",
       "kind": "discovery",
-      "ok": true,
-      "candidates": 2,
+      "ok": false,
+      "candidates": 0,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
