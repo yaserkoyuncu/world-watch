@@ -1,10 +1,10 @@
 {
-  "last_checked": "2026-08-25T21:44:15.965744Z",
+  "last_checked": "2026-08-26T04:03:27.318744Z",
   "engine_version": "6.1",
   "migration_baseline": false,
   "series": {
-    "ok": 41,
-    "failed": 3,
+    "ok": 43,
+    "failed": 1,
     "total": 44
   },
   "discovery": {
@@ -67,8 +67,13 @@
     {
       "monitor": "OECD Economic Outlook",
       "kind": "series",
-      "ok": false,
-      "error": "direct https://www.oecd.org/en/topics/economic-outlook.html: 403 Client Error: Forbidden for url: https://www.oecd.org/en/topics/economic-outlook.html | reader https://www.oecd.org/en/topics/economic-outlook.html: 403 Client Error: Forbidden for url: https://r.jina.ai/https://www.oecd.org/en/topics/economic-outlook.html"
+      "ok": true,
+      "latest": "June 2026",
+      "url": "https://www.oecd.org/en/topics/economic-outlook.html",
+      "method": "reader-block",
+      "warnings": [
+        "direct https://www.oecd.org/en/topics/economic-outlook.html: 403 Client Error: Forbidden for url: https://www.oecd.org/en/topics/economic-outlook.html"
+      ]
     },
     {
       "monitor": "Annual Economic Report",
@@ -299,8 +304,13 @@
     {
       "monitor": "Global Trends",
       "kind": "series",
-      "ok": false,
-      "error": "direct https://www.unhcr.org/au/global-trends: 403 Client Error: Forbidden for url: https://www.unhcr.org/au/global-trends | direct https://www.unhcr.org/media/global-trends-2025-report: 403 Client Error: Forbidden for url: https://www.unhcr.org/media/global-trends-2025-report | direct https://www.unhcr.org/global-trends: 403 Client Error: Forbidden for url: https://www.unhcr.org/global-trends"
+      "ok": true,
+      "latest": "2025",
+      "url": "https://www.unhcr.org/media/global-trends-2025-report",
+      "method": "reader-block",
+      "warnings": [
+        "direct https://www.unhcr.org/au/global-trends: 403 Client Error: Forbidden for url: https://www.unhcr.org/au/global-trends"
+      ]
     },
     {
       "monitor": "Human Development Report",
@@ -449,8 +459,7 @@
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
-        "direct https://www.oecd.org/en/publications.html: 403 Client Error: Forbidden for url: https://www.oecd.org/en/publications.html",
-        "reader https://www.oecd.org/en/publications.html: 403 Client Error: Forbidden for url: https://r.jina.ai/https://www.oecd.org/en/publications.html"
+        "direct https://www.oecd.org/en/publications.html: 403 Client Error: Forbidden for url: https://www.oecd.org/en/publications.html"
       ]
     },
     {
@@ -466,10 +475,12 @@
       "monitor": "UNCTAD discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 27,
-      "new_candidates": 0,
-      "suppressed": 0,
-      "warnings": []
+      "candidates": 43,
+      "new_candidates": 29,
+      "suppressed": 29,
+      "warnings": [
+        "direct https://unctad.org/publications: HTTPSConnectionPool(host='unctad.org', port=443): Read timed out. (read timeout=22)"
+      ]
     },
     {
       "monitor": "WTO discovery",
@@ -493,7 +504,7 @@
       "monitor": "World Economic Forum discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 23,
+      "candidates": 12,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
