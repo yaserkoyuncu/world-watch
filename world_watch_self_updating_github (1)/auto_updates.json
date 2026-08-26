@@ -1,13 +1,28 @@
 {
-  "last_checked": "2026-08-26T04:03:27.318744Z",
+  "last_checked": "2026-08-26T09:57:15.009076Z",
   "engine_version": "6.1",
   "monitor_count": 82,
   "flagship_series_count": 44,
   "discovery_source_count": 38,
-  "new_items_this_run": 0,
-  "new_flagship_editions_this_run": 0,
+  "new_items_this_run": 1,
+  "new_flagship_editions_this_run": 1,
   "migration_baseline": false,
   "updates": [
+    {
+      "id": "7be008143ae74a",
+      "date": "2026-08-26",
+      "category": "Economy & Political Economy",
+      "source": "IMF",
+      "title": "Global Financial Stability Report — July 2026",
+      "summary": "Edition-aware monitor detected a newer Global Financial Stability Report: July 2026, replacing April 2026.",
+      "url": "https://www.imf.org/en/publications/gfsr/issues/2026/04/14/global-financial-stability-report-april-2026",
+      "type": "Major flagship update",
+      "automatic": true,
+      "series_id": "imf_gfsr",
+      "edition": "July 2026",
+      "previous_edition": "April 2026",
+      "confidence": "high"
+    },
     {
       "id": "63f21844a93c12",
       "date": "2026-08-25",

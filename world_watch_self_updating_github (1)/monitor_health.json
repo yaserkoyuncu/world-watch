@@ -1,10 +1,10 @@
 {
-  "last_checked": "2026-08-26T04:03:27.318744Z",
+  "last_checked": "2026-08-26T09:57:15.009076Z",
   "engine_version": "6.1",
   "migration_baseline": false,
   "series": {
-    "ok": 43,
-    "failed": 1,
+    "ok": 42,
+    "failed": 2,
     "total": 44
   },
   "discovery": {
@@ -28,9 +28,9 @@
       "monitor": "Global Financial Stability Report",
       "kind": "series",
       "ok": true,
-      "latest": "April 2026",
+      "latest": "July 2026",
       "url": "https://www.imf.org/en/publications/gfsr/issues/2026/04/14/global-financial-stability-report-april-2026",
-      "method": "official-url",
+      "method": "reader-block",
       "warnings": [
         "direct https://www.imf.org/en/publications: 403 Client Error: Forbidden for url: https://www.imf.org/en/publications"
       ]
@@ -226,11 +226,9 @@
       "kind": "series",
       "ok": true,
       "latest": "2025",
-      "url": "https://www.unep.org/events/publication-launch/emissions-gap-report-2025-launch",
-      "method": "reader-link",
-      "warnings": [
-        "direct https://www.unep.org/resources/emissions-gap-report-2025: HTTPSConnectionPool(host='www.unep.org', port=443): Read timed out. (read timeout=22)"
-      ]
+      "url": "https://www.unep.org/resources/emissions-gap-report-2025",
+      "method": "direct-title",
+      "warnings": []
     },
     {
       "monitor": "Adaptation Gap Report",
@@ -304,13 +302,8 @@
     {
       "monitor": "Global Trends",
       "kind": "series",
-      "ok": true,
-      "latest": "2025",
-      "url": "https://www.unhcr.org/media/global-trends-2025-report",
-      "method": "reader-block",
-      "warnings": [
-        "direct https://www.unhcr.org/au/global-trends: 403 Client Error: Forbidden for url: https://www.unhcr.org/au/global-trends"
-      ]
+      "ok": false,
+      "error": "direct https://www.unhcr.org/au/global-trends: 403 Client Error: Forbidden for url: https://www.unhcr.org/au/global-trends | direct https://www.unhcr.org/media/global-trends-2025-report: 403 Client Error: Forbidden for url: https://www.unhcr.org/media/global-trends-2025-report | direct https://www.unhcr.org/global-trends: 403 Client Error: Forbidden for url: https://www.unhcr.org/global-trends"
     },
     {
       "monitor": "Human Development Report",
@@ -409,8 +402,8 @@
       "kind": "series",
       "ok": true,
       "latest": "2025",
-      "url": "https://worldjusticeproject.org/rule-of-law-index/",
-      "method": "reader-block",
+      "url": "https://worldjusticeproject.org/rule-of-law-index/global/2025/wjp-index",
+      "method": "direct-title",
       "warnings": []
     },
     {
@@ -475,12 +468,10 @@
       "monitor": "UNCTAD discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 43,
-      "new_candidates": 29,
-      "suppressed": 29,
-      "warnings": [
-        "direct https://unctad.org/publications: HTTPSConnectionPool(host='unctad.org', port=443): Read timed out. (read timeout=22)"
-      ]
+      "candidates": 27,
+      "new_candidates": 0,
+      "suppressed": 0,
+      "warnings": []
     },
     {
       "monitor": "WTO discovery",
@@ -504,7 +495,7 @@
       "monitor": "World Economic Forum discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 12,
+      "candidates": 23,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
@@ -620,7 +611,7 @@
       "monitor": "WMO discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 29,
+      "candidates": 28,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
