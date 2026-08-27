@@ -1,13 +1,26 @@
 {
-  "last_checked": "2026-08-26T16:34:12.126594Z",
+  "last_checked": "2026-08-27T00:47:43.381597Z",
   "engine_version": "6.1",
   "monitor_count": 82,
   "flagship_series_count": 44,
   "discovery_source_count": 38,
-  "new_items_this_run": 0,
+  "new_items_this_run": 1,
   "new_flagship_editions_this_run": 0,
   "migration_baseline": false,
   "updates": [
+    {
+      "id": "df5ccafc73c96b",
+      "date": "2026-08-27",
+      "category": "Health, Food & Education",
+      "source": "WHO",
+      "title": "Health financing progress matrix assessment, Malawi 2025: summary of findings and recommendations",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.who.int/publications/i/item/9789290315957",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "who"
+    },
     {
       "id": "7be008143ae74a",
       "date": "2026-08-26",
