@@ -1,15 +1,15 @@
 {
-  "last_checked": "2026-08-27T00:47:43.381597Z",
+  "last_checked": "2026-08-27T14:12:41.827793Z",
   "engine_version": "6.1",
   "migration_baseline": false,
   "series": {
-    "ok": 43,
-    "failed": 1,
+    "ok": 41,
+    "failed": 3,
     "total": 44
   },
   "discovery": {
-    "ok": 30,
-    "failed": 8,
+    "ok": 27,
+    "failed": 11,
     "total": 38
   },
   "monitors": [
@@ -105,11 +105,8 @@
     {
       "monitor": "Employment and Social Trends",
       "kind": "series",
-      "ok": true,
-      "latest": "May 2026",
-      "url": "https://www.ilo.org/research-and-publications",
-      "method": "reader-block",
-      "warnings": []
+      "ok": false,
+      "error": "direct https://www.ilo.org/publications/flagship-reports/employment-and-social-trends-2026: 403 Client Error: Forbidden for url: https://www.ilo.org/publications/flagship-reports/employment-and-social-trends-2026 | direct https://www.ilo.org/research-and-publications: 403 Client Error: Forbidden for url: https://www.ilo.org/research-and-publications"
     },
     {
       "monitor": "Global Risks Report",
@@ -302,13 +299,8 @@
     {
       "monitor": "Global Trends",
       "kind": "series",
-      "ok": true,
-      "latest": "2025",
-      "url": "https://www.unhcr.org/media/global-trends-2025-report",
-      "method": "reader-block",
-      "warnings": [
-        "direct https://www.unhcr.org/au/global-trends: 403 Client Error: Forbidden for url: https://www.unhcr.org/au/global-trends"
-      ]
+      "ok": false,
+      "error": "direct https://www.unhcr.org/au/global-trends: 403 Client Error: Forbidden for url: https://www.unhcr.org/au/global-trends | direct https://www.unhcr.org/media/global-trends-2025-report: 403 Client Error: Forbidden for url: https://www.unhcr.org/media/global-trends-2025-report | direct https://www.unhcr.org/global-trends: 403 Client Error: Forbidden for url: https://www.unhcr.org/global-trends"
     },
     {
       "monitor": "Human Development Report",
@@ -472,11 +464,14 @@
     {
       "monitor": "UNCTAD discovery",
       "kind": "discovery",
-      "ok": true,
-      "candidates": 27,
+      "ok": false,
+      "candidates": 0,
       "new_candidates": 0,
       "suppressed": 0,
-      "warnings": []
+      "warnings": [
+        "direct https://unctad.org/publications: 403 Client Error: Forbidden for url: https://unctad.org/publications",
+        "direct https://unctad.org/unctad-publications: 403 Client Error: Forbidden for url: https://unctad.org/unctad-publications"
+      ]
     },
     {
       "monitor": "WTO discovery",
@@ -490,18 +485,20 @@
     {
       "monitor": "ILO discovery",
       "kind": "discovery",
-      "ok": true,
-      "candidates": 15,
+      "ok": false,
+      "candidates": 0,
       "new_candidates": 0,
       "suppressed": 0,
-      "warnings": []
+      "warnings": [
+        "direct https://www.ilo.org/research-and-publications: 403 Client Error: Forbidden for url: https://www.ilo.org/research-and-publications"
+      ]
     },
     {
       "monitor": "World Economic Forum discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 22,
-      "new_candidates": 0,
+      "candidates": 23,
+      "new_candidates": 1,
       "suppressed": 0,
       "warnings": [
         "direct https://www.weforum.org/publications/: 403 Client Error: Forbidden for url: https://www.weforum.org/publications/"
@@ -520,8 +517,8 @@
       "monitor": "SIPRI discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 12,
-      "new_candidates": 0,
+      "candidates": 9,
+      "new_candidates": 3,
       "suppressed": 0,
       "warnings": []
     },
@@ -540,7 +537,7 @@
       "monitor": "International Crisis Group discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 8,
+      "candidates": 7,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
@@ -616,7 +613,7 @@
       "monitor": "WMO discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 27,
+      "candidates": 29,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
@@ -675,7 +672,7 @@
       "kind": "discovery",
       "ok": true,
       "candidates": 16,
-      "new_candidates": 0,
+      "new_candidates": 1,
       "suppressed": 0,
       "warnings": [
         "direct https://publications.iom.int/: 403 Client Error: Forbidden for url: https://publications.iom.int/"
@@ -696,7 +693,7 @@
       "monitor": "UNDP discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 9,
+      "candidates": 8,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
@@ -708,18 +705,21 @@
       "kind": "discovery",
       "ok": true,
       "candidates": 8,
-      "new_candidates": 1,
+      "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
     },
     {
       "monitor": "FAO discovery",
       "kind": "discovery",
-      "ok": true,
-      "candidates": 1,
+      "ok": false,
+      "candidates": 0,
       "new_candidates": 0,
       "suppressed": 0,
-      "warnings": []
+      "warnings": [
+        "direct https://www.fao.org/publications/home/en: HTTPSConnectionPool(host='www.fao.org', port=443): Read timed out. (read timeout=22)",
+        "reader https://www.fao.org/publications/home/en: HTTPSConnectionPool(host='r.jina.ai', port=443): Read timed out. (read timeout=30)"
+      ]
     },
     {
       "monitor": "UNESCO discovery",
