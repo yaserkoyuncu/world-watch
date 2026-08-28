@@ -1,13 +1,26 @@
 {
-  "last_checked": "2026-08-28T00:25:12.291942Z",
+  "last_checked": "2026-08-28T15:23:04.852690Z",
   "engine_version": "6.1",
   "monitor_count": 82,
   "flagship_series_count": 44,
   "discovery_source_count": 38,
-  "new_items_this_run": 0,
+  "new_items_this_run": 1,
   "new_flagship_editions_this_run": 0,
   "migration_baseline": false,
   "updates": [
+    {
+      "id": "bfdf1e9a0ce2bd",
+      "date": "2026-08-28",
+      "category": "Demography & Society",
+      "source": "IOM",
+      "title": "Informe sobre las Migraciones en el Mundo 2026: Capítulo 8 - Discapacidad y migración: tendencias, problemáticas y respuestas",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://publications.iom.int/books/informe-sobre-las-migraciones-en-el-mundo-2026-capitulo-8",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "iom"
+    },
     {
       "id": "25fbde89fab0c2",
       "date": "2026-08-27",
