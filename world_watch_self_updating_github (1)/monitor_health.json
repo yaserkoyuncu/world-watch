@@ -1,15 +1,15 @@
 {
-  "last_checked": "2026-08-27T14:12:41.827793Z",
+  "last_checked": "2026-08-28T00:25:12.291942Z",
   "engine_version": "6.1",
   "migration_baseline": false,
   "series": {
-    "ok": 41,
-    "failed": 3,
+    "ok": 42,
+    "failed": 2,
     "total": 44
   },
   "discovery": {
-    "ok": 27,
-    "failed": 11,
+    "ok": 29,
+    "failed": 9,
     "total": 38
   },
   "monitors": [
@@ -89,9 +89,12 @@
       "kind": "series",
       "ok": true,
       "latest": "2025",
-      "url": "https://unctad.org/sites/default/files/styles/cover_image/public/2025-11/tdr2025_1000x1414.jpg?itok=BmZlJ0M2",
-      "method": "reader-link",
-      "warnings": []
+      "url": "https://unctad.org/publication/trade-and-development-report-2025",
+      "method": "official-url",
+      "warnings": [
+        "direct https://unctad.org/topic/macroeconomics/trade-development-report: 403 Client Error: Forbidden for url: https://unctad.org/topic/macroeconomics/trade-development-report",
+        "direct https://unctad.org/publication/trade-and-development-report-2025: 403 Client Error: Forbidden for url: https://unctad.org/publication/trade-and-development-report-2025"
+      ]
     },
     {
       "monitor": "Global Trade Outlook and Statistics",
@@ -105,8 +108,14 @@
     {
       "monitor": "Employment and Social Trends",
       "kind": "series",
-      "ok": false,
-      "error": "direct https://www.ilo.org/publications/flagship-reports/employment-and-social-trends-2026: 403 Client Error: Forbidden for url: https://www.ilo.org/publications/flagship-reports/employment-and-social-trends-2026 | direct https://www.ilo.org/research-and-publications: 403 Client Error: Forbidden for url: https://www.ilo.org/research-and-publications"
+      "ok": true,
+      "latest": "May 2026",
+      "url": "https://www.ilo.org/research-and-publications",
+      "method": "reader-block",
+      "warnings": [
+        "direct https://www.ilo.org/publications/flagship-reports/employment-and-social-trends-2026: 403 Client Error: Forbidden for url: https://www.ilo.org/publications/flagship-reports/employment-and-social-trends-2026",
+        "direct https://www.ilo.org/research-and-publications: 403 Client Error: Forbidden for url: https://www.ilo.org/research-and-publications"
+      ]
     },
     {
       "monitor": "Global Risks Report",
@@ -485,10 +494,10 @@
     {
       "monitor": "ILO discovery",
       "kind": "discovery",
-      "ok": false,
-      "candidates": 0,
-      "new_candidates": 0,
-      "suppressed": 0,
+      "ok": true,
+      "candidates": 21,
+      "new_candidates": 10,
+      "suppressed": 10,
       "warnings": [
         "direct https://www.ilo.org/research-and-publications: 403 Client Error: Forbidden for url: https://www.ilo.org/research-and-publications"
       ]
@@ -498,7 +507,7 @@
       "kind": "discovery",
       "ok": true,
       "candidates": 23,
-      "new_candidates": 1,
+      "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
         "direct https://www.weforum.org/publications/: 403 Client Error: Forbidden for url: https://www.weforum.org/publications/"
@@ -518,7 +527,7 @@
       "kind": "discovery",
       "ok": true,
       "candidates": 9,
-      "new_candidates": 3,
+      "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
     },
@@ -672,7 +681,7 @@
       "kind": "discovery",
       "ok": true,
       "candidates": 16,
-      "new_candidates": 1,
+      "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
         "direct https://publications.iom.int/: 403 Client Error: Forbidden for url: https://publications.iom.int/"
@@ -712,14 +721,11 @@
     {
       "monitor": "FAO discovery",
       "kind": "discovery",
-      "ok": false,
-      "candidates": 0,
+      "ok": true,
+      "candidates": 1,
       "new_candidates": 0,
       "suppressed": 0,
-      "warnings": [
-        "direct https://www.fao.org/publications/home/en: HTTPSConnectionPool(host='www.fao.org', port=443): Read timed out. (read timeout=22)",
-        "reader https://www.fao.org/publications/home/en: HTTPSConnectionPool(host='r.jina.ai', port=443): Read timed out. (read timeout=30)"
-      ]
+      "warnings": []
     },
     {
       "monitor": "UNESCO discovery",
