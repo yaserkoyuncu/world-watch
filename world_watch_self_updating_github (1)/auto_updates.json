@@ -1,5 +1,5 @@
 {
-  "last_checked": "2026-08-28T15:23:04.852690Z",
+  "last_checked": "2026-08-29T03:10:42.456062Z",
   "engine_version": "6.1",
   "monitor_count": 82,
   "flagship_series_count": 44,
@@ -8,6 +8,19 @@
   "new_flagship_editions_this_run": 0,
   "migration_baseline": false,
   "updates": [
+    {
+      "id": "247928951164db",
+      "date": "2026-08-29",
+      "category": "Economy & Political Economy",
+      "source": "BIS",
+      "title": "Pushing the monetary frontier: stablecoins and tokenised deposits",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.bis.org/speeches/sp260828.htm",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "bis"
+    },
     {
       "id": "bfdf1e9a0ce2bd",
       "date": "2026-08-28",
