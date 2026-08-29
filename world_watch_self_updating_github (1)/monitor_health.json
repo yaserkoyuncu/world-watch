@@ -1,15 +1,15 @@
 {
-  "last_checked": "2026-08-29T10:04:58.584867Z",
+  "last_checked": "2026-08-29T18:30:42.929382Z",
   "engine_version": "6.1",
   "migration_baseline": false,
   "series": {
-    "ok": 40,
-    "failed": 4,
+    "ok": 42,
+    "failed": 2,
     "total": 44
   },
   "discovery": {
-    "ok": 26,
-    "failed": 12,
+    "ok": 27,
+    "failed": 11,
     "total": 38
   },
   "monitors": [
@@ -40,8 +40,8 @@
       "kind": "series",
       "ok": true,
       "latest": "April 2026",
-      "url": "https://www.imf.org/en/publications/fm/issues/2026/04/15/fiscal-monitor-april-2026",
-      "method": "official-url",
+      "url": "https://www.imf.org/en/publications/fm/issues/2026/04/15/fiscal-monitor-april-2026#Chapters",
+      "method": "reader-link",
       "warnings": [
         "direct https://www.imf.org/en/publications: 403 Client Error: Forbidden for url: https://www.imf.org/en/publications"
       ]
@@ -170,8 +170,14 @@
     {
       "monitor": "State of AI",
       "kind": "series",
-      "ok": false,
-      "error": "direct https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai/: HTTPSConnectionPool(host='www.mckinsey.com', port=443): Read timed out. (read timeout=22) | direct https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai: HTTPSConnectionPool(host='www.mckinsey.com', port=443): Read timed out. (read timeout=22)"
+      "ok": true,
+      "latest": "2026",
+      "url": "https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai",
+      "method": "reader-block",
+      "warnings": [
+        "direct https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai/: HTTPSConnectionPool(host='www.mckinsey.com', port=443): Read timed out. (read timeout=22)",
+        "direct https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai: HTTPSConnectionPool(host='www.mckinsey.com', port=443): Read timed out. (read timeout=22)"
+      ]
     },
     {
       "monitor": "Tech Trends",
@@ -291,7 +297,7 @@
       "ok": true,
       "latest": "2026",
       "url": "https://worldmigrationreport.iom.int/msite/wmr-2026-interactive/",
-      "method": "reader-block",
+      "method": "official-url",
       "warnings": [
         "direct https://worldmigrationreport.iom.int/msite/wmr-2026-interactive/: 403 Client Error: Forbidden for url: https://worldmigrationreport.iom.int/msite/wmr-2026-interactive/"
       ]
@@ -350,8 +356,11 @@
     {
       "monitor": "Global Education Monitoring Report",
       "kind": "series",
-      "ok": false,
-      "error": "direct https://www.unesco.org/gem-report/en/publication/equity-and-access: 500 Server Error: 500 Service unavailable (with message) for url: https://www.unesco.org/gem-report/en/publication/equit"
+      "ok": true,
+      "latest": "2026",
+      "url": "https://www.unesco.org/gem-report/sites/default/files/styles/banner_mobile/public/2026-03/cover%20image%20web.jpg.webp?itok=O_g9oZz8",
+      "method": "reader-link",
+      "warnings": []
     },
     {
       "monitor": "Global Multidimensional Poverty Index",
@@ -396,8 +405,8 @@
       "kind": "series",
       "ok": true,
       "latest": "2025",
-      "url": "https://worldjusticeproject.org/rule-of-law-index/",
-      "method": "reader-block",
+      "url": "https://worldjusticeproject.org/rule-of-law-index/global/2025/wjp-index",
+      "method": "direct-title",
       "warnings": []
     },
     {
@@ -405,8 +414,8 @@
       "kind": "series",
       "ok": true,
       "latest": "2025",
-      "url": "https://www.transparency.org/en/press/corruption-perceptions-index-2025-decline-leadership-undermining-global-fight",
-      "method": "reader-link",
+      "url": "https://www.transparency.org/en/cpi/2025",
+      "method": "reader-block",
       "warnings": []
     },
     {
@@ -454,8 +463,8 @@
       "kind": "discovery",
       "ok": true,
       "candidates": 20,
-      "new_candidates": 20,
-      "suppressed": 20,
+      "new_candidates": 0,
+      "suppressed": 0,
       "warnings": []
     },
     {
@@ -532,7 +541,7 @@
       "monitor": "International Crisis Group discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 8,
+      "candidates": 7,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
@@ -716,13 +725,11 @@
     {
       "monitor": "UNESCO discovery",
       "kind": "discovery",
-      "ok": false,
-      "candidates": 0,
+      "ok": true,
+      "candidates": 2,
       "new_candidates": 0,
       "suppressed": 0,
-      "warnings": [
-        "direct https://www.unesco.org/en/publications: 500 Server Error: 500 Service unavailable (with message) for url: https://www.unesco.org/en/publications"
-      ]
+      "warnings": []
     },
     {
       "monitor": "V-Dem Institute discovery",
