@@ -1,5 +1,5 @@
 {
-  "last_checked": "2026-08-30T18:38:32.754266Z",
+  "last_checked": "2026-08-30T23:30:11.767421Z",
   "engine_version": "6.1",
   "migration_baseline": false,
   "series": {
@@ -291,7 +291,7 @@
       "ok": true,
       "latest": "2026",
       "url": "https://worldmigrationreport.iom.int/msite/wmr-2026-interactive/",
-      "method": "reader-block",
+      "method": "official-url",
       "warnings": [
         "direct https://worldmigrationreport.iom.int/msite/wmr-2026-interactive/: 403 Client Error: Forbidden for url: https://worldmigrationreport.iom.int/msite/wmr-2026-interactive/"
       ]
@@ -535,7 +535,7 @@
       "monitor": "International Crisis Group discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 9,
+      "candidates": 7,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
