@@ -1,5 +1,5 @@
 {
-  "last_checked": "2026-08-31T09:45:36.783676Z",
+  "last_checked": "2026-08-31T20:50:08.797968Z",
   "engine_version": "6.1",
   "migration_baseline": false,
   "series": {
@@ -8,8 +8,8 @@
     "total": 44
   },
   "discovery": {
-    "ok": 31,
-    "failed": 7,
+    "ok": 30,
+    "failed": 8,
     "total": 38
   },
   "monitors": [
@@ -405,8 +405,8 @@
       "kind": "series",
       "ok": true,
       "latest": "2025",
-      "url": "https://www.transparency.org/en/press/corruption-perceptions-index-2025-decline-leadership-undermining-global-fight",
-      "method": "reader-link",
+      "url": "https://www.transparency.org/en/cpi/2025",
+      "method": "reader-block",
       "warnings": []
     },
     {
@@ -509,7 +509,7 @@
       "monitor": "SIPRI discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 9,
+      "candidates": 8,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
@@ -529,7 +529,7 @@
       "monitor": "International Crisis Group discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 9,
+      "candidates": 7,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
@@ -654,8 +654,8 @@
       "monitor": "UN DESA Population Division discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 57,
-      "new_candidates": 0,
+      "candidates": 58,
+      "new_candidates": 1,
       "suppressed": 0,
       "warnings": []
     },
@@ -663,8 +663,8 @@
       "monitor": "IOM discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 11,
-      "new_candidates": 0,
+      "candidates": 12,
+      "new_candidates": 1,
       "suppressed": 0,
       "warnings": [
         "direct https://publications.iom.int/: 403 Client Error: Forbidden for url: https://publications.iom.int/"
@@ -673,11 +673,13 @@
     {
       "monitor": "UNHCR discovery",
       "kind": "discovery",
-      "ok": true,
-      "candidates": 5,
+      "ok": false,
+      "candidates": 0,
       "new_candidates": 0,
       "suppressed": 0,
-      "warnings": []
+      "warnings": [
+        "direct https://www.unhcr.org/publications: 403 Client Error: Forbidden for url: https://www.unhcr.org/publications"
+      ]
     },
     {
       "monitor": "UNDP discovery",
@@ -694,7 +696,7 @@
       "monitor": "WHO discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 8,
+      "candidates": 7,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
@@ -757,7 +759,7 @@
       "monitor": "Transparency International discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 44,
+      "candidates": 43,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": []

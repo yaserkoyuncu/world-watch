@@ -1,13 +1,39 @@
 {
-  "last_checked": "2026-08-31T09:45:36.783676Z",
+  "last_checked": "2026-08-31T20:50:08.797968Z",
   "engine_version": "6.1",
   "monitor_count": 82,
   "flagship_series_count": 44,
   "discovery_source_count": 38,
-  "new_items_this_run": 0,
+  "new_items_this_run": 2,
   "new_flagship_editions_this_run": 0,
   "migration_baseline": false,
   "updates": [
+    {
+      "id": "6de020e10a39da",
+      "date": "2026-08-31",
+      "category": "Demography & Society",
+      "source": "UN DESA Population Division",
+      "title": "Technical Paper: Assessment of Family Planning Indicators in Global Monitoring Frameworks",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/undesa_pd_2026_tp_global-monitoring-indicators.pdf",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "undesa_pop"
+    },
+    {
+      "id": "72078ea816a458",
+      "date": "2026-08-31",
+      "category": "Demography & Society",
+      "source": "IOM",
+      "title": "Feasibility Study on Developing Innovative Financing Instruments to Catalyse Diaspora Finance Towards Blue and Green Economy Projects in Mauritius",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://publications.iom.int/books/feasibility-study-developing-innovative-financing-instruments-catalyse-diaspora-finance",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "iom"
+    },
     {
       "id": "07d02e34461afa",
       "date": "2026-08-30",
