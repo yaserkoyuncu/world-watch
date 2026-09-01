@@ -1,5 +1,5 @@
 {
-  "last_checked": "2026-09-01T00:37:17.452569Z",
+  "last_checked": "2026-09-01T08:39:41.697159Z",
   "engine_version": "6.1",
   "migration_baseline": false,
   "series": {
@@ -396,8 +396,8 @@
       "kind": "series",
       "ok": true,
       "latest": "2025",
-      "url": "https://worldjusticeproject.org/rule-of-law-index/",
-      "method": "reader-block",
+      "url": "https://worldjusticeproject.org/rule-of-law-index/global/2025/wjp-index",
+      "method": "direct-title",
       "warnings": []
     },
     {
@@ -453,8 +453,8 @@
       "monitor": "BIS discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 20,
-      "new_candidates": 0,
+      "candidates": 19,
+      "new_candidates": 4,
       "suppressed": 0,
       "warnings": []
     },
@@ -489,7 +489,7 @@
       "monitor": "World Economic Forum discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 23,
+      "candidates": 21,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
