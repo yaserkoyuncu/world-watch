@@ -1,5 +1,5 @@
 {
-  "last_checked": "2026-08-31T20:50:08.797968Z",
+  "last_checked": "2026-09-01T00:37:17.452569Z",
   "engine_version": "6.1",
   "migration_baseline": false,
   "series": {
@@ -396,8 +396,8 @@
       "kind": "series",
       "ok": true,
       "latest": "2025",
-      "url": "https://worldjusticeproject.org/rule-of-law-index/global/2025/wjp-index",
-      "method": "direct-title",
+      "url": "https://worldjusticeproject.org/rule-of-law-index/",
+      "method": "reader-block",
       "warnings": []
     },
     {
@@ -405,8 +405,8 @@
       "kind": "series",
       "ok": true,
       "latest": "2025",
-      "url": "https://www.transparency.org/en/cpi/2025",
-      "method": "reader-block",
+      "url": "https://www.transparency.org/en/press/corruption-perceptions-index-2025-decline-leadership-undermining-global-fight",
+      "method": "reader-link",
       "warnings": []
     },
     {
@@ -655,7 +655,7 @@
       "kind": "discovery",
       "ok": true,
       "candidates": 58,
-      "new_candidates": 1,
+      "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
     },
@@ -664,7 +664,7 @@
       "kind": "discovery",
       "ok": true,
       "candidates": 12,
-      "new_candidates": 1,
+      "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
         "direct https://publications.iom.int/: 403 Client Error: Forbidden for url: https://publications.iom.int/"
@@ -759,7 +759,7 @@
       "monitor": "Transparency International discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 43,
+      "candidates": 44,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
