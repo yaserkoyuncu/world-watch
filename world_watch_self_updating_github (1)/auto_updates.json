@@ -1,11 +1,11 @@
 {
-  "last_checked": "2026-09-01T18:31:00.090386Z",
+  "last_checked": "2026-09-01T23:18:28.182140Z",
   "engine_version": "6.1",
   "monitor_count": 82,
   "flagship_series_count": 44,
   "discovery_source_count": 38,
   "new_items_this_run": 1,
-  "new_flagship_editions_this_run": 1,
+  "new_flagship_editions_this_run": 0,
   "migration_baseline": false,
   "updates": [
     {
@@ -22,6 +22,19 @@
       "edition": "2026",
       "previous_edition": "2025",
       "confidence": "high"
+    },
+    {
+      "id": "2373c89baac2be",
+      "date": "2026-09-01",
+      "category": "Democracy & Rights",
+      "source": "Freedom House",
+      "title": "Collaboration and Resistance: Tracking Transnational Repression in 2025",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://freedomhouse.org/index%2ephp/report/special-report/2026/collaboration-and-resistance-tracking-transnational-repression-2025",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "freedom"
     },
     {
       "id": "7653d8395677d9",
