@@ -1,5 +1,5 @@
 {
-  "last_checked": "2026-09-01T08:39:41.697159Z",
+  "last_checked": "2026-09-01T14:09:07.898563Z",
   "engine_version": "6.1",
   "migration_baseline": false,
   "series": {
@@ -396,8 +396,8 @@
       "kind": "series",
       "ok": true,
       "latest": "2025",
-      "url": "https://worldjusticeproject.org/rule-of-law-index/global/2025/wjp-index",
-      "method": "direct-title",
+      "url": "https://worldjusticeproject.org/rule-of-law-index/",
+      "method": "reader-block",
       "warnings": []
     },
     {
@@ -454,7 +454,7 @@
       "kind": "discovery",
       "ok": true,
       "candidates": 19,
-      "new_candidates": 4,
+      "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
     },
@@ -662,8 +662,8 @@
     {
       "monitor": "IOM discovery",
       "kind": "discovery",
-      "ok": true,
-      "candidates": 12,
+      "ok": false,
+      "candidates": 0,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
@@ -673,13 +673,11 @@
     {
       "monitor": "UNHCR discovery",
       "kind": "discovery",
-      "ok": false,
-      "candidates": 0,
+      "ok": true,
+      "candidates": 5,
       "new_candidates": 0,
       "suppressed": 0,
-      "warnings": [
-        "direct https://www.unhcr.org/publications: 403 Client Error: Forbidden for url: https://www.unhcr.org/publications"
-      ]
+      "warnings": []
     },
     {
       "monitor": "UNDP discovery",
@@ -697,7 +695,7 @@
       "kind": "discovery",
       "ok": true,
       "candidates": 7,
-      "new_candidates": 0,
+      "new_candidates": 1,
       "suppressed": 0,
       "warnings": []
     },
