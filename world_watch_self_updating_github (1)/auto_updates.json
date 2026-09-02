@@ -1,5 +1,5 @@
 {
-  "last_checked": "2026-09-02T18:43:07.218632Z",
+  "last_checked": "2026-09-02T23:19:18.512136Z",
   "engine_version": "6.1",
   "monitor_count": 82,
   "flagship_series_count": 44,
@@ -8,6 +8,19 @@
   "new_flagship_editions_this_run": 0,
   "migration_baseline": false,
   "updates": [
+    {
+      "id": "28a3ed4af0ab38",
+      "date": "2026-09-02",
+      "category": "Health, Food & Education",
+      "source": "WHO",
+      "title": "Integration of equity into national action plans on antimicrobial resistance: guidance to complement...",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.who.int/publications/i/item/9789240123892",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "who"
+    },
     {
       "id": "233f45cec3a728",
       "date": "2026-09-02",
