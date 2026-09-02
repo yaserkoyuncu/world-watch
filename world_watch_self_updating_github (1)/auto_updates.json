@@ -1,13 +1,26 @@
 {
-  "last_checked": "2026-09-02T13:40:58.140785Z",
+  "last_checked": "2026-09-02T18:43:07.218632Z",
   "engine_version": "6.1",
   "monitor_count": 82,
   "flagship_series_count": 44,
   "discovery_source_count": 38,
-  "new_items_this_run": 4,
+  "new_items_this_run": 1,
   "new_flagship_editions_this_run": 0,
   "migration_baseline": false,
   "updates": [
+    {
+      "id": "233f45cec3a728",
+      "date": "2026-09-02",
+      "category": "Demography & Society",
+      "source": "UNDP",
+      "title": "Publications ![Image 43",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.undp.org/sites/g/files/zskgke326/files/styles/content_card_453_x_256_/public/2026-08/report_cover.jpg?h=3af9cf60&itok=DeWI8_pC",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "undp"
+    },
     {
       "id": "32a2392020809e",
       "date": "2026-09-02",
