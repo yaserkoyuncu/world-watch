@@ -1,13 +1,39 @@
 {
-  "last_checked": "2026-09-01T23:18:28.182140Z",
+  "last_checked": "2026-09-02T07:55:25.010712Z",
   "engine_version": "6.1",
   "monitor_count": 82,
   "flagship_series_count": 44,
   "discovery_source_count": 38,
-  "new_items_this_run": 1,
+  "new_items_this_run": 2,
   "new_flagship_editions_this_run": 0,
   "migration_baseline": false,
   "updates": [
+    {
+      "id": "72300d5b67f819",
+      "date": "2026-09-02",
+      "category": "Technology & AI",
+      "source": "Georgetown CSET",
+      "title": "Strengthening the U.S. Semiconductor Manufacturing Workforce",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://cset.georgetown.edu/publication/strengthening-the-u-s-semiconductor-manufacturing-workforce/",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "cset"
+    },
+    {
+      "id": "d00a713a5bdab5",
+      "date": "2026-09-02",
+      "category": "Demography & Society",
+      "source": "IOM",
+      "title": "International Migration Vol. 64 (5) September 2026",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://publications.iom.int/books/international-migration-vol-64-5-september-2026",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "iom"
+    },
     {
       "id": "ea2f4c322c9ad7",
       "date": "2026-09-01",
