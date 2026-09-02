@@ -1,5 +1,5 @@
 {
-  "last_checked": "2026-09-02T07:55:25.010712Z",
+  "last_checked": "2026-09-02T13:40:58.140785Z",
   "engine_version": "6.1",
   "migration_baseline": false,
   "series": {
@@ -8,8 +8,8 @@
     "total": 44
   },
   "discovery": {
-    "ok": 29,
-    "failed": 9,
+    "ok": 30,
+    "failed": 8,
     "total": 38
   },
   "monitors": [
@@ -91,7 +91,9 @@
       "latest": "2025",
       "url": "https://unctad.org/sites/default/files/styles/cover_image/public/2025-11/tdr2025_1000x1414.jpg?itok=BmZlJ0M2",
       "method": "reader-link",
-      "warnings": []
+      "warnings": [
+        "direct https://unctad.org/topic/macroeconomics/trade-development-report: HTTPSConnectionPool(host='unctad.org', port=443): Read timed out. (read timeout=22)"
+      ]
     },
     {
       "monitor": "Global Trade Outlook and Statistics",
@@ -482,7 +484,7 @@
       "monitor": "ILO discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 15,
+      "candidates": 14,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
@@ -531,7 +533,7 @@
       "monitor": "International Crisis Group discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 9,
+      "candidates": 7,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
@@ -552,7 +554,7 @@
       "kind": "discovery",
       "ok": true,
       "candidates": 11,
-      "new_candidates": 1,
+      "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
     },
@@ -666,7 +668,7 @@
       "kind": "discovery",
       "ok": true,
       "candidates": 13,
-      "new_candidates": 1,
+      "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
         "direct https://publications.iom.int/: 403 Client Error: Forbidden for url: https://publications.iom.int/"
@@ -715,8 +717,8 @@
     {
       "monitor": "UNESCO discovery",
       "kind": "discovery",
-      "ok": false,
-      "candidates": 0,
+      "ok": true,
+      "candidates": 2,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
@@ -744,7 +746,7 @@
       "kind": "discovery",
       "ok": true,
       "candidates": 9,
-      "new_candidates": 0,
+      "new_candidates": 4,
       "suppressed": 0,
       "warnings": []
     },
