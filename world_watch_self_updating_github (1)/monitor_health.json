@@ -1,5 +1,5 @@
 {
-  "last_checked": "2026-09-02T23:19:18.512136Z",
+  "last_checked": "2026-09-03T08:03:26.670622Z",
   "engine_version": "6.1",
   "migration_baseline": false,
   "series": {
@@ -164,14 +164,8 @@
     {
       "monitor": "Technology Trends Outlook",
       "kind": "series",
-      "ok": true,
-      "latest": "2025",
-      "url": "https://www.mckinsey.com/capabilities/tech-and-ai/our-insights/the-top-trends-in-tech/",
-      "method": "reader-block",
-      "warnings": [
-        "direct https://www.mckinsey.com/capabilities/tech-and-ai/our-insights/the-top-trends-in-tech/: HTTPSConnectionPool(host='www.mckinsey.com', port=443): Read timed out. (read timeout=22)",
-        "direct https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/the-top-trends-in-tech: HTTPSConnectionPool(host='www.mckinsey.com', port=443): Read timed out. (read timeout=22)"
-      ]
+      "ok": false,
+      "error": "direct https://www.mckinsey.com/capabilities/tech-and-ai/our-insights/the-top-trends-in-tech/: HTTPSConnectionPool(host='www.mckinsey.com', port=443): Read timed out. (read timeout=22) | direct https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/the-top-trends-in-tech: HTTPSConnectionPool(host='www.mckinsey.com', port=443): Read timed out. (read timeout=22)"
     },
     {
       "monitor": "State of AI",
@@ -297,7 +291,7 @@
       "ok": true,
       "latest": "2026",
       "url": "https://worldmigrationreport.iom.int/msite/wmr-2026-interactive/",
-      "method": "reader-block",
+      "method": "official-url",
       "warnings": [
         "direct https://worldmigrationreport.iom.int/msite/wmr-2026-interactive/: 403 Client Error: Forbidden for url: https://worldmigrationreport.iom.int/msite/wmr-2026-interactive/"
       ]
@@ -305,8 +299,13 @@
     {
       "monitor": "Global Trends",
       "kind": "series",
-      "ok": false,
-      "error": "direct https://www.unhcr.org/au/global-trends: 403 Client Error: Forbidden for url: https://www.unhcr.org/au/global-trends | direct https://www.unhcr.org/media/global-trends-2025-report: 403 Client Error: Forbidden for url: https://www.unhcr.org/media/global-trends-2025-report | direct https://www.unhcr.org/global-trends: 403 Client Error: Forbidden for url: https://www.unhcr.org/global-trends"
+      "ok": true,
+      "latest": "2025",
+      "url": "https://www.unhcr.org/media/global-trends-2025-report",
+      "method": "reader-block",
+      "warnings": [
+        "direct https://www.unhcr.org/au/global-trends: 403 Client Error: Forbidden for url: https://www.unhcr.org/au/global-trends"
+      ]
     },
     {
       "monitor": "Human Development Report",
@@ -617,8 +616,8 @@
       "monitor": "WMO discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 29,
-      "new_candidates": 0,
+      "candidates": 28,
+      "new_candidates": 1,
       "suppressed": 0,
       "warnings": []
     },
@@ -709,7 +708,7 @@
       "kind": "discovery",
       "ok": true,
       "candidates": 8,
-      "new_candidates": 1,
+      "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
     },
@@ -771,8 +770,8 @@
       "monitor": "Transparency International discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 44,
-      "new_candidates": 0,
+      "candidates": 45,
+      "new_candidates": 2,
       "suppressed": 0,
       "warnings": []
     },
