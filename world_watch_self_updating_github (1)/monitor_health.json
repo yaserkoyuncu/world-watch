@@ -1,5 +1,5 @@
 {
-  "last_checked": "2026-09-03T13:35:28.558512Z",
+  "last_checked": "2026-09-03T18:39:43.186013Z",
   "engine_version": "6.1",
   "migration_baseline": false,
   "series": {
@@ -8,8 +8,8 @@
     "total": 44
   },
   "discovery": {
-    "ok": 28,
-    "failed": 10,
+    "ok": 29,
+    "failed": 9,
     "total": 38
   },
   "monitors": [
@@ -345,9 +345,7 @@
       "latest": "2026",
       "url": "https://www.fao.org/publications/fao-flagship-publications/the-state-of-food-security-and-nutrition-in-the-world/2025/en",
       "method": "reader-block",
-      "warnings": [
-        "direct https://www.fao.org/publications/fao-flagship-publications/the-state-of-food-security-and-nutrition-in-the-world/2025/en: HTTPSConnectionPool(host='www.fao.org', port=443): Read timed out. (read timeout=22)"
-      ]
+      "warnings": []
     },
     {
       "monitor": "Global Education Monitoring Report",
@@ -401,8 +399,8 @@
       "kind": "series",
       "ok": true,
       "latest": "2025",
-      "url": "https://worldjusticeproject.org/rule-of-law-index/global/2025/wjp-index",
-      "method": "direct-title",
+      "url": "https://worldjusticeproject.org/rule-of-law-index/",
+      "method": "reader-block",
       "warnings": []
     },
     {
@@ -410,8 +408,8 @@
       "kind": "series",
       "ok": true,
       "latest": "2025",
-      "url": "https://www.transparency.org/en/press/corruption-perceptions-index-2025-decline-leadership-undermining-global-fight",
-      "method": "reader-link",
+      "url": "https://www.transparency.org/en/cpi/2025",
+      "method": "reader-block",
       "warnings": []
     },
     {
@@ -496,8 +494,8 @@
     {
       "monitor": "World Economic Forum discovery",
       "kind": "discovery",
-      "ok": true,
-      "candidates": 21,
+      "ok": false,
+      "candidates": 0,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
@@ -537,7 +535,7 @@
       "monitor": "International Crisis Group discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 7,
+      "candidates": 9,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
@@ -693,7 +691,7 @@
       "monitor": "UNDP discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 8,
+      "candidates": 7,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
@@ -704,7 +702,7 @@
       "monitor": "WHO discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 8,
+      "candidates": 9,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
@@ -721,8 +719,8 @@
     {
       "monitor": "UNESCO discovery",
       "kind": "discovery",
-      "ok": false,
-      "candidates": 0,
+      "ok": true,
+      "candidates": 2,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
@@ -776,7 +774,7 @@
       "monitor": "Reporters Without Borders discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 6,
+      "candidates": 5,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
@@ -784,9 +782,9 @@
     {
       "monitor": "Quanta Magazine discovery",
       "kind": "discovery",
-      "ok": false,
-      "candidates": 0,
-      "new_candidates": 0,
+      "ok": true,
+      "candidates": 4,
+      "new_candidates": 4,
       "suppressed": 0,
       "warnings": []
     }
