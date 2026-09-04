@@ -1,15 +1,15 @@
 {
-  "last_checked": "2026-09-04T07:58:59.573064Z",
+  "last_checked": "2026-09-04T13:32:33.349491Z",
   "engine_version": "6.1",
   "migration_baseline": false,
   "series": {
-    "ok": 42,
-    "failed": 2,
+    "ok": 41,
+    "failed": 3,
     "total": 44
   },
   "discovery": {
-    "ok": 30,
-    "failed": 8,
+    "ok": 29,
+    "failed": 9,
     "total": 38
   },
   "monitors": [
@@ -180,9 +180,7 @@
       "latest": "2026",
       "url": "https://www.deloitte.com/us/en/insights/topics/technology-management/tech-trends.html",
       "method": "direct-title",
-      "warnings": [
-        "reader https://www.deloitte.com/us/en/insights/topics/technology-management/tech-trends.html: 403 Client Error: Forbidden for url: https://r.jina.ai/https://www.deloitte.com/us/en/insights/topics/technology-managem"
-      ]
+      "warnings": []
     },
     {
       "monitor": "Global Tech Report",
@@ -301,14 +299,8 @@
     {
       "monitor": "Global Trends",
       "kind": "series",
-      "ok": true,
-      "latest": "2026",
-      "url": "https://www.unhcr.org/global-trends",
-      "method": "reader-block",
-      "warnings": [
-        "direct https://www.unhcr.org/au/global-trends: 403 Client Error: Forbidden for url: https://www.unhcr.org/au/global-trends",
-        "direct https://www.unhcr.org/media/global-trends-2025-report: 403 Client Error: Forbidden for url: https://www.unhcr.org/media/global-trends-2025-report"
-      ]
+      "ok": false,
+      "error": "direct https://www.unhcr.org/au/global-trends: 403 Client Error: Forbidden for url: https://www.unhcr.org/au/global-trends | direct https://www.unhcr.org/media/global-trends-2025-report: 403 Client Error: Forbidden for url: https://www.unhcr.org/media/global-trends-2025-report | direct https://www.unhcr.org/global-trends: 403 Client Error: Forbidden for url: https://www.unhcr.org/global-trends"
     },
     {
       "monitor": "Human Development Report",
@@ -407,8 +399,8 @@
       "kind": "series",
       "ok": true,
       "latest": "2025",
-      "url": "https://worldjusticeproject.org/rule-of-law-index/",
-      "method": "reader-block",
+      "url": "https://worldjusticeproject.org/rule-of-law-index/global/2025/wjp-index",
+      "method": "direct-title",
       "warnings": []
     },
     {
@@ -416,8 +408,8 @@
       "kind": "series",
       "ok": true,
       "latest": "2025",
-      "url": "https://www.transparency.org/en/press/corruption-perceptions-index-2025-decline-leadership-undermining-global-fight",
-      "method": "reader-link",
+      "url": "https://www.transparency.org/en/cpi/2025",
+      "method": "reader-block",
       "warnings": []
     },
     {
@@ -464,7 +456,7 @@
       "monitor": "BIS discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 17,
+      "candidates": 18,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
@@ -502,8 +494,8 @@
     {
       "monitor": "World Economic Forum discovery",
       "kind": "discovery",
-      "ok": true,
-      "candidates": 21,
+      "ok": false,
+      "candidates": 0,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
@@ -710,7 +702,7 @@
       "monitor": "WHO discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 9,
+      "candidates": 8,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
@@ -774,7 +766,7 @@
       "kind": "discovery",
       "ok": true,
       "candidates": 46,
-      "new_candidates": 2,
+      "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
     },
@@ -791,8 +783,8 @@
       "monitor": "Quanta Magazine discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 4,
-      "new_candidates": 3,
+      "candidates": 1,
+      "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
     }
