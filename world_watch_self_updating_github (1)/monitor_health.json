@@ -1,5 +1,5 @@
 {
-  "last_checked": "2026-09-05T12:43:29.422468Z",
+  "last_checked": "2026-09-05T17:20:59.267460Z",
   "engine_version": "6.1",
   "migration_baseline": false,
   "series": {
@@ -8,8 +8,8 @@
     "total": 44
   },
   "discovery": {
-    "ok": 30,
-    "failed": 8,
+    "ok": 31,
+    "failed": 7,
     "total": 38
   },
   "monitors": [
@@ -461,9 +461,9 @@
       "monitor": "BIS discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 18,
-      "new_candidates": 0,
-      "suppressed": 0,
+      "candidates": 17,
+      "new_candidates": 9,
+      "suppressed": 9,
       "warnings": []
     },
     {
@@ -540,7 +540,7 @@
       "monitor": "International Crisis Group discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 7,
+      "candidates": 9,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
@@ -684,13 +684,11 @@
     {
       "monitor": "UNHCR discovery",
       "kind": "discovery",
-      "ok": false,
-      "candidates": 0,
+      "ok": true,
+      "candidates": 5,
       "new_candidates": 0,
       "suppressed": 0,
-      "warnings": [
-        "direct https://www.unhcr.org/publications: 403 Client Error: Forbidden for url: https://www.unhcr.org/publications"
-      ]
+      "warnings": []
     },
     {
       "monitor": "UNDP discovery",
@@ -788,7 +786,7 @@
       "monitor": "Quanta Magazine discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 1,
+      "candidates": 4,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
