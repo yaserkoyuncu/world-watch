@@ -1,5 +1,5 @@
 {
-  "last_checked": "2026-09-04T23:03:00.879939Z",
+  "last_checked": "2026-09-05T07:40:36.716728Z",
   "engine_version": "6.1",
   "migration_baseline": false,
   "series": {
@@ -399,8 +399,8 @@
       "kind": "series",
       "ok": true,
       "latest": "2025",
-      "url": "https://worldjusticeproject.org/rule-of-law-index/global/2025/wjp-index",
-      "method": "direct-title",
+      "url": "https://worldjusticeproject.org/rule-of-law-index/",
+      "method": "reader-block",
       "warnings": []
     },
     {
@@ -408,8 +408,8 @@
       "kind": "series",
       "ok": true,
       "latest": "2025",
-      "url": "https://www.transparency.org/en/cpi/2025",
-      "method": "reader-block",
+      "url": "https://www.transparency.org/en/press/corruption-perceptions-index-2025-decline-leadership-undermining-global-fight",
+      "method": "reader-link",
       "warnings": []
     },
     {
@@ -535,7 +535,7 @@
       "monitor": "International Crisis Group discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 9,
+      "candidates": 7,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
@@ -783,7 +783,7 @@
       "monitor": "Quanta Magazine discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 4,
+      "candidates": 1,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
