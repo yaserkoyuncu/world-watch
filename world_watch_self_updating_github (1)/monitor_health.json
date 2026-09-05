@@ -1,15 +1,15 @@
 {
-  "last_checked": "2026-09-05T17:20:59.267460Z",
+  "last_checked": "2026-09-05T22:54:37.606032Z",
   "engine_version": "6.1",
   "migration_baseline": false,
   "series": {
-    "ok": 42,
-    "failed": 2,
+    "ok": 41,
+    "failed": 3,
     "total": 44
   },
   "discovery": {
-    "ok": 31,
-    "failed": 7,
+    "ok": 29,
+    "failed": 9,
     "total": 38
   },
   "monitors": [
@@ -180,7 +180,9 @@
       "latest": "2026",
       "url": "https://www.deloitte.com/us/en/insights/topics/technology-management/tech-trends.html",
       "method": "direct-title",
-      "warnings": []
+      "warnings": [
+        "reader https://www.deloitte.com/us/en/insights/topics/technology-management/tech-trends.html: 403 Client Error: Forbidden for url: https://r.jina.ai/https://www.deloitte.com/us/en/insights/topics/technology-managem"
+      ]
     },
     {
       "monitor": "Global Tech Report",
@@ -299,13 +301,8 @@
     {
       "monitor": "Global Trends",
       "kind": "series",
-      "ok": true,
-      "latest": "2025",
-      "url": "https://www.unhcr.org/media/global-trends-2025-report",
-      "method": "reader-block",
-      "warnings": [
-        "direct https://www.unhcr.org/au/global-trends: 403 Client Error: Forbidden for url: https://www.unhcr.org/au/global-trends"
-      ]
+      "ok": false,
+      "error": "direct https://www.unhcr.org/au/global-trends: 403 Client Error: Forbidden for url: https://www.unhcr.org/au/global-trends | direct https://www.unhcr.org/media/global-trends-2025-report: 403 Client Error: Forbidden for url: https://www.unhcr.org/media/global-trends-2025-report | direct https://www.unhcr.org/global-trends: 403 Client Error: Forbidden for url: https://www.unhcr.org/global-trends"
     },
     {
       "monitor": "Human Development Report",
@@ -404,8 +401,8 @@
       "kind": "series",
       "ok": true,
       "latest": "2025",
-      "url": "https://worldjusticeproject.org/rule-of-law-index/global/2025/wjp-index",
-      "method": "direct-title",
+      "url": "https://worldjusticeproject.org/rule-of-law-index/",
+      "method": "reader-block",
       "warnings": []
     },
     {
@@ -461,9 +458,9 @@
       "monitor": "BIS discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 17,
-      "new_candidates": 9,
-      "suppressed": 9,
+      "candidates": 20,
+      "new_candidates": 8,
+      "suppressed": 0,
       "warnings": []
     },
     {
@@ -540,7 +537,7 @@
       "monitor": "International Crisis Group discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 9,
+      "candidates": 7,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
@@ -673,8 +670,8 @@
     {
       "monitor": "IOM discovery",
       "kind": "discovery",
-      "ok": true,
-      "candidates": 13,
+      "ok": false,
+      "candidates": 0,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
@@ -684,11 +681,13 @@
     {
       "monitor": "UNHCR discovery",
       "kind": "discovery",
-      "ok": true,
-      "candidates": 5,
+      "ok": false,
+      "candidates": 0,
       "new_candidates": 0,
       "suppressed": 0,
-      "warnings": []
+      "warnings": [
+        "direct https://www.unhcr.org/publications: 403 Client Error: Forbidden for url: https://www.unhcr.org/publications"
+      ]
     },
     {
       "monitor": "UNDP discovery",
