@@ -1,13 +1,39 @@
 {
-  "last_checked": "2026-09-06T22:53:48.059855Z",
+  "last_checked": "2026-09-07T08:18:38.895832Z",
   "engine_version": "6.1",
   "monitor_count": 82,
   "flagship_series_count": 44,
   "discovery_source_count": 38,
-  "new_items_this_run": 0,
+  "new_items_this_run": 2,
   "new_flagship_editions_this_run": 0,
   "migration_baseline": false,
   "updates": [
+    {
+      "id": "fddfe397e81595",
+      "date": "2026-09-07",
+      "category": "Economy & Political Economy",
+      "source": "UNCTAD",
+      "title": "Global Trade Update (September 2026): Services are reshaping global trade, but least developed countries lag in digital exports",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://unctad.org/publication/global-trade-update-september-2026-services-are-reshaping-global-trade",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "unctad"
+    },
+    {
+      "id": "b2606814740a08",
+      "date": "2026-09-07",
+      "category": "Climate & Energy",
+      "source": "WMO",
+      "title": "Publication 7 September 2026 WMO Air Quality and Climate Bulletin No. 6 - September 2026",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://wmo.int/resources/publication-series/wmo-air-quality-and-climate-bulletin/wmo-air-quality-and-climate-bulletin-no-6-september-2026",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "wmo"
+    },
     {
       "id": "73cb932881f187",
       "date": "2026-09-05",
