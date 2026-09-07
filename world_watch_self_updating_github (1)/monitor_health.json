@@ -1,5 +1,5 @@
 {
-  "last_checked": "2026-09-07T15:03:51.728881Z",
+  "last_checked": "2026-09-07T19:09:54.756281Z",
   "engine_version": "6.1",
   "migration_baseline": false,
   "series": {
@@ -203,8 +203,10 @@
       "ok": true,
       "latest": "2025",
       "url": "https://www.itu.int/itu-d/reports/statistics/facts-figures-2025/",
-      "method": "direct-title",
-      "warnings": []
+      "method": "reader-block",
+      "warnings": [
+        "direct https://www.itu.int/itu-d/reports/statistics/facts-figures-2025/: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+      ]
     },
     {
       "monitor": "State of the Global Climate",
@@ -349,7 +351,7 @@
       "kind": "series",
       "ok": true,
       "latest": "2026",
-      "url": "https://www.unesco.org/gem-report/sites/default/files/styles/banner_mobile/public/2026-03/cover%20image%20web.jpg.webp?itok=O_g9oZz8",
+      "url": "https://www.unesco.org/gem-report/en/articles/what-does-2026-gem-report-say-about-access-and-equity-education",
       "method": "reader-link",
       "warnings": []
     },
@@ -463,7 +465,7 @@
       "kind": "discovery",
       "ok": true,
       "candidates": 27,
-      "new_candidates": 1,
+      "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
     },
@@ -529,7 +531,7 @@
       "monitor": "International Crisis Group discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 9,
+      "candidates": 7,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
@@ -596,10 +598,12 @@
       "monitor": "ITU discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 2,
-      "new_candidates": 0,
+      "candidates": 5,
+      "new_candidates": 3,
       "suppressed": 0,
-      "warnings": []
+      "warnings": [
+        "direct https://www.itu.int/itu-d/reports/statistics/: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+      ]
     },
     {
       "monitor": "WMO discovery",
@@ -777,7 +781,7 @@
       "monitor": "Quanta Magazine discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 1,
+      "candidates": 4,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
