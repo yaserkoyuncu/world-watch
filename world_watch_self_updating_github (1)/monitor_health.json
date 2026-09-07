@@ -1,5 +1,5 @@
 {
-  "last_checked": "2026-09-07T08:18:38.895832Z",
+  "last_checked": "2026-09-07T15:03:51.728881Z",
   "engine_version": "6.1",
   "migration_baseline": false,
   "series": {
@@ -349,8 +349,8 @@
       "kind": "series",
       "ok": true,
       "latest": "2026",
-      "url": "https://www.unesco.org/gem-report/en/paragraph-resource/4717/3",
-      "method": "direct-link",
+      "url": "https://www.unesco.org/gem-report/sites/default/files/styles/banner_mobile/public/2026-03/cover%20image%20web.jpg.webp?itok=O_g9oZz8",
+      "method": "reader-link",
       "warnings": []
     },
     {
@@ -606,7 +606,7 @@
       "kind": "discovery",
       "ok": true,
       "candidates": 28,
-      "new_candidates": 1,
+      "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
     },
