@@ -1,5 +1,5 @@
 {
-  "last_checked": "2026-09-07T19:09:54.756281Z",
+  "last_checked": "2026-09-07T23:29:57.320161Z",
   "engine_version": "6.1",
   "migration_baseline": false,
   "series": {
@@ -203,10 +203,8 @@
       "ok": true,
       "latest": "2025",
       "url": "https://www.itu.int/itu-d/reports/statistics/facts-figures-2025/",
-      "method": "reader-block",
-      "warnings": [
-        "direct https://www.itu.int/itu-d/reports/statistics/facts-figures-2025/: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
-      ]
+      "method": "direct-title",
+      "warnings": []
     },
     {
       "monitor": "State of the Global Climate",
@@ -598,12 +596,10 @@
       "monitor": "ITU discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 5,
-      "new_candidates": 3,
+      "candidates": 2,
+      "new_candidates": 0,
       "suppressed": 0,
-      "warnings": [
-        "direct https://www.itu.int/itu-d/reports/statistics/: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
-      ]
+      "warnings": []
     },
     {
       "monitor": "WMO discovery",
