@@ -1,5 +1,5 @@
 {
-  "last_checked": "2026-09-08T13:38:11.117337Z",
+  "last_checked": "2026-09-08T18:40:58.006916Z",
   "engine_version": "6.1",
   "migration_baseline": false,
   "series": {
@@ -353,7 +353,7 @@
       "ok": true,
       "latest": "2026",
       "url": "https://www.unesco.org/gem-report/en/articles/what-does-2026-gem-report-say-about-access-and-equity-education",
-      "method": "direct-link",
+      "method": "reader-link",
       "warnings": []
     },
     {
@@ -399,8 +399,8 @@
       "kind": "series",
       "ok": true,
       "latest": "2025",
-      "url": "https://worldjusticeproject.org/rule-of-law-index/",
-      "method": "reader-block",
+      "url": "https://worldjusticeproject.org/rule-of-law-index/global/2025/wjp-index",
+      "method": "direct-title",
       "warnings": []
     },
     {
@@ -516,7 +516,7 @@
       "kind": "discovery",
       "ok": true,
       "candidates": 8,
-      "new_candidates": 1,
+      "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
     },
@@ -535,7 +535,7 @@
       "monitor": "International Crisis Group discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 8,
+      "candidates": 10,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
@@ -660,8 +660,8 @@
       "monitor": "UN DESA Population Division discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 58,
-      "new_candidates": 0,
+      "candidates": 59,
+      "new_candidates": 1,
       "suppressed": 0,
       "warnings": []
     },
@@ -691,7 +691,7 @@
       "monitor": "UNDP discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 7,
+      "candidates": 6,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
@@ -702,7 +702,7 @@
       "monitor": "WHO discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 8,
+      "candidates": 7,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
@@ -783,7 +783,7 @@
       "monitor": "Quanta Magazine discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 1,
+      "candidates": 4,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": []

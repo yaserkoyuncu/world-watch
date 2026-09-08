@@ -1,5 +1,5 @@
 {
-  "last_checked": "2026-09-08T13:38:11.117337Z",
+  "last_checked": "2026-09-08T18:40:58.006916Z",
   "engine_version": "6.1",
   "monitor_count": 82,
   "flagship_series_count": 44,
@@ -8,6 +8,19 @@
   "new_flagship_editions_this_run": 0,
   "migration_baseline": false,
   "updates": [
+    {
+      "id": "be45c164412439",
+      "date": "2026-09-08",
+      "category": "Demography & Society",
+      "source": "UN DESA Population Division",
+      "title": "National Inclusion Accounts Manual: Measuring and Analysing Social Group Differences in the Generational Economy",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/files/documents/2026/Sep/undesa_pd_2026_nta-i_manual_web.pdf",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "undesa_pop"
+    },
     {
       "id": "05e2c06eff06e8",
       "date": "2026-09-08",
