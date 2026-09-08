@@ -1,5 +1,5 @@
 {
-  "last_checked": "2026-09-08T18:40:58.006916Z",
+  "last_checked": "2026-09-08T23:24:06.311268Z",
   "engine_version": "6.1",
   "migration_baseline": false,
   "series": {
@@ -8,8 +8,8 @@
     "total": 44
   },
   "discovery": {
-    "ok": 30,
-    "failed": 8,
+    "ok": 31,
+    "failed": 7,
     "total": 38
   },
   "monitors": [
@@ -399,8 +399,8 @@
       "kind": "series",
       "ok": true,
       "latest": "2025",
-      "url": "https://worldjusticeproject.org/rule-of-law-index/global/2025/wjp-index",
-      "method": "direct-title",
+      "url": "https://worldjusticeproject.org/rule-of-law-index/",
+      "method": "reader-block",
       "warnings": []
     },
     {
@@ -495,7 +495,7 @@
       "monitor": "World Economic Forum discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 21,
+      "candidates": 11,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
@@ -535,7 +535,7 @@
       "monitor": "International Crisis Group discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 10,
+      "candidates": 8,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
@@ -661,7 +661,7 @@
       "kind": "discovery",
       "ok": true,
       "candidates": 59,
-      "new_candidates": 1,
+      "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
     },
@@ -679,13 +679,11 @@
     {
       "monitor": "UNHCR discovery",
       "kind": "discovery",
-      "ok": false,
-      "candidates": 0,
+      "ok": true,
+      "candidates": 5,
       "new_candidates": 0,
       "suppressed": 0,
-      "warnings": [
-        "direct https://www.unhcr.org/publications: 403 Client Error: Forbidden for url: https://www.unhcr.org/publications"
-      ]
+      "warnings": []
     },
     {
       "monitor": "UNDP discovery",
@@ -783,7 +781,7 @@
       "monitor": "Quanta Magazine discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 4,
+      "candidates": 1,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
