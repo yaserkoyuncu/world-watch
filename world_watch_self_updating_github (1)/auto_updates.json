@@ -1,13 +1,26 @@
 {
-  "last_checked": "2026-09-07T23:29:57.320161Z",
+  "last_checked": "2026-09-08T08:05:37.557565Z",
   "engine_version": "6.1",
   "monitor_count": 82,
   "flagship_series_count": 44,
   "discovery_source_count": 38,
-  "new_items_this_run": 0,
+  "new_items_this_run": 1,
   "new_flagship_editions_this_run": 0,
   "migration_baseline": false,
   "updates": [
+    {
+      "id": "3856754e77888e",
+      "date": "2026-09-08",
+      "category": "Geopolitics & Security",
+      "source": "International Crisis Group",
+      "title": "Policing the Bangsamoro: Peace in the Southern Philippines",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.crisisgroup.org/rpt/asia-pacific/philippines/358-policing-bangsamoro-peace-southern-philippines",
+      "type": "Significant analysis",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "icg"
+    },
     {
       "id": "122cdfbafc58f8",
       "date": "2026-09-07",
