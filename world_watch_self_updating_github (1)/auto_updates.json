@@ -1,5 +1,5 @@
 {
-  "last_checked": "2026-09-08T08:05:37.557565Z",
+  "last_checked": "2026-09-08T13:38:11.117337Z",
   "engine_version": "6.1",
   "monitor_count": 82,
   "flagship_series_count": 44,
@@ -8,6 +8,19 @@
   "new_flagship_editions_this_run": 0,
   "migration_baseline": false,
   "updates": [
+    {
+      "id": "05e2c06eff06e8",
+      "date": "2026-09-08",
+      "category": "Geopolitics & Security",
+      "source": "SIPRI",
+      "title": "Partnering for Social Cohesion in the Sahel: Lessons for Donors",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.sipri.org/publications/2026/sipri-policy-briefs/partnering-social-cohesion-sahel-lessons-donors",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "sipri"
+    },
     {
       "id": "3856754e77888e",
       "date": "2026-09-08",
