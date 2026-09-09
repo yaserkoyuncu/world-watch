@@ -1,5 +1,5 @@
 {
-  "last_checked": "2026-09-09T13:43:44.570571Z",
+  "last_checked": "2026-09-09T18:37:08.883859Z",
   "engine_version": "6.1",
   "migration_baseline": false,
   "series": {
@@ -8,8 +8,8 @@
     "total": 44
   },
   "discovery": {
-    "ok": 30,
-    "failed": 8,
+    "ok": 29,
+    "failed": 9,
     "total": 38
   },
   "monitors": [
@@ -89,9 +89,12 @@
       "kind": "series",
       "ok": true,
       "latest": "2025",
-      "url": "https://unctad.org/sites/default/files/styles/cover_image/public/2025-11/tdr2025_1000x1414.jpg?itok=BmZlJ0M2",
-      "method": "reader-link",
-      "warnings": []
+      "url": "https://unctad.org/publication/trade-and-development-report-2025",
+      "method": "official-url",
+      "warnings": [
+        "direct https://unctad.org/topic/macroeconomics/trade-development-report: 403 Client Error: Forbidden for url: https://unctad.org/topic/macroeconomics/trade-development-report",
+        "direct https://unctad.org/publication/trade-and-development-report-2025: 403 Client Error: Forbidden for url: https://unctad.org/publication/trade-and-development-report-2025"
+      ]
     },
     {
       "monitor": "Global Trade Outlook and Statistics",
@@ -99,10 +102,8 @@
       "ok": true,
       "latest": "March 2026",
       "url": "https://www.wto.org/english/res_e/publications_e/gtos0326_e.htm",
-      "method": "reader-block",
-      "warnings": [
-        "direct https://www.wto.org/english/res_e/publications_e/gtos0326_e.htm: HTTPSConnectionPool(host='www.wto.org', port=443): Read timed out. (read timeout=22)"
-      ]
+      "method": "direct-title",
+      "warnings": []
     },
     {
       "monitor": "Employment and Social Trends",
@@ -179,7 +180,9 @@
       "latest": "2026",
       "url": "https://www.deloitte.com/us/en/insights/topics/technology-management/tech-trends.html",
       "method": "direct-title",
-      "warnings": []
+      "warnings": [
+        "reader https://www.deloitte.com/us/en/insights/topics/technology-management/tech-trends.html: 403 Client Error: Forbidden for url: https://r.jina.ai/https://www.deloitte.com/us/en/insights/topics/technology-managem"
+      ]
     },
     {
       "monitor": "Global Tech Report",
@@ -290,7 +293,7 @@
       "ok": true,
       "latest": "2026",
       "url": "https://worldmigrationreport.iom.int/msite/wmr-2026-interactive/",
-      "method": "official-url",
+      "method": "reader-block",
       "warnings": [
         "direct https://worldmigrationreport.iom.int/msite/wmr-2026-interactive/: 403 Client Error: Forbidden for url: https://worldmigrationreport.iom.int/msite/wmr-2026-interactive/"
       ]
@@ -352,7 +355,7 @@
       "ok": true,
       "latest": "2026",
       "url": "https://www.unesco.org/gem-report/en/articles/what-does-2026-gem-report-say-about-access-and-equity-education",
-      "method": "direct-link",
+      "method": "reader-link",
       "warnings": []
     },
     {
@@ -407,8 +410,8 @@
       "kind": "series",
       "ok": true,
       "latest": "2025",
-      "url": "https://www.transparency.org/en/press/corruption-perceptions-index-2025-decline-leadership-undermining-global-fight",
-      "method": "reader-link",
+      "url": "https://www.transparency.org/en/cpi/2025",
+      "method": "reader-block",
       "warnings": []
     },
     {
@@ -456,18 +459,21 @@
       "kind": "discovery",
       "ok": true,
       "candidates": 18,
-      "new_candidates": 1,
+      "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
     },
     {
       "monitor": "UNCTAD discovery",
       "kind": "discovery",
-      "ok": true,
-      "candidates": 27,
-      "new_candidates": 1,
+      "ok": false,
+      "candidates": 0,
+      "new_candidates": 0,
       "suppressed": 0,
-      "warnings": []
+      "warnings": [
+        "direct https://unctad.org/publications: 403 Client Error: Forbidden for url: https://unctad.org/publications",
+        "direct https://unctad.org/unctad-publications: 403 Client Error: Forbidden for url: https://unctad.org/unctad-publications"
+      ]
     },
     {
       "monitor": "WTO discovery",
@@ -490,8 +496,8 @@
     {
       "monitor": "World Economic Forum discovery",
       "kind": "discovery",
-      "ok": false,
-      "candidates": 0,
+      "ok": true,
+      "candidates": 21,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
@@ -531,7 +537,7 @@
       "monitor": "International Crisis Group discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 8,
+      "candidates": 10,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
@@ -608,7 +614,7 @@
       "kind": "discovery",
       "ok": true,
       "candidates": 29,
-      "new_candidates": 1,
+      "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
     },
@@ -666,7 +672,7 @@
       "kind": "discovery",
       "ok": true,
       "candidates": 13,
-      "new_candidates": 1,
+      "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
         "direct https://publications.iom.int/: 403 Client Error: Forbidden for url: https://publications.iom.int/"
@@ -778,8 +784,8 @@
     {
       "monitor": "Quanta Magazine discovery",
       "kind": "discovery",
-      "ok": true,
-      "candidates": 1,
+      "ok": false,
+      "candidates": 0,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
