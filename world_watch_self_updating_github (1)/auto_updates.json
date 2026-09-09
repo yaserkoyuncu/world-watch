@@ -1,5 +1,5 @@
 {
-  "last_checked": "2026-09-09T08:09:32.220985Z",
+  "last_checked": "2026-09-09T13:43:44.570571Z",
   "engine_version": "6.1",
   "monitor_count": 82,
   "flagship_series_count": 44,
@@ -8,6 +8,58 @@
   "new_flagship_editions_this_run": 0,
   "migration_baseline": false,
   "updates": [
+    {
+      "id": "7b90b3111d4c87",
+      "date": "2026-09-09",
+      "category": "Economy & Political Economy",
+      "source": "BIS",
+      "title": "FSI publication 09 Sep 2026 AI cyber frontier models",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.bis.org/publications/fsi-paper-28-when-machines-attack-frontier-ai-cyber-threats-and-policy-responses-financial-sector",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "bis"
+    },
+    {
+      "id": "30a76c7210fca9",
+      "date": "2026-09-09",
+      "category": "Economy & Political Economy",
+      "source": "UNCTAD",
+      "title": "Sustainable Finance Policy Monitor 2026: Expansion and divergence 08 Sep 2026",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://unctad.org/publication/sustainable-finance-policy-monitor-2026-expansion-and-divergence",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "unctad"
+    },
+    {
+      "id": "8a66f22fe7188b",
+      "date": "2026-09-09",
+      "category": "Climate & Energy",
+      "source": "WMO",
+      "title": "WMO Bulletin Published since 1952, Bulletin articles look at how observations, science, data and global cooperation shape the way the world understands and responds to weather, climate and water risks.",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://wmo.int/resources/wmo-bulletin",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "wmo"
+    },
+    {
+      "id": "a574eb8f6d390a",
+      "date": "2026-09-09",
+      "category": "Demography & Society",
+      "source": "IOM",
+      "title": "Feasibility Study to Establish a Diaspora Skills Platform for Mauritius",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://publications.iom.int/books/feasibility-study-establish-diaspora-skills-platform-mauritius",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "iom"
+    },
     {
       "id": "b9a8fc6f601c1d",
       "date": "2026-09-09",
