@@ -1,5 +1,5 @@
 {
-  "last_checked": "2026-09-10T08:08:29.067796Z",
+  "last_checked": "2026-09-10T13:36:29.286296Z",
   "engine_version": "6.1",
   "migration_baseline": false,
   "series": {
@@ -8,8 +8,8 @@
     "total": 44
   },
   "discovery": {
-    "ok": 27,
-    "failed": 11,
+    "ok": 30,
+    "failed": 8,
     "total": 38
   },
   "monitors": [
@@ -138,10 +138,8 @@
       "ok": true,
       "latest": "2026",
       "url": "https://www.sipri.org/yearbook/2026",
-      "method": "reader-block",
-      "warnings": [
-        "direct https://www.sipri.org/yearbook/2026: HTTPSConnectionPool(host='www.sipri.org', port=443): Max retries exceeded with url: /yearbook/2026 (Caused by ConnectTim"
-      ]
+      "method": "direct-title",
+      "warnings": []
     },
     {
       "monitor": "Annual Threat Assessment",
@@ -293,7 +291,7 @@
       "ok": true,
       "latest": "2026",
       "url": "https://worldmigrationreport.iom.int/msite/wmr-2026-interactive/",
-      "method": "official-url",
+      "method": "reader-block",
       "warnings": [
         "direct https://worldmigrationreport.iom.int/msite/wmr-2026-interactive/: 403 Client Error: Forbidden for url: https://worldmigrationreport.iom.int/msite/wmr-2026-interactive/"
       ]
@@ -355,7 +353,7 @@
       "ok": true,
       "latest": "2026",
       "url": "https://www.unesco.org/gem-report/en/articles/what-does-2026-gem-report-say-about-access-and-equity-education",
-      "method": "direct-link",
+      "method": "reader-link",
       "warnings": []
     },
     {
@@ -401,8 +399,8 @@
       "kind": "series",
       "ok": true,
       "latest": "2025",
-      "url": "https://worldjusticeproject.org/rule-of-law-index/global/2025/wjp-index",
-      "method": "direct-title",
+      "url": "https://worldjusticeproject.org/rule-of-law-index/",
+      "method": "reader-block",
       "warnings": []
     },
     {
@@ -459,7 +457,7 @@
       "kind": "discovery",
       "ok": true,
       "candidates": 19,
-      "new_candidates": 1,
+      "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
     },
@@ -496,8 +494,8 @@
     {
       "monitor": "World Economic Forum discovery",
       "kind": "discovery",
-      "ok": false,
-      "candidates": 0,
+      "ok": true,
+      "candidates": 21,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
@@ -518,11 +516,9 @@
       "kind": "discovery",
       "ok": true,
       "candidates": 8,
-      "new_candidates": 1,
+      "new_candidates": 0,
       "suppressed": 0,
-      "warnings": [
-        "direct https://www.sipri.org/publications: HTTPSConnectionPool(host='www.sipri.org', port=443): Max retries exceeded with url: /publications (Caused by ConnectTimeoutError(<HTTPSConne"
-      ]
+      "warnings": []
     },
     {
       "monitor": "ODNI discovery",
@@ -615,7 +611,7 @@
       "monitor": "WMO discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 28,
+      "candidates": 29,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
@@ -654,8 +650,8 @@
     {
       "monitor": "Carbon Brief discovery",
       "kind": "discovery",
-      "ok": false,
-      "candidates": 0,
+      "ok": true,
+      "candidates": 1,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
@@ -672,8 +668,8 @@
     {
       "monitor": "IOM discovery",
       "kind": "discovery",
-      "ok": false,
-      "candidates": 0,
+      "ok": true,
+      "candidates": 13,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
