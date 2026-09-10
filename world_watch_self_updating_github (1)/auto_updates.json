@@ -1,13 +1,39 @@
 {
-  "last_checked": "2026-09-09T23:15:11.014651Z",
+  "last_checked": "2026-09-10T08:08:29.067796Z",
   "engine_version": "6.1",
   "monitor_count": 82,
   "flagship_series_count": 44,
   "discovery_source_count": 38,
-  "new_items_this_run": 0,
+  "new_items_this_run": 2,
   "new_flagship_editions_this_run": 0,
   "migration_baseline": false,
   "updates": [
+    {
+      "id": "805c303c7dc071",
+      "date": "2026-09-10",
+      "category": "Economy & Political Economy",
+      "source": "BIS",
+      "title": "10 September 2026 Artificial intelligence, growth and financial stability: challenges for central banks Pablo Hernández de Cos General Manager",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.bis.org/speeches/20260910-artificial-intelligence-growth-and-financial-stability-challenges-central-banks",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "bis"
+    },
+    {
+      "id": "fa280cb106fece",
+      "date": "2026-09-10",
+      "category": "Geopolitics & Security",
+      "source": "SIPRI",
+      "title": "![Image 4: FS 2608 Chad humanitarian funding_cover",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.sipri.org/sites/default/files/styles/medium/public/2026-08/fs_2608_chad_humanitarian_funding_gaps_en_cover_0.png?itok=yUtLyO21",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "sipri"
+    },
     {
       "id": "7b90b3111d4c87",
       "date": "2026-09-09",
