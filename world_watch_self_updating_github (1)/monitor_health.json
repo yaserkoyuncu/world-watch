@@ -1,15 +1,15 @@
 {
-  "last_checked": "2026-09-11T08:03:50.936042Z",
+  "last_checked": "2026-09-11T13:34:35.068840Z",
   "engine_version": "6.1",
   "migration_baseline": false,
   "series": {
-    "ok": 40,
-    "failed": 4,
+    "ok": 41,
+    "failed": 3,
     "total": 44
   },
   "discovery": {
-    "ok": 29,
-    "failed": 9,
+    "ok": 28,
+    "failed": 10,
     "total": 38
   },
   "monitors": [
@@ -177,9 +177,7 @@
       "latest": "2026",
       "url": "https://www.deloitte.com/us/en/insights/topics/technology-management/tech-trends.html",
       "method": "direct-title",
-      "warnings": [
-        "reader https://www.deloitte.com/us/en/insights/topics/technology-management/tech-trends.html: 403 Client Error: Forbidden for url: https://r.jina.ai/https://www.deloitte.com/us/en/insights/topics/technology-managem"
-      ]
+      "warnings": []
     },
     {
       "monitor": "Global Tech Report",
@@ -290,7 +288,7 @@
       "ok": true,
       "latest": "2026",
       "url": "https://worldmigrationreport.iom.int/msite/wmr-2026-interactive/",
-      "method": "reader-block",
+      "method": "official-url",
       "warnings": [
         "direct https://worldmigrationreport.iom.int/msite/wmr-2026-interactive/: 403 Client Error: Forbidden for url: https://worldmigrationreport.iom.int/msite/wmr-2026-interactive/"
       ]
@@ -331,8 +329,11 @@
     {
       "monitor": "World Health Statistics",
       "kind": "series",
-      "ok": false,
-      "error": "direct https://www.who.int/publications/i/item/9789240122482: HTTPSConnectionPool(host='www.who.int', port=443): Read timed out. (read timeout=22)"
+      "ok": true,
+      "latest": "2026",
+      "url": "https://www.who.int/publications/i/item/9789240122482",
+      "method": "direct-title",
+      "warnings": []
     },
     {
       "monitor": "State of Food Security and Nutrition in the World",
@@ -349,7 +350,7 @@
       "ok": true,
       "latest": "2026",
       "url": "https://www.unesco.org/gem-report/en/articles/what-does-2026-gem-report-say-about-access-and-equity-education",
-      "method": "reader-link",
+      "method": "direct-link",
       "warnings": []
     },
     {
@@ -395,8 +396,8 @@
       "kind": "series",
       "ok": true,
       "latest": "2025",
-      "url": "https://worldjusticeproject.org/rule-of-law-index/",
-      "method": "reader-block",
+      "url": "https://worldjusticeproject.org/rule-of-law-index/global/2025/wjp-index",
+      "method": "direct-title",
       "warnings": []
     },
     {
@@ -587,7 +588,7 @@
       "kind": "discovery",
       "ok": true,
       "candidates": 14,
-      "new_candidates": 6,
+      "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
     },
@@ -661,8 +662,8 @@
     {
       "monitor": "IOM discovery",
       "kind": "discovery",
-      "ok": true,
-      "candidates": 13,
+      "ok": false,
+      "candidates": 0,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
@@ -684,8 +685,8 @@
       "monitor": "UNDP discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 5,
-      "new_candidates": 0,
+      "candidates": 6,
+      "new_candidates": 2,
       "suppressed": 0,
       "warnings": [
         "direct https://www.undp.org/publications: 403 Client Error: Forbidden for url: https://www.undp.org/publications"
@@ -695,8 +696,8 @@
       "monitor": "WHO discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 7,
-      "new_candidates": 0,
+      "candidates": 8,
+      "new_candidates": 1,
       "suppressed": 0,
       "warnings": []
     },
