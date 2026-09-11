@@ -1,5 +1,5 @@
 {
-  "last_checked": "2026-09-11T13:34:35.068840Z",
+  "last_checked": "2026-09-11T18:33:48.908252Z",
   "engine_version": "6.1",
   "monitor_count": 82,
   "flagship_series_count": 44,
@@ -8,6 +8,45 @@
   "new_flagship_editions_this_run": 0,
   "migration_baseline": false,
   "updates": [
+    {
+      "id": "bca537ef55e8ec",
+      "date": "2026-09-11",
+      "category": "Economy & Political Economy",
+      "source": "ILO",
+      "title": "Situation analysis study on the worst forms of child labour and education status in agriculture and rural areas of Myanmar",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.ilo.org/publications/major-publications/situation-analysis-study-worst-forms-child-labour-and-education-status",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "ilo"
+    },
+    {
+      "id": "8d3b6f80533568",
+      "date": "2026-09-11",
+      "category": "Democracy & Rights",
+      "source": "Freedom House",
+      "title": "Tunnel Vision: Anti-censorship Tools, End-to-End Encryption and the Fight for a Free and Open Internet",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://freedomhouse.org/index%2Ephp/report/special-report/2025/tunnel-vision-anti-censorship-tools-end-end-encryption-and-fight-free",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "freedom"
+    },
+    {
+      "id": "1264f6ae01ecdd",
+      "date": "2026-09-11",
+      "category": "Democracy & Rights",
+      "source": "Freedom House",
+      "title": "More Action Needed to Ensure Safety: Combating Transnational Repression in Australia",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://freedomhouse.org/index%2Ephp/report/special-report/2025/more-action-needed-ensure-safety-combating-transnational-repression",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "freedom"
+    },
     {
       "id": "9262f9773d4908",
       "date": "2026-09-11",
