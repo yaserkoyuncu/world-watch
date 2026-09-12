@@ -1,15 +1,15 @@
 {
-  "last_checked": "2026-09-12T12:51:50.627661Z",
+  "last_checked": "2026-09-12T17:44:52.458846Z",
   "engine_version": "6.1",
   "migration_baseline": false,
   "series": {
-    "ok": 42,
-    "failed": 2,
+    "ok": 41,
+    "failed": 3,
     "total": 44
   },
   "discovery": {
-    "ok": 29,
-    "failed": 9,
+    "ok": 28,
+    "failed": 10,
     "total": 38
   },
   "monitors": [
@@ -91,7 +91,9 @@
       "latest": "2025",
       "url": "https://unctad.org/sites/default/files/styles/cover_image/public/2025-11/tdr2025_1000x1414.jpg?itok=BmZlJ0M2",
       "method": "reader-link",
-      "warnings": []
+      "warnings": [
+        "direct https://unctad.org/topic/macroeconomics/trade-development-report: HTTPSConnectionPool(host='unctad.org', port=443): Read timed out. (read timeout=22)"
+      ]
     },
     {
       "monitor": "Global Trade Outlook and Statistics",
@@ -177,9 +179,7 @@
       "latest": "2026",
       "url": "https://www.deloitte.com/us/en/insights/topics/technology-management/tech-trends.html",
       "method": "direct-title",
-      "warnings": [
-        "reader https://www.deloitte.com/us/en/insights/topics/technology-management/tech-trends.html: 403 Client Error: Forbidden for url: https://r.jina.ai/https://www.deloitte.com/us/en/insights/topics/technology-managem"
-      ]
+      "warnings": []
     },
     {
       "monitor": "Global Tech Report",
@@ -290,7 +290,7 @@
       "ok": true,
       "latest": "2026",
       "url": "https://worldmigrationreport.iom.int/msite/wmr-2026-interactive/",
-      "method": "reader-block",
+      "method": "official-url",
       "warnings": [
         "direct https://worldmigrationreport.iom.int/msite/wmr-2026-interactive/: 403 Client Error: Forbidden for url: https://worldmigrationreport.iom.int/msite/wmr-2026-interactive/"
       ]
@@ -298,13 +298,8 @@
     {
       "monitor": "Global Trends",
       "kind": "series",
-      "ok": true,
-      "latest": "2025",
-      "url": "https://www.unhcr.org/media/global-trends-2025-report",
-      "method": "reader-block",
-      "warnings": [
-        "direct https://www.unhcr.org/au/global-trends: 403 Client Error: Forbidden for url: https://www.unhcr.org/au/global-trends"
-      ]
+      "ok": false,
+      "error": "direct https://www.unhcr.org/au/global-trends: 403 Client Error: Forbidden for url: https://www.unhcr.org/au/global-trends | direct https://www.unhcr.org/media/global-trends-2025-report: 403 Client Error: Forbidden for url: https://www.unhcr.org/media/global-trends-2025-report | direct https://www.unhcr.org/global-trends: 403 Client Error: Forbidden for url: https://www.unhcr.org/global-trends"
     },
     {
       "monitor": "Human Development Report",
@@ -338,9 +333,11 @@
       "kind": "series",
       "ok": true,
       "latest": "2026",
-      "url": "https://www.who.int/publications/i/item/9789240122482",
-      "method": "direct-title",
-      "warnings": []
+      "url": "https://iris.who.int/server/api/core/bitstreams/80079ae0-75e1-4e5e-9284-3f25bfd069c9/content",
+      "method": "reader-link",
+      "warnings": [
+        "direct https://www.who.int/publications/i/item/9789240122482: HTTPSConnectionPool(host='www.who.int', port=443): Read timed out. (read timeout=22)"
+      ]
     },
     {
       "monitor": "State of Food Security and Nutrition in the World",
@@ -495,8 +492,8 @@
     {
       "monitor": "World Economic Forum discovery",
       "kind": "discovery",
-      "ok": true,
-      "candidates": 21,
+      "ok": false,
+      "candidates": 0,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
@@ -536,7 +533,7 @@
       "monitor": "International Crisis Group discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 8,
+      "candidates": 10,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
@@ -669,8 +666,8 @@
     {
       "monitor": "IOM discovery",
       "kind": "discovery",
-      "ok": true,
-      "candidates": 13,
+      "ok": false,
+      "candidates": 0,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
@@ -703,7 +700,7 @@
       "monitor": "WHO discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 8,
+      "candidates": 7,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
@@ -711,8 +708,8 @@
     {
       "monitor": "FAO discovery",
       "kind": "discovery",
-      "ok": false,
-      "candidates": 0,
+      "ok": true,
+      "candidates": 4,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
