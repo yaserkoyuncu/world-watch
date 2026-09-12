@@ -1,13 +1,28 @@
 {
-  "last_checked": "2026-09-11T23:16:07.584897Z",
+  "last_checked": "2026-09-12T07:55:30.592489Z",
   "engine_version": "6.1",
   "monitor_count": 82,
   "flagship_series_count": 44,
   "discovery_source_count": 38,
-  "new_items_this_run": 0,
-  "new_flagship_editions_this_run": 0,
+  "new_items_this_run": 1,
+  "new_flagship_editions_this_run": 1,
   "migration_baseline": false,
   "updates": [
+    {
+      "id": "ea2f4c322c9ad7",
+      "date": "2026-09-12",
+      "category": "Demography & Society",
+      "source": "UNHCR",
+      "title": "Global Trends — 2026",
+      "summary": "Edition-aware monitor detected a newer Global Trends: 2026, replacing 2025.",
+      "url": "https://www.unhcr.org/global-trends",
+      "type": "New flagship edition",
+      "automatic": true,
+      "series_id": "unhcr_gt",
+      "edition": "2026",
+      "previous_edition": "2025",
+      "confidence": "high"
+    },
     {
       "id": "bca537ef55e8ec",
       "date": "2026-09-11",
@@ -514,21 +529,6 @@
       "automatic": true,
       "confidence": "medium",
       "discovery_source": "quanta"
-    },
-    {
-      "id": "ea2f4c322c9ad7",
-      "date": "2026-09-03",
-      "category": "Demography & Society",
-      "source": "UNHCR",
-      "title": "Global Trends — 2026",
-      "summary": "Edition-aware monitor detected a newer Global Trends: 2026, replacing 2025.",
-      "url": "https://www.unhcr.org/global-trends",
-      "type": "New flagship edition",
-      "automatic": true,
-      "series_id": "unhcr_gt",
-      "edition": "2026",
-      "previous_edition": "2025",
-      "confidence": "high"
     },
     {
       "id": "bf711ff0b306c7",
