@@ -1,10 +1,10 @@
 {
-  "last_checked": "2026-09-12T23:03:02.153650Z",
+  "last_checked": "2026-09-13T08:19:02.639860Z",
   "engine_version": "6.1",
   "migration_baseline": false,
   "series": {
-    "ok": 41,
-    "failed": 3,
+    "ok": 42,
+    "failed": 2,
     "total": 44
   },
   "discovery": {
@@ -89,9 +89,12 @@
       "kind": "series",
       "ok": true,
       "latest": "2025",
-      "url": "https://unctad.org/sites/default/files/styles/cover_image/public/2025-11/tdr2025_1000x1414.jpg?itok=BmZlJ0M2",
-      "method": "reader-link",
-      "warnings": []
+      "url": "https://unctad.org/publication/trade-and-development-report-2025",
+      "method": "official-url",
+      "warnings": [
+        "direct https://unctad.org/topic/macroeconomics/trade-development-report: 403 Client Error: Forbidden for url: https://unctad.org/topic/macroeconomics/trade-development-report",
+        "direct https://unctad.org/publication/trade-and-development-report-2025: 403 Client Error: Forbidden for url: https://unctad.org/publication/trade-and-development-report-2025"
+      ]
     },
     {
       "monitor": "Global Trade Outlook and Statistics",
@@ -296,8 +299,14 @@
     {
       "monitor": "Global Trends",
       "kind": "series",
-      "ok": false,
-      "error": "direct https://www.unhcr.org/au/global-trends: 403 Client Error: Forbidden for url: https://www.unhcr.org/au/global-trends | direct https://www.unhcr.org/media/global-trends-2025-report: 403 Client Error: Forbidden for url: https://www.unhcr.org/media/global-trends-2025-report | direct https://www.unhcr.org/global-trends: 403 Client Error: Forbidden for url: https://www.unhcr.org/global-trends"
+      "ok": true,
+      "latest": "2026",
+      "url": "https://www.unhcr.org/global-trends",
+      "method": "reader-block",
+      "warnings": [
+        "direct https://www.unhcr.org/au/global-trends: 403 Client Error: Forbidden for url: https://www.unhcr.org/au/global-trends",
+        "direct https://www.unhcr.org/media/global-trends-2025-report: 403 Client Error: Forbidden for url: https://www.unhcr.org/media/global-trends-2025-report"
+      ]
     },
     {
       "monitor": "Human Development Report",
@@ -331,11 +340,9 @@
       "kind": "series",
       "ok": true,
       "latest": "2026",
-      "url": "https://iris.who.int/server/api/core/bitstreams/80079ae0-75e1-4e5e-9284-3f25bfd069c9/content",
-      "method": "reader-link",
-      "warnings": [
-        "direct https://www.who.int/publications/i/item/9789240122482: HTTPSConnectionPool(host='www.who.int', port=443): Read timed out. (read timeout=22)"
-      ]
+      "url": "https://www.who.int/publications/i/item/9789240122482",
+      "method": "direct-title",
+      "warnings": []
     },
     {
       "monitor": "State of Food Security and Nutrition in the World",
@@ -398,8 +405,8 @@
       "kind": "series",
       "ok": true,
       "latest": "2025",
-      "url": "https://worldjusticeproject.org/rule-of-law-index/",
-      "method": "reader-block",
+      "url": "https://worldjusticeproject.org/rule-of-law-index/global/2025/wjp-index",
+      "method": "direct-title",
       "warnings": []
     },
     {
@@ -407,8 +414,8 @@
       "kind": "series",
       "ok": true,
       "latest": "2025",
-      "url": "https://www.transparency.org/en/cpi/2025",
-      "method": "reader-block",
+      "url": "https://www.transparency.org/en/press/corruption-perceptions-index-2025-decline-leadership-undermining-global-fight",
+      "method": "reader-link",
       "warnings": []
     },
     {
@@ -463,11 +470,14 @@
     {
       "monitor": "UNCTAD discovery",
       "kind": "discovery",
-      "ok": true,
-      "candidates": 27,
+      "ok": false,
+      "candidates": 0,
       "new_candidates": 0,
       "suppressed": 0,
-      "warnings": []
+      "warnings": [
+        "direct https://unctad.org/publications: 403 Client Error: Forbidden for url: https://unctad.org/publications",
+        "direct https://unctad.org/unctad-publications: 403 Client Error: Forbidden for url: https://unctad.org/unctad-publications"
+      ]
     },
     {
       "monitor": "WTO discovery",
@@ -531,7 +541,7 @@
       "monitor": "International Crisis Group discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 8,
+      "candidates": 10,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
@@ -706,8 +716,8 @@
     {
       "monitor": "FAO discovery",
       "kind": "discovery",
-      "ok": false,
-      "candidates": 0,
+      "ok": true,
+      "candidates": 4,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
