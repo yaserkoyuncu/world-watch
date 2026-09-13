@@ -1,11 +1,11 @@
 {
-  "last_checked": "2026-09-13T08:19:02.639860Z",
+  "last_checked": "2026-09-13T13:48:06.396907Z",
   "engine_version": "6.1",
   "monitor_count": 82,
   "flagship_series_count": 44,
   "discovery_source_count": 38,
   "new_items_this_run": 1,
-  "new_flagship_editions_this_run": 1,
+  "new_flagship_editions_this_run": 0,
   "migration_baseline": false,
   "updates": [
     {
@@ -22,6 +22,19 @@
       "edition": "2026",
       "previous_edition": "2025",
       "confidence": "high"
+    },
+    {
+      "id": "59b14a1cd02595",
+      "date": "2026-09-13",
+      "category": "Demography & Society",
+      "source": "UNDP",
+      "title": "Publications ![Image 43: Photo: narrow fabric store aisle with colorful rolls stacked on tall shelves along both sides; shopper at far end.",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.undp.org/sites/g/files/zskgke326/files/styles/content_card_453_x_256_/public/2026-09/lattakia-rawhi_afahjani_visit_coastal_area-28092025-29.jpg?h=5145297a&itok=yv9cgWu1",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "undp"
     },
     {
       "id": "bca537ef55e8ec",
