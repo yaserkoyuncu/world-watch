@@ -1,5 +1,5 @@
 {
-  "last_checked": "2026-09-13T18:12:31.451351Z",
+  "last_checked": "2026-09-13T23:10:43.262744Z",
   "engine_version": "6.1",
   "migration_baseline": false,
   "series": {
@@ -8,8 +8,8 @@
     "total": 44
   },
   "discovery": {
-    "ok": 29,
-    "failed": 9,
+    "ok": 28,
+    "failed": 10,
     "total": 38
   },
   "monitors": [
@@ -535,7 +535,7 @@
       "monitor": "International Crisis Group discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 10,
+      "candidates": 8,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
@@ -702,7 +702,7 @@
       "monitor": "WHO discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 7,
+      "candidates": 8,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
@@ -710,8 +710,8 @@
     {
       "monitor": "FAO discovery",
       "kind": "discovery",
-      "ok": true,
-      "candidates": 4,
+      "ok": false,
+      "candidates": 0,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
