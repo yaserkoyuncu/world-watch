@@ -1,5 +1,5 @@
 {
-  "last_checked": "2026-09-14T08:55:49.780193Z",
+  "last_checked": "2026-09-14T15:53:33.926558Z",
   "engine_version": "6.1",
   "migration_baseline": false,
   "series": {
@@ -8,8 +8,8 @@
     "total": 44
   },
   "discovery": {
-    "ok": 29,
-    "failed": 9,
+    "ok": 30,
+    "failed": 8,
     "total": 38
   },
   "monitors": [
@@ -89,12 +89,9 @@
       "kind": "series",
       "ok": true,
       "latest": "2025",
-      "url": "https://unctad.org/publication/trade-and-development-report-2025",
-      "method": "official-url",
-      "warnings": [
-        "direct https://unctad.org/topic/macroeconomics/trade-development-report: 403 Client Error: Forbidden for url: https://unctad.org/topic/macroeconomics/trade-development-report",
-        "direct https://unctad.org/publication/trade-and-development-report-2025: 403 Client Error: Forbidden for url: https://unctad.org/publication/trade-and-development-report-2025"
-      ]
+      "url": "https://unctad.org/sites/default/files/styles/cover_image/public/2025-11/tdr2025_1000x1414.jpg?itok=BmZlJ0M2",
+      "method": "reader-link",
+      "warnings": []
     },
     {
       "monitor": "Global Trade Outlook and Statistics",
@@ -170,8 +167,14 @@
     {
       "monitor": "State of AI",
       "kind": "series",
-      "ok": false,
-      "error": "direct https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai/: HTTPSConnectionPool(host='www.mckinsey.com', port=443): Read timed out. (read timeout=22) | direct https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai: HTTPSConnectionPool(host='www.mckinsey.com', port=443): Read timed out. (read timeout=22)"
+      "ok": true,
+      "latest": "2026",
+      "url": "https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai/",
+      "method": "reader-block",
+      "warnings": [
+        "direct https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai/: HTTPSConnectionPool(host='www.mckinsey.com', port=443): Read timed out. (read timeout=22)",
+        "direct https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai: HTTPSConnectionPool(host='www.mckinsey.com', port=443): Read timed out. (read timeout=22)"
+      ]
     },
     {
       "monitor": "Tech Trends",
@@ -299,14 +302,8 @@
     {
       "monitor": "Global Trends",
       "kind": "series",
-      "ok": true,
-      "latest": "2026",
-      "url": "https://www.unhcr.org/global-trends",
-      "method": "reader-block",
-      "warnings": [
-        "direct https://www.unhcr.org/au/global-trends: 403 Client Error: Forbidden for url: https://www.unhcr.org/au/global-trends",
-        "direct https://www.unhcr.org/media/global-trends-2025-report: 403 Client Error: Forbidden for url: https://www.unhcr.org/media/global-trends-2025-report"
-      ]
+      "ok": false,
+      "error": "direct https://www.unhcr.org/au/global-trends: 403 Client Error: Forbidden for url: https://www.unhcr.org/au/global-trends | direct https://www.unhcr.org/media/global-trends-2025-report: 403 Client Error: Forbidden for url: https://www.unhcr.org/media/global-trends-2025-report | direct https://www.unhcr.org/global-trends: 403 Client Error: Forbidden for url: https://www.unhcr.org/global-trends"
     },
     {
       "monitor": "Human Development Report",
@@ -405,8 +402,8 @@
       "kind": "series",
       "ok": true,
       "latest": "2025",
-      "url": "https://worldjusticeproject.org/rule-of-law-index/global/2025/wjp-index",
-      "method": "direct-title",
+      "url": "https://worldjusticeproject.org/rule-of-law-index/",
+      "method": "reader-block",
       "warnings": []
     },
     {
@@ -462,22 +459,19 @@
       "monitor": "BIS discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 19,
-      "new_candidates": 0,
+      "candidates": 21,
+      "new_candidates": 6,
       "suppressed": 0,
       "warnings": []
     },
     {
       "monitor": "UNCTAD discovery",
       "kind": "discovery",
-      "ok": false,
-      "candidates": 0,
+      "ok": true,
+      "candidates": 26,
       "new_candidates": 0,
       "suppressed": 0,
-      "warnings": [
-        "direct https://unctad.org/publications: 403 Client Error: Forbidden for url: https://unctad.org/publications",
-        "direct https://unctad.org/unctad-publications: 403 Client Error: Forbidden for url: https://unctad.org/unctad-publications"
-      ]
+      "warnings": []
     },
     {
       "monitor": "WTO discovery",
@@ -541,7 +535,7 @@
       "monitor": "International Crisis Group discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 10,
+      "candidates": 8,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
@@ -780,8 +774,8 @@
       "monitor": "Reporters Without Borders discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 5,
-      "new_candidates": 0,
+      "candidates": 6,
+      "new_candidates": 1,
       "suppressed": 0,
       "warnings": []
     },
