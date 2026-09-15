@@ -1,13 +1,26 @@
 {
-  "last_checked": "2026-09-14T15:53:33.926558Z",
+  "last_checked": "2026-09-14T23:52:44.108333Z",
   "engine_version": "6.1",
   "monitor_count": 82,
   "flagship_series_count": 44,
   "discovery_source_count": 38,
-  "new_items_this_run": 5,
+  "new_items_this_run": 1,
   "new_flagship_editions_this_run": 0,
   "migration_baseline": false,
   "updates": [
+    {
+      "id": "db9f247a3d76bd",
+      "date": "2026-09-14",
+      "category": "Demography & Society",
+      "source": "UNDP",
+      "title": "Publications ![Image 43: Poster titled Turning Digital into Impact featuring diverse people and UNICEF logo.",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.undp.org/sites/g/files/zskgke326/files/styles/content_card_453_x_256_/public/2026-09/cover_compendium.png?h=f32f96d7&itok=mFBHmG45",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "undp"
+    },
     {
       "id": "44d480b02c13d6",
       "date": "2026-09-14",
