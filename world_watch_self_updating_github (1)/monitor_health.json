@@ -1,15 +1,15 @@
 {
-  "last_checked": "2026-09-15T19:00:54.595482Z",
+  "last_checked": "2026-09-15T23:31:57.415228Z",
   "engine_version": "6.1",
   "migration_baseline": false,
   "series": {
-    "ok": 41,
-    "failed": 3,
+    "ok": 40,
+    "failed": 4,
     "total": 44
   },
   "discovery": {
-    "ok": 29,
-    "failed": 9,
+    "ok": 28,
+    "failed": 10,
     "total": 38
   },
   "monitors": [
@@ -198,7 +198,9 @@
       "latest": "2025",
       "url": "https://www.wipo.int/publications/en/series/index.jsp?id=129&lang=en",
       "method": "reader-block",
-      "warnings": []
+      "warnings": [
+        "direct https://www.wipo.int/publications/en/series/index.jsp?id=129&lang=en: 504 Server Error: Gateway Time-out for url: https://www.wipo.int/publications/en/series/index.jsp?id=129&lang=en"
+      ]
     },
     {
       "monitor": "Facts and Figures",
@@ -241,8 +243,8 @@
       "kind": "series",
       "ok": true,
       "latest": "2025",
-      "url": "https://www.iea.org/data-and-statistics/data-product/world-energy-outlook-2025-free-dataset",
-      "method": "reader-link",
+      "url": "https://www.iea.org/reports/world-energy-outlook-2025",
+      "method": "official-url",
       "warnings": [
         "direct https://www.iea.org/reports/world-energy-outlook-2025: 403 Client Error: Forbidden for url: https://www.iea.org/reports/world-energy-outlook-2025"
       ]
@@ -350,11 +352,8 @@
     {
       "monitor": "Global Education Monitoring Report",
       "kind": "series",
-      "ok": true,
-      "latest": "2026",
-      "url": "https://www.unesco.org/gem-report/en/articles/what-does-2026-gem-report-say-about-access-and-equity-education",
-      "method": "reader-link",
-      "warnings": []
+      "ok": false,
+      "error": "direct https://www.unesco.org/gem-report/en/publication/equity-and-access: 500 Server Error: 500 Service unavailable (with message) for url: https://www.unesco.org/gem-report/en/publication/equit"
     },
     {
       "monitor": "Global Multidimensional Poverty Index",
@@ -399,8 +398,8 @@
       "kind": "series",
       "ok": true,
       "latest": "2025",
-      "url": "https://worldjusticeproject.org/rule-of-law-index/",
-      "method": "reader-block",
+      "url": "https://worldjusticeproject.org/rule-of-law-index/global/2025/wjp-index",
+      "method": "direct-title",
       "warnings": []
     },
     {
@@ -408,8 +407,8 @@
       "kind": "series",
       "ok": true,
       "latest": "2025",
-      "url": "https://www.transparency.org/en/press/corruption-perceptions-index-2025-decline-leadership-undermining-global-fight",
-      "method": "reader-link",
+      "url": "https://www.transparency.org/en/cpi/2025",
+      "method": "reader-block",
       "warnings": []
     },
     {
@@ -457,7 +456,7 @@
       "kind": "discovery",
       "ok": true,
       "candidates": 23,
-      "new_candidates": 1,
+      "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
     },
@@ -487,7 +486,7 @@
       "kind": "discovery",
       "ok": true,
       "candidates": 14,
-      "new_candidates": 1,
+      "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
     },
@@ -495,7 +494,7 @@
       "monitor": "World Economic Forum discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 17,
+      "candidates": 23,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
@@ -719,11 +718,13 @@
     {
       "monitor": "UNESCO discovery",
       "kind": "discovery",
-      "ok": true,
-      "candidates": 2,
+      "ok": false,
+      "candidates": 0,
       "new_candidates": 0,
       "suppressed": 0,
-      "warnings": []
+      "warnings": [
+        "direct https://www.unesco.org/en/publications: 500 Server Error: 500 Service unavailable (with message) for url: https://www.unesco.org/en/publications"
+      ]
     },
     {
       "monitor": "V-Dem Institute discovery",
