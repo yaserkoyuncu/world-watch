@@ -1,5 +1,5 @@
 {
-  "last_checked": "2026-09-15T14:19:50.122781Z",
+  "last_checked": "2026-09-15T19:00:54.595482Z",
   "engine_version": "6.1",
   "migration_baseline": false,
   "series": {
@@ -8,8 +8,8 @@
     "total": 44
   },
   "discovery": {
-    "ok": 28,
-    "failed": 10,
+    "ok": 29,
+    "failed": 9,
     "total": 38
   },
   "monitors": [
@@ -68,7 +68,7 @@
       "monitor": "OECD Economic Outlook",
       "kind": "series",
       "ok": true,
-      "latest": "June 2026",
+      "latest": "September 2026",
       "url": "https://www.oecd.org/en/topics/economic-outlook.html",
       "method": "reader-block",
       "warnings": [
@@ -241,8 +241,8 @@
       "kind": "series",
       "ok": true,
       "latest": "2025",
-      "url": "https://www.iea.org/reports/world-energy-outlook-2025",
-      "method": "official-url",
+      "url": "https://www.iea.org/data-and-statistics/data-product/world-energy-outlook-2025-free-dataset",
+      "method": "reader-link",
       "warnings": [
         "direct https://www.iea.org/reports/world-energy-outlook-2025: 403 Client Error: Forbidden for url: https://www.iea.org/reports/world-energy-outlook-2025"
       ]
@@ -291,7 +291,7 @@
       "ok": true,
       "latest": "2026",
       "url": "https://worldmigrationreport.iom.int/msite/wmr-2026-interactive/",
-      "method": "official-url",
+      "method": "reader-block",
       "warnings": [
         "direct https://worldmigrationreport.iom.int/msite/wmr-2026-interactive/: 403 Client Error: Forbidden for url: https://worldmigrationreport.iom.int/msite/wmr-2026-interactive/"
       ]
@@ -399,8 +399,8 @@
       "kind": "series",
       "ok": true,
       "latest": "2025",
-      "url": "https://worldjusticeproject.org/rule-of-law-index/global/2025/wjp-index",
-      "method": "direct-title",
+      "url": "https://worldjusticeproject.org/rule-of-law-index/",
+      "method": "reader-block",
       "warnings": []
     },
     {
@@ -456,8 +456,8 @@
       "monitor": "BIS discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 22,
-      "new_candidates": 4,
+      "candidates": 23,
+      "new_candidates": 1,
       "suppressed": 0,
       "warnings": []
     },
@@ -487,7 +487,7 @@
       "kind": "discovery",
       "ok": true,
       "candidates": 14,
-      "new_candidates": 0,
+      "new_candidates": 1,
       "suppressed": 0,
       "warnings": []
     },
@@ -495,8 +495,8 @@
       "monitor": "World Economic Forum discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 23,
-      "new_candidates": 2,
+      "candidates": 17,
+      "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
         "direct https://www.weforum.org/publications/: 403 Client Error: Forbidden for url: https://www.weforum.org/publications/"
@@ -668,8 +668,8 @@
     {
       "monitor": "IOM discovery",
       "kind": "discovery",
-      "ok": false,
-      "candidates": 0,
+      "ok": true,
+      "candidates": 13,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
@@ -774,7 +774,7 @@
       "monitor": "Reporters Without Borders discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 6,
+      "candidates": 5,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
