@@ -1,5 +1,5 @@
 {
-  "last_checked": "2026-09-16T18:54:20.859619Z",
+  "last_checked": "2026-09-16T23:38:56.372535Z",
   "engine_version": "6.1",
   "migration_baseline": false,
   "series": {
@@ -8,8 +8,8 @@
     "total": 44
   },
   "discovery": {
-    "ok": 29,
-    "failed": 9,
+    "ok": 30,
+    "failed": 8,
     "total": 38
   },
   "monitors": [
@@ -180,9 +180,7 @@
       "latest": "2026",
       "url": "https://www.deloitte.com/us/en/insights/topics/technology-management/tech-trends.html",
       "method": "direct-title",
-      "warnings": [
-        "reader https://www.deloitte.com/us/en/insights/topics/technology-management/tech-trends.html: 403 Client Error: Forbidden for url: https://r.jina.ai/https://www.deloitte.com/us/en/insights/topics/technology-managem"
-      ]
+      "warnings": []
     },
     {
       "monitor": "Global Tech Report",
@@ -497,7 +495,7 @@
       "monitor": "World Economic Forum discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 22,
+      "candidates": 1,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
@@ -537,7 +535,7 @@
       "monitor": "International Crisis Group discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 8,
+      "candidates": 7,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
@@ -681,13 +679,11 @@
     {
       "monitor": "UNHCR discovery",
       "kind": "discovery",
-      "ok": false,
-      "candidates": 0,
+      "ok": true,
+      "candidates": 5,
       "new_candidates": 0,
       "suppressed": 0,
-      "warnings": [
-        "direct https://www.unhcr.org/publications: 403 Client Error: Forbidden for url: https://www.unhcr.org/publications"
-      ]
+      "warnings": []
     },
     {
       "monitor": "UNDP discovery",
