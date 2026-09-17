@@ -1,13 +1,26 @@
 {
-  "last_checked": "2026-09-17T19:02:08.352537Z",
+  "last_checked": "2026-09-17T23:33:27.243563Z",
   "engine_version": "6.1",
   "monitor_count": 82,
   "flagship_series_count": 44,
   "discovery_source_count": 38,
-  "new_items_this_run": 3,
+  "new_items_this_run": 1,
   "new_flagship_editions_this_run": 0,
   "migration_baseline": false,
   "updates": [
+    {
+      "id": "318ea9ebcbbdcb",
+      "date": "2026-09-17",
+      "category": "Technology & AI",
+      "source": "Georgetown CSET",
+      "title": "China’s rocket achievements threaten US space superiority",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://cset.georgetown.edu/article/chinas-rocket-achievements-threaten-us-space-superiority/",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "cset"
+    },
     {
       "id": "4cd869524a3f5b",
       "date": "2026-09-17",
@@ -2082,19 +2095,6 @@
       "automatic": true,
       "confidence": "medium",
       "discovery_source": "ilo"
-    },
-    {
-      "id": "ddad6e2c3ffde6",
-      "date": "2026-08-11",
-      "category": "Technology & AI",
-      "source": "KPMG",
-      "title": "KPMG Managed Services Outlook Survey 2026",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://kpmg.com/xx/en/our-insights/transformation/managed-services-outlook.html",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "kpmg"
     }
   ]
 }
