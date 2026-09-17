@@ -1,13 +1,52 @@
 {
-  "last_checked": "2026-09-17T14:17:43.880414Z",
+  "last_checked": "2026-09-17T19:02:08.352537Z",
   "engine_version": "6.1",
   "monitor_count": 82,
   "flagship_series_count": 44,
   "discovery_source_count": 38,
-  "new_items_this_run": 6,
+  "new_items_this_run": 3,
   "new_flagship_editions_this_run": 0,
   "migration_baseline": false,
   "updates": [
+    {
+      "id": "4cd869524a3f5b",
+      "date": "2026-09-17",
+      "category": "Technology & AI",
+      "source": "KPMG",
+      "title": "KPMG and Microsoft scale trusted, enterprise AI agents globally KPMG will harness Microsoft Agent 365 to help clients manage, monitor and secure AI agents across their organizations. Read more",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://kpmg.com/xx/en/media/press-releases/2026/06/kpmg-and-microsoft-scale-trusted-enterprise-ai-agents-globally.html",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "kpmg"
+    },
+    {
+      "id": "54eb1c2c43a847",
+      "date": "2026-09-17",
+      "category": "Technology & AI",
+      "source": "KPMG",
+      "title": "KPMG and Anthropic sign global alliance Embedding Claude Cowork in KPMG's global client delivery platform, Digital Gateway. Read more",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://kpmg.com/xx/en/media/press-releases/2026/05/kpmg-and-anthropic-sign-global-alliance-and-launch-digital-gateway-powered-by-claude.html",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "kpmg"
+    },
+    {
+      "id": "a46c027c2ee110",
+      "date": "2026-09-17",
+      "category": "Science",
+      "source": "Quanta Magazine",
+      "title": "Where Does the Quantum World End and Ours Begin?",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.quantamagazine.org/where-does-the-quantum-world-end-and-ours-begin-20260917/",
+      "type": "Significant analysis",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "quanta"
+    },
     {
       "id": "49191c578645de",
       "date": "2026-09-17",
@@ -2056,45 +2095,6 @@
       "automatic": true,
       "confidence": "medium",
       "discovery_source": "kpmg"
-    },
-    {
-      "id": "901b2e383a646e",
-      "date": "2026-08-11",
-      "category": "Economy & Political Economy",
-      "source": "BIS",
-      "title": "Energy shocks and inflation: challenges for monetary policy",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.bis.org/publ/bisbull131.htm",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "bis"
-    },
-    {
-      "id": "c1964c9a1846cd",
-      "date": "2026-08-11",
-      "category": "Demography & Society",
-      "source": "IOM",
-      "title": "État de la migration dans le monde 2026 : Chapitre 7 – Déplacements internes : tendances, réponses et solutions",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://publications.iom.int/books/etat-de-la-migration-dans-le-monde-2026-chapitre-7",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "iom"
-    },
-    {
-      "id": "6cec02cbd01939",
-      "date": "2026-08-11",
-      "category": "Technology & AI",
-      "source": "Stanford HAI",
-      "title": "New Stanford Grants Tackle AI's Impact on Global Security and Geopolitics",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://hai.stanford.edu/news/new-stanford-grants-tackle-ais-impact-on-global-security-and-geopolitics",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "stanford_hai"
     }
   ]
 }

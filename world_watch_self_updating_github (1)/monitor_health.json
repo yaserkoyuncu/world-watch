@@ -1,15 +1,15 @@
 {
-  "last_checked": "2026-09-17T14:17:43.880414Z",
+  "last_checked": "2026-09-17T19:02:08.352537Z",
   "engine_version": "6.1",
   "migration_baseline": false,
   "series": {
-    "ok": 40,
-    "failed": 4,
+    "ok": 41,
+    "failed": 3,
     "total": 44
   },
   "discovery": {
-    "ok": 29,
-    "failed": 9,
+    "ok": 30,
+    "failed": 8,
     "total": 38
   },
   "monitors": [
@@ -253,10 +253,8 @@
       "ok": true,
       "latest": "2024",
       "url": "https://www.irena.org/publications/2024/Nov/World-Energy-Transitions-Outlook-2024",
-      "method": "official-url",
-      "warnings": [
-        "direct https://www.irena.org/publications/2024/Nov/World-Energy-Transitions-Outlook-2024: 403 Client Error: Forbidden for url: https://www.irena.org/publications/2024/Nov/World-Energy-Transitions-Outlook-2024"
-      ]
+      "method": "direct-title",
+      "warnings": []
     },
     {
       "monitor": "Global Carbon Budget",
@@ -350,8 +348,11 @@
     {
       "monitor": "Global Education Monitoring Report",
       "kind": "series",
-      "ok": false,
-      "error": "No valid edition match"
+      "ok": true,
+      "latest": "2026",
+      "url": "https://www.unesco.org/gem-report/en/articles/what-does-2026-gem-report-say-about-access-and-equity-education",
+      "method": "reader-link",
+      "warnings": []
     },
     {
       "monitor": "Global Multidimensional Poverty Index",
@@ -532,7 +533,7 @@
       "monitor": "International Crisis Group discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 7,
+      "candidates": 8,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
@@ -582,7 +583,7 @@
       "kind": "discovery",
       "ok": true,
       "candidates": 6,
-      "new_candidates": 0,
+      "new_candidates": 2,
       "suppressed": 0,
       "warnings": []
     },
@@ -689,7 +690,7 @@
       "kind": "discovery",
       "ok": true,
       "candidates": 8,
-      "new_candidates": 2,
+      "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
         "direct https://www.undp.org/publications: 403 Client Error: Forbidden for url: https://www.undp.org/publications"
@@ -699,7 +700,7 @@
       "monitor": "WHO discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 7,
+      "candidates": 6,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
@@ -717,8 +718,8 @@
       "monitor": "UNESCO discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 4,
-      "new_candidates": 4,
+      "candidates": 2,
+      "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
     },
@@ -779,9 +780,9 @@
     {
       "monitor": "Quanta Magazine discovery",
       "kind": "discovery",
-      "ok": false,
-      "candidates": 0,
-      "new_candidates": 0,
+      "ok": true,
+      "candidates": 1,
+      "new_candidates": 1,
       "suppressed": 0,
       "warnings": []
     }
