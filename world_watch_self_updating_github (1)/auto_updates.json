@@ -1,5 +1,5 @@
 {
-  "last_checked": "2026-09-17T23:33:27.243563Z",
+  "last_checked": "2026-09-18T08:15:31.302500Z",
   "engine_version": "6.1",
   "monitor_count": 82,
   "flagship_series_count": 44,
@@ -8,6 +8,19 @@
   "new_flagship_editions_this_run": 0,
   "migration_baseline": false,
   "updates": [
+    {
+      "id": "a61b87ab8ceee4",
+      "date": "2026-09-18",
+      "category": "Economy & Political Economy",
+      "source": "World Economic Forum",
+      "title": "Risk Management, Reimagined: Outlook to 2035",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.weforum.org/publications/risk-management-reimagined-outlook-to-2035/",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "wef"
+    },
     {
       "id": "318ea9ebcbbdcb",
       "date": "2026-09-17",
@@ -2082,19 +2095,6 @@
       "automatic": true,
       "confidence": "medium",
       "discovery_source": "fao"
-    },
-    {
-      "id": "e3639b920d6217",
-      "date": "2026-08-11",
-      "category": "Economy & Political Economy",
-      "source": "ILO",
-      "title": "Global Employment Trends for Youth 2026",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.ilo.org/publications/major-publications/global-employment-trends-youth-2026",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "ilo"
     }
   ]
 }
