@@ -1,15 +1,15 @@
 {
-  "last_checked": "2026-09-19T18:01:21.115680Z",
+  "last_checked": "2026-09-19T23:06:04.924305Z",
   "engine_version": "6.1",
   "migration_baseline": false,
   "series": {
-    "ok": 40,
-    "failed": 4,
+    "ok": 41,
+    "failed": 3,
     "total": 44
   },
   "discovery": {
-    "ok": 30,
-    "failed": 8,
+    "ok": 29,
+    "failed": 9,
     "total": 38
   },
   "monitors": [
@@ -138,10 +138,8 @@
       "ok": true,
       "latest": "2026",
       "url": "https://www.sipri.org/yearbook/2026",
-      "method": "reader-block",
-      "warnings": [
-        "direct https://www.sipri.org/yearbook/2026: HTTPSConnectionPool(host='www.sipri.org', port=443): Max retries exceeded with url: /yearbook/2026 (Caused by ConnectTim"
-      ]
+      "method": "direct-title",
+      "warnings": []
     },
     {
       "monitor": "Annual Threat Assessment",
@@ -266,7 +264,7 @@
       "ok": true,
       "latest": "2025",
       "url": "https://globalcarbonbudget.org/gcb-2025/",
-      "method": "reader-block",
+      "method": "direct-title",
       "warnings": []
     },
     {
@@ -293,7 +291,7 @@
       "ok": true,
       "latest": "2026",
       "url": "https://worldmigrationreport.iom.int/msite/wmr-2026-interactive/",
-      "method": "reader-block",
+      "method": "official-url",
       "warnings": [
         "direct https://worldmigrationreport.iom.int/msite/wmr-2026-interactive/: 403 Client Error: Forbidden for url: https://worldmigrationreport.iom.int/msite/wmr-2026-interactive/"
       ]
@@ -352,8 +350,11 @@
     {
       "monitor": "Global Education Monitoring Report",
       "kind": "series",
-      "ok": false,
-      "error": "No valid edition match"
+      "ok": true,
+      "latest": "2026",
+      "url": "https://www.unesco.org/gem-report/en/articles/what-does-2026-gem-report-say-about-access-and-equity-education",
+      "method": "reader-link",
+      "warnings": []
     },
     {
       "monitor": "Global Multidimensional Poverty Index",
@@ -494,7 +495,7 @@
       "monitor": "World Economic Forum discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 22,
+      "candidates": 1,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
@@ -517,9 +518,7 @@
       "candidates": 8,
       "new_candidates": 0,
       "suppressed": 0,
-      "warnings": [
-        "direct https://www.sipri.org/publications: HTTPSConnectionPool(host='www.sipri.org', port=443): Max retries exceeded with url: /publications (Caused by ConnectTimeoutError(<HTTPSConne"
-      ]
+      "warnings": []
     },
     {
       "monitor": "ODNI discovery",
@@ -536,7 +535,7 @@
       "monitor": "International Crisis Group discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 8,
+      "candidates": 9,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
@@ -661,16 +660,18 @@
       "monitor": "UN DESA Population Division discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 59,
+      "candidates": 51,
       "new_candidates": 0,
       "suppressed": 0,
-      "warnings": []
+      "warnings": [
+        "direct https://www.un.org/development/desa/pd/content/new-publications: HTTPSConnectionPool(host='www.un.org', port=443): Read timed out. (read timeout=22)"
+      ]
     },
     {
       "monitor": "IOM discovery",
       "kind": "discovery",
-      "ok": true,
-      "candidates": 13,
+      "ok": false,
+      "candidates": 0,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
