@@ -1,5 +1,5 @@
 {
-  "last_checked": "2026-09-21T08:57:30.581232Z",
+  "last_checked": "2026-09-21T15:53:46.307685Z",
   "engine_version": "6.1",
   "migration_baseline": false,
   "series": {
@@ -8,8 +8,8 @@
     "total": 44
   },
   "discovery": {
-    "ok": 30,
-    "failed": 8,
+    "ok": 29,
+    "failed": 9,
     "total": 38
   },
   "monitors": [
@@ -89,9 +89,12 @@
       "kind": "series",
       "ok": true,
       "latest": "2025",
-      "url": "https://unctad.org/sites/default/files/styles/cover_image/public/2025-11/tdr2025_1000x1414.jpg?itok=BmZlJ0M2",
-      "method": "reader-link",
-      "warnings": []
+      "url": "https://unctad.org/publication/trade-and-development-report-2025",
+      "method": "official-url",
+      "warnings": [
+        "direct https://unctad.org/topic/macroeconomics/trade-development-report: 403 Client Error: Forbidden for url: https://unctad.org/topic/macroeconomics/trade-development-report",
+        "direct https://unctad.org/publication/trade-and-development-report-2025: 403 Client Error: Forbidden for url: https://unctad.org/publication/trade-and-development-report-2025"
+      ]
     },
     {
       "monitor": "Global Trade Outlook and Statistics",
@@ -238,8 +241,8 @@
       "kind": "series",
       "ok": true,
       "latest": "2025",
-      "url": "https://www.iea.org/data-and-statistics/data-product/world-energy-outlook-2025-free-dataset",
-      "method": "reader-link",
+      "url": "https://www.iea.org/reports/world-energy-outlook-2025",
+      "method": "official-url",
       "warnings": [
         "direct https://www.iea.org/reports/world-energy-outlook-2025: 403 Client Error: Forbidden for url: https://www.iea.org/reports/world-energy-outlook-2025"
       ]
@@ -288,7 +291,7 @@
       "ok": true,
       "latest": "2026",
       "url": "https://worldmigrationreport.iom.int/msite/wmr-2026-interactive/",
-      "method": "reader-block",
+      "method": "official-url",
       "warnings": [
         "direct https://worldmigrationreport.iom.int/msite/wmr-2026-interactive/: 403 Client Error: Forbidden for url: https://worldmigrationreport.iom.int/msite/wmr-2026-interactive/"
       ]
@@ -406,7 +409,7 @@
       "ok": true,
       "latest": "2025",
       "url": "https://www.transparency.org/en/cpi/2025",
-      "method": "reader-block",
+      "method": "official-url",
       "warnings": []
     },
     {
@@ -453,19 +456,22 @@
       "monitor": "BIS discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 22,
-      "new_candidates": 0,
+      "candidates": 20,
+      "new_candidates": 3,
       "suppressed": 0,
       "warnings": []
     },
     {
       "monitor": "UNCTAD discovery",
       "kind": "discovery",
-      "ok": true,
-      "candidates": 25,
+      "ok": false,
+      "candidates": 0,
       "new_candidates": 0,
       "suppressed": 0,
-      "warnings": []
+      "warnings": [
+        "direct https://unctad.org/publications: 403 Client Error: Forbidden for url: https://unctad.org/publications",
+        "direct https://unctad.org/unctad-publications: 403 Client Error: Forbidden for url: https://unctad.org/unctad-publications"
+      ]
     },
     {
       "monitor": "WTO discovery",
@@ -480,7 +486,7 @@
       "monitor": "ILO discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 14,
+      "candidates": 13,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
@@ -489,8 +495,8 @@
       "monitor": "World Economic Forum discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 1,
-      "new_candidates": 0,
+      "candidates": 22,
+      "new_candidates": 1,
       "suppressed": 0,
       "warnings": [
         "direct https://www.weforum.org/publications/: 403 Client Error: Forbidden for url: https://www.weforum.org/publications/"
@@ -529,7 +535,7 @@
       "monitor": "International Crisis Group discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 9,
+      "candidates": 8,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
@@ -662,8 +668,8 @@
     {
       "monitor": "IOM discovery",
       "kind": "discovery",
-      "ok": true,
-      "candidates": 13,
+      "ok": false,
+      "candidates": 0,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
@@ -704,8 +710,8 @@
     {
       "monitor": "FAO discovery",
       "kind": "discovery",
-      "ok": false,
-      "candidates": 0,
+      "ok": true,
+      "candidates": 1,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
@@ -768,8 +774,8 @@
       "monitor": "Reporters Without Borders discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 3,
-      "new_candidates": 0,
+      "candidates": 4,
+      "new_candidates": 1,
       "suppressed": 0,
       "warnings": []
     },
