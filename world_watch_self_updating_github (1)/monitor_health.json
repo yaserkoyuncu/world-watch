@@ -1,5 +1,5 @@
 {
-  "last_checked": "2026-09-20T23:15:15.910853Z",
+  "last_checked": "2026-09-21T08:57:30.581232Z",
   "engine_version": "6.1",
   "migration_baseline": false,
   "series": {
@@ -28,9 +28,9 @@
       "monitor": "Global Financial Stability Report",
       "kind": "series",
       "ok": true,
-      "latest": "July 2026",
+      "latest": "April 2026",
       "url": "https://www.imf.org/en/publications/gfsr/issues/2026/04/14/global-financial-stability-report-april-2026",
-      "method": "reader-block",
+      "method": "official-url",
       "warnings": [
         "direct https://www.imf.org/en/publications: 403 Client Error: Forbidden for url: https://www.imf.org/en/publications"
       ]
@@ -89,12 +89,9 @@
       "kind": "series",
       "ok": true,
       "latest": "2025",
-      "url": "https://unctad.org/publication/trade-and-development-report-2025",
-      "method": "official-url",
-      "warnings": [
-        "direct https://unctad.org/topic/macroeconomics/trade-development-report: 403 Client Error: Forbidden for url: https://unctad.org/topic/macroeconomics/trade-development-report",
-        "direct https://unctad.org/publication/trade-and-development-report-2025: 403 Client Error: Forbidden for url: https://unctad.org/publication/trade-and-development-report-2025"
-      ]
+      "url": "https://unctad.org/sites/default/files/styles/cover_image/public/2025-11/tdr2025_1000x1414.jpg?itok=BmZlJ0M2",
+      "method": "reader-link",
+      "warnings": []
     },
     {
       "monitor": "Global Trade Outlook and Statistics",
@@ -241,8 +238,8 @@
       "kind": "series",
       "ok": true,
       "latest": "2025",
-      "url": "https://www.iea.org/reports/world-energy-outlook-2025",
-      "method": "official-url",
+      "url": "https://www.iea.org/data-and-statistics/data-product/world-energy-outlook-2025-free-dataset",
+      "method": "reader-link",
       "warnings": [
         "direct https://www.iea.org/reports/world-energy-outlook-2025: 403 Client Error: Forbidden for url: https://www.iea.org/reports/world-energy-outlook-2025"
       ]
@@ -408,8 +405,8 @@
       "kind": "series",
       "ok": true,
       "latest": "2025",
-      "url": "https://www.transparency.org/en/press/corruption-perceptions-index-2025-decline-leadership-undermining-global-fight",
-      "method": "reader-link",
+      "url": "https://www.transparency.org/en/cpi/2025",
+      "method": "reader-block",
       "warnings": []
     },
     {
@@ -464,14 +461,11 @@
     {
       "monitor": "UNCTAD discovery",
       "kind": "discovery",
-      "ok": false,
-      "candidates": 0,
+      "ok": true,
+      "candidates": 25,
       "new_candidates": 0,
       "suppressed": 0,
-      "warnings": [
-        "direct https://unctad.org/publications: 403 Client Error: Forbidden for url: https://unctad.org/publications",
-        "direct https://unctad.org/unctad-publications: 403 Client Error: Forbidden for url: https://unctad.org/unctad-publications"
-      ]
+      "warnings": []
     },
     {
       "monitor": "WTO discovery",
@@ -495,7 +489,7 @@
       "monitor": "World Economic Forum discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 22,
+      "candidates": 1,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
@@ -535,7 +529,7 @@
       "monitor": "International Crisis Group discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 8,
+      "candidates": 9,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
@@ -710,8 +704,8 @@
     {
       "monitor": "FAO discovery",
       "kind": "discovery",
-      "ok": true,
-      "candidates": 4,
+      "ok": false,
+      "candidates": 0,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
