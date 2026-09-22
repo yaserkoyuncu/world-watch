@@ -1,13 +1,26 @@
 {
-  "last_checked": "2026-09-22T18:54:57.917672Z",
+  "last_checked": "2026-09-22T23:36:15.923415Z",
   "engine_version": "6.1",
   "monitor_count": 82,
   "flagship_series_count": 44,
   "discovery_source_count": 38,
-  "new_items_this_run": 0,
+  "new_items_this_run": 1,
   "new_flagship_editions_this_run": 0,
   "migration_baseline": false,
   "updates": [
+    {
+      "id": "bd5e8f7b35599d",
+      "date": "2026-09-22",
+      "category": "Economy & Political Economy",
+      "source": "World Economic Forum",
+      "title": "The Role of Start-Ups in AI-Enabled Supply Chain Resilience",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.weforum.org/publications/the-role-of-start-ups-in-ai-enabled-supply-chain-resilience/",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "wef"
+    },
     {
       "id": "9dcff009a43d50",
       "date": "2026-09-22",
@@ -2082,19 +2095,6 @@
       "automatic": true,
       "confidence": "medium",
       "discovery_source": "ti"
-    },
-    {
-      "id": "0eed95c967df3d",
-      "date": "2026-08-19",
-      "category": "Geopolitics & Security",
-      "source": "Munich Security Conference",
-      "title": "New Munich Security Analysis: Batteries Not Included",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://securityconference.org/en/publications/analyses/batteries-not-included-eu-strategic-raw-material-projects-global-south/",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "msc"
     }
   ]
 }
