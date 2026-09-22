@@ -1,5 +1,5 @@
 {
-  "last_checked": "2026-09-22T08:33:09.925641Z",
+  "last_checked": "2026-09-22T14:02:42.705049Z",
   "engine_version": "6.1",
   "migration_baseline": false,
   "series": {
@@ -8,8 +8,8 @@
     "total": 44
   },
   "discovery": {
-    "ok": 30,
-    "failed": 8,
+    "ok": 29,
+    "failed": 9,
     "total": 38
   },
   "monitors": [
@@ -495,8 +495,8 @@
       "monitor": "World Economic Forum discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 25,
-      "new_candidates": 3,
+      "candidates": 1,
+      "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
         "direct https://www.weforum.org/publications/: 403 Client Error: Forbidden for url: https://www.weforum.org/publications/"
@@ -535,8 +535,8 @@
       "monitor": "International Crisis Group discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 8,
-      "new_candidates": 3,
+      "candidates": 9,
+      "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
         "direct https://www.crisisgroup.org/latest-updates: 403 Client Error: Forbidden for url: https://www.crisisgroup.org/latest-updates"
@@ -719,8 +719,8 @@
     {
       "monitor": "UNESCO discovery",
       "kind": "discovery",
-      "ok": true,
-      "candidates": 2,
+      "ok": false,
+      "candidates": 0,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
