@@ -1,13 +1,39 @@
 {
-  "last_checked": "2026-09-23T19:03:51.992009Z",
+  "last_checked": "2026-09-23T23:42:26.097179Z",
   "engine_version": "6.1",
   "monitor_count": 82,
   "flagship_series_count": 44,
   "discovery_source_count": 38,
-  "new_items_this_run": 0,
+  "new_items_this_run": 2,
   "new_flagship_editions_this_run": 0,
   "migration_baseline": false,
   "updates": [
+    {
+      "id": "a79bee2afd31c2",
+      "date": "2026-09-23",
+      "category": "Demography & Society",
+      "source": "UNDP",
+      "title": "Publications ![Image 42: Cover of a report: From Silos to Systems, Projects to Portfolios, with a blue abstract wave grid.",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.undp.org/sites/g/files/zskgke326/files/styles/content_card_453_x_256_/public/2026-09/screenshot_2026-09-22_171506.png?h=3628a72f&itok=8yaOM9UK",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "undp"
+    },
+    {
+      "id": "a82f0d2749561f",
+      "date": "2026-09-23",
+      "category": "Demography & Society",
+      "source": "UNDP",
+      "title": "Publications ![Image 43",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.undp.org/sites/g/files/zskgke326/files/styles/content_card_453_x_256_/public/2026-09/cover_image.png?h=5dcbbc94&itok=_2R_MWAE",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "undp"
+    },
     {
       "id": "d3186c82525987",
       "date": "2026-09-23",
@@ -2069,32 +2095,6 @@
       "automatic": true,
       "confidence": "medium",
       "discovery_source": "ilo"
-    },
-    {
-      "id": "5fed13accff28d",
-      "date": "2026-08-20",
-      "category": "Economy & Political Economy",
-      "source": "World Economic Forum",
-      "title": "Climate Action and Waste Reduction",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.weforum.org/stories/climate-action/",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "wef"
-    },
-    {
-      "id": "40215f8105a1f2",
-      "date": "2026-08-19",
-      "category": "Democracy & Rights",
-      "source": "Transparency International",
-      "title": "Monitoring political finance: Compendium of citizen initiatives and good practices",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.transparency.org/en/publications/monitoring-political-finance-compendium-of-citizen-initiatives-and-good-practices",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "ti"
     }
   ]
 }
