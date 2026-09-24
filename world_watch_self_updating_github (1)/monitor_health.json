@@ -1,10 +1,10 @@
 {
-  "last_checked": "2026-09-23T23:42:26.097179Z",
+  "last_checked": "2026-09-24T08:27:59.613285Z",
   "engine_version": "6.1",
   "migration_baseline": false,
   "series": {
-    "ok": 39,
-    "failed": 5,
+    "ok": 42,
+    "failed": 2,
     "total": 44
   },
   "discovery": {
@@ -67,8 +67,13 @@
     {
       "monitor": "OECD Economic Outlook",
       "kind": "series",
-      "ok": false,
-      "error": "direct https://www.oecd.org/en/topics/economic-outlook.html: 403 Client Error: Forbidden for url: https://www.oecd.org/en/topics/economic-outlook.html"
+      "ok": true,
+      "latest": "September 2026",
+      "url": "https://www.oecd.org/en/topics/economic-outlook.html",
+      "method": "reader-block",
+      "warnings": [
+        "direct https://www.oecd.org/en/topics/economic-outlook.html: 403 Client Error: Forbidden for url: https://www.oecd.org/en/topics/economic-outlook.html"
+      ]
     },
     {
       "monitor": "Annual Economic Report",
@@ -159,8 +164,11 @@
     {
       "monitor": "Technology Trends Outlook",
       "kind": "series",
-      "ok": false,
-      "error": "direct https://www.mckinsey.com/capabilities/tech-and-ai/our-insights/the-top-trends-in-tech/: HTTPSConnectionPool(host='www.mckinsey.com', port=443): Read timed out. (read timeout=22) | direct https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/the-top-trends-in-tech: HTTPSConnectionPool(host='www.mckinsey.com', port=443): Read timed out. (read timeout=22)"
+      "ok": true,
+      "latest": "2026",
+      "url": "https://www.mckinsey.com/~/media/mckinsey/business%20functions/mckinsey%20digital/our%20insights/the%20top%20trends%20in%20tech%202026/techtrends2026-l1-v7_ex1.svgz?cq=50&cpy=Center",
+      "method": "reader-link",
+      "warnings": []
     },
     {
       "monitor": "State of AI",
@@ -345,8 +353,11 @@
     {
       "monitor": "Global Education Monitoring Report",
       "kind": "series",
-      "ok": false,
-      "error": "No valid edition match"
+      "ok": true,
+      "latest": "2026",
+      "url": "https://www.unesco.org/gem-report/en/articles/what-does-2026-gem-report-say-about-access-and-equity-education",
+      "method": "reader-link",
+      "warnings": []
     },
     {
       "monitor": "Global Multidimensional Poverty Index",
@@ -391,8 +402,8 @@
       "kind": "series",
       "ok": true,
       "latest": "2025",
-      "url": "https://worldjusticeproject.org/rule-of-law-index/global/2025/wjp-index",
-      "method": "direct-title",
+      "url": "https://worldjusticeproject.org/rule-of-law-index/",
+      "method": "reader-block",
       "warnings": []
     },
     {
@@ -400,8 +411,8 @@
       "kind": "series",
       "ok": true,
       "latest": "2025",
-      "url": "https://www.transparency.org/en/cpi/2025",
-      "method": "official-url",
+      "url": "https://www.transparency.org/en/press/corruption-perceptions-index-2025-decline-leadership-undermining-global-fight",
+      "method": "reader-link",
       "warnings": []
     },
     {
@@ -487,7 +498,7 @@
       "monitor": "World Economic Forum discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 27,
+      "candidates": 1,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
@@ -527,7 +538,7 @@
       "monitor": "International Crisis Group discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 8,
+      "candidates": 9,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
@@ -548,7 +559,7 @@
       "kind": "discovery",
       "ok": true,
       "candidates": 10,
-      "new_candidates": 0,
+      "new_candidates": 1,
       "suppressed": 0,
       "warnings": []
     },
@@ -661,8 +672,8 @@
       "monitor": "IOM discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 14,
-      "new_candidates": 0,
+      "candidates": 15,
+      "new_candidates": 1,
       "suppressed": 0,
       "warnings": [
         "direct https://publications.iom.int/: 403 Client Error: Forbidden for url: https://publications.iom.int/"
@@ -684,7 +695,7 @@
       "kind": "discovery",
       "ok": true,
       "candidates": 9,
-      "new_candidates": 2,
+      "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
         "direct https://www.undp.org/publications: 403 Client Error: Forbidden for url: https://www.undp.org/publications"

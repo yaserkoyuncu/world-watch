@@ -1,13 +1,54 @@
 {
-  "last_checked": "2026-09-23T23:42:26.097179Z",
+  "last_checked": "2026-09-24T08:27:59.613285Z",
   "engine_version": "6.1",
   "monitor_count": 82,
   "flagship_series_count": 44,
   "discovery_source_count": 38,
-  "new_items_this_run": 2,
-  "new_flagship_editions_this_run": 0,
+  "new_items_this_run": 3,
+  "new_flagship_editions_this_run": 1,
   "migration_baseline": false,
   "updates": [
+    {
+      "id": "114db4c10ac1e0",
+      "date": "2026-09-24",
+      "category": "Technology & AI",
+      "source": "McKinsey",
+      "title": "Technology Trends Outlook — 2026",
+      "summary": "Edition-aware monitor detected a newer Technology Trends Outlook: 2026, replacing 2025.",
+      "url": "https://www.mckinsey.com/~/media/mckinsey/business%20functions/mckinsey%20digital/our%20insights/the%20top%20trends%20in%20tech%202026/techtrends2026-l1-v7_ex1.svgz?cq=50&cpy=Center",
+      "type": "New flagship edition",
+      "automatic": true,
+      "series_id": "mck_tech",
+      "edition": "2026",
+      "previous_edition": "2025",
+      "confidence": "high"
+    },
+    {
+      "id": "de86fc47a2e8a6",
+      "date": "2026-09-24",
+      "category": "Technology & AI",
+      "source": "Georgetown CSET",
+      "title": "Artificial Intelligence in Competition",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://cset.georgetown.edu/publication/artificial-intelligence-in-competition/",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "cset"
+    },
+    {
+      "id": "aabeec12cddf29",
+      "date": "2026-09-24",
+      "category": "Demography & Society",
+      "source": "IOM",
+      "title": "The Essentials of Migration Data (EMD): IOM Guide on Migration Data and Statistics",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://publications.iom.int/books/essentials-migration-data-emd-iom-guide-migration-data-and-statistics",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "iom"
+    },
     {
       "id": "a79bee2afd31c2",
       "date": "2026-09-23",
@@ -2056,45 +2097,6 @@
       "automatic": true,
       "confidence": "medium",
       "discovery_source": "oecd"
-    },
-    {
-      "id": "8cd1eff302375c",
-      "date": "2026-08-21",
-      "category": "Economy & Political Economy",
-      "source": "ILO",
-      "title": "Employment impact assessment of Hurricane Melissa in Jamaica",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.ilo.org/publications/employment-impact-assessment-hurricane-melissa-jamaica",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "ilo"
-    },
-    {
-      "id": "485318883ef3c7",
-      "date": "2026-08-21",
-      "category": "Economy & Political Economy",
-      "source": "World Economic Forum",
-      "title": "The Catalysts: Unlocking Markets for a Sustainable Economy",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.weforum.org/publications/the-catalysts-unlocking-markets-for-a-sustainable-economy/",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "wef"
-    },
-    {
-      "id": "303baad3ebaa2d",
-      "date": "2026-08-20",
-      "category": "Economy & Political Economy",
-      "source": "ILO",
-      "title": "Regional seminar: Trade, investment and decent work- fostering development in Asia-Pacific",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.ilo.org/meetings-and-events/regional-seminar-trade-investment-and-decent-work-fostering-development",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "ilo"
     }
   ]
 }
