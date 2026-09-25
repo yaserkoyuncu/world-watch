@@ -1,5 +1,5 @@
 {
-  "last_checked": "2026-09-25T14:36:28.208506Z",
+  "last_checked": "2026-09-25T19:15:08.474515Z",
   "engine_version": "6.1",
   "migration_baseline": false,
   "series": {
@@ -8,8 +8,8 @@
     "total": 44
   },
   "discovery": {
-    "ok": 30,
-    "failed": 8,
+    "ok": 29,
+    "failed": 9,
     "total": 38
   },
   "monitors": [
@@ -51,8 +51,8 @@
       "kind": "series",
       "ok": true,
       "latest": "June 2026",
-      "url": "https://www.worldbank.org/en/research",
-      "method": "direct-heading",
+      "url": "https://openknowledge.worldbank.org/server/api/core/bitstreams/61af3a6b-bacb-4451-a7ba-405f805ac88a/content",
+      "method": "reader-link",
       "warnings": []
     },
     {
@@ -394,8 +394,8 @@
       "kind": "series",
       "ok": true,
       "latest": "2025",
-      "url": "https://worldjusticeproject.org/rule-of-law-index/global/2025/wjp-index",
-      "method": "direct-title",
+      "url": "https://worldjusticeproject.org/rule-of-law-index/",
+      "method": "reader-block",
       "warnings": []
     },
     {
@@ -431,8 +431,8 @@
       "monitor": "World Bank discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 5,
-      "new_candidates": 0,
+      "candidates": 1,
+      "new_candidates": 1,
       "suppressed": 0,
       "warnings": []
     },
@@ -489,8 +489,8 @@
     {
       "monitor": "World Economic Forum discovery",
       "kind": "discovery",
-      "ok": true,
-      "candidates": 27,
+      "ok": false,
+      "candidates": 0,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
@@ -530,7 +530,7 @@
       "monitor": "International Crisis Group discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 8,
+      "candidates": 9,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
@@ -706,8 +706,8 @@
       "monitor": "FAO discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 1,
-      "new_candidates": 0,
+      "candidates": 2,
+      "new_candidates": 1,
       "suppressed": 0,
       "warnings": []
     },
