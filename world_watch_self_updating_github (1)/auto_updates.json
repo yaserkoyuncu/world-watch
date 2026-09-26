@@ -1,13 +1,26 @@
 {
-  "last_checked": "2026-09-25T19:15:08.474515Z",
+  "last_checked": "2026-09-25T23:57:00.097386Z",
   "engine_version": "6.1",
   "monitor_count": 82,
   "flagship_series_count": 44,
   "discovery_source_count": 38,
-  "new_items_this_run": 2,
+  "new_items_this_run": 1,
   "new_flagship_editions_this_run": 0,
   "migration_baseline": false,
   "updates": [
+    {
+      "id": "c9c0d7877b79dc",
+      "date": "2026-09-25",
+      "category": "Democracy & Rights",
+      "source": "Reporters Without Borders",
+      "title": "RSF publishes guide for journalists covering major earthquakes Major earthquakes in different parts of the world have once again highlighted the crucial role of journalists in providing reliable information during large-scale crises.",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://rsf.org/en/rsf-publishes-guide-journalists-covering-major-earthquakes",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "rsf"
+    },
     {
       "id": "125d595118997b",
       "date": "2026-09-25",
@@ -2084,19 +2097,6 @@
       "edition": "2026",
       "previous_edition": "2025",
       "confidence": "high"
-    },
-    {
-      "id": "7c2eb3c63a9252",
-      "date": "2026-08-25",
-      "category": "Economy & Political Economy",
-      "source": "ILO",
-      "title": "Worker power and wage bargaining in the context of algorithmic control",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.ilo.org/meetings-and-events/worker-power-and-wage-bargaining-context-algorithmic-control",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "ilo"
     }
   ]
 }

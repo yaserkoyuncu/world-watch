@@ -1,5 +1,5 @@
 {
-  "last_checked": "2026-09-25T19:15:08.474515Z",
+  "last_checked": "2026-09-25T23:57:00.097386Z",
   "engine_version": "6.1",
   "migration_baseline": false,
   "series": {
@@ -8,8 +8,8 @@
     "total": 44
   },
   "discovery": {
-    "ok": 29,
-    "failed": 9,
+    "ok": 30,
+    "failed": 8,
     "total": 38
   },
   "monitors": [
@@ -347,8 +347,8 @@
       "kind": "series",
       "ok": true,
       "latest": "2026",
-      "url": "https://www.unesco.org/gem-report/en/articles/what-does-2026-gem-report-say-about-access-and-equity-education",
-      "method": "reader-link",
+      "url": "https://www.unesco.org/gem-report/en/articles/global-action-disibility-network-dialogue-2026-gem-report",
+      "method": "direct-link",
       "warnings": []
     },
     {
@@ -394,8 +394,8 @@
       "kind": "series",
       "ok": true,
       "latest": "2025",
-      "url": "https://worldjusticeproject.org/rule-of-law-index/",
-      "method": "reader-block",
+      "url": "https://worldjusticeproject.org/rule-of-law-index/global/2025/wjp-index",
+      "method": "direct-title",
       "warnings": []
     },
     {
@@ -403,8 +403,8 @@
       "kind": "series",
       "ok": true,
       "latest": "2025",
-      "url": "https://www.transparency.org/en/press/corruption-perceptions-index-2025-decline-leadership-undermining-global-fight",
-      "method": "reader-link",
+      "url": "https://www.transparency.org/en/cpi/2025",
+      "method": "reader-block",
       "warnings": []
     },
     {
@@ -432,7 +432,7 @@
       "kind": "discovery",
       "ok": true,
       "candidates": 1,
-      "new_candidates": 1,
+      "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
     },
@@ -489,8 +489,8 @@
     {
       "monitor": "World Economic Forum discovery",
       "kind": "discovery",
-      "ok": false,
-      "candidates": 0,
+      "ok": true,
+      "candidates": 27,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
@@ -530,7 +530,7 @@
       "monitor": "International Crisis Group discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 9,
+      "candidates": 8,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
@@ -541,7 +541,7 @@
       "monitor": "Stanford HAI discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 7,
+      "candidates": 6,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
@@ -706,8 +706,8 @@
       "monitor": "FAO discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 2,
-      "new_candidates": 1,
+      "candidates": 5,
+      "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
     },
@@ -760,7 +760,7 @@
       "monitor": "Transparency International discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 46,
+      "candidates": 45,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
@@ -769,8 +769,8 @@
       "monitor": "Reporters Without Borders discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 3,
-      "new_candidates": 0,
+      "candidates": 4,
+      "new_candidates": 1,
       "suppressed": 0,
       "warnings": []
     },
