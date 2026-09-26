@@ -1,5 +1,5 @@
 {
-  "last_checked": "2026-09-25T23:57:00.097386Z",
+  "last_checked": "2026-09-26T08:36:21.712351Z",
   "engine_version": "6.1",
   "migration_baseline": false,
   "series": {
@@ -347,8 +347,8 @@
       "kind": "series",
       "ok": true,
       "latest": "2026",
-      "url": "https://www.unesco.org/gem-report/en/articles/global-action-disibility-network-dialogue-2026-gem-report",
-      "method": "direct-link",
+      "url": "https://www.unesco.org/gem-report/en/articles/what-does-2026-gem-report-say-about-access-and-equity-education",
+      "method": "reader-link",
       "warnings": []
     },
     {
@@ -394,8 +394,8 @@
       "kind": "series",
       "ok": true,
       "latest": "2025",
-      "url": "https://worldjusticeproject.org/rule-of-law-index/global/2025/wjp-index",
-      "method": "direct-title",
+      "url": "https://worldjusticeproject.org/rule-of-law-index/",
+      "method": "reader-block",
       "warnings": []
     },
     {
@@ -403,8 +403,8 @@
       "kind": "series",
       "ok": true,
       "latest": "2025",
-      "url": "https://www.transparency.org/en/cpi/2025",
-      "method": "reader-block",
+      "url": "https://www.transparency.org/en/press/corruption-perceptions-index-2025-decline-leadership-undermining-global-fight",
+      "method": "reader-link",
       "warnings": []
     },
     {
@@ -530,7 +530,7 @@
       "monitor": "International Crisis Group discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 8,
+      "candidates": 9,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
@@ -706,7 +706,7 @@
       "monitor": "FAO discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 5,
+      "candidates": 1,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
@@ -770,7 +770,7 @@
       "kind": "discovery",
       "ok": true,
       "candidates": 4,
-      "new_candidates": 1,
+      "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
     },
