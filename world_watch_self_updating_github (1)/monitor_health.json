@@ -1,5 +1,5 @@
 {
-  "last_checked": "2026-09-26T08:36:21.712351Z",
+  "last_checked": "2026-09-26T13:45:04.398977Z",
   "engine_version": "6.1",
   "migration_baseline": false,
   "series": {
@@ -530,7 +530,7 @@
       "monitor": "International Crisis Group discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 9,
+      "candidates": 8,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
@@ -760,7 +760,7 @@
       "monitor": "Transparency International discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 45,
+      "candidates": 46,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
