@@ -1,10 +1,10 @@
 {
-  "last_checked": "2026-09-27T14:42:08.467564Z",
+  "last_checked": "2026-09-27T18:58:59.113305Z",
   "engine_version": "6.1",
   "migration_baseline": false,
   "series": {
-    "ok": 39,
-    "failed": 5,
+    "ok": 41,
+    "failed": 3,
     "total": 44
   },
   "discovery": {
@@ -49,8 +49,11 @@
     {
       "monitor": "Global Economic Prospects",
       "kind": "series",
-      "ok": false,
-      "error": "No valid edition match"
+      "ok": true,
+      "latest": "June 2026",
+      "url": "https://openknowledge.worldbank.org/server/api/core/bitstreams/61af3a6b-bacb-4451-a7ba-405f805ac88a/content",
+      "method": "reader-link",
+      "warnings": []
     },
     {
       "monitor": "World Development Report",
@@ -64,8 +67,13 @@
     {
       "monitor": "OECD Economic Outlook",
       "kind": "series",
-      "ok": false,
-      "error": "direct https://www.oecd.org/en/topics/economic-outlook.html: 403 Client Error: Forbidden for url: https://www.oecd.org/en/topics/economic-outlook.html"
+      "ok": true,
+      "latest": "September 2026",
+      "url": "https://www.oecd.org/en/topics/economic-outlook.html",
+      "method": "reader-block",
+      "warnings": [
+        "direct https://www.oecd.org/en/topics/economic-outlook.html: 403 Client Error: Forbidden for url: https://www.oecd.org/en/topics/economic-outlook.html"
+      ]
     },
     {
       "monitor": "Annual Economic Report",
@@ -400,8 +408,8 @@
       "kind": "series",
       "ok": true,
       "latest": "2025",
-      "url": "https://www.transparency.org/en/cpi/2025",
-      "method": "official-url",
+      "url": "https://www.transparency.org/en/press/corruption-perceptions-index-2025-decline-leadership-undermining-global-fight",
+      "method": "reader-link",
       "warnings": []
     },
     {
@@ -487,7 +495,7 @@
       "monitor": "World Economic Forum discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 18,
+      "candidates": 27,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
@@ -527,7 +535,7 @@
       "monitor": "International Crisis Group discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 8,
+      "candidates": 9,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
