@@ -1,13 +1,26 @@
 {
-  "last_checked": "2026-09-29T00:59:55.026005Z",
+  "last_checked": "2026-09-29T09:50:18.501736Z",
   "engine_version": "6.1",
   "monitor_count": 82,
   "flagship_series_count": 44,
   "discovery_source_count": 38,
-  "new_items_this_run": 0,
+  "new_items_this_run": 1,
   "new_flagship_editions_this_run": 0,
   "migration_baseline": false,
   "updates": [
+    {
+      "id": "aaee7d44b48dd0",
+      "date": "2026-09-29",
+      "category": "Geopolitics & Security",
+      "source": "International Crisis Group",
+      "title": "What Peacemaking Loses When Women Are Left Out",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.crisisgroup.org/opd/global/what-peacemaking-loses-when-women-are-left-out",
+      "type": "Significant analysis",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "icg"
+    },
     {
       "id": "c9c0d7877b79dc",
       "date": "2026-09-25",
@@ -2082,21 +2095,6 @@
       "automatic": true,
       "confidence": "medium",
       "discovery_source": "who"
-    },
-    {
-      "id": "63f21844a93c12",
-      "date": "2026-08-25",
-      "category": "Technology & AI",
-      "source": "McKinsey",
-      "title": "State of AI — 2026",
-      "summary": "Edition-aware monitor detected a newer State of AI: 2026, replacing 2025.",
-      "url": "https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai",
-      "type": "New flagship edition",
-      "automatic": true,
-      "series_id": "mck_ai",
-      "edition": "2026",
-      "previous_edition": "2025",
-      "confidence": "high"
     }
   ]
 }

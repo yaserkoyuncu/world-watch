@@ -1,15 +1,15 @@
 {
-  "last_checked": "2026-09-29T00:59:55.026005Z",
+  "last_checked": "2026-09-29T09:50:18.501736Z",
   "engine_version": "6.1",
   "migration_baseline": false,
   "series": {
-    "ok": 41,
-    "failed": 3,
+    "ok": 40,
+    "failed": 4,
     "total": 44
   },
   "discovery": {
-    "ok": 30,
-    "failed": 8,
+    "ok": 29,
+    "failed": 9,
     "total": 38
   },
   "monitors": [
@@ -67,13 +67,8 @@
     {
       "monitor": "OECD Economic Outlook",
       "kind": "series",
-      "ok": true,
-      "latest": "September 2026",
-      "url": "https://www.oecd.org/en/topics/economic-outlook.html",
-      "method": "reader-block",
-      "warnings": [
-        "direct https://www.oecd.org/en/topics/economic-outlook.html: 403 Client Error: Forbidden for url: https://www.oecd.org/en/topics/economic-outlook.html"
-      ]
+      "ok": false,
+      "error": "direct https://www.oecd.org/en/topics/economic-outlook.html: 403 Client Error: Forbidden for url: https://www.oecd.org/en/topics/economic-outlook.html"
     },
     {
       "monitor": "Annual Economic Report",
@@ -241,8 +236,8 @@
       "kind": "series",
       "ok": true,
       "latest": "2025",
-      "url": "https://www.iea.org/data-and-statistics/data-product/world-energy-outlook-2025-free-dataset",
-      "method": "reader-link",
+      "url": "https://www.iea.org/reports/world-energy-outlook-2025",
+      "method": "official-url",
       "warnings": [
         "direct https://www.iea.org/reports/world-energy-outlook-2025: 403 Client Error: Forbidden for url: https://www.iea.org/reports/world-energy-outlook-2025"
       ]
@@ -253,7 +248,7 @@
       "ok": true,
       "latest": "2024",
       "url": "https://www.irena.org/publications/2024/Nov/World-Energy-Transitions-Outlook-2024",
-      "method": "official-url",
+      "method": "reader-block",
       "warnings": [
         "direct https://www.irena.org/publications/2024/Nov/World-Energy-Transitions-Outlook-2024: 403 Client Error: Forbidden for url: https://www.irena.org/publications/2024/Nov/World-Energy-Transitions-Outlook-2024"
       ]
@@ -291,7 +286,7 @@
       "ok": true,
       "latest": "2026",
       "url": "https://worldmigrationreport.iom.int/msite/wmr-2026-interactive/",
-      "method": "reader-block",
+      "method": "official-url",
       "warnings": [
         "direct https://worldmigrationreport.iom.int/msite/wmr-2026-interactive/: 403 Client Error: Forbidden for url: https://worldmigrationreport.iom.int/msite/wmr-2026-interactive/"
       ]
@@ -354,9 +349,7 @@
       "latest": "2026",
       "url": "https://www.unesco.org/gem-report/en/articles/what-does-2026-gem-report-say-about-access-and-equity-education",
       "method": "reader-link",
-      "warnings": [
-        "direct https://www.unesco.org/gem-report/en/publication/equity-and-access: HTTPSConnectionPool(host='www.unesco.org', port=443): Max retries exceeded with url: /gem-report/en/publication/equity-a"
-      ]
+      "warnings": []
     },
     {
       "monitor": "Global Multidimensional Poverty Index",
@@ -537,8 +530,8 @@
       "monitor": "International Crisis Group discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 9,
-      "new_candidates": 0,
+      "candidates": 8,
+      "new_candidates": 1,
       "suppressed": 0,
       "warnings": [
         "direct https://www.crisisgroup.org/latest-updates: 403 Client Error: Forbidden for url: https://www.crisisgroup.org/latest-updates"
@@ -670,8 +663,8 @@
     {
       "monitor": "IOM discovery",
       "kind": "discovery",
-      "ok": true,
-      "candidates": 15,
+      "ok": false,
+      "candidates": 0,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
@@ -722,12 +715,10 @@
       "monitor": "UNESCO discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 4,
+      "candidates": 2,
       "new_candidates": 0,
       "suppressed": 0,
-      "warnings": [
-        "direct https://www.unesco.org/en/publications: HTTPSConnectionPool(host='www.unesco.org', port=443): Max retries exceeded with url: /en/publications (Caused by ConnectTimeoutError(<HTTPSC"
-      ]
+      "warnings": []
     },
     {
       "monitor": "V-Dem Institute discovery",
