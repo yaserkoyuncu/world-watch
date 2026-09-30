@@ -1,13 +1,65 @@
 {
-  "last_checked": "2026-09-30T00:27:49.048308Z",
+  "last_checked": "2026-09-30T09:42:35.134202Z",
   "engine_version": "6.1",
   "monitor_count": 82,
   "flagship_series_count": 44,
   "discovery_source_count": 38,
-  "new_items_this_run": 0,
+  "new_items_this_run": 4,
   "new_flagship_editions_this_run": 0,
   "migration_baseline": false,
   "updates": [
+    {
+      "id": "1d5cd2fa857419",
+      "date": "2026-09-30",
+      "category": "Economy & Political Economy",
+      "source": "BIS",
+      "title": "30 September 2026 Convening remarks - 11th Annual General Assembly Meeting of the Alliance for Financial Inclusion Soraya M Hakuziyaremye Governor",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.bis.org/speeches/20260930-convening-remarks-11th-annual-general-assembly-meeting-alliance-financial-inclusion",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "bis"
+    },
+    {
+      "id": "741e1ef4d38e03",
+      "date": "2026-09-30",
+      "category": "Economy & Political Economy",
+      "source": "BIS",
+      "title": "Soraya M Hakuziyaremye Governor",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.bis.org/author/soraya-m-hakuziyaremye",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "bis"
+    },
+    {
+      "id": "dc46891de77c32",
+      "date": "2026-09-30",
+      "category": "Economy & Political Economy",
+      "source": "BIS",
+      "title": "Project 30 Sep 2026 Project Inuksuit Exploring the safe and secure use of AI and public data for monitoring payment service providers Status : Ongoing",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.bis.org/project/inuksuit",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "bis"
+    },
+    {
+      "id": "26f4e5ac4a2fdc",
+      "date": "2026-09-30",
+      "category": "Economy & Political Economy",
+      "source": "BIS",
+      "title": "30 September 2026 Hearing of the Committee on Economic and Monetary Affairs of the European Parliament Christine Lagarde President",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.bis.org/speeches/20260930-hearing-committee-economic-and-monetary-affairs-european-parliament",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "bis"
+    },
     {
       "id": "2359b1205d373f",
       "date": "2026-09-29",
@@ -2045,58 +2097,6 @@
       "automatic": true,
       "confidence": "medium",
       "discovery_source": "icg"
-    },
-    {
-      "id": "365e6c3a847ed3",
-      "date": "2026-08-30",
-      "category": "Geopolitics & Security",
-      "source": "International Crisis Group",
-      "title": "Peacemaking Is Power Politics Again",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.crisisgroup.org/opd/global/peacemaking-power-politics-again",
-      "type": "Significant analysis",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "icg"
-    },
-    {
-      "id": "247928951164db",
-      "date": "2026-08-29",
-      "category": "Economy & Political Economy",
-      "source": "BIS",
-      "title": "Pushing the monetary frontier: stablecoins and tokenised deposits",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.bis.org/speeches/sp260828.htm",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "bis"
-    },
-    {
-      "id": "bfdf1e9a0ce2bd",
-      "date": "2026-08-28",
-      "category": "Demography & Society",
-      "source": "IOM",
-      "title": "Informe sobre las Migraciones en el Mundo 2026: Capítulo 8 - Discapacidad y migración: tendencias, problemáticas y respuestas",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://publications.iom.int/books/informe-sobre-las-migraciones-en-el-mundo-2026-capitulo-8",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "iom"
-    },
-    {
-      "id": "25fbde89fab0c2",
-      "date": "2026-08-27",
-      "category": "Economy & Political Economy",
-      "source": "World Economic Forum",
-      "title": "Advancing Latin America’s Critical Minerals Potential",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.weforum.org/publications/advancing-latin-america-s-critical-minerals-potential/",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "wef"
     }
   ]
 }
