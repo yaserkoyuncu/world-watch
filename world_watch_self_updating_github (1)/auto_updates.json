@@ -1,13 +1,39 @@
 {
-  "last_checked": "2026-10-01T10:08:43.170058Z",
+  "last_checked": "2026-10-01T20:21:18.931287Z",
   "engine_version": "6.1",
   "monitor_count": 82,
   "flagship_series_count": 44,
   "discovery_source_count": 38,
-  "new_items_this_run": 0,
+  "new_items_this_run": 2,
   "new_flagship_editions_this_run": 0,
   "migration_baseline": false,
   "updates": [
+    {
+      "id": "aab44561df3e72",
+      "date": "2026-10-01",
+      "category": "Economy & Political Economy",
+      "source": "World Economic Forum",
+      "title": "Children’s Safety and Well-Being in the Age of AI: Best Practices and Incentives",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.weforum.org/publications/childrens-safety-and-well-being-in-the-age-of-ai-best-practices-and-incentives/",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "wef"
+    },
+    {
+      "id": "658998e3f825a8",
+      "date": "2026-10-01",
+      "category": "Technology & AI",
+      "source": "KPMG",
+      "title": "KPMG Trusted AI framework",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://kpmg.com/xx/en/what-we-do/services/ai/trusted-ai-framework.html",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "kpmg"
+    },
     {
       "id": "834312ceede312",
       "date": "2026-09-30",
@@ -2071,32 +2097,6 @@
       "automatic": true,
       "confidence": "medium",
       "discovery_source": "undesa_pop"
-    },
-    {
-      "id": "72078ea816a458",
-      "date": "2026-08-31",
-      "category": "Demography & Society",
-      "source": "IOM",
-      "title": "Feasibility Study on Developing Innovative Financing Instruments to Catalyse Diaspora Finance Towards Blue and Green Economy Projects in Mauritius",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://publications.iom.int/books/feasibility-study-developing-innovative-financing-instruments-catalyse-diaspora-finance",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "iom"
-    },
-    {
-      "id": "07d02e34461afa",
-      "date": "2026-08-30",
-      "category": "Geopolitics & Security",
-      "source": "International Crisis Group",
-      "title": "Hollow Promises: Resetting Gaza’s Ceasefire",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.crisisgroup.org/rpt/middle-east-north-africa/israelpalestine-united-states/257-hollow-promises-resetting-gazas-ceasefire",
-      "type": "Significant analysis",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "icg"
     }
   ]
 }
