@@ -1,15 +1,15 @@
 {
-  "last_checked": "2026-10-02T09:46:33.515285Z",
+  "last_checked": "2026-10-02T19:57:21.661438Z",
   "engine_version": "6.1",
   "migration_baseline": false,
   "series": {
-    "ok": 40,
-    "failed": 4,
+    "ok": 41,
+    "failed": 3,
     "total": 44
   },
   "discovery": {
-    "ok": 31,
-    "failed": 7,
+    "ok": 30,
+    "failed": 8,
     "total": 38
   },
   "monitors": [
@@ -67,8 +67,13 @@
     {
       "monitor": "OECD Economic Outlook",
       "kind": "series",
-      "ok": false,
-      "error": "direct https://www.oecd.org/en/topics/economic-outlook.html: 403 Client Error: Forbidden for url: https://www.oecd.org/en/topics/economic-outlook.html"
+      "ok": true,
+      "latest": "September 2026",
+      "url": "https://www.oecd.org/en/topics/economic-outlook.html",
+      "method": "reader-block",
+      "warnings": [
+        "direct https://www.oecd.org/en/topics/economic-outlook.html: 403 Client Error: Forbidden for url: https://www.oecd.org/en/topics/economic-outlook.html"
+      ]
     },
     {
       "monitor": "Annual Economic Report",
@@ -97,7 +102,7 @@
       "ok": true,
       "latest": "March 2026",
       "url": "https://www.wto.org/english/res_e/publications_e/gtos0326_e.htm",
-      "method": "direct-title",
+      "method": "direct-heading",
       "warnings": []
     },
     {
@@ -248,7 +253,7 @@
       "ok": true,
       "latest": "2024",
       "url": "https://www.irena.org/publications/2024/Nov/World-Energy-Transitions-Outlook-2024",
-      "method": "reader-block",
+      "method": "official-url",
       "warnings": [
         "direct https://www.irena.org/publications/2024/Nov/World-Energy-Transitions-Outlook-2024: 403 Client Error: Forbidden for url: https://www.irena.org/publications/2024/Nov/World-Energy-Transitions-Outlook-2024"
       ]
@@ -403,8 +408,8 @@
       "kind": "series",
       "ok": true,
       "latest": "2025",
-      "url": "https://www.transparency.org/en/press/corruption-perceptions-index-2025-decline-leadership-undermining-global-fight",
-      "method": "reader-link",
+      "url": "https://www.transparency.org/en/cpi/2025",
+      "method": "reader-block",
       "warnings": []
     },
     {
@@ -451,8 +456,8 @@
       "monitor": "BIS discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 21,
-      "new_candidates": 0,
+      "candidates": 22,
+      "new_candidates": 1,
       "suppressed": 0,
       "warnings": []
     },
@@ -482,7 +487,7 @@
       "kind": "discovery",
       "ok": true,
       "candidates": 13,
-      "new_candidates": 0,
+      "new_candidates": 1,
       "suppressed": 0,
       "warnings": []
     },
@@ -490,7 +495,7 @@
       "monitor": "World Economic Forum discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 12,
+      "candidates": 18,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
@@ -634,9 +639,9 @@
     {
       "monitor": "IRENA discovery",
       "kind": "discovery",
-      "ok": true,
-      "candidates": 34,
-      "new_candidates": 1,
+      "ok": false,
+      "candidates": 0,
+      "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
         "direct https://www.irena.org/Publications: 403 Client Error: Forbidden for url: https://www.irena.org/Publications"
@@ -665,7 +670,7 @@
       "kind": "discovery",
       "ok": true,
       "candidates": 16,
-      "new_candidates": 1,
+      "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
         "direct https://publications.iom.int/: 403 Client Error: Forbidden for url: https://publications.iom.int/"

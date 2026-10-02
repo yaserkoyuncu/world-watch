@@ -1,5 +1,5 @@
 {
-  "last_checked": "2026-10-02T09:46:33.515285Z",
+  "last_checked": "2026-10-02T19:57:21.661438Z",
   "engine_version": "6.1",
   "monitor_count": 82,
   "flagship_series_count": 44,
@@ -8,6 +8,32 @@
   "new_flagship_editions_this_run": 0,
   "migration_baseline": false,
   "updates": [
+    {
+      "id": "1d20657e68358f",
+      "date": "2026-10-02",
+      "category": "Economy & Political Economy",
+      "source": "BIS",
+      "title": "BIS Bulletin 01 Oct 2026 AI investment loops Between 2021 and 2025, over half the investment in AI firms came from peers; many investors and targets also have commercial ties.",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.bis.org/publications/bulletin-137-circular-relationships-among-ai-firms",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "bis"
+    },
+    {
+      "id": "7980f980d71e3f",
+      "date": "2026-10-02",
+      "category": "Economy & Political Economy",
+      "source": "ILO",
+      "title": "Engaging informal economy actors in trade and labour policy in Africa",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.ilo.org/publications/engaging-informal-economy-actors-trade-and-labour-policy-africa",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "ilo"
+    },
     {
       "id": "4b315fdc29259b",
       "date": "2026-10-02",
@@ -2067,32 +2093,6 @@
       "title": "1 September 2026 The quest for a more efficient bank resolution regime in the European banking union Fernando Restoy Chair, Financial Stability Institute",
       "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
       "url": "https://www.bis.org/speeches/20260901-quest-more-efficient-bank-resolution-regime-european-banking-union",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "bis"
-    },
-    {
-      "id": "6a2f8c76842558",
-      "date": "2026-09-01",
-      "category": "Economy & Political Economy",
-      "source": "BIS",
-      "title": "1 September 2026 Recent economic and financial developments in Turkey Fatih Karahan",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.bis.org/speeches/20260901-recent-economic-and-financial-developments-turkey",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "bis"
-    },
-    {
-      "id": "aadeafc7bc37b7",
-      "date": "2026-09-01",
-      "category": "Economy & Political Economy",
-      "source": "BIS",
-      "title": "1 September 2026 Monetary policy, the yield curve and financial markets Rashad Cassim",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.bis.org/speeches/20260901-monetary-policy-yield-curve-and-financial-markets",
       "type": "Important new report",
       "automatic": true,
       "confidence": "medium",
