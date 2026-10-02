@@ -1,15 +1,15 @@
 {
-  "last_checked": "2026-10-02T00:47:45.692556Z",
+  "last_checked": "2026-10-02T09:46:33.515285Z",
   "engine_version": "6.1",
   "migration_baseline": false,
   "series": {
-    "ok": 41,
-    "failed": 3,
+    "ok": 40,
+    "failed": 4,
     "total": 44
   },
   "discovery": {
-    "ok": 30,
-    "failed": 8,
+    "ok": 31,
+    "failed": 7,
     "total": 38
   },
   "monitors": [
@@ -67,13 +67,8 @@
     {
       "monitor": "OECD Economic Outlook",
       "kind": "series",
-      "ok": true,
-      "latest": "September 2026",
-      "url": "https://www.oecd.org/en/topics/economic-outlook.html",
-      "method": "reader-block",
-      "warnings": [
-        "direct https://www.oecd.org/en/topics/economic-outlook.html: 403 Client Error: Forbidden for url: https://www.oecd.org/en/topics/economic-outlook.html"
-      ]
+      "ok": false,
+      "error": "direct https://www.oecd.org/en/topics/economic-outlook.html: 403 Client Error: Forbidden for url: https://www.oecd.org/en/topics/economic-outlook.html"
     },
     {
       "monitor": "Annual Economic Report",
@@ -253,8 +248,10 @@
       "ok": true,
       "latest": "2024",
       "url": "https://www.irena.org/publications/2024/Nov/World-Energy-Transitions-Outlook-2024",
-      "method": "direct-title",
-      "warnings": []
+      "method": "reader-block",
+      "warnings": [
+        "direct https://www.irena.org/publications/2024/Nov/World-Energy-Transitions-Outlook-2024: 403 Client Error: Forbidden for url: https://www.irena.org/publications/2024/Nov/World-Energy-Transitions-Outlook-2024"
+      ]
     },
     {
       "monitor": "Global Carbon Budget",
@@ -492,8 +489,8 @@
     {
       "monitor": "World Economic Forum discovery",
       "kind": "discovery",
-      "ok": false,
-      "candidates": 0,
+      "ok": true,
+      "candidates": 12,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
@@ -533,7 +530,7 @@
       "monitor": "International Crisis Group discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 8,
+      "candidates": 7,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
@@ -638,8 +635,8 @@
       "monitor": "IRENA discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 33,
-      "new_candidates": 33,
+      "candidates": 34,
+      "new_candidates": 1,
       "suppressed": 0,
       "warnings": [
         "direct https://www.irena.org/Publications: 403 Client Error: Forbidden for url: https://www.irena.org/Publications"
@@ -667,8 +664,8 @@
       "monitor": "IOM discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 15,
-      "new_candidates": 0,
+      "candidates": 16,
+      "new_candidates": 1,
       "suppressed": 0,
       "warnings": [
         "direct https://publications.iom.int/: 403 Client Error: Forbidden for url: https://publications.iom.int/"

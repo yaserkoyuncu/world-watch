@@ -1,13 +1,39 @@
 {
-  "last_checked": "2026-10-02T00:47:45.692556Z",
+  "last_checked": "2026-10-02T09:46:33.515285Z",
   "engine_version": "6.1",
   "monitor_count": 82,
   "flagship_series_count": 44,
   "discovery_source_count": 38,
-  "new_items_this_run": 0,
+  "new_items_this_run": 2,
   "new_flagship_editions_this_run": 0,
   "migration_baseline": false,
   "updates": [
+    {
+      "id": "4b315fdc29259b",
+      "date": "2026-10-02",
+      "category": "Climate & Energy",
+      "source": "IRENA",
+      "title": "The GEAR Framework: Measuring how renewable energy boosts climate resilience in agriculture",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.irena.org/Publications/2026/Oct/The-GEAR-Framework-Measuring-how-renewable-energy-boosts-climate-resilience-in-agriculture",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "irena"
+    },
+    {
+      "id": "aa8bd07e5283e2",
+      "date": "2026-10-02",
+      "category": "Demography & Society",
+      "source": "IOM",
+      "title": "Migration Governance Indicators Benchmark Report on the Global Compact for Safe, Orderly and Regular Migration",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://publications.iom.int/books/migration-governance-indicators-benchmark-report-global-compact-safe-orderly-and-regular",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "iom"
+    },
     {
       "id": "aab44561df3e72",
       "date": "2026-10-01",
@@ -2071,32 +2097,6 @@
       "automatic": true,
       "confidence": "medium",
       "discovery_source": "bis"
-    },
-    {
-      "id": "250be47c53ab9a",
-      "date": "2026-09-01",
-      "category": "Economy & Political Economy",
-      "source": "BIS",
-      "title": "1 September 2026 Advancing banking, governance and financial innovation in Malaysia and Asia Abdul Rasheed Ghaffour Governor",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.bis.org/speeches/20260901-advancing-banking-governance-and-financial-innovation-malaysia-and-asia",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "bis"
-    },
-    {
-      "id": "6de020e10a39da",
-      "date": "2026-08-31",
-      "category": "Demography & Society",
-      "source": "UN DESA Population Division",
-      "title": "Technical Paper: Assessment of Family Planning Indicators in Global Monitoring Frameworks",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/undesa_pd_2026_tp_global-monitoring-indicators.pdf",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "undesa_pop"
     }
   ]
 }
