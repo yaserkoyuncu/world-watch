@@ -1,13 +1,28 @@
 {
-  "last_checked": "2026-10-02T19:57:21.661438Z",
+  "last_checked": "2026-10-03T00:30:40.085945Z",
   "engine_version": "6.1",
   "monitor_count": 82,
   "flagship_series_count": 44,
   "discovery_source_count": 38,
-  "new_items_this_run": 2,
-  "new_flagship_editions_this_run": 0,
+  "new_items_this_run": 1,
+  "new_flagship_editions_this_run": 1,
   "migration_baseline": false,
   "updates": [
+    {
+      "id": "9cf8b6159a5fc7",
+      "date": "2026-10-03",
+      "category": "Economy & Political Economy",
+      "source": "IMF",
+      "title": "World Economic Outlook — October 2026",
+      "summary": "Edition-aware monitor detected a newer World Economic Outlook: October 2026, replacing July 2026.",
+      "url": "https://www.imf.org/en/publications/weo/issues/2026/10/13/world-economic-outlook-october-2026",
+      "type": "Major flagship update",
+      "automatic": true,
+      "series_id": "imf_weo",
+      "edition": "October 2026",
+      "previous_edition": "July 2026",
+      "confidence": "high"
+    },
     {
       "id": "1d20657e68358f",
       "date": "2026-10-02",
@@ -2084,19 +2099,6 @@
       "automatic": true,
       "confidence": "medium",
       "discovery_source": "who"
-    },
-    {
-      "id": "e0dc3ae143b017",
-      "date": "2026-09-01",
-      "category": "Economy & Political Economy",
-      "source": "BIS",
-      "title": "1 September 2026 The quest for a more efficient bank resolution regime in the European banking union Fernando Restoy Chair, Financial Stability Institute",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.bis.org/speeches/20260901-quest-more-efficient-bank-resolution-regime-european-banking-union",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "bis"
     }
   ]
 }
