@@ -1,13 +1,52 @@
 {
-  "last_checked": "2026-10-04T23:57:40.358363Z",
+  "last_checked": "2026-10-05T10:27:05.861940Z",
   "engine_version": "6.1",
   "monitor_count": 82,
   "flagship_series_count": 44,
   "discovery_source_count": 38,
-  "new_items_this_run": 0,
+  "new_items_this_run": 3,
   "new_flagship_editions_this_run": 0,
   "migration_baseline": false,
   "updates": [
+    {
+      "id": "af116e8907d2c4",
+      "date": "2026-10-05",
+      "category": "Economy & Political Economy",
+      "source": "BIS",
+      "title": "Hélène Rey Economic Adviser and Head of Monetary and Economic Department",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.bis.org/author/helene-rey",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "bis"
+    },
+    {
+      "id": "715cb5b8b50485",
+      "date": "2026-10-05",
+      "category": "Economy & Political Economy",
+      "source": "BIS",
+      "title": "1 October 2026 Macroprudential policy: from BIS origins to new frontiers Hélène Rey Economic Adviser and Head of Monetary and Economic Department",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.bis.org/speeches/20261002-macroprudential-policy-bis-origins-new-frontiers",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "bis"
+    },
+    {
+      "id": "6f90e0bd90a928",
+      "date": "2026-10-05",
+      "category": "Democracy & Rights",
+      "source": "Transparency International",
+      "title": "Protecting civic space in extractives governance: Towards enhanced EITI engagement on civic space",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.transparency.org/en/publications/protecting-civic-space-in-extractives-governance",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "ti"
+    },
     {
       "id": "9cf8b6159a5fc7",
       "date": "2026-10-03",
@@ -2060,45 +2099,6 @@
       "automatic": true,
       "confidence": "medium",
       "discovery_source": "cset"
-    },
-    {
-      "id": "d00a713a5bdab5",
-      "date": "2026-09-02",
-      "category": "Demography & Society",
-      "source": "IOM",
-      "title": "International Migration Vol. 64 (5) September 2026",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://publications.iom.int/books/international-migration-vol-64-5-september-2026",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "iom"
-    },
-    {
-      "id": "2373c89baac2be",
-      "date": "2026-09-01",
-      "category": "Democracy & Rights",
-      "source": "Freedom House",
-      "title": "Collaboration and Resistance: Tracking Transnational Repression in 2025",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://freedomhouse.org/index%2ephp/report/special-report/2026/collaboration-and-resistance-tracking-transnational-repression-2025",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "freedom"
-    },
-    {
-      "id": "7653d8395677d9",
-      "date": "2026-09-01",
-      "category": "Health, Food & Education",
-      "source": "WHO",
-      "title": "WHO emergency guidance on the use of licensed Ebola vaccine during Bundibugyo virus disease outbreaks,...",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.who.int/publications/i/item/B09884",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "who"
     }
   ]
 }
