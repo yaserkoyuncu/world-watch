@@ -1,5 +1,5 @@
 {
-  "last_checked": "2026-10-05T10:27:05.861940Z",
+  "last_checked": "2026-10-05T22:01:14.006087Z",
   "engine_version": "6.1",
   "monitor_count": 82,
   "flagship_series_count": 44,
@@ -8,6 +8,45 @@
   "new_flagship_editions_this_run": 0,
   "migration_baseline": false,
   "updates": [
+    {
+      "id": "cf853cf1ca23a5",
+      "date": "2026-10-05",
+      "category": "Economy & Political Economy",
+      "source": "BIS",
+      "title": "5 October 2026 The role of central banks in managing financial crises in times of rapid change Pablo Hernández de Cos General Manager",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.bis.org/speeches/20261005-role-central-banks-managing-financial-crises-times-rapid-change",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "bis"
+    },
+    {
+      "id": "5c494f4e0e3c06",
+      "date": "2026-10-05",
+      "category": "Economy & Political Economy",
+      "source": "BIS",
+      "title": "5 October 2026 From digital banking to resilient banking - technology, cyber security and ai as pillars of trust Rohit Jain Deputy Governor",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.bis.org/speeches/20261005-digital-banking-resilient-banking-technology-cyber-security-and-ai-pillars-trust",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "bis"
+    },
+    {
+      "id": "6b45c1b7402d31",
+      "date": "2026-10-05",
+      "category": "Demography & Society",
+      "source": "UNDP",
+      "title": "Publications ![Image 42: Cover of UNDP Gender Equality Strategy 2022-2025 with colorful abstract swirls and UNDP logo.",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.undp.org/sites/g/files/zskgke326/files/styles/content_card_453_x_256_/public/2026-10/ges_cover_image.jpg?h=bfff612f&itok=9gI-4S33",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "undp"
+    },
     {
       "id": "af116e8907d2c4",
       "date": "2026-10-05",
@@ -2060,45 +2099,6 @@
       "automatic": true,
       "confidence": "medium",
       "discovery_source": "freedom"
-    },
-    {
-      "id": "04366086688a47",
-      "date": "2026-09-02",
-      "category": "Democracy & Rights",
-      "source": "Freedom House",
-      "title": "From Awareness to Action: Combating Transnational Repression in the United Kingdom",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://freedomhouse.org/index%2ephp/report/transnational-repression/united-kingdom/2025",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "freedom"
-    },
-    {
-      "id": "8526dd29305e54",
-      "date": "2026-09-02",
-      "category": "Democracy & Rights",
-      "source": "Freedom House",
-      "title": "Engaging the Community: Combating Transnational Repression in Canada",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://freedomhouse.org/index%2ephp/report/transnational-repression/canada/2025",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "freedom"
-    },
-    {
-      "id": "72300d5b67f819",
-      "date": "2026-09-02",
-      "category": "Technology & AI",
-      "source": "Georgetown CSET",
-      "title": "Strengthening the U.S. Semiconductor Manufacturing Workforce",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://cset.georgetown.edu/publication/strengthening-the-u-s-semiconductor-manufacturing-workforce/",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "cset"
     }
   ]
 }
