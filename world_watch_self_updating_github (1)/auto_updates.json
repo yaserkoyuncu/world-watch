@@ -1,13 +1,39 @@
 {
-  "last_checked": "2026-10-05T22:01:14.006087Z",
+  "last_checked": "2026-10-06T10:18:21.516708Z",
   "engine_version": "6.1",
   "monitor_count": 82,
   "flagship_series_count": 44,
   "discovery_source_count": 38,
-  "new_items_this_run": 3,
+  "new_items_this_run": 2,
   "new_flagship_editions_this_run": 0,
   "migration_baseline": false,
   "updates": [
+    {
+      "id": "d88857ef223088",
+      "date": "2026-10-06",
+      "category": "Geopolitics & Security",
+      "source": "International Crisis Group",
+      "title": "Back to War in Ethiopia?",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.crisisgroup.org/pod/africa/ethiopia/back-war-ethiopia-0",
+      "type": "Significant analysis",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "icg"
+    },
+    {
+      "id": "e8522ee6fd022d",
+      "date": "2026-10-06",
+      "category": "Health, Food & Education",
+      "source": "WHO",
+      "title": "Civil–military health security mapping tool: user manual",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.who.int/publications/i/item/civil-military-health-security-mapping-tool--user-manual",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "who"
+    },
     {
       "id": "cf853cf1ca23a5",
       "date": "2026-10-05",
@@ -2073,32 +2099,6 @@
       "automatic": true,
       "confidence": "medium",
       "discovery_source": "undp"
-    },
-    {
-      "id": "32a2392020809e",
-      "date": "2026-09-02",
-      "category": "Democracy & Rights",
-      "source": "Freedom House",
-      "title": "Tunnel Vision: Anti-censorship Tools, End-to-End Encryption and the Fight for a Free and Open Internet",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://freedomhouse.org/index%2ephp/report/special-report/2025/tunnel-vision-anti-censorship-tools-end-end-encryption-and-fight-free",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "freedom"
-    },
-    {
-      "id": "8391af6d4e7f9e",
-      "date": "2026-09-02",
-      "category": "Democracy & Rights",
-      "source": "Freedom House",
-      "title": "More Action Needed to Ensure Safety: Combating Transnational Repression in Australia",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://freedomhouse.org/index%2ephp/report/special-report/2025/more-action-needed-ensure-safety-combating-transnational-repression",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "freedom"
     }
   ]
 }
