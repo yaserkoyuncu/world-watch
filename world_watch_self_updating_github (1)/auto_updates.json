@@ -1,13 +1,65 @@
 {
-  "last_checked": "2026-10-07T00:42:53.317881Z",
+  "last_checked": "2026-10-07T10:16:22.588809Z",
   "engine_version": "6.1",
   "monitor_count": 82,
   "flagship_series_count": 44,
   "discovery_source_count": 38,
-  "new_items_this_run": 1,
+  "new_items_this_run": 4,
   "new_flagship_editions_this_run": 0,
   "migration_baseline": false,
   "updates": [
+    {
+      "id": "90f35efdade460",
+      "date": "2026-10-07",
+      "category": "Economy & Political Economy",
+      "source": "BIS",
+      "title": "7 October 2026 Preserving financial stability in an evolving world Sanjay Malhotra Governor",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.bis.org/speeches/20261006-preserving-financial-stability-evolving-world",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "bis"
+    },
+    {
+      "id": "5207822f7308de",
+      "date": "2026-10-07",
+      "category": "Economy & Political Economy",
+      "source": "BIS",
+      "title": "Sanjay Malhotra Governor",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.bis.org/author/sanjay-malhotra",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "bis"
+    },
+    {
+      "id": "65c54af5f5f166",
+      "date": "2026-10-07",
+      "category": "Economy & Political Economy",
+      "source": "BIS",
+      "title": "7 October 2026 From commitment to execution - mobilizing the financial sector for Uganda's tenfold growth opening Michael Atingi-Ego Governor",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.bis.org/speeches/20261007-commitment-execution-mobilizing-financial-sector-ugandas-tenfold-growth-opening",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "bis"
+    },
+    {
+      "id": "a5b8d01eea1512",
+      "date": "2026-10-07",
+      "category": "Health, Food & Education",
+      "source": "WHO",
+      "title": "Supporting the transition to community-based mental health and social care",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.who.int/publications/i/item/9789240124134",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "who"
+    },
     {
       "id": "0b63575fb5f283",
       "date": "2026-10-07",
@@ -2047,58 +2099,6 @@
       "automatic": true,
       "confidence": "medium",
       "discovery_source": "ti"
-    },
-    {
-      "id": "0aa508f1e7ddc1",
-      "date": "2026-09-04",
-      "category": "Science",
-      "source": "Quanta Magazine",
-      "title": "![Image 13: Joy of Why season 5 promotional ad",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.quantamagazine.org/wp-content/uploads/2026/06/JoY-Ads-2026_Tablet.jpg",
-      "type": "Significant analysis",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "quanta"
-    },
-    {
-      "id": "d83f93964e3723",
-      "date": "2026-09-04",
-      "category": "Science",
-      "source": "Quanta Magazine",
-      "title": "![Image 12: Joy of Why season 5 promotional ad",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.quantamagazine.org/wp-content/uploads/2026/06/JoY-Ads-2026_Mobile.jpg",
-      "type": "Significant analysis",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "quanta"
-    },
-    {
-      "id": "72778e90d83f8a",
-      "date": "2026-09-04",
-      "category": "Science",
-      "source": "Quanta Magazine",
-      "title": "![Image 11: Joy of Why season 5 promotional ad",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.quantamagazine.org/wp-content/uploads/2026/06/JoY-Ads-2026_Web-Default.jpg",
-      "type": "Significant analysis",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "quanta"
-    },
-    {
-      "id": "bf711ff0b306c7",
-      "date": "2026-09-03",
-      "category": "Science",
-      "source": "Quanta Magazine",
-      "title": "![Image 15: A Quanta Books ad displaying the book \"Six Math Essentials\" by Terry Tao",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.quantamagazine.org/wp-content/uploads/2026/02/SixMathEssentials-Ad-Newsletter.jpg",
-      "type": "Significant analysis",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "quanta"
     }
   ]
 }
