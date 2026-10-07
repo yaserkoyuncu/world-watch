@@ -1,13 +1,26 @@
 {
-  "last_checked": "2026-10-06T20:20:42.345526Z",
+  "last_checked": "2026-10-07T00:42:53.317881Z",
   "engine_version": "6.1",
   "monitor_count": 82,
   "flagship_series_count": 44,
   "discovery_source_count": 38,
-  "new_items_this_run": 10,
+  "new_items_this_run": 1,
   "new_flagship_editions_this_run": 0,
   "migration_baseline": false,
   "updates": [
+    {
+      "id": "0b63575fb5f283",
+      "date": "2026-10-07",
+      "category": "Democracy & Rights",
+      "source": "Reporters Without Borders",
+      "title": "Evelio López second journalist killed in Guatemala in 2026, murdered after receiving threats Journalist Evelio Lizandro López Sánchez was shot dead on 2 October in the municipality of San Pedro Necta, in the department of Huehuetenango.",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://rsf.org/en/evelio-l%C3%B3pez-second-journalist-killed-guatemala-2026-murdered-after-receiving-threats",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "rsf"
+    },
     {
       "id": "d0097e8fe0e60b",
       "date": "2026-10-06",
@@ -2082,19 +2095,6 @@
       "title": "![Image 15: A Quanta Books ad displaying the book \"Six Math Essentials\" by Terry Tao",
       "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
       "url": "https://www.quantamagazine.org/wp-content/uploads/2026/02/SixMathEssentials-Ad-Newsletter.jpg",
-      "type": "Significant analysis",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "quanta"
-    },
-    {
-      "id": "2bbc16915bda83",
-      "date": "2026-09-03",
-      "category": "Science",
-      "source": "Quanta Magazine",
-      "title": "![Image 14: A Quanta Books ad displaying the book \"Six Math Essentials\" by Terry Tao",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.quantamagazine.org/wp-content/uploads/2026/02/SixMathEssentials-Ad-Mobile.jpg",
       "type": "Significant analysis",
       "automatic": true,
       "confidence": "medium",
