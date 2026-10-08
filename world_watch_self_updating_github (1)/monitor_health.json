@@ -1,5 +1,5 @@
 {
-  "last_checked": "2026-10-07T20:38:06.959007Z",
+  "last_checked": "2026-10-08T01:00:55.751156Z",
   "engine_version": "6.1",
   "migration_baseline": false,
   "series": {
@@ -8,8 +8,8 @@
     "total": 44
   },
   "discovery": {
-    "ok": 29,
-    "failed": 9,
+    "ok": 30,
+    "failed": 8,
     "total": 38
   },
   "monitors": [
@@ -399,8 +399,8 @@
       "kind": "series",
       "ok": true,
       "latest": "2025",
-      "url": "https://worldjusticeproject.org/rule-of-law-index/global/2025/wjp-index",
-      "method": "direct-title",
+      "url": "https://worldjusticeproject.org/rule-of-law-index/",
+      "method": "reader-block",
       "warnings": []
     },
     {
@@ -408,8 +408,8 @@
       "kind": "series",
       "ok": true,
       "latest": "2025",
-      "url": "https://www.transparency.org/en/press/corruption-perceptions-index-2025-decline-leadership-undermining-global-fight",
-      "method": "reader-link",
+      "url": "https://www.transparency.org/en/cpi/2025",
+      "method": "reader-block",
       "warnings": []
     },
     {
@@ -457,7 +457,7 @@
       "kind": "discovery",
       "ok": true,
       "candidates": 24,
-      "new_candidates": 2,
+      "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
     },
@@ -535,7 +535,7 @@
       "monitor": "International Crisis Group discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 6,
+      "candidates": 8,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
@@ -639,9 +639,9 @@
     {
       "monitor": "IRENA discovery",
       "kind": "discovery",
-      "ok": false,
-      "candidates": 0,
-      "new_candidates": 0,
+      "ok": true,
+      "candidates": 35,
+      "new_candidates": 2,
       "suppressed": 0,
       "warnings": [
         "direct https://www.irena.org/Publications: 403 Client Error: Forbidden for url: https://www.irena.org/Publications"
@@ -692,7 +692,7 @@
       "kind": "discovery",
       "ok": true,
       "candidates": 11,
-      "new_candidates": 1,
+      "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
         "direct https://www.undp.org/publications: 403 Client Error: Forbidden for url: https://www.undp.org/publications"
