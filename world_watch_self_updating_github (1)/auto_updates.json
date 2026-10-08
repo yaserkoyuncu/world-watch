@@ -1,13 +1,39 @@
 {
-  "last_checked": "2026-10-08T10:35:34.398527Z",
+  "last_checked": "2026-10-08T20:41:58.084832Z",
   "engine_version": "6.1",
   "monitor_count": 82,
   "flagship_series_count": 44,
   "discovery_source_count": 38,
-  "new_items_this_run": 5,
+  "new_items_this_run": 2,
   "new_flagship_editions_this_run": 0,
   "migration_baseline": false,
   "updates": [
+    {
+      "id": "1c3f3acb0d064c",
+      "date": "2026-10-08",
+      "category": "Economy & Political Economy",
+      "source": "BIS",
+      "title": "5 October 2026 BIS’s Hernández de Cos on AI, non-bank risk and tokenisation Pablo Hernández de Cos General Manager",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.bis.org/speeches/20261005-biss-hernandez-de-cos-ai-non-bank-risk-and-tokenisation",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "bis"
+    },
+    {
+      "id": "5f73bd6c7db8ae",
+      "date": "2026-10-08",
+      "category": "Economy & Political Economy",
+      "source": "ILO",
+      "title": "Mobile Internet and Employment",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.ilo.org/publications/mobile-internet-and-employment",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "ilo"
+    },
     {
       "id": "bbebf9346ffb4f",
       "date": "2026-10-08",
@@ -2073,32 +2099,6 @@
       "automatic": true,
       "confidence": "medium",
       "discovery_source": "icg"
-    },
-    {
-      "id": "122cdfbafc58f8",
-      "date": "2026-09-07",
-      "category": "Technology & AI",
-      "source": "ITU",
-      "title": "Update – March 2023:",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.itu.int/itu-d/reports/statistics/",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "itu"
-    },
-    {
-      "id": "b5030c7e52a8f1",
-      "date": "2026-09-07",
-      "category": "Technology & AI",
-      "source": "ITU",
-      "title": "Connectivity in the LDC",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.itu.int/itu-d/reports/statistics/connectivity-in-the-least-developed-countries-status-report-2021/",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "itu"
     }
   ]
 }
