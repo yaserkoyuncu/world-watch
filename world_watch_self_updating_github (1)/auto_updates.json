@@ -1,13 +1,28 @@
 {
-  "last_checked": "2026-10-09T20:06:40.797828Z",
+  "last_checked": "2026-10-10T00:51:34.461039Z",
   "engine_version": "6.1",
   "monitor_count": 82,
   "flagship_series_count": 44,
   "discovery_source_count": 38,
-  "new_items_this_run": 0,
-  "new_flagship_editions_this_run": 0,
+  "new_items_this_run": 1,
+  "new_flagship_editions_this_run": 1,
   "migration_baseline": false,
   "updates": [
+    {
+      "id": "b76b7cd057e21e",
+      "date": "2026-10-10",
+      "category": "Economy & Political Economy",
+      "source": "IMF",
+      "title": "Fiscal Monitor — October 2026",
+      "summary": "Edition-aware monitor detected a newer Fiscal Monitor: October 2026, replacing April 2026.",
+      "url": "https://www.imf.org/en/publications/fm/issues/2026/10/05/fiscal-monitor-october-2026",
+      "type": "Major flagship update",
+      "automatic": true,
+      "series_id": "imf_fiscal",
+      "edition": "October 2026",
+      "previous_edition": "April 2026",
+      "confidence": "high"
+    },
     {
       "id": "1c3f3acb0d064c",
       "date": "2026-10-08",
@@ -2086,19 +2101,6 @@
       "automatic": true,
       "confidence": "medium",
       "discovery_source": "sipri"
-    },
-    {
-      "id": "3856754e77888e",
-      "date": "2026-09-08",
-      "category": "Geopolitics & Security",
-      "source": "International Crisis Group",
-      "title": "Policing the Bangsamoro: Peace in the Southern Philippines",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.crisisgroup.org/rpt/asia-pacific/philippines/358-policing-bangsamoro-peace-southern-philippines",
-      "type": "Significant analysis",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "icg"
     }
   ]
 }
