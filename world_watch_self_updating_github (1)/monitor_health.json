@@ -1,15 +1,15 @@
 {
-  "last_checked": "2026-10-10T00:51:34.461039Z",
+  "last_checked": "2026-10-10T09:51:05.337176Z",
   "engine_version": "6.1",
   "migration_baseline": false,
   "series": {
-    "ok": 40,
-    "failed": 4,
+    "ok": 41,
+    "failed": 3,
     "total": 44
   },
   "discovery": {
-    "ok": 29,
-    "failed": 9,
+    "ok": 27,
+    "failed": 11,
     "total": 38
   },
   "monitors": [
@@ -39,9 +39,9 @@
       "monitor": "Fiscal Monitor",
       "kind": "series",
       "ok": true,
-      "latest": "October 2026",
-      "url": "https://www.imf.org/en/publications/fm/issues/2026/10/05/fiscal-monitor-october-2026",
-      "method": "reader-link",
+      "latest": "April 2026",
+      "url": "https://www.imf.org/en/publications/fm/issues/2026/04/15/fiscal-monitor-april-2026",
+      "method": "official-url",
       "warnings": [
         "direct https://www.imf.org/en/publications: 403 Client Error: Forbidden for url: https://www.imf.org/en/publications"
       ]
@@ -67,8 +67,13 @@
     {
       "monitor": "OECD Economic Outlook",
       "kind": "series",
-      "ok": false,
-      "error": "direct https://www.oecd.org/en/topics/economic-outlook.html: 403 Client Error: Forbidden for url: https://www.oecd.org/en/topics/economic-outlook.html"
+      "ok": true,
+      "latest": "September 2026",
+      "url": "https://www.oecd.org/en/topics/economic-outlook.html",
+      "method": "reader-block",
+      "warnings": [
+        "direct https://www.oecd.org/en/topics/economic-outlook.html: 403 Client Error: Forbidden for url: https://www.oecd.org/en/topics/economic-outlook.html"
+      ]
     },
     {
       "monitor": "Annual Economic Report",
@@ -286,7 +291,7 @@
       "ok": true,
       "latest": "2026",
       "url": "https://worldmigrationreport.iom.int/msite/wmr-2026-interactive/",
-      "method": "reader-block",
+      "method": "official-url",
       "warnings": [
         "direct https://worldmigrationreport.iom.int/msite/wmr-2026-interactive/: 403 Client Error: Forbidden for url: https://worldmigrationreport.iom.int/msite/wmr-2026-interactive/"
       ]
@@ -403,8 +408,8 @@
       "kind": "series",
       "ok": true,
       "latest": "2025",
-      "url": "https://www.transparency.org/en/cpi/2025",
-      "method": "reader-block",
+      "url": "https://www.transparency.org/en/press/corruption-perceptions-index-2025-decline-leadership-undermining-global-fight",
+      "method": "reader-link",
       "warnings": []
     },
     {
@@ -489,8 +494,8 @@
     {
       "monitor": "World Economic Forum discovery",
       "kind": "discovery",
-      "ok": true,
-      "candidates": 22,
+      "ok": false,
+      "candidates": 0,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
@@ -530,7 +535,7 @@
       "monitor": "International Crisis Group discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 8,
+      "candidates": 6,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
@@ -663,8 +668,8 @@
     {
       "monitor": "IOM discovery",
       "kind": "discovery",
-      "ok": true,
-      "candidates": 16,
+      "ok": false,
+      "candidates": 0,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
@@ -769,7 +774,7 @@
       "monitor": "Reporters Without Borders discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 3,
+      "candidates": 4,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
