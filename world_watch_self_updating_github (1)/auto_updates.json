@@ -1,5 +1,5 @@
 {
-  "last_checked": "2026-10-12T10:50:12.518336Z",
+  "last_checked": "2026-10-12T22:29:45.452363Z",
   "engine_version": "6.1",
   "monitor_count": 82,
   "flagship_series_count": 44,
@@ -22,6 +22,32 @@
       "edition": "2026",
       "previous_edition": "2025",
       "confidence": "high"
+    },
+    {
+      "id": "a215ade68ea963",
+      "date": "2026-10-12",
+      "category": "Health, Food & Education",
+      "source": "WHO",
+      "title": "Surveillance, case investigation and contact tracing in filovirus disease outbreaks",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.who.int/publications/i/item/387838",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "who"
+    },
+    {
+      "id": "ffdecd6ee67bdc",
+      "date": "2026-10-12",
+      "category": "Health, Food & Education",
+      "source": "WHO",
+      "title": "Funding a tuberculosis-free future: an investment case for screening and preventive treatment, second...",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.who.int/publications/i/item/9789240124035",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "who"
     },
     {
       "id": "294af35a4a21b4",
@@ -2071,32 +2097,6 @@
       "title": "Latest edition: 2026",
       "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
       "url": "https://www.weforum.org/publications/the-global-cooperation-barometer-2026/",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "wef"
-    },
-    {
-      "id": "6d86502e882c1b",
-      "date": "2026-09-09",
-      "category": "Economy & Political Economy",
-      "source": "World Economic Forum",
-      "title": "Latest edition: 2026",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.weforum.org/publications/technology-convergence-report-2026/",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "wef"
-    },
-    {
-      "id": "ac51235558bf45",
-      "date": "2026-09-09",
-      "category": "Economy & Political Economy",
-      "source": "World Economic Forum",
-      "title": "Latest edition: 2026",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.weforum.org/publications/global-risks-report-2026/",
       "type": "Important new report",
       "automatic": true,
       "confidence": "medium",
