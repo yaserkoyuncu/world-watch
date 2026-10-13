@@ -1,13 +1,26 @@
 {
-  "last_checked": "2026-10-13T10:36:29.664403Z",
+  "last_checked": "2026-10-13T20:41:14.745142Z",
   "engine_version": "6.1",
   "monitor_count": 82,
   "flagship_series_count": 44,
   "discovery_source_count": 38,
-  "new_items_this_run": 5,
+  "new_items_this_run": 1,
   "new_flagship_editions_this_run": 0,
   "migration_baseline": false,
   "updates": [
+    {
+      "id": "b39f9d35cf4a66",
+      "date": "2026-10-13",
+      "category": "Economy & Political Economy",
+      "source": "BIS",
+      "title": "13 October 2026 Introduction to the panel “Financial risks and macroprudential policy” Clara Raposo Deputy Governor",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.bis.org/speeches/20261013-introduction-panel-financial-risks-and-macroprudential-policy",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "bis"
+    },
     {
       "id": "33903d9b92056a",
       "date": "2026-10-13",
@@ -2088,19 +2101,6 @@
       "automatic": true,
       "confidence": "medium",
       "discovery_source": "bis"
-    },
-    {
-      "id": "fa280cb106fece",
-      "date": "2026-09-10",
-      "category": "Geopolitics & Security",
-      "source": "SIPRI",
-      "title": "![Image 4: FS 2608 Chad humanitarian funding_cover",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.sipri.org/sites/default/files/styles/medium/public/2026-08/fs_2608_chad_humanitarian_funding_gaps_en_cover_0.png?itok=yUtLyO21",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "sipri"
     }
   ]
 }
