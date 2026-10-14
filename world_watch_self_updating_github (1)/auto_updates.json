@@ -1,13 +1,65 @@
 {
-  "last_checked": "2026-10-14T08:43:29.560591Z",
+  "last_checked": "2026-10-14T14:31:00.034457Z",
   "engine_version": "6.1",
   "monitor_count": 82,
   "flagship_series_count": 44,
   "discovery_source_count": 38,
-  "new_items_this_run": 2,
+  "new_items_this_run": 4,
   "new_flagship_editions_this_run": 0,
   "migration_baseline": false,
   "updates": [
+    {
+      "id": "ded3d57606c832",
+      "date": "2026-10-14",
+      "category": "Economy & Political Economy",
+      "source": "BIS",
+      "title": "BIS Paper No 175 14 Oct 2026 Money and the architecture of trust Money is one of the most consequential social institutions humanity has built. Starting from the most elementary monetary act,… By Iñaki Aldasoro",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.bis.org/publications/paper-175-money-and-architecture-trust",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "bis"
+    },
+    {
+      "id": "9ec10adfbb6f14",
+      "date": "2026-10-14",
+      "category": "Economy & Political Economy",
+      "source": "BIS",
+      "title": "14 October 2026 From the periphery to the core: financial health and central banks’ mandates Fernando Restoy Chair, Financial Stability Institute",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.bis.org/speeches/20261013-periphery-core-financial-health-and-central-banks-mandates",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "bis"
+    },
+    {
+      "id": "977a77b5e7b511",
+      "date": "2026-10-14",
+      "category": "Economy & Political Economy",
+      "source": "ILO",
+      "title": "Advancing Green Trade and Employment under Global Uncertainty",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.ilo.org/publications/advancing-green-trade-and-employment-under-global-uncertainty",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "ilo"
+    },
+    {
+      "id": "02d98eb6727dee",
+      "date": "2026-10-14",
+      "category": "Economy & Political Economy",
+      "source": "ILO",
+      "title": "(Re)Defining Workspace: Dissolving Boundaries and Application of Labour Legislation",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.ilo.org/meetings-and-events/redefining-workspace-dissolving-boundaries-and-application-labour",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "ilo"
+    },
     {
       "id": "f9eb9847f1ba71",
       "date": "2026-10-14",
@@ -2049,58 +2101,6 @@
       "automatic": true,
       "confidence": "medium",
       "discovery_source": "who"
-    },
-    {
-      "id": "1419d36ac97718",
-      "date": "2026-09-11",
-      "category": "Technology & AI",
-      "source": "WIPO",
-      "title": "World Intellectual Property Report",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.wipo.int/en/web/world-ip-report",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "wipo"
-    },
-    {
-      "id": "a40214bf6b926a",
-      "date": "2026-09-11",
-      "category": "Technology & AI",
-      "source": "WIPO",
-      "title": "World Intangible Investment Highlights",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.wipo.int/en/web/intangible-assets/measuring-investments",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "wipo"
-    },
-    {
-      "id": "82a12ef7423e29",
-      "date": "2026-09-11",
-      "category": "Technology & AI",
-      "source": "WIPO",
-      "title": "WIPO Technology Trends",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.wipo.int/en/web/technology-trends",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "wipo"
-    },
-    {
-      "id": "e823e6c4b7ec8a",
-      "date": "2026-09-11",
-      "category": "Technology & AI",
-      "source": "WIPO",
-      "title": "Global Forum on IP and AI",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.wipo.int/en/web/global-forum-on-ip-and-ai",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "wipo"
     }
   ]
 }
