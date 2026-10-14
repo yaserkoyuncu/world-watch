@@ -1,13 +1,26 @@
 {
-  "last_checked": "2026-10-14T14:31:00.034457Z",
+  "last_checked": "2026-10-14T19:24:21.006008Z",
   "engine_version": "6.1",
   "monitor_count": 82,
   "flagship_series_count": 44,
   "discovery_source_count": 38,
-  "new_items_this_run": 4,
+  "new_items_this_run": 1,
   "new_flagship_editions_this_run": 0,
   "migration_baseline": false,
   "updates": [
+    {
+      "id": "447a342e832835",
+      "date": "2026-10-14",
+      "category": "Economy & Political Economy",
+      "source": "World Economic Forum",
+      "title": "Geographies in Depth",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.weforum.org/stories/geographies-in-depth/",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "wef"
+    },
     {
       "id": "ded3d57606c832",
       "date": "2026-10-14",
@@ -2088,19 +2101,6 @@
       "automatic": true,
       "confidence": "medium",
       "discovery_source": "undp"
-    },
-    {
-      "id": "980e0d4442ed0f",
-      "date": "2026-09-11",
-      "category": "Health, Food & Education",
-      "source": "WHO",
-      "title": "WHO guidelines for malaria",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.who.int/publications/i/item/guidelines-for-malaria",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "who"
     }
   ]
 }
