@@ -1,13 +1,39 @@
 {
-  "last_checked": "2026-10-14T00:18:25.687301Z",
+  "last_checked": "2026-10-14T08:43:29.560591Z",
   "engine_version": "6.1",
   "monitor_count": 82,
   "flagship_series_count": 44,
   "discovery_source_count": 38,
-  "new_items_this_run": 0,
+  "new_items_this_run": 2,
   "new_flagship_editions_this_run": 0,
   "migration_baseline": false,
   "updates": [
+    {
+      "id": "f9eb9847f1ba71",
+      "date": "2026-10-14",
+      "category": "Economy & Political Economy",
+      "source": "BIS",
+      "title": "Clara Raposo Deputy Governor",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.bis.org/author/clara-raposo",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "bis"
+    },
+    {
+      "id": "761bbc11d8f7cb",
+      "date": "2026-10-14",
+      "category": "Climate & Energy",
+      "source": "IRENA",
+      "title": "World Energy Transition Outlook 2026: 1.5°C Pathway",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.irena.org/Publications/2026/Oct/World-Energy-Transitions-Outlook-2026",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "irena"
+    },
     {
       "id": "b39f9d35cf4a66",
       "date": "2026-10-13",
@@ -2075,32 +2101,6 @@
       "automatic": true,
       "confidence": "medium",
       "discovery_source": "wipo"
-    },
-    {
-      "id": "669d7162c3d2a5",
-      "date": "2026-09-10",
-      "category": "Health, Food & Education",
-      "source": "WHO",
-      "title": "Teaching with care: a practical guide for teachers to support mental health and well-being in schools",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.who.int/publications/i/item/9789240124912",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "who"
-    },
-    {
-      "id": "805c303c7dc071",
-      "date": "2026-09-10",
-      "category": "Economy & Political Economy",
-      "source": "BIS",
-      "title": "10 September 2026 Artificial intelligence, growth and financial stability: challenges for central banks Pablo Hernández de Cos General Manager",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.bis.org/speeches/20260910-artificial-intelligence-growth-and-financial-stability-challenges-central-banks",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "bis"
     }
   ]
 }
