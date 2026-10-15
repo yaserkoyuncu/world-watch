@@ -1,15 +1,15 @@
 {
-  "last_checked": "2026-10-15T19:07:54.352682Z",
+  "last_checked": "2026-10-15T23:41:41.526787Z",
   "engine_version": "6.1",
   "migration_baseline": false,
   "series": {
-    "ok": 41,
-    "failed": 3,
+    "ok": 40,
+    "failed": 4,
     "total": 44
   },
   "discovery": {
-    "ok": 28,
-    "failed": 10,
+    "ok": 29,
+    "failed": 9,
     "total": 38
   },
   "monitors": [
@@ -67,13 +67,8 @@
     {
       "monitor": "OECD Economic Outlook",
       "kind": "series",
-      "ok": true,
-      "latest": "September 2026",
-      "url": "https://www.oecd.org/en/topics/economic-outlook.html",
-      "method": "reader-block",
-      "warnings": [
-        "direct https://www.oecd.org/en/topics/economic-outlook.html: 403 Client Error: Forbidden for url: https://www.oecd.org/en/topics/economic-outlook.html"
-      ]
+      "ok": false,
+      "error": "direct https://www.oecd.org/en/topics/economic-outlook.html: 403 Client Error: Forbidden for url: https://www.oecd.org/en/topics/economic-outlook.html"
     },
     {
       "monitor": "Annual Economic Report",
@@ -253,8 +248,10 @@
       "ok": true,
       "latest": "2024",
       "url": "https://www.irena.org/publications/2024/Nov/World-Energy-Transitions-Outlook-2024",
-      "method": "direct-title",
-      "warnings": []
+      "method": "official-url",
+      "warnings": [
+        "direct https://www.irena.org/publications/2024/Nov/World-Energy-Transitions-Outlook-2024: 403 Client Error: Forbidden for url: https://www.irena.org/publications/2024/Nov/World-Energy-Transitions-Outlook-2024"
+      ]
     },
     {
       "monitor": "Global Carbon Budget",
@@ -313,9 +310,9 @@
       "monitor": "World Social Report",
       "kind": "series",
       "ok": true,
-      "latest": "2025",
-      "url": "https://social.desa.un.org/sites/default/files/styles/max_width_400px_ri/public/2025-04/WSR2025-Cover-sm.jpg.jpg?itok=XeEJM61H",
-      "method": "reader-link",
+      "latest": "2026",
+      "url": "https://social.desa.un.org/issues/world-social-report",
+      "method": "direct-heading",
       "warnings": []
     },
     {
@@ -406,8 +403,8 @@
       "kind": "series",
       "ok": true,
       "latest": "2025",
-      "url": "https://www.transparency.org/en/cpi/2025",
-      "method": "reader-block",
+      "url": "https://www.transparency.org/en/press/corruption-perceptions-index-2025-decline-leadership-undermining-global-fight",
+      "method": "reader-link",
       "warnings": []
     },
     {
@@ -492,8 +489,8 @@
     {
       "monitor": "World Economic Forum discovery",
       "kind": "discovery",
-      "ok": false,
-      "candidates": 0,
+      "ok": true,
+      "candidates": 24,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
@@ -533,7 +530,7 @@
       "monitor": "International Crisis Group discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 7,
+      "candidates": 9,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
@@ -617,8 +614,8 @@
     {
       "monitor": "UNEP discovery",
       "kind": "discovery",
-      "ok": false,
-      "candidates": 0,
+      "ok": true,
+      "candidates": 1,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
@@ -637,8 +634,8 @@
     {
       "monitor": "IRENA discovery",
       "kind": "discovery",
-      "ok": true,
-      "candidates": 36,
+      "ok": false,
+      "candidates": 0,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
