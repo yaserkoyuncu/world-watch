@@ -1,13 +1,26 @@
 {
-  "last_checked": "2026-10-15T23:41:41.526787Z",
+  "last_checked": "2026-10-16T08:11:03.780280Z",
   "engine_version": "6.1",
   "monitor_count": 82,
   "flagship_series_count": 44,
   "discovery_source_count": 38,
   "new_items_this_run": 1,
-  "new_flagship_editions_this_run": 1,
+  "new_flagship_editions_this_run": 0,
   "migration_baseline": false,
   "updates": [
+    {
+      "id": "0748d7353b2486",
+      "date": "2026-10-16",
+      "category": "Demography & Society",
+      "source": "IOM",
+      "title": "Evaluation of the Common Pipeline Mechanism",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://publications.iom.int/books/evaluation-common-pipeline-mechanism",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "iom"
+    },
     {
       "id": "dcef0cc30c94dd",
       "date": "2026-10-15",
@@ -2086,19 +2099,6 @@
       "title": "Quarterly Review 14 Sep 2026 Private credit in tech Private credit helped finance the post-2020 shift to the digital economy by lending against cash flows and intangible assets.",
       "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
       "url": "https://www.bis.org/publications/qr-202609/financing-digital-economy-role-private-credit",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "bis"
-    },
-    {
-      "id": "62155f53c92c6e",
-      "date": "2026-09-14",
-      "category": "Economy & Political Economy",
-      "source": "BIS",
-      "title": "Quarterly Review 14 Sep 2026 Bank executives’ pay Deferring executive pay reduces risk, but the 2023 banking turmoil showed how weak governance can amplify risks even with deferrals.",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.bis.org/publications/qr-202609/bank-executive-compensation-and-risk-taking",
       "type": "Important new report",
       "automatic": true,
       "confidence": "medium",

@@ -1,15 +1,15 @@
 {
-  "last_checked": "2026-10-15T23:41:41.526787Z",
+  "last_checked": "2026-10-16T08:11:03.780280Z",
   "engine_version": "6.1",
   "migration_baseline": false,
   "series": {
-    "ok": 40,
-    "failed": 4,
+    "ok": 39,
+    "failed": 5,
     "total": 44
   },
   "discovery": {
-    "ok": 29,
-    "failed": 9,
+    "ok": 26,
+    "failed": 12,
     "total": 38
   },
   "monitors": [
@@ -17,11 +17,15 @@
       "monitor": "World Economic Outlook",
       "kind": "series",
       "ok": true,
-      "latest": "October 2026",
-      "url": "https://www.imf.org/en/publications/weo/issues/2026/10/13/world-economic-outlook-october-2026",
-      "method": "reader-link",
+      "latest": "July 2026",
+      "url": "https://www.imf.org/en/publications/weo/issues/2026/07/08/world-economic-outlook-update-july-2026",
+      "method": "official-url",
       "warnings": [
-        "direct https://www.imf.org/en/publications: 403 Client Error: Forbidden for url: https://www.imf.org/en/publications"
+        "reader https://www.imf.org/en/publications: 403 Client Error: Forbidden for url: https://r.jina.ai/https://www.imf.org/en/publications",
+        "direct https://www.imf.org/en/publications: 403 Client Error: Forbidden for url: https://www.imf.org/en/publications",
+        "reader https://www.imf.org/en/research: 403 Client Error: Forbidden for url: https://r.jina.ai/https://www.imf.org/en/research",
+        "direct https://www.imf.org/en/research: 403 Client Error: Forbidden for url: https://www.imf.org/en/research",
+        "reader https://www.imf.org/en/publications/weo/issues/2026/07/08/world-economic-outlook-update-july-2026: 403 Client Error: Forbidden for url: https://r.jina.ai/https://www.imf.org/en/publications/weo/issues/2026/07/08/world-e"
       ]
     },
     {
@@ -32,7 +36,9 @@
       "url": "https://www.imf.org/en/publications/gfsr/issues/2026/04/14/global-financial-stability-report-april-2026",
       "method": "official-url",
       "warnings": [
-        "direct https://www.imf.org/en/publications: 403 Client Error: Forbidden for url: https://www.imf.org/en/publications"
+        "reader https://www.imf.org/en/publications: 403 Client Error: Forbidden for url: https://r.jina.ai/https://www.imf.org/en/publications",
+        "direct https://www.imf.org/en/publications: 403 Client Error: Forbidden for url: https://www.imf.org/en/publications",
+        "reader https://www.imf.org/en/publications/gfsr/issues/2026/04/14/global-financial-stability-report-april-2026: 403 Client Error: Forbidden for url: https://r.jina.ai/https://www.imf.org/en/publications/gfsr/issues/2026/04/14/global"
       ]
     },
     {
@@ -43,17 +49,16 @@
       "url": "https://www.imf.org/en/publications/fm/issues/2026/04/15/fiscal-monitor-april-2026",
       "method": "official-url",
       "warnings": [
-        "direct https://www.imf.org/en/publications: 403 Client Error: Forbidden for url: https://www.imf.org/en/publications"
+        "reader https://www.imf.org/en/publications: 403 Client Error: Forbidden for url: https://r.jina.ai/https://www.imf.org/en/publications",
+        "direct https://www.imf.org/en/publications: 403 Client Error: Forbidden for url: https://www.imf.org/en/publications",
+        "reader https://www.imf.org/en/publications/fm/issues/2026/04/15/fiscal-monitor-april-2026: 403 Client Error: Forbidden for url: https://r.jina.ai/https://www.imf.org/en/publications/fm/issues/2026/04/15/fiscal-m"
       ]
     },
     {
       "monitor": "Global Economic Prospects",
       "kind": "series",
-      "ok": true,
-      "latest": "June 2026",
-      "url": "https://openknowledge.worldbank.org/server/api/core/bitstreams/61af3a6b-bacb-4451-a7ba-405f805ac88a/content",
-      "method": "reader-link",
-      "warnings": []
+      "ok": false,
+      "error": "reader https://www.worldbank.org/en/publication/global-economic-prospects: 403 Client Error: Forbidden for url: https://r.jina.ai/https://www.worldbank.org/en/publication/global-economic-prospect | reader https://www.worldbank.org/en/research: 403 Client Error: Forbidden for url: https://r.jina.ai/https://www.worldbank.org/en/research"
     },
     {
       "monitor": "World Development Report",
@@ -62,13 +67,21 @@
       "latest": "2025",
       "url": "https://www.worldbank.org/en/publication/wdr2025",
       "method": "direct-title",
-      "warnings": []
+      "warnings": [
+        "reader https://www.worldbank.org/en/publication/wdr/wdr-archive: 403 Client Error: Forbidden for url: https://r.jina.ai/https://www.worldbank.org/en/publication/wdr/wdr-archive",
+        "reader https://www.worldbank.org/en/publication/wdr2025: 403 Client Error: Forbidden for url: https://r.jina.ai/https://www.worldbank.org/en/publication/wdr2025"
+      ]
     },
     {
       "monitor": "OECD Economic Outlook",
       "kind": "series",
-      "ok": false,
-      "error": "direct https://www.oecd.org/en/topics/economic-outlook.html: 403 Client Error: Forbidden for url: https://www.oecd.org/en/topics/economic-outlook.html"
+      "ok": true,
+      "latest": "September 2026",
+      "url": "https://www.oecd.org/en/topics/economic-outlook.html",
+      "method": "reader-block",
+      "warnings": [
+        "direct https://www.oecd.org/en/topics/economic-outlook.html: 403 Client Error: Forbidden for url: https://www.oecd.org/en/topics/economic-outlook.html"
+      ]
     },
     {
       "monitor": "Annual Economic Report",
@@ -202,7 +215,9 @@
       "latest": "2025",
       "url": "https://www.itu.int/itu-d/reports/statistics/facts-figures-2025/",
       "method": "direct-title",
-      "warnings": []
+      "warnings": [
+        "reader https://www.itu.int/itu-d/reports/statistics/facts-figures-2025/: 403 Client Error: Forbidden for url: https://r.jina.ai/https://www.itu.int/itu-d/reports/statistics/facts-figures-2025/"
+      ]
     },
     {
       "monitor": "State of the Global Climate",
@@ -220,7 +235,9 @@
       "latest": "2025",
       "url": "https://www.unep.org/en/publications/report/emissions-gap-report-2025",
       "method": "direct-title",
-      "warnings": []
+      "warnings": [
+        "reader https://www.unep.org/resources/emissions-gap-report-2025: 403 Client Error: Forbidden for url: https://r.jina.ai/https://www.unep.org/resources/emissions-gap-report-2025"
+      ]
     },
     {
       "monitor": "Adaptation Gap Report",
@@ -229,7 +246,9 @@
       "latest": "2025",
       "url": "https://www.unep.org/en/publications/report/adaptation-gap-report-2025",
       "method": "direct-title",
-      "warnings": []
+      "warnings": [
+        "reader https://www.unep.org/resources/adaptation-gap-report-2025: 403 Client Error: Forbidden for url: https://r.jina.ai/https://www.unep.org/resources/adaptation-gap-report-2025"
+      ]
     },
     {
       "monitor": "World Energy Outlook",
@@ -331,16 +350,15 @@
       "latest": "2026",
       "url": "https://www.who.int/publications/i/item/9789240122482",
       "method": "direct-title",
-      "warnings": []
+      "warnings": [
+        "reader https://www.who.int/publications/i/item/9789240122482: 403 Client Error: Forbidden for url: https://r.jina.ai/https://www.who.int/publications/i/item/9789240122482"
+      ]
     },
     {
       "monitor": "State of Food Security and Nutrition in the World",
       "kind": "series",
-      "ok": true,
-      "latest": "2026",
-      "url": "https://www.fao.org/publications/fao-flagship-publications/the-state-of-food-security-and-nutrition-in-the-world/2025/en",
-      "method": "reader-block",
-      "warnings": []
+      "ok": false,
+      "error": "reader https://www.fao.org/publications/fao-flagship-publications/the-state-of-food-security-and-nutrition-in-the-world/2025/en: 403 Client Error: Forbidden for url: https://r.jina.ai/https://www.fao.org/publications/fao-flagship-publications/the-st"
     },
     {
       "monitor": "Global Education Monitoring Report",
@@ -424,6 +442,7 @@
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
+        "reader https://www.imf.org/en/publications: 403 Client Error: Forbidden for url: https://r.jina.ai/https://www.imf.org/en/publications",
         "direct https://www.imf.org/en/publications: 403 Client Error: Forbidden for url: https://www.imf.org/en/publications"
       ]
     },
@@ -451,7 +470,7 @@
       "monitor": "BIS discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 21,
+      "candidates": 20,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
@@ -489,8 +508,8 @@
     {
       "monitor": "World Economic Forum discovery",
       "kind": "discovery",
-      "ok": true,
-      "candidates": 24,
+      "ok": false,
+      "candidates": 0,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
@@ -614,11 +633,13 @@
     {
       "monitor": "UNEP discovery",
       "kind": "discovery",
-      "ok": true,
-      "candidates": 1,
+      "ok": false,
+      "candidates": 0,
       "new_candidates": 0,
       "suppressed": 0,
-      "warnings": []
+      "warnings": [
+        "reader https://www.unep.org/resources: 403 Client Error: Forbidden for url: https://r.jina.ai/https://www.unep.org/resources"
+      ]
     },
     {
       "monitor": "IEA discovery",
@@ -664,8 +685,8 @@
       "monitor": "IOM discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 16,
-      "new_candidates": 0,
+      "candidates": 17,
+      "new_candidates": 1,
       "suppressed": 0,
       "warnings": [
         "direct https://publications.iom.int/: 403 Client Error: Forbidden for url: https://publications.iom.int/"
@@ -705,11 +726,13 @@
     {
       "monitor": "FAO discovery",
       "kind": "discovery",
-      "ok": true,
-      "candidates": 5,
+      "ok": false,
+      "candidates": 0,
       "new_candidates": 0,
       "suppressed": 0,
-      "warnings": []
+      "warnings": [
+        "reader https://www.fao.org/publications/home/en: 403 Client Error: Forbidden for url: https://r.jina.ai/https://www.fao.org/publications/home/en"
+      ]
     },
     {
       "monitor": "UNESCO discovery",
