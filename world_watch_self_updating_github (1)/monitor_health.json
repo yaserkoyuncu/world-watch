@@ -1,15 +1,15 @@
 {
-  "last_checked": "2026-10-17T17:51:48.865997Z",
+  "last_checked": "2026-10-17T23:08:01.458989Z",
   "engine_version": "6.1",
   "migration_baseline": false,
   "series": {
-    "ok": 40,
-    "failed": 4,
+    "ok": 39,
+    "failed": 5,
     "total": 44
   },
   "discovery": {
-    "ok": 27,
-    "failed": 11,
+    "ok": 26,
+    "failed": 12,
     "total": 38
   },
   "monitors": [
@@ -17,11 +17,15 @@
       "monitor": "World Economic Outlook",
       "kind": "series",
       "ok": true,
-      "latest": "October 2026",
-      "url": "https://www.imf.org/en/publications/weo/issues/2026/10/13/world-economic-outlook-october-2026",
-      "method": "reader-link",
+      "latest": "July 2026",
+      "url": "https://www.imf.org/en/publications/weo/issues/2026/07/08/world-economic-outlook-update-july-2026",
+      "method": "official-url",
       "warnings": [
-        "direct https://www.imf.org/en/publications: 403 Client Error: Forbidden for url: https://www.imf.org/en/publications"
+        "reader https://www.imf.org/en/publications: 403 Client Error: Forbidden for url: https://r.jina.ai/https://www.imf.org/en/publications",
+        "direct https://www.imf.org/en/publications: 403 Client Error: Forbidden for url: https://www.imf.org/en/publications",
+        "reader https://www.imf.org/en/research: 403 Client Error: Forbidden for url: https://r.jina.ai/https://www.imf.org/en/research",
+        "direct https://www.imf.org/en/research: 403 Client Error: Forbidden for url: https://www.imf.org/en/research",
+        "reader https://www.imf.org/en/publications/weo/issues/2026/07/08/world-economic-outlook-update-july-2026: 403 Client Error: Forbidden for url: https://r.jina.ai/https://www.imf.org/en/publications/weo/issues/2026/07/08/world-e"
       ]
     },
     {
@@ -32,7 +36,9 @@
       "url": "https://www.imf.org/en/publications/gfsr/issues/2026/04/14/global-financial-stability-report-april-2026",
       "method": "official-url",
       "warnings": [
-        "direct https://www.imf.org/en/publications: 403 Client Error: Forbidden for url: https://www.imf.org/en/publications"
+        "reader https://www.imf.org/en/publications: 403 Client Error: Forbidden for url: https://r.jina.ai/https://www.imf.org/en/publications",
+        "direct https://www.imf.org/en/publications: 403 Client Error: Forbidden for url: https://www.imf.org/en/publications",
+        "reader https://www.imf.org/en/publications/gfsr/issues/2026/04/14/global-financial-stability-report-april-2026: 403 Client Error: Forbidden for url: https://r.jina.ai/https://www.imf.org/en/publications/gfsr/issues/2026/04/14/global"
       ]
     },
     {
@@ -43,7 +49,9 @@
       "url": "https://www.imf.org/en/publications/fm/issues/2026/04/15/fiscal-monitor-april-2026",
       "method": "official-url",
       "warnings": [
-        "direct https://www.imf.org/en/publications: 403 Client Error: Forbidden for url: https://www.imf.org/en/publications"
+        "reader https://www.imf.org/en/publications: 403 Client Error: Forbidden for url: https://r.jina.ai/https://www.imf.org/en/publications",
+        "direct https://www.imf.org/en/publications: 403 Client Error: Forbidden for url: https://www.imf.org/en/publications",
+        "reader https://www.imf.org/en/publications/fm/issues/2026/04/15/fiscal-monitor-april-2026: 403 Client Error: Forbidden for url: https://r.jina.ai/https://www.imf.org/en/publications/fm/issues/2026/04/15/fiscal-m"
       ]
     },
     {
@@ -276,9 +284,7 @@
       "latest": "2024",
       "url": "https://www.un.org/development/desa/pd/world-population-prospects-2024",
       "method": "direct-title",
-      "warnings": [
-        "reader https://www.un.org/development/desa/pd/world-population-prospects-2024: 403 Client Error: Forbidden for url: https://r.jina.ai/https://www.un.org/development/desa/pd/world-population-prospects"
-      ]
+      "warnings": []
     },
     {
       "monitor": "World Urbanization Prospects",
@@ -287,9 +293,7 @@
       "latest": "2025",
       "url": "https://www.un.org/development/desa/pd/world-urbanization-prospects-2025",
       "method": "direct-title",
-      "warnings": [
-        "reader https://www.un.org/development/desa/pd/world-urbanization-prospects-2025: 403 Client Error: Forbidden for url: https://r.jina.ai/https://www.un.org/development/desa/pd/world-urbanization-prospec"
-      ]
+      "warnings": []
     },
     {
       "monitor": "World Migration Report",
@@ -349,11 +353,8 @@
     {
       "monitor": "State of Food Security and Nutrition in the World",
       "kind": "series",
-      "ok": true,
-      "latest": "2026",
-      "url": "https://www.fao.org/publications/fao-flagship-publications/the-state-of-food-security-and-nutrition-in-the-world/2025/en",
-      "method": "reader-block",
-      "warnings": []
+      "ok": false,
+      "error": "reader https://www.fao.org/publications/fao-flagship-publications/the-state-of-food-security-and-nutrition-in-the-world/2025/en: 403 Client Error: Forbidden for url: https://r.jina.ai/https://www.fao.org/publications/fao-flagship-publications/the-st"
     },
     {
       "monitor": "Global Education Monitoring Report",
@@ -407,8 +408,8 @@
       "kind": "series",
       "ok": true,
       "latest": "2025",
-      "url": "https://worldjusticeproject.org/rule-of-law-index/global/2025/wjp-index",
-      "method": "direct-title",
+      "url": "https://worldjusticeproject.org/rule-of-law-index/",
+      "method": "reader-block",
       "warnings": []
     },
     {
@@ -437,6 +438,7 @@
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
+        "reader https://www.imf.org/en/publications: 403 Client Error: Forbidden for url: https://r.jina.ai/https://www.imf.org/en/publications",
         "direct https://www.imf.org/en/publications: 403 Client Error: Forbidden for url: https://www.imf.org/en/publications"
       ]
     },
@@ -718,11 +720,13 @@
     {
       "monitor": "FAO discovery",
       "kind": "discovery",
-      "ok": true,
-      "candidates": 5,
+      "ok": false,
+      "candidates": 0,
       "new_candidates": 0,
       "suppressed": 0,
-      "warnings": []
+      "warnings": [
+        "reader https://www.fao.org/publications/home/en: 403 Client Error: Forbidden for url: https://r.jina.ai/https://www.fao.org/publications/home/en"
+      ]
     },
     {
       "monitor": "UNESCO discovery",
