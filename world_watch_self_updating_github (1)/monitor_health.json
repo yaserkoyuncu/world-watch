@@ -1,15 +1,15 @@
 {
-  "last_checked": "2026-10-17T07:48:30.731750Z",
+  "last_checked": "2026-10-17T12:58:37.291936Z",
   "engine_version": "6.1",
   "migration_baseline": false,
   "series": {
-    "ok": 39,
-    "failed": 5,
+    "ok": 38,
+    "failed": 6,
     "total": 44
   },
   "discovery": {
-    "ok": 26,
-    "failed": 12,
+    "ok": 25,
+    "failed": 13,
     "total": 38
   },
   "monitors": [
@@ -67,13 +67,8 @@
     {
       "monitor": "OECD Economic Outlook",
       "kind": "series",
-      "ok": true,
-      "latest": "September 2026",
-      "url": "https://www.oecd.org/en/topics/economic-outlook.html",
-      "method": "reader-block",
-      "warnings": [
-        "direct https://www.oecd.org/en/topics/economic-outlook.html: 403 Client Error: Forbidden for url: https://www.oecd.org/en/topics/economic-outlook.html"
-      ]
+      "ok": false,
+      "error": "direct https://www.oecd.org/en/topics/economic-outlook.html: 403 Client Error: Forbidden for url: https://www.oecd.org/en/topics/economic-outlook.html"
     },
     {
       "monitor": "Annual Economic Report",
@@ -188,19 +183,19 @@
       "ok": true,
       "latest": "2026",
       "url": "https://kpmg.com/content/dam/kpmgsites/uk/pdf/2026/01/global-tech-report-2026.pdf",
-      "method": "direct-link",
-      "warnings": [
-        "reader https://kpmg.com/uk/en/insights/technology/kpmg-global-tech-report.html: 403 Client Error: Forbidden for url: https://r.jina.ai/https://kpmg.com/uk/en/insights/technology/kpmg-global-tech-repor"
-      ]
+      "method": "reader-link",
+      "warnings": []
     },
     {
       "monitor": "Global Innovation Index",
       "kind": "series",
       "ok": true,
       "latest": "2026",
-      "url": "https://www.wipo.int/publications/en/series/index.jsp?id=129&lang=en",
-      "method": "reader-block",
-      "warnings": []
+      "url": "https://www.wipo.int/publications/en/details.jsp?id=4873&plang=EN",
+      "method": "direct-link",
+      "warnings": [
+        "reader https://www.wipo.int/publications/en/series/index.jsp?id=129&lang=en: 403 Client Error: Forbidden for url: https://r.jina.ai/https://www.wipo.int/publications/en/series/index.jsp?id=129&lang"
+      ]
     },
     {
       "monitor": "Facts and Figures",
@@ -229,7 +224,9 @@
       "latest": "2025",
       "url": "https://www.unep.org/en/publications/report/emissions-gap-report-2025",
       "method": "direct-title",
-      "warnings": []
+      "warnings": [
+        "reader https://www.unep.org/resources/emissions-gap-report-2025: 403 Client Error: Forbidden for url: https://r.jina.ai/https://www.unep.org/resources/emissions-gap-report-2025"
+      ]
     },
     {
       "monitor": "Adaptation Gap Report",
@@ -238,15 +235,17 @@
       "latest": "2025",
       "url": "https://www.unep.org/en/publications/report/adaptation-gap-report-2025",
       "method": "direct-title",
-      "warnings": []
+      "warnings": [
+        "reader https://www.unep.org/resources/adaptation-gap-report-2025: 403 Client Error: Forbidden for url: https://r.jina.ai/https://www.unep.org/resources/adaptation-gap-report-2025"
+      ]
     },
     {
       "monitor": "World Energy Outlook",
       "kind": "series",
       "ok": true,
       "latest": "2025",
-      "url": "https://www.iea.org/reports/world-energy-outlook-2025",
-      "method": "official-url",
+      "url": "https://www.iea.org/data-and-statistics/data-product/world-energy-outlook-2025-free-dataset",
+      "method": "reader-link",
       "warnings": [
         "direct https://www.iea.org/reports/world-energy-outlook-2025: 403 Client Error: Forbidden for url: https://www.iea.org/reports/world-energy-outlook-2025"
       ]
@@ -402,8 +401,8 @@
       "kind": "series",
       "ok": true,
       "latest": "2025",
-      "url": "https://worldjusticeproject.org/rule-of-law-index/global/2025/wjp-index",
-      "method": "direct-title",
+      "url": "https://worldjusticeproject.org/rule-of-law-index/",
+      "method": "reader-block",
       "warnings": []
     },
     {
@@ -411,8 +410,8 @@
       "kind": "series",
       "ok": true,
       "latest": "2025",
-      "url": "https://www.transparency.org/en/press/corruption-perceptions-index-2025-decline-leadership-undermining-global-fight",
-      "method": "reader-link",
+      "url": "https://www.transparency.org/en/cpi/2025",
+      "method": "official-url",
       "warnings": []
     },
     {
@@ -626,7 +625,9 @@
       "candidates": 0,
       "new_candidates": 0,
       "suppressed": 0,
-      "warnings": []
+      "warnings": [
+        "reader https://www.unep.org/resources: 403 Client Error: Forbidden for url: https://r.jina.ai/https://www.unep.org/resources"
+      ]
     },
     {
       "monitor": "IEA discovery",
@@ -671,8 +672,8 @@
     {
       "monitor": "IOM discovery",
       "kind": "discovery",
-      "ok": true,
-      "candidates": 17,
+      "ok": false,
+      "candidates": 0,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
@@ -694,7 +695,7 @@
       "monitor": "UNDP discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 8,
+      "candidates": 7,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
@@ -705,8 +706,8 @@
       "monitor": "WHO discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 8,
-      "new_candidates": 0,
+      "candidates": 7,
+      "new_candidates": 1,
       "suppressed": 0,
       "warnings": []
     },

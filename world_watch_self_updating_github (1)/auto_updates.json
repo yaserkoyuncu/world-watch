@@ -1,13 +1,26 @@
 {
-  "last_checked": "2026-10-17T07:48:30.731750Z",
+  "last_checked": "2026-10-17T12:58:37.291936Z",
   "engine_version": "6.1",
   "monitor_count": 82,
   "flagship_series_count": 44,
   "discovery_source_count": 38,
-  "new_items_this_run": 0,
+  "new_items_this_run": 1,
   "new_flagship_editions_this_run": 0,
   "migration_baseline": false,
   "updates": [
+    {
+      "id": "551e29fb3f6858",
+      "date": "2026-10-17",
+      "category": "Health, Food & Education",
+      "source": "WHO",
+      "title": "Health statistics in the Western Pacific Region 2026: monitoring health for the SDGs",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.who.int/publications/i/item/9789290621553",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "who"
+    },
     {
       "id": "9cf8b6159a5fc7",
       "date": "2026-10-16",
@@ -2086,19 +2099,6 @@
       "title": "Quarterly Review 14 Sep 2026 Yields climb, risk appetite firm Global sovereign yields climbed amid fiscal challenges and rising term premia, while risk assets stayed resilient despite faltering AI‑driven momentum.",
       "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
       "url": "https://www.bis.org/publications/qr-202609",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "bis"
-    },
-    {
-      "id": "615c4ea57b871a",
-      "date": "2026-09-14",
-      "category": "Economy & Political Economy",
-      "source": "BIS",
-      "title": "Quarterly Review 14 Sep 2026 Private credit in tech Private credit helped finance the post-2020 shift to the digital economy by lending against cash flows and intangible assets.",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.bis.org/publications/qr-202609/financing-digital-economy-role-private-credit",
       "type": "Important new report",
       "automatic": true,
       "confidence": "medium",
