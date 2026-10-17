@@ -1,15 +1,15 @@
 {
-  "last_checked": "2026-10-17T12:58:37.291936Z",
+  "last_checked": "2026-10-17T17:51:48.865997Z",
   "engine_version": "6.1",
   "migration_baseline": false,
   "series": {
-    "ok": 38,
-    "failed": 6,
+    "ok": 40,
+    "failed": 4,
     "total": 44
   },
   "discovery": {
-    "ok": 25,
-    "failed": 13,
+    "ok": 27,
+    "failed": 11,
     "total": 38
   },
   "monitors": [
@@ -67,8 +67,13 @@
     {
       "monitor": "OECD Economic Outlook",
       "kind": "series",
-      "ok": false,
-      "error": "direct https://www.oecd.org/en/topics/economic-outlook.html: 403 Client Error: Forbidden for url: https://www.oecd.org/en/topics/economic-outlook.html"
+      "ok": true,
+      "latest": "September 2026",
+      "url": "https://www.oecd.org/en/topics/economic-outlook.html",
+      "method": "reader-block",
+      "warnings": [
+        "direct https://www.oecd.org/en/topics/economic-outlook.html: 403 Client Error: Forbidden for url: https://www.oecd.org/en/topics/economic-outlook.html"
+      ]
     },
     {
       "monitor": "Annual Economic Report",
@@ -191,11 +196,9 @@
       "kind": "series",
       "ok": true,
       "latest": "2026",
-      "url": "https://www.wipo.int/publications/en/details.jsp?id=4873&plang=EN",
-      "method": "direct-link",
-      "warnings": [
-        "reader https://www.wipo.int/publications/en/series/index.jsp?id=129&lang=en: 403 Client Error: Forbidden for url: https://r.jina.ai/https://www.wipo.int/publications/en/series/index.jsp?id=129&lang"
-      ]
+      "url": "https://www.wipo.int/publications/en/series/index.jsp?id=129&lang=en",
+      "method": "reader-block",
+      "warnings": []
     },
     {
       "monitor": "Facts and Figures",
@@ -224,9 +227,7 @@
       "latest": "2025",
       "url": "https://www.unep.org/en/publications/report/emissions-gap-report-2025",
       "method": "direct-title",
-      "warnings": [
-        "reader https://www.unep.org/resources/emissions-gap-report-2025: 403 Client Error: Forbidden for url: https://r.jina.ai/https://www.unep.org/resources/emissions-gap-report-2025"
-      ]
+      "warnings": []
     },
     {
       "monitor": "Adaptation Gap Report",
@@ -235,17 +236,15 @@
       "latest": "2025",
       "url": "https://www.unep.org/en/publications/report/adaptation-gap-report-2025",
       "method": "direct-title",
-      "warnings": [
-        "reader https://www.unep.org/resources/adaptation-gap-report-2025: 403 Client Error: Forbidden for url: https://r.jina.ai/https://www.unep.org/resources/adaptation-gap-report-2025"
-      ]
+      "warnings": []
     },
     {
       "monitor": "World Energy Outlook",
       "kind": "series",
       "ok": true,
       "latest": "2025",
-      "url": "https://www.iea.org/data-and-statistics/data-product/world-energy-outlook-2025-free-dataset",
-      "method": "reader-link",
+      "url": "https://www.iea.org/reports/world-energy-outlook-2025",
+      "method": "official-url",
       "warnings": [
         "direct https://www.iea.org/reports/world-energy-outlook-2025: 403 Client Error: Forbidden for url: https://www.iea.org/reports/world-energy-outlook-2025"
       ]
@@ -277,7 +276,9 @@
       "latest": "2024",
       "url": "https://www.un.org/development/desa/pd/world-population-prospects-2024",
       "method": "direct-title",
-      "warnings": []
+      "warnings": [
+        "reader https://www.un.org/development/desa/pd/world-population-prospects-2024: 403 Client Error: Forbidden for url: https://r.jina.ai/https://www.un.org/development/desa/pd/world-population-prospects"
+      ]
     },
     {
       "monitor": "World Urbanization Prospects",
@@ -286,7 +287,9 @@
       "latest": "2025",
       "url": "https://www.un.org/development/desa/pd/world-urbanization-prospects-2025",
       "method": "direct-title",
-      "warnings": []
+      "warnings": [
+        "reader https://www.un.org/development/desa/pd/world-urbanization-prospects-2025: 403 Client Error: Forbidden for url: https://r.jina.ai/https://www.un.org/development/desa/pd/world-urbanization-prospec"
+      ]
     },
     {
       "monitor": "World Migration Report",
@@ -346,8 +349,11 @@
     {
       "monitor": "State of Food Security and Nutrition in the World",
       "kind": "series",
-      "ok": false,
-      "error": "reader https://www.fao.org/publications/fao-flagship-publications/the-state-of-food-security-and-nutrition-in-the-world/2025/en: 403 Client Error: Forbidden for url: https://r.jina.ai/https://www.fao.org/publications/fao-flagship-publications/the-st"
+      "ok": true,
+      "latest": "2026",
+      "url": "https://www.fao.org/publications/fao-flagship-publications/the-state-of-food-security-and-nutrition-in-the-world/2025/en",
+      "method": "reader-block",
+      "warnings": []
     },
     {
       "monitor": "Global Education Monitoring Report",
@@ -401,8 +407,8 @@
       "kind": "series",
       "ok": true,
       "latest": "2025",
-      "url": "https://worldjusticeproject.org/rule-of-law-index/",
-      "method": "reader-block",
+      "url": "https://worldjusticeproject.org/rule-of-law-index/global/2025/wjp-index",
+      "method": "direct-title",
       "warnings": []
     },
     {
@@ -410,8 +416,8 @@
       "kind": "series",
       "ok": true,
       "latest": "2025",
-      "url": "https://www.transparency.org/en/cpi/2025",
-      "method": "official-url",
+      "url": "https://www.transparency.org/en/press/corruption-perceptions-index-2025-decline-leadership-undermining-global-fight",
+      "method": "reader-link",
       "warnings": []
     },
     {
@@ -458,7 +464,7 @@
       "monitor": "BIS discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 20,
+      "candidates": 21,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
@@ -625,9 +631,7 @@
       "candidates": 0,
       "new_candidates": 0,
       "suppressed": 0,
-      "warnings": [
-        "reader https://www.unep.org/resources: 403 Client Error: Forbidden for url: https://r.jina.ai/https://www.unep.org/resources"
-      ]
+      "warnings": []
     },
     {
       "monitor": "IEA discovery",
@@ -672,8 +676,8 @@
     {
       "monitor": "IOM discovery",
       "kind": "discovery",
-      "ok": false,
-      "candidates": 0,
+      "ok": true,
+      "candidates": 17,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
@@ -707,20 +711,18 @@
       "kind": "discovery",
       "ok": true,
       "candidates": 7,
-      "new_candidates": 1,
+      "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
     },
     {
       "monitor": "FAO discovery",
       "kind": "discovery",
-      "ok": false,
-      "candidates": 0,
+      "ok": true,
+      "candidates": 5,
       "new_candidates": 0,
       "suppressed": 0,
-      "warnings": [
-        "reader https://www.fao.org/publications/home/en: 403 Client Error: Forbidden for url: https://r.jina.ai/https://www.fao.org/publications/home/en"
-      ]
+      "warnings": []
     },
     {
       "monitor": "UNESCO discovery",
