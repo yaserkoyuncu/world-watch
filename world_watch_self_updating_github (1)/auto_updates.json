@@ -1,13 +1,28 @@
 {
-  "last_checked": "2026-10-18T13:18:06.591003Z",
+  "last_checked": "2026-10-18T18:05:56.969589Z",
   "engine_version": "6.1",
   "monitor_count": 82,
   "flagship_series_count": 44,
   "discovery_source_count": 38,
-  "new_items_this_run": 0,
-  "new_flagship_editions_this_run": 0,
+  "new_items_this_run": 1,
+  "new_flagship_editions_this_run": 1,
   "migration_baseline": false,
   "updates": [
+    {
+      "id": "9cf8b6159a5fc7",
+      "date": "2026-10-18",
+      "category": "Economy & Political Economy",
+      "source": "IMF",
+      "title": "World Economic Outlook — October 2026",
+      "summary": "Edition-aware monitor detected a newer World Economic Outlook: October 2026, replacing July 2026.",
+      "url": "https://www.imf.org/en/publications/weo/issues/2026/10/13/world-economic-outlook-october-2026",
+      "type": "Major flagship update",
+      "automatic": true,
+      "series_id": "imf_weo",
+      "edition": "October 2026",
+      "previous_edition": "July 2026",
+      "confidence": "high"
+    },
     {
       "id": "551e29fb3f6858",
       "date": "2026-10-17",
@@ -20,21 +35,6 @@
       "automatic": true,
       "confidence": "medium",
       "discovery_source": "who"
-    },
-    {
-      "id": "9cf8b6159a5fc7",
-      "date": "2026-10-16",
-      "category": "Economy & Political Economy",
-      "source": "IMF",
-      "title": "World Economic Outlook — October 2026",
-      "summary": "Edition-aware monitor detected a newer World Economic Outlook: October 2026, replacing July 2026.",
-      "url": "https://www.imf.org/en/publications/weo/issues/2026/10/13/world-economic-outlook-october-2026",
-      "type": "Major flagship update",
-      "automatic": true,
-      "series_id": "imf_weo",
-      "edition": "October 2026",
-      "previous_edition": "July 2026",
-      "confidence": "high"
     },
     {
       "id": "0748d7353b2486",
