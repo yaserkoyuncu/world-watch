@@ -1,16 +1,16 @@
 {
-  "last_checked": "2026-10-18T23:12:42.955653Z",
+  "last_checked": "2026-10-19T08:53:23.952235Z",
   "engine_version": "6.1",
   "monitor_count": 82,
   "flagship_series_count": 44,
   "discovery_source_count": 38,
-  "new_items_this_run": 0,
-  "new_flagship_editions_this_run": 0,
+  "new_items_this_run": 2,
+  "new_flagship_editions_this_run": 1,
   "migration_baseline": false,
   "updates": [
     {
       "id": "9cf8b6159a5fc7",
-      "date": "2026-10-18",
+      "date": "2026-10-19",
       "category": "Economy & Political Economy",
       "source": "IMF",
       "title": "World Economic Outlook — October 2026",
@@ -22,6 +22,19 @@
       "edition": "October 2026",
       "previous_edition": "July 2026",
       "confidence": "high"
+    },
+    {
+      "id": "688a9697a9a0ff",
+      "date": "2026-10-19",
+      "category": "Health, Food & Education",
+      "source": "WHO",
+      "title": "Ten years of the Paris Agreement: a global review of health in nationally determined contributions",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.who.int/publications/i/item/B0994",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "who"
     },
     {
       "id": "551e29fb3f6858",
@@ -2090,19 +2103,6 @@
       "automatic": true,
       "confidence": "medium",
       "discovery_source": "undp"
-    },
-    {
-      "id": "44d480b02c13d6",
-      "date": "2026-09-14",
-      "category": "Economy & Political Economy",
-      "source": "BIS",
-      "title": "Quarterly Review 14 Sep 2026 Yields climb, risk appetite firm Global sovereign yields climbed amid fiscal challenges and rising term premia, while risk assets stayed resilient despite faltering AI‑driven momentum.",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.bis.org/publications/qr-202609",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "bis"
     }
   ]
 }
