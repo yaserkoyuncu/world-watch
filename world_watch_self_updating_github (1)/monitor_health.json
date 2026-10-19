@@ -1,10 +1,10 @@
 {
-  "last_checked": "2026-10-19T08:53:23.952235Z",
+  "last_checked": "2026-10-19T16:36:54.288538Z",
   "engine_version": "6.1",
   "migration_baseline": false,
   "series": {
-    "ok": 41,
-    "failed": 3,
+    "ok": 40,
+    "failed": 4,
     "total": 44
   },
   "discovery": {
@@ -83,13 +83,10 @@
       "monitor": "Trade and Development Report",
       "kind": "series",
       "ok": true,
-      "latest": "2025",
-      "url": "https://unctad.org/publication/trade-and-development-report-2025",
-      "method": "official-url",
-      "warnings": [
-        "direct https://unctad.org/topic/macroeconomics/trade-development-report: 403 Client Error: Forbidden for url: https://unctad.org/topic/macroeconomics/trade-development-report",
-        "direct https://unctad.org/publication/trade-and-development-report-2025: 403 Client Error: Forbidden for url: https://unctad.org/publication/trade-and-development-report-2025"
-      ]
+      "latest": "2026",
+      "url": "https://unctad.org/sites/default/files/styles/cover_image/public/2026-10/tdr2026_1000x1414.jpg?itok=pvMySBsu",
+      "method": "reader-link",
+      "warnings": []
     },
     {
       "monitor": "Global Trade Outlook and Statistics",
@@ -286,7 +283,7 @@
       "ok": true,
       "latest": "2026",
       "url": "https://worldmigrationreport.iom.int/msite/wmr-2026-interactive/",
-      "method": "reader-block",
+      "method": "official-url",
       "warnings": [
         "direct https://worldmigrationreport.iom.int/msite/wmr-2026-interactive/: 403 Client Error: Forbidden for url: https://worldmigrationreport.iom.int/msite/wmr-2026-interactive/"
       ]
@@ -294,14 +291,8 @@
     {
       "monitor": "Global Trends",
       "kind": "series",
-      "ok": true,
-      "latest": "2026",
-      "url": "https://www.unhcr.org/global-trends",
-      "method": "reader-block",
-      "warnings": [
-        "direct https://www.unhcr.org/au/global-trends: 403 Client Error: Forbidden for url: https://www.unhcr.org/au/global-trends",
-        "direct https://www.unhcr.org/media/global-trends-2025-report: 403 Client Error: Forbidden for url: https://www.unhcr.org/media/global-trends-2025-report"
-      ]
+      "ok": false,
+      "error": "direct https://www.unhcr.org/au/global-trends: 403 Client Error: Forbidden for url: https://www.unhcr.org/au/global-trends | direct https://www.unhcr.org/media/global-trends-2025-report: 403 Client Error: Forbidden for url: https://www.unhcr.org/media/global-trends-2025-report | direct https://www.unhcr.org/global-trends: 403 Client Error: Forbidden for url: https://www.unhcr.org/global-trends"
     },
     {
       "monitor": "Human Development Report",
@@ -457,22 +448,19 @@
       "monitor": "BIS discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 21,
-      "new_candidates": 0,
+      "candidates": 16,
+      "new_candidates": 2,
       "suppressed": 0,
       "warnings": []
     },
     {
       "monitor": "UNCTAD discovery",
       "kind": "discovery",
-      "ok": false,
-      "candidates": 0,
-      "new_candidates": 0,
+      "ok": true,
+      "candidates": 26,
+      "new_candidates": 4,
       "suppressed": 0,
-      "warnings": [
-        "direct https://unctad.org/publications: 403 Client Error: Forbidden for url: https://unctad.org/publications",
-        "direct https://unctad.org/unctad-publications: 403 Client Error: Forbidden for url: https://unctad.org/unctad-publications"
-      ]
+      "warnings": []
     },
     {
       "monitor": "WTO discovery",
@@ -516,8 +504,8 @@
       "monitor": "SIPRI discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 8,
-      "new_candidates": 0,
+      "candidates": 10,
+      "new_candidates": 2,
       "suppressed": 0,
       "warnings": []
     },
@@ -536,7 +524,7 @@
       "monitor": "International Crisis Group discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 9,
+      "candidates": 7,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
@@ -669,8 +657,8 @@
     {
       "monitor": "IOM discovery",
       "kind": "discovery",
-      "ok": true,
-      "candidates": 17,
+      "ok": false,
+      "candidates": 0,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
@@ -704,7 +692,7 @@
       "kind": "discovery",
       "ok": true,
       "candidates": 8,
-      "new_candidates": 1,
+      "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
     },
@@ -712,7 +700,7 @@
       "monitor": "FAO discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 1,
+      "candidates": 5,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
