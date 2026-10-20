@@ -1,15 +1,15 @@
 {
-  "last_checked": "2026-10-20T14:18:43.347115Z",
+  "last_checked": "2026-10-20T19:17:20.276649Z",
   "engine_version": "6.1",
   "migration_baseline": false,
   "series": {
-    "ok": 40,
-    "failed": 4,
+    "ok": 42,
+    "failed": 2,
     "total": 44
   },
   "discovery": {
-    "ok": 28,
-    "failed": 10,
+    "ok": 27,
+    "failed": 11,
     "total": 38
   },
   "monitors": [
@@ -67,8 +67,13 @@
     {
       "monitor": "OECD Economic Outlook",
       "kind": "series",
-      "ok": false,
-      "error": "direct https://www.oecd.org/en/topics/economic-outlook.html: 403 Client Error: Forbidden for url: https://www.oecd.org/en/topics/economic-outlook.html"
+      "ok": true,
+      "latest": "September 2026",
+      "url": "https://www.oecd.org/en/topics/economic-outlook.html",
+      "method": "reader-block",
+      "warnings": [
+        "direct https://www.oecd.org/en/topics/economic-outlook.html: 403 Client Error: Forbidden for url: https://www.oecd.org/en/topics/economic-outlook.html"
+      ]
     },
     {
       "monitor": "Annual Economic Report",
@@ -130,8 +135,10 @@
       "ok": true,
       "latest": "2026",
       "url": "https://www.sipri.org/yearbook/2026",
-      "method": "direct-title",
-      "warnings": []
+      "method": "reader-block",
+      "warnings": [
+        "direct https://www.sipri.org/yearbook/2026: HTTPSConnectionPool(host='www.sipri.org', port=443): Read timed out. (read timeout=22)"
+      ]
     },
     {
       "monitor": "Annual Threat Assessment",
@@ -162,8 +169,14 @@
     {
       "monitor": "State of AI",
       "kind": "series",
-      "ok": false,
-      "error": "direct https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai/: HTTPSConnectionPool(host='www.mckinsey.com', port=443): Read timed out. (read timeout=22) | direct https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai: HTTPSConnectionPool(host='www.mckinsey.com', port=443): Read timed out. (read timeout=22)"
+      "ok": true,
+      "latest": "2026",
+      "url": "https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai",
+      "method": "reader-block",
+      "warnings": [
+        "direct https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai/: HTTPSConnectionPool(host='www.mckinsey.com', port=443): Read timed out. (read timeout=22)",
+        "direct https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai: HTTPSConnectionPool(host='www.mckinsey.com', port=443): Read timed out. (read timeout=22)"
+      ]
     },
     {
       "monitor": "Tech Trends",
@@ -180,8 +193,10 @@
       "ok": true,
       "latest": "2026",
       "url": "https://kpmg.com/content/dam/kpmgsites/uk/pdf/2026/01/global-tech-report-2026.pdf",
-      "method": "reader-link",
-      "warnings": []
+      "method": "direct-link",
+      "warnings": [
+        "reader https://kpmg.com/uk/en/insights/technology/kpmg-global-tech-report.html: 403 Client Error: Forbidden for url: https://r.jina.ai/https://kpmg.com/uk/en/insights/technology/kpmg-global-tech-repor"
+      ]
     },
     {
       "monitor": "Global Innovation Index",
@@ -245,10 +260,8 @@
       "ok": true,
       "latest": "2024",
       "url": "https://www.irena.org/publications/2024/Nov/World-Energy-Transitions-Outlook-2024",
-      "method": "official-url",
-      "warnings": [
-        "direct https://www.irena.org/publications/2024/Nov/World-Energy-Transitions-Outlook-2024: 403 Client Error: Forbidden for url: https://www.irena.org/publications/2024/Nov/World-Energy-Transitions-Outlook-2024"
-      ]
+      "method": "direct-title",
+      "warnings": []
     },
     {
       "monitor": "Global Carbon Budget",
@@ -283,7 +296,7 @@
       "ok": true,
       "latest": "2026",
       "url": "https://worldmigrationreport.iom.int/msite/wmr-2026-interactive/",
-      "method": "reader-block",
+      "method": "official-url",
       "warnings": [
         "direct https://worldmigrationreport.iom.int/msite/wmr-2026-interactive/: 403 Client Error: Forbidden for url: https://worldmigrationreport.iom.int/msite/wmr-2026-interactive/"
       ]
@@ -345,7 +358,7 @@
       "ok": true,
       "latest": "2026",
       "url": "https://www.unesco.org/gem-report/en/articles/what-does-2026-gem-report-say-about-access-and-equity-education",
-      "method": "reader-link",
+      "method": "direct-link",
       "warnings": []
     },
     {
@@ -391,8 +404,8 @@
       "kind": "series",
       "ok": true,
       "latest": "2025",
-      "url": "https://worldjusticeproject.org/rule-of-law-index/global/2025/wjp-index",
-      "method": "direct-title",
+      "url": "https://worldjusticeproject.org/rule-of-law-index/",
+      "method": "reader-block",
       "warnings": []
     },
     {
@@ -449,7 +462,7 @@
       "kind": "discovery",
       "ok": true,
       "candidates": 18,
-      "new_candidates": 3,
+      "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
     },
@@ -504,10 +517,12 @@
       "monitor": "SIPRI discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 10,
-      "new_candidates": 1,
+      "candidates": 8,
+      "new_candidates": 0,
       "suppressed": 0,
-      "warnings": []
+      "warnings": [
+        "direct https://www.sipri.org/publications: HTTPSConnectionPool(host='www.sipri.org', port=443): Read timed out. (read timeout=22)"
+      ]
     },
     {
       "monitor": "ODNI discovery",
@@ -524,8 +539,8 @@
       "monitor": "International Crisis Group discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 10,
-      "new_candidates": 1,
+      "candidates": 8,
+      "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
         "direct https://www.crisisgroup.org/latest-updates: 403 Client Error: Forbidden for url: https://www.crisisgroup.org/latest-updates"
@@ -657,8 +672,8 @@
     {
       "monitor": "IOM discovery",
       "kind": "discovery",
-      "ok": true,
-      "candidates": 17,
+      "ok": false,
+      "candidates": 0,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
@@ -692,7 +707,7 @@
       "kind": "discovery",
       "ok": true,
       "candidates": 9,
-      "new_candidates": 1,
+      "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
     },
@@ -754,7 +769,7 @@
       "monitor": "Transparency International discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 46,
+      "candidates": 45,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
