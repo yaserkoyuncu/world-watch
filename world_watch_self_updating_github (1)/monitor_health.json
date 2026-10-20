@@ -1,5 +1,5 @@
 {
-  "last_checked": "2026-10-20T00:20:29.262773Z",
+  "last_checked": "2026-10-20T08:33:08.280584Z",
   "engine_version": "6.1",
   "migration_baseline": false,
   "series": {
@@ -8,8 +8,8 @@
     "total": 44
   },
   "discovery": {
-    "ok": 27,
-    "failed": 11,
+    "ok": 28,
+    "failed": 10,
     "total": 38
   },
   "monitors": [
@@ -67,8 +67,13 @@
     {
       "monitor": "OECD Economic Outlook",
       "kind": "series",
-      "ok": false,
-      "error": "direct https://www.oecd.org/en/topics/economic-outlook.html: 403 Client Error: Forbidden for url: https://www.oecd.org/en/topics/economic-outlook.html"
+      "ok": true,
+      "latest": "September 2026",
+      "url": "https://www.oecd.org/en/topics/economic-outlook.html",
+      "method": "reader-block",
+      "warnings": [
+        "direct https://www.oecd.org/en/topics/economic-outlook.html: 403 Client Error: Forbidden for url: https://www.oecd.org/en/topics/economic-outlook.html"
+      ]
     },
     {
       "monitor": "Annual Economic Report",
@@ -111,8 +116,8 @@
       "kind": "series",
       "ok": true,
       "latest": "2026",
-      "url": "https://www.weforum.org/publications/global-risks-report-2026",
-      "method": "reader-link",
+      "url": "https://www.weforum.org/publications/global-risks-report-2026/",
+      "method": "reader-block",
       "warnings": []
     },
     {
@@ -162,14 +167,8 @@
     {
       "monitor": "State of AI",
       "kind": "series",
-      "ok": true,
-      "latest": "2026",
-      "url": "https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai",
-      "method": "reader-block",
-      "warnings": [
-        "direct https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai/: HTTPSConnectionPool(host='www.mckinsey.com', port=443): Read timed out. (read timeout=22)",
-        "direct https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai: HTTPSConnectionPool(host='www.mckinsey.com', port=443): Read timed out. (read timeout=22)"
-      ]
+      "ok": false,
+      "error": "direct https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai/: HTTPSConnectionPool(host='www.mckinsey.com', port=443): Read timed out. (read timeout=22) | direct https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai: HTTPSConnectionPool(host='www.mckinsey.com', port=443): Read timed out. (read timeout=22)"
     },
     {
       "monitor": "Tech Trends",
@@ -251,10 +250,8 @@
       "ok": true,
       "latest": "2024",
       "url": "https://www.irena.org/publications/2024/Nov/World-Energy-Transitions-Outlook-2024",
-      "method": "official-url",
-      "warnings": [
-        "direct https://www.irena.org/publications/2024/Nov/World-Energy-Transitions-Outlook-2024: 403 Client Error: Forbidden for url: https://www.irena.org/publications/2024/Nov/World-Energy-Transitions-Outlook-2024"
-      ]
+      "method": "direct-title",
+      "warnings": []
     },
     {
       "monitor": "Global Carbon Budget",
@@ -406,8 +403,8 @@
       "kind": "series",
       "ok": true,
       "latest": "2025",
-      "url": "https://www.transparency.org/en/press/corruption-perceptions-index-2025-decline-leadership-undermining-global-fight",
-      "method": "reader-link",
+      "url": "https://www.transparency.org/en/cpi/2025",
+      "method": "reader-block",
       "warnings": []
     },
     {
@@ -454,9 +451,9 @@
       "monitor": "BIS discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 24,
-      "new_candidates": 13,
-      "suppressed": 13,
+      "candidates": 17,
+      "new_candidates": 0,
+      "suppressed": 0,
       "warnings": []
     },
     {
@@ -530,8 +527,8 @@
       "monitor": "International Crisis Group discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 9,
-      "new_candidates": 0,
+      "candidates": 8,
+      "new_candidates": 4,
       "suppressed": 0,
       "warnings": [
         "direct https://www.crisisgroup.org/latest-updates: 403 Client Error: Forbidden for url: https://www.crisisgroup.org/latest-updates"
@@ -663,8 +660,8 @@
     {
       "monitor": "IOM discovery",
       "kind": "discovery",
-      "ok": false,
-      "candidates": 0,
+      "ok": true,
+      "candidates": 17,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [

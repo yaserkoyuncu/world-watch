@@ -1,13 +1,65 @@
 {
-  "last_checked": "2026-10-20T00:20:29.262773Z",
+  "last_checked": "2026-10-20T08:33:08.280584Z",
   "engine_version": "6.1",
   "monitor_count": 82,
   "flagship_series_count": 44,
   "discovery_source_count": 38,
-  "new_items_this_run": 0,
+  "new_items_this_run": 4,
   "new_flagship_editions_this_run": 0,
   "migration_baseline": false,
   "updates": [
+    {
+      "id": "a322db949cf97a",
+      "date": "2026-10-20",
+      "category": "Geopolitics & Security",
+      "source": "International Crisis Group",
+      "title": "The Yemen War, Saudi-Iran relations and Another Escalation in the Gulf",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.crisisgroup.org/pod/middle-east-north-africa/yemen/yemen-war-saudi-iran-relations-and-another-escalation-gulf",
+      "type": "Significant analysis",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "icg"
+    },
+    {
+      "id": "19168abdf6a721",
+      "date": "2026-10-20",
+      "category": "Geopolitics & Security",
+      "source": "International Crisis Group",
+      "title": "Multiplying Crises, Fraying Consensus at the 2026 UN General Assembly",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.crisisgroup.org/vis/global/multiplying-crises-fraying-consensus-2026-un-general-assembly",
+      "type": "Significant analysis",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "icg"
+    },
+    {
+      "id": "3e09c13c6741b8",
+      "date": "2026-10-20",
+      "category": "Geopolitics & Security",
+      "source": "International Crisis Group",
+      "title": "Adapting EU Foreign Policy to a World of Recurring Crises",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.crisisgroup.org/prt/europe/european-union-china-united-states/adapting-eu-foreign-policy-world-recurring-crises",
+      "type": "Significant analysis",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "icg"
+    },
+    {
+      "id": "a025f96a37644d",
+      "date": "2026-10-20",
+      "category": "Geopolitics & Security",
+      "source": "International Crisis Group",
+      "title": "EU Watch List 2026 – Autumn Edition",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.crisisgroup.org/euw/europe/european-union/eu-watch-list-2026-autumn-edition",
+      "type": "Significant analysis",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "icg"
+    },
     {
       "id": "327804ca47937e",
       "date": "2026-10-19",
@@ -2053,58 +2105,6 @@
       "edition": "September 2026",
       "previous_edition": "June 2026",
       "confidence": "high"
-    },
-    {
-      "id": "d8fed5dd2175cb",
-      "date": "2026-09-15",
-      "category": "Economy & Political Economy",
-      "source": "BIS",
-      "title": "Piero Cipollone Member of the Executive Board",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.bis.org/author/piero-cipollone",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "bis"
-    },
-    {
-      "id": "285202aa4c463f",
-      "date": "2026-09-15",
-      "category": "Economy & Political Economy",
-      "source": "ILO",
-      "title": "Artificial intelligence adoption in Chinese enterprises: Productivity effects, workforce implications, and policy challenges",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.ilo.org/publications/artificial-intelligence-adoption-chinese-enterprises-productivity-effects",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "ilo"
-    },
-    {
-      "id": "af048ff8e7148b",
-      "date": "2026-09-15",
-      "category": "Economy & Political Economy",
-      "source": "BIS",
-      "title": "Isabel Schnabel Member of the Executive Board of the European Central Bank",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.bis.org/author/isabel-schnabel",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "bis"
-    },
-    {
-      "id": "4c2df8f954f01c",
-      "date": "2026-09-15",
-      "category": "Economy & Political Economy",
-      "source": "BIS",
-      "title": "15 September 2026 Japan's economy and monetary policy Ryozo Himino",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.bis.org/speeches/20260915-japans-economy-and-monetary-policy",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "bis"
     }
   ]
 }
