@@ -1,5 +1,5 @@
 {
-  "last_checked": "2026-10-21T08:34:36.994565Z",
+  "last_checked": "2026-10-21T14:32:45.817701Z",
   "engine_version": "6.1",
   "monitor_count": 82,
   "flagship_series_count": 44,
@@ -8,6 +8,32 @@
   "new_flagship_editions_this_run": 0,
   "migration_baseline": false,
   "updates": [
+    {
+      "id": "08770f4bb75457",
+      "date": "2026-10-21",
+      "category": "Climate & Energy",
+      "source": "WMO",
+      "title": "Publication 21 October 2026 Global Seasonal Climate Update for November-December-January 2026",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://wmo.int/resources/publication-series/global-seasonal-climate-updates/gscu-ndj2026",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "wmo"
+    },
+    {
+      "id": "83e8f274206063",
+      "date": "2026-10-21",
+      "category": "Health, Food & Education",
+      "source": "WHO",
+      "title": "Priority indicators to monitor the impact of heat exposure on maternal, newborn and child health",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.who.int/publications/i/item/9789240125063",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "who"
+    },
     {
       "id": "956918787f37b3",
       "date": "2026-10-21",
@@ -2077,32 +2103,6 @@
       "automatic": true,
       "confidence": "medium",
       "discovery_source": "unesco"
-    },
-    {
-      "id": "08710d817f5354",
-      "date": "2026-09-17",
-      "category": "Economy & Political Economy",
-      "source": "BIS",
-      "title": "11 September 2026 Global economic outlook, AI and innovation Pablo Hernández de Cos General Manager",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.bis.org/speeches/20260916-global-economic-outlook-ai-and-innovation",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "bis"
-    },
-    {
-      "id": "e9c37e1e622fa9",
-      "date": "2026-09-17",
-      "category": "Geopolitics & Security",
-      "source": "SIPRI",
-      "title": "![Image 4: FS 2608 Chad access barriers_cover",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.sipri.org/sites/default/files/styles/medium/public/2026-08/fs_2608_chad_access_barriers_eng_cover.png?itok=nqyns63d",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "sipri"
     }
   ]
 }

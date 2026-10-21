@@ -1,15 +1,15 @@
 {
-  "last_checked": "2026-10-21T08:34:36.994565Z",
+  "last_checked": "2026-10-21T14:32:45.817701Z",
   "engine_version": "6.1",
   "migration_baseline": false,
   "series": {
-    "ok": 40,
-    "failed": 4,
+    "ok": 41,
+    "failed": 3,
     "total": 44
   },
   "discovery": {
-    "ok": 30,
-    "failed": 8,
+    "ok": 27,
+    "failed": 11,
     "total": 38
   },
   "monitors": [
@@ -49,8 +49,11 @@
     {
       "monitor": "Global Economic Prospects",
       "kind": "series",
-      "ok": false,
-      "error": "No valid edition match"
+      "ok": true,
+      "latest": "June 2026",
+      "url": "https://openknowledge.worldbank.org/server/api/core/bitstreams/61af3a6b-bacb-4451-a7ba-405f805ac88a/content",
+      "method": "reader-link",
+      "warnings": []
     },
     {
       "monitor": "World Development Report",
@@ -77,9 +80,11 @@
       "kind": "series",
       "ok": true,
       "latest": "2026",
-      "url": "https://www.bis.org/publications/aer-2026",
-      "method": "direct-title",
-      "warnings": []
+      "url": "https://www.bis.org/publ/arpdf/ar2026e.htm",
+      "method": "official-url",
+      "warnings": [
+        "direct https://www.bis.org/publ/arpdf/ar2026e.htm: 403 Client Error: Forbidden for url: https://www.bis.org/publ/arpdf/ar2026e.htm"
+      ]
     },
     {
       "monitor": "Trade and Development Report",
@@ -113,8 +118,8 @@
       "kind": "series",
       "ok": true,
       "latest": "2026",
-      "url": "https://www.weforum.org/publications/global-risks-report-2026",
-      "method": "reader-link",
+      "url": "https://www.weforum.org/publications/global-risks-report-2026/",
+      "method": "reader-block",
       "warnings": []
     },
     {
@@ -247,8 +252,10 @@
       "ok": true,
       "latest": "2024",
       "url": "https://www.irena.org/publications/2024/Nov/World-Energy-Transitions-Outlook-2024",
-      "method": "direct-title",
-      "warnings": []
+      "method": "official-url",
+      "warnings": [
+        "direct https://www.irena.org/publications/2024/Nov/World-Energy-Transitions-Outlook-2024: 403 Client Error: Forbidden for url: https://www.irena.org/publications/2024/Nov/World-Energy-Transitions-Outlook-2024"
+      ]
     },
     {
       "monitor": "Global Carbon Budget",
@@ -374,7 +381,7 @@
       "ok": true,
       "latest": "2025",
       "url": "https://www.idea.int/publications/catalogue/global-state-of-democracy-2025-democracy-on-the-move",
-      "method": "direct-title",
+      "method": "official-url",
       "warnings": []
     },
     {
@@ -447,11 +454,14 @@
     {
       "monitor": "BIS discovery",
       "kind": "discovery",
-      "ok": true,
-      "candidates": 18,
+      "ok": false,
+      "candidates": 0,
       "new_candidates": 0,
       "suppressed": 0,
-      "warnings": []
+      "warnings": [
+        "direct https://www.bis.org/: 403 Client Error: Forbidden for url: https://www.bis.org/",
+        "direct https://www.bis.org/index.htm: 403 Client Error: Forbidden for url: https://www.bis.org/index.htm"
+      ]
     },
     {
       "monitor": "UNCTAD discovery",
@@ -485,7 +495,7 @@
       "kind": "discovery",
       "ok": true,
       "candidates": 1,
-      "new_candidates": 1,
+      "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
         "direct https://www.weforum.org/publications/: 403 Client Error: Forbidden for url: https://www.weforum.org/publications/"
@@ -601,7 +611,7 @@
       "kind": "discovery",
       "ok": true,
       "candidates": 29,
-      "new_candidates": 0,
+      "new_candidates": 1,
       "suppressed": 0,
       "warnings": []
     },
@@ -628,8 +638,8 @@
     {
       "monitor": "IRENA discovery",
       "kind": "discovery",
-      "ok": true,
-      "candidates": 36,
+      "ok": false,
+      "candidates": 0,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
@@ -691,7 +701,7 @@
       "monitor": "WHO discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 8,
+      "candidates": 9,
       "new_candidates": 1,
       "suppressed": 0,
       "warnings": []
@@ -726,8 +736,8 @@
     {
       "monitor": "International IDEA discovery",
       "kind": "discovery",
-      "ok": true,
-      "candidates": 1,
+      "ok": false,
+      "candidates": 0,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
