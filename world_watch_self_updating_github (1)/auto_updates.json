@@ -1,13 +1,39 @@
 {
-  "last_checked": "2026-10-20T23:52:48.230363Z",
+  "last_checked": "2026-10-21T08:34:36.994565Z",
   "engine_version": "6.1",
   "monitor_count": 82,
   "flagship_series_count": 44,
   "discovery_source_count": 38,
-  "new_items_this_run": 0,
+  "new_items_this_run": 2,
   "new_flagship_editions_this_run": 0,
   "migration_baseline": false,
   "updates": [
+    {
+      "id": "956918787f37b3",
+      "date": "2026-10-21",
+      "category": "Economy & Political Economy",
+      "source": "World Economic Forum",
+      "title": "Trade and Investment",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.weforum.org/publications/small-markets-global-winners-pathways-to-competitive-industries-beyond-trade-distortions",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "wef"
+    },
+    {
+      "id": "d00a865bf3fe9e",
+      "date": "2026-10-21",
+      "category": "Health, Food & Education",
+      "source": "WHO",
+      "title": "Guidance on evidence generation on new tuberculosis diagnostics",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.who.int/publications/i/item/9789240123793",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "who"
+    },
     {
       "id": "31473c5d5c13ab",
       "date": "2026-10-20",
@@ -2077,32 +2103,6 @@
       "automatic": true,
       "confidence": "medium",
       "discovery_source": "sipri"
-    },
-    {
-      "id": "3a1a410d7dd51c",
-      "date": "2026-09-17",
-      "category": "Climate & Energy",
-      "source": "WMO",
-      "title": "Publication 17 September 2026 State of Global Water Resources 2025",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://wmo.int/resources/publication-series/state-of-global-water-resources/2025",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "wmo"
-    },
-    {
-      "id": "30dc2928204419",
-      "date": "2026-09-16",
-      "category": "Economy & Political Economy",
-      "source": "BIS",
-      "title": "Hajime Takata Member of the Policy Board",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.bis.org/author/hajime-takata",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "bis"
     }
   ]
 }
