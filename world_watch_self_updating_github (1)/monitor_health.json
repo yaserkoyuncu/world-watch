@@ -1,5 +1,5 @@
 {
-  "last_checked": "2026-10-21T14:32:45.817701Z",
+  "last_checked": "2026-10-21T19:17:52.362340Z",
   "engine_version": "6.1",
   "migration_baseline": false,
   "series": {
@@ -8,8 +8,8 @@
     "total": 44
   },
   "discovery": {
-    "ok": 27,
-    "failed": 11,
+    "ok": 28,
+    "failed": 10,
     "total": 38
   },
   "monitors": [
@@ -49,11 +49,8 @@
     {
       "monitor": "Global Economic Prospects",
       "kind": "series",
-      "ok": true,
-      "latest": "June 2026",
-      "url": "https://openknowledge.worldbank.org/server/api/core/bitstreams/61af3a6b-bacb-4451-a7ba-405f805ac88a/content",
-      "method": "reader-link",
-      "warnings": []
+      "ok": false,
+      "error": "No valid edition match"
     },
     {
       "monitor": "World Development Report",
@@ -80,11 +77,9 @@
       "kind": "series",
       "ok": true,
       "latest": "2026",
-      "url": "https://www.bis.org/publ/arpdf/ar2026e.htm",
-      "method": "official-url",
-      "warnings": [
-        "direct https://www.bis.org/publ/arpdf/ar2026e.htm: 403 Client Error: Forbidden for url: https://www.bis.org/publ/arpdf/ar2026e.htm"
-      ]
+      "url": "https://www.bis.org/publications/aer-2026",
+      "method": "direct-title",
+      "warnings": []
     },
     {
       "monitor": "Trade and Development Report",
@@ -118,8 +113,8 @@
       "kind": "series",
       "ok": true,
       "latest": "2026",
-      "url": "https://www.weforum.org/publications/global-risks-report-2026/",
-      "method": "reader-block",
+      "url": "https://www.weforum.org/publications/global-risks-report-2026",
+      "method": "reader-link",
       "warnings": []
     },
     {
@@ -298,8 +293,14 @@
     {
       "monitor": "Global Trends",
       "kind": "series",
-      "ok": false,
-      "error": "direct https://www.unhcr.org/au/global-trends: 403 Client Error: Forbidden for url: https://www.unhcr.org/au/global-trends | direct https://www.unhcr.org/media/global-trends-2025-report: 403 Client Error: Forbidden for url: https://www.unhcr.org/media/global-trends-2025-report | direct https://www.unhcr.org/global-trends: 403 Client Error: Forbidden for url: https://www.unhcr.org/global-trends"
+      "ok": true,
+      "latest": "2026",
+      "url": "https://www.unhcr.org/global-trends",
+      "method": "reader-block",
+      "warnings": [
+        "direct https://www.unhcr.org/au/global-trends: 403 Client Error: Forbidden for url: https://www.unhcr.org/au/global-trends",
+        "direct https://www.unhcr.org/media/global-trends-2025-report: 403 Client Error: Forbidden for url: https://www.unhcr.org/media/global-trends-2025-report"
+      ]
     },
     {
       "monitor": "Human Development Report",
@@ -381,7 +382,7 @@
       "ok": true,
       "latest": "2025",
       "url": "https://www.idea.int/publications/catalogue/global-state-of-democracy-2025-democracy-on-the-move",
-      "method": "official-url",
+      "method": "direct-title",
       "warnings": []
     },
     {
@@ -454,14 +455,11 @@
     {
       "monitor": "BIS discovery",
       "kind": "discovery",
-      "ok": false,
-      "candidates": 0,
-      "new_candidates": 0,
+      "ok": true,
+      "candidates": 20,
+      "new_candidates": 4,
       "suppressed": 0,
-      "warnings": [
-        "direct https://www.bis.org/: 403 Client Error: Forbidden for url: https://www.bis.org/",
-        "direct https://www.bis.org/index.htm: 403 Client Error: Forbidden for url: https://www.bis.org/index.htm"
-      ]
+      "warnings": []
     },
     {
       "monitor": "UNCTAD discovery",
@@ -534,7 +532,7 @@
       "monitor": "International Crisis Group discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 8,
+      "candidates": 10,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
@@ -611,7 +609,7 @@
       "kind": "discovery",
       "ok": true,
       "candidates": 29,
-      "new_candidates": 1,
+      "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
     },
@@ -667,8 +665,8 @@
     {
       "monitor": "IOM discovery",
       "kind": "discovery",
-      "ok": true,
-      "candidates": 17,
+      "ok": false,
+      "candidates": 0,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
@@ -701,8 +699,8 @@
       "monitor": "WHO discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 9,
-      "new_candidates": 1,
+      "candidates": 7,
+      "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
     },
@@ -736,8 +734,8 @@
     {
       "monitor": "International IDEA discovery",
       "kind": "discovery",
-      "ok": false,
-      "candidates": 0,
+      "ok": true,
+      "candidates": 1,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": []

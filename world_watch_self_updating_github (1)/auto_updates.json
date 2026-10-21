@@ -1,13 +1,65 @@
 {
-  "last_checked": "2026-10-21T14:32:45.817701Z",
+  "last_checked": "2026-10-21T19:17:52.362340Z",
   "engine_version": "6.1",
   "monitor_count": 82,
   "flagship_series_count": 44,
   "discovery_source_count": 38,
-  "new_items_this_run": 2,
+  "new_items_this_run": 4,
   "new_flagship_editions_this_run": 0,
   "migration_baseline": false,
   "updates": [
+    {
+      "id": "1be45eb012e3cf",
+      "date": "2026-10-21",
+      "category": "Economy & Political Economy",
+      "source": "BIS",
+      "title": "Christina Papaconstantinou Deputy Governor",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.bis.org/author/christina-papaconstantinou",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "bis"
+    },
+    {
+      "id": "4adf23d09749ba",
+      "date": "2026-10-21",
+      "category": "Economy & Political Economy",
+      "source": "BIS",
+      "title": "21 October 2026 Improving cross-border payments in a changing geopolitical landscape Christina Papaconstantinou Deputy Governor",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.bis.org/speeches/20261021-improving-cross-border-payments-changing-geopolitical-landscape",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "bis"
+    },
+    {
+      "id": "85d17e8dc909d7",
+      "date": "2026-10-21",
+      "category": "Economy & Political Economy",
+      "source": "BIS",
+      "title": "21 October 2026 Euro liquidity lines and the international monetary system Philip R Lane Member of the Executive Board",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.bis.org/speeches/20261021-euro-liquidity-lines-and-international-monetary-system",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "bis"
+    },
+    {
+      "id": "834a1ccec38864",
+      "date": "2026-10-21",
+      "category": "Economy & Political Economy",
+      "source": "BIS",
+      "title": "21 October 2026 Artificial intelligence, monetary policy and financial stability Tao Zhang Chief Representative for Asia and the Pacific",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.bis.org/speeches/20261021-artificial-intelligence-monetary-policy-and-financial-stability",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "bis"
+    },
     {
       "id": "08770f4bb75457",
       "date": "2026-10-21",
@@ -2051,58 +2103,6 @@
       "automatic": true,
       "confidence": "medium",
       "discovery_source": "undp"
-    },
-    {
-      "id": "7b073fa5af7d70",
-      "date": "2026-09-17",
-      "category": "Health, Food & Education",
-      "source": "UNESCO",
-      "title": "![Image 29: Publication",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.unesco.org/sites/default/files/styles/thumb_pub_cover_large/article/unesdoc_medias/0000397592.png.webp?itok=v3J1_pGC&width=205&height=290",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "unesco"
-    },
-    {
-      "id": "176af157f03704",
-      "date": "2026-09-17",
-      "category": "Health, Food & Education",
-      "source": "UNESCO",
-      "title": "![Image 28: Publication",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.unesco.org/sites/default/files/styles/thumb_pub_cover_large/public/unesdoc_medias/0000397618.png.webp?itok=UtG6waOY&width=223&height=290",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "unesco"
-    },
-    {
-      "id": "d879ccab02bfa7",
-      "date": "2026-09-17",
-      "category": "Health, Food & Education",
-      "source": "UNESCO",
-      "title": "![Image 27: Publication",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.unesco.org/sites/default/files/styles/thumb_pub_cover_large/public/unesdoc_medias/0000397874.png.webp?itok=cskKkCNG&width=205&height=290",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "unesco"
-    },
-    {
-      "id": "2f6547f2f78db5",
-      "date": "2026-09-17",
-      "category": "Health, Food & Education",
-      "source": "UNESCO",
-      "title": "Discover the collection",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://shop.unesco.org/en/collections/enfants",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "unesco"
     }
   ]
 }
