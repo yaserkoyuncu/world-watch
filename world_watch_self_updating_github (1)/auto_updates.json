@@ -1,5 +1,5 @@
 {
-  "last_checked": "2026-10-22T14:34:35.613095Z",
+  "last_checked": "2026-10-22T19:13:09.222101Z",
   "engine_version": "6.1",
   "monitor_count": 82,
   "flagship_series_count": 44,
@@ -8,6 +8,19 @@
   "new_flagship_editions_this_run": 0,
   "migration_baseline": false,
   "updates": [
+    {
+      "id": "30fbb516277365",
+      "date": "2026-10-22",
+      "category": "Health, Food & Education",
+      "source": "WHO",
+      "title": "A comprehensive integrated review of malaria, leishmaniasis, filariasis and dengue control programmes...",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.who.int/publications/i/item/9789292800260",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "who"
+    },
     {
       "id": "0cfe14ddf61c6e",
       "date": "2026-10-22",
@@ -2090,19 +2103,6 @@
       "automatic": true,
       "confidence": "medium",
       "discovery_source": "kpmg"
-    },
-    {
-      "id": "a46c027c2ee110",
-      "date": "2026-09-17",
-      "category": "Science",
-      "source": "Quanta Magazine",
-      "title": "Where Does the Quantum World End and Ours Begin?",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.quantamagazine.org/where-does-the-quantum-world-end-and-ours-begin-20260917/",
-      "type": "Significant analysis",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "quanta"
     }
   ]
 }
