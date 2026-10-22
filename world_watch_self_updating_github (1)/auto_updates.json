@@ -1,13 +1,26 @@
 {
-  "last_checked": "2026-10-22T00:00:29.104929Z",
+  "last_checked": "2026-10-22T08:37:00.335520Z",
   "engine_version": "6.1",
   "monitor_count": 82,
   "flagship_series_count": 44,
   "discovery_source_count": 38,
-  "new_items_this_run": 0,
+  "new_items_this_run": 1,
   "new_flagship_editions_this_run": 0,
   "migration_baseline": false,
   "updates": [
+    {
+      "id": "302b53155cb65e",
+      "date": "2026-10-22",
+      "category": "Democracy & Rights",
+      "source": "Freedom House",
+      "title": "2026 Edition Now Live",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://freedomhouse.org/report/freedom-net/2026/seismic-shifts-global-internet",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "freedom"
+    },
     {
       "id": "1be45eb012e3cf",
       "date": "2026-10-21",
@@ -2086,19 +2099,6 @@
       "title": "Publications ![Image 42: Cover: OECD/UN logos; Making Development Co-operation More Effective; person weaving on a loom.",
       "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
       "url": "https://www.undp.org/sites/g/files/zskgke326/files/styles/content_card_453_x_256_/public/2026-09/oecd-undp_report.png?h=cf001054&itok=pWod7Q9P",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "undp"
-    },
-    {
-      "id": "7eae42cdbc774a",
-      "date": "2026-09-17",
-      "category": "Demography & Society",
-      "source": "UNDP",
-      "title": "Publications ![Image 43",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.undp.org/sites/g/files/zskgke326/files/styles/content_card_453_x_256_/public/2026-09/cover.png?h=4deda6f8&itok=91odNYMm",
       "type": "Important new report",
       "automatic": true,
       "confidence": "medium",
