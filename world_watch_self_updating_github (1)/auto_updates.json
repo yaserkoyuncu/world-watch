@@ -1,5 +1,5 @@
 {
-  "last_checked": "2026-10-22T08:37:00.335520Z",
+  "last_checked": "2026-10-22T14:34:35.613095Z",
   "engine_version": "6.1",
   "monitor_count": 82,
   "flagship_series_count": 44,
@@ -8,6 +8,19 @@
   "new_flagship_editions_this_run": 0,
   "migration_baseline": false,
   "updates": [
+    {
+      "id": "0cfe14ddf61c6e",
+      "date": "2026-10-22",
+      "category": "Climate & Energy",
+      "source": "UNEP",
+      "title": "_Technical Report on End-of-Life Electric Vehicle Battery Management and…_",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://sustmob.org/EMOB/UNEP_BEOL_technicalreport.pdf",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "unep"
+    },
     {
       "id": "302b53155cb65e",
       "date": "2026-10-22",
@@ -2090,19 +2103,6 @@
       "automatic": true,
       "confidence": "medium",
       "discovery_source": "quanta"
-    },
-    {
-      "id": "49191c578645de",
-      "date": "2026-09-17",
-      "category": "Demography & Society",
-      "source": "UNDP",
-      "title": "Publications ![Image 42: Cover: OECD/UN logos; Making Development Co-operation More Effective; person weaving on a loom.",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.undp.org/sites/g/files/zskgke326/files/styles/content_card_453_x_256_/public/2026-09/oecd-undp_report.png?h=cf001054&itok=pWod7Q9P",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "undp"
     }
   ]
 }
