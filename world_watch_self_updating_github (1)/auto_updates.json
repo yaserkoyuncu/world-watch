@@ -1,5 +1,5 @@
 {
-  "last_checked": "2026-10-23T14:14:45.863810Z",
+  "last_checked": "2026-10-23T19:13:25.986039Z",
   "engine_version": "6.1",
   "monitor_count": 82,
   "flagship_series_count": 44,
@@ -8,6 +8,19 @@
   "new_flagship_editions_this_run": 0,
   "migration_baseline": false,
   "updates": [
+    {
+      "id": "ea967e184cbabb",
+      "date": "2026-10-23",
+      "category": "Science",
+      "source": "Quanta Magazine",
+      "title": "AI Proved the Quasi-Riemann Hypothesis. What Happens Now? ![Image 11",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.quantamagazine.org/wp-content/uploads/2026/10/ReimannAI-crEmilyBuder_GuanHueiWu-Default.webp",
+      "type": "Significant analysis",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "quanta"
+    },
     {
       "id": "01f8c218cbacf0",
       "date": "2026-10-23",
@@ -2090,19 +2103,6 @@
       "automatic": true,
       "confidence": "medium",
       "discovery_source": "cset"
-    },
-    {
-      "id": "4cd869524a3f5b",
-      "date": "2026-09-17",
-      "category": "Technology & AI",
-      "source": "KPMG",
-      "title": "KPMG and Microsoft scale trusted, enterprise AI agents globally KPMG will harness Microsoft Agent 365 to help clients manage, monitor and secure AI agents across their organizations. Read more",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://kpmg.com/xx/en/media/press-releases/2026/06/kpmg-and-microsoft-scale-trusted-enterprise-ai-agents-globally.html",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "kpmg"
     }
   ]
 }
