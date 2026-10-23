@@ -1,13 +1,26 @@
 {
-  "last_checked": "2026-10-23T08:33:16.568167Z",
+  "last_checked": "2026-10-23T14:14:45.863810Z",
   "engine_version": "6.1",
   "monitor_count": 82,
   "flagship_series_count": 44,
   "discovery_source_count": 38,
-  "new_items_this_run": 0,
+  "new_items_this_run": 1,
   "new_flagship_editions_this_run": 0,
   "migration_baseline": false,
   "updates": [
+    {
+      "id": "01f8c218cbacf0",
+      "date": "2026-10-23",
+      "category": "Demography & Society",
+      "source": "IOM",
+      "title": "World Migration Education Toolkit 2026",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://publications.iom.int/books/world-migration-education-toolkit-2026",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "iom"
+    },
     {
       "id": "30fbb516277365",
       "date": "2026-10-22",
@@ -2086,19 +2099,6 @@
       "title": "KPMG and Microsoft scale trusted, enterprise AI agents globally KPMG will harness Microsoft Agent 365 to help clients manage, monitor and secure AI agents across their organizations. Read more",
       "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
       "url": "https://kpmg.com/xx/en/media/press-releases/2026/06/kpmg-and-microsoft-scale-trusted-enterprise-ai-agents-globally.html",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "kpmg"
-    },
-    {
-      "id": "54eb1c2c43a847",
-      "date": "2026-09-17",
-      "category": "Technology & AI",
-      "source": "KPMG",
-      "title": "KPMG and Anthropic sign global alliance Embedding Claude Cowork in KPMG's global client delivery platform, Digital Gateway. Read more",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://kpmg.com/xx/en/media/press-releases/2026/05/kpmg-and-anthropic-sign-global-alliance-and-launch-digital-gateway-powered-by-claude.html",
       "type": "Important new report",
       "automatic": true,
       "confidence": "medium",
