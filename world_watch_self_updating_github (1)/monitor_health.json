@@ -1,5 +1,5 @@
 {
-  "last_checked": "2026-10-22T23:59:09.509733Z",
+  "last_checked": "2026-10-23T08:33:16.568167Z",
   "engine_version": "6.1",
   "migration_baseline": false,
   "series": {
@@ -8,8 +8,8 @@
     "total": 44
   },
   "discovery": {
-    "ok": 31,
-    "failed": 7,
+    "ok": 30,
+    "failed": 8,
     "total": 38
   },
   "monitors": [
@@ -116,8 +116,8 @@
       "kind": "series",
       "ok": true,
       "latest": "2026",
-      "url": "https://www.weforum.org/publications/global-risks-report-2026",
-      "method": "reader-link",
+      "url": "https://www.weforum.org/publications/global-risks-report-2026/",
+      "method": "reader-block",
       "warnings": []
     },
     {
@@ -220,7 +220,7 @@
       "kind": "series",
       "ok": true,
       "latest": "2025",
-      "url": "https://www.unep.org/en/publications/report/emissions-gap-report-2025",
+      "url": "https://www.unep.org/resources/emissions-gap-report-2025",
       "method": "direct-title",
       "warnings": []
     },
@@ -229,7 +229,7 @@
       "kind": "series",
       "ok": true,
       "latest": "2025",
-      "url": "https://www.unep.org/en/publications/report/adaptation-gap-report-2025",
+      "url": "https://www.unep.org/resources/adaptation-gap-report-2025",
       "method": "direct-title",
       "warnings": []
     },
@@ -250,8 +250,10 @@
       "ok": true,
       "latest": "2024",
       "url": "https://www.irena.org/publications/2024/Nov/World-Energy-Transitions-Outlook-2024",
-      "method": "direct-title",
-      "warnings": []
+      "method": "official-url",
+      "warnings": [
+        "direct https://www.irena.org/publications/2024/Nov/World-Energy-Transitions-Outlook-2024: 403 Client Error: Forbidden for url: https://www.irena.org/publications/2024/Nov/World-Energy-Transitions-Outlook-2024"
+      ]
     },
     {
       "monitor": "Global Carbon Budget",
@@ -403,8 +405,8 @@
       "kind": "series",
       "ok": true,
       "latest": "2025",
-      "url": "https://www.transparency.org/en/press/corruption-perceptions-index-2025-decline-leadership-undermining-global-fight",
-      "method": "reader-link",
+      "url": "https://www.transparency.org/en/cpi/2025",
+      "method": "reader-block",
       "warnings": []
     },
     {
@@ -451,7 +453,7 @@
       "monitor": "BIS discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 20,
+      "candidates": 21,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
@@ -527,7 +529,7 @@
       "monitor": "International Crisis Group discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 8,
+      "candidates": 10,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
@@ -631,8 +633,8 @@
     {
       "monitor": "IRENA discovery",
       "kind": "discovery",
-      "ok": true,
-      "candidates": 36,
+      "ok": false,
+      "candidates": 0,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
