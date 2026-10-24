@@ -1,13 +1,65 @@
 {
-  "last_checked": "2026-10-24T18:09:41.416855Z",
+  "last_checked": "2026-10-24T23:14:54.720607Z",
   "engine_version": "6.1",
   "monitor_count": 82,
   "flagship_series_count": 44,
   "discovery_source_count": 38,
-  "new_items_this_run": 0,
+  "new_items_this_run": 4,
   "new_flagship_editions_this_run": 0,
   "migration_baseline": false,
   "updates": [
+    {
+      "id": "8700e08d3f356f",
+      "date": "2026-10-24",
+      "category": "Economy & Political Economy",
+      "source": "BIS",
+      "title": "CPMI Papers No 193 13 Jul 2020 Enhancing cross-border payments: building blocks of a global roadmap CPMI is publishing its report \"Enhancing cross-border payments: building blocks of a global roadmap\", July 2020 CPMI",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.bis.org/publications/enhancing-cross-border-payments-building-blocks-global-roadmap",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "bis"
+    },
+    {
+      "id": "42f0f46e9e8f81",
+      "date": "2026-10-24",
+      "category": "Economy & Political Economy",
+      "source": "BIS",
+      "title": "Claudio Borio Former Head of the Monetary and Economic Department",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.bis.org/author/claudio-borio",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "bis"
+    },
+    {
+      "id": "4d1266398619d5",
+      "date": "2026-10-24",
+      "category": "Economy & Political Economy",
+      "source": "BIS",
+      "title": "15 December 2018 BIS Quarterly Review, December 2018 - media briefing Claudio Borio Former Head of the Monetary and Economic Department Hyun Song Shin Governor, Bank of Korea",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.bis.org/speeches/20181215-bis-quarterly-review-december-2018-media-briefing",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "bis"
+    },
+    {
+      "id": "127c2d3b952d50",
+      "date": "2026-10-24",
+      "category": "Economy & Political Economy",
+      "source": "BIS",
+      "title": "Hyun Song Shin Governor, Bank of Korea",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.bis.org/author/hyun-song-shin",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "bis"
+    },
     {
       "id": "ea967e184cbabb",
       "date": "2026-10-23",
@@ -2051,58 +2103,6 @@
       "automatic": true,
       "confidence": "medium",
       "discovery_source": "bis"
-    },
-    {
-      "id": "f2ed25f8409942",
-      "date": "2026-09-18",
-      "category": "Geopolitics & Security",
-      "source": "International Crisis Group",
-      "title": "Do the Laws of War Still Matter in Ukraine and Beyond?",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.crisisgroup.org/pod/global/do-laws-war-still-matter-ukraine-and-beyond",
-      "type": "Significant analysis",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "icg"
-    },
-    {
-      "id": "fce7feb12a40b8",
-      "date": "2026-09-18",
-      "category": "Geopolitics & Security",
-      "source": "International Crisis Group",
-      "title": "Global Order and Peacemaking",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.crisisgroup.org/global",
-      "type": "Significant analysis",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "icg"
-    },
-    {
-      "id": "a61b87ab8ceee4",
-      "date": "2026-09-18",
-      "category": "Economy & Political Economy",
-      "source": "World Economic Forum",
-      "title": "Risk Management, Reimagined: Outlook to 2035",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.weforum.org/publications/risk-management-reimagined-outlook-to-2035/",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "wef"
-    },
-    {
-      "id": "318ea9ebcbbdcb",
-      "date": "2026-09-17",
-      "category": "Technology & AI",
-      "source": "Georgetown CSET",
-      "title": "China’s rocket achievements threaten US space superiority",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://cset.georgetown.edu/article/chinas-rocket-achievements-threaten-us-space-superiority/",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "cset"
     }
   ]
 }

@@ -1,5 +1,5 @@
 {
-  "last_checked": "2026-10-24T18:09:41.416855Z",
+  "last_checked": "2026-10-24T23:14:54.720607Z",
   "engine_version": "6.1",
   "migration_baseline": false,
   "series": {
@@ -453,8 +453,8 @@
       "monitor": "BIS discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 20,
-      "new_candidates": 0,
+      "candidates": 13,
+      "new_candidates": 5,
       "suppressed": 0,
       "warnings": []
     },
@@ -529,7 +529,7 @@
       "monitor": "International Crisis Group discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 10,
+      "candidates": 8,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
