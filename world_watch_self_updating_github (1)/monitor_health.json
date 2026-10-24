@@ -1,5 +1,5 @@
 {
-  "last_checked": "2026-10-23T23:51:19.494844Z",
+  "last_checked": "2026-10-24T08:08:16.173097Z",
   "engine_version": "6.1",
   "migration_baseline": false,
   "series": {
@@ -8,8 +8,8 @@
     "total": 44
   },
   "discovery": {
-    "ok": 32,
-    "failed": 6,
+    "ok": 31,
+    "failed": 7,
     "total": 38
   },
   "monitors": [
@@ -453,7 +453,7 @@
       "monitor": "BIS discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 20,
+      "candidates": 21,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
@@ -529,7 +529,7 @@
       "monitor": "International Crisis Group discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 8,
+      "candidates": 10,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
@@ -633,8 +633,8 @@
     {
       "monitor": "IRENA discovery",
       "kind": "discovery",
-      "ok": true,
-      "candidates": 36,
+      "ok": false,
+      "candidates": 0,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
