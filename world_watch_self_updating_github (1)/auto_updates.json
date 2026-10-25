@@ -1,13 +1,65 @@
 {
-  "last_checked": "2026-10-25T13:42:51.413246Z",
+  "last_checked": "2026-10-25T18:24:21.451020Z",
   "engine_version": "6.1",
   "monitor_count": 82,
   "flagship_series_count": 44,
   "discovery_source_count": 38,
-  "new_items_this_run": 0,
+  "new_items_this_run": 4,
   "new_flagship_editions_this_run": 0,
   "migration_baseline": false,
   "updates": [
+    {
+      "id": "ac130528735b02",
+      "date": "2026-10-25",
+      "category": "Economy & Political Economy",
+      "source": "BIS",
+      "title": "Denny H Kalyalya Deputy Governor-Operations",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.bis.org/author/denny-h-kalyalya",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "bis"
+    },
+    {
+      "id": "1b7a4f71923e48",
+      "date": "2026-10-25",
+      "category": "Economy & Political Economy",
+      "source": "BIS",
+      "title": "5 March 2024 Launch of the Monetary Policy Report Denny H Kalyalya Deputy Governor-Operations",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.bis.org/speeches/20240305-launch-monetary-policy-report",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "bis"
+    },
+    {
+      "id": "5a558edafd6dc0",
+      "date": "2026-10-25",
+      "category": "Economy & Political Economy",
+      "source": "BIS",
+      "title": "1 March 2024 European Parliament plenary debate on the European Central Bank Annual Report Christine Lagarde President",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.bis.org/speeches/20240301-european-parliament-plenary-debate-european-central-bank-annual-report",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "bis"
+    },
+    {
+      "id": "177349a1700ee0",
+      "date": "2026-10-25",
+      "category": "Economy & Political Economy",
+      "source": "BIS",
+      "title": "Christine Lagarde President",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.bis.org/author/christine-lagarde",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "bis"
+    },
     {
       "id": "3382e060b57fd9",
       "date": "2026-10-25",
@@ -2049,60 +2101,6 @@
       "automatic": true,
       "confidence": "medium",
       "discovery_source": "wef"
-    },
-    {
-      "id": "ea3b4c60ddddf2",
-      "date": "2026-09-21",
-      "category": "Democracy & Rights",
-      "source": "Reporters Without Borders",
-      "title": "In Cairo, Chinese propagandists are set up under the wary eye of Egyptian intelligence Egypt is a key link in China’s strategy to exert influence across the Arab world through the media.",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://rsf.org/en/cairo-chinese-propagandists-are-set-under-wary-eye-egyptian-intelligence",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "rsf"
-    },
-    {
-      "id": "7be008143ae74a",
-      "date": "2026-09-20",
-      "category": "Economy & Political Economy",
-      "source": "IMF",
-      "title": "Global Financial Stability Report — July 2026",
-      "summary": "Edition-aware monitor detected a newer Global Financial Stability Report: July 2026, replacing April 2026.",
-      "url": "https://www.imf.org/en/publications/gfsr/issues/2026/04/14/global-financial-stability-report-april-2026",
-      "type": "Major flagship update",
-      "automatic": true,
-      "series_id": "imf_gfsr",
-      "edition": "July 2026",
-      "previous_edition": "April 2026",
-      "confidence": "high"
-    },
-    {
-      "id": "1a7ceec26b0c16",
-      "date": "2026-09-18",
-      "category": "Demography & Society",
-      "source": "UNDP",
-      "title": "Publications ![Image 42: Cover of Moving Beyond Crisis: a collage of people in humanitarian settings with a UN logo.",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.undp.org/sites/g/files/zskgke326/files/styles/content_card_453_x_256_/public/2026-09/screenshot_2026-09-18_145502.png?h=55fa54d7&itok=Xp1c_Phs",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "undp"
-    },
-    {
-      "id": "97fe846bdacf1a",
-      "date": "2026-09-18",
-      "category": "Economy & Political Economy",
-      "source": "OECD",
-      "title": "Participation in GVCs through capital goods and services",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.oecd.org/en/publications/participation-in-gvcs-through-capital-goods-and-services_06da147a-en.html",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "oecd"
     }
   ]
 }
