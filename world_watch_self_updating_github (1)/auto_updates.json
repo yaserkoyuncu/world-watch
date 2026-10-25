@@ -1,5 +1,5 @@
 {
-  "last_checked": "2026-10-24T23:14:54.720607Z",
+  "last_checked": "2026-10-25T08:25:29.171688Z",
   "engine_version": "6.1",
   "monitor_count": 82,
   "flagship_series_count": 44,
@@ -8,6 +8,58 @@
   "new_flagship_editions_this_run": 0,
   "migration_baseline": false,
   "updates": [
+    {
+      "id": "3382e060b57fd9",
+      "date": "2026-10-25",
+      "category": "Economy & Political Economy",
+      "source": "UNCTAD",
+      "title": "Gulf Cooperation Council Investment Report 25 Oct 2026",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://unctad.org/publication/gulf-cooperation-council-investment-report",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "unctad"
+    },
+    {
+      "id": "495a24f9d970cd",
+      "date": "2026-10-25",
+      "category": "Economy & Political Economy",
+      "source": "UNCTAD",
+      "title": "Global Investment Trends Monitor, No. 51 25 Oct 2026",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://unctad.org/publication/global-investment-trends-monitor-no-51",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "unctad"
+    },
+    {
+      "id": "cd761dbf4a0b0e",
+      "date": "2026-10-25",
+      "category": "Economy & Political Economy",
+      "source": "UNCTAD",
+      "title": "Eurasian Economic Union Investment Report 2026: International investment trends, policy developments 25 Oct 2026",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://unctad.org/publication/eurasian-economic-union-investment-report-2026-international-investment-trends-policy",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "unctad"
+    },
+    {
+      "id": "fc1cc7a336fe06",
+      "date": "2026-10-25",
+      "category": "Economy & Political Economy",
+      "source": "UNCTAD",
+      "title": "Caribbean Investment Report 2026: Investment trends and policy insights 25 Oct 2026",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://unctad.org/publication/caribbean-investment-report-2026-investment-trends-and-policy-insights",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "unctad"
+    },
     {
       "id": "8700e08d3f356f",
       "date": "2026-10-24",
@@ -2051,58 +2103,6 @@
       "automatic": true,
       "confidence": "medium",
       "discovery_source": "oecd"
-    },
-    {
-      "id": "9e0b5faf8013cb",
-      "date": "2026-09-18",
-      "category": "Economy & Political Economy",
-      "source": "OECD",
-      "title": "Benefit transfer of willingness-to‑pay estimates for avoiding negative chemicals‑related health effects",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.oecd.org/en/publications/benefit-transfer-of-willingness-to-pay-estimates-for-avoiding-negative-chemicals-related-health-effects_f11379a0-en.html",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "oecd"
-    },
-    {
-      "id": "7b9fc38ab74e5c",
-      "date": "2026-09-18",
-      "category": "Economy & Political Economy",
-      "source": "OECD",
-      "title": "Seeing the capital behind trade",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.oecd.org/en/publications/seeing-the-capital-behind-trade_913e24ec-en.html",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "oecd"
-    },
-    {
-      "id": "8178ebd2ce5fbf",
-      "date": "2026-09-18",
-      "category": "Economy & Political Economy",
-      "source": "OECD",
-      "title": "Planning ahead for the next pandemic",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.oecd.org/en/publications/planning-ahead-for-the-next-pandemic_c5602a1c-en.html",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "oecd"
-    },
-    {
-      "id": "da3ccb17637ca6",
-      "date": "2026-09-18",
-      "category": "Economy & Political Economy",
-      "source": "BIS",
-      "title": "18 September 2026 Supervising banks in an AI-shaped economy Fernando Restoy Chair, Financial Stability Institute",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.bis.org/speeches/20260918-supervising-banks-ai-shaped-economy",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "bis"
     }
   ]
 }
