@@ -1,13 +1,65 @@
 {
-  "last_checked": "2026-10-26T08:55:51.039867Z",
+  "last_checked": "2026-10-26T16:07:37.929181Z",
   "engine_version": "6.1",
   "monitor_count": 82,
   "flagship_series_count": 44,
   "discovery_source_count": 38,
-  "new_items_this_run": 0,
+  "new_items_this_run": 4,
   "new_flagship_editions_this_run": 0,
   "migration_baseline": false,
   "updates": [
+    {
+      "id": "a0bb3fe60c33b2",
+      "date": "2026-10-26",
+      "category": "Economy & Political Economy",
+      "source": "BIS",
+      "title": "26 October 2026 Rewiring payments - open. Connected. Inclusive. Lesetja Kganyago Governor",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.bis.org/speeches/20261026-rewiring-payments-open-connected-inclusive",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "bis"
+    },
+    {
+      "id": "ef72c0708513ea",
+      "date": "2026-10-26",
+      "category": "Economy & Political Economy",
+      "source": "BIS",
+      "title": "26 October 2026 On taxes, credit and growth Dimitar Radev Governor",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.bis.org/speeches/20261007-taxes-credit-and-growth",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "bis"
+    },
+    {
+      "id": "06e778f7f25219",
+      "date": "2026-10-26",
+      "category": "Demography & Society",
+      "source": "UNDP",
+      "title": "Publications ![Image 40: Report cover with workers in yellow shirts and hard hats beside solar panels.",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.undp.org/sites/g/files/zskgke326/files/styles/content_card_453_x_256_/public/2026-10/jp.png?h=d6f62ac9&itok=tlQlMNqF",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "undp"
+    },
+    {
+      "id": "54a05de3321f68",
+      "date": "2026-10-26",
+      "category": "Demography & Society",
+      "source": "UNDP",
+      "title": "Publications ![Image 41",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.undp.org/sites/g/files/zskgke326/files/styles/content_card_453_x_256_/public/2026-10/ai_elections_cover.png?h=14d6c1ae&itok=cC7Dc06z",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "undp"
+    },
     {
       "id": "ac130528735b02",
       "date": "2026-10-25",
@@ -2049,58 +2101,6 @@
       "automatic": true,
       "confidence": "medium",
       "discovery_source": "who"
-    },
-    {
-      "id": "ea36b8a9290062",
-      "date": "2026-09-21",
-      "category": "Economy & Political Economy",
-      "source": "BIS",
-      "title": "21 September 2026 Economic activity, prices, and monetary policy in Japan Kazuyuki Masu",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.bis.org/speeches/20260921-economic-activity-prices-and-monetary-policy-japan",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "bis"
-    },
-    {
-      "id": "fb3f76e5f98e32",
-      "date": "2026-09-21",
-      "category": "Economy & Political Economy",
-      "source": "BIS",
-      "title": "21 September 2026 Building the financial system of the future - trusted, connected and resilient Chia Der Jiun",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.bis.org/speeches/20260921-building-financial-system-future-trusted-connected-and-resilient",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "bis"
-    },
-    {
-      "id": "9a6709d805a0b2",
-      "date": "2026-09-21",
-      "category": "Economy & Political Economy",
-      "source": "BIS",
-      "title": "18 September 2026 National Bank of Ukraine press briefing - monetary policy decisions Andriy Pyshnyy Governor",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.bis.org/speeches/20260921-national-bank-ukraine-press-briefing-monetary-policy-decisions",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "bis"
-    },
-    {
-      "id": "4bab3d679e53cc",
-      "date": "2026-09-21",
-      "category": "Economy & Political Economy",
-      "source": "World Economic Forum",
-      "title": "Manufacturing and Value Chains",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.weforum.org/stories/manufacturing-and-value-chains/",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "wef"
     }
   ]
 }
