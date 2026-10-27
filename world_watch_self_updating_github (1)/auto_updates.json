@@ -1,13 +1,65 @@
 {
-  "last_checked": "2026-10-27T00:25:44.009068Z",
+  "last_checked": "2026-10-27T09:00:04.647752Z",
   "engine_version": "6.1",
   "monitor_count": 82,
   "flagship_series_count": 44,
   "discovery_source_count": 38,
-  "new_items_this_run": 1,
+  "new_items_this_run": 4,
   "new_flagship_editions_this_run": 0,
   "migration_baseline": false,
   "updates": [
+    {
+      "id": "12ac267c6d3c0f",
+      "date": "2026-10-27",
+      "category": "Economy & Political Economy",
+      "source": "ILO",
+      "title": "AI Ethics and the ILO’s international labour standards system: exploring synergies",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.ilo.org/publications/ai-ethics-and-ilo%E2%80%99s-international-labour-standards-system-exploring",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "ilo"
+    },
+    {
+      "id": "c02a697787983e",
+      "date": "2026-10-27",
+      "category": "Geopolitics & Security",
+      "source": "International Crisis Group",
+      "title": "A Trigger in Jammu and Kashmir: Militant Violence under Indian Central Rule",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.crisisgroup.org/rpt/asia-pacific/india-pakistan/360-trigger-jammu-and-kashmir-militant-violence-under-indian-central-rule",
+      "type": "Significant analysis",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "icg"
+    },
+    {
+      "id": "dddb22237fbcb0",
+      "date": "2026-10-27",
+      "category": "Geopolitics & Security",
+      "source": "International Crisis Group",
+      "title": "Zeinab Badawi: Sudan's Forgotten Humanitarian Crisis",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.crisisgroup.org/vid/africa/sudan/zeinab-badawi-sudans-forgotten-humanitarian-crisis",
+      "type": "Significant analysis",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "icg"
+    },
+    {
+      "id": "dd60cfb6bc3395",
+      "date": "2026-10-27",
+      "category": "Climate & Energy",
+      "source": "WMO",
+      "title": "Publication 27 October 2026 WMO Greenhouse Gas Bulletin - No. 22",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://wmo.int/resources/publication-series/greenhouse-gas-bulletin/no-22",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "wmo"
+    },
     {
       "id": "1da7e377086ec7",
       "date": "2026-10-27",
@@ -2049,58 +2101,6 @@
       "automatic": true,
       "confidence": "medium",
       "discovery_source": "wef"
-    },
-    {
-      "id": "867d340ba092d6",
-      "date": "2026-09-22",
-      "category": "Geopolitics & Security",
-      "source": "International Crisis Group",
-      "title": "Updates from the UN General Assembly 2026",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.crisisgroup.org/sco/global/updates-un-general-assembly-2026",
-      "type": "Significant analysis",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "icg"
-    },
-    {
-      "id": "930b20ebcd1e23",
-      "date": "2026-09-22",
-      "category": "Geopolitics & Security",
-      "source": "International Crisis Group",
-      "title": "The UN’s High Level Week, Secretary-General Selection and “Middle Power” Problem",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.crisisgroup.org/pod/global/uns-high-level-week-secretary-general-selection-and-middle-power-problem",
-      "type": "Significant analysis",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "icg"
-    },
-    {
-      "id": "bfece2f76bd251",
-      "date": "2026-09-22",
-      "category": "Geopolitics & Security",
-      "source": "International Crisis Group",
-      "title": "Les pays africains face à la crise de l’ONU",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.crisisgroup.org/fr/pod/africa/les-pays-africains-face-la-crise-de-lonu",
-      "type": "Significant analysis",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "icg"
-    },
-    {
-      "id": "cb418587ed5d0b",
-      "date": "2026-09-22",
-      "category": "Demography & Society",
-      "source": "IOM",
-      "title": "Assessment of the Mauritian Diaspora Scheme",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://publications.iom.int/books/assessment-mauritian-diaspora-scheme",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "iom"
     }
   ]
 }
