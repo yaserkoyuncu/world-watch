@@ -1,13 +1,26 @@
 {
-  "last_checked": "2026-10-26T16:07:37.929181Z",
+  "last_checked": "2026-10-27T00:25:44.009068Z",
   "engine_version": "6.1",
   "monitor_count": 82,
   "flagship_series_count": 44,
   "discovery_source_count": 38,
-  "new_items_this_run": 4,
+  "new_items_this_run": 1,
   "new_flagship_editions_this_run": 0,
   "migration_baseline": false,
   "updates": [
+    {
+      "id": "1da7e377086ec7",
+      "date": "2026-10-27",
+      "category": "Economy & Political Economy",
+      "source": "World Bank",
+      "title": "Download full report",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.worldbank.org/en/publication/poverty-prosperity-and-planet",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "wb"
+    },
     {
       "id": "a0bb3fe60c33b2",
       "date": "2026-10-26",
@@ -2088,19 +2101,6 @@
       "automatic": true,
       "confidence": "medium",
       "discovery_source": "iom"
-    },
-    {
-      "id": "1109638bbf0f50",
-      "date": "2026-09-22",
-      "category": "Health, Food & Education",
-      "source": "WHO",
-      "title": "Global leprosy (Hansen Disease) update, 2025: Strengtheninga person-centered approach is integral to...",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.who.int/publications/i/item/who-wer10136-37-203-220",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "who"
     }
   ]
 }
