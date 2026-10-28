@@ -1,13 +1,80 @@
 {
-  "last_checked": "2026-10-27T15:21:27.786715Z",
+  "last_checked": "2026-10-28T00:31:39.425751Z",
   "engine_version": "6.1",
   "monitor_count": 82,
   "flagship_series_count": 44,
   "discovery_source_count": 38,
   "new_items_this_run": 5,
-  "new_flagship_editions_this_run": 0,
+  "new_flagship_editions_this_run": 1,
   "migration_baseline": false,
   "updates": [
+    {
+      "id": "327804ca47937e",
+      "date": "2026-10-28",
+      "category": "Economy & Political Economy",
+      "source": "UNCTAD",
+      "title": "Trade and Development Report — 2026",
+      "summary": "Edition-aware monitor detected a newer Trade and Development Report: 2026, replacing 2025.",
+      "url": "https://unctad.org/sites/default/files/styles/cover_image/public/2026-10/tdr2026_1000x1414.jpg?itok=pvMySBsu",
+      "type": "New flagship edition",
+      "automatic": true,
+      "series_id": "unctad_tdr",
+      "edition": "2026",
+      "previous_edition": "2025",
+      "confidence": "high"
+    },
+    {
+      "id": "bd0e83f14cc35f",
+      "date": "2026-10-28",
+      "category": "Economy & Political Economy",
+      "source": "ILO",
+      "title": "Employment implications of the floods in Nepal: A preliminary rapid assessment",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.ilo.org/publications/employment-implications-floods-nepal-preliminary-rapid-assessment",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "ilo"
+    },
+    {
+      "id": "35550a13b3c4ae",
+      "date": "2026-10-28",
+      "category": "Economy & Political Economy",
+      "source": "ILO",
+      "title": "AI’s Hidden Workers: The Link Between Securities Fraud and Labor Rights Violations",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.ilo.org/meetings-and-events/ai%E2%80%99s-hidden-workers-link-between-securities-fraud-and-labor-rights",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "ilo"
+    },
+    {
+      "id": "a3ea9a4f3bee95",
+      "date": "2026-10-28",
+      "category": "Demography & Society",
+      "source": "UNDP",
+      "title": "Publications ![Image 41: Magazine cover photo of a person in a brown coat and hat reaching toward a green circle.",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.undp.org/sites/g/files/zskgke326/files/styles/content_card_453_x_256_/public/2026-10/screenshot_2026-10-27_145530.png?h=62637f15&itok=TUGoeJi6",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "undp"
+    },
+    {
+      "id": "58a46775f5d447",
+      "date": "2026-10-28",
+      "category": "Demography & Society",
+      "source": "UNDP",
+      "title": "Publications ![Image 40: UNDP poster titled 'Creating Opportunities' with a diverse group of professionals and the UN logo.",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.undp.org/sites/g/files/zskgke326/files/styles/content_card_453_x_256_/public/2026-10/creating_opportunities.png?h=a9418b0d&itok=1GKpTgoz",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "undp"
+    },
     {
       "id": "5398ec1b0cdc6a",
       "date": "2026-10-27",
@@ -644,21 +711,6 @@
       "automatic": true,
       "confidence": "medium",
       "discovery_source": "icg"
-    },
-    {
-      "id": "327804ca47937e",
-      "date": "2026-10-19",
-      "category": "Economy & Political Economy",
-      "source": "UNCTAD",
-      "title": "Trade and Development Report — 2026",
-      "summary": "Edition-aware monitor detected a newer Trade and Development Report: 2026, replacing 2025.",
-      "url": "https://unctad.org/sites/default/files/styles/cover_image/public/2026-10/tdr2026_1000x1414.jpg?itok=pvMySBsu",
-      "type": "New flagship edition",
-      "automatic": true,
-      "series_id": "unctad_tdr",
-      "edition": "2026",
-      "previous_edition": "2025",
-      "confidence": "high"
     },
     {
       "id": "9cf8b6159a5fc7",
@@ -2049,58 +2101,6 @@
       "automatic": true,
       "confidence": "medium",
       "discovery_source": "iom"
-    },
-    {
-      "id": "a79bee2afd31c2",
-      "date": "2026-09-23",
-      "category": "Demography & Society",
-      "source": "UNDP",
-      "title": "Publications ![Image 42: Cover of a report: From Silos to Systems, Projects to Portfolios, with a blue abstract wave grid.",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.undp.org/sites/g/files/zskgke326/files/styles/content_card_453_x_256_/public/2026-09/screenshot_2026-09-22_171506.png?h=3628a72f&itok=8yaOM9UK",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "undp"
-    },
-    {
-      "id": "a82f0d2749561f",
-      "date": "2026-09-23",
-      "category": "Demography & Society",
-      "source": "UNDP",
-      "title": "Publications ![Image 43",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.undp.org/sites/g/files/zskgke326/files/styles/content_card_453_x_256_/public/2026-09/cover_image.png?h=5dcbbc94&itok=_2R_MWAE",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "undp"
-    },
-    {
-      "id": "d3186c82525987",
-      "date": "2026-09-23",
-      "category": "Economy & Political Economy",
-      "source": "BIS",
-      "title": "Quarterly Review 14 Sep 2026 International credit to Africa International credit to Africa has grown rapidly, driven by new lenders, borrowers and bond markets.",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.bis.org/publications/qr-202609/international-credit-africa",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "bis"
-    },
-    {
-      "id": "e8e32d29801ace",
-      "date": "2026-09-23",
-      "category": "Economy & Political Economy",
-      "source": "UNCTAD",
-      "title": "Towards a framework for enhanced trade and biodiversity statistics 22 Sep 2026",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://unctad.org/publication/towards-framework-enhanced-trade-and-biodiversity-statistics",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "unctad"
     }
   ]
 }
