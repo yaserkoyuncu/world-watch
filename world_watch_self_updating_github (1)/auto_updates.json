@@ -1,10 +1,10 @@
 {
-  "last_checked": "2026-10-28T09:40:09.508442Z",
+  "last_checked": "2026-10-28T20:16:04.626965Z",
   "engine_version": "6.1",
   "monitor_count": 82,
   "flagship_series_count": 44,
   "discovery_source_count": 38,
-  "new_items_this_run": 1,
+  "new_items_this_run": 3,
   "new_flagship_editions_this_run": 0,
   "migration_baseline": false,
   "updates": [
@@ -22,6 +22,45 @@
       "edition": "2026",
       "previous_edition": "2025",
       "confidence": "high"
+    },
+    {
+      "id": "622335a77cb238",
+      "date": "2026-10-28",
+      "category": "Economy & Political Economy",
+      "source": "World Economic Forum",
+      "title": "Image 120: Regulation of Digital Assets in a Shifting Global Landscape",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://assets.weforum.org/cms/images/reports/6077/ef5180540171_cropped-11c365dbf077-486437-thumbnail-cover-landscape.png",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "wef"
+    },
+    {
+      "id": "33e9cc7f22f007",
+      "date": "2026-10-28",
+      "category": "Economy & Political Economy",
+      "source": "World Economic Forum",
+      "title": "Financial and Monetary Systems",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.weforum.org/publications/regulation-of-digital-assets-in-a-shifting-global-landscape",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "wef"
+    },
+    {
+      "id": "a62e18604cd09c",
+      "date": "2026-10-28",
+      "category": "Health, Food & Education",
+      "source": "WHO",
+      "title": "Public health advice on gender considerations during Ebola disease outbreaks",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.who.int/publications/i/item/B09963",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "who"
     },
     {
       "id": "56b02cdfa047ee",
@@ -2062,45 +2101,6 @@
       "automatic": true,
       "confidence": "medium",
       "discovery_source": "wef"
-    },
-    {
-      "id": "341eb4671b577f",
-      "date": "2026-09-24",
-      "category": "Economy & Political Economy",
-      "source": "World Economic Forum",
-      "title": "Addressing Insurability: A Playbook for Investing in Place-Based Resilience",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.weforum.org/publications/addressing-insurability-a-playbook-for-investing-in-place-based-resilience/",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "wef"
-    },
-    {
-      "id": "650fa627474adf",
-      "date": "2026-09-24",
-      "category": "Demography & Society",
-      "source": "UNDP",
-      "title": "Publications ![Image 42: UN logo on a blue gradient policy brief cover titled From Shock to Resilience.",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.undp.org/sites/g/files/zskgke326/files/styles/content_card_453_x_256_/public/2026-09/policy_brief_from_shock_to_resilience_september_2026_0.jpg?h=35f80fc5&itok=WPUrRK--",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "undp"
-    },
-    {
-      "id": "de86fc47a2e8a6",
-      "date": "2026-09-24",
-      "category": "Technology & AI",
-      "source": "Georgetown CSET",
-      "title": "Artificial Intelligence in Competition",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://cset.georgetown.edu/publication/artificial-intelligence-in-competition/",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "cset"
     }
   ]
 }
