@@ -1,11 +1,11 @@
 {
-  "last_checked": "2026-10-28T00:31:39.425751Z",
+  "last_checked": "2026-10-28T09:40:09.508442Z",
   "engine_version": "6.1",
   "monitor_count": 82,
   "flagship_series_count": 44,
   "discovery_source_count": 38,
-  "new_items_this_run": 5,
-  "new_flagship_editions_this_run": 1,
+  "new_items_this_run": 1,
+  "new_flagship_editions_this_run": 0,
   "migration_baseline": false,
   "updates": [
     {
@@ -22,6 +22,19 @@
       "edition": "2026",
       "previous_edition": "2025",
       "confidence": "high"
+    },
+    {
+      "id": "56b02cdfa047ee",
+      "date": "2026-10-28",
+      "category": "Economy & Political Economy",
+      "source": "BIS",
+      "title": "IFC publication 28 Oct 2026 AI readiness in central banks A new Irving Fisher Committee report documents how central banks are adopting, adapting and advancing AI in their operations, decision-making and objectives.",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.bis.org/publications/ifc-report-19-ai-readiness-central-banks",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "bis"
     },
     {
       "id": "bd0e83f14cc35f",
@@ -2088,19 +2101,6 @@
       "automatic": true,
       "confidence": "medium",
       "discovery_source": "cset"
-    },
-    {
-      "id": "aabeec12cddf29",
-      "date": "2026-09-24",
-      "category": "Demography & Society",
-      "source": "IOM",
-      "title": "The Essentials of Migration Data (EMD): IOM Guide on Migration Data and Statistics",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://publications.iom.int/books/essentials-migration-data-emd-iom-guide-migration-data-and-statistics",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "iom"
     }
   ]
 }
