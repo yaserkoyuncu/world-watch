@@ -1,13 +1,52 @@
 {
-  "last_checked": "2026-10-29T00:57:06.170980Z",
+  "last_checked": "2026-10-29T09:58:29.718471Z",
   "engine_version": "6.1",
   "monitor_count": 82,
   "flagship_series_count": 44,
   "discovery_source_count": 38,
-  "new_items_this_run": 0,
+  "new_items_this_run": 3,
   "new_flagship_editions_this_run": 0,
   "migration_baseline": false,
   "updates": [
+    {
+      "id": "ee07dc9424e5fc",
+      "date": "2026-10-29",
+      "category": "Economy & Political Economy",
+      "source": "BIS",
+      "title": "Statistics 29 Oct 2026 International banking statistics Cross-border bank credit grew by 11% year on year at end-June 2026, reaching $40.7 trillion.",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.bis.org/publications/202610-commentary-ibs-gli",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "bis"
+    },
+    {
+      "id": "171076e438afaf",
+      "date": "2026-10-29",
+      "category": "Economy & Political Economy",
+      "source": "BIS",
+      "title": "29 October 2026 Deposit insurance in a changing financial landscape Pablo Hernández de Cos General Manager",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.bis.org/speeches/20261029-deposit-insurance-changing-financial-landscape",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "bis"
+    },
+    {
+      "id": "460e3cc2b89bf2",
+      "date": "2026-10-29",
+      "category": "Technology & AI",
+      "source": "Georgetown CSET",
+      "title": "Systematizing the Reporting of AI Red-Teaming",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://cset.georgetown.edu/publication/systematizing-the-reporting-of-ai-red-teaming/",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "cset"
+    },
     {
       "id": "327804ca47937e",
       "date": "2026-10-28",
@@ -2062,45 +2101,6 @@
       "automatic": true,
       "confidence": "medium",
       "discovery_source": "bis"
-    },
-    {
-      "id": "7c5890400cb803",
-      "date": "2026-09-24",
-      "category": "Economy & Political Economy",
-      "source": "BIS",
-      "title": "24 September 2026 A new age of capital - growth, sovereignty and AI Christine Lagarde President",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.bis.org/speeches/20260924-new-age-capital-growth-sovereignty-and-ai",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "bis"
-    },
-    {
-      "id": "0b0d791cfd7d65",
-      "date": "2026-09-24",
-      "category": "Economy & Political Economy",
-      "source": "ILO",
-      "title": "Trade, Investment and Decent Work in Africa",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.ilo.org/publications/major-publications/trade-investment-and-decent-work-africa",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "ilo"
-    },
-    {
-      "id": "d8fc7864ec1122",
-      "date": "2026-09-24",
-      "category": "Economy & Political Economy",
-      "source": "World Economic Forum",
-      "title": "The Resilience-to-Growth Circularity Playbook for Industrial Solutions and Manufacturing",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.weforum.org/publications/the-resilience-to-growth-circularity-playbook-for-industrial-solutions-and-manufacturing/",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "wef"
     }
   ]
 }
