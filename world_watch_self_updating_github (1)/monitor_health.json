@@ -1,15 +1,15 @@
 {
-  "last_checked": "2026-10-30T10:01:14.150750Z",
+  "last_checked": "2026-10-30T19:55:44.716866Z",
   "engine_version": "6.1",
   "migration_baseline": false,
   "series": {
-    "ok": 40,
-    "failed": 4,
+    "ok": 41,
+    "failed": 3,
     "total": 44
   },
   "discovery": {
-    "ok": 29,
-    "failed": 9,
+    "ok": 30,
+    "failed": 8,
     "total": 38
   },
   "monitors": [
@@ -67,8 +67,13 @@
     {
       "monitor": "OECD Economic Outlook",
       "kind": "series",
-      "ok": false,
-      "error": "direct https://www.oecd.org/en/topics/economic-outlook.html: 403 Client Error: Forbidden for url: https://www.oecd.org/en/topics/economic-outlook.html"
+      "ok": true,
+      "latest": "September 2026",
+      "url": "https://www.oecd.org/en/topics/economic-outlook.html",
+      "method": "reader-block",
+      "warnings": [
+        "direct https://www.oecd.org/en/topics/economic-outlook.html: 403 Client Error: Forbidden for url: https://www.oecd.org/en/topics/economic-outlook.html"
+      ]
     },
     {
       "monitor": "Annual Economic Report",
@@ -448,8 +453,8 @@
       "monitor": "BIS discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 23,
-      "new_candidates": 4,
+      "candidates": 20,
+      "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
     },
@@ -475,7 +480,7 @@
       "monitor": "ILO discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 18,
+      "candidates": 17,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
@@ -524,7 +529,7 @@
       "monitor": "International Crisis Group discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 7,
+      "candidates": 8,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
@@ -608,8 +613,8 @@
     {
       "monitor": "UNEP discovery",
       "kind": "discovery",
-      "ok": false,
-      "candidates": 0,
+      "ok": true,
+      "candidates": 1,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
@@ -691,8 +696,8 @@
       "monitor": "WHO discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 7,
-      "new_candidates": 0,
+      "candidates": 8,
+      "new_candidates": 1,
       "suppressed": 0,
       "warnings": []
     },
@@ -763,7 +768,7 @@
       "monitor": "Reporters Without Borders discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 4,
+      "candidates": 3,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
@@ -772,8 +777,8 @@
       "monitor": "Quanta Magazine discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 1,
-      "new_candidates": 0,
+      "candidates": 2,
+      "new_candidates": 2,
       "suppressed": 0,
       "warnings": []
     }
