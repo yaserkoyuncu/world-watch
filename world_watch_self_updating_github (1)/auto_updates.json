@@ -1,13 +1,26 @@
 {
-  "last_checked": "2026-10-29T20:17:54.762535Z",
+  "last_checked": "2026-10-30T00:59:53.575338Z",
   "engine_version": "6.1",
   "monitor_count": 82,
   "flagship_series_count": 44,
   "discovery_source_count": 38,
-  "new_items_this_run": 5,
-  "new_flagship_editions_this_run": 1,
+  "new_items_this_run": 1,
+  "new_flagship_editions_this_run": 0,
   "migration_baseline": false,
   "updates": [
+    {
+      "id": "2559eb81573646",
+      "date": "2026-10-30",
+      "category": "Demography & Society",
+      "source": "IOM",
+      "title": "Towards Integrated Climate, Migration and Health Action in the MENA Region",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://publications.iom.int/books/towards-integrated-climate-migration-and-health-action-mena-region",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "iom"
+    },
     {
       "id": "327804ca47937e",
       "date": "2026-10-29",
@@ -2086,19 +2099,6 @@
       "automatic": true,
       "confidence": "medium",
       "discovery_source": "rsf"
-    },
-    {
-      "id": "125d595118997b",
-      "date": "2026-09-25",
-      "category": "Economy & Political Economy",
-      "source": "World Bank",
-      "title": "Download full report",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.worldbank.org/en/publication/wdr2026",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "wb"
     }
   ]
 }
