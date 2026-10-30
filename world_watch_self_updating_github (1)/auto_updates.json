@@ -1,13 +1,65 @@
 {
-  "last_checked": "2026-10-30T00:59:53.575338Z",
+  "last_checked": "2026-10-30T10:01:14.150750Z",
   "engine_version": "6.1",
   "monitor_count": 82,
   "flagship_series_count": 44,
   "discovery_source_count": 38,
-  "new_items_this_run": 1,
+  "new_items_this_run": 4,
   "new_flagship_editions_this_run": 0,
   "migration_baseline": false,
   "updates": [
+    {
+      "id": "c5b7980a3bdafb",
+      "date": "2026-10-30",
+      "category": "Economy & Political Economy",
+      "source": "BIS",
+      "title": "29 October 2026 Release of the Monetary Policy Report Tiff Macklem Governor",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.bis.org/speeches/20261029-release-monetary-policy-report",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "bis"
+    },
+    {
+      "id": "738053492391be",
+      "date": "2026-10-30",
+      "category": "Economy & Political Economy",
+      "source": "BIS",
+      "title": "29 October 2026 Chile's September 2026 Monetary Policy Report Rosanna Costa Governor",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.bis.org/speeches/20261029-chiles-september-2026-monetary-policy-report",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "bis"
+    },
+    {
+      "id": "070d1e14cde6e1",
+      "date": "2026-10-30",
+      "category": "Economy & Political Economy",
+      "source": "BIS",
+      "title": "Tiff Macklem Governor",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.bis.org/author/tiff-macklem",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "bis"
+    },
+    {
+      "id": "95333726ba2b0d",
+      "date": "2026-10-30",
+      "category": "Economy & Political Economy",
+      "source": "BIS",
+      "title": "Rosanna Costa Governor",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.bis.org/author/rosanna-costa",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "bis"
+    },
     {
       "id": "2559eb81573646",
       "date": "2026-10-30",
@@ -2047,58 +2099,6 @@
       "automatic": true,
       "confidence": "medium",
       "discovery_source": "bis"
-    },
-    {
-      "id": "5dd9def4f438da",
-      "date": "2026-09-29",
-      "category": "Economy & Political Economy",
-      "source": "BIS",
-      "title": "Martin Schlegel Chairman of the Governing Board",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.bis.org/author/martin-schlegel",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "bis"
-    },
-    {
-      "id": "e7e92496d2e2c8",
-      "date": "2026-09-29",
-      "category": "Economy & Political Economy",
-      "source": "BIS",
-      "title": "David Ramsden Deputy Governor for Markets and Banking",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.bis.org/author/david-ramsden",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "bis"
-    },
-    {
-      "id": "aaee7d44b48dd0",
-      "date": "2026-09-29",
-      "category": "Geopolitics & Security",
-      "source": "International Crisis Group",
-      "title": "What Peacemaking Loses When Women Are Left Out",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.crisisgroup.org/opd/global/what-peacemaking-loses-when-women-are-left-out",
-      "type": "Significant analysis",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "icg"
-    },
-    {
-      "id": "c9c0d7877b79dc",
-      "date": "2026-09-25",
-      "category": "Democracy & Rights",
-      "source": "Reporters Without Borders",
-      "title": "RSF publishes guide for journalists covering major earthquakes Major earthquakes in different parts of the world have once again highlighted the crucial role of journalists in providing reliable information during large-scale crises.",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://rsf.org/en/rsf-publishes-guide-journalists-covering-major-earthquakes",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "rsf"
     }
   ]
 }
