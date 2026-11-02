@@ -1,5 +1,5 @@
 {
-  "last_checked": "2026-11-02T11:08:08.604342Z",
+  "last_checked": "2026-11-02T23:06:32.910418Z",
   "engine_version": "6.1",
   "migration_baseline": false,
   "series": {
@@ -8,8 +8,8 @@
     "total": 44
   },
   "discovery": {
-    "ok": 29,
-    "failed": 9,
+    "ok": 30,
+    "failed": 8,
     "total": 38
   },
   "monitors": [
@@ -39,9 +39,9 @@
       "monitor": "Fiscal Monitor",
       "kind": "series",
       "ok": true,
-      "latest": "April 2026",
-      "url": "https://www.imf.org/en/publications/fm/issues/2026/04/15/fiscal-monitor-april-2026",
-      "method": "official-url",
+      "latest": "October 2026",
+      "url": "https://www.imf.org/en/publications/fm/issues/2026/10/05/fiscal-monitor-october-2026",
+      "method": "reader-link",
       "warnings": [
         "direct https://www.imf.org/en/publications: 403 Client Error: Forbidden for url: https://www.imf.org/en/publications"
       ]
@@ -291,7 +291,7 @@
       "ok": true,
       "latest": "2026",
       "url": "https://worldmigrationreport.iom.int/msite/wmr-2026-interactive/",
-      "method": "official-url",
+      "method": "reader-block",
       "warnings": [
         "direct https://worldmigrationreport.iom.int/msite/wmr-2026-interactive/: 403 Client Error: Forbidden for url: https://worldmigrationreport.iom.int/msite/wmr-2026-interactive/"
       ]
@@ -456,8 +456,8 @@
       "monitor": "BIS discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 23,
-      "new_candidates": 0,
+      "candidates": 26,
+      "new_candidates": 6,
       "suppressed": 0,
       "warnings": []
     },
@@ -487,7 +487,7 @@
       "kind": "discovery",
       "ok": true,
       "candidates": 17,
-      "new_candidates": 0,
+      "new_candidates": 1,
       "suppressed": 0,
       "warnings": []
     },
@@ -535,7 +535,7 @@
       "monitor": "International Crisis Group discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 8,
+      "candidates": 7,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
@@ -555,7 +555,7 @@
       "monitor": "Georgetown CSET discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 10,
+      "candidates": 9,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
@@ -691,7 +691,7 @@
       "monitor": "UNDP discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 7,
+      "candidates": 10,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
@@ -711,7 +711,7 @@
       "monitor": "FAO discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 5,
+      "candidates": 1,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
@@ -782,9 +782,9 @@
     {
       "monitor": "Quanta Magazine discovery",
       "kind": "discovery",
-      "ok": false,
-      "candidates": 0,
-      "new_candidates": 0,
+      "ok": true,
+      "candidates": 2,
+      "new_candidates": 2,
       "suppressed": 0,
       "warnings": []
     }
