@@ -1,10 +1,10 @@
 {
-  "last_checked": "2026-11-03T10:53:03.183887Z",
+  "last_checked": "2026-11-03T20:59:28.043891Z",
   "engine_version": "6.1",
   "migration_baseline": false,
   "series": {
-    "ok": 40,
-    "failed": 4,
+    "ok": 41,
+    "failed": 3,
     "total": 44
   },
   "discovery": {
@@ -113,8 +113,8 @@
       "kind": "series",
       "ok": true,
       "latest": "2026",
-      "url": "https://www.weforum.org/publications/global-risks-report-2026",
-      "method": "reader-link",
+      "url": "https://www.weforum.org/publications/global-risks-report-2026/",
+      "method": "reader-block",
       "warnings": []
     },
     {
@@ -164,8 +164,14 @@
     {
       "monitor": "State of AI",
       "kind": "series",
-      "ok": false,
-      "error": "direct https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai/: HTTPSConnectionPool(host='www.mckinsey.com', port=443): Read timed out. (read timeout=22) | direct https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai: HTTPSConnectionPool(host='www.mckinsey.com', port=443): Read timed out. (read timeout=22)"
+      "ok": true,
+      "latest": "2026",
+      "url": "https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai",
+      "method": "reader-block",
+      "warnings": [
+        "direct https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai/: HTTPSConnectionPool(host='www.mckinsey.com', port=443): Read timed out. (read timeout=22)",
+        "direct https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai: HTTPSConnectionPool(host='www.mckinsey.com', port=443): Read timed out. (read timeout=22)"
+      ]
     },
     {
       "monitor": "Tech Trends",
@@ -404,8 +410,8 @@
       "kind": "series",
       "ok": true,
       "latest": "2025",
-      "url": "https://www.transparency.org/en/cpi/2025",
-      "method": "reader-block",
+      "url": "https://www.transparency.org/en/press/corruption-perceptions-index-2025-decline-leadership-undermining-global-fight",
+      "method": "reader-link",
       "warnings": []
     },
     {
@@ -452,8 +458,8 @@
       "monitor": "BIS discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 27,
-      "new_candidates": 0,
+      "candidates": 19,
+      "new_candidates": 1,
       "suppressed": 0,
       "warnings": []
     },
@@ -479,7 +485,7 @@
       "monitor": "ILO discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 17,
+      "candidates": 16,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
@@ -518,7 +524,7 @@
       "kind": "discovery",
       "ok": true,
       "candidates": 5,
-      "new_candidates": 0,
+      "new_candidates": 1,
       "suppressed": 0,
       "warnings": [
         "direct https://www.dni.gov/index.php/newsroom/reports-publications: 403 Client Error: Forbidden for url: https://www.dni.gov/index.php/newsroom/reports-publications"
@@ -529,7 +535,7 @@
       "kind": "discovery",
       "ok": true,
       "candidates": 6,
-      "new_candidates": 1,
+      "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
         "direct https://www.crisisgroup.org/latest-updates: 403 Client Error: Forbidden for url: https://www.crisisgroup.org/latest-updates"
@@ -695,7 +701,7 @@
       "monitor": "WHO discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 8,
+      "candidates": 7,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": []

@@ -1,11 +1,11 @@
 {
-  "last_checked": "2026-11-03T10:53:03.183887Z",
+  "last_checked": "2026-11-03T20:59:28.043891Z",
   "engine_version": "6.1",
   "monitor_count": 82,
   "flagship_series_count": 44,
   "discovery_source_count": 38,
   "new_items_this_run": 2,
-  "new_flagship_editions_this_run": 1,
+  "new_flagship_editions_this_run": 0,
   "migration_baseline": false,
   "updates": [
     {
@@ -22,6 +22,32 @@
       "edition": "2026",
       "previous_edition": "2025",
       "confidence": "high"
+    },
+    {
+      "id": "89b580f4d1bb36",
+      "date": "2026-11-03",
+      "category": "Economy & Political Economy",
+      "source": "BIS",
+      "title": "3 November 2026 Credit unionism and the development of Barbados Dr Kevin Greenidge Governor",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.bis.org/speeches/20261103-credit-unionism-and-development-barbados",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "bis"
+    },
+    {
+      "id": "19aa75cb103724",
+      "date": "2026-11-03",
+      "category": "Geopolitics & Security",
+      "source": "ODNI",
+      "title": "More: DNI Releases Appropriated Budget Figure for 2026 National Intelligence Program",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.odni.gov/14356/pr-13-26/",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "odni"
     },
     {
       "id": "7b96b61d35b221",
@@ -2071,32 +2097,6 @@
       "automatic": true,
       "confidence": "medium",
       "discovery_source": "ilo"
-    },
-    {
-      "id": "4b315fdc29259b",
-      "date": "2026-10-02",
-      "category": "Climate & Energy",
-      "source": "IRENA",
-      "title": "The GEAR Framework: Measuring how renewable energy boosts climate resilience in agriculture",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.irena.org/Publications/2026/Oct/The-GEAR-Framework-Measuring-how-renewable-energy-boosts-climate-resilience-in-agriculture",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "irena"
-    },
-    {
-      "id": "aa8bd07e5283e2",
-      "date": "2026-10-02",
-      "category": "Demography & Society",
-      "source": "IOM",
-      "title": "Migration Governance Indicators Benchmark Report on the Global Compact for Safe, Orderly and Regular Migration",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://publications.iom.int/books/migration-governance-indicators-benchmark-report-global-compact-safe-orderly-and-regular",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "iom"
     }
   ]
 }
