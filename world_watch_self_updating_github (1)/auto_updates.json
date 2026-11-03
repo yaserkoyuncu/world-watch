@@ -1,13 +1,41 @@
 {
-  "last_checked": "2026-11-02T23:06:32.910418Z",
+  "last_checked": "2026-11-03T10:53:03.183887Z",
   "engine_version": "6.1",
   "monitor_count": 82,
   "flagship_series_count": 44,
   "discovery_source_count": 38,
-  "new_items_this_run": 8,
+  "new_items_this_run": 2,
   "new_flagship_editions_this_run": 1,
   "migration_baseline": false,
   "updates": [
+    {
+      "id": "327804ca47937e",
+      "date": "2026-11-03",
+      "category": "Economy & Political Economy",
+      "source": "UNCTAD",
+      "title": "Trade and Development Report — 2026",
+      "summary": "Edition-aware monitor detected a newer Trade and Development Report: 2026, replacing 2025.",
+      "url": "https://unctad.org/sites/default/files/styles/cover_image/public/2026-10/tdr2026_1000x1414.jpg?itok=pvMySBsu",
+      "type": "New flagship edition",
+      "automatic": true,
+      "series_id": "unctad_tdr",
+      "edition": "2026",
+      "previous_edition": "2025",
+      "confidence": "high"
+    },
+    {
+      "id": "7b96b61d35b221",
+      "date": "2026-11-03",
+      "category": "Geopolitics & Security",
+      "source": "International Crisis Group",
+      "title": "Centrafrique: contenir les effets de la guerre au Soudan",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.crisisgroup.org/fr/rpt/africa/central-african-republic-sudan/323-centrafrique-contenir-les-effets-de-la-guerre-au-soudan",
+      "type": "Significant analysis",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "icg"
+    },
     {
       "id": "b76b7cd057e21e",
       "date": "2026-11-02",
@@ -217,21 +245,6 @@
       "automatic": true,
       "confidence": "medium",
       "discovery_source": "iom"
-    },
-    {
-      "id": "327804ca47937e",
-      "date": "2026-10-29",
-      "category": "Economy & Political Economy",
-      "source": "UNCTAD",
-      "title": "Trade and Development Report — 2026",
-      "summary": "Edition-aware monitor detected a newer Trade and Development Report: 2026, replacing 2025.",
-      "url": "https://unctad.org/sites/default/files/styles/cover_image/public/2026-10/tdr2026_1000x1414.jpg?itok=pvMySBsu",
-      "type": "New flagship edition",
-      "automatic": true,
-      "series_id": "unctad_tdr",
-      "edition": "2026",
-      "previous_edition": "2025",
-      "confidence": "high"
     },
     {
       "id": "a6acfee2cdb6e8",
@@ -2084,19 +2097,6 @@
       "automatic": true,
       "confidence": "medium",
       "discovery_source": "iom"
-    },
-    {
-      "id": "aab44561df3e72",
-      "date": "2026-10-01",
-      "category": "Economy & Political Economy",
-      "source": "World Economic Forum",
-      "title": "Children’s Safety and Well-Being in the Age of AI: Best Practices and Incentives",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.weforum.org/publications/childrens-safety-and-well-being-in-the-age-of-ai-best-practices-and-incentives/",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "wef"
     }
   ]
 }
