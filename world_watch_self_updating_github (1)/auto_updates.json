@@ -1,13 +1,26 @@
 {
-  "last_checked": "2026-11-03T20:59:28.043891Z",
+  "last_checked": "2026-11-04T01:21:36.544247Z",
   "engine_version": "6.1",
   "monitor_count": 82,
   "flagship_series_count": 44,
   "discovery_source_count": 38,
-  "new_items_this_run": 2,
+  "new_items_this_run": 1,
   "new_flagship_editions_this_run": 0,
   "migration_baseline": false,
   "updates": [
+    {
+      "id": "be7cfc7fe39350",
+      "date": "2026-11-04",
+      "category": "Health, Food & Education",
+      "source": "WHO",
+      "title": "WHO consolidated guidelines on tuberculosis: module 3: diagnosis, 2nd ed.",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.who.int/publications/i/item/9789240125421",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "who"
+    },
     {
       "id": "327804ca47937e",
       "date": "2026-11-03",
@@ -2084,19 +2097,6 @@
       "automatic": true,
       "confidence": "medium",
       "discovery_source": "bis"
-    },
-    {
-      "id": "7980f980d71e3f",
-      "date": "2026-10-02",
-      "category": "Economy & Political Economy",
-      "source": "ILO",
-      "title": "Engaging informal economy actors in trade and labour policy in Africa",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.ilo.org/publications/engaging-informal-economy-actors-trade-and-labour-policy-africa",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "ilo"
     }
   ]
 }
