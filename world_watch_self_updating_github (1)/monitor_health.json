@@ -1,15 +1,15 @@
 {
-  "last_checked": "2026-11-05T01:29:53.021632Z",
+  "last_checked": "2026-11-05T10:56:30.276170Z",
   "engine_version": "6.1",
   "migration_baseline": false,
   "series": {
-    "ok": 40,
-    "failed": 4,
+    "ok": 39,
+    "failed": 5,
     "total": 44
   },
   "discovery": {
-    "ok": 30,
-    "failed": 8,
+    "ok": 29,
+    "failed": 9,
     "total": 38
   },
   "monitors": [
@@ -88,9 +88,7 @@
       "latest": "2026",
       "url": "https://unctad.org/sites/default/files/styles/cover_image/public/2026-10/tdr2026_1000x1414.jpg?itok=pvMySBsu",
       "method": "reader-link",
-      "warnings": [
-        "direct https://unctad.org/topic/macroeconomics/trade-development-report: HTTPSConnectionPool(host='unctad.org', port=443): Read timed out. (read timeout=22)"
-      ]
+      "warnings": []
     },
     {
       "monitor": "Global Trade Outlook and Statistics",
@@ -219,22 +217,18 @@
       "kind": "series",
       "ok": true,
       "latest": "2025",
-      "url": "https://www.unep.org/events/publication-launch/emissions-gap-report-2025-launch",
-      "method": "reader-link",
-      "warnings": [
-        "direct https://www.unep.org/resources/emissions-gap-report-2025: 403 Client Error: Forbidden for url: https://www.unep.org/resources/emissions-gap-report-2025"
-      ]
+      "url": "https://www.unep.org/en/publications/report/emissions-gap-report-2025",
+      "method": "direct-title",
+      "warnings": []
     },
     {
       "monitor": "Adaptation Gap Report",
       "kind": "series",
       "ok": true,
       "latest": "2025",
-      "url": "https://www.unep.org/news-and-stories/statements/adaptation-gap-report-2025-executive-director-press-statement",
-      "method": "reader-link",
-      "warnings": [
-        "direct https://www.unep.org/resources/adaptation-gap-report-2025: 403 Client Error: Forbidden for url: https://www.unep.org/resources/adaptation-gap-report-2025"
-      ]
+      "url": "https://www.unep.org/en/publications/report/adaptation-gap-report-2025",
+      "method": "direct-title",
+      "warnings": []
     },
     {
       "monitor": "World Energy Outlook",
@@ -317,10 +311,8 @@
       "ok": true,
       "latest": "2026",
       "url": "https://social.desa.un.org/issues/world-social-report",
-      "method": "reader-block",
-      "warnings": [
-        "direct https://social.desa.un.org/issues/world-social-report: 403 Client Error: Forbidden for url: https://social.desa.un.org/issues/world-social-report"
-      ]
+      "method": "direct-heading",
+      "warnings": []
     },
     {
       "monitor": "World Happiness Report",
@@ -334,11 +326,8 @@
     {
       "monitor": "World Health Statistics",
       "kind": "series",
-      "ok": true,
-      "latest": "2026",
-      "url": "https://www.who.int/publications/i/item/9789240122482",
-      "method": "direct-title",
-      "warnings": []
+      "ok": false,
+      "error": "direct https://www.who.int/publications/i/item/9789240122482: HTTPSConnectionPool(host='www.who.int', port=443): Read timed out. (read timeout=22) | reader https://www.who.int/publications/i/item/9789240122482: HTTPSConnectionPool(host='r.jina.ai', port=443): Read timed out. (read timeout=30)"
     },
     {
       "monitor": "State of Food Security and Nutrition in the World",
@@ -493,8 +482,8 @@
     {
       "monitor": "World Economic Forum discovery",
       "kind": "discovery",
-      "ok": true,
-      "candidates": 3,
+      "ok": false,
+      "candidates": 0,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
@@ -622,9 +611,7 @@
       "candidates": 1,
       "new_candidates": 0,
       "suppressed": 0,
-      "warnings": [
-        "direct https://www.unep.org/resources: 403 Client Error: Forbidden for url: https://www.unep.org/resources"
-      ]
+      "warnings": []
     },
     {
       "monitor": "IEA discovery",
@@ -703,7 +690,7 @@
       "monitor": "WHO discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 7,
+      "candidates": 8,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
@@ -712,7 +699,7 @@
       "monitor": "FAO discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 1,
+      "candidates": 5,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
