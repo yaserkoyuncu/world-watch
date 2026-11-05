@@ -1,5 +1,5 @@
 {
-  "last_checked": "2026-11-04T21:20:06.448860Z",
+  "last_checked": "2026-11-05T01:29:53.021632Z",
   "engine_version": "6.1",
   "migration_baseline": false,
   "series": {
@@ -8,8 +8,8 @@
     "total": 44
   },
   "discovery": {
-    "ok": 29,
-    "failed": 9,
+    "ok": 30,
+    "failed": 8,
     "total": 38
   },
   "monitors": [
@@ -88,7 +88,9 @@
       "latest": "2026",
       "url": "https://unctad.org/sites/default/files/styles/cover_image/public/2026-10/tdr2026_1000x1414.jpg?itok=pvMySBsu",
       "method": "reader-link",
-      "warnings": []
+      "warnings": [
+        "direct https://unctad.org/topic/macroeconomics/trade-development-report: HTTPSConnectionPool(host='unctad.org', port=443): Read timed out. (read timeout=22)"
+      ]
     },
     {
       "monitor": "Global Trade Outlook and Statistics",
@@ -217,18 +219,22 @@
       "kind": "series",
       "ok": true,
       "latest": "2025",
-      "url": "https://www.unep.org/en/publications/report/emissions-gap-report-2025",
-      "method": "direct-title",
-      "warnings": []
+      "url": "https://www.unep.org/events/publication-launch/emissions-gap-report-2025-launch",
+      "method": "reader-link",
+      "warnings": [
+        "direct https://www.unep.org/resources/emissions-gap-report-2025: 403 Client Error: Forbidden for url: https://www.unep.org/resources/emissions-gap-report-2025"
+      ]
     },
     {
       "monitor": "Adaptation Gap Report",
       "kind": "series",
       "ok": true,
       "latest": "2025",
-      "url": "https://www.unep.org/en/publications/report/adaptation-gap-report-2025",
-      "method": "direct-title",
-      "warnings": []
+      "url": "https://www.unep.org/news-and-stories/statements/adaptation-gap-report-2025-executive-director-press-statement",
+      "method": "reader-link",
+      "warnings": [
+        "direct https://www.unep.org/resources/adaptation-gap-report-2025: 403 Client Error: Forbidden for url: https://www.unep.org/resources/adaptation-gap-report-2025"
+      ]
     },
     {
       "monitor": "World Energy Outlook",
@@ -285,7 +291,7 @@
       "ok": true,
       "latest": "2026",
       "url": "https://worldmigrationreport.iom.int/msite/wmr-2026-interactive/",
-      "method": "official-url",
+      "method": "reader-block",
       "warnings": [
         "direct https://worldmigrationreport.iom.int/msite/wmr-2026-interactive/: 403 Client Error: Forbidden for url: https://worldmigrationreport.iom.int/msite/wmr-2026-interactive/"
       ]
@@ -311,8 +317,10 @@
       "ok": true,
       "latest": "2026",
       "url": "https://social.desa.un.org/issues/world-social-report",
-      "method": "direct-heading",
-      "warnings": []
+      "method": "reader-block",
+      "warnings": [
+        "direct https://social.desa.un.org/issues/world-social-report: 403 Client Error: Forbidden for url: https://social.desa.un.org/issues/world-social-report"
+      ]
     },
     {
       "monitor": "World Happiness Report",
@@ -346,8 +354,8 @@
       "kind": "series",
       "ok": true,
       "latest": "2026",
-      "url": "https://www.unesco.org/gem-report/en/articles/dialogue-2026-gem-report-comparative-and-international-education-community-oxford-university",
-      "method": "direct-link",
+      "url": "https://www.unesco.org/gem-report/en/articles/what-does-2026-gem-report-say-about-access-and-equity-education",
+      "method": "reader-link",
       "warnings": []
     },
     {
@@ -451,7 +459,7 @@
       "kind": "discovery",
       "ok": true,
       "candidates": 19,
-      "new_candidates": 1,
+      "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
     },
@@ -478,7 +486,7 @@
       "kind": "discovery",
       "ok": true,
       "candidates": 17,
-      "new_candidates": 2,
+      "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
     },
@@ -507,7 +515,7 @@
       "kind": "discovery",
       "ok": true,
       "candidates": 11,
-      "new_candidates": 1,
+      "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
     },
@@ -614,7 +622,9 @@
       "candidates": 1,
       "new_candidates": 0,
       "suppressed": 0,
-      "warnings": []
+      "warnings": [
+        "direct https://www.unep.org/resources: 403 Client Error: Forbidden for url: https://www.unep.org/resources"
+      ]
     },
     {
       "monitor": "IEA discovery",
@@ -659,8 +669,8 @@
     {
       "monitor": "IOM discovery",
       "kind": "discovery",
-      "ok": false,
-      "candidates": 0,
+      "ok": true,
+      "candidates": 19,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
@@ -694,7 +704,7 @@
       "kind": "discovery",
       "ok": true,
       "candidates": 7,
-      "new_candidates": 1,
+      "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
     },
@@ -775,7 +785,7 @@
       "kind": "discovery",
       "ok": true,
       "candidates": 2,
-      "new_candidates": 1,
+      "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
     }
