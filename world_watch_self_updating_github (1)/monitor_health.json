@@ -1,10 +1,10 @@
 {
-  "last_checked": "2026-11-05T10:56:30.276170Z",
+  "last_checked": "2026-11-05T21:28:17.265786Z",
   "engine_version": "6.1",
   "migration_baseline": false,
   "series": {
-    "ok": 39,
-    "failed": 5,
+    "ok": 40,
+    "failed": 4,
     "total": 44
   },
   "discovery": {
@@ -182,8 +182,10 @@
       "ok": true,
       "latest": "2026",
       "url": "https://kpmg.com/content/dam/kpmgsites/uk/pdf/2026/01/global-tech-report-2026.pdf",
-      "method": "reader-link",
-      "warnings": []
+      "method": "direct-link",
+      "warnings": [
+        "reader https://kpmg.com/uk/en/insights/technology/kpmg-global-tech-report.html: 403 Client Error: Forbidden for url: https://r.jina.ai/https://kpmg.com/uk/en/insights/technology/kpmg-global-tech-repor"
+      ]
     },
     {
       "monitor": "Global Innovation Index",
@@ -326,8 +328,11 @@
     {
       "monitor": "World Health Statistics",
       "kind": "series",
-      "ok": false,
-      "error": "direct https://www.who.int/publications/i/item/9789240122482: HTTPSConnectionPool(host='www.who.int', port=443): Read timed out. (read timeout=22) | reader https://www.who.int/publications/i/item/9789240122482: HTTPSConnectionPool(host='r.jina.ai', port=443): Read timed out. (read timeout=30)"
+      "ok": true,
+      "latest": "2026",
+      "url": "https://www.who.int/publications/i/item/9789240122482",
+      "method": "direct-title",
+      "warnings": []
     },
     {
       "monitor": "State of Food Security and Nutrition in the World",
@@ -427,8 +432,8 @@
       "monitor": "World Bank discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 2,
-      "new_candidates": 0,
+      "candidates": 4,
+      "new_candidates": 2,
       "suppressed": 0,
       "warnings": []
     },
@@ -447,7 +452,7 @@
       "monitor": "BIS discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 19,
+      "candidates": 17,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
@@ -608,7 +613,7 @@
       "monitor": "UNEP discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 1,
+      "candidates": 2,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
@@ -680,7 +685,7 @@
       "kind": "discovery",
       "ok": true,
       "candidates": 5,
-      "new_candidates": 0,
+      "new_candidates": 2,
       "suppressed": 0,
       "warnings": [
         "direct https://www.undp.org/publications: 403 Client Error: Forbidden for url: https://www.undp.org/publications"
@@ -691,7 +696,7 @@
       "kind": "discovery",
       "ok": true,
       "candidates": 8,
-      "new_candidates": 0,
+      "new_candidates": 1,
       "suppressed": 0,
       "warnings": []
     },
@@ -699,7 +704,7 @@
       "monitor": "FAO discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 5,
+      "candidates": 1,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
