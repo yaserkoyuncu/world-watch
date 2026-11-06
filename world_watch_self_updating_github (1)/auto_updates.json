@@ -1,13 +1,65 @@
 {
-  "last_checked": "2026-11-06T10:53:03.479972Z",
+  "last_checked": "2026-11-06T20:54:15.695756Z",
   "engine_version": "6.1",
   "monitor_count": 82,
   "flagship_series_count": 44,
   "discovery_source_count": 38,
-  "new_items_this_run": 5,
+  "new_items_this_run": 4,
   "new_flagship_editions_this_run": 0,
   "migration_baseline": false,
   "updates": [
+    {
+      "id": "46ea18312b366c",
+      "date": "2026-11-06",
+      "category": "Economy & Political Economy",
+      "source": "BIS",
+      "title": "5 November 2026 The central bank balance sheet Pablo Hernández de Cos General Manager",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.bis.org/speeches/20261106-central-bank-balance-sheet",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "bis"
+    },
+    {
+      "id": "791ea1a875f446",
+      "date": "2026-11-06",
+      "category": "Demography & Society",
+      "source": "UNDP",
+      "title": "Publications ![Image 41: UN report cover with blue gradient header, title on youth, peace and security, and UN emblem.",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.undp.org/sites/g/files/zskgke326/files/styles/content_card_453_x_256_/public/2026-11/screenshot_2026-11-06_at_11.27.52_am.png?h=43437a95&itok=o2jOnnlP",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "undp"
+    },
+    {
+      "id": "121386c83366f5",
+      "date": "2026-11-06",
+      "category": "Demography & Society",
+      "source": "UNDP",
+      "title": "Publications ![Image 40",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.undp.org/sites/g/files/zskgke326/files/styles/content_card_453_x_256_/public/2026-11/front_cover_0.png?h=18e58ff6&itok=KPFS9xb2",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "undp"
+    },
+    {
+      "id": "cf562ab4b99803",
+      "date": "2026-11-06",
+      "category": "Science",
+      "source": "Quanta Magazine",
+      "title": "New Research Tests Whether AI Models Know Their Own Thoughts ![Image 17",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.quantamagazine.org/wp-content/uploads/2026/11/LLMIntrospection-crKristinaArmitage-Default.webp",
+      "type": "Significant analysis",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "quanta"
+    },
     {
       "id": "bac7a118396ee9",
       "date": "2026-11-06",
@@ -2045,58 +2097,6 @@
       "automatic": true,
       "confidence": "medium",
       "discovery_source": "who"
-    },
-    {
-      "id": "0b63575fb5f283",
-      "date": "2026-10-07",
-      "category": "Democracy & Rights",
-      "source": "Reporters Without Borders",
-      "title": "Evelio López second journalist killed in Guatemala in 2026, murdered after receiving threats Journalist Evelio Lizandro López Sánchez was shot dead on 2 October in the municipality of San Pedro Necta, in the department of Huehuetenango.",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://rsf.org/en/evelio-l%C3%B3pez-second-journalist-killed-guatemala-2026-murdered-after-receiving-threats",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "rsf"
-    },
-    {
-      "id": "d0097e8fe0e60b",
-      "date": "2026-10-06",
-      "category": "Economy & Political Economy",
-      "source": "BIS",
-      "title": "Michelle W Bowman Vice Chair for Supervision",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.bis.org/author/michelle-w-bowman",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "bis"
-    },
-    {
-      "id": "029427cddc1281",
-      "date": "2026-10-06",
-      "category": "Economy & Political Economy",
-      "source": "BIS",
-      "title": "Michael S Barr Vice Chair for Supervision",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.bis.org/author/michael-s-barr",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "bis"
-    },
-    {
-      "id": "eef6435b1fce6f",
-      "date": "2026-10-06",
-      "category": "Economy & Political Economy",
-      "source": "BIS",
-      "title": "6 October 2026 Opening remarks - Community Bank Cyber Workshop Michelle W Bowman Vice Chair for Supervision",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.bis.org/speeches/20261006-opening-remarks-community-bank-cyber-workshop",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "bis"
     }
   ]
 }
