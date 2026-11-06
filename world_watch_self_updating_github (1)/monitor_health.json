@@ -1,5 +1,5 @@
 {
-  "last_checked": "2026-11-05T21:28:17.265786Z",
+  "last_checked": "2026-11-06T10:53:03.479972Z",
   "engine_version": "6.1",
   "migration_baseline": false,
   "series": {
@@ -8,8 +8,8 @@
     "total": 44
   },
   "discovery": {
-    "ok": 29,
-    "failed": 9,
+    "ok": 31,
+    "failed": 7,
     "total": 38
   },
   "monitors": [
@@ -66,8 +66,8 @@
       "kind": "series",
       "ok": true,
       "latest": "September 2026",
-      "url": "https://www.oecd.org/en/topics/economic-outlook.html",
-      "method": "reader-block",
+      "url": "https://www.oecd.org/en/publications/oecd-economic-outlook-interim-report-september-2026_f751d02b-en.html",
+      "method": "reader-link",
       "warnings": [
         "direct https://www.oecd.org/en/topics/economic-outlook.html: 403 Client Error: Forbidden for url: https://www.oecd.org/en/topics/economic-outlook.html"
       ]
@@ -182,10 +182,8 @@
       "ok": true,
       "latest": "2026",
       "url": "https://kpmg.com/content/dam/kpmgsites/uk/pdf/2026/01/global-tech-report-2026.pdf",
-      "method": "direct-link",
-      "warnings": [
-        "reader https://kpmg.com/uk/en/insights/technology/kpmg-global-tech-report.html: 403 Client Error: Forbidden for url: https://r.jina.ai/https://kpmg.com/uk/en/insights/technology/kpmg-global-tech-repor"
-      ]
+      "method": "reader-link",
+      "warnings": []
     },
     {
       "monitor": "Global Innovation Index",
@@ -404,8 +402,8 @@
       "kind": "series",
       "ok": true,
       "latest": "2025",
-      "url": "https://www.transparency.org/en/press/corruption-perceptions-index-2025-decline-leadership-undermining-global-fight",
-      "method": "reader-link",
+      "url": "https://www.transparency.org/en/cpi/2025",
+      "method": "reader-block",
       "warnings": []
     },
     {
@@ -433,7 +431,7 @@
       "kind": "discovery",
       "ok": true,
       "candidates": 4,
-      "new_candidates": 2,
+      "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
     },
@@ -453,7 +451,7 @@
       "kind": "discovery",
       "ok": true,
       "candidates": 17,
-      "new_candidates": 0,
+      "new_candidates": 6,
       "suppressed": 0,
       "warnings": []
     },
@@ -487,8 +485,8 @@
     {
       "monitor": "World Economic Forum discovery",
       "kind": "discovery",
-      "ok": false,
-      "candidates": 0,
+      "ok": true,
+      "candidates": 3,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
@@ -662,7 +660,7 @@
       "monitor": "IOM discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 19,
+      "candidates": 18,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
@@ -672,20 +670,18 @@
     {
       "monitor": "UNHCR discovery",
       "kind": "discovery",
-      "ok": false,
-      "candidates": 0,
+      "ok": true,
+      "candidates": 5,
       "new_candidates": 0,
       "suppressed": 0,
-      "warnings": [
-        "direct https://www.unhcr.org/publications: 403 Client Error: Forbidden for url: https://www.unhcr.org/publications"
-      ]
+      "warnings": []
     },
     {
       "monitor": "UNDP discovery",
       "kind": "discovery",
       "ok": true,
       "candidates": 5,
-      "new_candidates": 2,
+      "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
         "direct https://www.undp.org/publications: 403 Client Error: Forbidden for url: https://www.undp.org/publications"
@@ -696,7 +692,7 @@
       "kind": "discovery",
       "ok": true,
       "candidates": 8,
-      "new_candidates": 1,
+      "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
     },
@@ -776,8 +772,8 @@
       "monitor": "Quanta Magazine discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 2,
-      "new_candidates": 0,
+      "candidates": 3,
+      "new_candidates": 1,
       "suppressed": 0,
       "warnings": []
     }

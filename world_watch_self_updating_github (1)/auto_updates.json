@@ -1,5 +1,5 @@
 {
-  "last_checked": "2026-11-05T21:28:17.265786Z",
+  "last_checked": "2026-11-06T10:53:03.479972Z",
   "engine_version": "6.1",
   "monitor_count": 82,
   "flagship_series_count": 44,
@@ -8,6 +8,71 @@
   "new_flagship_editions_this_run": 0,
   "migration_baseline": false,
   "updates": [
+    {
+      "id": "bac7a118396ee9",
+      "date": "2026-11-06",
+      "category": "Economy & Political Economy",
+      "source": "BIS",
+      "title": "Payments CPMI Briefs No 8 25 Mar 2025 And so we pay: more digital and faster, with cash still in play This CPMI Brief highlights key retail payment trends as observed in the 2023 Red Book statistics. By Alberto Di Iorio , Anneke Kosse and Ismail Mustafi CPMI",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.bis.org/publications/202503-commentary-red-book",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "bis"
+    },
+    {
+      "id": "e001931a1673f8",
+      "date": "2026-11-06",
+      "category": "Economy & Political Economy",
+      "source": "BIS",
+      "title": "Innovation Hub project report 19 Mar 2024 Project Gaia: Enabling climate risk analysis using generative AI Project Gaia leverages generative artificial intelligence (AI) to facilitate the analysis of climate-related risks in the…",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.bis.org/publications/project-gaia-enabling-climate-risk-analysis-using-generative-ai",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "bis"
+    },
+    {
+      "id": "e412bc62a1a872",
+      "date": "2026-11-06",
+      "category": "Economy & Political Economy",
+      "source": "BIS",
+      "title": "13 November 2024 Whither inflation targeting as a global monetary standard? Claudio Borio Former Head of the Monetary and Economic Department",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.bis.org/speeches/20241113-whither-inflation-targeting-global-monetary-standard",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "bis"
+    },
+    {
+      "id": "8e0bf377c13bf3",
+      "date": "2026-11-06",
+      "category": "Economy & Political Economy",
+      "source": "BIS",
+      "title": "20 October 2026 Transitioning through trust - securing the future of payments Mary-Elizabeth McMunn Deputy Governor",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.bis.org/speeches/20261020-transitioning-through-trust-securing-future-payments",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "bis"
+    },
+    {
+      "id": "da12f1490c72c4",
+      "date": "2026-11-06",
+      "category": "Science",
+      "source": "Quanta Magazine",
+      "title": "New Research Tests Whether AI Models Know Their Own Thoughts",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.quantamagazine.org/new-research-tests-whether-ai-models-know-their-own-thoughts-20261104/",
+      "type": "Significant analysis",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "quanta"
+    },
     {
       "id": "37f586255b1e51",
       "date": "2026-11-05",
@@ -2032,71 +2097,6 @@
       "automatic": true,
       "confidence": "medium",
       "discovery_source": "bis"
-    },
-    {
-      "id": "2d7a6d0be9fa74",
-      "date": "2026-10-06",
-      "category": "Economy & Political Economy",
-      "source": "BIS",
-      "title": "6 October 2026 Economic conditions and monetary policy Michael S Barr Vice Chair for Supervision",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.bis.org/speeches/20261006-economic-conditions-and-monetary-policy",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "bis"
-    },
-    {
-      "id": "90ec08f8a3198c",
-      "date": "2026-10-06",
-      "category": "Economy & Political Economy",
-      "source": "ILO",
-      "title": "When the Border Closes A Demand-Driven Spatial Model of Mass Return Migration in Cambodia",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.ilo.org/publications/when-border-closes-demand-driven-spatial-model-mass-return-migration",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "ilo"
-    },
-    {
-      "id": "a31ab54eecf746",
-      "date": "2026-10-06",
-      "category": "Geopolitics & Security",
-      "source": "International Crisis Group",
-      "title": "![Image 24: Five Energy Market Factors That Could Tip the Scales in the Middle East War",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.crisisgroup.org/sites/default/files/styles/16x9_medium/public/2026-10/hero_IranEnergy.jpg.webp?itok=6OjsXU4J",
-      "type": "Significant analysis",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "icg"
-    },
-    {
-      "id": "2b3995317ec00b",
-      "date": "2026-10-06",
-      "category": "Technology & AI",
-      "source": "Georgetown CSET",
-      "title": "AI makes it “easier than ever” for adversaries to target U.S. military, experts say",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://cset.georgetown.edu/article/ai-makes-it-easier-than-ever-for-adversaries-to-target-u-s-military-experts-say/",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "cset"
-    },
-    {
-      "id": "3915a40b2ef905",
-      "date": "2026-10-06",
-      "category": "Demography & Society",
-      "source": "UNDP",
-      "title": "Publications ![Image 42: Blue poster showing stacked red and pink shapes with 'GENDER EQUALITY STRATEGY' and a small logo.",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.undp.org/sites/g/files/zskgke326/files/styles/content_card_453_x_256_/public/2026-10/gender_strategy.png?h=555e90bd&itok=t0LDegx8",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "undp"
     }
   ]
 }
