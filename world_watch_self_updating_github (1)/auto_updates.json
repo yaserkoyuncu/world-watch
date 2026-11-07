@@ -1,13 +1,39 @@
 {
-  "last_checked": "2026-11-07T00:56:29.174912Z",
+  "last_checked": "2026-11-07T10:09:45.822268Z",
   "engine_version": "6.1",
   "monitor_count": 82,
   "flagship_series_count": 44,
   "discovery_source_count": 38,
-  "new_items_this_run": 0,
+  "new_items_this_run": 2,
   "new_flagship_editions_this_run": 0,
   "migration_baseline": false,
   "updates": [
+    {
+      "id": "f4e417462075cf",
+      "date": "2026-11-07",
+      "category": "Demography & Society",
+      "source": "UNDP",
+      "title": "Publications ![Image 48",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.undp.org/sites/g/files/zskgke326/files/styles/content_card_453_x_256_/public/2026-06/undp-ipu-addressing-violence-against-women-in-politics-image_0.png?h=0a704eec&itok=sFruAava",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "undp"
+    },
+    {
+      "id": "1ac20131c04b26",
+      "date": "2026-11-07",
+      "category": "Demography & Society",
+      "source": "UNDP",
+      "title": "Publications ![Image 40",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.undp.org/sites/g/files/zskgke326/files/styles/content_card_453_x_256_/public/2026-07/undp_funding_windows_annual_report_2025_image.png?h=61e5203e&itok=SzJJ9anz",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "undp"
+    },
     {
       "id": "46ea18312b366c",
       "date": "2026-11-06",
@@ -2071,32 +2097,6 @@
       "automatic": true,
       "confidence": "medium",
       "discovery_source": "bis"
-    },
-    {
-      "id": "65c54af5f5f166",
-      "date": "2026-10-07",
-      "category": "Economy & Political Economy",
-      "source": "BIS",
-      "title": "7 October 2026 From commitment to execution - mobilizing the financial sector for Uganda's tenfold growth opening Michael Atingi-Ego Governor",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.bis.org/speeches/20261007-commitment-execution-mobilizing-financial-sector-ugandas-tenfold-growth-opening",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "bis"
-    },
-    {
-      "id": "a5b8d01eea1512",
-      "date": "2026-10-07",
-      "category": "Health, Food & Education",
-      "source": "WHO",
-      "title": "Supporting the transition to community-based mental health and social care",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.who.int/publications/i/item/9789240124134",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "who"
     }
   ]
 }
