@@ -1,5 +1,5 @@
 {
-  "last_checked": "2026-11-07T10:09:45.822268Z",
+  "last_checked": "2026-11-07T19:25:59.350771Z",
   "engine_version": "6.1",
   "migration_baseline": false,
   "series": {
@@ -83,7 +83,9 @@
       "latest": "2026",
       "url": "https://unctad.org/sites/default/files/styles/cover_image/public/2026-10/tdr2026_1000x1414.jpg?itok=pvMySBsu",
       "method": "reader-link",
-      "warnings": []
+      "warnings": [
+        "direct https://unctad.org/topic/macroeconomics/trade-development-report: HTTPSConnectionPool(host='unctad.org', port=443): Read timed out. (read timeout=22)"
+      ]
     },
     {
       "monitor": "Global Trade Outlook and Statistics",
@@ -177,10 +179,8 @@
       "ok": true,
       "latest": "2026",
       "url": "https://kpmg.com/content/dam/kpmgsites/uk/pdf/2026/01/global-tech-report-2026.pdf",
-      "method": "direct-link",
-      "warnings": [
-        "reader https://kpmg.com/uk/en/insights/technology/kpmg-global-tech-report.html: 403 Client Error: Forbidden for url: https://r.jina.ai/https://kpmg.com/uk/en/insights/technology/kpmg-global-tech-repor"
-      ]
+      "method": "reader-link",
+      "warnings": []
     },
     {
       "monitor": "Global Innovation Index",
@@ -343,8 +343,8 @@
       "kind": "series",
       "ok": true,
       "latest": "2026",
-      "url": "https://www.unesco.org/gem-report/en/articles/what-does-2026-gem-report-say-about-access-and-equity-education",
-      "method": "reader-link",
+      "url": "https://www.unesco.org/gem-report/en/articles/dialogue-2026-gem-report-comparative-and-international-education-community-oxford-university",
+      "method": "direct-link",
       "warnings": []
     },
     {
@@ -456,10 +456,12 @@
       "monitor": "UNCTAD discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 28,
-      "new_candidates": 0,
+      "candidates": 40,
+      "new_candidates": 7,
       "suppressed": 0,
-      "warnings": []
+      "warnings": [
+        "direct https://unctad.org/publications: HTTPSConnectionPool(host='unctad.org', port=443): Read timed out. (read timeout=22)"
+      ]
     },
     {
       "monitor": "WTO discovery",
@@ -679,8 +681,8 @@
       "monitor": "UNDP discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 12,
-      "new_candidates": 2,
+      "candidates": 7,
+      "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
         "direct https://www.undp.org/publications: 403 Client Error: Forbidden for url: https://www.undp.org/publications"
