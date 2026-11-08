@@ -1,10 +1,10 @@
 {
-  "last_checked": "2026-11-08T10:23:12.496525Z",
+  "last_checked": "2026-11-08T19:41:19.271333Z",
   "engine_version": "6.1",
   "migration_baseline": false,
   "series": {
-    "ok": 39,
-    "failed": 5,
+    "ok": 41,
+    "failed": 3,
     "total": 44
   },
   "discovery": {
@@ -64,8 +64,13 @@
     {
       "monitor": "OECD Economic Outlook",
       "kind": "series",
-      "ok": false,
-      "error": "direct https://www.oecd.org/en/topics/economic-outlook.html: 403 Client Error: Forbidden for url: https://www.oecd.org/en/topics/economic-outlook.html"
+      "ok": true,
+      "latest": "September 2026",
+      "url": "https://www.oecd.org/en/topics/economic-outlook.html",
+      "method": "reader-block",
+      "warnings": [
+        "direct https://www.oecd.org/en/topics/economic-outlook.html: 403 Client Error: Forbidden for url: https://www.oecd.org/en/topics/economic-outlook.html"
+      ]
     },
     {
       "monitor": "Annual Economic Report",
@@ -80,13 +85,10 @@
       "monitor": "Trade and Development Report",
       "kind": "series",
       "ok": true,
-      "latest": "2025",
-      "url": "https://unctad.org/publication/trade-and-development-report-2025",
-      "method": "direct-title",
-      "warnings": [
-        "direct https://unctad.org/topic/macroeconomics/trade-development-report: HTTPSConnectionPool(host='unctad.org', port=443): Read timed out. (read timeout=22)",
-        "reader https://unctad.org/topic/macroeconomics/trade-development-report: HTTPSConnectionPool(host='r.jina.ai', port=443): Read timed out. (read timeout=30)"
-      ]
+      "latest": "2026",
+      "url": "https://unctad.org/sites/default/files/styles/cover_image/public/2026-10/tdr2026_1000x1414.jpg?itok=pvMySBsu",
+      "method": "reader-link",
+      "warnings": []
     },
     {
       "monitor": "Global Trade Outlook and Statistics",
@@ -291,8 +293,14 @@
     {
       "monitor": "Global Trends",
       "kind": "series",
-      "ok": false,
-      "error": "direct https://www.unhcr.org/au/global-trends: 403 Client Error: Forbidden for url: https://www.unhcr.org/au/global-trends | direct https://www.unhcr.org/media/global-trends-2025-report: 403 Client Error: Forbidden for url: https://www.unhcr.org/media/global-trends-2025-report | direct https://www.unhcr.org/global-trends: 403 Client Error: Forbidden for url: https://www.unhcr.org/global-trends"
+      "ok": true,
+      "latest": "2026",
+      "url": "https://www.unhcr.org/global-trends",
+      "method": "reader-block",
+      "warnings": [
+        "direct https://www.unhcr.org/au/global-trends: 403 Client Error: Forbidden for url: https://www.unhcr.org/au/global-trends",
+        "direct https://www.unhcr.org/media/global-trends-2025-report: 403 Client Error: Forbidden for url: https://www.unhcr.org/media/global-trends-2025-report"
+      ]
     },
     {
       "monitor": "Human Development Report",
@@ -400,8 +408,8 @@
       "kind": "series",
       "ok": true,
       "latest": "2025",
-      "url": "https://www.transparency.org/en/cpi/2025",
-      "method": "official-url",
+      "url": "https://www.transparency.org/en/press/corruption-perceptions-index-2025-decline-leadership-undermining-global-fight",
+      "method": "reader-link",
       "warnings": []
     },
     {
@@ -456,16 +464,11 @@
     {
       "monitor": "UNCTAD discovery",
       "kind": "discovery",
-      "ok": false,
-      "candidates": 0,
+      "ok": true,
+      "candidates": 28,
       "new_candidates": 0,
       "suppressed": 0,
-      "warnings": [
-        "direct https://unctad.org/publications: HTTPSConnectionPool(host='unctad.org', port=443): Read timed out. (read timeout=22)",
-        "reader https://unctad.org/publications: HTTPSConnectionPool(host='r.jina.ai', port=443): Read timed out. (read timeout=30)",
-        "direct https://unctad.org/unctad-publications: HTTPSConnectionPool(host='unctad.org', port=443): Read timed out. (read timeout=22)",
-        "reader https://unctad.org/unctad-publications: HTTPSConnectionPool(host='r.jina.ai', port=443): Read timed out. (read timeout=30)"
-      ]
+      "warnings": []
     },
     {
       "monitor": "WTO discovery",
@@ -488,8 +491,8 @@
     {
       "monitor": "World Economic Forum discovery",
       "kind": "discovery",
-      "ok": true,
-      "candidates": 3,
+      "ok": false,
+      "candidates": 0,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
@@ -613,8 +616,8 @@
     {
       "monitor": "UNEP discovery",
       "kind": "discovery",
-      "ok": true,
-      "candidates": 2,
+      "ok": false,
+      "candidates": 0,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
@@ -758,13 +761,11 @@
     {
       "monitor": "Transparency International discovery",
       "kind": "discovery",
-      "ok": false,
-      "candidates": 0,
+      "ok": true,
+      "candidates": 45,
       "new_candidates": 0,
       "suppressed": 0,
-      "warnings": [
-        "direct https://www.transparency.org/en/publications: 403 Client Error: Forbidden for url: https://www.transparency.org/en/publications"
-      ]
+      "warnings": []
     },
     {
       "monitor": "Reporters Without Borders discovery",

@@ -1,13 +1,28 @@
 {
-  "last_checked": "2026-11-08T10:23:12.496525Z",
+  "last_checked": "2026-11-08T19:41:19.271333Z",
   "engine_version": "6.1",
   "monitor_count": 82,
   "flagship_series_count": 44,
   "discovery_source_count": 38,
-  "new_items_this_run": 0,
-  "new_flagship_editions_this_run": 0,
+  "new_items_this_run": 1,
+  "new_flagship_editions_this_run": 1,
   "migration_baseline": false,
   "updates": [
+    {
+      "id": "327804ca47937e",
+      "date": "2026-11-08",
+      "category": "Economy & Political Economy",
+      "source": "UNCTAD",
+      "title": "Trade and Development Report — 2026",
+      "summary": "Edition-aware monitor detected a newer Trade and Development Report: 2026, replacing 2025.",
+      "url": "https://unctad.org/sites/default/files/styles/cover_image/public/2026-10/tdr2026_1000x1414.jpg?itok=pvMySBsu",
+      "type": "New flagship edition",
+      "automatic": true,
+      "series_id": "unctad_tdr",
+      "edition": "2026",
+      "previous_edition": "2025",
+      "confidence": "high"
+    },
     {
       "id": "b41927d1d1488b",
       "date": "2026-11-07",
@@ -358,21 +373,6 @@
       "automatic": true,
       "confidence": "medium",
       "discovery_source": "who"
-    },
-    {
-      "id": "327804ca47937e",
-      "date": "2026-11-03",
-      "category": "Economy & Political Economy",
-      "source": "UNCTAD",
-      "title": "Trade and Development Report — 2026",
-      "summary": "Edition-aware monitor detected a newer Trade and Development Report: 2026, replacing 2025.",
-      "url": "https://unctad.org/sites/default/files/styles/cover_image/public/2026-10/tdr2026_1000x1414.jpg?itok=pvMySBsu",
-      "type": "New flagship edition",
-      "automatic": true,
-      "series_id": "unctad_tdr",
-      "edition": "2026",
-      "previous_edition": "2025",
-      "confidence": "high"
     },
     {
       "id": "89b580f4d1bb36",
