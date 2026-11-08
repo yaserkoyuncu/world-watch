@@ -1,5 +1,5 @@
 {
-  "last_checked": "2026-11-08T00:36:19.104839Z",
+  "last_checked": "2026-11-08T10:23:12.496525Z",
   "engine_version": "6.1",
   "migration_baseline": false,
   "series": {
@@ -8,8 +8,8 @@
     "total": 44
   },
   "discovery": {
-    "ok": 30,
-    "failed": 8,
+    "ok": 27,
+    "failed": 11,
     "total": 38
   },
   "monitors": [
@@ -80,11 +80,12 @@
       "monitor": "Trade and Development Report",
       "kind": "series",
       "ok": true,
-      "latest": "2026",
-      "url": "https://unctad.org/sites/default/files/styles/cover_image/public/2026-10/tdr2026_1000x1414.jpg?itok=pvMySBsu",
-      "method": "reader-link",
+      "latest": "2025",
+      "url": "https://unctad.org/publication/trade-and-development-report-2025",
+      "method": "direct-title",
       "warnings": [
-        "direct https://unctad.org/topic/macroeconomics/trade-development-report: HTTPSConnectionPool(host='unctad.org', port=443): Read timed out. (read timeout=22)"
+        "direct https://unctad.org/topic/macroeconomics/trade-development-report: HTTPSConnectionPool(host='unctad.org', port=443): Read timed out. (read timeout=22)",
+        "reader https://unctad.org/topic/macroeconomics/trade-development-report: HTTPSConnectionPool(host='r.jina.ai', port=443): Read timed out. (read timeout=30)"
       ]
     },
     {
@@ -282,7 +283,7 @@
       "ok": true,
       "latest": "2026",
       "url": "https://worldmigrationreport.iom.int/msite/wmr-2026-interactive/",
-      "method": "reader-block",
+      "method": "official-url",
       "warnings": [
         "direct https://worldmigrationreport.iom.int/msite/wmr-2026-interactive/: 403 Client Error: Forbidden for url: https://worldmigrationreport.iom.int/msite/wmr-2026-interactive/"
       ]
@@ -399,8 +400,8 @@
       "kind": "series",
       "ok": true,
       "latest": "2025",
-      "url": "https://www.transparency.org/en/press/corruption-perceptions-index-2025-decline-leadership-undermining-global-fight",
-      "method": "reader-link",
+      "url": "https://www.transparency.org/en/cpi/2025",
+      "method": "official-url",
       "warnings": []
     },
     {
@@ -455,11 +456,16 @@
     {
       "monitor": "UNCTAD discovery",
       "kind": "discovery",
-      "ok": true,
-      "candidates": 28,
+      "ok": false,
+      "candidates": 0,
       "new_candidates": 0,
       "suppressed": 0,
-      "warnings": []
+      "warnings": [
+        "direct https://unctad.org/publications: HTTPSConnectionPool(host='unctad.org', port=443): Read timed out. (read timeout=22)",
+        "reader https://unctad.org/publications: HTTPSConnectionPool(host='r.jina.ai', port=443): Read timed out. (read timeout=30)",
+        "direct https://unctad.org/unctad-publications: HTTPSConnectionPool(host='unctad.org', port=443): Read timed out. (read timeout=22)",
+        "reader https://unctad.org/unctad-publications: HTTPSConnectionPool(host='r.jina.ai', port=443): Read timed out. (read timeout=30)"
+      ]
     },
     {
       "monitor": "WTO discovery",
@@ -656,8 +662,8 @@
     {
       "monitor": "IOM discovery",
       "kind": "discovery",
-      "ok": true,
-      "candidates": 18,
+      "ok": false,
+      "candidates": 0,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
@@ -752,11 +758,13 @@
     {
       "monitor": "Transparency International discovery",
       "kind": "discovery",
-      "ok": true,
-      "candidates": 45,
+      "ok": false,
+      "candidates": 0,
       "new_candidates": 0,
       "suppressed": 0,
-      "warnings": []
+      "warnings": [
+        "direct https://www.transparency.org/en/publications: 403 Client Error: Forbidden for url: https://www.transparency.org/en/publications"
+      ]
     },
     {
       "monitor": "Reporters Without Borders discovery",
