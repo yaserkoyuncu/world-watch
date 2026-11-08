@@ -1,5 +1,5 @@
 {
-  "last_checked": "2026-11-07T19:25:59.350771Z",
+  "last_checked": "2026-11-08T00:36:19.104839Z",
   "engine_version": "6.1",
   "migration_baseline": false,
   "series": {
@@ -343,8 +343,8 @@
       "kind": "series",
       "ok": true,
       "latest": "2026",
-      "url": "https://www.unesco.org/gem-report/en/articles/dialogue-2026-gem-report-comparative-and-international-education-community-oxford-university",
-      "method": "direct-link",
+      "url": "https://www.unesco.org/gem-report/en/articles/what-does-2026-gem-report-say-about-access-and-equity-education",
+      "method": "reader-link",
       "warnings": []
     },
     {
@@ -456,12 +456,10 @@
       "monitor": "UNCTAD discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 40,
-      "new_candidates": 7,
+      "candidates": 28,
+      "new_candidates": 0,
       "suppressed": 0,
-      "warnings": [
-        "direct https://unctad.org/publications: HTTPSConnectionPool(host='unctad.org', port=443): Read timed out. (read timeout=22)"
-      ]
+      "warnings": []
     },
     {
       "monitor": "WTO discovery",
@@ -701,7 +699,7 @@
       "monitor": "FAO discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 1,
+      "candidates": 5,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
