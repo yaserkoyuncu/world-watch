@@ -1,13 +1,26 @@
 {
-  "last_checked": "2026-11-09T00:55:00.554465Z",
+  "last_checked": "2026-11-09T11:31:54.915734Z",
   "engine_version": "6.1",
   "monitor_count": 82,
   "flagship_series_count": 44,
   "discovery_source_count": 38,
-  "new_items_this_run": 0,
+  "new_items_this_run": 1,
   "new_flagship_editions_this_run": 0,
   "migration_baseline": false,
   "updates": [
+    {
+      "id": "2c6753ab102919",
+      "date": "2026-11-09",
+      "category": "Climate & Energy",
+      "source": "WMO",
+      "title": "Publication 9 November 2026 State of the Climate Update for COP31",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://wmo.int/resources/publication-series/state-of-climate-update-cop/state-of-climate-update-cop31",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "wmo"
+    },
     {
       "id": "327804ca47937e",
       "date": "2026-11-08",
@@ -2084,19 +2097,6 @@
       "automatic": true,
       "confidence": "medium",
       "discovery_source": "irena"
-    },
-    {
-      "id": "7c7af6783eea4a",
-      "date": "2026-10-07",
-      "category": "Economy & Political Economy",
-      "source": "BIS",
-      "title": "7 October 2026 Modernizing financial regulation - initial observations from eSLR Michelle W Bowman Vice Chair for Supervision",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.bis.org/speeches/20261007-modernizing-financial-regulation-initial-observations-eslr",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "bis"
     }
   ]
 }
