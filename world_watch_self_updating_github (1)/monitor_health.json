@@ -1,10 +1,10 @@
 {
-  "last_checked": "2026-11-09T11:31:54.915734Z",
+  "last_checked": "2026-11-09T23:46:38.281384Z",
   "engine_version": "6.1",
   "migration_baseline": false,
   "series": {
-    "ok": 40,
-    "failed": 4,
+    "ok": 39,
+    "failed": 5,
     "total": 44
   },
   "discovery": {
@@ -64,13 +64,8 @@
     {
       "monitor": "OECD Economic Outlook",
       "kind": "series",
-      "ok": true,
-      "latest": "September 2026",
-      "url": "https://www.oecd.org/en/topics/economic-outlook.html",
-      "method": "reader-block",
-      "warnings": [
-        "direct https://www.oecd.org/en/topics/economic-outlook.html: 403 Client Error: Forbidden for url: https://www.oecd.org/en/topics/economic-outlook.html"
-      ]
+      "ok": false,
+      "error": "direct https://www.oecd.org/en/topics/economic-outlook.html: 403 Client Error: Forbidden for url: https://www.oecd.org/en/topics/economic-outlook.html"
     },
     {
       "monitor": "Annual Economic Report",
@@ -405,8 +400,8 @@
       "kind": "series",
       "ok": true,
       "latest": "2025",
-      "url": "https://www.transparency.org/en/press/corruption-perceptions-index-2025-decline-leadership-undermining-global-fight",
-      "method": "reader-link",
+      "url": "https://www.transparency.org/en/cpi/2025",
+      "method": "reader-block",
       "warnings": []
     },
     {
@@ -453,8 +448,8 @@
       "monitor": "BIS discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 17,
-      "new_candidates": 0,
+      "candidates": 18,
+      "new_candidates": 3,
       "suppressed": 0,
       "warnings": []
     },
@@ -552,7 +547,7 @@
       "monitor": "Georgetown CSET discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 9,
+      "candidates": 8,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
@@ -609,7 +604,7 @@
       "kind": "discovery",
       "ok": true,
       "candidates": 29,
-      "new_candidates": 1,
+      "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
     },
@@ -617,7 +612,7 @@
       "monitor": "UNEP discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 2,
+      "candidates": 1,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
@@ -780,7 +775,7 @@
       "monitor": "Quanta Magazine discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 4,
+      "candidates": 3,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": []

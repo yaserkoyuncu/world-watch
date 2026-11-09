@@ -1,13 +1,52 @@
 {
-  "last_checked": "2026-11-09T11:31:54.915734Z",
+  "last_checked": "2026-11-09T23:46:38.281384Z",
   "engine_version": "6.1",
   "monitor_count": 82,
   "flagship_series_count": 44,
   "discovery_source_count": 38,
-  "new_items_this_run": 1,
+  "new_items_this_run": 3,
   "new_flagship_editions_this_run": 0,
   "migration_baseline": false,
   "updates": [
+    {
+      "id": "81cbf3e6e275bf",
+      "date": "2026-11-09",
+      "category": "Economy & Political Economy",
+      "source": "BIS",
+      "title": "Sergio Nicoletti Altimari Deputy Governor",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.bis.org/author/sergio-nicoletti-altimari",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "bis"
+    },
+    {
+      "id": "713fe9c4dfffb4",
+      "date": "2026-11-09",
+      "category": "Economy & Political Economy",
+      "source": "BIS",
+      "title": "9 November 2026 Message for the SEACEN masterclass - central bank communication Eli M Remolona Governor",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.bis.org/speeches/20261109-message-seacen-masterclass-central-bank-communication",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "bis"
+    },
+    {
+      "id": "5bb094e8970483",
+      "date": "2026-11-09",
+      "category": "Economy & Political Economy",
+      "source": "BIS",
+      "title": "9 November 2026 Making AI-driven finance work for consumers Sergio Nicoletti Altimari Deputy Governor",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.bis.org/speeches/20261109-making-ai-driven-finance-work-consumers",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "bis"
+    },
     {
       "id": "2c6753ab102919",
       "date": "2026-11-09",
@@ -2058,45 +2097,6 @@
       "automatic": true,
       "confidence": "medium",
       "discovery_source": "wmo"
-    },
-    {
-      "id": "d8beeb64376119",
-      "date": "2026-10-08",
-      "category": "Health, Food & Education",
-      "source": "WHO",
-      "title": "Universal social protection inclusive of people with tuberculosis: monitoring and evaluation framework",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.who.int/publications/i/item/9789240124776",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "who"
-    },
-    {
-      "id": "ad0cc9e2755ca4",
-      "date": "2026-10-08",
-      "category": "Climate & Energy",
-      "source": "IRENA",
-      "title": "SIDS Lighthouses Initiative: Annual progress report 2025–2026",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.irena.org/Publications/2026/Oct/SIDS-Lighthouses-Initiative-Annual-progress-report-2025-2026",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "irena"
-    },
-    {
-      "id": "fb8d59976cc022",
-      "date": "2026-10-08",
-      "category": "Climate & Energy",
-      "source": "IRENA",
-      "title": "The Emerging Role of Offshore Wind for Energy Security in Small Island Developing States",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.irena.org/Publications/2026/Oct/The-Emerging-Role-of-Offshore-Wind-for-Energy-Security-in-Small-Island-Developing-States",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "irena"
     }
   ]
 }
