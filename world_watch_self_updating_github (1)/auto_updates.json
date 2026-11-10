@@ -1,13 +1,39 @@
 {
-  "last_checked": "2026-11-09T23:46:38.281384Z",
+  "last_checked": "2026-11-10T11:12:12.975276Z",
   "engine_version": "6.1",
   "monitor_count": 82,
   "flagship_series_count": 44,
   "discovery_source_count": 38,
-  "new_items_this_run": 3,
+  "new_items_this_run": 2,
   "new_flagship_editions_this_run": 0,
   "migration_baseline": false,
   "updates": [
+    {
+      "id": "302b71ff5908d7",
+      "date": "2026-11-10",
+      "category": "Economy & Political Economy",
+      "source": "World Economic Forum",
+      "title": "Education and Skills",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.weforum.org/publications/energy-transition-skills-new-economy-report",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "wef"
+    },
+    {
+      "id": "c21f4daf36e7d0",
+      "date": "2026-11-10",
+      "category": "Demography & Society",
+      "source": "UNDP",
+      "title": "Publications ![Image 40",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.undp.org/sites/g/files/zskgke326/files/styles/content_card_453_x_256_/public/2026-11/the_cost_of_waiting_in_a_warmer_world.png?h=6dcaf3db&itok=ONRSOZvr",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "undp"
+    },
     {
       "id": "81cbf3e6e275bf",
       "date": "2026-11-09",
@@ -2071,32 +2097,6 @@
       "automatic": true,
       "confidence": "medium",
       "discovery_source": "bis"
-    },
-    {
-      "id": "3056ce1db43e37",
-      "date": "2026-10-08",
-      "category": "Economy & Political Economy",
-      "source": "BIS",
-      "title": "8 October 2026 Address - launch of BOMStats, the Bank of Mauritius data portal Dr Priscilla Muthoora Thakoor Governor",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.bis.org/speeches/20261007-address-launch-bomstats-bank-mauritius-data-portal",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "bis"
-    },
-    {
-      "id": "d66b482fb5802d",
-      "date": "2026-10-08",
-      "category": "Climate & Energy",
-      "source": "WMO",
-      "title": "Publication 8 October 2026 Global Seasonal Climate Update for October-November-December 2026",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://wmo.int/resources/publication-series/global-seasonal-climate-updates/gscu-ond2026",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "wmo"
     }
   ]
 }
