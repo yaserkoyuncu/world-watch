@@ -1,13 +1,39 @@
 {
-  "last_checked": "2026-11-11T10:57:55.245282Z",
+  "last_checked": "2026-11-11T21:57:53.542879Z",
   "engine_version": "6.1",
   "monitor_count": 82,
   "flagship_series_count": 44,
   "discovery_source_count": 38,
-  "new_items_this_run": 0,
+  "new_items_this_run": 2,
   "new_flagship_editions_this_run": 0,
   "migration_baseline": false,
   "updates": [
+    {
+      "id": "ae1b29fd44ea4f",
+      "date": "2026-11-11",
+      "category": "Economy & Political Economy",
+      "source": "World Economic Forum",
+      "title": "Digital Trust and Safety",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.weforum.org/publications/the-future-of-information-integrity-charting-a-global-path-in-a-fragmented-world",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "wef"
+    },
+    {
+      "id": "f2c860b9b78e22",
+      "date": "2026-11-11",
+      "category": "Technology & AI",
+      "source": "Stanford HAI",
+      "title": "Roles for AI in Implementation of Medicaid Work Requirements",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://hai.stanford.edu/research/roles-for-ai-implementation-medicare",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "stanford_hai"
+    },
     {
       "id": "327804ca47937e",
       "date": "2026-11-10",
@@ -2071,32 +2097,6 @@
       "automatic": true,
       "confidence": "medium",
       "discovery_source": "who"
-    },
-    {
-      "id": "294af35a4a21b4",
-      "date": "2026-10-12",
-      "category": "Health, Food & Education",
-      "source": "WHO",
-      "title": "Public health intelligence for a safer world: WHO Hub for Pandemic and Epidemic Intelligence strategy...",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.who.int/publications/i/item/B09930",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "who"
-    },
-    {
-      "id": "30b8398e842a03",
-      "date": "2026-10-12",
-      "category": "Health, Food & Education",
-      "source": "FAO",
-      "title": "A taste of SIDS – Food, culture and resilience of Small Island Developing States",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://doi.org/10.4060/ce1823en",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "fao"
     }
   ]
 }
