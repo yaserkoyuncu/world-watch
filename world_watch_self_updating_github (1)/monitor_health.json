@@ -1,5 +1,5 @@
 {
-  "last_checked": "2026-11-11T01:15:24.428540Z",
+  "last_checked": "2026-11-11T10:57:55.245282Z",
   "engine_version": "6.1",
   "migration_baseline": false,
   "series": {
@@ -177,8 +177,10 @@
       "ok": true,
       "latest": "2026",
       "url": "https://kpmg.com/content/dam/kpmgsites/uk/pdf/2026/01/global-tech-report-2026.pdf",
-      "method": "reader-link",
-      "warnings": []
+      "method": "direct-link",
+      "warnings": [
+        "reader https://kpmg.com/uk/en/insights/technology/kpmg-global-tech-report.html: 403 Client Error: Forbidden for url: https://r.jina.ai/https://kpmg.com/uk/en/insights/technology/kpmg-global-tech-repor"
+      ]
     },
     {
       "monitor": "Global Innovation Index",
@@ -541,7 +543,7 @@
       "monitor": "Georgetown CSET discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 8,
+      "candidates": 7,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
@@ -769,7 +771,7 @@
       "monitor": "Quanta Magazine discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 2,
+      "candidates": 5,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
