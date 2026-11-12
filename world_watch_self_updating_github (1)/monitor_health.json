@@ -1,10 +1,10 @@
 {
-  "last_checked": "2026-11-11T21:57:53.542879Z",
+  "last_checked": "2026-11-12T11:10:54.327760Z",
   "engine_version": "6.1",
   "migration_baseline": false,
   "series": {
-    "ok": 39,
-    "failed": 5,
+    "ok": 40,
+    "failed": 4,
     "total": 44
   },
   "discovery": {
@@ -64,8 +64,13 @@
     {
       "monitor": "OECD Economic Outlook",
       "kind": "series",
-      "ok": false,
-      "error": "direct https://www.oecd.org/en/topics/economic-outlook.html: 403 Client Error: Forbidden for url: https://www.oecd.org/en/topics/economic-outlook.html"
+      "ok": true,
+      "latest": "September 2026",
+      "url": "https://www.oecd.org/en/topics/economic-outlook.html",
+      "method": "reader-block",
+      "warnings": [
+        "direct https://www.oecd.org/en/topics/economic-outlook.html: 403 Client Error: Forbidden for url: https://www.oecd.org/en/topics/economic-outlook.html"
+      ]
     },
     {
       "monitor": "Annual Economic Report",
@@ -80,10 +85,13 @@
       "monitor": "Trade and Development Report",
       "kind": "series",
       "ok": true,
-      "latest": "2026",
-      "url": "https://unctad.org/sites/default/files/styles/cover_image/public/2026-10/tdr2026_1000x1414.jpg?itok=pvMySBsu",
-      "method": "reader-link",
-      "warnings": []
+      "latest": "2025",
+      "url": "https://unctad.org/publication/trade-and-development-report-2025",
+      "method": "official-url",
+      "warnings": [
+        "direct https://unctad.org/topic/macroeconomics/trade-development-report: 403 Client Error: Forbidden for url: https://unctad.org/topic/macroeconomics/trade-development-report",
+        "direct https://unctad.org/publication/trade-and-development-report-2025: 403 Client Error: Forbidden for url: https://unctad.org/publication/trade-and-development-report-2025"
+      ]
     },
     {
       "monitor": "Global Trade Outlook and Statistics",
@@ -280,7 +288,7 @@
       "ok": true,
       "latest": "2026",
       "url": "https://worldmigrationreport.iom.int/msite/wmr-2026-interactive/",
-      "method": "official-url",
+      "method": "reader-block",
       "warnings": [
         "direct https://worldmigrationreport.iom.int/msite/wmr-2026-interactive/: 403 Client Error: Forbidden for url: https://worldmigrationreport.iom.int/msite/wmr-2026-interactive/"
       ]
@@ -341,8 +349,8 @@
       "kind": "series",
       "ok": true,
       "latest": "2026",
-      "url": "https://www.unesco.org/gem-report/en/articles/what-does-2026-gem-report-say-about-access-and-equity-education",
-      "method": "reader-link",
+      "url": "https://www.unesco.org/gem-report/en/articles/dialogue-2026-gem-report-comparative-and-international-education-community-oxford-university",
+      "method": "direct-link",
       "warnings": []
     },
     {
@@ -446,18 +454,21 @@
       "kind": "discovery",
       "ok": true,
       "candidates": 19,
-      "new_candidates": 0,
+      "new_candidates": 5,
       "suppressed": 0,
       "warnings": []
     },
     {
       "monitor": "UNCTAD discovery",
       "kind": "discovery",
-      "ok": true,
-      "candidates": 28,
+      "ok": false,
+      "candidates": 0,
       "new_candidates": 0,
       "suppressed": 0,
-      "warnings": []
+      "warnings": [
+        "direct https://unctad.org/publications: 403 Client Error: Forbidden for url: https://unctad.org/publications",
+        "direct https://unctad.org/unctad-publications: 403 Client Error: Forbidden for url: https://unctad.org/unctad-publications"
+      ]
     },
     {
       "monitor": "WTO discovery",
@@ -482,7 +493,7 @@
       "kind": "discovery",
       "ok": true,
       "candidates": 5,
-      "new_candidates": 1,
+      "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
         "direct https://www.weforum.org/publications/: 403 Client Error: Forbidden for url: https://www.weforum.org/publications/"
@@ -533,7 +544,7 @@
       "kind": "discovery",
       "ok": true,
       "candidates": 2,
-      "new_candidates": 1,
+      "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
     },
@@ -654,8 +665,8 @@
     {
       "monitor": "IOM discovery",
       "kind": "discovery",
-      "ok": false,
-      "candidates": 0,
+      "ok": true,
+      "candidates": 16,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
@@ -688,8 +699,8 @@
       "monitor": "WHO discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 7,
-      "new_candidates": 0,
+      "candidates": 8,
+      "new_candidates": 1,
       "suppressed": 0,
       "warnings": []
     },
