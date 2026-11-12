@@ -1,13 +1,54 @@
 {
-  "last_checked": "2026-11-12T11:10:54.327760Z",
+  "last_checked": "2026-11-12T21:50:29.065611Z",
   "engine_version": "6.1",
   "monitor_count": 82,
   "flagship_series_count": 44,
   "discovery_source_count": 38,
-  "new_items_this_run": 5,
-  "new_flagship_editions_this_run": 0,
+  "new_items_this_run": 3,
+  "new_flagship_editions_this_run": 1,
   "migration_baseline": false,
   "updates": [
+    {
+      "id": "327804ca47937e",
+      "date": "2026-11-12",
+      "category": "Economy & Political Economy",
+      "source": "UNCTAD",
+      "title": "Trade and Development Report — 2026",
+      "summary": "Edition-aware monitor detected a newer Trade and Development Report: 2026, replacing 2025.",
+      "url": "https://unctad.org/sites/default/files/styles/cover_image/public/2026-10/tdr2026_1000x1414.jpg?itok=pvMySBsu",
+      "type": "New flagship edition",
+      "automatic": true,
+      "series_id": "unctad_tdr",
+      "edition": "2026",
+      "previous_edition": "2025",
+      "confidence": "high"
+    },
+    {
+      "id": "74492e562c16bd",
+      "date": "2026-11-12",
+      "category": "Technology & AI",
+      "source": "Georgetown CSET",
+      "title": "Outline of the People’s Republic of China 15th Five-Year Plan for National Economic and Social Development",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://cset.georgetown.edu/publication/china-15th-five-year-plan/",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "cset"
+    },
+    {
+      "id": "de26ff056362a1",
+      "date": "2026-11-12",
+      "category": "Health, Food & Education",
+      "source": "WHO",
+      "title": "Global tuberculosis report 2026",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.who.int/publications/i/item/9789240126480",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "who"
+    },
     {
       "id": "5ba3a70183eb25",
       "date": "2026-11-12",
@@ -98,21 +139,6 @@
       "automatic": true,
       "confidence": "medium",
       "discovery_source": "stanford_hai"
-    },
-    {
-      "id": "327804ca47937e",
-      "date": "2026-11-10",
-      "category": "Economy & Political Economy",
-      "source": "UNCTAD",
-      "title": "Trade and Development Report — 2026",
-      "summary": "Edition-aware monitor detected a newer Trade and Development Report: 2026, replacing 2025.",
-      "url": "https://unctad.org/sites/default/files/styles/cover_image/public/2026-10/tdr2026_1000x1414.jpg?itok=pvMySBsu",
-      "type": "New flagship edition",
-      "automatic": true,
-      "series_id": "unctad_tdr",
-      "edition": "2026",
-      "previous_edition": "2025",
-      "confidence": "high"
     },
     {
       "id": "9649d297a949f7",
@@ -2069,32 +2095,6 @@
       "automatic": true,
       "confidence": "medium",
       "discovery_source": "bis"
-    },
-    {
-      "id": "e59ccc7b794f88",
-      "date": "2026-10-13",
-      "category": "Economy & Political Economy",
-      "source": "BIS",
-      "title": "13 October 2026 Cross-border payments as a necessity for Africa's resilience and economic transformation Dr Priscilla Muthoora Thakoor Governor",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.bis.org/speeches/20261013-cross-border-payments-necessity-africas-resilience-and-economic-transformation",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "bis"
-    },
-    {
-      "id": "cd21e835f5127c",
-      "date": "2026-10-13",
-      "category": "Geopolitics & Security",
-      "source": "International Crisis Group",
-      "title": "Toward a Thaw in the Cambodia-Thailand Border Conflict",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.crisisgroup.org/rpt/asia-pacific/thailand-cambodia/359-toward-thaw-cambodia-thailand-border-conflict",
-      "type": "Significant analysis",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "icg"
     }
   ]
 }
