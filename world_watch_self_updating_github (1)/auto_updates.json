@@ -1,13 +1,26 @@
 {
-  "last_checked": "2026-11-13T10:58:57.026270Z",
+  "last_checked": "2026-11-13T21:25:41.366999Z",
   "engine_version": "6.1",
   "monitor_count": 82,
   "flagship_series_count": 44,
   "discovery_source_count": 38,
-  "new_items_this_run": 0,
+  "new_items_this_run": 1,
   "new_flagship_editions_this_run": 0,
   "migration_baseline": false,
   "updates": [
+    {
+      "id": "b43ff97444572e",
+      "date": "2026-11-13",
+      "category": "Democracy & Rights",
+      "source": "Reporters Without Borders",
+      "title": "Yemen war: second journalist killed in 2026 Freelance photojournalist Abdel Rahman al-Houri was killed on Saturday, 7 November, in the city of Marib while covering clashes on the southern front of a civil war that resumed last September.",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://rsf.org/en/yemen-war-second-journalist-killed-2026",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "rsf"
+    },
     {
       "id": "327804ca47937e",
       "date": "2026-11-12",
@@ -2078,19 +2091,6 @@
       "title": "13 October 2026 Introduction to the panel “Financial risks and macroprudential policy” Clara Raposo Deputy Governor",
       "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
       "url": "https://www.bis.org/speeches/20261013-introduction-panel-financial-risks-and-macroprudential-policy",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "bis"
-    },
-    {
-      "id": "33903d9b92056a",
-      "date": "2026-10-13",
-      "category": "Economy & Political Economy",
-      "source": "BIS",
-      "title": "13 October 2026 Intelligence-led financial crime prevention: the power of data, insights and collaboration Abdul Rasheed Ghaffour Governor",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.bis.org/speeches/20261013-intelligence-led-financial-crime-prevention-power-data-insights-and-collaboration",
       "type": "Important new report",
       "automatic": true,
       "confidence": "medium",

@@ -1,10 +1,10 @@
 {
-  "last_checked": "2026-11-13T10:58:57.026270Z",
+  "last_checked": "2026-11-13T21:25:41.366999Z",
   "engine_version": "6.1",
   "migration_baseline": false,
   "series": {
-    "ok": 40,
-    "failed": 4,
+    "ok": 39,
+    "failed": 5,
     "total": 44
   },
   "discovery": {
@@ -64,13 +64,8 @@
     {
       "monitor": "OECD Economic Outlook",
       "kind": "series",
-      "ok": true,
-      "latest": "September 2026",
-      "url": "https://www.oecd.org/en/topics/economic-outlook.html",
-      "method": "reader-block",
-      "warnings": [
-        "direct https://www.oecd.org/en/topics/economic-outlook.html: 403 Client Error: Forbidden for url: https://www.oecd.org/en/topics/economic-outlook.html"
-      ]
+      "ok": false,
+      "error": "direct https://www.oecd.org/en/topics/economic-outlook.html: 403 Client Error: Forbidden for url: https://www.oecd.org/en/topics/economic-outlook.html"
     },
     {
       "monitor": "Annual Economic Report",
@@ -346,11 +341,9 @@
       "kind": "series",
       "ok": true,
       "latest": "2026",
-      "url": "https://www.unesco.org/gem-report/en/articles/dialogue-2026-gem-report-comparative-and-international-education-community-oxford-university",
-      "method": "direct-link",
-      "warnings": [
-        "reader https://www.unesco.org/gem-report/en/publication/equity-and-access: 403 Client Error: Forbidden for url: https://r.jina.ai/https://www.unesco.org/gem-report/en/publication/equity-and-acces"
-      ]
+      "url": "https://www.unesco.org/gem-report/en/articles/what-does-2026-gem-report-say-about-access-and-equity-education",
+      "method": "reader-link",
+      "warnings": []
     },
     {
       "monitor": "Global Multidimensional Poverty Index",
@@ -452,7 +445,7 @@
       "monitor": "BIS discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 18,
+      "candidates": 19,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
@@ -479,7 +472,7 @@
       "monitor": "ILO discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 16,
+      "candidates": 17,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
@@ -695,7 +688,7 @@
       "monitor": "WHO discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 9,
+      "candidates": 8,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
@@ -767,8 +760,8 @@
       "monitor": "Reporters Without Borders discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 3,
-      "new_candidates": 0,
+      "candidates": 4,
+      "new_candidates": 1,
       "suppressed": 0,
       "warnings": []
     },
