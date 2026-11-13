@@ -1,5 +1,5 @@
 {
-  "last_checked": "2026-11-12T21:50:29.065611Z",
+  "last_checked": "2026-11-13T10:58:57.026270Z",
   "engine_version": "6.1",
   "migration_baseline": false,
   "series": {
@@ -190,8 +190,8 @@
       "kind": "series",
       "ok": true,
       "latest": "2026",
-      "url": "https://www.wipo.int/publications/en/details.jsp?id=4873&plang=EN",
-      "method": "direct-link",
+      "url": "https://www.wipo.int/publications/en/series/index.jsp?id=129&lang=en",
+      "method": "reader-block",
       "warnings": []
     },
     {
@@ -346,9 +346,11 @@
       "kind": "series",
       "ok": true,
       "latest": "2026",
-      "url": "https://www.unesco.org/gem-report/en/articles/what-does-2026-gem-report-say-about-access-and-equity-education",
-      "method": "reader-link",
-      "warnings": []
+      "url": "https://www.unesco.org/gem-report/en/articles/dialogue-2026-gem-report-comparative-and-international-education-community-oxford-university",
+      "method": "direct-link",
+      "warnings": [
+        "reader https://www.unesco.org/gem-report/en/publication/equity-and-access: 403 Client Error: Forbidden for url: https://r.jina.ai/https://www.unesco.org/gem-report/en/publication/equity-and-acces"
+      ]
     },
     {
       "monitor": "Global Multidimensional Poverty Index",
@@ -547,7 +549,7 @@
       "kind": "discovery",
       "ok": true,
       "candidates": 7,
-      "new_candidates": 1,
+      "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
     },
@@ -694,7 +696,7 @@
       "kind": "discovery",
       "ok": true,
       "candidates": 9,
-      "new_candidates": 1,
+      "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
     },
