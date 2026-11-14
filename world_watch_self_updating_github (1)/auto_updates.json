@@ -1,5 +1,5 @@
 {
-  "last_checked": "2026-11-14T10:26:25.619153Z",
+  "last_checked": "2026-11-14T19:55:59.453446Z",
   "engine_version": "6.1",
   "monitor_count": 82,
   "flagship_series_count": 44,
@@ -8,6 +8,58 @@
   "new_flagship_editions_this_run": 0,
   "migration_baseline": false,
   "updates": [
+    {
+      "id": "0673e1549ef308",
+      "date": "2026-11-14",
+      "category": "Economy & Political Economy",
+      "source": "BIS",
+      "title": "Media release 10 Jul 2025 Basel Committee shares report on interconnections between banks and non-bank financial intermediaries The report reflects the findings of an analysis conducted as part of the Committee's forward-looking work to identify and…",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.bis.org/media-releases/20250710-basel-committee-shares-report-interconnections-between-banks-and-non-bank-financial",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "bis"
+    },
+    {
+      "id": "7458a3c26cd6a0",
+      "date": "2026-11-14",
+      "category": "Economy & Political Economy",
+      "source": "BIS",
+      "title": "Innovation Hub project report 6 Mar 2023 Project Icebreaker: breaking new paths in cross-border retail CBDC payments Project Icebreaker explores a specific way to interlink rCBDC systems (the hub-and-spoke solution) with several additional…",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.bis.org/publications/project-icebreaker-breaking-new-paths-cross-border-retail-cbdc-payments",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "bis"
+    },
+    {
+      "id": "eabef4b6bee8c2",
+      "date": "2026-11-14",
+      "category": "Economy & Political Economy",
+      "source": "BIS",
+      "title": "Innovation Hub project report 23 Mar 2023 Nexus: enabling instant cross-border payments (initial report) The Nexus proof of concept demonstrated that connecting IPSs multilaterally is technically feasible and can have significant…",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.bis.org/publications/nexus-enabling-instant-cross-border-payments-initial-report",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "bis"
+    },
+    {
+      "id": "311f629a603bdf",
+      "date": "2026-11-14",
+      "category": "Economy & Political Economy",
+      "source": "BIS",
+      "title": "Innovation Hub project report 19 Apr 2023 Project Meridian: innovating transactions with synchronisation Project Meridian investigates how recent rapid advances in financial technology could deliver innovations in real-time gross…",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.bis.org/publications/project-meridian-innovating-transactions-synchronisation",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "bis"
+    },
     {
       "id": "479d6e717345e1",
       "date": "2026-11-14",
@@ -2043,58 +2095,6 @@
       "automatic": true,
       "confidence": "medium",
       "discovery_source": "wef"
-    },
-    {
-      "id": "447a342e832835",
-      "date": "2026-10-14",
-      "category": "Economy & Political Economy",
-      "source": "World Economic Forum",
-      "title": "Geographies in Depth",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.weforum.org/stories/geographies-in-depth/",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "wef"
-    },
-    {
-      "id": "ded3d57606c832",
-      "date": "2026-10-14",
-      "category": "Economy & Political Economy",
-      "source": "BIS",
-      "title": "BIS Paper No 175 14 Oct 2026 Money and the architecture of trust Money is one of the most consequential social institutions humanity has built. Starting from the most elementary monetary act,… By Iñaki Aldasoro",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.bis.org/publications/paper-175-money-and-architecture-trust",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "bis"
-    },
-    {
-      "id": "9ec10adfbb6f14",
-      "date": "2026-10-14",
-      "category": "Economy & Political Economy",
-      "source": "BIS",
-      "title": "14 October 2026 From the periphery to the core: financial health and central banks’ mandates Fernando Restoy Chair, Financial Stability Institute",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.bis.org/speeches/20261013-periphery-core-financial-health-and-central-banks-mandates",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "bis"
-    },
-    {
-      "id": "977a77b5e7b511",
-      "date": "2026-10-14",
-      "category": "Economy & Political Economy",
-      "source": "ILO",
-      "title": "Advancing Green Trade and Employment under Global Uncertainty",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.ilo.org/publications/advancing-green-trade-and-employment-under-global-uncertainty",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "ilo"
     }
   ]
 }
