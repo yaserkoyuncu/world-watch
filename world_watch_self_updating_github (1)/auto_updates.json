@@ -1,13 +1,65 @@
 {
-  "last_checked": "2026-11-13T21:25:41.366999Z",
+  "last_checked": "2026-11-14T10:26:25.619153Z",
   "engine_version": "6.1",
   "monitor_count": 82,
   "flagship_series_count": 44,
   "discovery_source_count": 38,
-  "new_items_this_run": 1,
+  "new_items_this_run": 4,
   "new_flagship_editions_this_run": 0,
   "migration_baseline": false,
   "updates": [
+    {
+      "id": "479d6e717345e1",
+      "date": "2026-11-14",
+      "category": "Economy & Political Economy",
+      "source": "BIS",
+      "title": "3 August 2026 Responsible innovation and financial inclusion Michelle W Bowman Vice Chair for Supervision",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.bis.org/speeches/20260803-responsible-innovation-and-financial-inclusion",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "bis"
+    },
+    {
+      "id": "adbadb92efddaa",
+      "date": "2026-11-14",
+      "category": "Economy & Political Economy",
+      "source": "BIS",
+      "title": "3 August 2026 Navigating economic shocks - a monetary policymaker's perspective Philip N Jefferson Member of the Board of Governors",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.bis.org/speeches/20260803-navigating-economic-shocks-monetary-policymakers-perspective",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "bis"
+    },
+    {
+      "id": "fe51c1ddd75852",
+      "date": "2026-11-14",
+      "category": "Technology & AI",
+      "source": "Georgetown CSET",
+      "title": "We Must Guard Against the Risks of “AI Aggregators”",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://cset.georgetown.edu/publication/china-mss-ai-aggregator-warning/",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "cset"
+    },
+    {
+      "id": "f9eea8d54661e4",
+      "date": "2026-11-14",
+      "category": "Health, Food & Education",
+      "source": "WHO",
+      "title": "2025 WHO health and climate change global survey report",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.who.int/publications/i/item/9789240126466",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "who"
+    },
     {
       "id": "b43ff97444572e",
       "date": "2026-11-13",
@@ -2043,58 +2095,6 @@
       "automatic": true,
       "confidence": "medium",
       "discovery_source": "ilo"
-    },
-    {
-      "id": "02d98eb6727dee",
-      "date": "2026-10-14",
-      "category": "Economy & Political Economy",
-      "source": "ILO",
-      "title": "(Re)Defining Workspace: Dissolving Boundaries and Application of Labour Legislation",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.ilo.org/meetings-and-events/redefining-workspace-dissolving-boundaries-and-application-labour",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "ilo"
-    },
-    {
-      "id": "f9eb9847f1ba71",
-      "date": "2026-10-14",
-      "category": "Economy & Political Economy",
-      "source": "BIS",
-      "title": "Clara Raposo Deputy Governor",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.bis.org/author/clara-raposo",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "bis"
-    },
-    {
-      "id": "761bbc11d8f7cb",
-      "date": "2026-10-14",
-      "category": "Climate & Energy",
-      "source": "IRENA",
-      "title": "World Energy Transition Outlook 2026: 1.5°C Pathway",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.irena.org/Publications/2026/Oct/World-Energy-Transitions-Outlook-2026",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "irena"
-    },
-    {
-      "id": "b39f9d35cf4a66",
-      "date": "2026-10-13",
-      "category": "Economy & Political Economy",
-      "source": "BIS",
-      "title": "13 October 2026 Introduction to the panel “Financial risks and macroprudential policy” Clara Raposo Deputy Governor",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.bis.org/speeches/20261013-introduction-panel-financial-risks-and-macroprudential-policy",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "bis"
     }
   ]
 }
