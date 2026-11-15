@@ -1,13 +1,52 @@
 {
-  "last_checked": "2026-11-15T10:53:57.765929Z",
+  "last_checked": "2026-11-15T20:23:56.115892Z",
   "engine_version": "6.1",
   "monitor_count": 82,
   "flagship_series_count": 44,
   "discovery_source_count": 38,
-  "new_items_this_run": 0,
+  "new_items_this_run": 3,
   "new_flagship_editions_this_run": 0,
   "migration_baseline": false,
   "updates": [
+    {
+      "id": "8563609087d427",
+      "date": "2026-11-15",
+      "category": "Economy & Political Economy",
+      "source": "BIS",
+      "title": "Innovation Hub project report 28 Sep 2021 Inthanon-LionRock to mBridge: building a multi CBDC platform for international payments This report sets out the take-aways of Project Inthanon-LionRock Phase 2 and introduces the scope of the third phase.",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.bis.org/publications/inthanon-lionrock-mbridge-building-multi-cbdc-platform-international-payments",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "bis"
+    },
+    {
+      "id": "a8cd56769b1080",
+      "date": "2026-11-15",
+      "category": "Economy & Political Economy",
+      "source": "BIS",
+      "title": "IFC Bulletin No 59 10 Oct 2023 Data science in central banking: applications and tools Proceedings of the Irving Fisher Committee on Central Bank Statistics (IFC)-Bank of Italy Workshop on \"Data science in central… IFC",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.bis.org/publications/ifc-bulletin-59-data-science-central-banking-applications-and-tools",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "bis"
+    },
+    {
+      "id": "2a717cd4e34f02",
+      "date": "2026-11-15",
+      "category": "Economy & Political Economy",
+      "source": "BIS",
+      "title": "CPMI Papers 17 Oct 2023 Harmonised ISO 20022 data requirements for enhancing cross-border payments - final report This final report - a key deliverable under the G20 cross-border payments programme - focuses on harmonised data requirements… CPMI",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.bis.org/publications/harmonised-iso-20022-data-requirements-enhancing-cross-border-payments-final-report",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "bis"
+    },
     {
       "id": "b17cd0450a44ad",
       "date": "2026-11-15",
@@ -2056,45 +2095,6 @@
       "automatic": true,
       "confidence": "medium",
       "discovery_source": "wipo"
-    },
-    {
-      "id": "b566ab0acdba32",
-      "date": "2026-10-15",
-      "category": "Climate & Energy",
-      "source": "UNEP",
-      "title": "Kunming-Montreal Global Biodiversity Framework (GBF)",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.unep.org/en/publications/report/kunming-montreal-global-biodiversity-framework",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "unep"
-    },
-    {
-      "id": "958a63deaace64",
-      "date": "2026-10-15",
-      "category": "Climate & Energy",
-      "source": "UNEP",
-      "title": "Integrated Programme Eliminating Hazardous Chemicals from Supply Chains",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.unep.org/topics/chemicals-and-pollution-action/circularity-sectors/eliminating-hazardous-chemicals-supply",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "unep"
-    },
-    {
-      "id": "46e460228cde32",
-      "date": "2026-10-15",
-      "category": "Climate & Energy",
-      "source": "UNEP",
-      "title": "United Nations Environment Programme",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.unep.org/",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "unep"
     }
   ]
 }
