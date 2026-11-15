@@ -1,13 +1,52 @@
 {
-  "last_checked": "2026-11-14T19:55:59.453446Z",
+  "last_checked": "2026-11-15T01:03:34.851536Z",
   "engine_version": "6.1",
   "monitor_count": 82,
   "flagship_series_count": 44,
   "discovery_source_count": 38,
-  "new_items_this_run": 4,
+  "new_items_this_run": 3,
   "new_flagship_editions_this_run": 0,
   "migration_baseline": false,
   "updates": [
+    {
+      "id": "b17cd0450a44ad",
+      "date": "2026-11-15",
+      "category": "Economy & Political Economy",
+      "source": "BIS",
+      "title": "Innovation Hub project report 8 Dec 2021 Project Jura: cross-border settlement using wholesale CBDC This report describes the Jura experiment and presents the findings and lessons learned.",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.bis.org/publications/project-jura-cross-border-settlement-using-wholesale-cbdc",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "bis"
+    },
+    {
+      "id": "327fb4d73b37b4",
+      "date": "2026-11-15",
+      "category": "Economy & Political Economy",
+      "source": "BIS",
+      "title": "Media release 11 Dec 2023 Macroprudential policies can mitigate the financial-stability risks of housing markets: Committee Macroprudential policies can mitigate financial-stability risks arising from housing market boom-bust cycles. New report from… CGFS",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.bis.org/media-releases/20231211-macroprudential-policies-can-mitigate-financial-stability-risks-housing-markets-committee",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "bis"
+    },
+    {
+      "id": "c977a7aa543cd3",
+      "date": "2026-11-15",
+      "category": "Economy & Political Economy",
+      "source": "BIS",
+      "title": "8 October 2026 Where AI risks meet Christine Lagarde President",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.bis.org/speeches/20261007-where-ai-risks-meet",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "bis"
+    },
     {
       "id": "0673e1549ef308",
       "date": "2026-11-14",
@@ -2056,45 +2095,6 @@
       "automatic": true,
       "confidence": "medium",
       "discovery_source": "unep"
-    },
-    {
-      "id": "7855c058c942e1",
-      "date": "2026-10-15",
-      "category": "Climate & Energy",
-      "source": "UNEP",
-      "title": "Participation information",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://unfccc.int/cop31/ifp",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "unep"
-    },
-    {
-      "id": "611241760b8574",
-      "date": "2026-10-15",
-      "category": "Economy & Political Economy",
-      "source": "World Economic Forum",
-      "title": "Unlocking Value: AI for Resilient Growth in MENA",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.weforum.org/publications/unlocking-value-ai-for-resilient-growth-in-mena/",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "wef"
-    },
-    {
-      "id": "3d8f1ae5f16db3",
-      "date": "2026-10-15",
-      "category": "Economy & Political Economy",
-      "source": "World Economic Forum",
-      "title": "Powering AI at Scale: Optimizing Hyperscale Data Centre Infrastructure in MENA",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.weforum.org/publications/powering-ai-at-scale-optimizing-hyperscale-data-centre-infrastructure-in-mena/",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "wef"
     }
   ]
 }
