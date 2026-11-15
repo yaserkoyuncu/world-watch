@@ -1,5 +1,5 @@
 {
-  "last_checked": "2026-11-15T01:03:34.851536Z",
+  "last_checked": "2026-11-15T10:53:57.765929Z",
   "engine_version": "6.1",
   "migration_baseline": false,
   "series": {
@@ -8,8 +8,8 @@
     "total": 44
   },
   "discovery": {
-    "ok": 28,
-    "failed": 10,
+    "ok": 26,
+    "failed": 12,
     "total": 38
   },
   "monitors": [
@@ -343,7 +343,9 @@
       "latest": "2026",
       "url": "https://www.unesco.org/gem-report/en/articles/what-does-2026-gem-report-say-about-access-and-equity-education",
       "method": "reader-link",
-      "warnings": []
+      "warnings": [
+        "direct https://www.unesco.org/gem-report/en/publication/equity-and-access: HTTPSConnectionPool(host='www.unesco.org', port=443): Read timed out. (read timeout=22)"
+      ]
     },
     {
       "monitor": "Global Multidimensional Poverty Index",
@@ -446,7 +448,7 @@
       "kind": "discovery",
       "ok": true,
       "candidates": 14,
-      "new_candidates": 3,
+      "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
     },
@@ -480,8 +482,8 @@
     {
       "monitor": "World Economic Forum discovery",
       "kind": "discovery",
-      "ok": true,
-      "candidates": 5,
+      "ok": false,
+      "candidates": 0,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
@@ -750,11 +752,13 @@
     {
       "monitor": "Transparency International discovery",
       "kind": "discovery",
-      "ok": true,
-      "candidates": 45,
+      "ok": false,
+      "candidates": 0,
       "new_candidates": 0,
       "suppressed": 0,
-      "warnings": []
+      "warnings": [
+        "direct https://www.transparency.org/en/publications: 403 Client Error: Forbidden for url: https://www.transparency.org/en/publications"
+      ]
     },
     {
       "monitor": "Reporters Without Borders discovery",
