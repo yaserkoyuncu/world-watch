@@ -1,13 +1,67 @@
 {
-  "last_checked": "2026-11-16T11:17:52.054220Z",
+  "last_checked": "2026-11-16T23:44:35.705754Z",
   "engine_version": "6.1",
   "monitor_count": 82,
   "flagship_series_count": 44,
   "discovery_source_count": 38,
-  "new_items_this_run": 6,
-  "new_flagship_editions_this_run": 0,
+  "new_items_this_run": 4,
+  "new_flagship_editions_this_run": 1,
   "migration_baseline": false,
   "updates": [
+    {
+      "id": "327804ca47937e",
+      "date": "2026-11-16",
+      "category": "Economy & Political Economy",
+      "source": "UNCTAD",
+      "title": "Trade and Development Report — 2026",
+      "summary": "Edition-aware monitor detected a newer Trade and Development Report: 2026, replacing 2025.",
+      "url": "https://unctad.org/sites/default/files/styles/cover_image/public/2026-10/tdr2026_1000x1414.jpg?itok=pvMySBsu",
+      "type": "New flagship edition",
+      "automatic": true,
+      "series_id": "unctad_tdr",
+      "edition": "2026",
+      "previous_edition": "2025",
+      "confidence": "high"
+    },
+    {
+      "id": "07ee971b0eeb1d",
+      "date": "2026-11-16",
+      "category": "Technology & AI",
+      "source": "Stanford HAI",
+      "title": "Stanford HAI Backs Ambitious AI Projects with 2026 Hoffman-Yee Grants",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://hai.stanford.edu/news/stanford-hai-backs-ambitious-ai-projects-with-2026-hoffman-yee-grants",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "stanford_hai"
+    },
+    {
+      "id": "3424e0c6fd93a9",
+      "date": "2026-11-16",
+      "category": "Health, Food & Education",
+      "source": "WHO",
+      "title": "Toolkit of standard operating procedures for bacteriology, mycology and antimicrobial susceptibility...",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.who.int/publications/i/item/9789240126343",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "who"
+    },
+    {
+      "id": "bdf2833a48ad4c",
+      "date": "2026-11-16",
+      "category": "Health, Food & Education",
+      "source": "WHO",
+      "title": "Essential package of diagnostic tests for bacterial and fungal infections and antimicrobial resistance",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.who.int/publications/i/item/B09666",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "who"
+    },
     {
       "id": "13a968041c1802",
       "date": "2026-11-16",
@@ -345,21 +399,6 @@
       "automatic": true,
       "confidence": "medium",
       "discovery_source": "rsf"
-    },
-    {
-      "id": "327804ca47937e",
-      "date": "2026-11-12",
-      "category": "Economy & Political Economy",
-      "source": "UNCTAD",
-      "title": "Trade and Development Report — 2026",
-      "summary": "Edition-aware monitor detected a newer Trade and Development Report: 2026, replacing 2025.",
-      "url": "https://unctad.org/sites/default/files/styles/cover_image/public/2026-10/tdr2026_1000x1414.jpg?itok=pvMySBsu",
-      "type": "New flagship edition",
-      "automatic": true,
-      "series_id": "unctad_tdr",
-      "edition": "2026",
-      "previous_edition": "2025",
-      "confidence": "high"
     },
     {
       "id": "74492e562c16bd",
@@ -2052,47 +2091,6 @@
       "automatic": true,
       "confidence": "medium",
       "discovery_source": "icg"
-    },
-    {
-      "id": "9cf8b6159a5fc7",
-      "date": "2026-10-19",
-      "category": "Economy & Political Economy",
-      "source": "IMF",
-      "title": "World Economic Outlook — October 2026",
-      "summary": "Edition-aware monitor detected a newer World Economic Outlook: October 2026, replacing July 2026.",
-      "url": "https://www.imf.org/en/publications/weo/issues/2026/10/13/world-economic-outlook-october-2026",
-      "type": "Major flagship update",
-      "automatic": true,
-      "series_id": "imf_weo",
-      "edition": "October 2026",
-      "previous_edition": "July 2026",
-      "confidence": "high"
-    },
-    {
-      "id": "96745708f4373c",
-      "date": "2026-10-19",
-      "category": "Economy & Political Economy",
-      "source": "BIS",
-      "title": "19 October 2026 Financial resilience in an age of repeated shocks Andrew Bailey Governor",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.bis.org/speeches/20261019-financial-resilience-age-repeated-shocks",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "bis"
-    },
-    {
-      "id": "dfbe2d065eb7c4",
-      "date": "2026-10-19",
-      "category": "Economy & Political Economy",
-      "source": "BIS",
-      "title": "19 October 2026 Financial literacy towards an inclusive economy",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.bis.org/speeches/20261016-financial-literacy-towards-inclusive-economy",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "bis"
     }
   ]
 }
