@@ -1,13 +1,52 @@
 {
-  "last_checked": "2026-11-17T11:52:40.415417Z",
+  "last_checked": "2026-11-17T22:52:39.866388Z",
   "engine_version": "6.1",
   "monitor_count": 82,
   "flagship_series_count": 44,
   "discovery_source_count": 38,
-  "new_items_this_run": 1,
+  "new_items_this_run": 3,
   "new_flagship_editions_this_run": 0,
   "migration_baseline": false,
   "updates": [
+    {
+      "id": "f83477e32d4f7f",
+      "date": "2026-11-17",
+      "category": "Technology & AI",
+      "source": "Georgetown CSET",
+      "title": "Opinions of the General Office of the State Council on Adapting the Development of Artificial Intelligence Technology to Help Construct an Employment-Friendly Mode of Development",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://cset.georgetown.edu/publication/china-ai-employment-opinions/",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "cset"
+    },
+    {
+      "id": "29ec16a066aa79",
+      "date": "2026-11-17",
+      "category": "Democracy & Rights",
+      "source": "Reporters Without Borders",
+      "title": "Mexico: Eduardo Flores Salado killed in Acapulco Journalist Eduardo Flores Salado, aged 42, was found dead on the night of 14 November in Acapulco, a city in Mexico’s southern state of Guerrero.",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://rsf.org/en/mexico-eduardo-flores-salado-killed-acapulco",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "rsf"
+    },
+    {
+      "id": "559848a67d76a0",
+      "date": "2026-11-17",
+      "category": "Democracy & Rights",
+      "source": "Reporters Without Borders",
+      "title": "Murder of Camilo Rodriguez challenges Costa Rica’s reputation as a regional model for press freedom Journalist and writer Camilo Rodriguez Chaverri was shot dead on 16 November 2026 in the town of Santo Domingo de Heredia, Costa Rica.",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://rsf.org/en/murder-camilo-rodriguez-challenges-costa-rica-s-reputation-regional-model-press-freedom",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "rsf"
+    },
     {
       "id": "9ca7ad33827019",
       "date": "2026-11-17",
@@ -2052,45 +2091,6 @@
       "automatic": true,
       "confidence": "medium",
       "discovery_source": "who"
-    },
-    {
-      "id": "a322db949cf97a",
-      "date": "2026-10-20",
-      "category": "Geopolitics & Security",
-      "source": "International Crisis Group",
-      "title": "The Yemen War, Saudi-Iran relations and Another Escalation in the Gulf",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.crisisgroup.org/pod/middle-east-north-africa/yemen/yemen-war-saudi-iran-relations-and-another-escalation-gulf",
-      "type": "Significant analysis",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "icg"
-    },
-    {
-      "id": "19168abdf6a721",
-      "date": "2026-10-20",
-      "category": "Geopolitics & Security",
-      "source": "International Crisis Group",
-      "title": "Multiplying Crises, Fraying Consensus at the 2026 UN General Assembly",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.crisisgroup.org/vis/global/multiplying-crises-fraying-consensus-2026-un-general-assembly",
-      "type": "Significant analysis",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "icg"
-    },
-    {
-      "id": "3e09c13c6741b8",
-      "date": "2026-10-20",
-      "category": "Geopolitics & Security",
-      "source": "International Crisis Group",
-      "title": "Adapting EU Foreign Policy to a World of Recurring Crises",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.crisisgroup.org/prt/europe/european-union-china-united-states/adapting-eu-foreign-policy-world-recurring-crises",
-      "type": "Significant analysis",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "icg"
     }
   ]
 }

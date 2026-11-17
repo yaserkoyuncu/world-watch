@@ -1,15 +1,15 @@
 {
-  "last_checked": "2026-11-17T11:52:40.415417Z",
+  "last_checked": "2026-11-17T22:52:39.866388Z",
   "engine_version": "6.1",
   "migration_baseline": false,
   "series": {
-    "ok": 35,
-    "failed": 9,
+    "ok": 37,
+    "failed": 7,
     "total": 44
   },
   "discovery": {
-    "ok": 20,
-    "failed": 18,
+    "ok": 23,
+    "failed": 15,
     "total": 38
   },
   "monitors": [
@@ -245,10 +245,9 @@
       "kind": "series",
       "ok": true,
       "latest": "2025",
-      "url": "https://www.unep.org/resources/emissions-gap-report-2025",
-      "method": "official-url",
+      "url": "https://www.unep.org/en/publications/report/emissions-gap-report-2025",
+      "method": "direct-title",
       "warnings": [
-        "direct https://www.unep.org/resources/emissions-gap-report-2025: 403 Client Error: Forbidden for url: https://www.unep.org/resources/emissions-gap-report-2025",
         "reader https://www.unep.org/resources/emissions-gap-report-2025: 401 Client Error: Unauthorized for url: https://r.jina.ai/https://www.unep.org/resources/emissions-gap-report-2025"
       ]
     },
@@ -257,10 +256,9 @@
       "kind": "series",
       "ok": true,
       "latest": "2025",
-      "url": "https://www.unep.org/resources/adaptation-gap-report-2025",
-      "method": "official-url",
+      "url": "https://www.unep.org/en/publications/report/adaptation-gap-report-2025",
+      "method": "direct-title",
       "warnings": [
-        "direct https://www.unep.org/resources/adaptation-gap-report-2025: 403 Client Error: Forbidden for url: https://www.unep.org/resources/adaptation-gap-report-2025",
         "reader https://www.unep.org/resources/adaptation-gap-report-2025: 401 Client Error: Unauthorized for url: https://r.jina.ai/https://www.unep.org/resources/adaptation-gap-report-2025"
       ]
     },
@@ -294,7 +292,7 @@
       "ok": true,
       "latest": "2025",
       "url": "https://globalcarbonbudget.org/gcb-2025/",
-      "method": "direct-title",
+      "method": "official-url",
       "warnings": [
         "reader https://globalcarbonbudget.org/gcb-2025/: 401 Client Error: Unauthorized for url: https://r.jina.ai/https://globalcarbonbudget.org/gcb-2025/"
       ]
@@ -336,8 +334,13 @@
     {
       "monitor": "Global Trends",
       "kind": "series",
-      "ok": false,
-      "error": "reader https://www.unhcr.org/au/global-trends: 401 Client Error: Unauthorized for url: https://r.jina.ai/https://www.unhcr.org/au/global-trends | direct https://www.unhcr.org/au/global-trends: 403 Client Error: Forbidden for url: https://www.unhcr.org/au/global-trends | reader https://www.unhcr.org/media/global-trends-2025-report: 401 Client Error: Unauthorized for url: https://r.jina.ai/https://www.unhcr.org/media/global-trends-2025-report | direct https://www.unhcr.org/media/global-trends-2025"
+      "ok": true,
+      "latest": "2025",
+      "url": "https://www.unhcr.org/media/global-trends-2025-report",
+      "method": "direct-link",
+      "warnings": [
+        "reader https://www.unhcr.org/au/global-trends: 401 Client Error: Unauthorized for url: https://r.jina.ai/https://www.unhcr.org/au/global-trends"
+      ]
     },
     {
       "monitor": "Human Development Report",
@@ -353,8 +356,13 @@
     {
       "monitor": "World Social Report",
       "kind": "series",
-      "ok": false,
-      "error": "direct https://social.desa.un.org/issues/world-social-report: 403 Client Error: Forbidden for url: https://social.desa.un.org/issues/world-social-report | reader https://social.desa.un.org/issues/world-social-report: 401 Client Error: Unauthorized for url: https://r.jina.ai/https://social.desa.un.org/issues/world-social-report"
+      "ok": true,
+      "latest": "2026",
+      "url": "https://social.desa.un.org/issues/world-social-report",
+      "method": "direct-heading",
+      "warnings": [
+        "reader https://social.desa.un.org/issues/world-social-report: 401 Client Error: Unauthorized for url: https://r.jina.ai/https://social.desa.un.org/issues/world-social-report"
+      ]
     },
     {
       "monitor": "World Happiness Report",
@@ -388,7 +396,7 @@
       "monitor": "Global Education Monitoring Report",
       "kind": "series",
       "ok": false,
-      "error": "direct https://www.unesco.org/gem-report/en/publication/equity-and-access: HTTPSConnectionPool(host='www.unesco.org', port=443): Read timed out. (read timeout=22) | reader https://www.unesco.org/gem-report/en/publication/equity-and-access: 401 Client Error: Unauthorized for url: https://r.jina.ai/https://www.unesco.org/gem-report/en/publication/equity-and-ac"
+      "error": "direct https://www.unesco.org/gem-report/en/publication/equity-and-access: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response')) | reader https://www.unesco.org/gem-report/en/publication/equity-and-access: 401 Client Error: Unauthorized for url: https://r.jina.ai/https://www.unesco.org/gem-report/en/publication/equity-and-ac"
     },
     {
       "monitor": "Global Multidimensional Poverty Index",
@@ -506,7 +514,7 @@
       "monitor": "BIS discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 17,
+      "candidates": 18,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
@@ -541,14 +549,11 @@
     {
       "monitor": "World Economic Forum discovery",
       "kind": "discovery",
-      "ok": false,
-      "candidates": 0,
+      "ok": true,
+      "candidates": 12,
       "new_candidates": 0,
       "suppressed": 0,
-      "warnings": [
-        "direct https://www.weforum.org/publications/: 403 Client Error: Forbidden for url: https://www.weforum.org/publications/",
-        "reader https://www.weforum.org/publications/: 401 Client Error: Unauthorized for url: https://r.jina.ai/https://www.weforum.org/publications/"
-      ]
+      "warnings": []
     },
     {
       "monitor": "Munich Security Conference discovery",
@@ -605,7 +610,7 @@
       "monitor": "Georgetown CSET discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 8,
+      "candidates": 9,
       "new_candidates": 1,
       "suppressed": 0,
       "warnings": []
@@ -675,7 +680,6 @@
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
-        "direct https://www.unep.org/resources: 403 Client Error: Forbidden for url: https://www.unep.org/resources",
         "reader https://www.unep.org/resources: 401 Client Error: Unauthorized for url: https://r.jina.ai/https://www.unep.org/resources"
       ]
     },
@@ -738,13 +742,12 @@
     {
       "monitor": "UNHCR discovery",
       "kind": "discovery",
-      "ok": false,
-      "candidates": 0,
+      "ok": true,
+      "candidates": 1,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
-        "reader https://www.unhcr.org/publications: 401 Client Error: Unauthorized for url: https://r.jina.ai/https://www.unhcr.org/publications",
-        "direct https://www.unhcr.org/publications: 403 Client Error: Forbidden for url: https://www.unhcr.org/publications"
+        "reader https://www.unhcr.org/publications: 401 Client Error: Unauthorized for url: https://r.jina.ai/https://www.unhcr.org/publications"
       ]
     },
     {
@@ -763,7 +766,7 @@
       "monitor": "WHO discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 9,
+      "candidates": 8,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
@@ -782,14 +785,11 @@
     {
       "monitor": "UNESCO discovery",
       "kind": "discovery",
-      "ok": false,
-      "candidates": 0,
+      "ok": true,
+      "candidates": 1,
       "new_candidates": 0,
       "suppressed": 0,
-      "warnings": [
-        "direct https://www.unesco.org/en/publications: HTTPSConnectionPool(host='www.unesco.org', port=443): Read timed out. (read timeout=22)",
-        "reader https://www.unesco.org/en/publications: 401 Client Error: Unauthorized for url: https://r.jina.ai/https://www.unesco.org/en/publications"
-      ]
+      "warnings": []
     },
     {
       "monitor": "V-Dem Institute discovery",
@@ -845,8 +845,8 @@
       "monitor": "Reporters Without Borders discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 3,
-      "new_candidates": 0,
+      "candidates": 5,
+      "new_candidates": 2,
       "suppressed": 0,
       "warnings": []
     },
