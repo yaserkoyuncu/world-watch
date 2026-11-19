@@ -1,13 +1,65 @@
 {
-  "last_checked": "2026-11-19T11:39:57.275401Z",
+  "last_checked": "2026-11-19T22:39:54.696803Z",
   "engine_version": "6.1",
   "monitor_count": 82,
   "flagship_series_count": 44,
   "discovery_source_count": 38,
-  "new_items_this_run": 7,
+  "new_items_this_run": 4,
   "new_flagship_editions_this_run": 0,
   "migration_baseline": false,
   "updates": [
+    {
+      "id": "f11085aa6e5ede",
+      "date": "2026-11-19",
+      "category": "Economy & Political Economy",
+      "source": "BIS",
+      "title": "19 November 2026 Governance - the cornerstone of a credible financial sector Phil Mnisi Governor",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.bis.org/speeches/20261119-governance-cornerstone-credible-financial-sector",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "bis"
+    },
+    {
+      "id": "587724745337d3",
+      "date": "2026-11-19",
+      "category": "Economy & Political Economy",
+      "source": "BIS",
+      "title": "19 November 2026 Economic activity, prices, and monetary policy in Japan - Japan's money and capital market transformation - will a paradigm shift occur? Hajime Takata Member of the Policy Board",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.bis.org/speeches/20261119-economic-activity-prices-and-monetary-policy-japan-japans-money-and-capital-market-transformation-will-paradigm-shift",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "bis"
+    },
+    {
+      "id": "f0aac81534c0c9",
+      "date": "2026-11-19",
+      "category": "Economy & Political Economy",
+      "source": "BIS",
+      "title": "19 November 2026 AI forecasts GDP as well as economists Aleš Michl Governor",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.bis.org/speeches/20261119-ai-forecasts-gdp-well-economists",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "bis"
+    },
+    {
+      "id": "e11c5b24ee3cfb",
+      "date": "2026-11-19",
+      "category": "Democracy & Rights",
+      "source": "Reporters Without Borders",
+      "title": "Uganda: where is journalist Eria Jengo, abducted more than two months ago? No one has heard from Baba TV journalist Eria Jengo since 10 September 2026, when he was allegedly abducted by men dressed in plainclothes in Uganda’s capital, Kampala.",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://rsf.org/en/uganda-where-journalist-eria-jengo-abducted-more-two-months-ago",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "rsf"
+    },
     {
       "id": "809fc5169747ac",
       "date": "2026-11-19",
@@ -2041,58 +2093,6 @@
       "automatic": true,
       "confidence": "medium",
       "discovery_source": "bis"
-    },
-    {
-      "id": "4d1266398619d5",
-      "date": "2026-10-24",
-      "category": "Economy & Political Economy",
-      "source": "BIS",
-      "title": "15 December 2018 BIS Quarterly Review, December 2018 - media briefing Claudio Borio Former Head of the Monetary and Economic Department Hyun Song Shin Governor, Bank of Korea",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.bis.org/speeches/20181215-bis-quarterly-review-december-2018-media-briefing",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "bis"
-    },
-    {
-      "id": "127c2d3b952d50",
-      "date": "2026-10-24",
-      "category": "Economy & Political Economy",
-      "source": "BIS",
-      "title": "Hyun Song Shin Governor, Bank of Korea",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.bis.org/author/hyun-song-shin",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "bis"
-    },
-    {
-      "id": "ea967e184cbabb",
-      "date": "2026-10-23",
-      "category": "Science",
-      "source": "Quanta Magazine",
-      "title": "AI Proved the Quasi-Riemann Hypothesis. What Happens Now? ![Image 11",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.quantamagazine.org/wp-content/uploads/2026/10/ReimannAI-crEmilyBuder_GuanHueiWu-Default.webp",
-      "type": "Significant analysis",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "quanta"
-    },
-    {
-      "id": "01f8c218cbacf0",
-      "date": "2026-10-23",
-      "category": "Demography & Society",
-      "source": "IOM",
-      "title": "World Migration Education Toolkit 2026",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://publications.iom.int/books/world-migration-education-toolkit-2026",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "iom"
     }
   ]
 }
