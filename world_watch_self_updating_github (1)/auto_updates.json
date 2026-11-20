@@ -1,13 +1,56 @@
 {
-  "last_checked": "2026-11-20T11:40:16.291205Z",
+  "last_checked": "2026-11-20T22:14:37.927045Z",
   "engine_version": "6.1",
   "monitor_count": 82,
   "flagship_series_count": 44,
   "discovery_source_count": 38,
-  "new_items_this_run": 1,
-  "new_flagship_editions_this_run": 0,
+  "new_items_this_run": 3,
+  "new_flagship_editions_this_run": 2,
   "migration_baseline": false,
   "updates": [
+    {
+      "id": "9cf8b6159a5fc7",
+      "date": "2026-11-20",
+      "category": "Economy & Political Economy",
+      "source": "IMF",
+      "title": "World Economic Outlook — October 2026",
+      "summary": "Edition-aware monitor detected a newer World Economic Outlook: October 2026, replacing July 2026.",
+      "url": "https://www.imf.org/en/publications/weo/issues/2026/10/13/world-economic-outlook-october-2026",
+      "type": "Major flagship update",
+      "automatic": true,
+      "series_id": "imf_weo",
+      "edition": "October 2026",
+      "previous_edition": "July 2026",
+      "confidence": "high"
+    },
+    {
+      "id": "327804ca47937e",
+      "date": "2026-11-20",
+      "category": "Economy & Political Economy",
+      "source": "UNCTAD",
+      "title": "Trade and Development Report — 2026",
+      "summary": "Edition-aware monitor detected a newer Trade and Development Report: 2026, replacing 2025.",
+      "url": "https://unctad.org/sites/default/files/styles/cover_image/public/2026-10/tdr2026_1000x1414.jpg?itok=pvMySBsu",
+      "type": "New flagship edition",
+      "automatic": true,
+      "series_id": "unctad_tdr",
+      "edition": "2026",
+      "previous_edition": "2025",
+      "confidence": "high"
+    },
+    {
+      "id": "dbe10c7be6367b",
+      "date": "2026-11-20",
+      "category": "Technology & AI",
+      "source": "KPMG",
+      "title": "2026 CEO Outlook CEOs strengthen digital resilience amidst economic, geopolitical and regulatory uncertainty. Read more",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://kpmg.com/xx/en/our-insights/value-creation/global-ceo-outlook-survey.html",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "kpmg"
+    },
     {
       "id": "c6ddf01f53a3ab",
       "date": "2026-11-20",
@@ -163,21 +206,6 @@
       "automatic": true,
       "confidence": "medium",
       "discovery_source": "who"
-    },
-    {
-      "id": "9cf8b6159a5fc7",
-      "date": "2026-11-18",
-      "category": "Economy & Political Economy",
-      "source": "IMF",
-      "title": "World Economic Outlook — October 2026",
-      "summary": "Edition-aware monitor detected a newer World Economic Outlook: October 2026, replacing July 2026.",
-      "url": "https://www.imf.org/en/publications/weo/issues/2026/10/13/world-economic-outlook-october-2026",
-      "type": "Major flagship update",
-      "automatic": true,
-      "series_id": "imf_weo",
-      "edition": "October 2026",
-      "previous_edition": "July 2026",
-      "confidence": "high"
     },
     {
       "id": "509db34eecfae2",
@@ -347,21 +375,6 @@
       "automatic": true,
       "confidence": "medium",
       "discovery_source": "cset"
-    },
-    {
-      "id": "327804ca47937e",
-      "date": "2026-11-16",
-      "category": "Economy & Political Economy",
-      "source": "UNCTAD",
-      "title": "Trade and Development Report — 2026",
-      "summary": "Edition-aware monitor detected a newer Trade and Development Report: 2026, replacing 2025.",
-      "url": "https://unctad.org/sites/default/files/styles/cover_image/public/2026-10/tdr2026_1000x1414.jpg?itok=pvMySBsu",
-      "type": "New flagship edition",
-      "automatic": true,
-      "series_id": "unctad_tdr",
-      "edition": "2026",
-      "previous_edition": "2025",
-      "confidence": "high"
     },
     {
       "id": "07ee971b0eeb1d",
@@ -2080,19 +2093,6 @@
       "automatic": true,
       "confidence": "medium",
       "discovery_source": "unctad"
-    },
-    {
-      "id": "8700e08d3f356f",
-      "date": "2026-10-24",
-      "category": "Economy & Political Economy",
-      "source": "BIS",
-      "title": "CPMI Papers No 193 13 Jul 2020 Enhancing cross-border payments: building blocks of a global roadmap CPMI is publishing its report \"Enhancing cross-border payments: building blocks of a global roadmap\", July 2020 CPMI",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.bis.org/publications/enhancing-cross-border-payments-building-blocks-global-roadmap",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "bis"
     }
   ]
 }
