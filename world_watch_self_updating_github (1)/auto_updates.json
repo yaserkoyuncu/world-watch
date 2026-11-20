@@ -1,13 +1,26 @@
 {
-  "last_checked": "2026-11-19T22:39:54.696803Z",
+  "last_checked": "2026-11-20T11:40:16.291205Z",
   "engine_version": "6.1",
   "monitor_count": 82,
   "flagship_series_count": 44,
   "discovery_source_count": 38,
-  "new_items_this_run": 4,
+  "new_items_this_run": 1,
   "new_flagship_editions_this_run": 0,
   "migration_baseline": false,
   "updates": [
+    {
+      "id": "c6ddf01f53a3ab",
+      "date": "2026-11-20",
+      "category": "Health, Food & Education",
+      "source": "WHO",
+      "title": "Prevention and treatment of respiratory syncytial virus disease among children",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.who.int/publications/i/item/B09982",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "who"
+    },
     {
       "id": "f11085aa6e5ede",
       "date": "2026-11-19",
@@ -2076,19 +2089,6 @@
       "title": "CPMI Papers No 193 13 Jul 2020 Enhancing cross-border payments: building blocks of a global roadmap CPMI is publishing its report \"Enhancing cross-border payments: building blocks of a global roadmap\", July 2020 CPMI",
       "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
       "url": "https://www.bis.org/publications/enhancing-cross-border-payments-building-blocks-global-roadmap",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "bis"
-    },
-    {
-      "id": "42f0f46e9e8f81",
-      "date": "2026-10-24",
-      "category": "Economy & Political Economy",
-      "source": "BIS",
-      "title": "Claudio Borio Former Head of the Monetary and Economic Department",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.bis.org/author/claudio-borio",
       "type": "Important new report",
       "automatic": true,
       "confidence": "medium",
