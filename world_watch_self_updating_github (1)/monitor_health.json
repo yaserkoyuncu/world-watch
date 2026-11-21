@@ -1,5 +1,5 @@
 {
-  "last_checked": "2026-11-20T22:14:37.927045Z",
+  "last_checked": "2026-11-21T11:01:31.048567Z",
   "engine_version": "6.1",
   "migration_baseline": false,
   "series": {
@@ -253,7 +253,7 @@
       "ok": true,
       "latest": "2025",
       "url": "https://globalcarbonbudget.org/gcb-2025/",
-      "method": "direct-title",
+      "method": "official-url",
       "warnings": []
     },
     {
@@ -571,7 +571,7 @@
       "kind": "discovery",
       "ok": true,
       "candidates": 8,
-      "new_candidates": 1,
+      "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
     },
