@@ -1,13 +1,52 @@
 {
-  "last_checked": "2026-11-23T01:43:16.677006Z",
+  "last_checked": "2026-11-23T12:41:17.341405Z",
   "engine_version": "6.1",
   "monitor_count": 82,
   "flagship_series_count": 44,
   "discovery_source_count": 38,
-  "new_items_this_run": 0,
+  "new_items_this_run": 3,
   "new_flagship_editions_this_run": 0,
   "migration_baseline": false,
   "updates": [
+    {
+      "id": "422bdb61bd798b",
+      "date": "2026-11-23",
+      "category": "Health, Food & Education",
+      "source": "WHO",
+      "title": "Western Pacific Regional Antimicrobial Consumption Surveillance System manual on the surveillance of...",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.who.int/publications/i/item/9789290621447",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "who"
+    },
+    {
+      "id": "1c52cfcd73a8c2",
+      "date": "2026-11-23",
+      "category": "Health, Food & Education",
+      "source": "WHO",
+      "title": "Western Pacific Regional Antimicrobial Consumption Surveillance System manual on the surveillance of...",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.who.int/publications/i/item/9789290621331",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "who"
+    },
+    {
+      "id": "2061398d89ac10",
+      "date": "2026-11-23",
+      "category": "Health, Food & Education",
+      "source": "FAO",
+      "title": "Food Outlook – Biannual report on global food markets",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://doi.org/10.4060/ce0625en",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "fao"
+    },
     {
       "id": "ea2f4c322c9ad7",
       "date": "2026-11-22",
@@ -2056,45 +2095,6 @@
       "automatic": true,
       "confidence": "medium",
       "discovery_source": "bis"
-    },
-    {
-      "id": "3382e060b57fd9",
-      "date": "2026-10-25",
-      "category": "Economy & Political Economy",
-      "source": "UNCTAD",
-      "title": "Gulf Cooperation Council Investment Report 25 Oct 2026",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://unctad.org/publication/gulf-cooperation-council-investment-report",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "unctad"
-    },
-    {
-      "id": "495a24f9d970cd",
-      "date": "2026-10-25",
-      "category": "Economy & Political Economy",
-      "source": "UNCTAD",
-      "title": "Global Investment Trends Monitor, No. 51 25 Oct 2026",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://unctad.org/publication/global-investment-trends-monitor-no-51",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "unctad"
-    },
-    {
-      "id": "cd761dbf4a0b0e",
-      "date": "2026-10-25",
-      "category": "Economy & Political Economy",
-      "source": "UNCTAD",
-      "title": "Eurasian Economic Union Investment Report 2026: International investment trends, policy developments 25 Oct 2026",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://unctad.org/publication/eurasian-economic-union-investment-report-2026-international-investment-trends-policy",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "unctad"
     }
   ]
 }
