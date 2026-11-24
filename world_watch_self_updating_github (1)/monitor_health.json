@@ -1,15 +1,15 @@
 {
-  "last_checked": "2026-11-24T02:12:30.594614Z",
+  "last_checked": "2026-11-24T13:43:30.953216Z",
   "engine_version": "6.1",
   "migration_baseline": false,
   "series": {
-    "ok": 40,
-    "failed": 4,
+    "ok": 41,
+    "failed": 3,
     "total": 44
   },
   "discovery": {
-    "ok": 30,
-    "failed": 8,
+    "ok": 29,
+    "failed": 9,
     "total": 38
   },
   "monitors": [
@@ -132,10 +132,8 @@
       "ok": true,
       "latest": "2026",
       "url": "https://www.sipri.org/yearbook/2026",
-      "method": "official-url",
-      "warnings": [
-        "direct https://www.sipri.org/yearbook/2026: 500 Server Error: 500 Service unavailable (with message) for url: https://www.sipri.org/yearbook/2026"
-      ]
+      "method": "direct-title",
+      "warnings": []
     },
     {
       "monitor": "Annual Threat Assessment",
@@ -260,7 +258,7 @@
       "ok": true,
       "latest": "2025",
       "url": "https://globalcarbonbudget.org/gcb-2025/",
-      "method": "direct-title",
+      "method": "official-url",
       "warnings": []
     },
     {
@@ -295,8 +293,14 @@
     {
       "monitor": "Global Trends",
       "kind": "series",
-      "ok": false,
-      "error": "direct https://www.unhcr.org/au/global-trends: 403 Client Error: Forbidden for url: https://www.unhcr.org/au/global-trends | direct https://www.unhcr.org/media/global-trends-2025-report: 403 Client Error: Forbidden for url: https://www.unhcr.org/media/global-trends-2025-report | direct https://www.unhcr.org/global-trends: 403 Client Error: Forbidden for url: https://www.unhcr.org/global-trends"
+      "ok": true,
+      "latest": "2026",
+      "url": "https://www.unhcr.org/global-trends",
+      "method": "reader-block",
+      "warnings": [
+        "direct https://www.unhcr.org/au/global-trends: 403 Client Error: Forbidden for url: https://www.unhcr.org/au/global-trends",
+        "direct https://www.unhcr.org/media/global-trends-2025-report: 403 Client Error: Forbidden for url: https://www.unhcr.org/media/global-trends-2025-report"
+      ]
     },
     {
       "monitor": "Human Development Report",
@@ -348,7 +352,7 @@
       "kind": "series",
       "ok": true,
       "latest": "2026",
-      "url": "https://www.unesco.org/gem-report/en/articles/what-does-2026-gem-report-say-about-access-and-equity-education",
+      "url": "https://www.unesco.org/gem-report/sites/default/files/styles/banner_mobile/public/2026-03/cover%20image%20web.jpg.webp?itok=O_g9oZz8",
       "method": "reader-link",
       "warnings": []
     },
@@ -404,8 +408,8 @@
       "kind": "series",
       "ok": true,
       "latest": "2025",
-      "url": "https://www.transparency.org/en/press/corruption-perceptions-index-2025-decline-leadership-undermining-global-fight",
-      "method": "reader-link",
+      "url": "https://www.transparency.org/en/cpi/2025",
+      "method": "reader-block",
       "warnings": []
     },
     {
@@ -452,7 +456,7 @@
       "monitor": "BIS discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 20,
+      "candidates": 19,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": []
@@ -487,8 +491,8 @@
     {
       "monitor": "World Economic Forum discovery",
       "kind": "discovery",
-      "ok": true,
-      "candidates": 5,
+      "ok": false,
+      "candidates": 0,
       "new_candidates": 0,
       "suppressed": 0,
       "warnings": [
@@ -508,12 +512,10 @@
       "monitor": "SIPRI discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 15,
-      "new_candidates": 4,
+      "candidates": 11,
+      "new_candidates": 1,
       "suppressed": 0,
-      "warnings": [
-        "direct https://www.sipri.org/publications: 500 Server Error: 500 Service unavailable (with message) for url: https://www.sipri.org/publications"
-      ]
+      "warnings": []
     },
     {
       "monitor": "ODNI discovery",
@@ -589,7 +591,7 @@
       "kind": "discovery",
       "ok": true,
       "candidates": 14,
-      "new_candidates": 0,
+      "new_candidates": 1,
       "suppressed": 0,
       "warnings": []
     },

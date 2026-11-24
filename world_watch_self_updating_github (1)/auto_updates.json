@@ -1,13 +1,65 @@
 {
-  "last_checked": "2026-11-24T02:12:30.594614Z",
+  "last_checked": "2026-11-24T13:43:30.953216Z",
   "engine_version": "6.1",
   "monitor_count": 82,
   "flagship_series_count": 44,
   "discovery_source_count": 38,
-  "new_items_this_run": 6,
+  "new_items_this_run": 4,
   "new_flagship_editions_this_run": 0,
   "migration_baseline": false,
   "updates": [
+    {
+      "id": "4840927b368056",
+      "date": "2026-11-24",
+      "category": "Economy & Political Economy",
+      "source": "UNCTAD",
+      "title": "Foreign investment screening: Legal design, administrative models and emerging practice 24 Nov 2026",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://unctad.org/publication/foreign-investment-screening-legal-design-administrative-models-and-emerging-practice",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "unctad"
+    },
+    {
+      "id": "a0d43e3f7537d4",
+      "date": "2026-11-24",
+      "category": "Geopolitics & Security",
+      "source": "SIPRI",
+      "title": "Mapping the Military Artificial Intelligence Industry: Actors, Influence and Policymaking",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.sipri.org/publications/2026/other-publications/mapping-military-artificial-intelligence-industry-actors-influence-and-policymaking",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "sipri"
+    },
+    {
+      "id": "7dd614b305447d",
+      "date": "2026-11-24",
+      "category": "Technology & AI",
+      "source": "WIPO",
+      "title": "World Intellectual Property Indicators 2026",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.wipo.int/publications/en/details.jsp?id=4886&plang=EN",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "wipo"
+    },
+    {
+      "id": "3d08c5d2370d18",
+      "date": "2026-11-24",
+      "category": "Health, Food & Education",
+      "source": "WHO",
+      "title": "Health financing progress matrix assessment: Zimbabwe, 2026",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.who.int/publications/i/item/9789290316343",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "who"
+    },
     {
       "id": "c934833a2f4313",
       "date": "2026-11-24",
@@ -2043,58 +2095,6 @@
       "automatic": true,
       "confidence": "medium",
       "discovery_source": "icg"
-    },
-    {
-      "id": "dd60cfb6bc3395",
-      "date": "2026-10-27",
-      "category": "Climate & Energy",
-      "source": "WMO",
-      "title": "Publication 27 October 2026 WMO Greenhouse Gas Bulletin - No. 22",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://wmo.int/resources/publication-series/greenhouse-gas-bulletin/no-22",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "wmo"
-    },
-    {
-      "id": "1da7e377086ec7",
-      "date": "2026-10-27",
-      "category": "Economy & Political Economy",
-      "source": "World Bank",
-      "title": "Download full report",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.worldbank.org/en/publication/poverty-prosperity-and-planet",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "wb"
-    },
-    {
-      "id": "a0bb3fe60c33b2",
-      "date": "2026-10-26",
-      "category": "Economy & Political Economy",
-      "source": "BIS",
-      "title": "26 October 2026 Rewiring payments - open. Connected. Inclusive. Lesetja Kganyago Governor",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.bis.org/speeches/20261026-rewiring-payments-open-connected-inclusive",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "bis"
-    },
-    {
-      "id": "ef72c0708513ea",
-      "date": "2026-10-26",
-      "category": "Economy & Political Economy",
-      "source": "BIS",
-      "title": "26 October 2026 On taxes, credit and growth Dimitar Radev Governor",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.bis.org/speeches/20261007-taxes-credit-and-growth",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "bis"
     }
   ]
 }
