@@ -1,13 +1,28 @@
 {
-  "last_checked": "2026-11-25T12:56:06.057307Z",
+  "last_checked": "2026-11-25T23:37:22.298073Z",
   "engine_version": "6.1",
   "monitor_count": 82,
   "flagship_series_count": 44,
   "discovery_source_count": 38,
-  "new_items_this_run": 6,
+  "new_items_this_run": 4,
   "new_flagship_editions_this_run": 1,
   "migration_baseline": false,
   "updates": [
+    {
+      "id": "22bec4b602c907",
+      "date": "2026-11-25",
+      "category": "Economy & Political Economy",
+      "source": "UNCTAD",
+      "title": "Trade and Development Report — 2026",
+      "summary": "Edition-aware monitor detected a newer Trade and Development Report: 2026, replacing 2025.",
+      "url": "https://unctad.org/publication/trade-and-development-report-2026",
+      "type": "New flagship edition",
+      "automatic": true,
+      "series_id": "unctad_tdr",
+      "edition": "2026",
+      "previous_edition": "2025",
+      "confidence": "high"
+    },
     {
       "id": "a81add3f820e1a",
       "date": "2026-11-25",
@@ -22,6 +37,45 @@
       "edition": "2026",
       "previous_edition": "2025",
       "confidence": "high"
+    },
+    {
+      "id": "5415df07a0f24c",
+      "date": "2026-11-25",
+      "category": "Health, Food & Education",
+      "source": "UNESCO",
+      "title": "The state of higher education in the Arab States",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.unesco.org/en/articles/state-higher-education-arab-states",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "unesco"
+    },
+    {
+      "id": "d3d80305d7c0ba",
+      "date": "2026-11-25",
+      "category": "Health, Food & Education",
+      "source": "UNESCO",
+      "title": "Global Report on Teachers. Advancing teacher professional development through lifelong learning",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.unesco.org/en/articles/global-report-teachers-advancing-teacher-professional-development-through-lifelong-learning",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "unesco"
+    },
+    {
+      "id": "6fcb78c5f10b0e",
+      "date": "2026-11-25",
+      "category": "Health, Food & Education",
+      "source": "UNESCO",
+      "title": "Global Report on Early Childhood Care and Education. Financing for equity and quality",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.unesco.org/en/articles/global-report-early-childhood-care-and-education-financing-equity-and-quality",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "unesco"
     },
     {
       "id": "3af731c4785958",
@@ -285,21 +339,6 @@
       "series_id": "imf_weo",
       "edition": "October 2026",
       "previous_edition": "July 2026",
-      "confidence": "high"
-    },
-    {
-      "id": "327804ca47937e",
-      "date": "2026-11-20",
-      "category": "Economy & Political Economy",
-      "source": "UNCTAD",
-      "title": "Trade and Development Report — 2026",
-      "summary": "Edition-aware monitor detected a newer Trade and Development Report: 2026, replacing 2025.",
-      "url": "https://unctad.org/sites/default/files/styles/cover_image/public/2026-10/tdr2026_1000x1414.jpg?itok=pvMySBsu",
-      "type": "New flagship edition",
-      "automatic": true,
-      "series_id": "unctad_tdr",
-      "edition": "2026",
-      "previous_edition": "2025",
       "confidence": "high"
     },
     {
@@ -2058,45 +2097,6 @@
       "automatic": true,
       "confidence": "medium",
       "discovery_source": "undp"
-    },
-    {
-      "id": "58a46775f5d447",
-      "date": "2026-10-28",
-      "category": "Demography & Society",
-      "source": "UNDP",
-      "title": "Publications ![Image 40: UNDP poster titled 'Creating Opportunities' with a diverse group of professionals and the UN logo.",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.undp.org/sites/g/files/zskgke326/files/styles/content_card_453_x_256_/public/2026-10/creating_opportunities.png?h=a9418b0d&itok=1GKpTgoz",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "undp"
-    },
-    {
-      "id": "5398ec1b0cdc6a",
-      "date": "2026-10-27",
-      "category": "Economy & Political Economy",
-      "source": "BIS",
-      "title": "BIS Bulletin 27 Oct 2026 AI infrastructure financing Long-term debt and off-balance-sheet vehicles are financing the AI build-out, concentrating risks among a small number of firms and investors.",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.bis.org/publications/bulletin-140-building-ai-credit--structures-and-spillovers",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "bis"
-    },
-    {
-      "id": "a307033b895793",
-      "date": "2026-10-27",
-      "category": "Economy & Political Economy",
-      "source": "BIS",
-      "title": "27 October 2026 Monetary policy in times of geopolitical tensions and technological disruption Olli Rehn Governor",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.bis.org/speeches/20261027-monetary-policy-times-geopolitical-tensions-and-technological-disruption",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "bis"
     }
   ]
 }
