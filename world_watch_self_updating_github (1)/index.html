@@ -180,7 +180,7 @@ input,select{width:100%;border:1px solid var(--line);background:var(--panel);col
 </section>
 
 <section class="view" id="updates">
-  <div class="sectionhead"><div><h2>All reports &amp; updates</h2><p>Browse the retained archive by date, theme or institution. Automatic dates indicate detection; curated dates are publication dates where known, otherwise marked as archive-added dates.</p></div><button class="smallbtn" id="markSeen2">Mark all seen</button></div>
+  <div class="sectionhead"><div><h2>All reports &amp; updates</h2><p>Formal reports only — browse by date, theme or institution. Speeches, media and commentary are excluded. Automatic dates indicate detection; curated dates are publication dates where known, otherwise marked as archive-added dates.</p></div><button class="smallbtn" id="markSeen2">Mark all seen</button></div>
   <div class="filterlabel">Sort reports</div>
   <div class="viewcontrols" id="reportSortButtons" aria-label="Sort reports">
     <button class="filterbtn" type="button" data-sort="newest" aria-pressed="true">Newest first</button>
@@ -354,6 +354,15 @@ $("cancelNote").onclick=()=>$("modalBack").classList.remove("open");$("saveNote"
 const savedTheme=localStorage.getItem("ww_theme");if(savedTheme)document.documentElement.dataset.theme=savedTheme;else if(matchMedia("(prefers-color-scheme:light)").matches)document.documentElement.dataset.theme="light";
 $("themeBtn").onclick=()=>{let n=document.documentElement.dataset.theme==="light"?"dark":"light";document.documentElement.dataset.theme=n;localStorage.setItem("ww_theme",n)};
 document.addEventListener("keydown",e=>{if(e.key==="/"&&document.activeElement.tagName!=="INPUT"&&document.activeElement.tagName!=="TEXTAREA"){e.preventDefault();goView("sources");$("search").focus()}if(e.key==="Escape")$("modalBack").classList.remove("open")});
+const reportRules=Object.fromEntries(Object.entries({"REPORT_REJECT_TITLE":"(?:\\b(?:speeches|speech|keynote|remarks by|interviews?|podcasts?|webinars?|videos?|press releases?|media releases?|news releases?|op[- ]eds?|opinion pieces?|commentary|blog posts?|newsletters?|event announcements?|calls? for papers|registration|vacanc\\w*|job openings?|executive summary|conference proceedings|proceedings of|working papers?|technical notes?)\\b|!\\[image|\\bimage \\d+\\s*:|^\\s*(?:https?://|more:|read more|download (?:the |full )?report|reports and publications|publications)\\s*$)","REPORT_REJECT_URL":"(?:/(?:speeches?|remarks?|interviews?|podcasts?|pod|videos?|vid|webinars?|events?|meetings-and-events|press[-_]?releases?|media[-_]?releases?|news[-_]?releases?|news|blogs?|opinions?|op[-_]?eds?|commentary|authors?|people|staff|careers|jobs|wp-content/uploads|sites/default/files/styles|assets|images)(?:/|$)|/(?:\\d+/)?pr-\\d|[.](?:png|jpe?g|gif|webp|svg|ico|avif)(?:$|[?#]))","REPORT_TITLE":"\\b(?:reports?|outlook|forecasts?|projections?|assessment|assessments|yearbook|survey|surveys|index|indices|indicators|statistics|statistical|prospects|barometer|monitor|global trends|capital market assumptions|capital markets model|commodity summaries|demand trends|platinum quarterly|strategic foresight|conflicts to watch|conflict watchlist|policy research|research study|research studies|policy briefs?|research briefs?|technical briefs?|fact sheets?|flagship|white papers?|market assumptions|market scenarios)\\b","REPORT_PATH":"/(?:publications?|reports?|research-reports|policy-briefs?|research-publications|rpt|books|papers)/(?:[^/?#]+)","REPORT_CATALOG":"(?:who[.]int/publications/i/item/|cset[.]georgetown[.]edu/publication/|unctad[.]org/publication/|irena[.]org/publications/\\d{4}/|sipri[.]org/publications/\\d{4}/|weforum[.]org/publications/[^/?#]+|publications[.]iom[.]int/books/|openknowledge[.]worldbank[.]org/entities/publication/|undp[.]org/publications/[^/?#]+|transparency[.]org/(?:en/)?publications/[^/?#]+)"}).map(([k,v])=>[k,new RegExp(v,"i")]));
+function isFormalReport(u){
+  if(!u.automatic||u.series_id)return true;
+  try{
+    const parsed=new URL(u.url),title=String(u.title||"").trim(),path=parsed.pathname;
+    if(!["http:","https:"].includes(parsed.protocol)||reportRules.REPORT_REJECT_TITLE.test(title)||reportRules.REPORT_REJECT_URL.test(path)||/(?:^|[-/])(?:commentary|speech|interview|podcast)(?:[-/]|$)/i.test(path)||/(?:^|\.)(?:quantamagazine\.org|carbonbrief\.org)$/i.test(parsed.hostname))return false;
+    return (reportRules.REPORT_TITLE.test(title)&&(reportRules.REPORT_PATH.test(path)||/report|outlook|forecast|survey|index|assessment|yearbook|statistics|monitor|foresight|commodity|publication|research|assumptions|brief|watchlist|quarterly|trends/i.test(path)))||reportRules.REPORT_CATALOG.test(parsed.hostname+path)||(/\.pdf$/i.test(path)&&reportRules.REPORT_TITLE.test(title));
+  }catch(e){return false}
+}
 async function loadUpdates(){
   let curated=embeddedUpdates, automatic=[];
   try{
@@ -380,7 +389,7 @@ async function loadUpdates(){
     }
   }catch(e){}
   const seenUrls=new Set();
-  updates=[...automatic,...curated].filter(u=>{
+  updates=[...automatic,...curated].filter(isFormalReport).filter(u=>{
     const key=u.series_id&&u.edition?"series:"+u.series_id+":"+u.edition:u.url||u.id;
     if(seenUrls.has(key)) return false;
     seenUrls.add(key); return true;
