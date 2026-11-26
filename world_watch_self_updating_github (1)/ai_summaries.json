@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_checked": "2026-11-26T14:59:57.543871+00:00",
+  "last_checked": "2026-11-26T20:51:58.489845+00:00",
   "reports": {
     "strategic_seed_9": {
       "status": "ready",
@@ -19,10 +19,19 @@
       "editorial_trim": "Removed incomplete final sentence; original generated draft otherwise unchanged."
     },
     "frontier_seed_ai_safety_2026": {
-      "status": "unavailable",
-      "checked": "2026-11-26T14:51:57.626097+00:00",
-      "reason": "draft failed basic quality checks",
-      "report_url": "https://internationalaisafetyreport.org/publication/international-ai-safety-report-2026"
+      "status": "ready",
+      "report_url": "https://internationalaisafetyreport.org/publication/international-ai-safety-report-2026",
+      "pdf_url": "https://internationalaisafetyreport.org/sites/default/files/2026-02/international-ai-safety-report-2026_1.pdf",
+      "pages": [
+        11,
+        12,
+        13
+      ],
+      "summary": "The International AI Safety Report 2026 identifies three main categories of risks associated with general-purpose AI: malicious use, malfunctions, and systemic risks. Evidence for some risks, like AI-generated content used for scams and cyberattacks, is growing. Malfunctions include reliability issues and loss of control scenarios, where AI systems operate independently and uncontrollably. Systemic risks involve labor market impacts and risks to human autonomy, affecting jobs and decision-making processes. The report recommends layered risk management strategies, including threat modeling, capability evaluations, and incident reporting, alongside technical safeguards and societal resilience measures. Despite improvements, AI systems still face significant challenges in terms of understanding their inner workings and ensuring robustness against misuse.",
+      "checked": "2026-11-26T20:51:58.489845+00:00",
+      "model": "Qwen/Qwen2.5-3B-Instruct",
+      "scope": "Selected executive-summary or findings pages",
+      "pipeline_version": 4
     },
     "strategic_seed_16": {
       "status": "ready",
@@ -38,6 +47,21 @@
       "model": "Qwen/Qwen2.5-3B-Instruct",
       "scope": "Selected substantive report pages (no executive-summary heading required)",
       "pipeline_version": 2
+    },
+    "strategic_seed_10": {
+      "status": "ready",
+      "report_url": "https://www.usgs.gov/publications/mineral-commodity-summaries-2026",
+      "pdf_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf",
+      "pages": [
+        11,
+        12,
+        13
+      ],
+      "summary": "The report indicates a rise in nonfuel mineral production value in the United States from $106 billion in 2024 to $112 billion in 2025, driven by a 13% increase in metal production and a 2% growth in industrial minerals production. Despite this growth, the prices of certain metals like lithium and manganese declined, while others such as bismuth and antimony saw significant price hikes. The U.S. nonfuel mining sector employs around 1.82 million people, with average weekly earnings averaging $1,900. The U.S. remains highly dependent on foreign sources for many critical minerals, with China being the leading supplier for several key minerals. Tariffs and export controls have been implemented by various countries affecting the global supply chain.",
+      "checked": "2026-11-26T20:51:58.489845+00:00",
+      "model": "Qwen/Qwen2.5-3B-Instruct",
+      "scope": "Selected executive-summary or findings pages",
+      "pipeline_version": 4
     }
   }
 }
