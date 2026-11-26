@@ -1,18 +1,42 @@
 {
   "version": 1,
-  "last_checked": "2026-11-26T14:51:57.626097+00:00",
+  "last_checked": "2026-11-26T14:59:57.543871+00:00",
   "reports": {
     "strategic_seed_9": {
-      "status": "unavailable",
-      "checked": "2026-11-26T14:51:57.626097+00:00",
-      "reason": "draft failed basic quality checks",
-      "report_url": "https://www.iea.org/reports/global-critical-minerals-outlook-2026"
+      "status": "ready",
+      "report_url": "https://www.iea.org/reports/global-critical-minerals-outlook-2026",
+      "pdf_url": "https://iea.blob.core.windows.net/assets/19c60aa0-ee07-4a20-a138-33c967ac5008/GlobalCriticalMineralsOutlook2026.pdf",
+      "pages": [
+        6,
+        7,
+        8
+      ],
+      "summary": "The report highlights that critical minerals' prices rebounded in 2025 and early 2026, driven by tight supply conditions and increasing geopolitical tensions. Despite this recovery, new risks have emerged, particularly for cobalt due to export controls in the Democratic Republic of Congo (DRC). Supply concentration in refining has risen, with China and Indonesia accounting for over three-quarters of total growth in refined supply. The Middle East conflict has exacerbated supply chain vulnerabilities, leading to export controls and disruptions in key minerals like aluminium, sulphur, and helium. Investment in critical minerals declined by 9% in 2025, influenced by geopolitical tensions and price volatility. While mergers and acquisitions rebounded, exploration spending fell, indicating a shift towards more focused investments in high-quality assets. Strategic stockpiles can serve as a short-term buffer against supply disruptions, though the potential economic impacts",
+      "checked": "2026-11-26T14:59:57.543871+00:00",
+      "model": "Qwen/Qwen2.5-3B-Instruct",
+      "scope": "Selected executive-summary or findings pages",
+      "pipeline_version": 2
     },
     "frontier_seed_ai_safety_2026": {
       "status": "unavailable",
       "checked": "2026-11-26T14:51:57.626097+00:00",
       "reason": "draft failed basic quality checks",
       "report_url": "https://internationalaisafetyreport.org/publication/international-ai-safety-report-2026"
+    },
+    "strategic_seed_16": {
+      "status": "ready",
+      "report_url": "https://commission.europa.eu/strategy-and-policy/strategic-foresight/2025-strategic-foresight-report_en",
+      "pdf_url": "https://data.consilium.europa.eu/doc/document/ST-12388-2025-INIT/en/pdf",
+      "pages": [
+        3,
+        11,
+        19
+      ],
+      "summary": "The 2025 Strategic Foresight Report underscores the need for enhanced resilience in the EU, moving beyond mere crisis absorption to transformative adaptation. Despite recent successes in responding to crises, the report highlights the escalating complexity and diversity of challenges ahead, necessitating a proactive, forward-looking approach. Additionally, the document stresses the importance of addressing demographic shifts and inequalities, noting that while the European welfare model remains a strength, it faces significant strains, including aging populations and regional disparities. The report advocates for a framework promoting intergenerational fairness and resilience, aiming to harness demographic changes positively and mitigate vulnerabilities across various sectors. Ultimately, the EU must adopt foresight methodologies to navigate long-term global and internal challenges effectively, ensuring policies are robust and adaptable to diverse future scenarios.",
+      "checked": "2026-11-26T14:59:57.543871+00:00",
+      "model": "Qwen/Qwen2.5-3B-Instruct",
+      "scope": "Selected substantive report pages (no executive-summary heading required)",
+      "pipeline_version": 2
     }
   }
 }
