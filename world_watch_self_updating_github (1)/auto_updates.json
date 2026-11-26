@@ -1,13 +1,39 @@
 {
-  "last_checked": "2026-11-25T23:37:22.298073Z",
+  "last_checked": "2026-11-26T12:34:27.721888Z",
   "engine_version": "6.1",
   "monitor_count": 82,
   "flagship_series_count": 44,
   "discovery_source_count": 38,
-  "new_items_this_run": 4,
-  "new_flagship_editions_this_run": 1,
+  "new_items_this_run": 2,
+  "new_flagship_editions_this_run": 0,
   "migration_baseline": false,
   "updates": [
+    {
+      "id": "564e0721cf4467",
+      "date": "2026-11-26",
+      "category": "Economy & Political Economy",
+      "source": "BIS",
+      "title": "26 November 2026 Monetary policy amid frequent and complex shocks Philip N Jefferson Member of the Board of Governors",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.bis.org/speeches/20261126-monetary-policy-amid-frequent-and-complex-shocks",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "bis"
+    },
+    {
+      "id": "e0591d95f3c0fc",
+      "date": "2026-11-26",
+      "category": "Economy & Political Economy",
+      "source": "BIS",
+      "title": "26 November 2026 Considerations at the intersection of payments and tokenized markets Christopher J Waller Member of the Board of Governors",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.bis.org/speeches/20261126-considerations-intersection-payments-and-tokenized-markets",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "bis"
+    },
     {
       "id": "22bec4b602c907",
       "date": "2026-11-25",
@@ -2071,32 +2097,6 @@
       "automatic": true,
       "confidence": "medium",
       "discovery_source": "ilo"
-    },
-    {
-      "id": "35550a13b3c4ae",
-      "date": "2026-10-28",
-      "category": "Economy & Political Economy",
-      "source": "ILO",
-      "title": "AI’s Hidden Workers: The Link Between Securities Fraud and Labor Rights Violations",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.ilo.org/meetings-and-events/ai%E2%80%99s-hidden-workers-link-between-securities-fraud-and-labor-rights",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "ilo"
-    },
-    {
-      "id": "a3ea9a4f3bee95",
-      "date": "2026-10-28",
-      "category": "Demography & Society",
-      "source": "UNDP",
-      "title": "Publications ![Image 41: Magazine cover photo of a person in a brown coat and hat reaching toward a green circle.",
-      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
-      "url": "https://www.undp.org/sites/g/files/zskgke326/files/styles/content_card_453_x_256_/public/2026-10/screenshot_2026-10-27_145530.png?h=62637f15&itok=TUGoeJi6",
-      "type": "Important new report",
-      "automatic": true,
-      "confidence": "medium",
-      "discovery_source": "undp"
     }
   ]
 }
