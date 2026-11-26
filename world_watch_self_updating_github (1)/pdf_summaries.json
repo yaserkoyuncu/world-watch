@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_checked": "2026-11-26T14:43:38.474363+00:00",
+  "last_checked": "2026-11-26T14:51:19.356369+00:00",
   "reports": {
     "strategic_seed_1": {
       "status": "unavailable",
@@ -93,6 +93,72 @@
       "excerpt": "1. The WHO Enhanced Gonococcal Antimicrobial Surveillance Programme (EGASP) continues to provide standardized global surveillance of gonococcal antimicrobial susceptibility and resistance. In …",
       "report_url": "https://www.who.int/publications/i/item/9789240126565",
       "checked": "2026-11-26T14:43:38.474363+00:00"
+    },
+    "frontier_seed_ai_safety_2026": {
+      "status": "ready",
+      "pdf_url": "https://internationalaisafetyreport.org/sites/default/files/2026-02/international-ai-safety-report-2026_1.pdf",
+      "section": "Executive summary",
+      "page": 11,
+      "excerpt": "Executive summary This Report assesses what general-purpose AI systems can do, what risks they pose, and how those risks can be managed. …",
+      "report_url": "https://internationalaisafetyreport.org/publication/international-ai-safety-report-2026",
+      "checked": "2026-11-26T14:51:19.356369+00:00"
+    },
+    "frontier_seed_ai_index_2026": {
+      "status": "unavailable",
+      "reason": "ValueError",
+      "report_url": "https://hai.stanford.edu/ai-index/2026-ai-index-report",
+      "checked": "2026-11-26T14:51:19.356369+00:00"
+    },
+    "frontier_seed_ifr_humanoid": {
+      "status": "unavailable",
+      "reason": "ValueError",
+      "report_url": "https://ifr.org/papers/humanoid-robots-vision-and-reality",
+      "checked": "2026-11-26T14:51:19.356369+00:00"
+    },
+    "frontier_seed_ifr_ai_robotics": {
+      "status": "unavailable",
+      "reason": "ValueError",
+      "report_url": "https://ifr.org/papers/artificial-intelligence-in-robotics",
+      "checked": "2026-11-26T14:51:19.356369+00:00"
+    },
+    "frontier_seed_un_ai_preliminary_2026": {
+      "status": "unavailable",
+      "reason": "ValueError",
+      "report_url": "https://www.un.org/independent-international-scientific-panel-ai/en/preliminary-report",
+      "checked": "2026-11-26T14:51:19.356369+00:00"
+    },
+    "4840927b368056": {
+      "status": "unavailable",
+      "reason": "HTTPError",
+      "report_url": "https://unctad.org/publication/foreign-investment-screening-legal-design-administrative-models-and-emerging-practice",
+      "checked": "2026-11-26T14:51:19.356369+00:00"
+    },
+    "3d08c5d2370d18": {
+      "status": "pdf_only",
+      "pdf_url": "https://iris.who.int/server/api/core/bitstreams/374842d2-a555-4d52-9c9e-149a034e4e80/content",
+      "report_url": "https://www.who.int/publications/i/item/9789290316343",
+      "checked": "2026-11-26T14:51:19.356369+00:00"
+    },
+    "c934833a2f4313": {
+      "status": "unavailable",
+      "reason": "HTTPError",
+      "report_url": "https://unctad.org/publication/unctad-oecd-report-g20-investment-measures-33rd-report",
+      "checked": "2026-11-26T14:51:19.356369+00:00"
+    },
+    "8c798bdc8b9768": {
+      "status": "ready",
+      "pdf_url": "https://iris.who.int/server/api/core/bitstreams/36c790ad-3edd-4d15-b3b0-e8a9747a78e3/content",
+      "section": "Executive summary",
+      "page": 12,
+      "excerpt": "Background This is the first global mapping of national health inequality monitoring capacities, resources, policies and practices across World Health Organization (WHO) …",
+      "report_url": "https://www.who.int/publications/i/item/9789240125032",
+      "checked": "2026-11-26T14:51:19.356369+00:00"
+    },
+    "422bdb61bd798b": {
+      "status": "pdf_only",
+      "pdf_url": "https://iris.who.int/server/api/core/bitstreams/b9667393-72b8-4911-9e72-4fcf693fd8da/content",
+      "report_url": "https://www.who.int/publications/i/item/9789290621447",
+      "checked": "2026-11-26T14:51:19.356369+00:00"
     }
   }
 }
