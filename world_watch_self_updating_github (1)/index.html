@@ -126,7 +126,7 @@ input,select{width:100%;border:1px solid var(--line);background:var(--panel);col
 <nav class="nav">
   <button class="tab active" data-view="overview">Overview <span class="count" id="navNewCount" style="display:none"></span></button>
   <button class="tab" data-view="sources">Sources</button>
-  <button class="tab" data-view="updates">Reports <span class="count" id="updatesCount" style="display:none"></span></button>
+  <button class="tab" data-view="updates">Updates <span class="count" id="updatesCount" style="display:none"></span></button>
   <button class="tab" data-view="annual">Annual Reports</button>
   <button class="tab" data-view="mylist">My List</button>
 </nav>
@@ -181,7 +181,15 @@ input,select{width:100%;border:1px solid var(--line);background:var(--panel);col
 
 <section class="view" id="updates">
   <div class="sectionhead"><div><h2>All reports &amp; updates</h2><p>Browse the retained archive by date, theme or institution. Automatic dates indicate detection; curated dates are supplied dates.</p></div><button class="smallbtn" id="markSeen2">Mark all seen</button></div>
-  <div class="filterlabel">Choose a report view</div>
+  <div class="filterlabel">Sort reports</div>
+  <div class="viewcontrols" id="reportSortButtons" aria-label="Sort reports">
+    <button class="filterbtn" type="button" data-sort="newest" aria-pressed="true">Newest first</button>
+    <button class="filterbtn" type="button" data-sort="oldest" aria-pressed="false">Oldest first</button>
+    <button class="filterbtn" type="button" data-sort="title" aria-pressed="false">Report title A–Z</button>
+    <button class="filterbtn" type="button" data-sort="theme" aria-pressed="false">Theme A–Z</button>
+    <button class="filterbtn" type="button" data-sort="institution" aria-pressed="false">Institution A–Z</button>
+  </div>
+  <div class="filterlabel">Group reports by</div>
   <div class="viewcontrols" id="reportViews" aria-label="Report grouping">
     <button class="filterbtn" data-group="date" aria-pressed="true">By date</button>
     <button class="filterbtn" data-group="theme" aria-pressed="false">By theme</button>
@@ -195,7 +203,6 @@ input,select{width:100%;border:1px solid var(--line);background:var(--panel);col
     <select id="updateOrg" aria-label="Update institution"><option value="All">All institutions</option></select>
     <select id="updateKind" aria-label="Update type"><option value="All">All updates</option><option value="Flagship">Flagship editions &amp; updates</option><option value="Discovery">Discovered publications</option><option value="Curated">Curated updates</option><option value="Other">Other automatic updates</option></select>
     <select id="updatePeriod" aria-label="Update date range"><option value="All">All dates</option><option value="7">Last 7 days</option><option value="30">Last 30 days</option><option value="90">Last 90 days</option></select>
-    <select id="updateSort" aria-label="Sort reports"><option value="newest">Newest first</option><option value="oldest">Oldest first</option><option value="title">Title A–Z</option><option value="theme">Theme A–Z</option><option value="institution">Institution A–Z</option></select>
     <button class="filterbtn" id="resetUpdates">Reset filters</button>
   </div>
   <div class="filterrow">
@@ -312,6 +319,7 @@ function renderUpdates(){
   const results=dateRangeValid?visible.filter(u=>(!updateFilters.from||u.date>=updateFilters.from)&&(!updateFilters.to||u.date<=updateFilters.to)):[];
   $("updateResultCount").textContent=dateRangeValid?results.length+" of "+sorted.length+" reports & updates":"Choose a start date on or before the end date.";
   document.querySelectorAll("#reportViews [data-group]").forEach(b=>b.setAttribute("aria-pressed",String(b.dataset.group===updateFilters.group)));
+  document.querySelectorAll("#reportSortButtons [data-sort]").forEach(b=>b.setAttribute("aria-pressed",String(b.dataset.sort===updateFilters.sort)));
   $("fullUpdates").innerHTML=results.length?reportGroups(results,updateFilters.group,updateFilters.sort).map(([key,items])=>(key?'<h3 class="grouphead">'+esc(updateFilters.group==="date"&&key!=="Undated"?fmtDate(key):key)+' · '+items.length+'</h3>':'')+items.map(updateItem).join("")).join(""):'<div class="empty">No reports match these filters.</div>';
   let n=sorted.filter(isNew).length;["navNewCount","updatesCount"].forEach(id=>{$(id).textContent=n;$(id).style.display=n?"inline-grid":"none"});
 }
@@ -330,11 +338,11 @@ $("updateSearch").oninput=e=>{updateFilters.search=e.target.value;renderUpdates(
 $("updateOrg").onchange=e=>{updateFilters.org=e.target.value;renderUpdates()};
 $("updateKind").onchange=e=>{updateFilters.kind=e.target.value;renderUpdates()};
 $("updatePeriod").onchange=e=>{updateFilters.period=e.target.value;renderUpdates()};
-$("updateSort").onchange=e=>{updateFilters.sort=e.target.value;renderUpdates()};
+document.querySelectorAll("#reportSortButtons [data-sort]").forEach(b=>b.onclick=()=>{updateFilters.sort=b.dataset.sort;updateFilters.group=({newest:"date",oldest:"date",title:"none",theme:"theme",institution:"institution"})[b.dataset.sort];renderUpdates()});
 $("updateFrom").onchange=e=>{updateFilters.from=e.target.value;renderUpdates()};
 $("updateTo").onchange=e=>{updateFilters.to=e.target.value;renderUpdates()};
 document.querySelectorAll("#reportViews [data-group]").forEach(b=>b.onclick=()=>{updateFilters.group=b.dataset.group;renderUpdates()});
-$("resetUpdates").onclick=()=>{updateFilters=defaultUpdateFilters();$("updateSearch").value="";$("updateKind").value="All";$("updatePeriod").value="All";$("updateSort").value="newest";$("updateFrom").value="";$("updateTo").value="";renderUpdates()};
+$("resetUpdates").onclick=()=>{updateFilters=defaultUpdateFilters();$("updateSearch").value="";$("updateKind").value="All";$("updatePeriod").value="All";$("updateFrom").value="";$("updateTo").value="";renderUpdates()};
 $("markSeen").onclick=markSeen;$("markSeen2").onclick=markSeen;
 function openNote(id){currentNoteId=id;let s=sources.find(x=>x.id===id);$("modalTitle").textContent="Notes · "+(s?.name||"Source");$("noteText").value=notes[id]||"";$("modalBack").classList.add("open")}
 $("cancelNote").onclick=()=>$("modalBack").classList.remove("open");$("saveNote").onclick=()=>{notes[currentNoteId]=$("noteText").value.trim();save();$("modalBack").classList.remove("open");renderAll()};$("modalBack").onclick=e=>{if(e.target===$("modalBack"))$("modalBack").classList.remove("open")};
