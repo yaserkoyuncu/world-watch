@@ -8,6 +8,7 @@ on:
       - ".github/workflows/world-watch.yml"
       - "world_watch_self_updating_github (1)/index.html"
       - "world_watch_self_updating_github (1)/updater.py"
+      - "world_watch_self_updating_github (1)/updates.json"
   schedule:
     - cron: "20 3,9,15,21 * * *"
 
@@ -16,7 +17,7 @@ permissions:
 
 concurrency:
   group: world-watch-pages
-  cancel-in-progress: false
+  cancel-in-progress: ${{ github.event_name == 'push' }}
 
 jobs:
   update:
@@ -29,13 +30,18 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v7
+        with:
+          ref: main
+          fetch-depth: 0
 
       - name: Set up Python
+        if: github.event_name != 'push'
         uses: actions/setup-python@v7
         with:
           python-version: "3.12"
 
       - name: Install dependencies
+        if: github.event_name != 'push'
         run: pip install requests beautifulsoup4
 
       - name: Find World Watch files
@@ -55,12 +61,14 @@ jobs:
           ls -la "$PROJECT_DIR"
 
       - name: Run World Watch monitor
+        if: github.event_name != 'push'
         shell: bash
         run: |
           cd "$PROJECT_DIR"
           python updater.py
 
       - name: Save monitoring results
+        if: github.event_name != 'push'
         shell: bash
         run: |
           git config user.name "world-watch-bot"
@@ -70,8 +78,16 @@ jobs:
           git add "$PROJECT_DIR/monitor_state.json"
           git add "$PROJECT_DIR/monitor_health.json"
 
-          git diff --cached --quiet || git commit -m "Automatic World Watch update"
-          git push
+          if ! git diff --cached --quiet; then
+            git commit -m "Automatic World Watch update"
+            for attempt in 1 2 3; do
+              git pull --rebase origin main
+              if git push origin HEAD:main; then exit 0; fi
+              sleep 3
+            done
+            echo "Could not save monitor results safely; no force push attempted."
+            exit 1
+          fi
 
       - name: Prepare website
         shell: bash
@@ -81,6 +97,7 @@ jobs:
           cp "$PROJECT_DIR/index.html" _site/
           cp "$PROJECT_DIR/updates.json" _site/
           cp "$PROJECT_DIR/auto_updates.json" _site/
+          cp "$PROJECT_DIR/monitor_health.json" _site/
 
           touch _site/.nojekyll
 
@@ -94,6 +111,7 @@ jobs:
         uses: actions/upload-pages-artifact@v5
         with:
           path: "_site"
+          retention-days: 1
 
   deploy:
     needs: update

@@ -275,6 +275,302 @@ DISCOVERY = [
     # Science / high-quality analytical source
     {"id":"quanta","org":"Quanta Magazine","category":"Science","url":"https://www.quantamagazine.org/","include":r"\b(AI|physics|biology|mathematics|computer|quantum|algorithm|genome|cosmology|neuroscience)\b","mode":"analysis"},
 ]
+
+# Strategic expansion: public pages only, no paid API or reader fallback.
+STRATEGIC_SOURCES = json.loads(r'''[
+  {
+    "id": "jpm_market",
+    "org": "J.P. Morgan Asset Management",
+    "category": "Investment & Financial Markets",
+    "url": "https://am.jpmorgan.com/us/en/asset-management/liq/insights/portfolio-insights/ltcma/",
+    "description": "capital market assumptions, long-term returns and investment scenarios",
+    "include": "\\b(invest\\w*|market\\w*|equity|equities|stock\\w*|bond\\w*|return\\w*|asset\\w*|valuation\\w*|portfolio\\w*|outlook\\w*|forecast\\w*|capital|financial|sector\\w*)\\b",
+    "mode": "institutional",
+    "direct_only": true
+  },
+  {
+    "id": "vanguard_market",
+    "org": "Vanguard",
+    "category": "Investment & Financial Markets",
+    "url": "https://corporate.vanguard.com/content/corporatesite/us/en/corp/vemo/vemo-return-forecasts.html",
+    "description": "capital market forecasts and asset-class returns",
+    "include": "\\b(invest\\w*|market\\w*|equity|equities|stock\\w*|bond\\w*|return\\w*|asset\\w*|valuation\\w*|portfolio\\w*|outlook\\w*|forecast\\w*|capital|financial|sector\\w*)\\b",
+    "mode": "institutional",
+    "direct_only": true
+  },
+  {
+    "id": "blackrock_market",
+    "org": "BlackRock Investment Institute",
+    "category": "Investment & Financial Markets",
+    "url": "https://www.blackrock.com/corporate/insights/blackrock-investment-institute/outlook",
+    "description": "global investment outlook and allocation themes",
+    "include": "\\b(invest\\w*|market\\w*|equity|equities|stock\\w*|bond\\w*|return\\w*|asset\\w*|valuation\\w*|portfolio\\w*|outlook\\w*|forecast\\w*|capital|financial|sector\\w*)\\b",
+    "mode": "institutional",
+    "direct_only": true
+  },
+  {
+    "id": "goldman_market",
+    "org": "Goldman Sachs Research",
+    "category": "Investment & Financial Markets",
+    "url": "https://www.goldmansachs.com/insights/reports",
+    "description": "public market, macro and sector outlooks",
+    "include": "\\b(invest\\w*|market\\w*|equity|equities|stock\\w*|bond\\w*|return\\w*|asset\\w*|valuation\\w*|portfolio\\w*|outlook\\w*|forecast\\w*|capital|financial|sector\\w*)\\b",
+    "mode": "institutional",
+    "direct_only": true
+  },
+  {
+    "id": "msci_market",
+    "org": "MSCI",
+    "category": "Investment & Financial Markets",
+    "url": "https://www.msci.com/research-and-insights/research-reports/global-markets-overview",
+    "description": "market research and investment risk",
+    "include": "\\b(invest\\w*|market\\w*|equity|equities|stock\\w*|bond\\w*|return\\w*|asset\\w*|valuation\\w*|portfolio\\w*|outlook\\w*|forecast\\w*|capital|financial|sector\\w*)\\b",
+    "mode": "institutional",
+    "direct_only": true
+  },
+  {
+    "id": "ubs_market",
+    "org": "UBS",
+    "category": "Investment & Financial Markets",
+    "url": "https://www.ubs.com/global/en/investment-bank/insights-and-data/global-research.html",
+    "description": "long-run returns and public investment research",
+    "include": "\\b(invest\\w*|market\\w*|equity|equities|stock\\w*|bond\\w*|return\\w*|asset\\w*|valuation\\w*|portfolio\\w*|outlook\\w*|forecast\\w*|capital|financial|sector\\w*)\\b",
+    "mode": "institutional",
+    "direct_only": true
+  },
+  {
+    "id": "morgan_market",
+    "org": "Morgan Stanley",
+    "category": "Investment & Financial Markets",
+    "url": "https://www.morganstanley.com/insights",
+    "description": "public economic and investment outlooks",
+    "include": "\\b(invest\\w*|market\\w*|equity|equities|stock\\w*|bond\\w*|return\\w*|asset\\w*|valuation\\w*|portfolio\\w*|outlook\\w*|forecast\\w*|capital|financial|sector\\w*)\\b",
+    "mode": "institutional",
+    "direct_only": true
+  },
+  {
+    "id": "wb_commodities",
+    "org": "World Bank",
+    "category": "Commodities & Critical Minerals",
+    "url": "https://www.worldbank.org/en/research/commodity-markets",
+    "description": "commodity price forecasts and supply-demand analysis",
+    "include": "\\b(commodit\\w*|mineral\\w*|metal\\w*|gold|silver|platinum|palladium|copper|lithium|uranium|rare earth\\w*|cobalt|nickel|graphite|gallium|germanium|antimony|tungsten|supply|demand)\\b",
+    "mode": "institutional",
+    "direct_only": true
+  },
+  {
+    "id": "iea_minerals",
+    "org": "IEA",
+    "category": "Commodities & Critical Minerals",
+    "url": "https://www.iea.org/topics/critical-minerals",
+    "description": "critical mineral markets, supply and security",
+    "include": "\\b(commodit\\w*|mineral\\w*|metal\\w*|gold|silver|platinum|palladium|copper|lithium|uranium|rare earth\\w*|cobalt|nickel|graphite|gallium|germanium|antimony|tungsten|supply|demand)\\b",
+    "mode": "institutional",
+    "direct_only": true
+  },
+  {
+    "id": "usgs_minerals",
+    "org": "USGS",
+    "category": "Commodities & Critical Minerals",
+    "url": "https://www.usgs.gov/centers/national-minerals-information-center/mineral-commodity-summaries/",
+    "description": "mineral production, reserves and trade",
+    "include": "\\b(commodit\\w*|mineral\\w*|metal\\w*|gold|silver|platinum|palladium|copper|lithium|uranium|rare earth\\w*|cobalt|nickel|graphite|gallium|germanium|antimony|tungsten|supply|demand)\\b",
+    "mode": "institutional",
+    "direct_only": true
+  },
+  {
+    "id": "wgc_gold",
+    "org": "World Gold Council",
+    "category": "Commodities & Critical Minerals",
+    "url": "https://www.gold.org/goldhub/research",
+    "description": "gold demand, investment and market outlooks",
+    "include": "\\b(commodit\\w*|mineral\\w*|metal\\w*|gold|silver|platinum|palladium|copper|lithium|uranium|rare earth\\w*|cobalt|nickel|graphite|gallium|germanium|antimony|tungsten|supply|demand)\\b",
+    "mode": "institutional",
+    "direct_only": true
+  },
+  {
+    "id": "silver_inst",
+    "org": "Silver Institute",
+    "category": "Commodities & Critical Minerals",
+    "url": "https://silverinstitute.org/all-world-silver-surveys/",
+    "description": "silver supply, demand and market surveys",
+    "include": "\\b(commodit\\w*|mineral\\w*|metal\\w*|gold|silver|platinum|palladium|copper|lithium|uranium|rare earth\\w*|cobalt|nickel|graphite|gallium|germanium|antimony|tungsten|supply|demand)\\b",
+    "mode": "institutional",
+    "direct_only": true
+  },
+  {
+    "id": "wpic_platinum",
+    "org": "World Platinum Investment Council",
+    "category": "Commodities & Critical Minerals",
+    "url": "https://platinuminvestment.com/supply-and-demand/platinum-quarterly/archive",
+    "description": "platinum supply and demand forecasts",
+    "include": "\\b(commodit\\w*|mineral\\w*|metal\\w*|gold|silver|platinum|palladium|copper|lithium|uranium|rare earth\\w*|cobalt|nickel|graphite|gallium|germanium|antimony|tungsten|supply|demand)\\b",
+    "mode": "institutional",
+    "direct_only": true
+  },
+  {
+    "id": "csis_minerals",
+    "org": "CSIS Critical Minerals Security Program",
+    "category": "Commodities & Critical Minerals",
+    "url": "https://www.csis.org/programs/critical-minerals-security-program/analysis",
+    "description": "strategic mineral supply chains and security",
+    "include": "\\b(commodit\\w*|mineral\\w*|metal\\w*|gold|silver|platinum|palladium|copper|lithium|uranium|rare earth\\w*|cobalt|nickel|graphite|gallium|germanium|antimony|tungsten|supply|demand)\\b",
+    "mode": "institutional",
+    "direct_only": true
+  },
+  {
+    "id": "wna_fuel",
+    "org": "World Nuclear Association",
+    "category": "Commodities & Critical Minerals",
+    "url": "https://world-nuclear.org/information-library/nuclear-fuel-cycle/uranium-resources",
+    "description": "uranium resources and nuclear fuel supply",
+    "include": "\\b(commodit\\w*|mineral\\w*|metal\\w*|gold|silver|platinum|palladium|copper|lithium|uranium|rare earth\\w*|cobalt|nickel|graphite|gallium|germanium|antimony|tungsten|supply|demand)\\b",
+    "mode": "institutional",
+    "direct_only": true
+  },
+  {
+    "id": "cfr_conflicts",
+    "org": "Council on Foreign Relations",
+    "category": "International Relations & Geopolitical Risk",
+    "url": "https://www.cfr.org/reports",
+    "description": "foreign policy and conflict risk reports",
+    "include": "\\b(geopolit\\w*|conflict\\w*|war\\w*|peace|security|defen[cs]e|diploma\\w*|foreign policy|sanction\\w*|international|alliance\\w*|politic\\w*|China|Russia|Ukraine|Europe|Middle East|Taiwan|Iran|Turkey|Türkiye|Africa|Asia)\\b",
+    "mode": "institutional",
+    "direct_only": true
+  },
+  {
+    "id": "chatham_ir",
+    "org": "Chatham House",
+    "category": "International Relations & Geopolitical Risk",
+    "url": "https://www.chathamhouse.org/publications/research-publications",
+    "description": "international affairs research publications",
+    "include": "\\b(geopolit\\w*|conflict\\w*|war\\w*|peace|security|defen[cs]e|diploma\\w*|foreign policy|sanction\\w*|international|alliance\\w*|politic\\w*|China|Russia|Ukraine|Europe|Middle East|Taiwan|Iran|Turkey|Türkiye|Africa|Asia)\\b",
+    "mode": "institutional",
+    "direct_only": true
+  },
+  {
+    "id": "csis_ir",
+    "org": "CSIS",
+    "category": "International Relations & Geopolitical Risk",
+    "url": "https://www.csis.org/analysis",
+    "description": "international politics, security and strategy",
+    "include": "\\b(geopolit\\w*|conflict\\w*|war\\w*|peace|security|defen[cs]e|diploma\\w*|foreign policy|sanction\\w*|international|alliance\\w*|politic\\w*|China|Russia|Ukraine|Europe|Middle East|Taiwan|Iran|Turkey|Türkiye|Africa|Asia)\\b",
+    "mode": "institutional",
+    "direct_only": true
+  },
+  {
+    "id": "rand_ir",
+    "org": "RAND",
+    "category": "International Relations & Geopolitical Risk",
+    "url": "https://www.rand.org/pubs.html",
+    "description": "security and international policy research",
+    "include": "\\b(geopolit\\w*|conflict\\w*|war\\w*|peace|security|defen[cs]e|diploma\\w*|foreign policy|sanction\\w*|international|alliance\\w*|politic\\w*|China|Russia|Ukraine|Europe|Middle East|Taiwan|Iran|Turkey|Türkiye|Africa|Asia)\\b",
+    "mode": "institutional",
+    "direct_only": true
+  },
+  {
+    "id": "carnegie_ir",
+    "org": "Carnegie Endowment",
+    "category": "International Relations & Geopolitical Risk",
+    "url": "https://carnegieendowment.org/research",
+    "description": "international relations and geopolitical analysis",
+    "include": "\\b(geopolit\\w*|conflict\\w*|war\\w*|peace|security|defen[cs]e|diploma\\w*|foreign policy|sanction\\w*|international|alliance\\w*|politic\\w*|China|Russia|Ukraine|Europe|Middle East|Taiwan|Iran|Turkey|Türkiye|Africa|Asia)\\b",
+    "mode": "institutional",
+    "direct_only": true
+  },
+  {
+    "id": "ecfr_ir",
+    "org": "European Council on Foreign Relations",
+    "category": "International Relations & Geopolitical Risk",
+    "url": "https://ecfr.eu/publications",
+    "description": "European foreign policy briefs",
+    "include": "\\b(geopolit\\w*|conflict\\w*|war\\w*|peace|security|defen[cs]e|diploma\\w*|foreign policy|sanction\\w*|international|alliance\\w*|politic\\w*|China|Russia|Ukraine|Europe|Middle East|Taiwan|Iran|Turkey|Türkiye|Africa|Asia)\\b",
+    "mode": "institutional",
+    "direct_only": true
+  },
+  {
+    "id": "acled_ir",
+    "org": "ACLED",
+    "category": "International Relations & Geopolitical Risk",
+    "url": "https://acleddata.com/analysis",
+    "description": "conflict analysis and political violence monitoring",
+    "include": "\\b(geopolit\\w*|conflict\\w*|war\\w*|peace|security|defen[cs]e|diploma\\w*|foreign policy|sanction\\w*|international|alliance\\w*|politic\\w*|China|Russia|Ukraine|Europe|Middle East|Taiwan|Iran|Turkey|Türkiye|Africa|Asia)\\b",
+    "mode": "institutional",
+    "direct_only": true
+  },
+  {
+    "id": "rusi_ir",
+    "org": "RUSI",
+    "category": "International Relations & Geopolitical Risk",
+    "url": "https://www.rusi.org/explore-our-research",
+    "description": "international security research",
+    "include": "\\b(geopolit\\w*|conflict\\w*|war\\w*|peace|security|defen[cs]e|diploma\\w*|foreign policy|sanction\\w*|international|alliance\\w*|politic\\w*|China|Russia|Ukraine|Europe|Middle East|Taiwan|Iran|Turkey|Türkiye|Africa|Asia)\\b",
+    "mode": "institutional",
+    "direct_only": true
+  },
+  {
+    "id": "euiss_ir",
+    "org": "EU Institute for Security Studies",
+    "category": "International Relations & Geopolitical Risk",
+    "url": "https://www.iss.europa.eu/publications",
+    "description": "European security and foreign affairs",
+    "include": "\\b(geopolit\\w*|conflict\\w*|war\\w*|peace|security|defen[cs]e|diploma\\w*|foreign policy|sanction\\w*|international|alliance\\w*|politic\\w*|China|Russia|Ukraine|Europe|Middle East|Taiwan|Iran|Turkey|Türkiye|Africa|Asia)\\b",
+    "mode": "institutional",
+    "direct_only": true
+  },
+  {
+    "id": "lowy_ir",
+    "org": "Lowy Institute",
+    "category": "International Relations & Geopolitical Risk",
+    "url": "https://www.lowyinstitute.org/publications",
+    "description": "Asia-Pacific international affairs",
+    "include": "\\b(geopolit\\w*|conflict\\w*|war\\w*|peace|security|defen[cs]e|diploma\\w*|foreign policy|sanction\\w*|international|alliance\\w*|politic\\w*|China|Russia|Ukraine|Europe|Middle East|Taiwan|Iran|Turkey|Türkiye|Africa|Asia)\\b",
+    "mode": "institutional",
+    "direct_only": true
+  },
+  {
+    "id": "ec_foresight",
+    "org": "European Commission",
+    "category": "Strategic Foresight & Emerging Industries",
+    "url": "https://commission.europa.eu/strategy-and-policy/strategic-foresight_en",
+    "description": "strategic foresight and long-term EU scenarios",
+    "include": "\\b(foresight|future\\w*|scenario\\w*|trend\\w*|outlook\\w*|transform\\w*|technolog\\w*|industr\\w*|innovation|AI|robot\\w*|biotech\\w*|semiconductor\\w*|productivity|strategic)\\b",
+    "mode": "institutional",
+    "direct_only": true
+  },
+  {
+    "id": "oecd_foresight",
+    "org": "OECD Strategic Foresight",
+    "category": "Strategic Foresight & Emerging Industries",
+    "url": "https://www.oecd.org/en/topics/strategic-foresight.html",
+    "description": "future scenarios and policy preparedness",
+    "include": "\\b(foresight|future\\w*|scenario\\w*|trend\\w*|outlook\\w*|transform\\w*|technolog\\w*|industr\\w*|innovation|AI|robot\\w*|biotech\\w*|semiconductor\\w*|productivity|strategic)\\b",
+    "mode": "institutional",
+    "direct_only": true
+  },
+  {
+    "id": "mgi_foresight",
+    "org": "McKinsey Global Institute",
+    "category": "Strategic Foresight & Emerging Industries",
+    "url": "https://www.mckinsey.com/mgi/our-research",
+    "description": "economic transformations and emerging industries",
+    "include": "\\b(foresight|future\\w*|scenario\\w*|trend\\w*|outlook\\w*|transform\\w*|technolog\\w*|industr\\w*|innovation|AI|robot\\w*|biotech\\w*|semiconductor\\w*|productivity|strategic)\\b",
+    "mode": "institutional",
+    "direct_only": true
+  },
+  {
+    "id": "nic_foresight",
+    "org": "National Intelligence Council",
+    "category": "Strategic Foresight & Emerging Industries",
+    "url": "https://www.dni.gov/index.php/gt2040-home",
+    "description": "long-term global trends and alternative futures",
+    "include": "\\b(foresight|future\\w*|scenario\\w*|trend\\w*|outlook\\w*|transform\\w*|technolog\\w*|industr\\w*|innovation|AI|robot\\w*|biotech\\w*|semiconductor\\w*|productivity|strategic)\\b",
+    "mode": "institutional",
+    "direct_only": true
+  }
+]''')
+DISCOVERY.extend(STRATEGIC_SOURCES)
+
 def load_json(p, default):
     try: return json.loads(p.read_text(encoding="utf-8"))
     except Exception: return default
@@ -785,7 +1081,7 @@ def resolve_discovery(spec):
     urls=list(dict.fromkeys([spec["url"]] + DISCOVERY_ALT_URLS.get(spec["id"], [])))
 
     for page_url in urls:
-        if reader_first and not candidates:
+        if reader_first and not candidates and not spec.get("direct_only"):
             try:
                 txt=jina_reader(page_url)
                 candidates=discovery_from_reader(spec,txt,page_url)
@@ -799,7 +1095,7 @@ def resolve_discovery(spec):
             except Exception as e:
                 errors.append("direct "+page_url+": "+str(e)[:140])
 
-        if not candidates and not reader_first:
+        if not candidates and not reader_first and not spec.get("direct_only"):
             try:
                 txt=jina_reader(page_url)
                 candidates=discovery_from_reader(spec,txt,page_url)
