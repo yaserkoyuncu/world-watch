@@ -11,11 +11,12 @@
         7,
         8
       ],
-      "summary": "The report highlights that critical minerals' prices rebounded in 2025 and early 2026, driven by tight supply conditions and increasing geopolitical tensions. Despite this recovery, new risks have emerged, particularly for cobalt due to export controls in the Democratic Republic of Congo (DRC). Supply concentration in refining has risen, with China and Indonesia accounting for over three-quarters of total growth in refined supply. The Middle East conflict has exacerbated supply chain vulnerabilities, leading to export controls and disruptions in key minerals like aluminium, sulphur, and helium. Investment in critical minerals declined by 9% in 2025, influenced by geopolitical tensions and price volatility. While mergers and acquisitions rebounded, exploration spending fell, indicating a shift towards more focused investments in high-quality assets. Strategic stockpiles can serve as a short-term buffer against supply disruptions, though the potential economic impacts",
+      "summary": "The report highlights that critical minerals' prices rebounded in 2025 and early 2026, driven by tight supply conditions and increasing geopolitical tensions. Despite this recovery, new risks have emerged, particularly for cobalt due to export controls in the Democratic Republic of Congo (DRC). Supply concentration in refining has risen, with China and Indonesia accounting for over three-quarters of total growth in refined supply. The Middle East conflict has exacerbated supply chain vulnerabilities, leading to export controls and disruptions in key minerals like aluminium, sulphur, and helium. Investment in critical minerals declined by 9% in 2025, influenced by geopolitical tensions and price volatility. While mergers and acquisitions rebounded, exploration spending fell, indicating a shift towards more focused investments in high-quality assets.",
       "checked": "2026-11-26T14:59:57.543871+00:00",
       "model": "Qwen/Qwen2.5-3B-Instruct",
       "scope": "Selected executive-summary or findings pages",
-      "pipeline_version": 2
+      "pipeline_version": 2,
+      "editorial_trim": "Removed incomplete final sentence; original generated draft otherwise unchanged."
     },
     "frontier_seed_ai_safety_2026": {
       "status": "unavailable",
