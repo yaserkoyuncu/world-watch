@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_checked": "2026-11-26T15:04:04.870197+00:00",
+  "last_checked": "2026-11-26T20:53:24.997778+00:00",
   "reports": {
     "strategic_seed_1": {
       "status": "unavailable",
@@ -71,18 +71,13 @@
       "status": "unavailable",
       "reason": "No matching public PDF",
       "report_url": "https://www.sipri.org/publications/2026/partner-publications/climate-peace-and-security-fact-sheet-somalia-2026",
-      "checked": "2026-11-26T14:43:38.474363+00:00"
+      "checked": "2026-11-26T20:53:24.997778+00:00",
+      "pipeline_version": 4
     },
     "22bec4b602c907": {
       "status": "unavailable",
       "reason": "HTTPError",
       "report_url": "https://unctad.org/publication/trade-and-development-report-2026",
-      "checked": "2026-11-26T14:43:38.474363+00:00"
-    },
-    "a81add3f820e1a": {
-      "status": "unavailable",
-      "reason": "HTTPError",
-      "report_url": "https://www.iea.org/reports/world-energy-outlook-2025",
       "checked": "2026-11-26T14:43:38.474363+00:00"
     },
     "6c439656c181ec": {
@@ -129,9 +124,10 @@
     },
     "frontier_seed_un_ai_preliminary_2026": {
       "status": "unavailable",
-      "reason": "ValueError",
+      "reason": "ValueError: file exceeds pilot size limit, ValueError: PDF title or edition could not be matched",
       "report_url": "https://www.un.org/independent-international-scientific-panel-ai/en/preliminary-report",
-      "checked": "2026-11-26T14:51:19.356369+00:00"
+      "checked": "2026-11-26T20:53:24.997778+00:00",
+      "pipeline_version": 4
     },
     "4840927b368056": {
       "status": "unavailable",
@@ -226,6 +222,68 @@
       "report_url": "https://www.who.int/publications/i/item/B09813",
       "checked": "2026-11-26T15:04:04.870197+00:00",
       "pipeline_version": 3
+    },
+    "a81add3f820e1a": {
+      "status": "unavailable",
+      "reason": "HTTPError: 403 Client Error: Forbidden for url: https://www.iea.org/files/9bd739f6-e4c8-4d09-902b-4e1eb7eb083f/, HTTPError: 403 Client Error: Forbidden for url:",
+      "report_url": "https://www.iea.org/reports/world-energy-outlook-2026",
+      "checked": "2026-11-26T20:53:24.997778+00:00",
+      "pipeline_version": 4
+    },
+    "3424e0c6fd93a9": {
+      "status": "pdf_only",
+      "pdf_url": "https://iris.who.int/server/api/core/bitstreams/1c3f1876-1d44-44ec-8207-cd565ba3a7b4/content",
+      "report_url": "https://www.who.int/publications/i/item/9789240126343",
+      "checked": "2026-11-26T20:53:24.997778+00:00",
+      "pipeline_version": 4
+    },
+    "bdf2833a48ad4c": {
+      "status": "ready",
+      "pdf_url": "https://iris.who.int/server/api/core/bitstreams/b4bf18cf-7647-4832-9024-4e6b224930e6/content",
+      "section": "Executive summary",
+      "page": 9,
+      "excerpt": "Access to reliable diagnostic testing enables appropriate use of antimicrobials, strengthens antimicrobial resistance surveillance and leads to better health outcomes. …",
+      "report_url": "https://www.who.int/publications/i/item/B09666",
+      "checked": "2026-11-26T20:53:24.997778+00:00",
+      "pipeline_version": 4
+    },
+    "29d956ee82c776": {
+      "status": "unavailable",
+      "reason": "HTTPError: 403 Client Error: Forbidden for url: https://www.irena.org/Publications/2026/Nov/Scaling-domestic-bi",
+      "report_url": "https://www.irena.org/Publications/2026/Nov/Scaling-domestic-biogas-to-meet-cooking-energy-demand-and-climate-ambitions",
+      "checked": "2026-11-26T20:53:24.997778+00:00",
+      "pipeline_version": 4
+    },
+    "2eae81c5fbbcda": {
+      "status": "unavailable",
+      "reason": "HTTPError: 403 Client Error: Forbidden for url: https://www.irena.org/Publications/2026/Nov/Powering-healthcare",
+      "report_url": "https://www.irena.org/Publications/2026/Nov/Powering-healthcare-with-renewable-energy-Lessons-for-developing-countries",
+      "checked": "2026-11-26T20:53:24.997778+00:00",
+      "pipeline_version": 4
+    },
+    "14db10a820a444": {
+      "status": "unavailable",
+      "reason": "HTTPError: 403 Client Error: Forbidden for url: https://www.irena.org/Publications/2026/Nov/Solutions-for-build",
+      "report_url": "https://www.irena.org/Publications/2026/Nov/Solutions-for-building-a-new-power-system-The-role-of-grids-storage-and-hydropower-ZH",
+      "checked": "2026-11-26T20:53:24.997778+00:00",
+      "pipeline_version": 4
+    },
+    "0339358921b6ff": {
+      "status": "unavailable",
+      "reason": "HTTPError: 403 Client Error: Forbidden for url: https://www.irena.org/Publications/2026/Nov/Solutions-for-build",
+      "report_url": "https://www.irena.org/Publications/2026/Nov/Solutions-for-building-a-new-power-system-The-role-of-grids-storage-and-hydropower",
+      "checked": "2026-11-26T20:53:24.997778+00:00",
+      "pipeline_version": 4
+    },
+    "cee22595bf3480": {
+      "status": "ready",
+      "pdf_url": "https://iris.who.int/server/api/core/bitstreams/a96c6ca5-06b6-411f-b25e-6aef8db7d371/content",
+      "section": "Executive Summary",
+      "page": 11,
+      "excerpt": "Nepal’s Expanded Programme on Immunization (EPI) continues to serve as one of the country’s most successful and equitable public health interventions, contributing …",
+      "report_url": "https://www.who.int/publications/i/item/9789292800246",
+      "checked": "2026-11-26T20:53:24.997778+00:00",
+      "pipeline_version": 4
     }
   }
 }
