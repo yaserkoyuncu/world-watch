@@ -21,7 +21,7 @@ OUTPUT = ROOT / "pdf_summaries.json"
 MAX_REPORTS = 10
 MAX_PDF_BYTES = 20 * 1024 * 1024
 LARGE_PDF_BYTES = 80 * 1024 * 1024
-PDF_PIPELINE_VERSION = 3
+PDF_PIPELINE_VERSION = 4
 REGISTRATION_REQUIRED = {"frontier_seed_ifr_humanoid", "frontier_seed_ifr_ai_robotics"}
 MAX_HTML_BYTES = 2 * 1024 * 1024
 MAX_PAGES = 35
@@ -32,6 +32,9 @@ NEXT_HEADING = re.compile(r"^\s*(?:chapter\s+\d+.*|introduction|table of content
 NON_REPORT = re.compile(r"\b(?:transcripts?|speeches|speech|webinars?|interviews?|podcasts?|videos?|remarks|press[-_ ]releases?|media[-_ ]releases?|presentation|slides|factsheet|fact sheet)\b", re.I)
 PREFERRED = {"frontier_seed_ai_safety_2026": 104, "frontier_seed_ai_index_2026": 103, "frontier_seed_ifr_humanoid": 102, "frontier_seed_ifr_ai_robotics": 101, "strategic_seed_16": 100, "strategic_seed_9": 99, "strategic_seed_8": 98, "strategic_seed_10": 97}
 OFFICIAL_PDF_HINTS = {
+    "a81add3f820e1a": "https://www.iea.org/files/9bd739f6-e4c8-4d09-902b-4e1eb7eb083f/WorldEnergyOutlook2026.pdf",
+    "unhcr_myt_2026_verified": "https://www.unhcr.org/sites/default/files/docs/default/2026-11/mid-year-trends-report-2026.pdf",
+    "9cf8b6159a5fc7": "https://www.imf.org/-/media/files/publications/weo/2026/october/english/text.pdf",
     "frontier_seed_ai_safety_2026": "https://internationalaisafetyreport.org/sites/default/files/2026-02/international-ai-safety-report-2026_1.pdf",
     "frontier_seed_ai_index_2026": "https://hai.stanford.edu/assets/files/ai_index_report_2026.pdf",
     "frontier_seed_stanford_setr_2026": "https://setr.stanford.edu/sites/default/files/2026-02/SETR2026_web-260219.pdf",
@@ -75,7 +78,7 @@ def download(url, deadline):
                 response.raise_for_status()
                 content_type = response.headers.get("Content-Type", "").lower()
                 pdf_hint = "pdf" in content_type or urlsplit(url).path.lower().endswith(".pdf")
-                pdf_limit = LARGE_PDF_BYTES if urlsplit(url).hostname == "hai.stanford.edu" else MAX_PDF_BYTES
+                pdf_limit = LARGE_PDF_BYTES if urlsplit(url).hostname in {"hai.stanford.edu","www.iea.org","iea.blob.core.windows.net"} else MAX_PDF_BYTES
                 limit = pdf_limit if pdf_hint else MAX_HTML_BYTES
                 if int(response.headers.get("Content-Length", "0") or 0) > limit:
                     raise ValueError("file exceeds pilot size limit")
@@ -258,7 +261,9 @@ def main():
     records = {k: v for k, v in records.items() if not NON_REPORT.search(re.sub(r"[_-]", " ", v.get("pdf_url", "")))}
     curated = read_json(ROOT / "updates.json", {}).get("updates", [])
     auto = read_json(ROOT / "auto_updates.json", {}).get("updates", [])
-    reports = sorted([r for r in curated + auto if eligible(r)], key=lambda r: priority(r, records, today), reverse=True)
+    active = {str(r["id"]): r for r in curated + auto if eligible(r)}
+    records = {k:v for k,v in records.items() if k in active and v.get("report_url")==active[k].get("url")}
+    reports = sorted(active.values(), key=lambda r: priority(r, records, today), reverse=True)
     retries = [r for r in reports if str(r["id"]) in records and retry_due(records[str(r["id"])], today)]
     # Reserve up to two attempts for overdue failures; keep the first four priority reports first.
     reports = reports[:4] + retries[:2] + reports[4:]
@@ -274,8 +279,8 @@ def main():
         attempted += 1
         try:
             entry = process(report, min(deadline, time.monotonic() + 32))
-        except Exception:
-            entry = {"status": "unavailable"}
+        except Exception as exc:
+            entry = {"status": "unavailable", "reason": f"{type(exc).__name__}: {str(exc)[:160]}"}
         records[rid] = {**entry, "report_url": report["url"], "checked": today.isoformat(), "pipeline_version": PDF_PIPELINE_VERSION}
         print(rid, entry["status"], entry.get("reason", ""))
     if attempted or records != previous.get("reports", {}):
