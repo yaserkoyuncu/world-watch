@@ -88,6 +88,14 @@ input,select{width:100%;border:1px solid var(--line);background:var(--panel);col
 .footer{color:var(--muted);font-size:12px;text-align:center;padding:32px}
 @media(max-width:1050px){.grid{grid-template-columns:repeat(2,1fr)}.updategrid{grid-template-columns:1fr}.calendar{grid-template-columns:repeat(2,1fr)}.searchbar{grid-template-columns:1fr 1fr 1fr}.searchwrap{grid-column:1/-1}}
 @media(max-width:680px){.app{padding:10px}.hero{padding:20px}.metrics{grid-template-columns:1fr 1fr}.grid,.calendar,.mylist{grid-template-columns:1fr}.searchbar{grid-template-columns:1fr 1fr}.searchwrap{grid-column:1/-1}}
+.chips{flex-wrap:wrap;overflow:visible}
+.chip{padding:8px 12px;white-space:normal;text-align:left}
+.chip[aria-pressed="true"]{border-color:var(--blue);color:var(--text);background:color-mix(in srgb,var(--blue) 14%,transparent)}
+.filterrow{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 12px;align-items:center}
+.filterrow select,.filterrow input{flex:1 1 180px;width:auto;min-width:0}
+.filterrow .filterbtn{flex:0 0 auto}
+.filterlabel{color:var(--muted);font-size:12px;font-weight:800;margin:10px 0 4px}
+.chipcount{opacity:.7;margin-left:5px;font-size:11px}
 </style>
 </head>
 <body>
@@ -155,12 +163,28 @@ input,select{width:100%;border:1px solid var(--line);background:var(--panel);col
     <select id="sort"><option value="priority">Sort: priority</option><option value="name">Sort: A–Z</option><option value="category">Sort: category</option><option value="frequency">Sort: frequency</option></select>
     <button class="filterbtn" id="favFilter">★ Favorites</button>
   </div>
-  <div class="chips" id="chips"></div>
+  <div class="filterrow">
+    <select id="sourceOrg" aria-label="Source institution"><option value="All">All institutions</option></select>
+    <select id="sourceKind" aria-label="Source format"><option value="All">All formats</option><option value="Flagship">Flagship reports</option><option value="Other">Other sources</option></select>
+    <button class="filterbtn" id="resetSources">Reset filters</button>
+  </div>
+  <div class="filterlabel">Browse by topic</div>
+  <div class="chips" id="chips" aria-label="Source categories"></div>
   <div class="grid" id="sourceGrid"></div>
 </section>
 
 <section class="view" id="updates">
   <div class="sectionhead"><div><h2>Update feed</h2><p>Major new editions and substantive updates. New items are highlighted until you mark them seen.</p></div><button class="smallbtn" id="markSeen2">Mark all seen</button></div>
+  <div class="filterlabel">Browse by topic</div>
+  <div class="chips" id="updateChips" aria-label="Update categories"></div>
+  <div class="filterrow">
+    <input id="updateSearch" type="search" aria-label="Search updates" placeholder="Search titles, institutions or topics…">
+    <select id="updateOrg" aria-label="Update institution"><option value="All">All institutions</option></select>
+    <select id="updateKind" aria-label="Update type"><option value="All">All updates</option><option value="Flagship">Flagship editions &amp; updates</option><option value="Discovery">Discovered publications</option><option value="Curated">Curated updates</option><option value="Other">Other automatic updates</option></select>
+    <select id="updatePeriod" aria-label="Update date range"><option value="All">All dates</option><option value="7">Last 7 days</option><option value="30">Last 30 days</option><option value="90">Last 90 days</option></select>
+    <button class="filterbtn" id="resetUpdates">Reset filters</button>
+  </div>
+  <div class="filterlabel" id="updateResultCount" aria-live="polite"></div>
   <div class="panel" id="fullUpdates"></div>
 </section>
 
@@ -202,7 +226,8 @@ let statuses=store("ww_statuses",{});
 let notes=store("ww_notes",{});
 let lastSeen=localStorage.getItem("ww_lastSeen")||"2026-01-01";
 let currentNoteId=null;
-let filters={category:"All",priority:"All",search:"",sort:"priority",fav:false};
+let filters={category:"All",priority:"All",search:"",sort:"priority",fav:false,org:"All",kind:"All"};
+let updateFilters={category:"All",search:"",org:"All",kind:"All",period:"All"};
 const $=id=>document.getElementById(id);
 function save(){localStorage.setItem("ww_favorites",JSON.stringify([...favorites]));localStorage.setItem("ww_statuses",JSON.stringify(statuses));localStorage.setItem("ww_notes",JSON.stringify(notes));}
 function esc(s){return String(s??"").replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
@@ -219,15 +244,35 @@ function card(s){const st=statusLabel(s.id);return `<article class="card">
 </article>`}
 function toggleFav(id){favorites.has(id)?favorites.delete(id):favorites.add(id);save();renderAll()}
 function renderCore(){const core=sources.filter(s=>s.priority==="Core").slice(0,9);$("coreGrid").innerHTML=core.map(card).join("")}
-function renderChips(){$("chips").innerHTML=["All",...categories].map(c=>`<button class="chip ${filters.category===c?"active":""}" onclick="setCat('${esc(c).replaceAll("'","\\'")}')">${esc(c)}</button>`).join("")}
+function makeChips(id,items,selected,onSelect){
+  const box=$(id);box.replaceChildren();
+  const values=["All",...new Set(items.map(x=>x.category).filter(Boolean))];
+  values.forEach(c=>{const b=document.createElement("button");b.type="button";b.className="chip"+(selected===c?" active":"");b.setAttribute("aria-pressed",String(selected===c));b.textContent=(c==="All"?"All topics":c)+" ("+(c==="All"?items.length:items.filter(x=>x.category===c).length)+")";b.onclick=()=>onSelect(c);box.append(b)});
+}
+function renderChips(){makeChips("chips",sources,filters.category,setCat)}
+function fillInstitutions(id,values,selected){const el=$(id);el.replaceChildren(new Option("All institutions","All"));[...new Set(values.filter(Boolean))].sort((a,b)=>a.localeCompare(b)).forEach(v=>el.add(new Option(v,v)));el.value=selected;if(!el.value)el.value="All";return el.value}
+function updateKind(u){return u.series_id?"Flagship":u.discovery_source?"Discovery":!u.automatic?"Curated":/flagship/i.test(u.type||"")?"Flagship":"Other"}
 function setCat(c){filters.category=c;renderSources();renderChips()}
 function setPriority(p){filters.priority=p;$("priority").value=p;renderSources()}
-function filtered(){let q=filters.search.toLowerCase().trim();let a=sources.filter(s=>(filters.category==="All"||s.category===filters.category)&&(filters.priority==="All"||s.priority===filters.priority)&&(!filters.fav||favorites.has(s.id))&&(!q||[s.name,s.org,s.category,s.description,s.kind].join(" ").toLowerCase().includes(q)));a.sort((x,y)=>filters.sort==="name"?x.name.localeCompare(y.name):filters.sort==="category"?x.category.localeCompare(y.category)||rank[x.priority]-rank[y.priority]:filters.sort==="frequency"?x.frequency.localeCompare(y.frequency):rank[x.priority]-rank[y.priority]||x.category.localeCompare(y.category)||x.name.localeCompare(y.name));return a}
+function filtered(){let q=filters.search.toLowerCase().trim();let a=sources.filter(s=>(filters.category==="All"||s.category===filters.category)&&(filters.priority==="All"||s.priority===filters.priority)&&(filters.org==="All"||s.org===filters.org)&&(filters.kind==="All"||(filters.kind==="Flagship"?s.flagship:!s.flagship))&&(!filters.fav||favorites.has(s.id))&&(!q||[s.name,s.org,s.category,s.description,s.kind].join(" ").toLowerCase().includes(q)));a.sort((x,y)=>filters.sort==="name"?x.name.localeCompare(y.name):filters.sort==="category"?x.category.localeCompare(y.category)||rank[x.priority]-rank[y.priority]:filters.sort==="frequency"?x.frequency.localeCompare(y.frequency):rank[x.priority]-rank[y.priority]||x.category.localeCompare(y.category)||x.name.localeCompare(y.name));return a}
 function renderSources(){let a=filtered();$("resultCount").textContent=`${a.length} of ${sources.length} sources`;$("sourceGrid").innerHTML=a.length?a.map(card).join(""):`<div class="empty">No sources match these filters.</div>`}
 function updateItem(u){return `<div class="updateitem" style="${isNew(u)?"background:linear-gradient(90deg,color-mix(in srgb,var(--blue) 7%,transparent),transparent);margin:0 -10px;padding-left:10px;padding-right:10px;border-radius:10px":""}">
 <div class="updateTop"><div><span class="tag">${esc(u.type)}${isNew(u)?" · NEW":""}</span><h3>${esc(u.title)}</h3><div class="org">${esc(u.source)} · ${esc(u.category)}</div></div><div class="date">${fmtDate(u.date)}</div></div>
 <p style="margin-top:8px">${esc(u.summary)}</p><div style="margin-top:9px"><a class="link" href="${esc(u.url)}" target="_blank" rel="noopener">Open report ↗</a></div></div>`}
-function renderUpdates(){let sorted=[...updates].sort((a,b)=>b.date.localeCompare(a.date));$("overviewUpdates").innerHTML=sorted.slice(0,4).map(updateItem).join("");$("fullUpdates").innerHTML=sorted.map(updateItem).join("");let n=sorted.filter(isNew).length;["navNewCount","updatesCount"].forEach(id=>{$ (id).textContent=n;$ (id).style.display=n?"inline-grid":"none"})}
+function renderUpdates(){
+  let sorted=[...updates].sort((a,b)=>(b.date||"").localeCompare(a.date||""));
+  $("overviewUpdates").innerHTML=sorted.slice(0,4).map(updateItem).join("")||'<div class="empty">No updates yet.</div>';
+  updateFilters.org=fillInstitutions("updateOrg",sorted.map(u=>u.source),updateFilters.org);
+  if(updateFilters.category!=="All"&&!sorted.some(u=>u.category===updateFilters.category))updateFilters.category="All";
+  makeChips("updateChips",sorted,updateFilters.category,c=>{updateFilters.category=c;renderUpdates()});
+  const q=updateFilters.search.toLowerCase().trim();
+  const cutoff=new Date();cutoff.setUTCDate(cutoff.getUTCDate()-(Number(updateFilters.period)||0)+1);
+  const cutoffDate=cutoff.toISOString().slice(0,10);
+  const visible=sorted.filter(u=>(updateFilters.category==="All"||u.category===updateFilters.category)&&(updateFilters.org==="All"||u.source===updateFilters.org)&&(updateFilters.kind==="All"||updateKind(u)===updateFilters.kind)&&(updateFilters.period==="All"||(u.date>=cutoffDate&&u.date<=new Date().toISOString().slice(0,10)))&&(!q||[u.title,u.source,u.category,u.summary].join(" ").toLowerCase().includes(q)));
+  $("updateResultCount").textContent=visible.length+" of "+sorted.length+" updates";
+  $("fullUpdates").innerHTML=visible.length?visible.map(updateItem).join(""):'<div class="empty">No updates match these filters.</div>';
+  let n=sorted.filter(isNew).length;["navNewCount","updatesCount"].forEach(id=>{$(id).textContent=n;$(id).style.display=n?"inline-grid":"none"});
+}
 function markSeen(){const newest=[...updates].sort((a,b)=>b.date.localeCompare(a.date))[0];if(newest){lastSeen=newest.date;localStorage.setItem("ww_lastSeen",lastSeen)}renderUpdates()}
 function renderCalendar(){const groups={"Jan–Mar":[],"Apr–Jun":[],"Jul–Sep":[],"Oct–Dec":[]};sources.filter(s=>s.flagship&&["Core","Strong"].includes(s.priority)).forEach(s=>{let w=(s.releaseWindow||"").toLowerCase(),g=w.includes("january")||w.includes("february")||w.includes("march")||w.includes("spring")?"Jan–Mar":w.includes("april")||w.includes("may")||w.includes("june")?"Apr–Jun":w.includes("july")||w.includes("august")||w.includes("september")?"Jul–Sep":w.includes("october")||w.includes("autumn")||w.includes("november")||w.includes("december")?"Oct–Dec":"Jul–Sep";groups[g].push(s)});$("calendar").innerHTML=Object.entries(groups).map(([g,a])=>`<div class="monthbox"><h3>${g}</h3>${a.length?a.slice(0,14).map(s=>`<div class="entry"><b>${esc(s.name)}</b><span>${esc(s.releaseWindow)} · ${esc(s.org)}</span></div>`).join(""):`<span style="color:var(--muted)">No scheduled flagships</span>`}</div>`).join("")}
 function renderMyList(){let f=sources.filter(s=>favorites.has(s.id)),t=sources.filter(s=>statusLabel(s.id)==="To read");$("favoriteGrid").innerHTML=f.length?f.map(card).join(""):`<div class="empty">Star sources to keep them here.</div>`;$("toReadGrid").innerHTML=t.length?t.map(card).join(""):`<div class="empty">Mark a source “To read” and it will appear here.</div>`}
@@ -235,6 +280,15 @@ function renderAll(){renderCore();renderSources();renderUpdates();renderCalendar
 function goView(v){document.querySelectorAll(".view").forEach(x=>x.classList.remove("active"));document.querySelectorAll(".tab").forEach(x=>x.classList.remove("active"));$(v).classList.add("active");document.querySelector(`.tab[data-view="${v}"]`).classList.add("active");window.scrollTo({top:0,behavior:"smooth"})}
 document.querySelectorAll(".tab").forEach(b=>b.onclick=()=>goView(b.dataset.view));
 $("search").oninput=e=>{filters.search=e.target.value;renderSources()};$("priority").onchange=e=>{filters.priority=e.target.value;renderSources()};$("sort").onchange=e=>{filters.sort=e.target.value;renderSources()};$("favFilter").onclick=()=>{filters.fav=!filters.fav;$("favFilter").classList.toggle("active",filters.fav);renderSources()};
+fillInstitutions("sourceOrg",sources.map(s=>s.org),"All");
+$("sourceOrg").onchange=e=>{filters.org=e.target.value;renderSources()};
+$("sourceKind").onchange=e=>{filters.kind=e.target.value;renderSources()};
+$("resetSources").onclick=()=>{filters={category:"All",priority:"All",search:"",sort:"priority",fav:false,org:"All",kind:"All"};$("search").value="";$("priority").value="All";$("sort").value="priority";$("sourceOrg").value="All";$("sourceKind").value="All";$("favFilter").classList.remove("active");renderChips();renderSources()};
+$("updateSearch").oninput=e=>{updateFilters.search=e.target.value;renderUpdates()};
+$("updateOrg").onchange=e=>{updateFilters.org=e.target.value;renderUpdates()};
+$("updateKind").onchange=e=>{updateFilters.kind=e.target.value;renderUpdates()};
+$("updatePeriod").onchange=e=>{updateFilters.period=e.target.value;renderUpdates()};
+$("resetUpdates").onclick=()=>{updateFilters={category:"All",search:"",org:"All",kind:"All",period:"All"};$("updateSearch").value="";$("updateKind").value="All";$("updatePeriod").value="All";renderUpdates()};
 $("markSeen").onclick=markSeen;$("markSeen2").onclick=markSeen;
 function openNote(id){currentNoteId=id;let s=sources.find(x=>x.id===id);$("modalTitle").textContent="Notes · "+(s?.name||"Source");$("noteText").value=notes[id]||"";$("modalBack").classList.add("open")}
 $("cancelNote").onclick=()=>$("modalBack").classList.remove("open");$("saveNote").onclick=()=>{notes[currentNoteId]=$("noteText").value.trim();save();$("modalBack").classList.remove("open");renderAll()};$("modalBack").onclick=e=>{if(e.target===$("modalBack"))$("modalBack").classList.remove("open")};
