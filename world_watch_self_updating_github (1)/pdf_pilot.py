@@ -18,14 +18,21 @@ from updater import is_report_candidate
 
 ROOT = Path(__file__).resolve().parent
 OUTPUT = ROOT / "pdf_summaries.json"
-MAX_REPORTS = 5
+MAX_REPORTS = 10
 MAX_PDF_BYTES = 20 * 1024 * 1024
 MAX_HTML_BYTES = 2 * 1024 * 1024
 MAX_PAGES = 35
-DEADLINE = 240
+DEADLINE = 360
 HEADERS = {"User-Agent": "WorldWatch-PublicReportReader/1.0", "Accept": "text/html,application/pdf"}
-HEADING = re.compile(r"^\s*(executive summary|summary of findings|key findings|main findings|key messages|highlights|summary for policymakers)\s*[:.]?\s*$", re.I)
+HEADING = re.compile(r"^\s*(executive summary|summary of findings|key findings|main findings|key messages|highlights|summary for policymakers|overview|key takeaways|significant events, trends, and issues)\s*[:.]?\s*$", re.I)
 NEXT_HEADING = re.compile(r"^\s*(?:chapter\s+\d+.*|introduction|table of contents|contents|references|acknowledgements|acknowledgments|methodology|foreword|appendix)\s*$", re.I)
+NON_REPORT = re.compile(r"\b(?:transcripts?|speeches|speech|webinars?|interviews?|podcasts?|videos?|remarks|press[-_ ]releases?|media[-_ ]releases?|presentation|slides|factsheet|fact sheet)\b", re.I)
+PREFERRED = {"strategic_seed_16": 100, "strategic_seed_9": 99, "strategic_seed_8": 98, "strategic_seed_10": 97}
+OFFICIAL_PDF_HINTS = {
+    "strategic_seed_9": "https://iea.blob.core.windows.net/assets/19c60aa0-ee07-4a20-a138-33c967ac5008/GlobalCriticalMineralsOutlook2026.pdf",
+    "strategic_seed_8": "https://thedocs.worldbank.org/en/doc/2ac43f46629cf90c2ea5b8929a343593-0050012026/commodity-markets-outlook-october-2026",
+    "strategic_seed_10": "https://pubs.usgs.gov/publication/mcs2026",
+}
 STOP = set("the a an of in to and for on with by from report global world new edition annual quarterly update outlook research pdf summary".split())
 PRIORITY = {"Investment & Financial Markets", "Commodities & Critical Minerals", "International Relations & Geopolitical Risk", "Geopolitics & Security", "Strategic Foresight & Emerging Industries"}
 
@@ -85,6 +92,8 @@ def pdf_links(html, url, title):
             continue
         label = a.get_text(" ", strip=True)
         blob = label + " " + link
+        if NON_REPORT.search(re.sub(r"[_-]", " ", blob)):
+            continue
         if not (re.search(r"\.pdf(?:[?#]|$)", link, re.I) or re.search(r"\b(?:download|full report|pdf)\b", label, re.I)):
             continue
         if re.search(r"\b(?:annex|appendix|methodology|presentation|slides|press release|infographic|summary only)\b", label, re.I):
@@ -93,8 +102,10 @@ def pdf_links(html, url, title):
         options[link] = max(score, options.get(link, -1))
     for meta in soup.find_all("meta"):
         if str(meta.get("name", "")).lower() in ("citation_pdf_url", "dc.identifier.pdf") and meta.get("content"):
-            options[urljoin(url, meta["content"])] = 100
-    return sorted(options, key=lambda k: options[k], reverse=True)[:3]
+            link = urljoin(url, meta["content"])
+            if not NON_REPORT.search(re.sub(r"[_-]", " ", link)):
+                options[link] = 100
+    return sorted(options, key=lambda k: options[k], reverse=True)[:5]
 
 def matches_title(title, opening):
     target = words(title)
@@ -129,6 +140,8 @@ def find_section(pages):
     return None
 
 def inspect_pdf(data, url, title, deadline):
+    if NON_REPORT.search(re.sub(r"[_-]", " ", urlsplit(url).path)):
+        raise ValueError("non-report PDF")
     if not data.startswith(b"%PDF-"):
         raise ValueError("not a PDF")
     reader = PdfReader(BytesIO(data), strict=False)
@@ -140,7 +153,10 @@ def inspect_pdf(data, url, title, deadline):
             raise TimeoutError("time limit")
         pages.append(page.extract_text() or "")
         if len(pages) == min(4, len(reader.pages)):
-            if not matches_title(title, " ".join(pages)):
+            opening = " ".join(pages)
+            if re.search(r"(?im)^\s*(?:webinar transcript|transcript|interview transcript|speech transcript|podcast transcript)\s*[:.]?\s*$", opening):
+                raise ValueError("transcript, not report")
+            if not matches_title(title, opening):
                 raise ValueError("PDF title or edition could not be matched")
         if len(pages) >= 4:
             section = find_section(pages)
@@ -152,18 +168,53 @@ def inspect_pdf(data, url, title, deadline):
     return {"status": "ready", "pdf_url": url, **section} if section else {"status": "pdf_only", "pdf_url": url}
 
 def process(report, deadline):
-    data, url = download(report["url"], deadline)
-    if data.startswith(b"%PDF-"):
-        return inspect_pdf(data, url, report["title"], deadline)
-    for candidate in pdf_links(data, url, report["title"]):
+    targets = list(dict.fromkeys([OFFICIAL_PDF_HINTS.get(str(report["id"])), report["url"]]))
+    best = None
+    errors = []
+    for target in targets:
+        if not target:
+            continue
         try:
-            blob, final = download(candidate, deadline)
-            return inspect_pdf(blob, final, report["title"], deadline)
-        except (ValueError, OSError, requests.RequestException, TimeoutError):
-            continue
-        except Exception:
-            continue
-    return {"status": "unavailable"}
+            data, url = download(target, deadline)
+            if data.startswith(b"%PDF-"):
+                result = inspect_pdf(data, url, report["title"], deadline)
+                if result["status"] == "ready":
+                    return result
+                best = result
+                continue
+            for candidate in pdf_links(data, url, report["title"]):
+                try:
+                    blob, final = download(candidate, deadline)
+                    result = inspect_pdf(blob, final, report["title"], deadline)
+                    if result["status"] == "ready":
+                        return result
+                    best = result
+                except Exception as exc:
+                    errors.append(type(exc).__name__)
+        except Exception as exc:
+            errors.append(type(exc).__name__)
+    return best or {"status": "unavailable", "reason": ", ".join(dict.fromkeys(errors))[:160] or "No matching public PDF"}
+
+def priority(report, records, now):
+    rid = str(report["id"])
+    previous = records.get(rid, {})
+    # First fill known public institutional sources; unattempted reports before ordinary retries.
+    host = urlsplit(report["url"]).hostname or ""
+    public = any(host == domain or host.endswith("." + domain) for domain in ("worldbank.org", "europa.eu", "iea.org", "usgs.gov", "imf.org", "sipri.org", "who.int", "unctad.org", "irena.org", "oecd.org", "un.org"))
+    return (PREFERRED.get(rid, 0) if rid not in records else 0, not previous, public, report.get("category") in PRIORITY, report.get("date", ""))
+
+def retry_due(entry, now):
+    if not entry:
+        return True
+    if NON_REPORT.search(re.sub(r"[_-]", " ", entry.get("pdf_url", ""))):
+        return True
+    if entry.get("status") == "ready":
+        return False
+    try:
+        return now - datetime.fromisoformat(entry["checked"]) >= timedelta(days=7)
+    except (ValueError, KeyError, TypeError):
+        return True
+
 
 def eligible(report):
     return bool(report.get("id") and report.get("url") and report.get("title") and (not report.get("automatic") or report.get("series_id") or is_report_candidate(report["title"], report["url"])))
@@ -176,6 +227,8 @@ def self_test():
     assert matches_title("Global Critical Minerals Outlook 2026", "Critical Minerals Outlook 2026")
     assert not matches_title("Global Critical Minerals Outlook 2026", "Critical Minerals Outlook 2025")
     assert pdf_links(b'<a href="/report.pdf">Download full report</a>', "https://example.org/reports", "Example report") == ["https://example.org/report.pdf"]
+    assert pdf_links(b'<a href="/webinar-transcript.pdf">Download PDF</a>', "https://example.org/reports", "Example report") == []
+    assert retry_due({"status":"unavailable", "checked":"2025-01-01T00:00:00+00:00"}, datetime.now(timezone.utc))
     print("PDF pilot unit checks passed.")
 
 def main():
@@ -187,26 +240,28 @@ def main():
     today = datetime.now(timezone.utc)
     previous = read_json(OUTPUT, {"version": 1, "reports": {}})
     records = previous.get("reports", {})
+    # Remove known transcript candidates immediately, even if no new extraction succeeds.
+    records = {k: v for k, v in records.items() if not NON_REPORT.search(re.sub(r"[_-]", " ", v.get("pdf_url", "")))}
     curated = read_json(ROOT / "updates.json", {}).get("updates", [])
     auto = read_json(ROOT / "auto_updates.json", {}).get("updates", [])
-    reports = sorted([r for r in curated + auto if eligible(r)], key=lambda r: (r.get("category") in PRIORITY, r.get("date", ""), r.get("type") == "Reference report"), reverse=True)
+    reports = sorted([r for r in curated + auto if eligible(r)], key=lambda r: priority(r, records, today), reverse=True)
     attempted = 0
     seen = set()
     for report in reports:
         if attempted >= MAX_REPORTS or time.monotonic() >= deadline:
             break
         rid = str(report["id"])
-        if report["url"] in seen or rid in records:
+        if report["url"] in seen or not retry_due(records.get(rid), today):
             continue
         seen.add(report["url"])
         attempted += 1
         try:
-            entry = process(report, min(deadline, time.monotonic() + 45))
+            entry = process(report, min(deadline, time.monotonic() + 32))
         except Exception:
             entry = {"status": "unavailable"}
         records[rid] = {**entry, "report_url": report["url"], "checked": today.isoformat()}
         print(rid, entry["status"])
-    if attempted:
+    if attempted or records != previous.get("reports", {}):
         OUTPUT.write_text(json.dumps({"version": 1, "last_checked": today.isoformat(), "reports": records}, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print("Pilot:", attempted, "reports attempted;", sum(v.get("status") == "ready" for v in records.values()), "excerpts saved.")
 
