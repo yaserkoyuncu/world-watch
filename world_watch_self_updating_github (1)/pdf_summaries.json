@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_checked": "2026-11-26T14:40:19.067406+00:00",
+  "last_checked": "2026-11-26T14:43:38.474363+00:00",
   "reports": {
     "strategic_seed_1": {
       "status": "unavailable",
@@ -21,6 +21,78 @@
       "status": "unavailable",
       "report_url": "https://www.morganstanley.com/insights/articles/global-economic-outlook-2027",
       "checked": "2026-11-26T14:40:19.067406+00:00"
+    },
+    "strategic_seed_16": {
+      "status": "pdf_only",
+      "pdf_url": "https://data.consilium.europa.eu/doc/document/ST-12388-2025-INIT/en/pdf",
+      "report_url": "https://commission.europa.eu/strategy-and-policy/strategic-foresight/2025-strategic-foresight-report_en",
+      "checked": "2026-11-26T14:43:38.474363+00:00"
+    },
+    "strategic_seed_9": {
+      "status": "ready",
+      "pdf_url": "https://iea.blob.core.windows.net/assets/19c60aa0-ee07-4a20-a138-33c967ac5008/GlobalCriticalMineralsOutlook2026.pdf",
+      "section": "Executive summary",
+      "page": 6,
+      "excerpt": "Executive summary Critical minerals have moved to the forefront of energy, economic and national security agendas in recent years. …",
+      "report_url": "https://www.iea.org/reports/global-critical-minerals-outlook-2026",
+      "checked": "2026-11-26T14:43:38.474363+00:00"
+    },
+    "strategic_seed_8": {
+      "status": "ready",
+      "pdf_url": "https://thedocs.worldbank.org/en/doc/2ac43f46629cf90c2ea5b8929a343593-0050012026/related/CMO-October-2026-Executive-Summary.pdf",
+      "section": "Executive Summary",
+      "page": 1,
+      "excerpt": "the Middle East has also contributed. Global observed oil inventories were drawn down at an average rate of about 2.4 million barrels …",
+      "report_url": "https://thedocs.worldbank.org/en/doc/2ac43f46629cf90c2ea5b8929a343593-0050012026/",
+      "checked": "2026-11-26T14:43:38.474363+00:00"
+    },
+    "strategic_seed_10": {
+      "status": "ready",
+      "pdf_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf",
+      "section": "SIGNIFICANT EVENTS, TRENDS, AND ISSUES",
+      "page": 11,
+      "excerpt": "In 2025, the estimated total value of nonfuel mineral production in the United States was $112 billion compared with $106 billion in …",
+      "report_url": "https://www.usgs.gov/publications/mineral-commodity-summaries-2026",
+      "checked": "2026-11-26T14:43:38.474363+00:00"
+    },
+    "a0d43e3f7537d4": {
+      "status": "pdf_only",
+      "pdf_url": "https://www.sipri.org/sites/default/files/2026-11/1126_mapping_the_military_ai_industry.pdf",
+      "report_url": "https://www.sipri.org/publications/2026/other-publications/mapping-military-artificial-intelligence-industry-actors-influence-and-policymaking",
+      "checked": "2026-11-26T14:43:38.474363+00:00"
+    },
+    "509db34eecfae2": {
+      "status": "pdf_only",
+      "pdf_url": "https://www.sipri.org/sites/default/files/2026-11/1020360_hdp_research_policy_paper_0.pdf",
+      "report_url": "https://www.sipri.org/publications/2026/research-reports/hdp-nexus-programming-sahel-partnering-social-cohesion-changing-geopolitical-and-aid-landscape",
+      "checked": "2026-11-26T14:43:38.474363+00:00"
+    },
+    "2571cba5d0ae9e": {
+      "status": "unavailable",
+      "reason": "No matching public PDF",
+      "report_url": "https://www.sipri.org/publications/2026/partner-publications/climate-peace-and-security-fact-sheet-somalia-2026",
+      "checked": "2026-11-26T14:43:38.474363+00:00"
+    },
+    "22bec4b602c907": {
+      "status": "unavailable",
+      "reason": "HTTPError",
+      "report_url": "https://unctad.org/publication/trade-and-development-report-2026",
+      "checked": "2026-11-26T14:43:38.474363+00:00"
+    },
+    "a81add3f820e1a": {
+      "status": "unavailable",
+      "reason": "HTTPError",
+      "report_url": "https://www.iea.org/reports/world-energy-outlook-2025",
+      "checked": "2026-11-26T14:43:38.474363+00:00"
+    },
+    "6c439656c181ec": {
+      "status": "ready",
+      "pdf_url": "https://iris.who.int/server/api/core/bitstreams/8b0c820f-ffc9-4c86-a7b2-f2e1767fe7fe/content",
+      "section": "Key messages",
+      "page": 14,
+      "excerpt": "1. The WHO Enhanced Gonococcal Antimicrobial Surveillance Programme (EGASP) continues to provide standardized global surveillance of gonococcal antimicrobial susceptibility and resistance. In …",
+      "report_url": "https://www.who.int/publications/i/item/9789240126565",
+      "checked": "2026-11-26T14:43:38.474363+00:00"
     }
   }
 }
