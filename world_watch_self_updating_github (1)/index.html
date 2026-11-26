@@ -395,9 +395,10 @@ function isFormalReport(u){
     return (reportRules.REPORT_TITLE.test(title)&&(reportRules.REPORT_PATH.test(path)||/report|outlook|forecast|survey|index|assessment|yearbook|statistics|monitor|foresight|commodity|publication|research|assumptions|brief|watchlist|quarterly|trends|paper|robotics/i.test(path)))||reportRules.REPORT_CATALOG.test(parsed.hostname+path)||(/\.pdf$/i.test(path)&&reportRules.REPORT_TITLE.test(title));
   }catch(e){return false}
 }
-let pdfIndexPromise=null,pdfOpenToken=0,pdfPreviousFocus=null;
+let pdfIndexPromise=null,aiIndexPromise=null,pdfOpenToken=0,pdfPreviousFocus=null;
 function safeExternal(value){try{const u=new URL(value);return ["https:","http:"].includes(u.protocol)?u.href:""}catch(e){return ""}}
 function getPdfIndex(){if(!pdfIndexPromise)pdfIndexPromise=fetch("pdf_summaries.json?ts="+Date.now(),{cache:"no-store"}).then(r=>{if(!r.ok)throw Error("index unavailable");return r.json()}).catch(e=>{pdfIndexPromise=null;throw e});return pdfIndexPromise}
+function getAiIndex(){if(!aiIndexPromise)aiIndexPromise=fetch("ai_summaries.json?ts="+Date.now(),{cache:"no-store"}).then(r=>{if(!r.ok)throw Error("index unavailable");return r.json()}).catch(e=>{aiIndexPromise=null;throw e});return aiIndexPromise}
 function pdfLink(url,label){const safe=safeExternal(url);return safe?'<a class="link" target="_blank" rel="noopener noreferrer" href="'+esc(safe)+'">'+esc(label)+'</a>':""}
 function closePdfPanel(){++pdfOpenToken;$("pdfReadingPanel").hidden=true;if(pdfPreviousFocus?.isConnected)pdfPreviousFocus.focus({preventScroll:true})}
 async function openPdfPanel(report,trigger){
@@ -408,7 +409,7 @@ async function openPdfPanel(report,trigger){
   body.innerHTML=heading+'<p>Checking the saved PDF reading index…</p>';
   $("closePdfPanel").focus({preventScroll:true});
   try{
-    const index=await getPdfIndex();if(token!==pdfOpenToken)return;
+    const [index,aiIndex]=await Promise.all([getPdfIndex(),getAiIndex().catch(()=>({reports:{}}))]);if(token!==pdfOpenToken)return;
     const entries=index.reports||{};
     const entry=entries[report.id]||Object.values(entries).find(x=>x.report_url===report.url);
     let detail="";
@@ -422,7 +423,16 @@ async function openPdfPanel(report,trigger){
     }else{
       detail='<p>Not processed yet. The pilot checks up to ten reports in a separate daily job, prioritizing public institutional PDFs.</p>';
     }
-    body.innerHTML=heading+detail+'<div class="panelLinks">'+pdfLink(report.url,"Original publisher page ↗")+'</div><p class="org">Short attributed excerpts only; no full PDFs or paid AI services are stored or used.</p>';
+    const aiEntries=aiIndex.reports||{};
+    const ai=aiEntries[report.id]||Object.values(aiEntries).find(x=>x.report_url===report.url);
+    let aiDetail='<section style="margin:18px 0"><p class="filterlabel">LOCAL AI SUMMARY · EXPERIMENTAL</p>';
+    if(ai?.status==="ready"){
+      const pages=(ai.pages||[]).filter(x=>Number.isInteger(x)&&x>0);
+      aiDetail+='<h3>AI-generated reading summary</h3><p class="org">Unverified draft from selected PDF pages, not a full-report analysis. Verify claims in the original report.</p><div style="white-space:pre-wrap;line-height:1.65">'+esc(ai.summary)+'</div><p class="org">Model: '+esc(ai.model)+' · PDF viewer pages: '+esc(pages.join(", "))+'</p><div class="panelLinks">'+pages.map(n=>pdfLink(ai.pdf_url+"#page="+n,"Page "+n+" ↗")).join("")+'</div>';
+    }else if(ai){aiDetail+='<p>No draft passed the pilot checks. The original report remains available below.</p>'}
+    else{aiDetail+='<p>Not processed by the local model yet. The experimental workflow attempts up to two reports per weekly run.</p>'}
+    aiDetail+='</section><hr>';
+    body.innerHTML=heading+aiDetail+detail+'<div class="panelLinks">'+pdfLink(report.url,"Original publisher page ↗")+'</div><p class="org">Local AI drafts and short attributed excerpts only. No full PDFs are stored and no paid AI API is used.</p>';
   }catch(e){if(token===pdfOpenToken)body.innerHTML=heading+'<p>The reading index is temporarily unavailable.</p>'+pdfLink(report.url,"Original publisher page ↗")}
 }
 $("closePdfPanel").onclick=closePdfPanel;
