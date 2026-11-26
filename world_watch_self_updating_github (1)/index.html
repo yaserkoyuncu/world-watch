@@ -96,6 +96,12 @@ input,select{width:100%;border:1px solid var(--line);background:var(--panel);col
 .filterrow .filterbtn{flex:0 0 auto}
 .filterlabel{color:var(--muted);font-size:12px;font-weight:800;margin:10px 0 4px}
 .chipcount{opacity:.7;margin-left:5px;font-size:11px}
+.grouphead{font-size:15px;margin:18px 0 4px;padding:9px 10px;border-radius:10px;background:var(--panel2);color:var(--text)}
+.grouphead:first-child{margin-top:0}
+.viewcontrols{display:flex;gap:7px;flex-wrap:wrap;margin:0 0 12px;align-items:center}
+.viewcontrols .filterbtn[aria-pressed="true"]{color:var(--blue);border-color:var(--blue);background:color-mix(in srgb,var(--blue) 10%,transparent)}
+.datecontrol{display:flex;align-items:center;gap:6px;flex:1 1 180px;color:var(--muted);font-size:12px}
+.datecontrol input{min-width:0}
 </style>
 </head>
 <body>
@@ -120,7 +126,7 @@ input,select{width:100%;border:1px solid var(--line);background:var(--panel);col
 <nav class="nav">
   <button class="tab active" data-view="overview">Overview <span class="count" id="navNewCount" style="display:none"></span></button>
   <button class="tab" data-view="sources">Sources</button>
-  <button class="tab" data-view="updates">Updates <span class="count" id="updatesCount" style="display:none"></span></button>
+  <button class="tab" data-view="updates">Reports <span class="count" id="updatesCount" style="display:none"></span></button>
   <button class="tab" data-view="annual">Annual Reports</button>
   <button class="tab" data-view="mylist">My List</button>
 </nav>
@@ -174,7 +180,14 @@ input,select{width:100%;border:1px solid var(--line);background:var(--panel);col
 </section>
 
 <section class="view" id="updates">
-  <div class="sectionhead"><div><h2>Update feed</h2><p>Major new editions and substantive updates. New items are highlighted until you mark them seen.</p></div><button class="smallbtn" id="markSeen2">Mark all seen</button></div>
+  <div class="sectionhead"><div><h2>All reports &amp; updates</h2><p>Browse the retained archive by date, theme or institution. Automatic dates indicate detection; curated dates are supplied dates.</p></div><button class="smallbtn" id="markSeen2">Mark all seen</button></div>
+  <div class="filterlabel">Choose a report view</div>
+  <div class="viewcontrols" id="reportViews" aria-label="Report grouping">
+    <button class="filterbtn" data-group="date" aria-pressed="true">By date</button>
+    <button class="filterbtn" data-group="theme" aria-pressed="false">By theme</button>
+    <button class="filterbtn" data-group="institution" aria-pressed="false">By institution</button>
+    <button class="filterbtn" data-group="none" aria-pressed="false">All in one list</button>
+  </div>
   <div class="filterlabel">Browse by topic</div>
   <div class="chips" id="updateChips" aria-label="Update categories"></div>
   <div class="filterrow">
@@ -182,7 +195,12 @@ input,select{width:100%;border:1px solid var(--line);background:var(--panel);col
     <select id="updateOrg" aria-label="Update institution"><option value="All">All institutions</option></select>
     <select id="updateKind" aria-label="Update type"><option value="All">All updates</option><option value="Flagship">Flagship editions &amp; updates</option><option value="Discovery">Discovered publications</option><option value="Curated">Curated updates</option><option value="Other">Other automatic updates</option></select>
     <select id="updatePeriod" aria-label="Update date range"><option value="All">All dates</option><option value="7">Last 7 days</option><option value="30">Last 30 days</option><option value="90">Last 90 days</option></select>
+    <select id="updateSort" aria-label="Sort reports"><option value="newest">Newest first</option><option value="oldest">Oldest first</option><option value="title">Title A–Z</option><option value="theme">Theme A–Z</option><option value="institution">Institution A–Z</option></select>
     <button class="filterbtn" id="resetUpdates">Reset filters</button>
+  </div>
+  <div class="filterrow">
+    <label class="datecontrol">From <input type="date" id="updateFrom" aria-label="Earliest report date"></label>
+    <label class="datecontrol">To <input type="date" id="updateTo" aria-label="Latest report date"></label>
   </div>
   <div class="filterlabel" id="updateResultCount" aria-live="polite"></div>
   <div class="panel" id="fullUpdates"></div>
@@ -227,7 +245,8 @@ let notes=store("ww_notes",{});
 let lastSeen=localStorage.getItem("ww_lastSeen")||"2026-01-01";
 let currentNoteId=null;
 let filters={category:"All",priority:"All",search:"",sort:"priority",fav:false,org:"All",kind:"All"};
-let updateFilters={category:"All",search:"",org:"All",kind:"All",period:"All"};
+function defaultUpdateFilters(){return {category:"All",search:"",org:"All",kind:"All",period:"All",sort:"newest",group:"date",from:"",to:""}}
+let updateFilters=defaultUpdateFilters();
 const $=id=>document.getElementById(id);
 function save(){localStorage.setItem("ww_favorites",JSON.stringify([...favorites]));localStorage.setItem("ww_statuses",JSON.stringify(statuses));localStorage.setItem("ww_notes",JSON.stringify(notes));}
 function esc(s){return String(s??"").replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
@@ -259,6 +278,26 @@ function renderSources(){let a=filtered();$("resultCount").textContent=`${a.leng
 function updateItem(u){return `<div class="updateitem" style="${isNew(u)?"background:linear-gradient(90deg,color-mix(in srgb,var(--blue) 7%,transparent),transparent);margin:0 -10px;padding-left:10px;padding-right:10px;border-radius:10px":""}">
 <div class="updateTop"><div><span class="tag">${esc(u.type)}${isNew(u)?" · NEW":""}</span><h3>${esc(u.title)}</h3><div class="org">${esc(u.source)} · ${esc(u.category)}</div></div><div class="date">${fmtDate(u.date)}</div></div>
 <p style="margin-top:8px">${esc(u.summary)}</p><div style="margin-top:9px"><a class="link" href="${esc(u.url)}" target="_blank" rel="noopener">Open report ↗</a></div></div>`}
+function compareReports(a,b,order){
+  const newest=(b.date||"").localeCompare(a.date||"");
+  const alpha=(x,y)=>String(x||"").localeCompare(String(y||""));
+  if(order==="oldest")return -newest||alpha(a.title,b.title);
+  if(order==="title")return alpha(a.title,b.title)||newest;
+  if(order==="theme")return alpha(a.category,b.category)||newest||alpha(a.title,b.title);
+  if(order==="institution")return alpha(a.source,b.source)||newest||alpha(a.title,b.title);
+  return newest||alpha(a.title,b.title);
+}
+function reportGroups(items,group,order){
+  const sorted=[...items].sort((a,b)=>compareReports(a,b,order));
+  if(group==="none")return [["",sorted]];
+  const groups=new Map();
+  for(const u of sorted){
+    const key=group==="date"?(u.date||"Undated"):group==="theme"?(u.category||"Other"):(u.source||"Unknown institution");
+    if(!groups.has(key))groups.set(key,[]);
+    groups.get(key).push(u);
+  }
+  return [...groups].sort((a,b)=>group==="date"?(a[0]==="Undated"?1:b[0]==="Undated"?-1:order==="oldest"?a[0].localeCompare(b[0]):b[0].localeCompare(a[0])):a[0].localeCompare(b[0]));
+}
 function renderUpdates(){
   let sorted=[...updates].sort((a,b)=>(b.date||"").localeCompare(a.date||""));
   $("overviewUpdates").innerHTML=sorted.slice(0,4).map(updateItem).join("")||'<div class="empty">No updates yet.</div>';
@@ -269,8 +308,11 @@ function renderUpdates(){
   const cutoff=new Date();cutoff.setUTCDate(cutoff.getUTCDate()-(Number(updateFilters.period)||0)+1);
   const cutoffDate=cutoff.toISOString().slice(0,10);
   const visible=sorted.filter(u=>(updateFilters.category==="All"||u.category===updateFilters.category)&&(updateFilters.org==="All"||u.source===updateFilters.org)&&(updateFilters.kind==="All"||updateKind(u)===updateFilters.kind)&&(updateFilters.period==="All"||(u.date>=cutoffDate&&u.date<=new Date().toISOString().slice(0,10)))&&(!q||[u.title,u.source,u.category,u.summary].join(" ").toLowerCase().includes(q)));
-  $("updateResultCount").textContent=visible.length+" of "+sorted.length+" updates";
-  $("fullUpdates").innerHTML=visible.length?visible.map(updateItem).join(""):'<div class="empty">No updates match these filters.</div>';
+  const dateRangeValid=!updateFilters.from||!updateFilters.to||updateFilters.from<=updateFilters.to;
+  const results=dateRangeValid?visible.filter(u=>(!updateFilters.from||u.date>=updateFilters.from)&&(!updateFilters.to||u.date<=updateFilters.to)):[];
+  $("updateResultCount").textContent=dateRangeValid?results.length+" of "+sorted.length+" reports & updates":"Choose a start date on or before the end date.";
+  document.querySelectorAll("#reportViews [data-group]").forEach(b=>b.setAttribute("aria-pressed",String(b.dataset.group===updateFilters.group)));
+  $("fullUpdates").innerHTML=results.length?reportGroups(results,updateFilters.group,updateFilters.sort).map(([key,items])=>(key?'<h3 class="grouphead">'+esc(updateFilters.group==="date"&&key!=="Undated"?fmtDate(key):key)+' · '+items.length+'</h3>':'')+items.map(updateItem).join("")).join(""):'<div class="empty">No reports match these filters.</div>';
   let n=sorted.filter(isNew).length;["navNewCount","updatesCount"].forEach(id=>{$(id).textContent=n;$(id).style.display=n?"inline-grid":"none"});
 }
 function markSeen(){const newest=[...updates].sort((a,b)=>b.date.localeCompare(a.date))[0];if(newest){lastSeen=newest.date;localStorage.setItem("ww_lastSeen",lastSeen)}renderUpdates()}
@@ -288,7 +330,11 @@ $("updateSearch").oninput=e=>{updateFilters.search=e.target.value;renderUpdates(
 $("updateOrg").onchange=e=>{updateFilters.org=e.target.value;renderUpdates()};
 $("updateKind").onchange=e=>{updateFilters.kind=e.target.value;renderUpdates()};
 $("updatePeriod").onchange=e=>{updateFilters.period=e.target.value;renderUpdates()};
-$("resetUpdates").onclick=()=>{updateFilters={category:"All",search:"",org:"All",kind:"All",period:"All"};$("updateSearch").value="";$("updateKind").value="All";$("updatePeriod").value="All";renderUpdates()};
+$("updateSort").onchange=e=>{updateFilters.sort=e.target.value;renderUpdates()};
+$("updateFrom").onchange=e=>{updateFilters.from=e.target.value;renderUpdates()};
+$("updateTo").onchange=e=>{updateFilters.to=e.target.value;renderUpdates()};
+document.querySelectorAll("#reportViews [data-group]").forEach(b=>b.onclick=()=>{updateFilters.group=b.dataset.group;renderUpdates()});
+$("resetUpdates").onclick=()=>{updateFilters=defaultUpdateFilters();$("updateSearch").value="";$("updateKind").value="All";$("updatePeriod").value="All";$("updateSort").value="newest";$("updateFrom").value="";$("updateTo").value="";renderUpdates()};
 $("markSeen").onclick=markSeen;$("markSeen2").onclick=markSeen;
 function openNote(id){currentNoteId=id;let s=sources.find(x=>x.id===id);$("modalTitle").textContent="Notes · "+(s?.name||"Source");$("noteText").value=notes[id]||"";$("modalBack").classList.add("open")}
 $("cancelNote").onclick=()=>$("modalBack").classList.remove("open");$("saveNote").onclick=()=>{notes[currentNoteId]=$("noteText").value.trim();save();$("modalBack").classList.remove("open");renderAll()};$("modalBack").onclick=e=>{if(e.target===$("modalBack"))$("modalBack").classList.remove("open")};
@@ -322,8 +368,9 @@ async function loadUpdates(){
   }catch(e){}
   const seenUrls=new Set();
   updates=[...automatic,...curated].filter(u=>{
-    if(seenUrls.has(u.url)) return false;
-    seenUrls.add(u.url); return true;
+    const key=u.series_id&&u.edition?"series:"+u.series_id+":"+u.edition:u.url||u.id;
+    if(seenUrls.has(key)) return false;
+    seenUrls.add(key); return true;
   }).sort((a,b)=>(b.date||"").localeCompare(a.date||""));
   renderUpdates();
 }
