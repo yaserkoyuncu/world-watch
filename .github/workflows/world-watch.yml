@@ -127,3 +127,18 @@ jobs:
       - name: Deploy website
         id: deployment
         uses: actions/deploy-pages@v5
+
+      - name: Verify public website contains new menu
+        shell: bash
+        env:
+          SITE_URL: ${{ steps.deployment.outputs.page_url }}
+        run: |
+          for attempt in 1 2 3 4 5 6; do
+            if curl --fail --silent --show-error --location --max-time 15 "${SITE_URL}?build=${GITHUB_SHA}&attempt=${attempt}" -o /tmp/world-watch-live.html && grep -q 'strategic-menu-20261126' /tmp/world-watch-live.html && grep -q 'id="reportSortButtons"' /tmp/world-watch-live.html && grep -q 'id="strategicMenu"' /tmp/world-watch-live.html; then
+              echo "Verified public HTML: strategic menu and report sorting buttons are present."
+              exit 0
+            fi
+            sleep 10
+          done
+          echo "Public site did not return the expected menu yet."
+          exit 1
