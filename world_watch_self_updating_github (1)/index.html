@@ -109,12 +109,20 @@ input,select{width:100%;border:1px solid var(--line);background:var(--panel);col
 .strategicnav .tab.active{border-color:var(--blue);color:var(--blue)}
 .buildlabel{font-size:11px;color:var(--muted);letter-spacing:0;font-weight:700}
 @media(max-width:680px){.nav{position:static}.brand{flex-wrap:wrap}.strategicnav .tab{flex:1 1 135px}}
+.pdfpanel{position:fixed;top:0;right:0;bottom:0;width:min(520px,100vw);z-index:110;background:var(--panel);border-left:1px solid var(--line);box-shadow:var(--shadow);overflow:auto;padding:20px;overscroll-behavior:contain}
+.pdfpanel[hidden]{display:none}
+.pdfpanel header{position:sticky;top:-20px;background:var(--panel);display:flex;justify-content:space-between;align-items:center;gap:8px;padding:12px 0;z-index:1;border-bottom:1px solid var(--line)}
+.pdfpanel h2{font-size:22px;line-height:1.25}
+.pdfpanel .excerpt{border-left:3px solid var(--blue);padding:12px 15px;background:var(--panel2);border-radius:8px;line-height:1.6}
+.pdfpanel .panelLinks{display:flex;flex-wrap:wrap;gap:12px;margin-top:18px}
+.pdfactions{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin-top:9px}
+@media(max-width:680px){.pdfpanel{width:100%;border-left:0}}
 </style>
 </head>
 <body>
 <div class="app">
 <div class="topbar">
-  <div class="brand"><div class="logo">W</div> WORLD WATCH <span class="buildlabel">Strategic edition · v2.1</span></div>
+  <div class="brand"><div class="logo">W</div> WORLD WATCH <span class="buildlabel">Strategic edition · v2.2</span></div>
   <div class="actions"><button class="iconbtn" id="themeBtn" title="Theme">◐</button></div>
 </div>
 
@@ -245,6 +253,10 @@ input,select{width:100%;border:1px solid var(--line);background:var(--panel);col
 <div class="footer">WORLD WATCH · free-access sources · personal reading state is stored only in this browser</div>
 </div>
 
+<aside class="pdfpanel" id="pdfReadingPanel" role="region" aria-label="PDF reading panel" hidden>
+  <header><strong>PDF reading guide · pilot</strong><button class="iconbtn" type="button" id="closePdfPanel" aria-label="Close PDF reading panel">Close ×</button></header>
+  <div id="pdfPanelContent" aria-live="polite"></div>
+</aside>
 <div class="modalback" id="modalBack">
   <div class="modal">
     <h3 id="modalTitle">Notes</h3>
@@ -300,7 +312,7 @@ function filtered(){let q=filters.search.toLowerCase().trim();let a=sources.filt
 function renderSources(){let a=filtered();$("resultCount").textContent=`${a.length} of ${sources.length} sources`;$("sourceGrid").innerHTML=a.length?a.map(card).join(""):`<div class="empty">No sources match these filters.</div>`}
 function updateItem(u){return `<div class="updateitem" style="${isNew(u)?"background:linear-gradient(90deg,color-mix(in srgb,var(--blue) 7%,transparent),transparent);margin:0 -10px;padding-left:10px;padding-right:10px;border-radius:10px":""}">
 <div class="updateTop"><div><span class="tag">${esc(u.type)}${u.date_kind==="archive_added"?" · ADDED TO ARCHIVE":isNew(u)?" · NEW":""}</span><h3>${esc(u.title)}</h3><div class="org">${esc(u.source)} · ${esc(u.category)}</div></div><div class="date">${u.date_kind==="archive_added"?"Added ":""}${fmtDate(u.date)}</div></div>
-<p style="margin-top:8px">${esc(u.summary)}</p><div style="margin-top:9px"><a class="link" href="${esc(u.url)}" target="_blank" rel="noopener">Open report ↗</a></div></div>`}
+<p style="margin-top:8px">${esc(u.summary)}</p><div class="pdfactions"><a class="link" href="${esc(u.url)}" target="_blank" rel="noopener">Open report ↗</a><button class="smallbtn" type="button" data-pdf-report="${esc(u.id)}">PDF summary / guide</button></div></div>`}
 function compareReports(a,b,order){
   const newest=(b.date||"").localeCompare(a.date||"");
   const alpha=(x,y)=>String(x||"").localeCompare(String(y||""));
@@ -382,6 +394,39 @@ function isFormalReport(u){
     return (reportRules.REPORT_TITLE.test(title)&&(reportRules.REPORT_PATH.test(path)||/report|outlook|forecast|survey|index|assessment|yearbook|statistics|monitor|foresight|commodity|publication|research|assumptions|brief|watchlist|quarterly|trends/i.test(path)))||reportRules.REPORT_CATALOG.test(parsed.hostname+path)||(/\.pdf$/i.test(path)&&reportRules.REPORT_TITLE.test(title));
   }catch(e){return false}
 }
+let pdfIndexPromise=null,pdfOpenToken=0,pdfPreviousFocus=null;
+function safeExternal(value){try{const u=new URL(value);return ["https:","http:"].includes(u.protocol)?u.href:""}catch(e){return ""}}
+function getPdfIndex(){if(!pdfIndexPromise)pdfIndexPromise=fetch("pdf_summaries.json?ts="+Date.now(),{cache:"no-store"}).then(r=>{if(!r.ok)throw Error("index unavailable");return r.json()}).catch(e=>{pdfIndexPromise=null;throw e});return pdfIndexPromise}
+function pdfLink(url,label){const safe=safeExternal(url);return safe?'<a class="link" target="_blank" rel="noopener noreferrer" href="'+esc(safe)+'">'+esc(label)+'</a>':""}
+function closePdfPanel(){++pdfOpenToken;$("pdfReadingPanel").hidden=true;if(pdfPreviousFocus?.isConnected)pdfPreviousFocus.focus({preventScroll:true})}
+async function openPdfPanel(report,trigger){
+  const token=++pdfOpenToken;pdfPreviousFocus=trigger;
+  const panel=$("pdfReadingPanel"),body=$("pdfPanelContent");
+  panel.hidden=false;panel.scrollTop=0;
+  const heading='<h2>'+esc(report.title)+'</h2><p class="org">'+esc(report.source)+' · '+esc(report.category)+'</p>';
+  body.innerHTML=heading+'<p>Checking the saved PDF reading index…</p>';
+  $("closePdfPanel").focus({preventScroll:true});
+  try{
+    const index=await getPdfIndex();if(token!==pdfOpenToken)return;
+    const entries=index.reports||{};
+    const entry=entries[report.id]||Object.values(entries).find(x=>x.report_url===report.url);
+    let detail="";
+    if(entry?.status==="ready"){
+      const page=Number(entry.page);
+      detail='<p class="filterlabel">Original report excerpt — not AI-generated</p><h3>'+esc(entry.section)+'</h3><p class="excerpt">'+esc(entry.excerpt)+'</p><p class="org">PDF page '+esc(page)+' (viewer page number). Read the complete section in the original PDF.</p><div class="panelLinks">'+pdfLink(entry.pdf_url+"#page="+page,"Read complete section ↗")+pdfLink(entry.pdf_url,"Open PDF ↗")+'</div>';
+    }else if(entry?.status==="pdf_only"){
+      detail='<p>A matching PDF was located, but a clearly identifiable executive-summary section was not found within the pilot’s page limit.</p><div class="panelLinks">'+pdfLink(entry.pdf_url,"Open PDF ↗")+'</div>';
+    }else if(entry){
+      detail='<p>No matching, accessible PDF could be extracted automatically. The original report is still available via its publisher link.</p>';
+    }else{
+      detail='<p>Not processed yet. The pilot checks up to five reports in a separate daily job.</p>';
+    }
+    body.innerHTML=heading+detail+'<div class="panelLinks">'+pdfLink(report.url,"Original publisher page ↗")+'</div><p class="org">Short attributed excerpts only; no full PDFs or paid AI services are stored or used.</p>';
+  }catch(e){if(token===pdfOpenToken)body.innerHTML=heading+'<p>The reading index is temporarily unavailable.</p>'+pdfLink(report.url,"Original publisher page ↗")}
+}
+$("closePdfPanel").onclick=closePdfPanel;
+document.addEventListener("keydown",e=>{if(e.key==="Escape"&&!$("pdfReadingPanel").hidden)closePdfPanel()});
+document.addEventListener("click",e=>{const trigger=e.target.closest("[data-pdf-report]");if(!trigger)return;const report=updates.find(u=>String(u.id)===trigger.dataset.pdfReport);if(report)openPdfPanel(report,trigger)});
 async function loadUpdates(){
   let curated=embeddedUpdates, automatic=[];
   try{

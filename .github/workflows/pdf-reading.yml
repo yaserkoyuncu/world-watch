@@ -1,0 +1,54 @@
+name: World Watch PDF reading pilot
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "45 4 * * *"
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/pdf-reading.yml"
+      - "world_watch_self_updating_github (1)/pdf_pilot.py"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: world-watch-pdf-reading
+  cancel-in-progress: false
+
+jobs:
+  read-pdfs:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+      - name: Install free PDF tools
+        run: python -m pip install "pypdf>=5,<7" requests beautifulsoup4
+      - name: Test and run bounded pilot
+        working-directory: "world_watch_self_updating_github (1)"
+        run: |
+          python -m py_compile pdf_pilot.py
+          python pdf_pilot.py --self-test
+          python pdf_pilot.py
+      - name: Save extracted excerpts
+        shell: bash
+        run: |
+          git config user.name "world-watch-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "world_watch_self_updating_github (1)/pdf_summaries.json"
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "Update PDF reading index"
+          for attempt in 1 2 3; do
+            git pull --rebase origin main
+            if git push origin HEAD:main; then exit 0; fi
+            sleep 3
+          done
+          exit 1
