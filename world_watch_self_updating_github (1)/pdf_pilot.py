@@ -29,6 +29,7 @@ NEXT_HEADING = re.compile(r"^\s*(?:chapter\s+\d+.*|introduction|table of content
 NON_REPORT = re.compile(r"\b(?:transcripts?|speeches|speech|webinars?|interviews?|podcasts?|videos?|remarks|press[-_ ]releases?|media[-_ ]releases?|presentation|slides|factsheet|fact sheet)\b", re.I)
 PREFERRED = {"strategic_seed_16": 100, "strategic_seed_9": 99, "strategic_seed_8": 98, "strategic_seed_10": 97}
 OFFICIAL_PDF_HINTS = {
+    "strategic_seed_16": "https://data.consilium.europa.eu/doc/document/ST-12388-2025-INIT/en/pdf",
     "strategic_seed_9": "https://iea.blob.core.windows.net/assets/19c60aa0-ee07-4a20-a138-33c967ac5008/GlobalCriticalMineralsOutlook2026.pdf",
     "strategic_seed_8": "https://thedocs.worldbank.org/en/doc/2ac43f46629cf90c2ea5b8929a343593-0050012026/commodity-markets-outlook-october-2026",
     "strategic_seed_10": "https://pubs.usgs.gov/publication/mcs2026",
@@ -245,6 +246,9 @@ def main():
     curated = read_json(ROOT / "updates.json", {}).get("updates", [])
     auto = read_json(ROOT / "auto_updates.json", {}).get("updates", [])
     reports = sorted([r for r in curated + auto if eligible(r)], key=lambda r: priority(r, records, today), reverse=True)
+    retries = [r for r in reports if str(r["id"]) in records and retry_due(records[str(r["id"])], today)]
+    # Reserve up to two attempts for overdue failures; keep the first four priority reports first.
+    reports = reports[:4] + retries[:2] + reports[4:]
     attempted = 0
     seen = set()
     for report in reports:
