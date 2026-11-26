@@ -1192,6 +1192,10 @@ def is_report_candidate(title, url):
         return False
     if parsed.netloc.lower().endswith("quantamagazine.org") or parsed.netloc.lower().endswith("carbonbrief.org"):
         return False
+    if parsed.netloc.lower()=="doi.org" and re.fullmatch(r"/10\.4060/[a-z0-9]+",parsed.path,re.I) and REPORT_TITLE.search(title):
+        return True
+    if parsed.netloc.lower().removeprefix("www.")=="unesco.org" and parsed.path=="/en/articles/state-higher-education-arab-states":
+        return True
     return bool(REPORT_TITLE.search(title) and (REPORT_PATH.search(parsed.path) or re.search(r"report|outlook|forecast|survey|index|assessment|yearbook|statistics|monitor|foresight|commodity|publication|research|assumptions|brief|watchlist|quarterly|trends|paper|robotics", parsed.path, re.I)) or REPORT_CATALOG.search(parsed.netloc + parsed.path) or parsed.path.lower().endswith(".pdf") and REPORT_TITLE.search(title))
 
 def discovery_score(spec,title,context,url):
@@ -1224,7 +1228,7 @@ def discovery_from_html(spec,soup,base):
         url=canonical(base,a["href"])
         dom=urlparse(url).netloc.replace("www.","")
         # IOM publications use publications.iom.int; otherwise stay on host family.
-        if spec["id"]!="iom" and dom and base_domain and not (dom==base_domain or dom.endswith("."+base_domain) or base_domain.endswith("."+dom)):
+        if spec["id"]!="iom" and not (spec["id"]=="fao" and dom=="doi.org" and urlparse(url).path.startswith("/10.4060/")) and dom and base_domain and not (dom==base_domain or dom.endswith("."+base_domain) or base_domain.endswith("."+dom)):
             continue
         parent=a.find_parent(["article","li","div"])
         context=clean(parent.get_text(" ",strip=True))[:700] if parent else ""
@@ -1242,7 +1246,7 @@ def discovery_from_reader(spec,text,base):
             title=clean(m.group(1)); url=canonical(base,m.group(2))
             dom=urlparse(url).netloc.lower().removeprefix("www.")
             origin=urlparse(base).netloc.lower().removeprefix("www.")
-            if spec["id"]!="iom" and not (dom==origin or dom.endswith("."+origin) or origin.endswith("."+dom)):
+            if spec["id"]!="iom" and not (spec["id"]=="fao" and dom=="doi.org" and urlparse(url).path.startswith("/10.4060/")) and not (dom==origin or dom.endswith("."+origin) or origin.endswith("."+dom)):
                 continue
             context=clean(" ".join(lines[max(0,i-2):min(len(lines),i+3)]))[:700]
             score=discovery_score(spec,title,context,url)
@@ -1347,6 +1351,8 @@ def self_test():
     sp={s["id"]:s for s in SERIES}
     assert not is_report_candidate("Monetary policy", "https://www.bis.org/speeches/example")
     assert not is_report_candidate("![Image 2: Report cover","https://www.sipri.org/sites/default/files/styles/medium/cover.png")
+    assert is_report_candidate("Food Outlook – Biannual report on global food markets","https://doi.org/10.4060/ce0625en")
+    assert is_report_candidate("The state of higher education in the Arab States","https://www.unesco.org/en/articles/state-higher-education-arab-states")
     assert is_report_candidate("Mapping the Military Artificial Intelligence Industry","https://www.sipri.org/publications/2026/other-publications/mapping-ai")
     assert specific_edition(sp["iea_weo"],"World Energy Outlook 2026","https://www.iea.org/reports/world-energy-outlook-2025") is None
     assert specific_edition(sp["iea_weo"],"World Energy Outlook 2026","https://www.iea.org/reports/world-energy-outlook-2026")== (2026,0)
