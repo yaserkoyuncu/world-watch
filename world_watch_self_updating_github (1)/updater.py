@@ -16,7 +16,7 @@ V6 architecture:
 """
 
 from __future__ import annotations
-import hashlib, json, re, time, threading
+import hashlib, json, re, time, threading, sys, unicodedata
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timezone
 from pathlib import Path
@@ -30,13 +30,13 @@ STATE_FILE = ROOT / "monitor_state.json"
 OUTPUT_FILE = ROOT / "auto_updates.json"
 HEALTH_FILE = ROOT / "monitor_health.json"
 
-ENGINE_VERSION = "6.1"
+ENGINE_VERSION = "6.2"
 NOW = datetime.now(timezone.utc)
 TODAY = NOW.date().isoformat()
 CURRENT_YEAR = NOW.year
 
 HEADERS = {
-    "User-Agent": "Mozilla/5.0 (compatible; WorldWatchPersonalDashboard/6.1)",
+    "User-Agent": "Mozilla/5.0 (compatible; WorldWatchPersonalDashboard/6.2)",
     "Accept-Language": "en-US,en;q=0.8",
 }
 TIMEOUT = 22
@@ -74,13 +74,14 @@ itu_ff|Facts and Figures|ITU|Technology & AI|annual|https://www.itu.int/itu-d/re
 wmo_climate|State of the Global Climate|WMO|Climate & Energy|annual|https://wmo.int/publication-series/state-of-global-climate/state-of-global-climate-2025|\bState of (?:the )?Global Climate\b
 unep_egr|Emissions Gap Report|UNEP|Climate & Energy|annual|https://www.unep.org/resources/emissions-gap-report-2025|\bEmissions Gap Report\b
 unep_agr|Adaptation Gap Report|UNEP|Climate & Energy|annual|https://www.unep.org/resources/adaptation-gap-report-2025|\bAdaptation Gap Report\b
-iea_weo|World Energy Outlook|IEA|Climate & Energy|annual|https://www.iea.org/reports/world-energy-outlook-2025|\bWorld Energy Outlook\b
+iea_weo|World Energy Outlook|IEA|Climate & Energy|annual|https://www.iea.org/reports|\bWorld Energy Outlook\b
 irena_weto|World Energy Transitions Outlook|IRENA|Climate & Energy|annual|https://www.irena.org/publications/2024/Nov/World-Energy-Transitions-Outlook-2024|\bWorld Energy Transitions Outlook\b
 gcb|Global Carbon Budget|Global Carbon Project|Climate & Energy|annual|https://globalcarbonbudget.org/gcb-2025/|\bGlobal Carbon Budget\b
 un_wpp|World Population Prospects|UN DESA|Demography & Society|periodic|https://www.un.org/development/desa/pd/world-population-prospects-2024|\bWorld Population Prospects\b
 un_wup|World Urbanization Prospects|UN DESA|Demography & Society|periodic|https://www.un.org/development/desa/pd/world-urbanization-prospects-2025|\bWorld Urbanization Prospects\b
 iom_wmr|World Migration Report|IOM|Demography & Society|periodic|https://worldmigrationreport.iom.int/msite/wmr-2026-interactive/|\bWorld Migration Report\b
-unhcr_gt|Global Trends|UNHCR|Demography & Society|annual|https://www.unhcr.org/au/global-trends|\bGlobal Trends\b
+unhcr_gt|Global Trends|UNHCR|Demography & Society|annual|https://www.unhcr.org/global-trends|\bGlobal Trends\b
+unhcr_myt|Mid-Year Trends|UNHCR|Demography & Society|annual|https://www.unhcr.org/mid-year-trends|\bMid[- ]Year Trends\b
 undp_hdr|Human Development Report|UNDP|Demography & Society|periodic|https://hdr.undp.org/content/human-development-report-2025|\bHuman Development Report\b
 un_social|World Social Report|UN DESA|Demography & Society|periodic|https://social.desa.un.org/issues/world-social-report|\bWorld Social Report\b
 happiness|World Happiness Report|Wellbeing Research Centre|Demography & Society|annual|https://www.worldhappiness.report/ed/2026/|\bWorld Happiness Report\b
@@ -111,8 +112,8 @@ FLOORS = {
     "stanford_ai":(2026,0),"mck_tech":(2025,0),"mck_ai":(2025,0),"deloitte_tech":(2026,0),
     "kpmg_tech":(2026,0),"wipo_gii":(2025,0),"itu_ff":(2025,0),
     "wmo_climate":(2025,0),"unep_egr":(2025,0),"unep_agr":(2025,0),
-    "iea_weo":(2025,0),"irena_weto":(2024,0),"gcb":(2025,0),
-    "un_wpp":(2024,0),"un_wup":(2025,0),"iom_wmr":(2026,0),"unhcr_gt":(2025,0),
+    "iea_weo":(2026,0),"irena_weto":(2024,0),"gcb":(2025,0),
+    "un_wpp":(2024,0),"un_wup":(2025,0),"iom_wmr":(2026,0),"unhcr_gt":(2025,0),"unhcr_myt":(2026,0),
     "undp_hdr":(2025,0),"un_social":(2025,0),"happiness":(2026,0),
     "who_whs":(2026,0),"fao_sofi":(2026,0),"unesco_gem":(2026,0),"undp_mpi":(2025,0),
     "vdem":(2026,0),"idea":(2025,0),"freedom":(2026,0),"wjp":(2025,0),
@@ -157,7 +158,8 @@ ALT_URLS = {
     ],
     "iea_weo": [
         "https://www.iea.org/reports",
-        "https://www.iea.org/reports/world-energy-outlook-2025/overview-and-key-findings",
+        f"https://www.iea.org/reports/world-energy-outlook-{CURRENT_YEAR}",
+        "https://www.iea.org/reports/world-energy-outlook-2026",
     ],
     "irena_weto": ["https://www.irena.org/Energy-Transition/Outlook"],
     "gcb": [
@@ -165,9 +167,11 @@ ALT_URLS = {
         "https://globalcarbonbudget.org/datahub/the-latest-gcb-data-2025/",
     ],
     "unhcr_gt": [
-        "https://www.unhcr.org/media/global-trends-2025-report",
+        "https://www.unhcr.org/media/global-trends-report-2025",
+        f"https://www.unhcr.org/media/global-trends-report-{CURRENT_YEAR-1}",
         "https://www.unhcr.org/global-trends",
     ],
+    "unhcr_myt": ["https://www.unhcr.org/us/publications/mid-year-trends"],
     "wjp": [
         "https://worldjusticeproject.org/rule-of-law-index/global/2025/wjp-index",
         "https://worldjusticeproject.org/news/wjp-rule-law-index-2025-global-press-release",
@@ -176,13 +180,13 @@ ALT_URLS = {
 
 # Reader-first avoids wasting ~20 seconds on hosts that consistently time out or
 # block GitHub runners but are readable through the public text renderer.
-READER_FIRST = {"imf_weo","imf_gfsr","imf_fiscal","mck_tech","mck_ai","unhcr_gt","cpi","wef_grr","happiness"}
+READER_FIRST = {"imf_weo","imf_gfsr","imf_fiscal","mck_tech","mck_ai","unhcr_gt","unhcr_myt","cpi","wef_grr","happiness"}
 
 # A report-specific official URL can establish a baseline even if HTML is blocked.
 SELF_URL_SAFE = {
     "imf_weo","imf_gfsr","imf_fiscal","bis_aer","unctad_tdr","wto_gto","ilo_est","wef_grr","msc_msr","sipri_yearbook",
     "odni_ata","stanford_ai","itu_ff","wmo_climate","unep_egr","unep_agr",
-    "iea_weo","irena_weto","gcb","un_wpp","un_wup","iom_wmr","undp_hdr",
+    "irena_weto","gcb","un_wpp","un_wup","iom_wmr","undp_hdr",
     "happiness","who_whs","undp_mpi","idea","freedom","cpi","rsf","wjp"
 }
 
@@ -215,7 +219,7 @@ BAD_PHRASES = re.compile(
 
 # External domains permitted only when they are the organization itself / official regional mirror.
 DOMAIN_ALIASES = {
-    "unhcr_gt":{"unhcr.org"},
+    "unhcr_gt":{"unhcr.org"}, "unhcr_myt":{"unhcr.org"},
     "undp_mpi":{"undp.org","hdr.undp.org"},
     "gcb":{"globalcarbonbudget.org"},
 }
@@ -674,6 +678,8 @@ AI_ROBOTICS_SOURCES = json.loads(r'''[
   }
 ]''')
 DISCOVERY.extend(AI_ROBOTICS_SOURCES)
+# These media sources cannot pass the formal-publication-only policy.
+DISCOVERY = [sp for sp in DISCOVERY if sp["id"] not in {"carbonbrief","quanta"}]
 
 def load_json(p, default):
     try: return json.loads(p.read_text(encoding="utf-8"))
@@ -683,7 +689,7 @@ def save_json(p, obj):
     p.write_text(json.dumps(obj, ensure_ascii=False, indent=2), encoding="utf-8")
 
 def clean(s):
-    return re.sub(r"\s+"," ",s or "").strip()
+    return re.sub(r"\s+"," ",unicodedata.normalize("NFKC",s or "")).strip()
 
 def canonical(base, href):
     u = urljoin(base, href)
@@ -837,6 +843,38 @@ def _nearest_year_to_series(spec, text):
         return best[1], best[2]
     return None, None
 
+def specific_edition(spec, text, url):
+    """For easily confused series, edition must be part of the report title or slug."""
+    sid = spec["id"]
+    path = urlparse(url or "").path.lower().rstrip("/")
+    if sid == "iea_weo":
+        m = re.fullmatch(r"/reports/world-energy-outlook-(20\d{2})", path)
+        if not m:
+            return None
+        year = int(m.group(1))
+        explicit = re.search(r"\bWorld Energy Outlook\s*[-–—:]?\s*(20\d{2})\b", text, re.I)
+        if explicit and int(explicit.group(1)) != year:
+            return None
+        return (year, 0) if year <= CURRENT_YEAR else None
+    if sid in {"unhcr_gt","unhcr_myt"}:
+        if sid == "unhcr_gt":
+            if "mid-year" in path or "midyear" in path:
+                return None
+            m = re.fullmatch(r"/media/global-trends-(?:report-)?(20\d{2})(?:-report)?",path)
+            if m:
+                y = int(m.group(1))
+            else:
+                m = re.search(r"\bGlobal Trends(?:\s+report)?\s*[-–—:]?\s*(20\d{2})\b", text, re.I)
+                if not m:
+                    return None
+                y = int(m.group(1))
+            return (y,0) if y < CURRENT_YEAR else None
+        if not re.search(r"/(?:publications/)?mid-year-trends$",path):
+            return None
+        m = re.search(r"\bMid[- ]Year Trends(?:\s+report)?\s*[-–—:]?\s*(20\d{2})\b",text,re.I)
+        return (int(m.group(1)),0) if m and int(m.group(1)) <= CURRENT_YEAR else None
+    return None
+
 def version_from(spec, text, url):
     """Extract REPORT EDITION, not page publication year.
 
@@ -846,6 +884,8 @@ def version_from(spec, text, url):
     Trends 2025 published in 2026, and CPI 2025 released in 2026.
     """
     blob=clean(text or "")
+    if spec["id"] in {"iea_weo","unhcr_gt","unhcr_myt"}:
+        return specific_edition(spec,blob,url)
     if not blob and not url:
         return None
 
@@ -990,7 +1030,9 @@ def release_validation(spec, text, url, v):
 
     # These series are labelled by the data/report year, even when released the
     # next calendar year. Require an explicit series+edition relationship.
-    if sid in {"wmo_climate","unhcr_gt","cpi"}:
+    if sid in {"iea_weo","unhcr_gt","unhcr_myt"}:
+        return specific_edition(spec,text,url) == v
+    if sid in {"wmo_climate","cpi"}:
         y,_=_nearest_year_to_series(spec,text)
         uy=_url_year(url)
         if y != v[0] and uy != v[0]:
@@ -1004,6 +1046,7 @@ def choose_candidate(spec, candidates):
     for text,url,score,method in candidates:
         if bad_near_series(spec,text,url): continue
         if not allowed_domain(spec,url): continue
+        if REPORT_REJECT_URL.search(urlparse(url).path) or REPORT_REJECT_TITLE.search(text): continue
         v=version_from(spec,text,url)
         if not v: continue
         cmpv=(v[0],v[1] if spec["mode"]=="intra" else 0)
@@ -1038,7 +1081,7 @@ def resolve_series(spec):
             except Exception as e:
                 errors.append("reader "+page_url+": "+str(e)[:120])
             best=choose_candidate(spec,candidates)
-            if best and best.get("score",0)>=10:
+            if best and best.get("score",0)>=10 and best["method"]!="official-url" and spec["id"] not in {"iea_weo","unhcr_gt","unhcr_myt"}:
                 return best,errors
 
         try:
@@ -1055,7 +1098,7 @@ def resolve_series(spec):
                 errors.append("reader "+page_url+": "+str(e)[:120])
 
         best=choose_candidate(spec,candidates)
-        if best and best.get("score",0)>=10:
+        if best and best.get("score",0)>=10 and best["method"]!="official-url" and spec["id"] not in {"iea_weo","unhcr_gt","unhcr_myt"}:
             return best,errors
 
     return choose_candidate(spec,candidates),errors
@@ -1071,6 +1114,12 @@ def scan_series(state, migration):
                                "error":" | ".join(errors)[:500] or "No valid edition match"})
                 continue
             cur_v=cur["version"]; old=state.get(key)
+            if cur["method"]=="official-url":
+                health.append({"monitor":spec["name"],"kind":"series","ok":False,"error":"Unverified URL-only fallback; retained last verified edition","url":cur["url"],"warnings":errors})
+                continue
+            if isinstance(old,dict) and old.get("version") and tuple(cur_v)<tuple(old["version"]):
+                health.append({"monitor":spec["name"],"kind":"series","ok":False,"error":"Older edition returned; retained last known edition","url":cur["url"],"warnings":errors})
+                continue
             if (not migration and isinstance(old,dict) and old.get("version")):
                 ov=tuple(old["version"])
                 cv=(cur_v[0],cur_v[1] if spec["mode"]=="intra" else 0)
@@ -1080,7 +1129,7 @@ def scan_series(state, migration):
                     nl=label(cur_v,spec["mode"]); ol=label(ov,spec["mode"])
                     new.append({
                         "id":hashlib.sha1((spec["id"]+nl+cur["url"]).encode()).hexdigest()[:14],
-                        "date":TODAY,"category":spec["category"],"source":spec["org"],
+                        "date":TODAY,"date_kind":"detection","detected_date":TODAY,"category":spec["category"],"source":spec["org"],
                         "title":f"{spec['name']} — {nl}",
                         "summary":f"Edition-aware monitor detected a newer {spec['name']}: {nl}, replacing {ol}.",
                         "url":cur["url"],"type":typ,"automatic":True,"series_id":spec["id"],
@@ -1100,7 +1149,11 @@ def scan_series(state, migration):
 
 DISCOVERY_ALT_URLS = {
     "wb": ["https://www.worldbank.org/en/about/unit/unit-dec/research/publications"],
-    "bis": ["https://www.bis.org/index.htm"],
+    "imf": ["https://www.elibrary.imf.org/"],
+    "iea": ["https://www.iea.org/reports/"],
+    "unhcr": ["https://www.unhcr.org/us/publications"],
+    "icg": ["https://www.crisisgroup.org/reports-and-briefings"],
+    "bis": ["https://www.bis.org/publ/index.htm"],
     "unctad": ["https://unctad.org/unctad-publications"],
     "deloitte": [
         "https://www.deloitte.com/us/en/insights/research-centers/center-for-technology-media-telecommunications.html"
@@ -1135,7 +1188,7 @@ def is_report_candidate(title, url):
     parsed = urlparse(url)
     if parsed.scheme not in ("http", "https") or not parsed.netloc or REPORT_REJECT_TITLE.search(title) or REPORT_REJECT_URL.search(parsed.path):
         return False
-    if re.search(r"(?:^|[-/])(?:commentary|speech|interview|podcast)(?:[-/]|$)", parsed.path, re.I):
+    if re.search(r"(?:^|[-/])(?:commentary|speeches?|interviews?|podcasts?|press-release|news-release)(?:[-/]|$)", parsed.path, re.I):
         return False
     if parsed.netloc.lower().endswith("quantamagazine.org") or parsed.netloc.lower().endswith("carbonbrief.org"):
         return False
@@ -1148,7 +1201,10 @@ def discovery_score(spec,title,context,url):
     rx=re.compile(spec["include"],re.I)
     topic=bool(rx.search(blob))
     if not topic:
-        return -99
+        # Stem patterns (econom, geopolit, commodit) must match inflected words.
+        stemmed=spec["include"]
+        if not re.search(stemmed.replace("econom|","econom\\w*|").replace("geopolit|","geopolit\\w*|").replace("commodit|","commodit\\w*|").replace("autocra|","autocra\\w*|"),blob,re.I):
+            return -99
     score=3
     if DISCOVERY_SIGNAL.search(blob): score+=3
     if re.search(rf"\b(?:{CURRENT_YEAR}|{CURRENT_YEAR-1})\b",blob): score+=2
@@ -1183,7 +1239,11 @@ def discovery_from_reader(spec,text,base):
     link_re=re.compile(r"\[([^\]]{20,260})\]\((https?://[^)\s]+)")
     for i,line in enumerate(lines):
         for m in link_re.finditer(line):
-            title=clean(m.group(1)); url=m.group(2)
+            title=clean(m.group(1)); url=canonical(base,m.group(2))
+            dom=urlparse(url).netloc.lower().removeprefix("www.")
+            origin=urlparse(base).netloc.lower().removeprefix("www.")
+            if spec["id"]!="iom" and not (dom==origin or dom.endswith("."+origin) or origin.endswith("."+dom)):
+                continue
             context=clean(" ".join(lines[max(0,i-2):min(len(lines),i+3)]))[:700]
             score=discovery_score(spec,title,context,url)
             if score<6 or url in seen: continue
@@ -1254,7 +1314,7 @@ def scan_discovery(state,migration):
         if old and not migration and len(fresh)<=8:
             for t,u in fresh[:4]:
                 new.append({
-                    "id":hashlib.sha1(u.encode()).hexdigest()[:14],"date":TODAY,
+                    "id":hashlib.sha1(u.encode()).hexdigest()[:14],"date":TODAY,"date_kind":"detection","detected_date":TODAY,
                     "category":sp["category"],"source":sp["org"],"title":t,
                     "summary":"New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
                     "url":u,"type":"Important new report" if sp.get("mode")!="analysis" else "Significant analysis",
@@ -1272,17 +1332,47 @@ def scan_discovery(state,migration):
         })
     return new,health
 
+def valid_archived_record(x):
+    url=x.get("url","")
+    title=x.get("title","")
+    if REPORT_REJECT_URL.search(urlparse(url).path) or REPORT_REJECT_TITLE.search(title):
+        return False
+    sid=x.get("series_id")
+    if sid in {"iea_weo","unhcr_gt","unhcr_myt"}:
+        sp=next((sp for sp in SERIES if sp["id"]==sid),None)
+        return bool(sp and specific_edition(sp,title,url)==(int(x.get("edition","0")),0)) if str(x.get("edition","")).isdigit() else False
+    return bool(sid or is_report_candidate(title,url))
+
+def self_test():
+    sp={s["id"]:s for s in SERIES}
+    assert not is_report_candidate("Monetary policy", "https://www.bis.org/speeches/example")
+    assert not is_report_candidate("![Image 2: Report cover","https://www.sipri.org/sites/default/files/styles/medium/cover.png")
+    assert is_report_candidate("Mapping the Military Artificial Intelligence Industry","https://www.sipri.org/publications/2026/other-publications/mapping-ai")
+    assert specific_edition(sp["iea_weo"],"World Energy Outlook 2026","https://www.iea.org/reports/world-energy-outlook-2025") is None
+    assert specific_edition(sp["iea_weo"],"World Energy Outlook 2026","https://www.iea.org/reports/world-energy-outlook-2026")== (2026,0)
+    assert specific_edition(sp["unhcr_gt"],"Global Trends report published in June 2026","https://www.unhcr.org/global-trends") is None
+    assert specific_edition(sp["unhcr_gt"],"Global Trends report 2025","https://www.unhcr.org/media/global-trends-report-2025")== (2025,0)
+    assert specific_edition(sp["unhcr_myt"],"Mid-Year Trends 2026","https://www.unhcr.org/mid-year-trends")== (2026,0)
+    print("World Watch report and edition checks passed.")
+
 def main():
+    self_test()
+    if "--self-test" in sys.argv:
+        return
     state=load_json(STATE_FILE,{})
-    migration = state.get("_engine_version") != ENGINE_VERSION
+    migration = not bool(state.get("_engine_version"))
     if migration:
         # Re-baseline silently because earlier engines contained known false positives
         # and expands Layer 2; first V6.1 run silently re-baselines corrected edition rules and discovery URLs.
         state["_engine_version"]=ENGINE_VERSION
+    state["_engine_version"]=ENGINE_VERSION
 
     old_updates=load_json(OUTPUT_FILE,{"updates":[]}).get("updates",[])
     # Retain only formal report entries; Git history preserves the previous archive.
-    old_updates=[x for x in old_updates if x.get("series_id") or is_report_candidate(x.get("title",""),x.get("url",""))]
+    old_updates=[x for x in old_updates if valid_archived_record(x)]
+    for x in old_updates:
+        x.setdefault("date_kind","detection")
+        x.setdefault("detected_date",x.get("date"))
     flagship_new,h1=scan_series(state,migration)
     discovery_new,h2=scan_discovery(state,migration)
 
@@ -1313,7 +1403,7 @@ def main():
         "monitors":h1+h2,
     }
     save_json(STATE_FILE,state); save_json(OUTPUT_FILE,payload); save_json(HEALTH_FILE,health)
-    print(f"World Watch v6.1: {ok1}/{len(SERIES)} flagship series resolved; "
+    print(f"World Watch v6.2: {ok1}/{len(SERIES)} flagship series resolved; "
           f"{ok2}/{len(DISCOVERY)} discovery monitors resolved; "
           f"{len(flagship_new)} newer flagship edition(s); {len(discovery_new)} discovery item(s); "
           f"migration_baseline={migration}")
