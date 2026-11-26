@@ -2,32 +2,36 @@ name: Update and deploy World Watch
 
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/world-watch.yml"
+      - "world_watch_self_updating_github (1)/index.html"
+      - "world_watch_self_updating_github (1)/updater.py"
   schedule:
     - cron: "20 3,9,15,21 * * *"
 
 permissions:
-  contents: write
-  pages: write
-  id-token: write
+  contents: read
 
 concurrency:
   group: world-watch-pages
   cancel-in-progress: false
 
 jobs:
-  update-and-deploy:
+  update:
     runs-on: ubuntu-latest
-
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+    timeout-minutes: 20
+    permissions:
+      contents: write
+      pages: read
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v7
         with:
           python-version: "3.12"
 
@@ -37,9 +41,9 @@ jobs:
       - name: Find World Watch files
         shell: bash
         run: |
-          PROJECT_DIR="$(dirname "$(find . -type f -name updater.py -print -quit)")"
+          PROJECT_DIR="./world_watch_self_updating_github (1)"
 
-          if [ -z "$PROJECT_DIR" ]; then
+          if [ ! -f "$PROJECT_DIR/updater.py" ]; then
             echo "Could not find updater.py anywhere in the repository."
             exit 1
           fi
@@ -67,7 +71,7 @@ jobs:
           git add "$PROJECT_DIR/monitor_health.json"
 
           git diff --cached --quiet || git commit -m "Automatic World Watch update"
-          git push || true
+          git push
 
       - name: Prepare website
         shell: bash
@@ -84,13 +88,24 @@ jobs:
           ls -la _site
 
       - name: Configure GitHub Pages
-        uses: actions/configure-pages@v5
+        uses: actions/configure-pages@v6
 
       - name: Upload website
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v5
         with:
           path: "_site"
 
+  deploy:
+    needs: update
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
       - name: Deploy website
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
