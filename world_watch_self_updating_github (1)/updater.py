@@ -1312,26 +1312,32 @@ def scan_discovery(state,migration):
         current_urls={u for _,u in current}
         old=set(state.get(key,[]))
         fresh=[(t,u) for t,u in current if u not in old and not is_flagship_duplicate(sp["org"],t)]
-
-        suppressed=0
-        # A page redesign can suddenly expose dozens of old links. Do not flood.
-        if old and not migration and len(fresh)<=8:
-            for t,u in fresh[:4]:
+        pending_key="pending:"+key
+        pending=state.get(pending_key,[])
+        if not isinstance(pending,list):
+            pending=[]
+        # A new source establishes a baseline. Existing sources queue excess
+        # discoveries rather than marking unseen reports as already published.
+        if not old or migration:
+            pending=[]
+        else:
+            queued={u for t,u in pending}
+            pending.extend([t,u] for t,u in fresh if u not in queued)
+            pending=[(t,u) for t,u in pending if is_report_candidate(t,u) and not is_flagship_duplicate(sp["org"],t)]
+            for t,u in pending[:4]:
                 new.append({
                     "id":hashlib.sha1(u.encode()).hexdigest()[:14],"date":TODAY,"date_kind":"detection","detected_date":TODAY,
                     "category":sp["category"],"source":sp["org"],"title":t,
-                    "summary":"New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+                    "summary":"Newly detected formal institutional publication; publication date may precede detection.",
                     "url":u,"type":"Important new report" if sp.get("mode")!="analysis" else "Significant analysis",
                     "automatic":True,"confidence":"medium","discovery_source":sp["id"]
                 })
-        elif old and not migration and len(fresh)>8:
-            suppressed=len(fresh)
-
-        # Accumulate, do not replace, so page rotation cannot make an old link new later.
+            pending=pending[4:]
+        state[pending_key]=pending
         state[key]=list(dict.fromkeys(list(old)+sorted(current_urls)))[-1200:]
         health.append({
             "monitor":sp["org"]+" discovery","kind":"discovery","ok":bool(candidates),
-            "candidates":len(candidates),"new_candidates":len(fresh),"suppressed":suppressed,
+            "candidates":len(candidates),"new_candidates":len(fresh),"suppressed":0,"queued":len(pending),
             "warnings":errors
         })
     return new,health
