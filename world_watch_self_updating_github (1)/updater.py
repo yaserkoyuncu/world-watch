@@ -1018,9 +1018,28 @@ DISCOVERY_SIGNAL=re.compile(
     r"trends|estimates|monitor|state of|flagship|study|analysis|policy brief|research report|"
     r"global|world|annual|strategy|forecast|update)\b",re.I)
 
+# Conservative report-only gate: titles and URLs, not unrelated page context.
+REPORT_REJECT_TITLE = re.compile(r"(?:\b(?:speeches|speech|keynote|remarks by|interviews?|podcasts?|webinars?|videos?|press releases?|media releases?|news releases?|op[- ]eds?|opinion pieces?|commentary|blog posts?|newsletters?|event announcements?|calls? for papers|registration|vacanc\w*|job openings?|executive summary|conference proceedings|proceedings of|working papers?|technical notes?)\b|!\[image|\bimage \d+\s*:|^\s*(?:https?://|more:|read more|download (?:the |full )?report|reports and publications|publications)\s*$)", re.I)
+REPORT_REJECT_URL = re.compile(r"(?:/(?:speeches?|remarks?|interviews?|podcasts?|pod|videos?|vid|webinars?|events?|meetings-and-events|press[-_]?releases?|media[-_]?releases?|news[-_]?releases?|news|blogs?|opinions?|op[-_]?eds?|commentary|authors?|people|staff|careers|jobs|wp-content/uploads|sites/default/files/styles|assets|images)(?:/|$)|/(?:\d+/)?pr-\d|[.](?:png|jpe?g|gif|webp|svg|ico|avif)(?:$|[?#]))", re.I)
+REPORT_TITLE = re.compile(r"\b(?:reports?|outlook|forecasts?|projections?|assessment|assessments|yearbook|survey|surveys|index|indices|statistics|statistical|prospects|barometer|monitor|global trends|capital market assumptions|capital markets model|commodity summaries|demand trends|platinum quarterly|strategic foresight|conflicts to watch|conflict watchlist|policy research|research study|research studies|policy briefs?|research briefs?|technical briefs?|fact sheets?|flagship|white papers?|market assumptions|market scenarios)\b", re.I)
+REPORT_PATH = re.compile(r"/(?:publications?|reports?|research-reports|policy-briefs?|research-publications|rpt|books|papers)/(?:[^/?#]+)", re.I)
+REPORT_CATALOG = re.compile(r"(?:who[.]int/publications/i/item/|cset[.]georgetown[.]edu/publication/|unctad[.]org/publication/|irena[.]org/publications/\d{4}/|sipri[.]org/publications/\d{4}/|weforum[.]org/publications/[^/?#]+|publications[.]iom[.]int/books/|openknowledge[.]worldbank[.]org/entities/publication/|undp[.]org/publications/[^/?#]+|transparency[.]org/(?:en/)?publications/[^/?#]+)", re.I)
+
+def is_report_candidate(title, url):
+    title = clean(title or "")
+    url = url or ""
+    parsed = urlparse(url)
+    if parsed.scheme not in ("http", "https") or not parsed.netloc or REPORT_REJECT_TITLE.search(title) or REPORT_REJECT_URL.search(parsed.path):
+        return False
+    if re.search(r"(?:^|[-/])(?:commentary|speech|interview|podcast)(?:[-/]|$)", parsed.path, re.I):
+        return False
+    if parsed.netloc.lower().endswith("quantamagazine.org") or parsed.netloc.lower().endswith("carbonbrief.org"):
+        return False
+    return bool(REPORT_TITLE.search(title) and (REPORT_PATH.search(parsed.path) or re.search(r"report|outlook|forecast|survey|index|assessment|yearbook|statistics|monitor|foresight|commodity|publication|research|assumptions|brief|watchlist|quarterly|trends", parsed.path, re.I)) or REPORT_CATALOG.search(parsed.netloc + parsed.path) or parsed.path.lower().endswith(".pdf") and REPORT_TITLE.search(title))
+
 def discovery_score(spec,title,context,url):
     blob=clean(title+" "+context)
-    if DISCOVERY_EXCLUDE.search(title):
+    if not is_report_candidate(title, url) or DISCOVERY_EXCLUDE.search(title):
         return -99
     rx=re.compile(spec["include"],re.I)
     topic=bool(rx.search(blob))
@@ -1158,6 +1177,8 @@ def main():
         state["_engine_version"]=ENGINE_VERSION
 
     old_updates=load_json(OUTPUT_FILE,{"updates":[]}).get("updates",[])
+    # Retain only formal report entries; Git history preserves the previous archive.
+    old_updates=[x for x in old_updates if x.get("series_id") or is_report_candidate(x.get("title",""),x.get("url",""))]
     flagship_new,h1=scan_series(state,migration)
     discovery_new,h2=scan_discovery(state,migration)
 
