@@ -867,7 +867,7 @@ def main():
 
     by={}
     for x in flagship_new+discovery_new+old_updates:
-        k=x.get("series_id") or x.get("url") or x.get("id")
+        k=("series",x["series_id"],str(x.get("edition") or x.get("id") or x.get("url"))) if x.get("series_id") else ("publication",x.get("url") or x.get("id"))
         if k not in by: by[k]=x
     items=list(by.values())
     items.sort(key=lambda x:(x.get("date",""),1 if "flagship" in x.get("type","").lower() else 0),reverse=True)
@@ -882,7 +882,7 @@ def main():
         "new_items_this_run":len(flagship_new)+len(discovery_new),
         "new_flagship_editions_this_run":len(flagship_new),
         "migration_baseline":migration,
-        "updates":items[:160],
+        "updates":items[:3000],
     }
     health={
         "last_checked":payload["last_checked"],"engine_version":ENGINE_VERSION,
