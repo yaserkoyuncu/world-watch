@@ -1,4 +1,18 @@
 {
   "version": 1,
-  "reports": {}
+  "last_checked": "2026-11-26T14:51:57.626097+00:00",
+  "reports": {
+    "strategic_seed_9": {
+      "status": "unavailable",
+      "checked": "2026-11-26T14:51:57.626097+00:00",
+      "reason": "draft failed basic quality checks",
+      "report_url": "https://www.iea.org/reports/global-critical-minerals-outlook-2026"
+    },
+    "frontier_seed_ai_safety_2026": {
+      "status": "unavailable",
+      "checked": "2026-11-26T14:51:57.626097+00:00",
+      "reason": "draft failed basic quality checks",
+      "report_url": "https://internationalaisafetyreport.org/publication/international-ai-safety-report-2026"
+    }
+  }
 }
