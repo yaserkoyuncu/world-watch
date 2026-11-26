@@ -4,7 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#0b0e14">
-<title>World Watch</title>
+<title>World Watch — Strategic Intelligence</title>
+<meta name="world-watch-build" content="strategic-menu-20261126">
 <style>
 :root {
   --bg:#0b0e14; --panel:#121722; --panel2:#171e2b; --line:#273146; --text:#f1f5fb;
@@ -102,12 +103,18 @@ input,select{width:100%;border:1px solid var(--line);background:var(--panel);col
 .viewcontrols .filterbtn[aria-pressed="true"]{color:var(--blue);border-color:var(--blue);background:color-mix(in srgb,var(--blue) 10%,transparent)}
 .datecontrol{display:flex;align-items:center;gap:6px;flex:1 1 180px;color:var(--muted);font-size:12px}
 .datecontrol input{min-width:0}
+.nav{flex-wrap:wrap;overflow:visible}
+.strategicnav{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin:-5px 0 16px;padding:10px;border:1px solid var(--line);border-radius:14px;background:var(--panel)}
+.strategicnav .tab{white-space:normal;text-align:left;border:1px solid var(--line);font-size:13px}
+.strategicnav .tab.active{border-color:var(--blue);color:var(--blue)}
+.buildlabel{font-size:11px;color:var(--muted);letter-spacing:0;font-weight:700}
+@media(max-width:680px){.nav{position:static}.brand{flex-wrap:wrap}.strategicnav .tab{flex:1 1 135px}}
 </style>
 </head>
 <body>
 <div class="app">
 <div class="topbar">
-  <div class="brand"><div class="logo">W</div> WORLD WATCH</div>
+  <div class="brand"><div class="logo">W</div> WORLD WATCH <span class="buildlabel">Strategic edition · v2.1</span></div>
   <div class="actions"><button class="iconbtn" id="themeBtn" title="Theme">◐</button></div>
 </div>
 
@@ -129,6 +136,14 @@ input,select{width:100%;border:1px solid var(--line);background:var(--panel);col
   <button class="tab" data-view="updates">Updates <span class="count" id="updatesCount" style="display:none"></span></button>
   <button class="tab" data-view="annual">Annual Reports</button>
   <button class="tab" data-view="mylist">My List</button>
+</nav>
+<nav class="strategicnav" aria-label="Strategic report categories" id="strategicMenu">
+  <button class="tab" type="button" data-category="All">All reports</button>
+  <button class="tab" type="button" data-category="Investment &amp; Financial Markets">Investment &amp; Markets</button>
+  <button class="tab" type="button" data-category="Commodities &amp; Critical Minerals">Metals &amp; Critical Minerals</button>
+  <button class="tab" type="button" data-category="International Relations &amp; Geopolitical Risk">International Relations</button>
+  <button class="tab" type="button" data-category="Geopolitics &amp; Security">Conflicts &amp; Security</button>
+  <button class="tab" type="button" data-category="Strategic Foresight &amp; Emerging Industries">Future Opportunities</button>
 </nav>
 
 <section class="view active" id="overview">
@@ -323,6 +338,7 @@ function renderUpdates(){
   const dateRangeValid=!updateFilters.from||!updateFilters.to||updateFilters.from<=updateFilters.to;
   const results=dateRangeValid?visible.filter(u=>(!updateFilters.from||u.date>=updateFilters.from)&&(!updateFilters.to||u.date<=updateFilters.to)&&(updateFilters.tag==="All"||reportTags(u).includes(updateFilters.tag))):[];
   $("updateResultCount").textContent=dateRangeValid?results.length+" of "+sorted.length+" reports & updates":"Choose a start date on or before the end date.";
+  document.querySelectorAll("#strategicMenu [data-category]").forEach(b=>{const active=$("updates").classList.contains("active")&&b.dataset.category===updateFilters.category;b.classList.toggle("active",active);b.setAttribute("aria-pressed",String(active))});
   document.querySelectorAll("#reportViews [data-group]").forEach(b=>b.setAttribute("aria-pressed",String(b.dataset.group===updateFilters.group)));
   document.querySelectorAll("#reportSortButtons [data-sort]").forEach(b=>b.setAttribute("aria-pressed",String(b.dataset.sort===updateFilters.sort)));
   $("fullUpdates").innerHTML=results.length?reportGroups(results,updateFilters.group,updateFilters.sort).map(([key,items])=>(key?'<h3 class="grouphead">'+esc(updateFilters.group==="date"&&key!=="Undated"?fmtDate(key):key)+' · '+items.length+'</h3>':'')+items.map(updateItem).join("")).join(""):'<div class="empty">No reports match these filters.</div>';
@@ -332,8 +348,11 @@ function markSeen(){const newest=[...updates].sort((a,b)=>b.date.localeCompare(a
 function renderCalendar(){const groups={"Jan–Mar":[],"Apr–Jun":[],"Jul–Sep":[],"Oct–Dec":[]};sources.filter(s=>s.flagship&&["Core","Strong"].includes(s.priority)).forEach(s=>{let w=(s.releaseWindow||"").toLowerCase(),g=w.includes("january")||w.includes("february")||w.includes("march")||w.includes("spring")?"Jan–Mar":w.includes("april")||w.includes("may")||w.includes("june")?"Apr–Jun":w.includes("july")||w.includes("august")||w.includes("september")?"Jul–Sep":w.includes("october")||w.includes("autumn")||w.includes("november")||w.includes("december")?"Oct–Dec":"Jul–Sep";groups[g].push(s)});$("calendar").innerHTML=Object.entries(groups).map(([g,a])=>`<div class="monthbox"><h3>${g}</h3>${a.length?a.slice(0,14).map(s=>`<div class="entry"><b>${esc(s.name)}</b><span>${esc(s.releaseWindow)} · ${esc(s.org)}</span></div>`).join(""):`<span style="color:var(--muted)">No scheduled flagships</span>`}</div>`).join("")}
 function renderMyList(){let f=sources.filter(s=>favorites.has(s.id)),t=sources.filter(s=>statusLabel(s.id)==="To read");$("favoriteGrid").innerHTML=f.length?f.map(card).join(""):`<div class="empty">Star sources to keep them here.</div>`;$("toReadGrid").innerHTML=t.length?t.map(card).join(""):`<div class="empty">Mark a source “To read” and it will appear here.</div>`}
 function renderAll(){renderCore();renderSources();renderUpdates();renderCalendar();renderMyList()}
-function goView(v){document.querySelectorAll(".view").forEach(x=>x.classList.remove("active"));document.querySelectorAll(".tab").forEach(x=>x.classList.remove("active"));$(v).classList.add("active");document.querySelector(`.tab[data-view="${v}"]`).classList.add("active");window.scrollTo({top:0,behavior:"smooth"})}
-document.querySelectorAll(".tab").forEach(b=>b.onclick=()=>goView(b.dataset.view));
+function goView(v){document.querySelectorAll(".view").forEach(x=>x.classList.remove("active"));document.querySelectorAll(".tab").forEach(x=>x.classList.remove("active"));$(v).classList.add("active");document.querySelector(`.tab[data-view="${v}"]`).classList.add("active");if(v==="updates")renderUpdates();window.scrollTo({top:0,behavior:"smooth"})}
+document.querySelectorAll(".tab[data-view]").forEach(b=>b.onclick=()=>goView(b.dataset.view));
+document.querySelectorAll("#strategicMenu [data-category]").forEach(b=>b.onclick=()=>{
+  $("resetUpdates").click();updateFilters.category=b.dataset.category;goView("updates");renderUpdates();
+});
 $("search").oninput=e=>{filters.search=e.target.value;renderSources()};$("priority").onchange=e=>{filters.priority=e.target.value;renderSources()};$("sort").onchange=e=>{filters.sort=e.target.value;renderSources()};$("favFilter").onclick=()=>{filters.fav=!filters.fav;$("favFilter").classList.toggle("active",filters.fav);renderSources()};
 fillInstitutions("sourceOrg",sources.map(s=>s.org),"All");
 $("sourceOrg").onchange=e=>{filters.org=e.target.value;renderSources()};
@@ -396,7 +415,9 @@ async function loadUpdates(){
   }).sort((a,b)=>(b.date||"").localeCompare(a.date||""));
   renderUpdates();
 }
-renderChips();renderAll();loadUpdates();
+renderChips();renderAll();
+try{const q=new URLSearchParams(location.search);if(q.get("view")==="updates")goView("updates");const c=q.get("category");if(c&&categories.includes(c)){updateFilters.category=c;goView("updates");renderUpdates()}}catch(e){}
+loadUpdates();
 </script>
 </body>
 </html>
