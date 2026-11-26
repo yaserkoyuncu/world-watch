@@ -2,6 +2,10 @@ name: Update and deploy World Watch
 
 on:
   workflow_dispatch:
+  workflow_run:
+    workflows: ["World Watch PDF reading pilot"]
+    types: [completed]
+    branches: [main]
   push:
     branches: [main]
     paths:
@@ -21,6 +25,7 @@ concurrency:
 
 jobs:
   update:
+    if: github.event_name != 'workflow_run' || (github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.head_branch == 'main' && github.event.workflow_run.head_repository.full_name == github.repository)
     runs-on: ubuntu-latest
     timeout-minutes: 20
     permissions:
@@ -35,13 +40,13 @@ jobs:
           fetch-depth: 0
 
       - name: Set up Python
-        if: github.event_name != 'push'
+        if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
         uses: actions/setup-python@v7
         with:
           python-version: "3.12"
 
       - name: Install dependencies
-        if: github.event_name != 'push'
+        if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
         run: pip install requests beautifulsoup4
 
       - name: Find World Watch files
@@ -61,14 +66,14 @@ jobs:
           ls -la "$PROJECT_DIR"
 
       - name: Run World Watch monitor
-        if: github.event_name != 'push'
+        if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
         shell: bash
         run: |
           cd "$PROJECT_DIR"
           python updater.py
 
       - name: Save monitoring results
-        if: github.event_name != 'push'
+        if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
         shell: bash
         run: |
           git config user.name "world-watch-bot"
@@ -98,6 +103,7 @@ jobs:
           cp "$PROJECT_DIR/updates.json" _site/
           cp "$PROJECT_DIR/auto_updates.json" _site/
           cp "$PROJECT_DIR/monitor_health.json" _site/
+          cp "$PROJECT_DIR/pdf_summaries.json" _site/
 
           touch _site/.nojekyll
 
@@ -134,8 +140,8 @@ jobs:
           SITE_URL: ${{ steps.deployment.outputs.page_url }}
         run: |
           for attempt in 1 2 3 4 5 6; do
-            if curl --fail --silent --show-error --location --max-time 15 "${SITE_URL}?build=${GITHUB_SHA}&attempt=${attempt}" -o /tmp/world-watch-live.html && grep -q 'strategic-menu-20261126' /tmp/world-watch-live.html && grep -q 'id="reportSortButtons"' /tmp/world-watch-live.html && grep -q 'id="strategicMenu"' /tmp/world-watch-live.html; then
-              echo "Verified public HTML: strategic menu and report sorting buttons are present."
+            if curl --fail --silent --show-error --location --max-time 15 "${SITE_URL}?build=${GITHUB_SHA}&attempt=${attempt}" -o /tmp/world-watch-live.html && grep -q 'strategic-menu-20261126' /tmp/world-watch-live.html && grep -q 'id="reportSortButtons"' /tmp/world-watch-live.html && grep -q 'id="strategicMenu"' /tmp/world-watch-live.html && grep -q 'id="pdfReadingPanel"' /tmp/world-watch-live.html; then
+              echo "Verified public HTML: strategic menu, report sorting buttons and PDF reading panel are present."
               exit 0
             fi
             sleep 10
