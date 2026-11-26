@@ -154,6 +154,23 @@
       "detected_date": "2026-11-25"
     },
     {
+      "id": "5415df07a0f24c",
+      "date": "2026-11-25",
+      "category": "Health, Food & Education",
+      "source": "UNESCO",
+      "title": "The state of higher education in the Arab States",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://www.unesco.org/en/articles/state-higher-education-arab-states",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "unesco",
+      "date_kind": "detection",
+      "detected_date": "2026-11-25",
+      "verified_publication": true,
+      "publication_date": "2026-11-03"
+    },
+    {
       "id": "4840927b368056",
       "date": "2026-11-24",
       "category": "Economy & Political Economy",
@@ -272,6 +289,23 @@
       "discovery_source": "who",
       "date_kind": "detection",
       "detected_date": "2026-11-23"
+    },
+    {
+      "id": "2061398d89ac10",
+      "date": "2026-11-23",
+      "category": "Health, Food & Education",
+      "source": "FAO",
+      "title": "Food Outlook – Biannual report on global food markets",
+      "summary": "New high-signal publication or analysis detected by World Watch's expanded institutional discovery layer.",
+      "url": "https://doi.org/10.4060/ce0625en",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "fao",
+      "date_kind": "detection",
+      "detected_date": "2026-11-23",
+      "verified_publication": true,
+      "publication_month": "2026-11"
     },
     {
       "id": "9cf8b6159a5fc7",
@@ -1060,5 +1094,5 @@
     }
   ],
   "archive_corrected_date": "2026-11-26",
-  "archive_removed_count": 93
+  "archive_removed_count": 91
 }
