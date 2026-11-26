@@ -1,4 +1,32 @@
 {
   "version": 1,
-  "reports": {}
+  "last_checked": "2026-11-26T14:40:19.067406+00:00",
+  "reports": {
+    "strategic_seed_1": {
+      "status": "unavailable",
+      "report_url": "https://am.jpmorgan.com/us/en/asset-management/liq/insights/portfolio-insights/ltcma/",
+      "checked": "2026-11-26T14:40:19.067406+00:00"
+    },
+    "strategic_seed_2": {
+      "status": "unavailable",
+      "report_url": "https://corporate.vanguard.com/content/corporatesite/us/en/corp/vemo/vemo-return-forecasts.html",
+      "checked": "2026-11-26T14:40:19.067406+00:00"
+    },
+    "strategic_seed_3": {
+      "status": "unavailable",
+      "report_url": "https://www.blackrock.com/corporate/insights/blackrock-investment-institute/outlook",
+      "checked": "2026-11-26T14:40:19.067406+00:00"
+    },
+    "strategic_seed_6": {
+      "status": "pdf_only",
+      "pdf_url": "https://www.msci.com/downloads/web/msci-com/research-and-insights/paper/investment-trends-in-focus-midyear-update-2026/investment-trends-in-focus-midyear-update-2026-transcript.pdf",
+      "report_url": "https://www.msci.com/research-and-insights/paper/investment-trends-in-focus-midyear-update-2026",
+      "checked": "2026-11-26T14:40:19.067406+00:00"
+    },
+    "strategic_seed_7": {
+      "status": "unavailable",
+      "report_url": "https://www.morganstanley.com/insights/articles/global-economic-outlook-2027",
+      "checked": "2026-11-26T14:40:19.067406+00:00"
+    }
+  }
 }
