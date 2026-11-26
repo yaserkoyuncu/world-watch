@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_checked": "2026-11-26T14:51:19.356369+00:00",
+  "last_checked": "2026-11-26T15:04:04.870197+00:00",
   "reports": {
     "strategic_seed_1": {
       "status": "unavailable",
@@ -104,22 +104,28 @@
       "checked": "2026-11-26T14:51:19.356369+00:00"
     },
     "frontier_seed_ai_index_2026": {
-      "status": "unavailable",
-      "reason": "ValueError",
+      "status": "ready",
+      "pdf_url": "https://hai.stanford.edu/assets/files/ai_index_report_2026.pdf",
+      "section": "Overview",
+      "page": 13,
+      "excerpt": "The resources powering AI development continued to grow in 2025, but fewer notable models were released than the year before, and the …",
       "report_url": "https://hai.stanford.edu/ai-index/2026-ai-index-report",
-      "checked": "2026-11-26T14:51:19.356369+00:00"
+      "checked": "2026-11-26T15:04:04.870197+00:00",
+      "pipeline_version": 3
     },
     "frontier_seed_ifr_humanoid": {
-      "status": "unavailable",
-      "reason": "ValueError",
+      "status": "registration_required",
+      "reason": "Publisher requires registration for this report",
       "report_url": "https://ifr.org/papers/humanoid-robots-vision-and-reality",
-      "checked": "2026-11-26T14:51:19.356369+00:00"
+      "checked": "2026-11-26T15:04:04.870197+00:00",
+      "pipeline_version": 3
     },
     "frontier_seed_ifr_ai_robotics": {
-      "status": "unavailable",
-      "reason": "ValueError",
+      "status": "registration_required",
+      "reason": "Publisher requires registration for this report",
       "report_url": "https://ifr.org/papers/artificial-intelligence-in-robotics",
-      "checked": "2026-11-26T14:51:19.356369+00:00"
+      "checked": "2026-11-26T15:04:04.870197+00:00",
+      "pipeline_version": 3
     },
     "frontier_seed_un_ai_preliminary_2026": {
       "status": "unavailable",
@@ -159,6 +165,67 @@
       "pdf_url": "https://iris.who.int/server/api/core/bitstreams/b9667393-72b8-4911-9e72-4fcf693fd8da/content",
       "report_url": "https://www.who.int/publications/i/item/9789290621447",
       "checked": "2026-11-26T14:51:19.356369+00:00"
+    },
+    "1c52cfcd73a8c2": {
+      "status": "pdf_only",
+      "pdf_url": "https://iris.who.int/server/api/core/bitstreams/01f92e17-034d-49d5-9d7e-2f9e088141d5/content",
+      "report_url": "https://www.who.int/publications/i/item/9789290621331",
+      "checked": "2026-11-26T15:04:04.870197+00:00",
+      "pipeline_version": 3
+    },
+    "9cf8b6159a5fc7": {
+      "status": "unavailable",
+      "reason": "HTTPError: 403 Client Error: Forbidden for url: https://www.imf.org/en/publications/weo/issues/2026/10/13/world",
+      "report_url": "https://www.imf.org/en/publications/weo/issues/2026/10/13/world-economic-outlook-october-2026",
+      "checked": "2026-11-26T15:04:04.870197+00:00",
+      "pipeline_version": 3
+    },
+    "c6ddf01f53a3ab": {
+      "status": "pdf_only",
+      "pdf_url": "https://iris.who.int/server/api/core/bitstreams/74971059-e7f6-427f-9c9d-fc1da1dcba80/content",
+      "report_url": "https://www.who.int/publications/i/item/B09982",
+      "checked": "2026-11-26T15:04:04.870197+00:00",
+      "pipeline_version": 3
+    },
+    "2d66dc5604c0c0": {
+      "status": "ready",
+      "pdf_url": "https://iris.who.int/server/api/core/bitstreams/b77f6ba3-a2b3-4c05-8a22-7832d624177f/content",
+      "section": "Key messages",
+      "page": 1,
+      "excerpt": "• Air pollution in the WHO Western Pacific Region1 is a major public health crisis. …",
+      "report_url": "https://www.who.int/publications/i/item/B09604",
+      "checked": "2026-11-26T15:04:04.870197+00:00",
+      "pipeline_version": 3
+    },
+    "6aa404bd47d2cc": {
+      "status": "ready",
+      "pdf_url": "https://iris.who.int/server/api/core/bitstreams/59c5845a-87db-469c-90ff-8bfe12f1c979/content",
+      "section": "Key messages",
+      "page": 1,
+      "excerpt": "The WHO Region of the Americas is at a pivotal point in addressing air pollution and health. …",
+      "report_url": "https://www.who.int/publications/i/item/B09648",
+      "checked": "2026-11-26T15:04:04.870197+00:00",
+      "pipeline_version": 3
+    },
+    "116007d8ca2ca8": {
+      "status": "ready",
+      "pdf_url": "https://iris.who.int/server/api/core/bitstreams/394daa6f-8c4a-4ac6-a082-14f8548b62eb/content",
+      "section": "Key messages",
+      "page": 1,
+      "excerpt": "• Although the natural sources of air pollution contribute to a significant portion of the annual average total in various countries of …",
+      "report_url": "https://www.who.int/publications/i/item/B09565",
+      "checked": "2026-11-26T15:04:04.870197+00:00",
+      "pipeline_version": 3
+    },
+    "48109341ecd1f6": {
+      "status": "ready",
+      "pdf_url": "https://iris.who.int/server/api/core/bitstreams/2b700785-0a06-42f9-8637-c79a8f7b55e5/content",
+      "section": "Key messages",
+      "page": 1,
+      "excerpt": "• For Africa, air pollution is not just an environmental threat – it poses a grave health crisis responsible for a significant …",
+      "report_url": "https://www.who.int/publications/i/item/B09813",
+      "checked": "2026-11-26T15:04:04.870197+00:00",
+      "pipeline_version": 3
     }
   }
 }
