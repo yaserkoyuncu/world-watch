@@ -27,15 +27,18 @@ HEADERS = {"User-Agent": "WorldWatch-PublicReportReader/1.0", "Accept": "text/ht
 HEADING = re.compile(r"^\s*(executive summary|summary of findings|key findings|main findings|key messages|highlights|summary for policymakers|overview|key takeaways|significant events, trends, and issues)\s*[:.]?\s*$", re.I)
 NEXT_HEADING = re.compile(r"^\s*(?:chapter\s+\d+.*|introduction|table of contents|contents|references|acknowledgements|acknowledgments|methodology|foreword|appendix)\s*$", re.I)
 NON_REPORT = re.compile(r"\b(?:transcripts?|speeches|speech|webinars?|interviews?|podcasts?|videos?|remarks|press[-_ ]releases?|media[-_ ]releases?|presentation|slides|factsheet|fact sheet)\b", re.I)
-PREFERRED = {"strategic_seed_16": 100, "strategic_seed_9": 99, "strategic_seed_8": 98, "strategic_seed_10": 97}
+PREFERRED = {"frontier_seed_ai_safety_2026": 104, "frontier_seed_ai_index_2026": 103, "frontier_seed_ifr_humanoid": 102, "frontier_seed_ifr_ai_robotics": 101, "strategic_seed_16": 100, "strategic_seed_9": 99, "strategic_seed_8": 98, "strategic_seed_10": 97}
 OFFICIAL_PDF_HINTS = {
+    "frontier_seed_ai_safety_2026": "https://internationalaisafetyreport.org/sites/default/files/2026-02/international-ai-safety-report-2026_1.pdf",
+    "frontier_seed_ai_index_2026": "https://hai.stanford.edu/assets/files/ai_index_report_2026.pdf",
+    "frontier_seed_stanford_setr_2026": "https://setr.stanford.edu/sites/default/files/2026-02/SETR2026_web-260219.pdf",
     "strategic_seed_16": "https://data.consilium.europa.eu/doc/document/ST-12388-2025-INIT/en/pdf",
     "strategic_seed_9": "https://iea.blob.core.windows.net/assets/19c60aa0-ee07-4a20-a138-33c967ac5008/GlobalCriticalMineralsOutlook2026.pdf",
     "strategic_seed_8": "https://thedocs.worldbank.org/en/doc/2ac43f46629cf90c2ea5b8929a343593-0050012026/commodity-markets-outlook-october-2026",
     "strategic_seed_10": "https://pubs.usgs.gov/publication/mcs2026",
 }
 STOP = set("the a an of in to and for on with by from report global world new edition annual quarterly update outlook research pdf summary".split())
-PRIORITY = {"Investment & Financial Markets", "Commodities & Critical Minerals", "International Relations & Geopolitical Risk", "Geopolitics & Security", "Strategic Foresight & Emerging Industries"}
+PRIORITY = {"AI, LLMs & Robotics", "Investment & Financial Markets", "Commodities & Critical Minerals", "International Relations & Geopolitical Risk", "Geopolitics & Security", "Strategic Foresight & Emerging Industries"}
 
 def read_json(path, default):
     try:
