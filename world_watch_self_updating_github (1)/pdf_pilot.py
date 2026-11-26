@@ -20,6 +20,9 @@ ROOT = Path(__file__).resolve().parent
 OUTPUT = ROOT / "pdf_summaries.json"
 MAX_REPORTS = 10
 MAX_PDF_BYTES = 20 * 1024 * 1024
+LARGE_PDF_BYTES = 80 * 1024 * 1024
+PDF_PIPELINE_VERSION = 3
+REGISTRATION_REQUIRED = {"frontier_seed_ifr_humanoid", "frontier_seed_ifr_ai_robotics"}
 MAX_HTML_BYTES = 2 * 1024 * 1024
 MAX_PAGES = 35
 DEADLINE = 360
@@ -72,7 +75,8 @@ def download(url, deadline):
                 response.raise_for_status()
                 content_type = response.headers.get("Content-Type", "").lower()
                 pdf_hint = "pdf" in content_type or urlsplit(url).path.lower().endswith(".pdf")
-                limit = MAX_PDF_BYTES if pdf_hint else MAX_HTML_BYTES
+                pdf_limit = LARGE_PDF_BYTES if urlsplit(url).hostname == "hai.stanford.edu" else MAX_PDF_BYTES
+                limit = pdf_limit if pdf_hint else MAX_HTML_BYTES
                 if int(response.headers.get("Content-Length", "0") or 0) > limit:
                     raise ValueError("file exceeds pilot size limit")
                 buf = bytearray()
@@ -81,7 +85,7 @@ def download(url, deadline):
                         raise TimeoutError("time limit")
                     buf.extend(part)
                     if buf[:5] == b"%PDF-":
-                        limit = MAX_PDF_BYTES
+                        limit = pdf_limit
                     if len(buf) > limit:
                         raise ValueError("file exceeds pilot size limit")
                 return bytes(buf), url
@@ -114,7 +118,7 @@ def pdf_links(html, url, title):
 def matches_title(title, opening):
     target = words(title)
     overlap = target & words(opening)
-    if len(overlap) < min(2, len(target)) or not target or len(overlap) / len(target) < .40:
+    if (len(overlap) < min(2, len(target)) or not target or len(overlap) / len(target) < .40):
         return False
     years = re.findall(r"\b20\d{2}\b", title)
     return not years or any(y in opening for y in years)
@@ -172,6 +176,8 @@ def inspect_pdf(data, url, title, deadline):
     return {"status": "ready", "pdf_url": url, **section} if section else {"status": "pdf_only", "pdf_url": url}
 
 def process(report, deadline):
+    if str(report["id"]) in REGISTRATION_REQUIRED:
+        return {"status": "registration_required", "reason": "Publisher requires registration for this report"}
     targets = list(dict.fromkeys([OFFICIAL_PDF_HINTS.get(str(report["id"])), report["url"]]))
     best = None
     errors = []
@@ -194,9 +200,9 @@ def process(report, deadline):
                         return result
                     best = result
                 except Exception as exc:
-                    errors.append(type(exc).__name__)
+                    errors.append(f"{type(exc).__name__}: {str(exc)[:100]}")
         except Exception as exc:
-            errors.append(type(exc).__name__)
+            errors.append(f"{type(exc).__name__}: {str(exc)[:100]}")
     return best or {"status": "unavailable", "reason": ", ".join(dict.fromkeys(errors))[:160] or "No matching public PDF"}
 
 def priority(report, records, now):
@@ -205,7 +211,7 @@ def priority(report, records, now):
     # First fill known public institutional sources; unattempted reports before ordinary retries.
     host = urlsplit(report["url"]).hostname or ""
     public = any(host == domain or host.endswith("." + domain) for domain in ("worldbank.org", "europa.eu", "iea.org", "usgs.gov", "imf.org", "sipri.org", "who.int", "unctad.org", "irena.org", "oecd.org", "un.org"))
-    return (PREFERRED.get(rid, 0) if rid not in records else 0, not previous, public, report.get("category") in PRIORITY, report.get("date", ""))
+    return (PREFERRED.get(rid, 0) if retry_due(previous, now) else 0, not previous, public, report.get("category") in PRIORITY, report.get("date", ""))
 
 def retry_due(entry, now):
     if not entry:
@@ -214,6 +220,10 @@ def retry_due(entry, now):
         return True
     if entry.get("status") == "ready":
         return False
+    if entry.get("status") == "registration_required":
+        return False
+    if entry.get("status") == "unavailable" and entry.get("pipeline_version", 1) < PDF_PIPELINE_VERSION:
+        return True
     try:
         return now - datetime.fromisoformat(entry["checked"]) >= timedelta(days=7)
     except (ValueError, KeyError, TypeError):
@@ -266,8 +276,8 @@ def main():
             entry = process(report, min(deadline, time.monotonic() + 32))
         except Exception:
             entry = {"status": "unavailable"}
-        records[rid] = {**entry, "report_url": report["url"], "checked": today.isoformat()}
-        print(rid, entry["status"])
+        records[rid] = {**entry, "report_url": report["url"], "checked": today.isoformat(), "pipeline_version": PDF_PIPELINE_VERSION}
+        print(rid, entry["status"], entry.get("reason", ""))
     if attempted or records != previous.get("reports", {}):
         OUTPUT.write_text(json.dumps({"version": 1, "last_checked": today.isoformat(), "reports": records}, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print("Pilot:", attempted, "reports attempted;", sum(v.get("status") == "ready" for v in records.values()), "excerpts saved.")
