@@ -122,7 +122,7 @@ input,select{width:100%;border:1px solid var(--line);background:var(--panel);col
 <body>
 <div class="app">
 <div class="topbar">
-  <div class="brand"><div class="logo">W</div> WORLD WATCH <span class="buildlabel">Strategic edition · v2.4</span></div>
+  <div class="brand"><div class="logo">W</div> WORLD WATCH <span class="buildlabel">Strategic edition · v2.5</span></div>
   <div class="actions"><button class="iconbtn" id="themeBtn" title="Theme">◐</button></div>
 </div>
 
@@ -428,9 +428,9 @@ async function openPdfPanel(report,trigger){
     let aiDetail='<section style="margin:18px 0"><p class="filterlabel">LOCAL AI SUMMARY · EXPERIMENTAL</p>';
     if(ai?.status==="ready"){
       const pages=(ai.pages||[]).filter(x=>Number.isInteger(x)&&x>0);
-      aiDetail+='<h3>AI-generated reading summary</h3><p class="org">Unverified draft from selected PDF pages, not a full-report analysis. Verify claims in the original report.</p><div style="white-space:pre-wrap;line-height:1.65">'+esc(ai.summary)+'</div><p class="org">Model: '+esc(ai.model)+' · PDF viewer pages: '+esc(pages.join(", "))+'</p><div class="panelLinks">'+pages.map(n=>pdfLink(ai.pdf_url+"#page="+n,"Page "+n+" ↗")).join("")+'</div>';
-    }else if(ai){aiDetail+='<p>No draft passed the pilot checks. The original report remains available below.</p>'}
-    else{aiDetail+='<p>Not processed by the local model yet. The experimental workflow attempts up to two reports per weekly run.</p>'}
+      aiDetail+='<h3>AI-generated reading summary</h3><p class="org">Unverified AI draft, not a full-report analysis. Verify claims in the original report.</p><div style="white-space:pre-wrap;line-height:1.65">'+esc(ai.summary)+'</div><p class="org">'+esc(ai.scope||"Selected report pages")+'</p><p class="org">Model: '+esc(ai.model)+' · PDF viewer pages: '+esc(pages.join(", "))+'</p><div class="panelLinks">'+pages.map(n=>pdfLink(ai.pdf_url+"#page="+n,"Page "+n+" ↗")).join("")+'</div>';
+    }else if(ai){aiDetail+='<p>No usable draft was saved. The model will retry periodically. The original report remains available below.</p>'}
+    else{aiDetail+='<p>Not processed by the local model yet. The experimental workflow attempts up to two reports per daily run.</p>'}
     aiDetail+='</section><hr>';
     body.innerHTML=heading+aiDetail+detail+'<div class="panelLinks">'+pdfLink(report.url,"Original publisher page ↗")+'</div><p class="org">Local AI drafts and short attributed excerpts only. No full PDFs are stored and no paid AI API is used.</p>';
   }catch(e){if(token===pdfOpenToken)body.innerHTML=heading+'<p>The reading index is temporarily unavailable.</p>'+pdfLink(report.url,"Original publisher page ↗")}

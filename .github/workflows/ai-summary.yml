@@ -3,7 +3,7 @@ name: World Watch local AI summary pilot
 on:
   workflow_dispatch:
   schedule:
-    - cron: "15 5 * * 1"
+    - cron: "15 5 * * *"
   push:
     branches: [main]
     paths:
@@ -21,7 +21,7 @@ jobs:
   summarize:
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 25
     env:
       HF_HUB_DISABLE_TELEMETRY: "1"
       TOKENIZERS_PARALLELISM: "false"
