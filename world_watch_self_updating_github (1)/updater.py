@@ -571,6 +571,110 @@ STRATEGIC_SOURCES = json.loads(r'''[
 ]''')
 DISCOVERY.extend(STRATEGIC_SOURCES)
 
+AI_ROBOTICS_SOURCES = json.loads(r'''[
+  {
+    "id": "ifr_papers",
+    "org": "International Federation of Robotics",
+    "category": "AI, LLMs & Robotics",
+    "url": "https://ifr.org/papers",
+    "description": "Position papers on industrial, service and humanoid robots; physical AI.",
+    "include": "\\b(?:AI|artificial intelligence|LLMs?|large language models?|generative AI|foundation models?|agents?|agentic|robot\\w*|humanoid\\w*|automat\\w*|embodied AI|physical AI|compute|inference|frontier models?|machine learning)\\b",
+    "mode": "institutional",
+    "direct_only": true
+  },
+  {
+    "id": "ifr_world",
+    "org": "International Federation of Robotics",
+    "category": "AI, LLMs & Robotics",
+    "url": "https://ifr.org/worldrobotics",
+    "description": "World Robotics public reports and statistics; no paid report access.",
+    "include": "\\b(?:AI|artificial intelligence|LLMs?|large language models?|generative AI|foundation models?|agents?|agentic|robot\\w*|humanoid\\w*|automat\\w*|embodied AI|physical AI|compute|inference|frontier models?|machine learning)\\b",
+    "mode": "institutional",
+    "direct_only": true
+  },
+  {
+    "id": "ai_safety",
+    "org": "International AI Safety Report",
+    "category": "AI, LLMs & Robotics",
+    "url": "https://internationalaisafetyreport.org/publications",
+    "description": "Scientific assessments of general-purpose AI capabilities and risks.",
+    "include": "\\b(?:AI|artificial intelligence|LLMs?|large language models?|generative AI|foundation models?|agents?|agentic|robot\\w*|humanoid\\w*|automat\\w*|embodied AI|physical AI|compute|inference|frontier models?|machine learning)\\b",
+    "mode": "institutional",
+    "direct_only": true
+  },
+  {
+    "id": "stanford_setr",
+    "org": "Stanford Emerging Technology Review",
+    "category": "AI, LLMs & Robotics",
+    "url": "https://setr.stanford.edu/",
+    "description": "Reports on AI, robotics and frontier technologies.",
+    "include": "\\b(?:AI|artificial intelligence|LLMs?|large language models?|generative AI|foundation models?|agents?|agentic|robot\\w*|humanoid\\w*|automat\\w*|embodied AI|physical AI|compute|inference|frontier models?|machine learning)\\b",
+    "mode": "institutional",
+    "direct_only": true
+  },
+  {
+    "id": "turing_cetas",
+    "org": "Alan Turing Institute CETaS",
+    "category": "AI, LLMs & Robotics",
+    "url": "https://cetas.turing.ac.uk/publications",
+    "description": "Research reports on AI, robotics and emerging technology.",
+    "include": "\\b(?:AI|artificial intelligence|LLMs?|large language models?|generative AI|foundation models?|agents?|agentic|robot\\w*|humanoid\\w*|automat\\w*|embodied AI|physical AI|compute|inference|frontier models?|machine learning)\\b",
+    "mode": "institutional",
+    "direct_only": true
+  },
+  {
+    "id": "epoch_ai",
+    "org": "Epoch AI",
+    "category": "AI, LLMs & Robotics",
+    "url": "https://epoch.ai/publications",
+    "description": "Research reports on AI capability trends, compute and model economics.",
+    "include": "\\b(?:AI|artificial intelligence|LLMs?|large language models?|generative AI|foundation models?|agents?|agentic|robot\\w*|humanoid\\w*|automat\\w*|embodied AI|physical AI|compute|inference|frontier models?|machine learning)\\b",
+    "mode": "institutional",
+    "direct_only": true
+  },
+  {
+    "id": "un_ai_panel",
+    "org": "UN Scientific Panel on AI",
+    "category": "AI, LLMs & Robotics",
+    "url": "https://www.un.org/independent-international-scientific-panel-ai/en/preliminary-report",
+    "description": "Independent assessment reports on AI capabilities and impacts.",
+    "include": "\\b(?:AI|artificial intelligence|LLMs?|large language models?|generative AI|foundation models?|agents?|agentic|robot\\w*|humanoid\\w*|automat\\w*|embodied AI|physical AI|compute|inference|frontier models?|machine learning)\\b",
+    "mode": "institutional",
+    "direct_only": true
+  },
+  {
+    "id": "anthropic_econ",
+    "org": "Anthropic Economic Index",
+    "category": "AI, LLMs & Robotics",
+    "url": "https://www.anthropic.com/economic-index",
+    "description": "Formal economic index reports on AI adoption and work; company research.",
+    "include": "\\b(?:AI|artificial intelligence|LLMs?|large language models?|generative AI|foundation models?|agents?|agentic|robot\\w*|humanoid\\w*|automat\\w*|embodied AI|physical AI|compute|inference|frontier models?|machine learning)\\b",
+    "mode": "institutional",
+    "direct_only": true
+  },
+  {
+    "id": "metr_reports",
+    "org": "METR",
+    "category": "AI, LLMs & Robotics",
+    "url": "https://metr.org/frontier-risk-report",
+    "description": "Formal frontier AI capability and risk reports.",
+    "include": "\\b(?:AI|artificial intelligence|LLMs?|large language models?|generative AI|foundation models?|agents?|agentic|robot\\w*|humanoid\\w*|automat\\w*|embodied AI|physical AI|compute|inference|frontier models?|machine learning)\\b",
+    "mode": "institutional",
+    "direct_only": true
+  },
+  {
+    "id": "stanford_ai_index",
+    "org": "Stanford HAI",
+    "category": "AI, LLMs & Robotics",
+    "url": "https://hai.stanford.edu/ai-index",
+    "description": "Annual AI Index and associated formal reports.",
+    "include": "\\b(?:AI|artificial intelligence|LLMs?|large language models?|generative AI|foundation models?|agents?|agentic|robot\\w*|humanoid\\w*|automat\\w*|embodied AI|physical AI|compute|inference|frontier models?|machine learning)\\b",
+    "mode": "institutional",
+    "direct_only": true
+  }
+]''')
+DISCOVERY.extend(AI_ROBOTICS_SOURCES)
+
 def load_json(p, default):
     try: return json.loads(p.read_text(encoding="utf-8"))
     except Exception: return default
@@ -1010,7 +1114,7 @@ DISCOVERY_ALT_URLS = {
 }
 
 DISCOVERY_EXCLUDE=re.compile(
-    r"\b(webinar|podcast|video|event|job|vacanc|speech|press release|statement|newsletter|"
+    r"\b(webinar|podcast|video|event|job|vacanc|speech|transcript|interview|press release|statement|newsletter|"
     r"call for|invitation|registration|course|conference|working paper|technical note|"
     r"methodology|data appendix|chapter|executive summary)\b",re.I)
 DISCOVERY_SIGNAL=re.compile(
@@ -1021,9 +1125,9 @@ DISCOVERY_SIGNAL=re.compile(
 # Conservative report-only gate: titles and URLs, not unrelated page context.
 REPORT_REJECT_TITLE = re.compile(r"(?:\b(?:speeches|speech|keynote|remarks by|interviews?|podcasts?|webinars?|videos?|press releases?|media releases?|news releases?|op[- ]eds?|opinion pieces?|commentary|blog posts?|newsletters?|event announcements?|calls? for papers|registration|vacanc\w*|job openings?|executive summary|conference proceedings|proceedings of|working papers?|technical notes?)\b|!\[image|\bimage \d+\s*:|^\s*(?:https?://|more:|read more|download (?:the |full )?report|reports and publications|publications)\s*$)", re.I)
 REPORT_REJECT_URL = re.compile(r"(?:/(?:speeches?|remarks?|interviews?|podcasts?|pod|videos?|vid|webinars?|events?|meetings-and-events|press[-_]?releases?|media[-_]?releases?|news[-_]?releases?|news|blogs?|opinions?|op[-_]?eds?|commentary|authors?|people|staff|careers|jobs|wp-content/uploads|sites/default/files/styles|assets|images)(?:/|$)|/(?:\d+/)?pr-\d|[.](?:png|jpe?g|gif|webp|svg|ico|avif)(?:$|[?#]))", re.I)
-REPORT_TITLE = re.compile(r"\b(?:reports?|outlook|forecasts?|projections?|assessment|assessments|yearbook|survey|surveys|index|indices|indicators|statistics|statistical|prospects|barometer|monitor|global trends|capital market assumptions|capital markets model|commodity summaries|demand trends|platinum quarterly|strategic foresight|conflicts to watch|conflict watchlist|policy research|research study|research studies|policy briefs?|research briefs?|technical briefs?|fact sheets?|flagship|white papers?|market assumptions|market scenarios)\b", re.I)
-REPORT_PATH = re.compile(r"/(?:publications?|reports?|research-reports|policy-briefs?|research-publications|rpt|books|papers)/(?:[^/?#]+)", re.I)
-REPORT_CATALOG = re.compile(r"(?:who[.]int/publications/i/item/|cset[.]georgetown[.]edu/publication/|unctad[.]org/publication/|irena[.]org/publications/\d{4}/|sipri[.]org/publications/\d{4}/|weforum[.]org/publications/[^/?#]+|publications[.]iom[.]int/books/|openknowledge[.]worldbank[.]org/entities/publication/|undp[.]org/publications/[^/?#]+|transparency[.]org/(?:en/)?publications/[^/?#]+)", re.I)
+REPORT_TITLE = re.compile(r"\b(?:reports?|outlook|forecasts?|projections?|assessment|assessments|yearbook|survey|surveys|index|indices|indicators|statistics|statistical|prospects|barometer|monitor|global trends|capital market assumptions|capital markets model|commodity summaries|demand trends|platinum quarterly|strategic foresight|conflicts to watch|conflict watchlist|policy research|research study|research studies|policy briefs?|research briefs?|technical briefs?|fact sheets?|flagship|white papers?|position(?:ing)? papers?|world robotics|market assumptions|market scenarios)\b", re.I)
+REPORT_PATH = re.compile(r"/(?:publications?|reports?|research-reports|policy-briefs?|research-publications|rpt|books|papers|paper)/(?:[^/?#]+)", re.I)
+REPORT_CATALOG = re.compile(r"(?:who[.]int/publications/i/item/|cset[.]georgetown[.]edu/publication/|unctad[.]org/publication/|irena[.]org/publications/\d{4}/|sipri[.]org/publications/\d{4}/|weforum[.]org/publications/[^/?#]+|publications[.]iom[.]int/books/|openknowledge[.]worldbank[.]org/entities/publication/|undp[.]org/publications/[^/?#]+|transparency[.]org/(?:en/)?publications/[^/?#]+|ifr[.]org/papers/[^/?#]+|internationalaisafetyreport[.]org/publication/[^/?#]+|cetas[.]turing[.]ac[.]uk/publications/[^/?#]+)", re.I)
 
 def is_report_candidate(title, url):
     title = clean(title or "")
@@ -1035,7 +1139,7 @@ def is_report_candidate(title, url):
         return False
     if parsed.netloc.lower().endswith("quantamagazine.org") or parsed.netloc.lower().endswith("carbonbrief.org"):
         return False
-    return bool(REPORT_TITLE.search(title) and (REPORT_PATH.search(parsed.path) or re.search(r"report|outlook|forecast|survey|index|assessment|yearbook|statistics|monitor|foresight|commodity|publication|research|assumptions|brief|watchlist|quarterly|trends", parsed.path, re.I)) or REPORT_CATALOG.search(parsed.netloc + parsed.path) or parsed.path.lower().endswith(".pdf") and REPORT_TITLE.search(title))
+    return bool(REPORT_TITLE.search(title) and (REPORT_PATH.search(parsed.path) or re.search(r"report|outlook|forecast|survey|index|assessment|yearbook|statistics|monitor|foresight|commodity|publication|research|assumptions|brief|watchlist|quarterly|trends|paper|robotics", parsed.path, re.I)) or REPORT_CATALOG.search(parsed.netloc + parsed.path) or parsed.path.lower().endswith(".pdf") and REPORT_TITLE.search(title))
 
 def discovery_score(spec,title,context,url):
     blob=clean(title+" "+context)

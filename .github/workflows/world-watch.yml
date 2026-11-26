@@ -3,7 +3,7 @@ name: Update and deploy World Watch
 on:
   workflow_dispatch:
   workflow_run:
-    workflows: ["World Watch PDF reading pilot"]
+    workflows: ["World Watch PDF reading pilot", "World Watch local AI summary pilot"]
     types: [completed]
     branches: [main]
   push:
@@ -104,6 +104,7 @@ jobs:
           cp "$PROJECT_DIR/auto_updates.json" _site/
           cp "$PROJECT_DIR/monitor_health.json" _site/
           cp "$PROJECT_DIR/pdf_summaries.json" _site/
+          cp "$PROJECT_DIR/ai_summaries.json" _site/
 
           touch _site/.nojekyll
 
@@ -140,7 +141,7 @@ jobs:
           SITE_URL: ${{ steps.deployment.outputs.page_url }}
         run: |
           for attempt in 1 2 3 4 5 6; do
-            if curl --fail --silent --show-error --location --max-time 15 "${SITE_URL}?build=${GITHUB_SHA}&attempt=${attempt}" -o /tmp/world-watch-live.html && grep -q 'strategic-menu-20261126' /tmp/world-watch-live.html && grep -q 'id="reportSortButtons"' /tmp/world-watch-live.html && grep -q 'id="strategicMenu"' /tmp/world-watch-live.html && grep -q 'id="pdfReadingPanel"' /tmp/world-watch-live.html; then
+            if curl --fail --silent --show-error --location --max-time 15 "${SITE_URL}?build=${GITHUB_SHA}&attempt=${attempt}" -o /tmp/world-watch-live.html && grep -q 'strategic-menu-20261126' /tmp/world-watch-live.html && grep -q 'id="reportSortButtons"' /tmp/world-watch-live.html && grep -q 'id="strategicMenu"' /tmp/world-watch-live.html && grep -q 'id="pdfReadingPanel"' /tmp/world-watch-live.html && grep -q 'id="aiRoboticsMenu"' /tmp/world-watch-live.html && grep -q 'Strategic edition · v2.4' /tmp/world-watch-live.html; then
               echo "Verified public HTML: strategic menu, report sorting buttons and PDF reading panel are present."
               exit 0
             fi
