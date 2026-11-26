@@ -605,14 +605,15 @@
   },
   "series:iea_weo": {
     "version": [
-      2025,
+      2026,
       0
     ],
-    "edition": "2025",
-    "title": "World Energy Outlook https://www.iea.org/reports/world-energy-outlook-2025",
-    "url": "https://www.iea.org/reports/world-energy-outlook-2025",
-    "method": "official-url",
-    "checked": "2026-11-26T12:34:27.721888Z"
+    "edition": "2026",
+    "title": "World Energy Outlook 2026",
+    "url": "https://www.iea.org/reports/world-energy-outlook-2026",
+    "publication_date": "2026-11-19",
+    "method": "publisher-verified-correction",
+    "verified_date": "2026-11-26"
   },
   "series:irena_weto": {
     "version": [
@@ -627,14 +628,15 @@
   },
   "series:unhcr_gt": {
     "version": [
-      2026,
+      2025,
       0
     ],
-    "edition": "2026",
-    "title": "11 June 2026 The latest Global Trends report, published in June 2026, provides key statistical trends on forced displacement. It includes the latest official statistics on refugees, asylum-seekers, internally displaced and stateless people, as well as the number of refugees who have returned home. Language versions: [Français](https://www.unhcr.org/fr/editions/global-trends)[Español](https://www.acnur.org/tendencias-globales)[عربي](https://www.unhcr.org/ar/global-trends)",
-    "url": "https://www.unhcr.org/global-trends",
-    "method": "reader-block",
-    "checked": "2026-11-24T13:43:30.953216Z"
+    "edition": "2025",
+    "title": "Global Trends report 2025",
+    "url": "https://www.unhcr.org/media/global-trends-report-2025",
+    "publication_date": "2026-06-11",
+    "method": "publisher-verified-correction",
+    "verified_date": "2026-11-26"
   },
   "series:wjp": {
     "version": [
@@ -1817,5 +1819,17 @@
     "url": "https://www.mckinsey.com/~/media/mckinsey/business%20functions/mckinsey%20digital/our%20insights/the%20top%20trends%20in%20tech%202026/techtrends2026-l1-v7_ex1.svgz?cq=50&cpy=Center",
     "method": "reader-link",
     "checked": "2026-10-03T14:18:56.882517Z"
+  },
+  "series:unhcr_myt": {
+    "version": [
+      2026,
+      0
+    ],
+    "edition": "2026",
+    "title": "Mid-Year Trends 2026",
+    "url": "https://www.unhcr.org/mid-year-trends",
+    "publication_date": "2026-11-17",
+    "method": "publisher-verified-correction",
+    "verified_date": "2026-11-26"
   }
 }
