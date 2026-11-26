@@ -1,0 +1,62 @@
+name: World Watch local AI summary pilot
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "15 5 * * 1"
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/ai-summary.yml"
+      - "world_watch_self_updating_github (1)/ai_summary.py"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: world-watch-local-ai-summary
+  cancel-in-progress: false
+
+jobs:
+  summarize:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      HF_HUB_DISABLE_TELEMETRY: "1"
+      TOKENIZERS_PARALLELISM: "false"
+      OMP_NUM_THREADS: "4"
+      MKL_NUM_THREADS: "4"
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+      - name: Install local CPU-only model tools
+        run: |
+          python -m pip install --index-url https://download.pytorch.org/whl/cpu "torch>=2.6,<3"
+          python -m pip install "transformers>=4.51,<5" "pypdf>=5,<7" requests beautifulsoup4 safetensors
+      - name: Test and generate at most two local draft summaries
+        working-directory: "world_watch_self_updating_github (1)"
+        run: |
+          python -m py_compile ai_summary.py
+          python ai_summary.py --self-test
+          python ai_summary.py
+      - name: Save draft summaries
+        if: success()
+        shell: bash
+        run: |
+          git config user.name "world-watch-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "world_watch_self_updating_github (1)/ai_summaries.json"
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "Update local AI draft summaries"
+          for attempt in 1 2 3; do
+            git pull --rebase origin main
+            if git push origin HEAD:main; then exit 0; fi
+            sleep 3
+          done
+          exit 1
