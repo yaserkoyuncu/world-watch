@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_checked": "2026-11-26T20:51:58.489845+00:00",
+  "last_checked": "2026-11-27T15:02:26.789027+00:00",
   "reports": {
     "strategic_seed_9": {
       "status": "ready",
@@ -59,6 +59,36 @@
       ],
       "summary": "The report indicates a rise in nonfuel mineral production value in the United States from $106 billion in 2024 to $112 billion in 2025, driven by a 13% increase in metal production and a 2% growth in industrial minerals production. Despite this growth, the prices of certain metals like lithium and manganese declined, while others such as bismuth and antimony saw significant price hikes. The U.S. nonfuel mining sector employs around 1.82 million people, with average weekly earnings averaging $1,900. The U.S. remains highly dependent on foreign sources for many critical minerals, with China being the leading supplier for several key minerals. Tariffs and export controls have been implemented by various countries affecting the global supply chain.",
       "checked": "2026-11-26T20:51:58.489845+00:00",
+      "model": "Qwen/Qwen2.5-3B-Instruct",
+      "scope": "Selected executive-summary or findings pages",
+      "pipeline_version": 4
+    },
+    "frontier_seed_ai_index_2026": {
+      "status": "ready",
+      "report_url": "https://hai.stanford.edu/ai-index/2026-ai-index-report",
+      "pdf_url": "https://hai.stanford.edu/assets/files/ai_index_report_2026.pdf",
+      "pages": [
+        13,
+        15,
+        16
+      ],
+      "summary": "The AI Index Report 2026 reveals a growing industry dominance in AI model production, with fewer notable releases compared to previous years. Transparency in AI systems has declined, with many high-capacity models withholding critical details such as training code, dataset sizes, and parameter counts. Despite this, AI compute capacity has increased significantly, tripling every two years since 2022, primarily due to expansion in hyperscale data centers. However, this growth is concentrated in a single foundry in Taiwan, making the global supply chain vulnerable. Open-source development and AI publications have expanded, though research remains predominantly centered in China, which leads in publication volume, citations, and patent grants. Gender gaps in AI talent persist globally, with no significant improvement since 2010.",
+      "checked": "2026-11-27T15:02:26.789027+00:00",
+      "model": "Qwen/Qwen2.5-3B-Instruct",
+      "scope": "Selected executive-summary or findings pages",
+      "pipeline_version": 4
+    },
+    "strategic_seed_8": {
+      "status": "ready",
+      "report_url": "https://thedocs.worldbank.org/en/doc/2ac43f46629cf90c2ea5b8929a343593-0050012026/",
+      "pdf_url": "https://thedocs.worldbank.org/en/doc/2ac43f46629cf90c2ea5b8929a343593-0050012026/related/CMO-October-2026-Executive-Summary.pdf",
+      "pages": [
+        1,
+        2,
+        3
+      ],
+      "summary": "Overview: The commodity markets faced significant challenges in 2026 due to multiple concurrent shocks, including the ongoing conflict in the Middle East, a powerful El Niño affecting agriculture, and supply constraints in renewable and technology sectors driving base metal prices higher. Oil markets saw a production deficit exacerbated by reduced consumption and refinery capacity constraints, leading to higher prices despite some recovery in global production. Natural gas prices spiked in Europe due to supply disruptions and rising diesel costs, prompting international action. Agricultural markets experienced heightened volatility from El Niño impacts and localized weather events, while base metal prices surged due to geopolitical tensions and limited supply growth. Commodities like gold and silver maintained high prices amid geopolitical uncertainties. Commodities are becoming more interconnected, with oil and aluminum being key transmitters of price volatility.",
+      "checked": "2026-11-27T15:02:26.789027+00:00",
       "model": "Qwen/Qwen2.5-3B-Instruct",
       "scope": "Selected executive-summary or findings pages",
       "pipeline_version": 4
