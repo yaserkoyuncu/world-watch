@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_checked": "2026-11-26T20:53:24.997778+00:00",
+  "last_checked": "2026-11-27T14:21:59.877260+00:00",
   "reports": {
     "strategic_seed_1": {
       "status": "unavailable",
@@ -76,9 +76,10 @@
     },
     "22bec4b602c907": {
       "status": "unavailable",
-      "reason": "HTTPError",
+      "reason": "HTTPError: 403 Client Error: Forbidden for url: https://unctad.org/publication/trade-and-development-report-202",
       "report_url": "https://unctad.org/publication/trade-and-development-report-2026",
-      "checked": "2026-11-26T14:43:38.474363+00:00"
+      "checked": "2026-11-27T14:21:59.877260+00:00",
+      "pipeline_version": 4
     },
     "6c439656c181ec": {
       "status": "ready",
@@ -131,9 +132,10 @@
     },
     "4840927b368056": {
       "status": "unavailable",
-      "reason": "HTTPError",
+      "reason": "HTTPError: 403 Client Error: Forbidden for url: https://unctad.org/publication/foreign-investment-screening-leg",
       "report_url": "https://unctad.org/publication/foreign-investment-screening-legal-design-administrative-models-and-emerging-practice",
-      "checked": "2026-11-26T14:51:19.356369+00:00"
+      "checked": "2026-11-27T14:21:59.877260+00:00",
+      "pipeline_version": 4
     },
     "3d08c5d2370d18": {
       "status": "pdf_only",
@@ -283,6 +285,71 @@
       "excerpt": "Nepal’s Expanded Programme on Immunization (EPI) continues to serve as one of the country’s most successful and equitable public health interventions, contributing …",
       "report_url": "https://www.who.int/publications/i/item/9789292800246",
       "checked": "2026-11-26T20:53:24.997778+00:00",
+      "pipeline_version": 4
+    },
+    "ded3eecd617ded": {
+      "status": "ready",
+      "pdf_url": "https://iris.who.int/server/api/core/bitstreams/88172d3e-8047-4938-a24c-e63d146467a3/content",
+      "section": "Executive summary",
+      "page": 8,
+      "excerpt": "Context and purpose 1 CTC is defined as a vaccine management approach that allows vaccines to be kept at temperatures not exceeding …",
+      "report_url": "https://www.who.int/publications/i/item/B09950",
+      "checked": "2026-11-27T14:21:59.877260+00:00",
+      "pipeline_version": 4
+    },
+    "f9eea8d54661e4": {
+      "status": "ready",
+      "pdf_url": "https://iris.who.int/server/api/core/bitstreams/90e5c2bf-4613-4ced-ae14-7e66582fbc4f/content",
+      "section": "Executive summary",
+      "page": 12,
+      "excerpt": "Climate change is among the defining threats to health, disrupting populations, straining health systems and deepening existing inequities. …",
+      "report_url": "https://www.who.int/publications/i/item/9789240126466",
+      "checked": "2026-11-27T14:21:59.877260+00:00",
+      "pipeline_version": 4
+    },
+    "de26ff056362a1": {
+      "status": "pdf_only",
+      "pdf_url": "https://iris.who.int/server/api/core/bitstreams/726b4727-ac22-432d-96e7-563210b8fb32/content",
+      "report_url": "https://www.who.int/publications/i/item/9789240126480",
+      "checked": "2026-11-27T14:21:59.877260+00:00",
+      "pipeline_version": 4
+    },
+    "a02aa84f8b27fb": {
+      "status": "pdf_only",
+      "pdf_url": "https://iris.who.int/server/api/core/bitstreams/b4805598-aacb-4d78-a46d-c748542a962f/content",
+      "report_url": "https://www.who.int/publications/i/item/B09875",
+      "checked": "2026-11-27T14:21:59.877260+00:00",
+      "pipeline_version": 4
+    },
+    "a1073751e11099": {
+      "status": "unavailable",
+      "reason": "HTTPError: 403 Client Error: Forbidden for url: https://unctad.org/publication/global-trade-update-november-202",
+      "report_url": "https://unctad.org/publication/global-trade-update-november-2026",
+      "checked": "2026-11-27T14:21:59.877260+00:00",
+      "pipeline_version": 4
+    },
+    "37f586255b1e51": {
+      "status": "unavailable",
+      "reason": "No matching public PDF",
+      "report_url": "https://www.worldbank.org/en/programs/debt-statistics",
+      "checked": "2026-11-27T14:21:59.877260+00:00",
+      "pipeline_version": 4
+    },
+    "7a984dba67c5a5": {
+      "status": "ready",
+      "pdf_url": "https://iris.who.int/server/api/core/bitstreams/c8ec0a14-188e-42ae-8097-06a9385b13dd/content",
+      "section": "Executive summary",
+      "page": 16,
+      "excerpt": "Migrants, refugees and other displaced populations often face persistent and severe barriers to accessing quality health services. …",
+      "report_url": "https://www.who.int/publications/i/item/9789240126626",
+      "checked": "2026-11-27T14:21:59.877260+00:00",
+      "pipeline_version": 4
+    },
+    "89d603a7ad2d02": {
+      "status": "pdf_only",
+      "pdf_url": "https://iris.who.int/server/api/core/bitstreams/476050d2-f507-4554-b536-cb5d1863cd71/content",
+      "report_url": "https://www.who.int/publications/i/item/B09970",
+      "checked": "2026-11-27T14:21:59.877260+00:00",
       "pipeline_version": 4
     }
   }
