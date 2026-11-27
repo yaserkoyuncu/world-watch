@@ -1,16 +1,16 @@
 {
-  "last_checked": "2026-11-26T12:34:27.721888Z",
-  "engine_version": "6.1",
+  "last_checked": "2026-11-26T23:51:11.777911Z",
+  "engine_version": "6.2",
   "migration_baseline": false,
   "series": {
-    "ok": 40,
-    "failed": 4,
-    "total": 44
+    "ok": 33,
+    "failed": 12,
+    "total": 45
   },
   "discovery": {
-    "ok": 28,
-    "failed": 10,
-    "total": 38
+    "ok": 37,
+    "failed": 38,
+    "total": 75
   },
   "monitors": [
     {
@@ -27,23 +27,23 @@
     {
       "monitor": "Global Financial Stability Report",
       "kind": "series",
-      "ok": true,
-      "latest": "April 2026",
+      "ok": false,
+      "error": "Unverified URL-only fallback; retained last verified edition",
       "url": "https://www.imf.org/en/publications/gfsr/issues/2026/04/14/global-financial-stability-report-april-2026",
-      "method": "official-url",
       "warnings": [
-        "direct https://www.imf.org/en/publications: 403 Client Error: Forbidden for url: https://www.imf.org/en/publications"
+        "direct https://www.imf.org/en/publications: 403 Client Error: Forbidden for url: https://www.imf.org/en/publications",
+        "direct https://www.imf.org/en/publications/gfsr/issues/2026/04/14/global-financial-stability-report-april-2026: 403 Client Error: Forbidden for url: https://www.imf.org/en/publications/gfsr/issues/2026/04/14/global-financial-stabili"
       ]
     },
     {
       "monitor": "Fiscal Monitor",
       "kind": "series",
-      "ok": true,
-      "latest": "April 2026",
+      "ok": false,
+      "error": "Unverified URL-only fallback; retained last verified edition",
       "url": "https://www.imf.org/en/publications/fm/issues/2026/04/15/fiscal-monitor-april-2026",
-      "method": "official-url",
       "warnings": [
-        "direct https://www.imf.org/en/publications: 403 Client Error: Forbidden for url: https://www.imf.org/en/publications"
+        "direct https://www.imf.org/en/publications: 403 Client Error: Forbidden for url: https://www.imf.org/en/publications",
+        "direct https://www.imf.org/en/publications/fm/issues/2026/04/15/fiscal-monitor-april-2026: 403 Client Error: Forbidden for url: https://www.imf.org/en/publications/fm/issues/2026/04/15/fiscal-monitor-april-2026"
       ]
     },
     {
@@ -79,13 +79,14 @@
     {
       "monitor": "Trade and Development Report",
       "kind": "series",
-      "ok": true,
-      "latest": "2025",
+      "ok": false,
+      "error": "Unverified URL-only fallback; retained last verified edition",
       "url": "https://unctad.org/publication/trade-and-development-report-2025",
-      "method": "official-url",
       "warnings": [
         "direct https://unctad.org/topic/macroeconomics/trade-development-report: 403 Client Error: Forbidden for url: https://unctad.org/topic/macroeconomics/trade-development-report",
-        "direct https://unctad.org/publication/trade-and-development-report-2025: 403 Client Error: Forbidden for url: https://unctad.org/publication/trade-and-development-report-2025"
+        "direct https://unctad.org/publication/trade-and-development-report-2025: 403 Client Error: Forbidden for url: https://unctad.org/publication/trade-and-development-report-2025",
+        "direct https://unctad.org/publications: 403 Client Error: Forbidden for url: https://unctad.org/publications",
+        "direct https://unctad.org/unctad-publications: 403 Client Error: Forbidden for url: https://unctad.org/unctad-publications"
       ]
     },
     {
@@ -100,11 +101,8 @@
     {
       "monitor": "Employment and Social Trends",
       "kind": "series",
-      "ok": true,
-      "latest": "May 2026",
-      "url": "https://www.ilo.org/research-and-publications",
-      "method": "reader-block",
-      "warnings": []
+      "ok": false,
+      "error": "No valid edition match"
     },
     {
       "monitor": "Global Risks Report",
@@ -136,12 +134,13 @@
     {
       "monitor": "Annual Threat Assessment",
       "kind": "series",
-      "ok": true,
-      "latest": "2026",
+      "ok": false,
+      "error": "Unverified URL-only fallback; retained last verified edition",
       "url": "https://www.odni.gov/index.php/newsroom/reports-publications/reports-publications-2026/4141-2026-annual-threat-assessment",
-      "method": "official-url",
       "warnings": [
-        "direct https://www.odni.gov/index.php/newsroom/reports-publications/reports-publications-2026/4141-2026-annual-threat-assessment: 403 Client Error: Forbidden for url: https://www.odni.gov/index.php/newsroom/reports-publications/reports-publications-2"
+        "direct https://www.odni.gov/index.php/newsroom/reports-publications/reports-publications-2026/4141-2026-annual-threat-assessment: 403 Client Error: Forbidden for url: https://www.odni.gov/index.php/newsroom/reports-publications/reports-publications-2",
+        "direct https://www.dni.gov/index.php/newsroom/reports-publications: 403 Client Error: Forbidden for url: https://www.dni.gov/index.php/newsroom/reports-publications",
+        "direct https://www.dni.gov/index.php/newsroom/press-releases/press-releases-2026/4142-pr-03-26: 403 Client Error: Forbidden for url: https://www.dni.gov/index.php/newsroom/press-releases/press-releases-2026/4142-pr-0"
       ]
     },
     {
@@ -186,18 +185,16 @@
       "ok": true,
       "latest": "2026",
       "url": "https://kpmg.com/content/dam/kpmgsites/uk/pdf/2026/01/global-tech-report-2026.pdf",
-      "method": "direct-link",
-      "warnings": [
-        "reader https://kpmg.com/uk/en/insights/technology/kpmg-global-tech-report.html: 403 Client Error: Forbidden for url: https://r.jina.ai/https://kpmg.com/uk/en/insights/technology/kpmg-global-tech-repor"
-      ]
+      "method": "reader-link",
+      "warnings": []
     },
     {
       "monitor": "Global Innovation Index",
       "kind": "series",
       "ok": true,
       "latest": "2026",
-      "url": "https://www.wipo.int/publications/en/series/index.jsp?id=129&lang=en",
-      "method": "reader-block",
+      "url": "https://www.wipo.int/publications/en/details.jsp?id=4873&plang=EN",
+      "method": "reader-link",
       "warnings": []
     },
     {
@@ -239,23 +236,18 @@
     {
       "monitor": "World Energy Outlook",
       "kind": "series",
-      "ok": true,
-      "latest": "2025",
-      "url": "https://www.iea.org/reports/world-energy-outlook-2025",
-      "method": "official-url",
-      "warnings": [
-        "direct https://www.iea.org/reports/world-energy-outlook-2025: 403 Client Error: Forbidden for url: https://www.iea.org/reports/world-energy-outlook-2025"
-      ]
+      "ok": false,
+      "error": "direct https://www.iea.org/reports: 403 Client Error: Forbidden for url: https://www.iea.org/reports | direct https://www.iea.org/reports/world-energy-outlook-2026: 403 Client Error: Forbidden for url: https://www.iea.org/reports/world-energy-outlook-2026"
     },
     {
       "monitor": "World Energy Transitions Outlook",
       "kind": "series",
-      "ok": true,
-      "latest": "2024",
+      "ok": false,
+      "error": "Unverified URL-only fallback; retained last verified edition",
       "url": "https://www.irena.org/publications/2024/Nov/World-Energy-Transitions-Outlook-2024",
-      "method": "official-url",
       "warnings": [
-        "direct https://www.irena.org/publications/2024/Nov/World-Energy-Transitions-Outlook-2024: 403 Client Error: Forbidden for url: https://www.irena.org/publications/2024/Nov/World-Energy-Transitions-Outlook-2024"
+        "direct https://www.irena.org/publications/2024/Nov/World-Energy-Transitions-Outlook-2024: 403 Client Error: Forbidden for url: https://www.irena.org/publications/2024/Nov/World-Energy-Transitions-Outlook-2024",
+        "direct https://www.irena.org/Energy-Transition/Outlook: 403 Client Error: Forbidden for url: https://www.irena.org/Energy-Transition/Outlook"
       ]
     },
     {
@@ -291,7 +283,7 @@
       "ok": true,
       "latest": "2026",
       "url": "https://worldmigrationreport.iom.int/msite/wmr-2026-interactive/",
-      "method": "official-url",
+      "method": "reader-block",
       "warnings": [
         "direct https://worldmigrationreport.iom.int/msite/wmr-2026-interactive/: 403 Client Error: Forbidden for url: https://worldmigrationreport.iom.int/msite/wmr-2026-interactive/"
       ]
@@ -300,7 +292,13 @@
       "monitor": "Global Trends",
       "kind": "series",
       "ok": false,
-      "error": "direct https://www.unhcr.org/au/global-trends: 403 Client Error: Forbidden for url: https://www.unhcr.org/au/global-trends | direct https://www.unhcr.org/media/global-trends-2025-report: 403 Client Error: Forbidden for url: https://www.unhcr.org/media/global-trends-2025-report | direct https://www.unhcr.org/global-trends: 403 Client Error: Forbidden for url: https://www.unhcr.org/global-trends"
+      "error": "direct https://www.unhcr.org/global-trends: 403 Client Error: Forbidden for url: https://www.unhcr.org/global-trends | direct https://www.unhcr.org/media/global-trends-report-2025: 403 Client Error: Forbidden for url: https://www.unhcr.org/media/global-trends-report-2025"
+    },
+    {
+      "monitor": "Mid-Year Trends",
+      "kind": "series",
+      "ok": false,
+      "error": "direct https://www.unhcr.org/mid-year-trends: 403 Client Error: Forbidden for url: https://www.unhcr.org/mid-year-trends | direct https://www.unhcr.org/us/publications/mid-year-trends: 403 Client Error: Forbidden for url: https://www.unhcr.org/us/publications/mid-year-trends"
     },
     {
       "monitor": "Human Development Report",
@@ -352,8 +350,8 @@
       "kind": "series",
       "ok": true,
       "latest": "2026",
-      "url": "https://www.unesco.org/gem-report/sites/default/files/styles/banner_mobile/public/2026-03/cover%20image%20web.jpg.webp?itok=O_g9oZz8",
-      "method": "reader-link",
+      "url": "https://www.unesco.org/gem-report/en/articles/dialogue-2026-gem-report-comparative-and-international-education-community-oxford-university",
+      "method": "direct-link",
       "warnings": []
     },
     {
@@ -428,17 +426,20 @@
       "candidates": 0,
       "new_candidates": 0,
       "suppressed": 0,
+      "queued": 0,
       "warnings": [
-        "direct https://www.imf.org/en/publications: 403 Client Error: Forbidden for url: https://www.imf.org/en/publications"
+        "direct https://www.imf.org/en/publications: 403 Client Error: Forbidden for url: https://www.imf.org/en/publications",
+        "direct https://www.elibrary.imf.org/: 405 Client Error: Not Allowed for url: https://www.elibrary.imf.org/"
       ]
     },
     {
       "monitor": "World Bank discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 3,
+      "candidates": 4,
       "new_candidates": 0,
       "suppressed": 0,
+      "queued": 0,
       "warnings": []
     },
     {
@@ -448,6 +449,7 @@
       "candidates": 0,
       "new_candidates": 0,
       "suppressed": 0,
+      "queued": 0,
       "warnings": [
         "direct https://www.oecd.org/en/publications.html: 403 Client Error: Forbidden for url: https://www.oecd.org/en/publications.html"
       ]
@@ -456,9 +458,10 @@
       "monitor": "BIS discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 14,
-      "new_candidates": 2,
+      "candidates": 1,
+      "new_candidates": 0,
       "suppressed": 0,
+      "queued": 0,
       "warnings": []
     },
     {
@@ -468,6 +471,7 @@
       "candidates": 0,
       "new_candidates": 0,
       "suppressed": 0,
+      "queued": 0,
       "warnings": [
         "direct https://unctad.org/publications: 403 Client Error: Forbidden for url: https://unctad.org/publications",
         "direct https://unctad.org/unctad-publications: 403 Client Error: Forbidden for url: https://unctad.org/unctad-publications"
@@ -477,27 +481,30 @@
       "monitor": "WTO discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 2,
-      "new_candidates": 0,
+      "candidates": 4,
+      "new_candidates": 3,
       "suppressed": 0,
+      "queued": 0,
       "warnings": []
     },
     {
       "monitor": "ILO discovery",
       "kind": "discovery",
-      "ok": true,
-      "candidates": 17,
+      "ok": false,
+      "candidates": 0,
       "new_candidates": 0,
       "suppressed": 0,
+      "queued": 0,
       "warnings": []
     },
     {
       "monitor": "World Economic Forum discovery",
       "kind": "discovery",
-      "ok": true,
-      "candidates": 5,
+      "ok": false,
+      "candidates": 0,
       "new_candidates": 0,
       "suppressed": 0,
+      "queued": 0,
       "warnings": [
         "direct https://www.weforum.org/publications/: 403 Client Error: Forbidden for url: https://www.weforum.org/publications/"
       ]
@@ -506,27 +513,32 @@
       "monitor": "Munich Security Conference discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 4,
+      "candidates": 2,
       "new_candidates": 0,
       "suppressed": 0,
+      "queued": 0,
       "warnings": []
     },
     {
       "monitor": "SIPRI discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 11,
+      "candidates": 10,
       "new_candidates": 0,
       "suppressed": 0,
-      "warnings": []
+      "queued": 0,
+      "warnings": [
+        "direct https://www.sipri.org/publications: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+      ]
     },
     {
       "monitor": "ODNI discovery",
       "kind": "discovery",
-      "ok": true,
-      "candidates": 6,
+      "ok": false,
+      "candidates": 0,
       "new_candidates": 0,
       "suppressed": 0,
+      "queued": 0,
       "warnings": [
         "direct https://www.dni.gov/index.php/newsroom/reports-publications: 403 Client Error: Forbidden for url: https://www.dni.gov/index.php/newsroom/reports-publications"
       ]
@@ -538,26 +550,30 @@
       "candidates": 0,
       "new_candidates": 0,
       "suppressed": 0,
+      "queued": 0,
       "warnings": [
-        "direct https://www.crisisgroup.org/latest-updates: 403 Client Error: Forbidden for url: https://www.crisisgroup.org/latest-updates"
+        "direct https://www.crisisgroup.org/latest-updates: 403 Client Error: Forbidden for url: https://www.crisisgroup.org/latest-updates",
+        "direct https://www.crisisgroup.org/reports-and-briefings: 403 Client Error: Forbidden for url: https://www.crisisgroup.org/reports-and-briefings"
       ]
     },
     {
       "monitor": "Stanford HAI discovery",
       "kind": "discovery",
-      "ok": true,
-      "candidates": 3,
+      "ok": false,
+      "candidates": 0,
       "new_candidates": 0,
       "suppressed": 0,
+      "queued": 0,
       "warnings": []
     },
     {
       "monitor": "Georgetown CSET discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 8,
+      "candidates": 7,
       "new_candidates": 0,
       "suppressed": 0,
+      "queued": 0,
       "warnings": []
     },
     {
@@ -567,6 +583,7 @@
       "candidates": 0,
       "new_candidates": 0,
       "suppressed": 0,
+      "queued": 0,
       "warnings": [
         "direct https://www.mckinsey.com/capabilities/tech-and-ai/our-insights: HTTPSConnectionPool(host='www.mckinsey.com', port=443): Read timed out. (read timeout=22)"
       ]
@@ -575,54 +592,60 @@
       "monitor": "Deloitte discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 7,
+      "candidates": 1,
       "new_candidates": 0,
       "suppressed": 0,
+      "queued": 0,
       "warnings": []
     },
     {
       "monitor": "KPMG discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 8,
+      "candidates": 2,
       "new_candidates": 0,
       "suppressed": 0,
+      "queued": 0,
       "warnings": []
     },
     {
       "monitor": "WIPO discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 14,
+      "candidates": 5,
       "new_candidates": 0,
       "suppressed": 0,
+      "queued": 0,
       "warnings": []
     },
     {
       "monitor": "ITU discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 2,
+      "candidates": 1,
       "new_candidates": 0,
       "suppressed": 0,
+      "queued": 0,
       "warnings": []
     },
     {
       "monitor": "WMO discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 28,
+      "candidates": 2,
       "new_candidates": 0,
       "suppressed": 0,
+      "queued": 0,
       "warnings": []
     },
     {
       "monitor": "UNEP discovery",
       "kind": "discovery",
-      "ok": true,
-      "candidates": 1,
+      "ok": false,
+      "candidates": 0,
       "new_candidates": 0,
       "suppressed": 0,
+      "queued": 0,
       "warnings": []
     },
     {
@@ -632,8 +655,10 @@
       "candidates": 0,
       "new_candidates": 0,
       "suppressed": 0,
+      "queued": 0,
       "warnings": [
-        "direct https://www.iea.org/reports: 403 Client Error: Forbidden for url: https://www.iea.org/reports"
+        "direct https://www.iea.org/reports: 403 Client Error: Forbidden for url: https://www.iea.org/reports",
+        "direct https://www.iea.org/reports/: 403 Client Error: Forbidden for url: https://www.iea.org/reports/"
       ]
     },
     {
@@ -643,35 +668,29 @@
       "candidates": 0,
       "new_candidates": 0,
       "suppressed": 0,
+      "queued": 0,
       "warnings": [
         "direct https://www.irena.org/Publications: 403 Client Error: Forbidden for url: https://www.irena.org/Publications"
       ]
     },
     {
-      "monitor": "Carbon Brief discovery",
-      "kind": "discovery",
-      "ok": false,
-      "candidates": 0,
-      "new_candidates": 0,
-      "suppressed": 0,
-      "warnings": []
-    },
-    {
       "monitor": "UN DESA Population Division discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 59,
+      "candidates": 27,
       "new_candidates": 0,
       "suppressed": 0,
+      "queued": 0,
       "warnings": []
     },
     {
       "monitor": "IOM discovery",
       "kind": "discovery",
-      "ok": false,
-      "candidates": 0,
+      "ok": true,
+      "candidates": 17,
       "new_candidates": 0,
       "suppressed": 0,
+      "queued": 0,
       "warnings": [
         "direct https://publications.iom.int/: 403 Client Error: Forbidden for url: https://publications.iom.int/"
       ]
@@ -683,17 +702,20 @@
       "candidates": 0,
       "new_candidates": 0,
       "suppressed": 0,
+      "queued": 0,
       "warnings": [
-        "direct https://www.unhcr.org/publications: 403 Client Error: Forbidden for url: https://www.unhcr.org/publications"
+        "direct https://www.unhcr.org/publications: 403 Client Error: Forbidden for url: https://www.unhcr.org/publications",
+        "direct https://www.unhcr.org/us/publications: 403 Client Error: Forbidden for url: https://www.unhcr.org/us/publications"
       ]
     },
     {
       "monitor": "UNDP discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 7,
+      "candidates": 1,
       "new_candidates": 0,
       "suppressed": 0,
+      "queued": 0,
       "warnings": [
         "direct https://www.undp.org/publications: 403 Client Error: Forbidden for url: https://www.undp.org/publications"
       ]
@@ -702,9 +724,10 @@
       "monitor": "WHO discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 8,
-      "new_candidates": 0,
+      "candidates": 5,
+      "new_candidates": 1,
       "suppressed": 0,
+      "queued": 0,
       "warnings": []
     },
     {
@@ -714,24 +737,27 @@
       "candidates": 1,
       "new_candidates": 0,
       "suppressed": 0,
+      "queued": 0,
       "warnings": []
     },
     {
       "monitor": "UNESCO discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 4,
+      "candidates": 3,
       "new_candidates": 0,
       "suppressed": 0,
+      "queued": 0,
       "warnings": []
     },
     {
       "monitor": "V-Dem Institute discovery",
       "kind": "discovery",
-      "ok": true,
-      "candidates": 3,
+      "ok": false,
+      "candidates": 0,
       "new_candidates": 0,
       "suppressed": 0,
+      "queued": 0,
       "warnings": []
     },
     {
@@ -741,51 +767,451 @@
       "candidates": 1,
       "new_candidates": 0,
       "suppressed": 0,
+      "queued": 0,
       "warnings": []
     },
     {
       "monitor": "Freedom House discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 9,
-      "new_candidates": 0,
+      "candidates": 1,
+      "new_candidates": 1,
       "suppressed": 0,
+      "queued": 0,
       "warnings": []
     },
     {
       "monitor": "World Justice Project discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 12,
+      "candidates": 2,
       "new_candidates": 0,
       "suppressed": 0,
+      "queued": 0,
       "warnings": []
     },
     {
       "monitor": "Transparency International discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 47,
+      "candidates": 26,
       "new_candidates": 0,
       "suppressed": 0,
+      "queued": 0,
       "warnings": []
     },
     {
       "monitor": "Reporters Without Borders discovery",
       "kind": "discovery",
       "ok": true,
-      "candidates": 3,
+      "candidates": 2,
       "new_candidates": 0,
       "suppressed": 0,
+      "queued": 0,
       "warnings": []
     },
     {
-      "monitor": "Quanta Magazine discovery",
+      "monitor": "J.P. Morgan Asset Management discovery",
+      "kind": "discovery",
+      "ok": true,
+      "candidates": 1,
+      "new_candidates": 1,
+      "suppressed": 0,
+      "queued": 0,
+      "warnings": []
+    },
+    {
+      "monitor": "Vanguard discovery",
+      "kind": "discovery",
+      "ok": true,
+      "candidates": 1,
+      "new_candidates": 1,
+      "suppressed": 0,
+      "queued": 0,
+      "warnings": []
+    },
+    {
+      "monitor": "BlackRock Investment Institute discovery",
+      "kind": "discovery",
+      "ok": true,
+      "candidates": 3,
+      "new_candidates": 3,
+      "suppressed": 0,
+      "queued": 0,
+      "warnings": []
+    },
+    {
+      "monitor": "Goldman Sachs Research discovery",
+      "kind": "discovery",
+      "ok": false,
+      "candidates": 0,
+      "new_candidates": 0,
+      "suppressed": 0,
+      "queued": 0,
+      "warnings": []
+    },
+    {
+      "monitor": "MSCI discovery",
+      "kind": "discovery",
+      "ok": false,
+      "candidates": 0,
+      "new_candidates": 0,
+      "suppressed": 0,
+      "queued": 0,
+      "warnings": []
+    },
+    {
+      "monitor": "UBS discovery",
+      "kind": "discovery",
+      "ok": false,
+      "candidates": 0,
+      "new_candidates": 0,
+      "suppressed": 0,
+      "queued": 0,
+      "warnings": [
+        "direct https://www.ubs.com/global/en/investment-bank/insights-and-data/global-research.html: 403 Client Error: Forbidden for url: https://www.ubs.com/global/en/investment-bank/insights-and-data/global-research.html"
+      ]
+    },
+    {
+      "monitor": "Morgan Stanley discovery",
+      "kind": "discovery",
+      "ok": false,
+      "candidates": 0,
+      "new_candidates": 0,
+      "suppressed": 0,
+      "queued": 0,
+      "warnings": []
+    },
+    {
+      "monitor": "World Bank discovery",
+      "kind": "discovery",
+      "ok": true,
+      "candidates": 2,
+      "new_candidates": 1,
+      "suppressed": 0,
+      "queued": 0,
+      "warnings": []
+    },
+    {
+      "monitor": "IEA discovery",
+      "kind": "discovery",
+      "ok": false,
+      "candidates": 0,
+      "new_candidates": 0,
+      "suppressed": 0,
+      "queued": 0,
+      "warnings": [
+        "direct https://www.iea.org/topics/critical-minerals: 403 Client Error: Forbidden for url: https://www.iea.org/topics/critical-minerals"
+      ]
+    },
+    {
+      "monitor": "USGS discovery",
+      "kind": "discovery",
+      "ok": false,
+      "candidates": 0,
+      "new_candidates": 0,
+      "suppressed": 0,
+      "queued": 0,
+      "warnings": []
+    },
+    {
+      "monitor": "World Gold Council discovery",
+      "kind": "discovery",
+      "ok": true,
+      "candidates": 3,
+      "new_candidates": 3,
+      "suppressed": 0,
+      "queued": 0,
+      "warnings": []
+    },
+    {
+      "monitor": "Silver Institute discovery",
+      "kind": "discovery",
+      "ok": true,
+      "candidates": 1,
+      "new_candidates": 1,
+      "suppressed": 0,
+      "queued": 0,
+      "warnings": []
+    },
+    {
+      "monitor": "World Platinum Investment Council discovery",
+      "kind": "discovery",
+      "ok": false,
+      "candidates": 0,
+      "new_candidates": 0,
+      "suppressed": 0,
+      "queued": 0,
+      "warnings": []
+    },
+    {
+      "monitor": "CSIS Critical Minerals Security Program discovery",
+      "kind": "discovery",
+      "ok": false,
+      "candidates": 0,
+      "new_candidates": 0,
+      "suppressed": 0,
+      "queued": 0,
+      "warnings": []
+    },
+    {
+      "monitor": "World Nuclear Association discovery",
+      "kind": "discovery",
+      "ok": false,
+      "candidates": 0,
+      "new_candidates": 0,
+      "suppressed": 0,
+      "queued": 0,
+      "warnings": []
+    },
+    {
+      "monitor": "Council on Foreign Relations discovery",
+      "kind": "discovery",
+      "ok": true,
+      "candidates": 1,
+      "new_candidates": 1,
+      "suppressed": 0,
+      "queued": 0,
+      "warnings": []
+    },
+    {
+      "monitor": "Chatham House discovery",
+      "kind": "discovery",
+      "ok": false,
+      "candidates": 0,
+      "new_candidates": 0,
+      "suppressed": 0,
+      "queued": 0,
+      "warnings": [
+        "direct https://www.chathamhouse.org/publications/research-publications: 403 Client Error: Forbidden for url: https://www.chathamhouse.org/publications/research-publications"
+      ]
+    },
+    {
+      "monitor": "CSIS discovery",
+      "kind": "discovery",
+      "ok": false,
+      "candidates": 0,
+      "new_candidates": 0,
+      "suppressed": 0,
+      "queued": 0,
+      "warnings": []
+    },
+    {
+      "monitor": "RAND discovery",
+      "kind": "discovery",
+      "ok": false,
+      "candidates": 0,
+      "new_candidates": 0,
+      "suppressed": 0,
+      "queued": 0,
+      "warnings": []
+    },
+    {
+      "monitor": "Carnegie Endowment discovery",
+      "kind": "discovery",
+      "ok": false,
+      "candidates": 0,
+      "new_candidates": 0,
+      "suppressed": 0,
+      "queued": 0,
+      "warnings": []
+    },
+    {
+      "monitor": "European Council on Foreign Relations discovery",
+      "kind": "discovery",
+      "ok": false,
+      "candidates": 0,
+      "new_candidates": 0,
+      "suppressed": 0,
+      "queued": 0,
+      "warnings": []
+    },
+    {
+      "monitor": "ACLED discovery",
       "kind": "discovery",
       "ok": true,
       "candidates": 4,
+      "new_candidates": 4,
+      "suppressed": 0,
+      "queued": 0,
+      "warnings": []
+    },
+    {
+      "monitor": "RUSI discovery",
+      "kind": "discovery",
+      "ok": false,
+      "candidates": 0,
       "new_candidates": 0,
       "suppressed": 0,
+      "queued": 0,
+      "warnings": []
+    },
+    {
+      "monitor": "EU Institute for Security Studies discovery",
+      "kind": "discovery",
+      "ok": false,
+      "candidates": 0,
+      "new_candidates": 0,
+      "suppressed": 0,
+      "queued": 0,
+      "warnings": []
+    },
+    {
+      "monitor": "Lowy Institute discovery",
+      "kind": "discovery",
+      "ok": true,
+      "candidates": 4,
+      "new_candidates": 4,
+      "suppressed": 0,
+      "queued": 0,
+      "warnings": []
+    },
+    {
+      "monitor": "European Commission discovery",
+      "kind": "discovery",
+      "ok": true,
+      "candidates": 6,
+      "new_candidates": 6,
+      "suppressed": 0,
+      "queued": 0,
+      "warnings": []
+    },
+    {
+      "monitor": "OECD Strategic Foresight discovery",
+      "kind": "discovery",
+      "ok": false,
+      "candidates": 0,
+      "new_candidates": 0,
+      "suppressed": 0,
+      "queued": 0,
+      "warnings": [
+        "direct https://www.oecd.org/en/topics/strategic-foresight.html: 403 Client Error: Forbidden for url: https://www.oecd.org/en/topics/strategic-foresight.html"
+      ]
+    },
+    {
+      "monitor": "McKinsey Global Institute discovery",
+      "kind": "discovery",
+      "ok": false,
+      "candidates": 0,
+      "new_candidates": 0,
+      "suppressed": 0,
+      "queued": 0,
+      "warnings": [
+        "direct https://www.mckinsey.com/mgi/our-research: HTTPSConnectionPool(host='www.mckinsey.com', port=443): Read timed out. (read timeout=22)"
+      ]
+    },
+    {
+      "monitor": "National Intelligence Council discovery",
+      "kind": "discovery",
+      "ok": false,
+      "candidates": 0,
+      "new_candidates": 0,
+      "suppressed": 0,
+      "queued": 0,
+      "warnings": [
+        "direct https://www.dni.gov/index.php/gt2040-home: 403 Client Error: Forbidden for url: https://www.dni.gov/index.php/gt2040-home"
+      ]
+    },
+    {
+      "monitor": "International Federation of Robotics discovery",
+      "kind": "discovery",
+      "ok": true,
+      "candidates": 1,
+      "new_candidates": 1,
+      "suppressed": 0,
+      "queued": 0,
+      "warnings": []
+    },
+    {
+      "monitor": "International Federation of Robotics discovery",
+      "kind": "discovery",
+      "ok": true,
+      "candidates": 1,
+      "new_candidates": 1,
+      "suppressed": 0,
+      "queued": 0,
+      "warnings": []
+    },
+    {
+      "monitor": "International AI Safety Report discovery",
+      "kind": "discovery",
+      "ok": true,
+      "candidates": 5,
+      "new_candidates": 5,
+      "suppressed": 0,
+      "queued": 0,
+      "warnings": []
+    },
+    {
+      "monitor": "Stanford Emerging Technology Review discovery",
+      "kind": "discovery",
+      "ok": false,
+      "candidates": 0,
+      "new_candidates": 0,
+      "suppressed": 0,
+      "queued": 0,
+      "warnings": []
+    },
+    {
+      "monitor": "Alan Turing Institute CETaS discovery",
+      "kind": "discovery",
+      "ok": false,
+      "candidates": 0,
+      "new_candidates": 0,
+      "suppressed": 0,
+      "queued": 0,
+      "warnings": [
+        "direct https://cetas.turing.ac.uk/publications: 403 Client Error: Forbidden for url: https://cetas.turing.ac.uk/publications"
+      ]
+    },
+    {
+      "monitor": "Epoch AI discovery",
+      "kind": "discovery",
+      "ok": true,
+      "candidates": 1,
+      "new_candidates": 1,
+      "suppressed": 0,
+      "queued": 0,
+      "warnings": []
+    },
+    {
+      "monitor": "UN Scientific Panel on AI discovery",
+      "kind": "discovery",
+      "ok": false,
+      "candidates": 0,
+      "new_candidates": 0,
+      "suppressed": 0,
+      "queued": 0,
+      "warnings": []
+    },
+    {
+      "monitor": "Anthropic Economic Index discovery",
+      "kind": "discovery",
+      "ok": false,
+      "candidates": 0,
+      "new_candidates": 0,
+      "suppressed": 0,
+      "queued": 0,
+      "warnings": []
+    },
+    {
+      "monitor": "METR discovery",
+      "kind": "discovery",
+      "ok": false,
+      "candidates": 0,
+      "new_candidates": 0,
+      "suppressed": 0,
+      "queued": 0,
+      "warnings": []
+    },
+    {
+      "monitor": "Stanford HAI discovery",
+      "kind": "discovery",
+      "ok": true,
+      "candidates": 9,
+      "new_candidates": 0,
+      "suppressed": 0,
+      "queued": 0,
       "warnings": []
     }
   ]

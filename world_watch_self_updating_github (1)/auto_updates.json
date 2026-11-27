@@ -1,10 +1,10 @@
 {
-  "last_checked": "2026-11-26T12:34:27.721888Z",
-  "engine_version": "6.1",
-  "monitor_count": 82,
-  "flagship_series_count": 44,
-  "discovery_source_count": 38,
-  "new_items_this_run": 0,
+  "last_checked": "2026-11-26T23:51:11.777911Z",
+  "engine_version": "6.2",
+  "monitor_count": 120,
+  "flagship_series_count": 45,
+  "discovery_source_count": 75,
+  "new_items_this_run": 5,
   "new_flagship_editions_this_run": 0,
   "migration_baseline": false,
   "updates": [
@@ -41,6 +41,81 @@
       "series_id": "unhcr_gt",
       "edition": "2025",
       "confidence": "high"
+    },
+    {
+      "id": "a161c7879f6cb2",
+      "date": "2026-11-26",
+      "date_kind": "detection",
+      "detected_date": "2026-11-26",
+      "category": "Economy & Political Economy",
+      "source": "WTO",
+      "title": "World Trade Report 2026",
+      "summary": "Newly detected formal institutional publication; publication date may precede detection.",
+      "url": "https://www.wto.org/english/res_e/publications_e/world-trade-report-2026_e.htm",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "wto"
+    },
+    {
+      "id": "f577ddcc20b468",
+      "date": "2026-11-26",
+      "date_kind": "detection",
+      "detected_date": "2026-11-26",
+      "category": "Economy & Political Economy",
+      "source": "WTO",
+      "title": "WTO Annual Report 2026",
+      "summary": "Newly detected formal institutional publication; publication date may precede detection.",
+      "url": "https://www.wto.org/english/res_e/publications_e/wto-annual-report-2026_e.htm",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "wto"
+    },
+    {
+      "id": "295690964c2726",
+      "date": "2026-11-26",
+      "date_kind": "detection",
+      "detected_date": "2026-11-26",
+      "category": "Economy & Political Economy",
+      "source": "WTO",
+      "title": "Flagship publications",
+      "summary": "Newly detected formal institutional publication; publication date may precede detection.",
+      "url": "https://www.wto.org/english/res_e/publications_e/publications_e.htm",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "wto"
+    },
+    {
+      "id": "ded3eecd617ded",
+      "date": "2026-11-26",
+      "date_kind": "detection",
+      "detected_date": "2026-11-26",
+      "category": "Health, Food & Education",
+      "source": "WHO",
+      "title": "Heat-stable vaccines in low-and middle-income settings: findings from a Vaccine Innovation Prioritisation...",
+      "summary": "Newly detected formal institutional publication; publication date may precede detection.",
+      "url": "https://www.who.int/publications/i/item/B09950",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "who"
+    },
+    {
+      "id": "4ee4744b28b57b",
+      "date": "2026-11-26",
+      "date_kind": "detection",
+      "detected_date": "2026-11-26",
+      "category": "Democracy & Rights",
+      "source": "Freedom House",
+      "title": "China Dissent Monitor",
+      "summary": "Newly detected formal institutional publication; publication date may precede detection.",
+      "url": "https://freedomhouse.org/report/china-dissent-monitor",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "freedom"
     },
     {
       "id": "22bec4b602c907",
@@ -1092,7 +1167,5 @@
       "date_kind": "detection",
       "detected_date": "2026-10-28"
     }
-  ],
-  "archive_corrected_date": "2026-11-26",
-  "archive_removed_count": 91
+  ]
 }
