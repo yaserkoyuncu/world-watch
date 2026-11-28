@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_checked": "2026-11-27T14:21:59.877260+00:00",
+  "last_checked": "2026-11-28T13:37:12.164732+00:00",
   "reports": {
     "strategic_seed_1": {
       "status": "unavailable",
@@ -145,9 +145,10 @@
     },
     "c934833a2f4313": {
       "status": "unavailable",
-      "reason": "HTTPError",
+      "reason": "HTTPError: 403 Client Error: Forbidden for url: https://unctad.org/publication/unctad-oecd-report-g20-investmen",
       "report_url": "https://unctad.org/publication/unctad-oecd-report-g20-investment-measures-33rd-report",
-      "checked": "2026-11-26T14:51:19.356369+00:00"
+      "checked": "2026-11-28T13:37:12.164732+00:00",
+      "pipeline_version": 4
     },
     "8c798bdc8b9768": {
       "status": "ready",
@@ -173,10 +174,10 @@
     },
     "9cf8b6159a5fc7": {
       "status": "unavailable",
-      "reason": "HTTPError: 403 Client Error: Forbidden for url: https://www.imf.org/en/publications/weo/issues/2026/10/13/world",
+      "reason": "HTTPError: 403 Client Error: Forbidden for url: https://www.imf.org/-/media/files/publications/weo/2026/october, HTTPError: 403 Client Error: Forbidden for url:",
       "report_url": "https://www.imf.org/en/publications/weo/issues/2026/10/13/world-economic-outlook-october-2026",
-      "checked": "2026-11-26T15:04:04.870197+00:00",
-      "pipeline_version": 3
+      "checked": "2026-11-28T13:37:12.164732+00:00",
+      "pipeline_version": 4
     },
     "c6ddf01f53a3ab": {
       "status": "pdf_only",
@@ -350,6 +351,74 @@
       "pdf_url": "https://iris.who.int/server/api/core/bitstreams/476050d2-f507-4554-b536-cb5d1863cd71/content",
       "report_url": "https://www.who.int/publications/i/item/B09970",
       "checked": "2026-11-27T14:21:59.877260+00:00",
+      "pipeline_version": 4
+    },
+    "be7cfc7fe39350": {
+      "status": "ready",
+      "pdf_url": "https://iris.who.int/server/api/core/bitstreams/7188d15c-6a1d-4176-94ba-769566327770/content",
+      "section": "Executive summary",
+      "page": 13,
+      "excerpt": "It is estimated that about a quarter of the world’s population has been infected with Mycobacterium tuberculosis (Mtb) – the bacterium that …",
+      "report_url": "https://www.who.int/publications/i/item/9789240125421",
+      "checked": "2026-11-28T13:37:12.164732+00:00",
+      "pipeline_version": 4
+    },
+    "b76b7cd057e21e": {
+      "status": "unavailable",
+      "reason": "HTTPError: 403 Client Error: Forbidden for url: https://www.imf.org/en/publications/fm/issues/2026/10/05/fiscal",
+      "report_url": "https://www.imf.org/en/publications/fm/issues/2026/10/05/fiscal-monitor-october-2026",
+      "checked": "2026-11-28T13:37:12.164732+00:00",
+      "pipeline_version": 4
+    },
+    "e5208877a4e58e": {
+      "status": "pdf_only",
+      "pdf_url": "https://iris.who.int/server/api/core/bitstreams/8a101af1-4724-47a2-871f-addb6e1f8c11/content",
+      "report_url": "https://www.who.int/publications/i/item/9789240124653",
+      "checked": "2026-11-28T13:37:12.164732+00:00",
+      "pipeline_version": 4
+    },
+    "a62e18604cd09c": {
+      "status": "ready",
+      "pdf_url": "https://iris.who.int/server/api/core/bitstreams/9f787dc2-feea-4d39-8fd4-140d289fead8/content",
+      "section": "Overview",
+      "page": 1,
+      "excerpt": "Ebola disease is a severe, often fatal disease in humans. …",
+      "report_url": "https://www.who.int/publications/i/item/B09963",
+      "checked": "2026-11-28T13:37:12.164732+00:00",
+      "pipeline_version": 4
+    },
+    "u20260708-imf-weo": {
+      "status": "unavailable",
+      "reason": "HTTPError: 403 Client Error: Forbidden for url: https://www.imf.org/en/publications/weo/issues/2026/07/08/world",
+      "report_url": "https://www.imf.org/en/publications/weo/issues/2026/07/08/world-economic-outlook-update-july-2026",
+      "checked": "2026-11-28T13:37:12.164732+00:00",
+      "pipeline_version": 4
+    },
+    "u20260616-wb-gep": {
+      "status": "ready",
+      "pdf_url": "https://thedocs.worldbank.org/en/doc/2b672b3b0415d6b66c45b66579db4ef5-0050012026/related/GEP-Jun-2026-Executive-Summary.pdf",
+      "section": "Executive Summary",
+      "page": 1,
+      "excerpt": "7T_he global economy is facing another major shock. …",
+      "report_url": "https://thedocs.worldbank.org/en/doc/2b672b3b0415d6b66c45b66579db4ef5-0050012026/global-economic-prospects-june-2026",
+      "checked": "2026-11-28T13:37:12.164732+00:00",
+      "pipeline_version": 4
+    },
+    "u20260513-who-whs": {
+      "status": "ready",
+      "pdf_url": "https://iris.who.int/server/api/core/bitstreams/45189137-2f10-48e1-ae43-91b0d8ddd120/content",
+      "section": "Key messages",
+      "page": 9,
+      "excerpt": "Global progress towards the health and health- related SDGs remains uneven and too slow to meet the 2030 targets with fewer than …",
+      "report_url": "https://www.who.int/publications/i/item/9789240122482",
+      "checked": "2026-11-28T13:37:12.164732+00:00",
+      "pipeline_version": 4
+    },
+    "frontier_seed_stanford_setr_2026": {
+      "status": "pdf_only",
+      "pdf_url": "https://setr.stanford.edu/sites/default/files/2026-02/SETR2026_web-260219.pdf",
+      "report_url": "https://setr.stanford.edu/",
+      "checked": "2026-11-28T13:37:12.164732+00:00",
       "pipeline_version": 4
     }
   }
