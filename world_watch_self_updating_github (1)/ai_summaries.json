@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_checked": "2026-11-27T15:02:26.789027+00:00",
+  "last_checked": "2026-11-28T14:10:33.655996+00:00",
   "reports": {
     "strategic_seed_9": {
       "status": "ready",
@@ -89,6 +89,36 @@
       ],
       "summary": "Overview: The commodity markets faced significant challenges in 2026 due to multiple concurrent shocks, including the ongoing conflict in the Middle East, a powerful El Niño affecting agriculture, and supply constraints in renewable and technology sectors driving base metal prices higher. Oil markets saw a production deficit exacerbated by reduced consumption and refinery capacity constraints, leading to higher prices despite some recovery in global production. Natural gas prices spiked in Europe due to supply disruptions and rising diesel costs, prompting international action. Agricultural markets experienced heightened volatility from El Niño impacts and localized weather events, while base metal prices surged due to geopolitical tensions and limited supply growth. Commodities like gold and silver maintained high prices amid geopolitical uncertainties. Commodities are becoming more interconnected, with oil and aluminum being key transmitters of price volatility.",
       "checked": "2026-11-27T15:02:26.789027+00:00",
+      "model": "Qwen/Qwen2.5-3B-Instruct",
+      "scope": "Selected executive-summary or findings pages",
+      "pipeline_version": 4
+    },
+    "frontier_seed_stanford_setr_2026": {
+      "status": "ready",
+      "report_url": "https://setr.stanford.edu/",
+      "pdf_url": "https://setr.stanford.edu/sites/default/files/2026-02/SETR2026_web-260219.pdf",
+      "pages": [
+        14,
+        15,
+        16
+      ],
+      "summary": "The Stanford Emerging Technology Review 2026 identifies ten key technological areas: artificial intelligence, biotechnology and synthetic biology, cryptography and computer security, energy technologies, materials science, neuroscience, quantum technologies, robotics, semiconductors, and space. The report emphasizes the convergence of these technologies and their significant implications for policy across various domains. Key challenges include the need for policymakers to understand the complexities of technological advancements, the importance of balancing scientific breakthroughs with economic, political, and societal factors, and the geopolitical competition over global norms and standards for emerging technologies.\n\n- AI's transformative power extends beyond its immediate capabilities, influencing societal norms and policies globally. Despite rapid progress, AI remains vulnerable to cyber threats and requires robust cybersecurity measures.\n- Biotechnology, particularly synthetic biology, is rapidly advancing, with applications ranging from medical treatments to environmental remediation. However, the U.S.",
+      "checked": "2026-11-28T14:10:33.655996+00:00",
+      "model": "Qwen/Qwen2.5-3B-Instruct",
+      "scope": "Selected executive-summary or findings pages",
+      "pipeline_version": 4
+    },
+    "ded3eecd617ded": {
+      "status": "ready",
+      "report_url": "https://www.who.int/publications/i/item/B09950",
+      "pdf_url": "https://iris.who.int/server/api/core/bitstreams/88172d3e-8047-4938-a24c-e63d146467a3/content",
+      "pages": [
+        8,
+        9,
+        11
+      ],
+      "summary": "The report highlights that countries prefer heat-stable vaccines that simplify logistics, reduce wastage, and support flexible delivery to underserved populations. Key findings indicate that while there is willingness to accept trade-offs, such as shorter shelf life or higher prices, these are contingent on substantial benefits, particularly reducing programmatic complexity and costs. Manufacturers should prioritize 2–8°C storage with VVM30 and at least 12 months shelf life remaining at delivery. Funders and policy-makers should incentivize and support heat stability improvements. Collecting and sharing country-specific insights will help guide vaccine development and ensure efficient delivery. \n\n- Countries strongly desire heat-stable vaccines that simplify logistics and reduce wastage.\n- Acceptance of trade-offs depends on substantial benefits, especially reducing programmatic complexity and costs.",
+      "checked": "2026-11-28T14:10:33.655996+00:00",
       "model": "Qwen/Qwen2.5-3B-Instruct",
       "scope": "Selected executive-summary or findings pages",
       "pipeline_version": 4
