@@ -1,13 +1,28 @@
 {
-  "last_checked": "2026-11-27T23:27:43.561909Z",
+  "last_checked": "2026-11-28T11:45:10.183855Z",
   "engine_version": "6.2",
   "monitor_count": 120,
   "flagship_series_count": 45,
   "discovery_source_count": 75,
-  "new_items_this_run": 3,
+  "new_items_this_run": 1,
   "new_flagship_editions_this_run": 0,
   "migration_baseline": false,
   "updates": [
+    {
+      "id": "812f2d90dcbc5c",
+      "date": "2026-11-28",
+      "date_kind": "detection",
+      "detected_date": "2026-11-28",
+      "category": "Democracy & Rights",
+      "source": "Transparency International",
+      "title": "Protecting the Public Interest, Building Trust: Integrity standards for public decision-making in Europe",
+      "summary": "Newly detected formal institutional publication; publication date may precede detection.",
+      "url": "https://www.transparency.org/en/publications/protecting-the-public-interest-building-trust-integrity-standards-for-public-decision-making-in-europe",
+      "type": "Important new report",
+      "automatic": true,
+      "confidence": "medium",
+      "discovery_source": "ti"
+    },
     {
       "id": "1173ddb2be3cc6",
       "date": "2026-11-27",
